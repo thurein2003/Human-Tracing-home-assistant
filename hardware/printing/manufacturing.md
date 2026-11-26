@@ -1,5 +1,7 @@
 # ABS printing and mechanical assembly
 
+See the [printing file audit](../../PRINTING_FILES.md) for the complete candidate's parts, fit tests, and release holds. The corrected 21 × 14 mm candidate retains the earlier five-arm horn pockets. Check the archived white-horn pocket revisions separately when using four-arm horns.
+
 The Creality K2 has a 260 × 260 × 260 mm nominal build volume. Use the project’s K2 profile and the documented 0.4 mm nozzle. Check filament condition and dry it per the manufacturer’s directions. Start with a clean compatible build plate, a draft-controlled enclosure, and appropriate ventilation for ABS. Confirm safe nozzle and bed limits for the actual spool and printer, let the enclosure equilibrate, retain the engineered brims, and let the bed cool before removal. [Creality K2 guide](https://wiki.creality.com/en/k2-flagship-series/k2).
 
 | Recovered job | Settings | Historical slice |
@@ -20,7 +22,7 @@ The corrected jobs’ G-code records 255 °C nozzle and 100 °C first-layer bed.
 ## Assembly
 
 1. Clean brims and support contact surfaces without widening precision holes blindly. Dry-fit the base and pan thrust interface.
-2. With power isolated, fit the SG90 bodies in their mounting pockets and align the pan yoke and tilt cradle. Mount the cross horns on the splined shafts with the original retaining screws after the safe neutral position is established. Check each horn is seated and free of bind.
+2. With power isolated, fit the SG90 bodies in their mounting pockets and align the pan yoke and tilt cradle. Confirm the measured horn matches both drive pockets before fitting the horns on the splined shafts with their original retaining screws. Verify that each horn seats without binding.
 3. Attach the opposite tilt journal, and run both axes through the unpowered working arc. Use the assembly drawing for structural M3 joints and verify cable clearance.
 4. Fit verified camera hardware and spacers. Route the ribbon with slack and strain relief in all tested poses, clear of screws and horn sweep. Never pull a PCB into alignment using the screws.
 5. Confirm common ground and independent servo power before calibration. Begin with a small commanded movement on one axis and measure its direction and range. Keep the emergency power cutoff accessible.

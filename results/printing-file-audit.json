@@ -1,0 +1,1934 @@
+{
+  "cad_readback": {
+    "freecad": "1.1.4",
+    "assembly": {
+      "sha256": "f19a992e1b6841d28b625d3884ab337ad5a536f44cf2b1db642addac52588ad5",
+      "shape_objects": 77,
+      "invalid_shapes": []
+    },
+    "layout": {
+      "sha256": "4a50f5f75f70d8c6aadb27d3a5b012749652bd9a3aa631aba9229a2b47e735c5",
+      "shape_objects": 13,
+      "invalid_shapes": []
+    },
+    "native_motion": {
+      "sha256": "ca7ce8ffb221dc7504ceaec22444464311406ffe928af6d3b708fd226f4f778a",
+      "shape_objects": 97,
+      "invalid_shapes": []
+    },
+    "assembly_camera_hole_centers_xz_mm": [
+      [
+        -10.5,
+        69.0
+      ],
+      [
+        -10.5,
+        83.0
+      ],
+      [
+        10.5,
+        69.0
+      ],
+      [
+        10.5,
+        83.0
+      ]
+    ],
+    "camera_hole_diameter_mm": 2.4,
+    "bed": {
+      "dimensions_mm": [
+        217.09688,
+        218.0,
+        67.17515
+      ],
+      "facets": 35348,
+      "components": 13,
+      "sha256": "3baa0f9f3ec64c6e1db62798b61b3d96696c2c4a575ce3f30884f2e4f6553702",
+      "watertight": true,
+      "consistently_oriented": true,
+      "volume_mm3": 136310.8594
+    },
+    "parts": {
+      "PanYoke_EarBracket_KeyedDrive": {
+        "dimensions_mm": [
+          102.2,
+          70.5921,
+          70.0
+        ],
+        "facets": 9332,
+        "components": 1,
+        "sha256": "7afdc1a4be22ec8b8f9909357ab311f85d8d6a157c4a71f1ac6ee62862eb5266",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 42530.1953,
+        "assembly_object": "PanYoke_EarBracket_KeyedDrive",
+        "solid_volume_mm3": 42535.6562,
+        "layout_object": "PanYoke_EarBracket_KeyedDrive",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/PanYoke_EarBracket_KeyedDrive.stl"
+      },
+      "Base_EarMount_ThrustSupport": {
+        "dimensions_mm": [
+          80.0,
+          70.0,
+          36.5
+        ],
+        "facets": 5460,
+        "components": 1,
+        "sha256": "9c264233d3003d3fbea331136f43ff63b71c8445ffbd5d4b70d317f5bebe412e",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 50567.1562,
+        "assembly_object": "Base_EarMount_ThrustSupport",
+        "solid_volume_mm3": 50586.7999,
+        "layout_object": "Base_EarMount_ThrustSupport",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/Base_EarMount_ThrustSupport.stl"
+      },
+      "Pan_Replaceable_ThrustRing": {
+        "dimensions_mm": [
+          63.98568,
+          63.99284,
+          1.0
+        ],
+        "facets": 2112,
+        "components": 1,
+        "sha256": "034789221d47f66e84935f83c1183495af5771b406ea764ad68c74a2e1b89025",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 833.0164,
+        "assembly_object": "Pan_Replaceable_ThrustRing",
+        "solid_volume_mm3": 833.5274,
+        "layout_object": "Pan_Replaceable_ThrustRing",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/Pan_Replaceable_ThrustRing.stl"
+      },
+      "Tilt_Removable_IdlerPillar": {
+        "dimensions_mm": [
+          16.0,
+          57.00001,
+          57.0
+        ],
+        "facets": 1300,
+        "components": 1,
+        "sha256": "ee668654bab46063f9dea7a6ba5f0829e01355eceb6e5aaeb10e63085b966bd5",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 7511.7461,
+        "assembly_object": "Tilt_Removable_IdlerPillar",
+        "solid_volume_mm3": 7511.6951,
+        "layout_object": "Tilt_Removable_IdlerPillar",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/Tilt_Removable_IdlerPillar.stl"
+      },
+      "Pan_KeyedHorn_Cover": {
+        "dimensions_mm": [
+          47.98926,
+          47.99464,
+          4.2
+        ],
+        "facets": 4312,
+        "components": 1,
+        "sha256": "10c8f0577a54ee335cc711e9c7a9d2a2fa8a56dd2988065d54d77882a180e37f",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 3020.49,
+        "assembly_object": "Pan_KeyedHorn_Cover",
+        "solid_volume_mm3": 3022.4785,
+        "layout_object": "Pan_KeyedHorn_Cover",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/Pan_KeyedHorn_Cover.stl"
+      },
+      "TiltCradle_KeyedHorn_CameraFrame": {
+        "dimensions_mm": [
+          45.0,
+          45.39765,
+          77.0
+        ],
+        "facets": 7656,
+        "components": 1,
+        "sha256": "be9c17d5480271934e3751a5823e642b8e125aa3fdda799fca5710aec925955e",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 24772.5234,
+        "assembly_object": "TiltCradle_KeyedHorn_CameraFrame",
+        "solid_volume_mm3": 24774.7962,
+        "layout_object": "TiltCradle_KeyedHorn_CameraFrame",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/TiltCradle_KeyedHorn_CameraFrame.stl"
+      },
+      "Tilt_KeyedHorn_CaptiveCover": {
+        "dimensions_mm": [
+          41.9906,
+          41.9953,
+          4.2
+        ],
+        "facets": 4312,
+        "components": 1,
+        "sha256": "989ba52a609cf2ad7dfc28a862e59c6f716b4652a7c269461b4b2c2f3566b386",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 2384.6917,
+        "assembly_object": "Tilt_KeyedHorn_CaptiveCover",
+        "solid_volume_mm3": 2386.306,
+        "layout_object": "Tilt_KeyedHorn_CaptiveCover",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/Tilt_KeyedHorn_CaptiveCover.stl"
+      },
+      "CameraPlate_21x14": {
+        "dimensions_mm": [
+          56.0,
+          32.0,
+          3.0
+        ],
+        "facets": 3828,
+        "components": 1,
+        "sha256": "84797b746ec36ef15a8acf7851c4850672afd37a270c64c5acf5e93380c6e137",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 4449.8882,
+        "assembly_object": "CameraPlate_Cut007",
+        "solid_volume_mm3": 4449.3558,
+        "layout_object": "CameraPlate_21x16",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/CameraPlate_21x14.stl"
+      },
+      "Tilt_Journal_FlangedSleeve": {
+        "dimensions_mm": [
+          6.99843,
+          6.99922,
+          4.1
+        ],
+        "facets": 1260,
+        "components": 1,
+        "sha256": "d87a03ac98efc3983cff2e991b6818eb6db2a7972f8da07c52adf8ba866ccfad",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 68.223,
+        "assembly_object": "Tilt_Journal_FlangedSleeve",
+        "solid_volume_mm3": 68.2637,
+        "layout_object": "Tilt_Journal_FlangedSleeve",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/Tilt_Journal_FlangedSleeve.stl"
+      },
+      "PCB_Spacer_Lower_Left": {
+        "dimensions_mm": [
+          4.99945,
+          4.99887,
+          3.0
+        ],
+        "facets": 840,
+        "components": 1,
+        "sha256": "2e253e5eae3e50bf9f40f798becd35f9734f639ebef6861e9e546fd67aafe7f8",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 45.3062,
+        "assembly_object": "PCB_Spacer_Lower_Left",
+        "solid_volume_mm3": 45.3332,
+        "layout_object": "PCB_Spacer_Lower_Left",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/PCB_Spacer_Lower_Left.stl"
+      },
+      "PCB_Spacer_Lower_Right": {
+        "dimensions_mm": [
+          4.99945,
+          4.99887,
+          3.0
+        ],
+        "facets": 840,
+        "components": 1,
+        "sha256": "2e253e5eae3e50bf9f40f798becd35f9734f639ebef6861e9e546fd67aafe7f8",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 45.3062,
+        "assembly_object": "PCB_Spacer_Lower_Right",
+        "solid_volume_mm3": 45.3332,
+        "layout_object": "PCB_Spacer_Lower_Right",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/PCB_Spacer_Lower_Right.stl"
+      },
+      "PCB_Spacer_Upper_Left": {
+        "dimensions_mm": [
+          4.99945,
+          4.99887,
+          3.0
+        ],
+        "facets": 840,
+        "components": 1,
+        "sha256": "89d0c27f1a55662064f1ba5ad269bf966c6d6b48a92734e3e60552e7e1d29fad",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 45.3062,
+        "assembly_object": "PCB_Spacer_Upper_Left",
+        "solid_volume_mm3": 45.3332,
+        "layout_object": "PCB_Spacer_Upper_Left",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/PCB_Spacer_Upper_Left.stl"
+      },
+      "PCB_Spacer_Upper_Right": {
+        "dimensions_mm": [
+          4.99945,
+          4.99887,
+          3.0
+        ],
+        "facets": 840,
+        "components": 1,
+        "sha256": "89d0c27f1a55662064f1ba5ad269bf966c6d6b48a92734e3e60552e7e1d29fad",
+        "watertight": true,
+        "consistently_oriented": true,
+        "volume_mm3": 45.3062,
+        "assembly_object": "PCB_Spacer_Upper_Right",
+        "solid_volume_mm3": 45.3332,
+        "layout_object": "PCB_Spacer_Upper_Right",
+        "assembly_symmetric_difference_mm3": 0.0,
+        "self_intersections": false,
+        "file": "hardware/3d-models/STL/individual-21x14/PCB_Spacer_Upper_Right.stl"
+      }
+    },
+    "mechanical_interfaces_mm": {
+      "pan_SG90_base_ear_mount": {
+        "bore_diameter": 1.9,
+        "pitch": 27.2,
+        "axis": "Z"
+      },
+      "tilt_SG90_yoke_ear_mount": {
+        "bore_diameter": 1.9,
+        "pitch": 27.2,
+        "axis": "X"
+      },
+      "pan_ring_to_yoke": {
+        "ring_OD": 64.0,
+        "yoke_ID": 64.6,
+        "diametral_gap": 0.6
+      },
+      "tilt_journal_to_idler": {
+        "journal_OD": 5.0,
+        "idler_ID": 5.2,
+        "diametral_gap": 0.2
+      }
+    }
+  },
+  "format_and_archive_readback": {
+    "stl": {
+      "bounds_mm": [
+        [
+          12.0,
+          12.0,
+          -3.552713678800501e-15
+        ],
+        [
+          229.0968780517578,
+          230.0,
+          67.1751480102539
+        ]
+      ],
+      "dimensions_mm": [
+        217.0968780517578,
+        218.0,
+        67.1751480102539
+      ],
+      "triangles": 35348,
+      "components": 13,
+      "volume_mm3": 136309.55701585015,
+      "closed_oriented": true
+    },
+    "creality_project": {
+      "file": "hardware/3d-models/3MF/EyeTrace_K2_ABS_Full_21x14.3mf",
+      "sha256": "87c343b3c0781d34ec7e88a28e82564a1675bcbae9a6a26d97b5c2919c0b3648",
+      "matches_bed_triangles_at_binary_stl_precision": true,
+      "settings": {
+        "brim_type": "outer_only",
+        "brim_width": "5",
+        "filament_type": [
+          "ABS"
+        ],
+        "hot_plate_temp_initial_layer": [
+          "100"
+        ],
+        "layer_height": "0.2",
+        "nozzle_diameter": [
+          "0.4"
+        ],
+        "nozzle_temperature": [
+          "255"
+        ],
+        "printable_area": [
+          "0x0",
+          "260x0",
+          "260x260",
+          "0x260"
+        ],
+        "printable_height": "260",
+        "sparse_infill_density": "35%",
+        "sparse_infill_pattern": "gyroid",
+        "support_style": "tree_slim",
+        "wall_loops": "4"
+      },
+      "combined": {
+        "bounds_mm": [
+          [
+            12.0,
+            12.0,
+            -3.55271368e-15
+          ],
+          [
+            229.0968819,
+            230.0,
+            67.17514421
+          ]
+        ],
+        "dimensions_mm": [
+          217.0968819,
+          218.0,
+          67.17514421
+        ],
+        "triangles": 35348,
+        "components": 13,
+        "volume_mm3": 136309.55132896197,
+        "closed_oriented": true
+      },
+      "parts": {
+        "Base_EarMount_ThrustSupport": {
+          "bounds_mm": [
+            [
+              12.0,
+              12.0,
+              0.0
+            ],
+            [
+              92.0,
+              82.0,
+              36.5
+            ]
+          ],
+          "dimensions_mm": [
+            80.0,
+            70.0,
+            36.5
+          ],
+          "triangles": 4408,
+          "components": 1,
+          "volume_mm3": 50560.95029585243,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.05109950461121837,
+          "overrides": {
+            "enable_support": "1",
+            "support_style": "tree_slim",
+            "brim_width": "6"
+          }
+        },
+        "Pan_Replaceable_ThrustRing": {
+          "bounds_mm": [
+            [
+              12.0,
+              98.6,
+              0.0
+            ],
+            [
+              76.0,
+              162.6,
+              1.0
+            ]
+          ],
+          "dimensions_mm": [
+            64.0,
+            64.0,
+            1.0
+          ],
+          "triangles": 1692,
+          "components": 1,
+          "volume_mm3": 832.7502622016625,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.09323482327484589,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        },
+        "PanYoke_EarBracket_KeyedDrive": {
+          "bounds_mm": [
+            [
+              112.0,
+              12.00000076,
+              0.0
+            ],
+            [
+              229.0968819,
+              82.59999924,
+              67.17514421
+            ]
+          ],
+          "dimensions_mm": [
+            117.0968819,
+            70.59999848,
+            67.17514421
+          ],
+          "triangles": 7546,
+          "components": 1,
+          "volume_mm3": 42530.121271364646,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.013012444452076277,
+          "overrides": {
+            "enable_support": "1",
+            "support_style": "tree_slim",
+            "brim_width": "8",
+            "support_on_build_plate_only": "1"
+          }
+        },
+        "Tilt_Removable_IdlerPillar": {
+          "bounds_mm": [
+            [
+              90.0,
+              98.6,
+              0.0
+            ],
+            [
+              106.0,
+              155.6,
+              57.0
+            ]
+          ],
+          "dimensions_mm": [
+            16.0,
+            57.0,
+            57.0
+          ],
+          "triangles": 1048,
+          "components": 1,
+          "volume_mm3": 7511.776521553385,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.0010839304884102674,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "brim_width": "6"
+          }
+        },
+        "Pan_KeyedHorn_Cover": {
+          "bounds_mm": [
+            [
+              120.0,
+              98.6,
+              0.0
+            ],
+            [
+              168.0,
+              146.6,
+              4.200000763
+            ]
+          ],
+          "dimensions_mm": [
+            48.0,
+            48.0,
+            4.200000763
+          ],
+          "triangles": 3472,
+          "components": 1,
+          "volume_mm3": 3019.367649141797,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.1029238374467667,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        },
+        "TiltCradle_KeyedHorn_CameraFrame": {
+          "bounds_mm": [
+            [
+              12.0,
+              176.6000004,
+              0.0
+            ],
+            [
+              89.0,
+              222.0,
+              45.0
+            ]
+          ],
+          "dimensions_mm": [
+            77.0,
+            45.3999996,
+            45.0
+          ],
+          "triangles": 6186,
+          "components": 1,
+          "volume_mm3": 24771.524674208413,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.013205056320853004,
+          "overrides": {
+            "enable_support": "1",
+            "support_style": "tree_slim",
+            "brim_width": "6"
+          }
+        },
+        "Tilt_KeyedHorn_CaptiveCover": {
+          "bounds_mm": [
+            [
+              182.0,
+              98.6,
+              0.0
+            ],
+            [
+              224.0,
+              140.6,
+              4.200000763
+            ]
+          ],
+          "dimensions_mm": [
+            42.0,
+            42.0,
+            4.200000763
+          ],
+          "triangles": 3472,
+          "components": 1,
+          "volume_mm3": 2383.7881692254305,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.10551164748232589,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        },
+        "Tilt_Journal_FlangedSleeve": {
+          "bounds_mm": [
+            [
+              178.0,
+              178.0,
+              7.629394432e-07
+            ],
+            [
+              185.0,
+              185.0,
+              4.099999237
+            ]
+          ],
+          "dimensions_mm": [
+            7.0,
+            7.0,
+            4.099998474060556
+          ],
+          "triangles": 1008,
+          "components": 1,
+          "volume_mm3": 68.19996307645033,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.09336869163211192,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        },
+        "PCB_Spacer_Lower_Left": {
+          "bounds_mm": [
+            [
+              177.0,
+              202.0,
+              3.814697251e-07
+            ],
+            [
+              182.0,
+              207.0,
+              3.000000381
+            ]
+          ],
+          "dimensions_mm": [
+            5.0,
+            5.0,
+            2.999999999530275
+          ],
+          "triangles": 672,
+          "components": 1,
+          "volume_mm3": 45.2909099107522,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.09328723595025679,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        },
+        "PCB_Spacer_Lower_Right": {
+          "bounds_mm": [
+            [
+              177.0,
+              225.0,
+              3.814697251e-07
+            ],
+            [
+              182.0,
+              230.0,
+              3.000000381
+            ]
+          ],
+          "dimensions_mm": [
+            5.0,
+            5.0,
+            2.999999999530275
+          ],
+          "triangles": 672,
+          "components": 1,
+          "volume_mm3": 45.2909099107522,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.09328723595025679,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        },
+        "PCB_Spacer_Upper_Left": {
+          "bounds_mm": [
+            [
+              201.0,
+              178.0,
+              3.814697251e-07
+            ],
+            [
+              206.0,
+              183.0,
+              3.000000381
+            ]
+          ],
+          "dimensions_mm": [
+            5.0,
+            5.0,
+            2.999999999530275
+          ],
+          "triangles": 672,
+          "components": 1,
+          "volume_mm3": 45.2909099107522,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.09328723595025679,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        },
+        "PCB_Spacer_Upper_Right": {
+          "bounds_mm": [
+            [
+              201.0,
+              202.0,
+              3.814697251e-07
+            ],
+            [
+              206.0,
+              207.0,
+              3.000000381
+            ]
+          ],
+          "dimensions_mm": [
+            5.0,
+            5.0,
+            2.999999999530275
+          ],
+          "triangles": 672,
+          "components": 1,
+          "volume_mm3": 45.2909099107522,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.09328723595025679,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        },
+        "CameraPlate_21x14": {
+          "bounds_mm": [
+            [
+              105.0,
+              176.600006,
+              -3.55271368e-15
+            ],
+            [
+              161.0,
+              208.600006,
+              3.0
+            ]
+          ],
+          "dimensions_mm": [
+            56.0,
+            32.0,
+            3.0000000000000036
+          ],
+          "triangles": 3828,
+          "components": 1,
+          "volume_mm3": 4449.908882694778,
+          "closed_oriented": true,
+          "deviation_from_cad_volume_pct": 0.012430624109183164,
+          "overrides": {
+            "enable_support": "0",
+            "support_style": "tree_slim",
+            "sparse_infill_density": "100%"
+          }
+        }
+      }
+    },
+    "fit_tests": {
+      "hardware/3d-models/fit-tests/ABS_Circular_Clearance_Calibration_Bed.stl": {
+        "bounds_mm": [
+          [
+            0.11586321145296097,
+            0.10582835972309113,
+            0.0
+          ],
+          [
+            241.39999389648438,
+            206.39999389648438,
+            6.0
+          ]
+        ],
+        "dimensions_mm": [
+          241.2841306850314,
+          206.29416553676128,
+          6.0
+        ],
+        "triangles": 18148,
+        "components": 20,
+        "volume_mm3": 20380.393708404128,
+        "closed_oriented": true,
+        "sha256": "c0cf9b64c8a08b2a778a19ded64ecf33879eca0ee07cae9c314e396790113b89"
+      },
+      "hardware/3d-models/fit-tests/Camera_Hole_Pattern_21x14_ABS.stl": {
+        "bounds_mm": [
+          [
+            -14.5,
+            -11.0,
+            0.0
+          ],
+          [
+            14.5,
+            11.0,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          29.0,
+          22.0,
+          2.0
+        ],
+        "triangles": 1708,
+        "components": 1,
+        "volume_mm3": 1239.8304496396886,
+        "closed_oriented": true,
+        "sha256": "bb4c0a36ca6f326b905972c4582aa94f216fc3d46a490516fdad24221fe0de4a"
+      },
+      "hardware/3d-models/fit-tests/PRINT_FIRST_FitTests_Optimized.stl": {
+        "bounds_mm": [
+          [
+            14.710999488830566,
+            14.700068473815918,
+            0.0
+          ],
+          [
+            174.0,
+            130.3000030517578,
+            4.199999809265137
+          ]
+        ],
+        "dimensions_mm": [
+          159.28900051116943,
+          115.5999345779419,
+          4.199999809265137
+        ],
+        "triangles": 15988,
+        "components": 7,
+        "volume_mm3": 11232.330806435048,
+        "closed_oriented": true,
+        "sha256": "6fdd7d662fd98aad09fb7c1f5c9f3a8c5826bdc92c4df7aa0f4aac1bebe2ab0b"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Female_C1_ID64p10.stl": {
+        "bounds_mm": [
+          [
+            -35.28413772583008,
+            -35.29417037963867,
+            0.0
+          ],
+          [
+            42.0,
+            35.29417037963867,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          77.28413772583008,
+          70.58834075927734,
+          2.0
+        ],
+        "triangles": 1288,
+        "components": 1,
+        "volume_mm3": 1479.5195378824567,
+        "closed_oriented": true,
+        "sha256": "9fdfcde4ebd9c324d41a923704a2beaa08ca45b4e0161e5e4cd71e2ed576b7de"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Female_C2_ID64p20.stl": {
+        "bounds_mm": [
+          [
+            -35.28413772583008,
+            -35.29417037963867,
+            0.0
+          ],
+          [
+            42.0,
+            35.29417037963867,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          77.28413772583008,
+          70.58834075927734,
+          2.0
+        ],
+        "triangles": 1584,
+        "components": 1,
+        "volume_mm3": 1455.97759664997,
+        "closed_oriented": true,
+        "sha256": "cf1fd236738bbd33d82b5600ecd2bb030529d233592e6b18fa3edcb48637c4be"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Female_C3_ID64p30.stl": {
+        "bounds_mm": [
+          [
+            -35.28413772583008,
+            -35.29417037963867,
+            0.0
+          ],
+          [
+            42.0,
+            35.29417037963867,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          77.28413772583008,
+          70.58834075927734,
+          2.0
+        ],
+        "triangles": 1888,
+        "components": 1,
+        "volume_mm3": 1432.4041902329577,
+        "closed_oriented": true,
+        "sha256": "773c11da41ac2f45282de7a600bc7329328e1328203446e64a60c999c34514e9"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Female_C4_ID64p40.stl": {
+        "bounds_mm": [
+          [
+            -35.28413772583008,
+            -35.29417037963867,
+            0.0
+          ],
+          [
+            42.0,
+            35.29417037963867,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          77.28413772583008,
+          70.58834075927734,
+          2.0
+        ],
+        "triangles": 2192,
+        "components": 1,
+        "volume_mm3": 1408.79942214498,
+        "closed_oriented": true,
+        "sha256": "7dc7d7601accec88b447cc82063a3248f9b4b3b1fdbdc0396a276977734e5476"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Female_C5_ID64p60.stl": {
+        "bounds_mm": [
+          [
+            -35.28413772583008,
+            -35.29417037963867,
+            0.0
+          ],
+          [
+            42.0,
+            35.29417037963867,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          77.28413772583008,
+          70.58834075927734,
+          2.0
+        ],
+        "triangles": 2496,
+        "components": 1,
+        "volume_mm3": 1364.896346009395,
+        "closed_oriented": true,
+        "sha256": "b2d93fc08de25e949adf08f1a30ea640b0e6b7bb067f4f8915d5fe4f47aafe28"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Male_Control_OD64_ID60_C1.stl": {
+        "bounds_mm": [
+          [
+            -31.98567771911621,
+            -31.99641990661621,
+            0.0
+          ],
+          [
+            32.0,
+            31.99641990661621,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          63.98567771911621,
+          63.99283981323242,
+          2.0
+        ],
+        "triangles": 840,
+        "components": 1,
+        "volume_mm3": 778.6500956008881,
+        "closed_oriented": true,
+        "sha256": "a49044d7ded9ee65ecc06f34a93e1e06fa26b441ddc1e6dacd1e7b8f56118d77"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Male_Control_OD64_ID60_C2.stl": {
+        "bounds_mm": [
+          [
+            50.014320373535156,
+            -31.99641990661621,
+            0.0
+          ],
+          [
+            114.0,
+            31.99641990661621,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          63.985679626464844,
+          63.99283981323242,
+          2.0
+        ],
+        "triangles": 840,
+        "components": 1,
+        "volume_mm3": 778.6502547529157,
+        "closed_oriented": true,
+        "sha256": "04f55d5918ac8d70c232ad2e21275d7bc6ba6879ea2b9ac9e018b13173b90bba"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Male_Control_OD64_ID60_C3.stl": {
+        "bounds_mm": [
+          [
+            132.0143280029297,
+            -31.99641990661621,
+            0.0
+          ],
+          [
+            196.0,
+            31.99641990661621,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          63.98567199707031,
+          63.99283981323242,
+          2.0
+        ],
+        "triangles": 840,
+        "components": 1,
+        "volume_mm3": 778.650137268678,
+        "closed_oriented": true,
+        "sha256": "cc86db480ef7cdebfeb612add7f7a1dddd2553006cd1245c40cd7174854716c3"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Male_Control_OD64_ID60_C4.stl": {
+        "bounds_mm": [
+          [
+            -31.98567771911621,
+            43.00358200073242,
+            0.0
+          ],
+          [
+            32.0,
+            106.99642181396484,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          63.98567771911621,
+          63.99283981323242,
+          2.0
+        ],
+        "triangles": 840,
+        "components": 1,
+        "volume_mm3": 778.6500865904321,
+        "closed_oriented": true,
+        "sha256": "a829ce26179adfe337a6cb5c7243edd9f571fae1dbf241eefb21c44908b818c2"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/PAN_Male_Control_OD64_ID60_C5.stl": {
+        "bounds_mm": [
+          [
+            50.014320373535156,
+            43.00358200073242,
+            0.0
+          ],
+          [
+            114.0,
+            106.99642181396484,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          63.985679626464844,
+          63.99283981323242,
+          2.0
+        ],
+        "triangles": 840,
+        "components": 1,
+        "volume_mm3": 778.6502457424649,
+        "closed_oriented": true,
+        "sha256": "5eab18444302a320623d21aea2c786d021b7ae49c7104bbbf819dc1ce3995dbe"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/TILT_Bore_T1_ID5p05.stl": {
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            16.0,
+            6.0
+          ]
+        ],
+        "dimensions_mm": [
+          20.0,
+          16.0,
+          6.0
+        ],
+        "triangles": 452,
+        "components": 1,
+        "volume_mm3": 1785.4940063404108,
+        "closed_oriented": true,
+        "sha256": "f11aa20a023fbfb2c62876ee19377290e8a6002551f09237af9fb95c1b44b4d7"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/TILT_Bore_T2_ID5p10.stl": {
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            16.0,
+            6.0
+          ]
+        ],
+        "dimensions_mm": [
+          20.0,
+          16.0,
+          6.0
+        ],
+        "triangles": 468,
+        "components": 1,
+        "volume_mm3": 1768.7039020839236,
+        "closed_oriented": true,
+        "sha256": "6e1d88bcb33a51b95a0b7c332db219178e94612ed4d1315960385d67fa37711a"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/TILT_Bore_T3_ID5p15.stl": {
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            16.0,
+            6.0
+          ]
+        ],
+        "dimensions_mm": [
+          20.0,
+          16.0,
+          6.0
+        ],
+        "triangles": 484,
+        "components": 1,
+        "volume_mm3": 1751.8902418650064,
+        "closed_oriented": true,
+        "sha256": "d408a2d1d0d215a8183d59d8f8df175f8e3b29639063eef4c0c97b026f1c15a2"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/TILT_Bore_T4_ID5p20.stl": {
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            16.0,
+            6.0
+          ]
+        ],
+        "dimensions_mm": [
+          20.0,
+          16.0,
+          6.0
+        ],
+        "triangles": 500,
+        "components": 1,
+        "volume_mm3": 1735.0530236987408,
+        "closed_oriented": true,
+        "sha256": "a19ee52e5a5bf5e6c1a17f90a7446f88a2c3359d722307a290f91eb35be434bb"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/TILT_Bore_T5_ID5p30.stl": {
+        "bounds_mm": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            20.0,
+            16.0,
+            6.0
+          ]
+        ],
+        "dimensions_mm": [
+          20.0,
+          16.0,
+          6.0
+        ],
+        "triangles": 516,
+        "components": 1,
+        "volume_mm3": 1715.7079722731505,
+        "closed_oriented": true,
+        "sha256": "74d773fe7fa87984e327bc41a2e7e4a8a1fe132a77a8c43991cff69dadf1feb5"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/STL/TILT_Journal_Control_OD5_T1.stl": {
+        "bounds_mm": [
+          [
+            7.501119136810303,
+            5.500279903411865,
+            0.0
+          ],
+          [
+            12.5,
+            10.499720573425293,
+            6.0
+          ]
+        ],
+        "dimensions_mm": [
+          4.998880863189697,
+          4.999440670013428,
+          6.0
+        ],
+        "triangles": 416,
+        "components": 1,
+        "volume_mm3": 117.73942981215828,
+        "closed_oriented": true,
+        "sha256": "9ef0f23defb60e69f73c70aea2fbc6a535feebbfee7240f632e6c7c7a59ee998"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/PROTOTYPE_04_REVISION_15/CrossHorn_UltraMinimal_FitTest_04R15.stl": {
+        "bounds_mm": [
+          [
+            -20.999576568603516,
+            -11.499597549438477,
+            0.0
+          ],
+          [
+            21.0,
+            11.5,
+            3.799999952316284
+          ]
+        ],
+        "dimensions_mm": [
+          41.999576568603516,
+          22.999597549438477,
+          3.799999952316284
+        ],
+        "triangles": 4282,
+        "components": 1,
+        "volume_mm3": 1052.1023844255167,
+        "closed_oriented": true,
+        "sha256": "f42895b8f43802b6f9becb058c7965b5894912018279c7f98090c0b65c1df8c1"
+      },
+      "hardware/3d-models/fit-tests/Camera_21x14_ABS_FitTest.3mf": {
+        "bounds_mm": [
+          [
+            120.5,
+            97.5,
+            0.0
+          ],
+          [
+            149.5,
+            119.5,
+            2.0
+          ]
+        ],
+        "dimensions_mm": [
+          29.0,
+          22.0,
+          2.0
+        ],
+        "triangles": 1708,
+        "components": 1,
+        "volume_mm3": 1239.830458373656,
+        "closed_oriented": true,
+        "build_items": 1,
+        "sha256": "7a91953379764b24cfb53020fff36b793c425e95629071d24d614173b5d6278f"
+      },
+      "hardware/3d-models/fit-tests/EyeTrace_ABS_Circular_Clearance_Calibration.3mf": {
+        "bounds_mm": [
+          [
+            0.115863,
+            0.105828,
+            0.0
+          ],
+          [
+            241.39999,
+            206.39999,
+            6.0
+          ]
+        ],
+        "dimensions_mm": [
+          241.284127,
+          206.294162,
+          6.0
+        ],
+        "triangles": 18148,
+        "components": 20,
+        "volume_mm3": 20380.393393300285,
+        "closed_oriented": true,
+        "build_items": 1,
+        "sha256": "256bac40b796d65f4711b1cf97dd4f9a7dd1f7043d38619ec5e70ba695d16442"
+      },
+      "archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/PROTOTYPE_04_REVISION_15/CrossHorn_UltraMinimal_FitTest_04R15.3mf": {
+        "bounds_mm": [
+          [
+            109.000423,
+            118.500402,
+            0.0
+          ],
+          [
+            151.0,
+            141.5,
+            3.8
+          ]
+        ],
+        "dimensions_mm": [
+          41.999577,
+          22.999598000000006,
+          3.8
+        ],
+        "triangles": 4282,
+        "components": 1,
+        "volume_mm3": 1052.1024523014526,
+        "closed_oriented": true,
+        "build_items": 1,
+        "sha256": "66b77a6e840d80847176396bc2931c9e68deb908e59fde1ff66b79d0285d1bde"
+      }
+    },
+    "original_zip": {
+      "sha256": "66316494b2031322f51859a164d6c71dd769bf8407819e16129453ea7449fd07",
+      "bytes": 6050236,
+      "tracked": false,
+      "files": 169,
+      "manufacturing_members": 49,
+      "manufacturing_members_exact_tracked": 49,
+      "manufacturing_members_by_path": {
+        "EyeTrace_Final_Engineering/CAD/EyeTrace_Exploded.FCStd": {
+          "sha256": "53e5639bd802416ba88f5b45ef24030b6c3e0905d6459bc5a6de1aa300c7c498",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/EyeTrace_Exploded.FCStd"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/EyeTrace_Exploded_Rendered.FCStd": {
+          "sha256": "55a8751d20455c9880dd46825488d8f0cc1105dc2e48899decfbdda1d2094a29",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/EyeTrace_Exploded_Rendered.FCStd"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/EyeTrace_Final_Assembly.FCStd": {
+          "sha256": "e6ab2cc261ee79528a6cedf12601531d7531141a5e4a3147d9b41d37fa382124",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/EyeTrace_Final_Assembly.FCStd"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/EyeTrace_Final_Assembly.step": {
+          "sha256": "0b4cff2f22aaaba1716838ca9cde8cc3f208f20c8dee80040dfcd215ef4a4c87",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/EyeTrace_Final_Assembly.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/Base_EarMount_ThrustSupport.step": {
+          "sha256": "35f9d0daef339aeee8a7fee149374b7628ffe6245e5697aac408574378bbd7d5",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/Base_EarMount_ThrustSupport.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/CameraPlate_21x16.step": {
+          "sha256": "c1cce32e6d767da189216df137f2462963f3af28edaf3a7b7709c31a30cc36c4",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/CameraPlate_21x16.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/Pan_KeyedHorn_Cover.step": {
+          "sha256": "fa0f20709266f56f0a8f131ddb7e57edbe5793df47a083efffb88625c0e107c7",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/Pan_KeyedHorn_Cover.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/Pan_Replaceable_ThrustRing.step": {
+          "sha256": "126231496de4bd63ca1871550c2c011ce7bd9251e69a54aaa1a9583b2d4f0859",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/Pan_Replaceable_ThrustRing.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/PanYoke_EarBracket_KeyedDrive.step": {
+          "sha256": "b4cbc564155065826284f2e0581f4d1b823c7d0332545d474da1a9f385a85d75",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/PanYoke_EarBracket_KeyedDrive.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/PCB_Spacer_Lower_Left.step": {
+          "sha256": "fc54b6cce0eb4ac83a19aa804fb7764e3520764b0f2f7291e1161ab25c7662d3",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/PCB_Spacer_Lower_Left.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/PCB_Spacer_Lower_Right.step": {
+          "sha256": "05e61e32081a31d0aaaa65550de375ecb30981b21171697cf3525b05634cbb4d",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/PCB_Spacer_Lower_Right.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/PCB_Spacer_Upper_Left.step": {
+          "sha256": "e9e0a4a3f90756c9813f5079e4d1b046f44de1deeeacbf0460a9bc8453621df0",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/PCB_Spacer_Upper_Left.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/PCB_Spacer_Upper_Right.step": {
+          "sha256": "90397ee88ee0abfc52f3a80d03c0269aeb4f7403fccb98f97634f3b3cc798dcd",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/PCB_Spacer_Upper_Right.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/Tilt_Journal_FlangedSleeve.step": {
+          "sha256": "04c06bce2241a75bc06a6a53718f2d35e0b05caad53b979477ccee1384f55c3d",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/Tilt_Journal_FlangedSleeve.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/Tilt_KeyedHorn_CaptiveCover.step": {
+          "sha256": "bf99b2aca4e9cd5114ceb0f4efdc85201ca09f77d3aa07b391db280cb17386b1",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/Tilt_KeyedHorn_CaptiveCover.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/Tilt_Removable_IdlerPillar.step": {
+          "sha256": "0abd74416255ed4880533c0b379ebd51a152539454b610ac7204dec9ec1f7364",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/Tilt_Removable_IdlerPillar.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/individual_STEP/TiltCradle_KeyedHorn_CameraFrame.step": {
+          "sha256": "76ecdbd1cc8d59a494475d3e5b59a033b66f9dfa97f2812e637bae5248b210bb",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/individual_STEP/TiltCradle_KeyedHorn_CameraFrame.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/K2_PrintLayout.FCStd": {
+          "sha256": "8e5f015cba726889ee80f119976e5370e634917ebf8bdcea12dfa51cf83ae9c9",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/K2_PrintLayout.FCStd"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/Camera_21x16_HoleCenter_Gauge.step": {
+          "sha256": "ec3ce5a801edf3375bab5a7cbef707dca75aa84810e69ebb026050e729c3e72b",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/Camera_21x16_HoleCenter_Gauge.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/Integrated_Source.FCStd": {
+          "sha256": "450ab1dc233af69ed8db19b58033b4a9075dc568d5a04d0d9bab9b4bf1218032",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/Integrated_Source.FCStd"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/PanJournal_Female_ClearanceTest.step": {
+          "sha256": "8de2679ca81e63127134476d89d0eec20a737eef69202bd40330a3c091df9068",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/PanJournal_Female_ClearanceTest.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/PanJournal_Male_SizeTest.step": {
+          "sha256": "1edb1974c8dd55d712db85530cfe25db3dde4885337afc984e1f56ad06a6e85b",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/PanJournal_Male_SizeTest.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/SG90_community_source.FCStd": {
+          "sha256": "e8f5ca9b11bd18cf36766e3784915349ef686696f44e91b48f45672d9f5f6d72",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/sg90_reference_revision_01/sources/Servo sg90.fcstd"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/SG90_EarMount_Coupon.step": {
+          "sha256": "e0e0ecb9bc1010ad4f24cd5674c8c3bf5194a197236bb686552290437e436da9",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/SG90_EarMount_Coupon.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/StarHorn_CaptiveCover_Coupon.step": {
+          "sha256": "82a1b88ded9fb4826c1afae7998470026fa03e1be11e7368bdd9aec650115477",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/StarHorn_CaptiveCover_Coupon.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/StarHorn_PositivePocket_Coupon.step": {
+          "sha256": "f187ab245b6b0967384159140f4f859581711d8f9ca7539244a41b157ef5abad",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/CAD/SOURCE_SNAPSHOT/StarHorn_PositivePocket_Coupon.step"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/Camera_21x16_HoleCenter_Gauge.stl": {
+          "sha256": "7f1b62823377cd8ead081220334a60e3d0a34b39f63820fe588d24c8d33848d1",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/FIT_TESTS/Camera_21x16_HoleCenter_Gauge.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/FitTests.FCStd": {
+          "sha256": "c5d8a9d1f4f308c89d9af975609a7d8e39e89798b8c7004b78512aff92135134",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/FIT_TESTS/FitTests.FCStd"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/FitTests_K2_Bed.stl": {
+          "sha256": "d92a9ad0c12a7541318ed6a1071b5965b592edd0ee56b7550350ff1bc15f6e3d",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/FIT_TESTS/FitTests_K2_Bed.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/PanJournal_Female_ClearanceTest.stl": {
+          "sha256": "2ed136250b726266ebe93098a9aa2fbfb35bb0b2f31d03848f64d97892ace490",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/FIT_TESTS/PanJournal_Female_ClearanceTest.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/PanJournal_Male_SizeTest.stl": {
+          "sha256": "472f983f1a95521cb57a322700022292a3e33db224b9626fc3d399ed85cd2793",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/FIT_TESTS/PanJournal_Male_SizeTest.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/SG90_EarMount_Coupon.stl": {
+          "sha256": "51fcb2414bb714629a1986f6923df21e01f4a4b14b8b3c4cbc35d20b33017acc",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/FIT_TESTS/SG90_EarMount_Coupon.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/StarHorn_CaptiveCover_Coupon.stl": {
+          "sha256": "d5c56e7d163ee8254bfd87dcab0309271f78ce9c04b34bbf318a502178fe438d",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/FIT_TESTS/StarHorn_CaptiveCover_Coupon.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/StarHorn_PositivePocket_Coupon.stl": {
+          "sha256": "9e0eac98327d95230a62f9414c5bd4750987dda0be14bc5dfac775235b3701a8",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/FIT_TESTS/StarHorn_PositivePocket_Coupon.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/FIT_TESTS/Tilt_Journal_FlangedSleeve.stl": {
+          "sha256": "e5025fe4e62778db4980394e63564de0c120cc7d38e9ce897f4c090da3692c69",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/Tilt_Journal_FlangedSleeve.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/EyeTrace_Final_K2_SingleBed.stl": {
+          "sha256": "e228c69178e5bb9738505c11c32e66e3658a2bcb47860d4d0ac259a1ceb9f54f",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/STL/EyeTrace_Final_K2_SingleBed.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/Base_EarMount_ThrustSupport.stl": {
+          "sha256": "75f9eb6e39df2176f656105211f38963f95f2f3b1d874a646c9f9c8660153b09",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/Base_EarMount_ThrustSupport.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/CameraPlate_21x16.stl": {
+          "sha256": "9cdae54f53d364f008ed093ca613e3d88d5da84f2c8f60f92fe48d2490d38230",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/STL/individual/CameraPlate_21x16.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/Pan_KeyedHorn_Cover.stl": {
+          "sha256": "e0b2b3a69b4b8f93bb9c767957d5faf035f4a3faddfe71777eb4648ab7998058",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/Pan_KeyedHorn_Cover.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/Pan_Replaceable_ThrustRing.stl": {
+          "sha256": "b1e0cb3825303291949cb014ee379fbe1eb6fd5ce44bf08fa5ba07ed34a9de16",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/Pan_Replaceable_ThrustRing.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/PanYoke_EarBracket_KeyedDrive.stl": {
+          "sha256": "a8a1f4f98405dcd3958abd7e2d3bfc46b5de31c4784371d9dc64127e130296b5",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/STL/individual/PanYoke_EarBracket_KeyedDrive.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/PCB_Spacer_Lower_Left.stl": {
+          "sha256": "a326b4add955d596176ca3c41dc638886a7dddfb9d992f1e25f37970ae731cc4",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/PCB_Spacer_Lower_Left.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/PCB_Spacer_Lower_Right.stl": {
+          "sha256": "a326b4add955d596176ca3c41dc638886a7dddfb9d992f1e25f37970ae731cc4",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/PCB_Spacer_Lower_Left.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/PCB_Spacer_Upper_Left.stl": {
+          "sha256": "a326b4add955d596176ca3c41dc638886a7dddfb9d992f1e25f37970ae731cc4",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/PCB_Spacer_Lower_Left.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/PCB_Spacer_Upper_Right.stl": {
+          "sha256": "a326b4add955d596176ca3c41dc638886a7dddfb9d992f1e25f37970ae731cc4",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/PCB_Spacer_Lower_Left.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/Tilt_Journal_FlangedSleeve.stl": {
+          "sha256": "e5025fe4e62778db4980394e63564de0c120cc7d38e9ce897f4c090da3692c69",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/Tilt_Journal_FlangedSleeve.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/Tilt_KeyedHorn_CaptiveCover.stl": {
+          "sha256": "46bac906efbc0696148936cc7581fc7da998493da7bbb597982b10dfd5ade006",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/Tilt_KeyedHorn_CaptiveCover.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/Tilt_Removable_IdlerPillar.stl": {
+          "sha256": "36242ef7b84d280cc17628387e357336bfdf8602e3a972e7b7f150b46beca4a8",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_CAD_20261115_232254/camera_mount_21x16_01/validated/parts/Tilt_Removable_IdlerPillar.stl"
+          ]
+        },
+        "EyeTrace_Final_Engineering/STL/individual/TiltCradle_KeyedHorn_CameraFrame.stl": {
+          "sha256": "403792f39f7f27bc3b483624d8d2467b5565563059f9539c08e79fd99a467b6f",
+          "exact_matches": [
+            "archive/engineering/EyeTrace_Final_Engineering/STL/individual/TiltCradle_KeyedHorn_CameraFrame.stl"
+          ]
+        }
+      },
+      "checksum_file": "archive/delivery/EyeTrace_Final_Engineering.zip.sha256",
+      "publication_scan_member_findings": 3
+    },
+    "original_manufacturing_files": 988,
+    "revisions": {
+      "EyeTrace_CAD_20261115_232254/EyeTrace.FCStd": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_CAD_20261115_232254/assembly.step": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_CAD_20261115_232254/camera_mount_21x16_01": {
+        "original_files": 33,
+        "exact_bytes_tracked": 33
+      },
+      "EyeTrace_CAD_20261115_232254/candidate_02": {
+        "original_files": 18,
+        "exact_bytes_tracked": 18
+      },
+      "EyeTrace_CAD_20261115_232254/final_prototype": {
+        "original_files": 18,
+        "exact_bytes_tracked": 18
+      },
+      "EyeTrace_CAD_20261115_232254/parts": {
+        "original_files": 6,
+        "exact_bytes_tracked": 6
+      },
+      "EyeTrace_CAD_20261115_232254/production_candidate_01": {
+        "original_files": 37,
+        "exact_bytes_tracked": 37
+      },
+      "EyeTrace_CAD_20261115_232254/release_candidate": {
+        "original_files": 18,
+        "exact_bytes_tracked": 18
+      },
+      "EyeTrace_CAD_20261115_232254/revision_02": {
+        "original_files": 13,
+        "exact_bytes_tracked": 13
+      },
+      "EyeTrace_CAD_20261115_232254/revision_03": {
+        "original_files": 13,
+        "exact_bytes_tracked": 13
+      },
+      "EyeTrace_CAD_20261115_232254/revision_04": {
+        "original_files": 17,
+        "exact_bytes_tracked": 17
+      },
+      "EyeTrace_CAD_20261115_232254/sg90_interface_audit_01": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_CAD_20261115_232254/sg90_interface_repair_01": {
+        "original_files": 96,
+        "exact_bytes_tracked": 96
+      },
+      "EyeTrace_CAD_20261115_232254/sg90_reference_revision_01": {
+        "original_files": 10,
+        "exact_bytes_tracked": 10
+      },
+      "EyeTrace_CAD_20261115_232254/sg90_reference_revision_02": {
+        "original_files": 12,
+        "exact_bytes_tracked": 12
+      },
+      "EyeTrace_CAD_20261115_232254/single_bed.stl": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_Final_Engineering/ABS_Print_Ready": {
+        "original_files": 14,
+        "exact_bytes_tracked": 14
+      },
+      "EyeTrace_Final_Engineering/CAD": {
+        "original_files": 26,
+        "exact_bytes_tracked": 26
+      },
+      "EyeTrace_Final_Engineering/Camera_21x14_Correction_01": {
+        "original_files": 12,
+        "exact_bytes_tracked": 12
+      },
+      "EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01": {
+        "original_files": 90,
+        "exact_bytes_tracked": 89,
+        "sanitized_copy_tracked": 1
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_Final_2_PLATES_R15": {
+        "original_files": 17,
+        "sanitized_copy_tracked": 2,
+        "exact_bytes_tracked": 15
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR": {
+        "original_files": 16,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 15
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO": {
+        "original_files": 16,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 15
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP": {
+        "original_files": 21,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 20
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_Plate02_Compact_Carrier_Test": {
+        "original_files": 3,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 2
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R16_PRINT_READY_CANDIDATE": {
+        "original_files": 5,
+        "exact_bytes_tracked": 4,
+        "sanitized_copy_tracked": 1
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R17_COMPACT_DRIVE": {
+        "original_files": 16,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 15
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R17_FINAL_PRINT_VALIDATION": {
+        "original_files": 2,
+        "exact_bytes_tracked": 2
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R17_PAN_INTERFERENCE_REPAIR": {
+        "original_files": 17,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 16
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR": {
+        "original_files": 16,
+        "sanitized_copy_tracked": 2,
+        "exact_bytes_tracked": 14
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R17_PLATE_02_FINAL_VALIDATION": {
+        "original_files": 15,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 14
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R18_CircularMount_Correction_01": {
+        "original_files": 18,
+        "sanitized_copy_tracked": 2,
+        "exact_bytes_tracked": 16
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R18_Lightweight_PrintReady": {
+        "original_files": 19,
+        "exact_bytes_tracked": 16,
+        "sanitized_copy_tracked": 3
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R19_ThinMountPlate": {
+        "original_files": 18,
+        "sanitized_copy_tracked": 2,
+        "exact_bytes_tracked": 16
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R20_UltraLowProfile": {
+        "original_files": 28,
+        "exact_bytes_tracked": 24,
+        "sanitized_copy_tracked": 4
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R21_SinglePanMountPlate": {
+        "original_files": 33,
+        "exact_bytes_tracked": 26,
+        "sanitized_copy_tracked": 7
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R22_UnifiedBottomMount": {
+        "original_files": 39,
+        "exact_bytes_tracked": 29,
+        "sanitized_copy_tracked": 10
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R23_UnifiedBottomBlock": {
+        "original_files": 8,
+        "exact_bytes_tracked": 4,
+        "sanitized_copy_tracked": 4
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R24_PanYoke_OneLayer": {
+        "original_files": 5,
+        "exact_bytes_tracked": 3,
+        "sanitized_copy_tracked": 2
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R25_PanYoke_BottomMount": {
+        "original_files": 2,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R26_Remaining_Frame_Print": {
+        "original_files": 2,
+        "exact_bytes_tracked": 2
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R27_CompactServoMount": {
+        "original_files": 5,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 4
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R28_SingleLayerHornMount": {
+        "original_files": 4,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 3
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R29_IntegratedMountingPlate": {
+        "original_files": 4,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 3
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R30_FlatMountingPlate": {
+        "original_files": 4,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 3
+      },
+      "EyeTrace_Final_Engineering/EyeTrace_R31_HornPocket_2mm": {
+        "original_files": 5,
+        "sanitized_copy_tracked": 1,
+        "exact_bytes_tracked": 4
+      },
+      "EyeTrace_Final_Engineering/F625_Bearing_Upgrade_01": {
+        "original_files": 10,
+        "exact_bytes_tracked": 10
+      },
+      "EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15": {
+        "original_files": 32,
+        "exact_bytes_tracked": 32
+      },
+      "EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15_ASSEMBLY": {
+        "original_files": 5,
+        "exact_bytes_tracked": 2,
+        "sanitized_copy_tracked": 3
+      },
+      "EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED": {
+        "original_files": 14,
+        "exact_bytes_tracked": 14
+      },
+      "EyeTrace_Final_Engineering/FIT_TESTS": {
+        "original_files": 19,
+        "exact_bytes_tracked": 19
+      },
+      "EyeTrace_Final_Engineering/Motion_Audit_02": {
+        "original_files": 5,
+        "exact_bytes_tracked": 5
+      },
+      "EyeTrace_Final_Engineering/R15_BASE_ABS_OPTIMIZED": {
+        "original_files": 10,
+        "sanitized_copy_tracked": 10
+      },
+      "EyeTrace_Final_Engineering/R15_BASE_TEST_PRINT": {
+        "original_files": 1,
+        "sanitized_copy_tracked": 1
+      },
+      "EyeTrace_Final_Engineering/R15_CENTERED_MOUNT_FINAL": {
+        "original_files": 31,
+        "exact_bytes_tracked": 30,
+        "sanitized_copy_tracked": 1
+      },
+      "EyeTrace_Final_Engineering/STL": {
+        "original_files": 36,
+        "exact_bytes_tracked": 36
+      },
+      "EyeTrace_Integrated_Candidate_01/EyeTrace_Exploded.FCStd": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_Integrated_Candidate_01/EyeTrace_Integrated_Assembly.FCStd": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_Integrated_Candidate_01/EyeTrace_Integrated_Assembly.step": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_Integrated_Candidate_01/EyeTrace_K2_SingleBed.stl": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_Integrated_Candidate_01/K2_PrintLayout.FCStd": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      },
+      "EyeTrace_Integrated_Candidate_01/coupons": {
+        "original_files": 18,
+        "exact_bytes_tracked": 18
+      },
+      "EyeTrace_Integrated_Candidate_01/parts": {
+        "original_files": 26,
+        "exact_bytes_tracked": 26
+      },
+      "EyeTrace_Integrated_Candidate_01/work_02": {
+        "original_files": 1,
+        "exact_bytes_tracked": 1
+      }
+    },
+    "no_tracked_match": []
+  }
+}

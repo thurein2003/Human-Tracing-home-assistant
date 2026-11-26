@@ -4,6 +4,12 @@
 
 Eye Trace is a 3D-printed pan-and-tilt camera prototype. A Raspberry Pi operates the camera, servo controller, web dashboard and speaker. A Windows laptop runs Gemma 3 4B in Ollama to investigate possible people beyond the local face detector’s view. The archive records the working prototype as described by its builder and preserves the recovered mechanical designs and manufacturing evidence. The running Pi source is pending recovery.
 
+## Download 3D Printing Files
+
+[13 individual STL files and print settings](PRINTING_FILES.md) · [Complete single-bed STL](hardware/3d-models/STL/EyeTrace_Final_K2_SingleBed_21x14.stl) · [Creality K2 ABS 3MF](hardware/3d-models/3MF/EyeTrace_K2_ABS_Full_21x14.3mf) · [Editable FreeCAD assembly](hardware/3d-models/FreeCAD/EyeTrace_Final_Assembly_21x14.FCStd)
+
+The complete 21 × 14 mm build candidate passed the file audit and has a physical-fit hold. Start with the [camera, horn and clearance fit tests](PRINTING_FILES.md#fit-tests-and-white-sg90-horn-gauges). The later mount and horn experiments are documented separately.
+
 ## Demonstration
 
 [<img src="media/demonstration/thumbnail.jpg" alt="Eye Trace live demonstration thumbnail" width="340">](media/demonstration/EyeTrace-Preview.mp4)

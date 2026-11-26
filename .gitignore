@@ -9,4 +9,4 @@ __pycache__/
 config/*.local.*
 software/raspberry-pi/captures/
 media/demonstration/EyeTrace-Live-Demo.mp4
-archive/delivery/EyeTrace_Final_Engineering.zip*
+archive/delivery/EyeTrace_Final_Engineering.zip
