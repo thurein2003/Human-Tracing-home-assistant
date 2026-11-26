@@ -2,7 +2,9 @@
 
 **Mechanical release hold.** The corrected 21 × 14 mm package is the complete 13-part ABS rebuild candidate. Its files passed the audit. The original release requires a physical camera coupon pass and rear-component and fastener clearance. Both drive carriers in this package retain legacy five-arm horn pockets. The later four-arm white-horn work has separate fit and assembly evidence. [Original release status](archive/engineering/EyeTrace_Final_Engineering/Camera_21x14_Correction_01/DOCUMENTATION/RELEASE_STATUS.md) · [Horn interface audit](archive/engineering/EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/DOCUMENTATION/VALIDATION_AND_RELEASE.md).
 
-## Complete 21 × 14 mm build candidate
+**[Download the manufacturing ZIP](hardware/printing/EyeTrace_Manufacturing_Package.zip?raw=1)** · [SHA-256 checksum](hardware/printing/EyeTrace_Manufacturing_Package.zip.sha256). Open START_HERE.md inside the ZIP for the contents and release status. The 48 engineering files use the verified Git copies and include the legacy build, fit tests and R15 four-arm references. The internal SHA256SUMS covers all 50 other members, and SOURCE_FILES.csv lists their engineering source paths.
+
+## Legacy five-arm 21 × 14 mm build candidate
 
 | Download | Verification |
 | --- | --- |
@@ -47,9 +49,14 @@ The camera plate has four Ø2.4 mm CAD bores centered at X ±10.5 mm and Z 69/83
 
 The R15 file is a negative pocket master for fit checks. A production mold or measured solid for manufacturing the white horn itself remains missing. The commercial horn and its original retaining screw are separate hardware.
 
+## R15 four-arm revision on engineering hold
+
+[Editable R15 FreeCAD assembly](archive/engineering/EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15/CAD/EyeTrace_Final_Assembly_R15.FCStd) · [R15 fixed-layout 3MF](archive/engineering/EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED/EyeTrace_K2_ABS_All_In_One_R15_Fixed.3mf) · [R15 placement report](archive/engineering/EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED/DOCUMENTATION/LAYOUT_VALIDATION_REPORT.md)
+
+The R15 candidate uses four-arm pockets derived from the white-horn gauge. The report verifies its fixed plate placement. Sliced toolpaths and the complete mechanical assembly remain on hold. The separate assembly trial recorded interference and provisional horn alignment. The master gauge remains a fit coupon, and the production horn mold remains missing. [R15 assembly validation](archive/engineering/EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15_ASSEMBLY/DOCUMENTATION/ASSEMBLY_VALIDATION_REPORT.md)
+
 ## Later revisions and archive provenance
 
-- The [integrated R15 single-bed candidate](archive/engineering/EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED) incorporates the four-arm pocket work and has geometry and placement evidence. The fixed layout still lacks a passing toolpath release, and the [assembly and support trial](archive/engineering/EyeTrace_Final_Engineering/FINAL_ALL_IN_ONE_R15_ASSEMBLY/DOCUMENTATION/SUPPORT_VALIDATION_REPORT.md) records a mechanical hold.
 - The [R15 two-plate job](archive/engineering/EyeTrace_Final_Engineering/EyeTrace_Final_2_PLATES_R15/DOCUMENTATION/TWO_PLATE_VALIDATION_REPORT.md) is held for bridge-support and first-layer checks. [R17 pan repair](archive/engineering/EyeTrace_Final_Engineering/EyeTrace_R17_PAN_INTERFERENCE_REPAIR/REPORTS/FINAL_PASS_HOLD.md) and [Plate 02 repair](archive/engineering/EyeTrace_Final_Engineering/EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR/REPORTS/PLATE02_BLOCKER_RESOLUTION.md) document unresolved interference or hardware assumptions. Keep these revision sets together.
 - The [revision archive](archive/engineering/EyeTrace_Final_Engineering) includes R16–R31 mount, carrier, base and print trials and the F625 bearing option. The [R31 record](archive/engineering/EyeTrace_Final_Engineering/EyeTrace_R31_HornPocket_2mm/VALIDATION/R31_Geometry_Validation.md) covers a sliced tilt-cradle candidate with a 2.00 mm recess and a 0.50 mm roof. Load and fit remain open. The [recovery manifest](archive/recovery-manifest.csv) maps duplicates and metadata-cleaned design files back to their originals.
 - The audit found tracked equivalents for all 988 original STL, STEP, FCStd and 3MF paths across the three source trees. Of these, 920 have exact tracked bytes and 68 match audited metadata-cleaned copies. These are provenance results for historical revisions. Geometry validation focuses on the corrected set and fit files above.

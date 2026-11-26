@@ -1,14 +1,17 @@
 # Eye Trace — Intelligent Human Tracing Home Assistant
 
-<img src="media/CAD-renders/corrected-assembly.png" alt="Actual Eye Trace prototype showing the CSI camera, printed pan-and-tilt frame and tilt servo" width="460">
+<img src="media/CAD-renders/corrected-assembly.png" alt="FreeCAD rendering of the corrected Eye Trace pan-and-tilt assembly" width="460">
 
 Eye Trace is a 3D-printed pan-and-tilt camera prototype. A Raspberry Pi operates the camera, servo controller, web dashboard and speaker. A Windows laptop runs Gemma 3 4B in Ollama to investigate possible people beyond the local face detector’s view. The archive records the working prototype as described by its builder and preserves the recovered mechanical designs and manufacturing evidence. The running Pi source is pending recovery.
 
 ## Download 3D Printing Files
 
-[13 individual STL files and print settings](PRINTING_FILES.md) · [Complete single-bed STL](hardware/3d-models/STL/EyeTrace_Final_K2_SingleBed_21x14.stl) · [Creality K2 ABS 3MF](hardware/3d-models/3MF/EyeTrace_K2_ABS_Full_21x14.3mf) · [Editable FreeCAD assembly](hardware/3d-models/FreeCAD/EyeTrace_Final_Assembly_21x14.FCStd)
+**[Download the manufacturing ZIP](hardware/printing/EyeTrace_Manufacturing_Package.zip?raw=1)** · [SHA-256 checksum](hardware/printing/EyeTrace_Manufacturing_Package.zip.sha256)
 
-The complete 21 × 14 mm build candidate passed the file audit and has a physical-fit hold. Start with the [camera, horn and clearance fit tests](PRINTING_FILES.md#fit-tests-and-white-sg90-horn-gauges). The later mount and horn experiments are documented separately.
+- **Legacy five-arm, 21 × 14 mm camera pattern.** [All 13 individual STLs and print settings](PRINTING_FILES.md#individual-stl-downloads) · [Single-bed STL](hardware/3d-models/STL/EyeTrace_Final_K2_SingleBed_21x14.stl) · [Creality K2 ABS 3MF](hardware/3d-models/3MF/EyeTrace_K2_ABS_Full_21x14.3mf) · [Editable FreeCAD assembly](hardware/3d-models/FreeCAD/EyeTrace_Final_Assembly_21x14.FCStd) · [Editable print layout](hardware/3d-models/FreeCAD/K2_PrintLayout_21x14.FCStd)
+- **R15 four-arm, engineering hold.** The white-horn pocket master and the R15 assembly are separate configurations from the complete legacy build. [R15 files and evidence](PRINTING_FILES.md#r15-four-arm-revision-on-engineering-hold) · [Camera, pan-ring, tilt-journal and horn fit tests](PRINTING_FILES.md#fit-tests-and-white-sg90-horn-gauges)
+
+The production horn mold remains missing. The camera rear envelope and fasteners, printed joint clearances, and installed four-arm horn engagement still require physical verification. Both assembly versions remain on engineering hold. [Raspberry Pi runtime recovery](docs/recovery.md) is pending.
 
 ## Demonstration
 
