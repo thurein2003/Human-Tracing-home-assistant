@@ -1,6 +1,6 @@
 # Eye Trace — Intelligent Human Tracing Home Assistant
 
-<img src="media/project-images/physical-robot.jpg" alt="Actual Eye Trace prototype showing the CSI camera, printed pan-and-tilt frame and tilt servo" width="460">
+<img src="media/CAD-renders/corrected-assembly.png" alt="Actual Eye Trace prototype showing the CSI camera, printed pan-and-tilt frame and tilt servo" width="460">
 
 Eye Trace is a 3D-printed pan-and-tilt camera prototype. A Raspberry Pi operates the camera, servo controller, web dashboard and speaker. A Windows laptop runs Gemma 3 4B in Ollama to investigate possible people beyond the local face detector’s view. The archive records the working prototype as described by its builder and preserves the recovered mechanical designs and manufacturing evidence. The running Pi source is pending recovery.
 
