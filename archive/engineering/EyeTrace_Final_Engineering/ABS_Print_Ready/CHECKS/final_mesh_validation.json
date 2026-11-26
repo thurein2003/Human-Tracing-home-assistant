@@ -1,0 +1,8 @@
+﻿{
+  "method": "FreeCAD 1.1.4 Mesh module reopen and mesh topology checks; Creality Print 7.3.1.6378 CLI sliced both final 3MF projects",
+  "full_bed_stl": {"facets":42932,"connected_components":13,"solid_mesh":true,"bounds_mm":{"x_min":12.0,"y_min":12.0,"z_min":0.0,"x_max":229.097,"y_max":229.999,"z_max":67.1751}},
+  "fit_coupon_stl": {"facets":15988,"connected_components":7,"solid_mesh":true,"bounds_mm":{"x_min":12.0,"y_min":12.0001,"z_min":0.0,"x_max":211.0,"y_max":137.993,"z_max":4.2}},
+  "slicer": {"full_bed_exit_code":0,"coupon_bed_exit_code":0,"final_slices_reported_warnings":0,"full_bed_part_count":13,"coupon_count":7,"all_full_parts_layer_height_mm":0.2,"camera_hole_centers_preserved_mm":{"horizontal":21.0,"vertical":16.0}},
+  "physical_fit": "NOT TESTED; no claims of physical compatibility",
+  "release": "ABS fit-test ready; complete ABS print pending physical fit tests; existing release status unchanged"
+}

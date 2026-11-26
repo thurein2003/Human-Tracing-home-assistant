@@ -1,0 +1,50 @@
+import FreeCAD as App, Part, MeshPart, json
+from FreeCAD import Vector as V
+from pathlib import Path
+ROOT=Path(r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock')
+SRC=Path(r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount\CAD\EyeTrace_R22_UnifiedBottomMount.FCStd')
+d=App.openDocument(str(SRC)); y=d.getObject('PanYoke_EarBracket_KeyedDrive'); ring=d.getObject('Pan_Replaceable_ThrustRing'); base=d.getObject('Base_EarMount_ThrustSupport')
+if not all([y,ring,base]): raise RuntimeError('Required base/yoke/ring missing')
+ys=y.Shape.copy(); rs=ring.Shape.copy(); original_vol=ys.Volume+rs.Volume
+fused=ys.fuse(rs).removeSplitter()
+if not fused.isValid() or len(fused.Solids)!=1: raise RuntimeError('Integrated yoke/thrust surface is not one valid solid')
+if abs(fused.Volume-original_vol)>1e-5: raise RuntimeError('Union altered intended geometry beyond shared-face tolerance')
+base_overlap=fused.common(base.Shape).Volume
+if base_overlap>1e-6: raise RuntimeError('Integrated block penetrates the unchanged printed base')
+# Keep the exact R22 interface positions and R15 drive region; replace two co-assembled solids with one fused solid.
+y.Shape=fused; y.Label='PanYoke_UnifiedBottomBlock_R23';
+pg=d.getObject('PrintedParts')
+if pg and ring in pg.Group: pg.removeObject(ring)
+d.removeObject(ring.Name)
+if pg: pg.Label='01 - Printed components (12; pan thrust land integrated into yoke)'
+d.recompute()
+# verify target thicknesses and preserved M3 flange-hole bores
+
+def zspan(shape,x,y):
+ q=shape.common(Part.makeBox(.1,.1,120,V(x-.05,y-.05,0)))
+ return q.BoundBox.ZLength if q.Volume>1e-8 else None
+web=zspan(fused,40,20); land=zspan(fused,34,0)
+if abs(web-2.5)>.02 or abs(land-2.5)>.02: raise RuntimeError('R22 2.5 mm land/web dimensions changed')
+holes=[]
+for x,yc in [(32.5,23.5),(32.5,-23.5)]:
+ holes.append(fused.common(Part.makeCylinder(1.65,8,V(x,yc,34))).Volume)
+if max(holes)>1e-7: raise RuntimeError('M3 hole obstructed')
+# connected/thrust geometry checks
+contact={'base_interference_mm3':base_overlap,'base_clearance_mm':fused.distToShape(base.Shape)[0],'ring_yoke_intersection_before_mm3':ys.common(rs).Volume,'combined_solid_count':len(fused.Solids),'combined_volume_mm3':fused.Volume,'separate_sum_mm3':original_vol}
+CAD=ROOT/'CAD'; STL=ROOT/'STL'; DOC=ROOT/'DOCUMENTATION'
+fc=CAD/'EyeTrace_R23_UnifiedBottomBlock.FCStd'; d.saveAs(str(fc))
+Part.export([y],str(CAD/'PanYoke_R23_UnifiedBottomBlock.step'))
+# full assembly compound export after ring removal
+root=d.getObject('AssemblyRoot'); compound=Part.makeCompound(root.Shape.Solids)
+Part.export([d.getObject('AssemblyRoot')],str(CAD/'EyeTrace_R23_UnifiedBottomBlock.step'))
+# Print orientation is unchanged from R22; same transform to K2 bed.
+pr=fused.copy(); pr.translate(V(71.2,48.3,-35.2))
+mesh=MeshPart.meshFromShape(Shape=pr,LinearDeflection=.025,AngularDeflection=.08,Relative=False)
+if not mesh.isSolid(): raise RuntimeError('Print STL mesh is not watertight')
+stl=STL/'PanYoke_R23_UnifiedBottomBlock.stl'; mesh.write(str(stl))
+# Also export the unified component as STEP separately; full assembly STEP exported below via compound.
+# Save compound as a distinct valid assembly STEP file.
+Part.export([compound],str(CAD/'EyeTrace_R23_FullAssembly.step'))
+report={'revision':'R23_UnifiedBottomBlock','source':'R22_UnifiedBottomMount','only_modified_printable_geometry':'PanYoke_EarBracket_KeyedDrive plus integration of its co-located Pan_Replaceable_ThrustRing','base_modified':False,'ring_action':'integrated into moving pan-yoke solid; separate duplicate ring removed from this revision','geometry':{'one_valid_yoke_solid':fused.isValid() and len(fused.Solids)==1,'combined_volume_mm3':fused.Volume,'union_vs_separate_sum_delta_mm3':fused.Volume-original_vol,'removed_interpart_seam_without_scaling_or_remeshing':True,'rectangular_web_thickness_mm':web,'annular_land_thickness_mm':land,'M3_hole_centers_mm':[[32.5,23.5],[32.5,-23.5]],'M3_hole_interference_mm3':holes,'base_interference_mm3':base_overlap,'base_clearance_mm':contact['base_clearance_mm'],'print_mesh_watertight':mesh.isSolid(),'facet_count':len(mesh.Facets),'print_bbox_mm':[mesh.BoundBox.XMin,mesh.BoundBox.XMax,mesh.BoundBox.YMin,mesh.BoundBox.YMax,mesh.BoundBox.ZMin,mesh.BoundBox.ZMax]},'contact_probe':contact,'physical_fit':'Not physically reverified; R15/servo interfaces unchanged in CAD.','files':{'fcstd':str(fc),'component_step':str(CAD/'PanYoke_R23_UnifiedBottomBlock.step'),'assembly_step':str(CAD/'EyeTrace_R23_FullAssembly.step'),'stl':str(stl)}}
+(DOC/'R23_GEOMETRY_VALIDATION.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+print(json.dumps(report,indent=2))

@@ -1,0 +1,18 @@
+﻿import FreeCAD as App, Part, json
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_R20_UltraLowProfile\CAD\EyeTrace_R20_UltraLowProfile.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\DOCUMENTATION\frame_diag.json'
+d=App.openDocument(src); o=d.getObject('Pan_KeyedHorn_Cover'); s=o.Shape; b=s.BoundBox; z=b.ZMin-0.5; h=b.ZLength+1
+ms=[Part.makeBox(44,4.6,h,V(-22,-2.3,z)),Part.makeBox(4.6,44,h,V(-2.3,-22,z))]
+for x,y in [(18,0),(-18,0),(0,18),(0,-18)]:ms.append(Part.makeCylinder(5.8,h,V(x,y,z)))
+k=ms[0]
+for x in ms[1:]:k=k.fuse(x)
+r=s.common(k).removeSplitter()
+a=[]
+for i,x in enumerate(r.Solids):
+ b=x.BoundBox;a.append({'i':i,'vol':x.Volume,'bbox':[b.XMin,b.XMax,b.YMin,b.YMax,b.ZMin,b.ZMax]})
+dist=[]
+for i in range(len(r.Solids)):
+ for j in range(i+1,len(r.Solids)):dist.append([i,j,r.Solids[i].distToShape(r.Solids[j])[0]])
+open(out,'w').write(json.dumps({'solids':a,'distances':dist,'valid':r.isValid(),'vol':r.Volume},indent=2))
+App.closeDocument(d.Name)

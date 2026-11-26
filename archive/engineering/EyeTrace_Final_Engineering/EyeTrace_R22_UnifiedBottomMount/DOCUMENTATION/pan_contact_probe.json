@@ -1,0 +1,32 @@
+[
+  {
+    "pair": [
+      "Base_EarMount_ThrustSupport",
+      "Pan_Replaceable_ThrustRing"
+    ],
+    "common_volume": 0.0,
+    "distance": 0.0,
+    "common_faces": 0,
+    "common_edges": 0
+  },
+  {
+    "pair": [
+      "Base_EarMount_ThrustSupport",
+      "PanYoke_EarBracket_KeyedDrive"
+    ],
+    "common_volume": 0.0,
+    "distance": 0.2999999999999927,
+    "common_faces": 0,
+    "common_edges": 0
+  },
+  {
+    "pair": [
+      "Pan_Replaceable_ThrustRing",
+      "PanYoke_EarBracket_KeyedDrive"
+    ],
+    "common_volume": 0.0,
+    "distance": 0.0,
+    "common_faces": 0,
+    "common_edges": 0
+  }
+]

@@ -1,0 +1,10 @@
+﻿import FreeCAD as App, Mesh, os, json
+root=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+out={}
+for fn in sorted(os.listdir(os.path.join(root,'STL'))):
+ if not fn.lower().endswith('.stl'): continue
+ m=Mesh.Mesh(os.path.join(root,'STL',fn))
+ bb=m.BoundBox
+ out[fn]={'facets':len(m.Facets),'is_solid':bool(m.isSolid()),'volume_mm3':float(m.Volume),'bbox_mm':[float(bb.XMin),float(bb.YMin),float(bb.ZMin),float(bb.XMax),float(bb.YMax),float(bb.ZMax)]}
+with open(os.path.join(root,'STL_MESH_VALIDATION.json'),'w') as f: json.dump(out,f,indent=2)
+App.closeDocument(App.ActiveDocument.Name) if App.ActiveDocument else None

@@ -1,0 +1,885 @@
+[
+  {
+    "name": "AssemblyRoot",
+    "label": "Eye Trace R15 ? operational-coordinate assembly",
+    "type": "App::DocumentObjectGroup",
+    "group": [
+      "PrintedParts",
+      "HardwareReference",
+      "Keepouts",
+      "ReferenceDimensions"
+    ],
+    "solids": 75,
+    "vol": 149309.19479854862,
+    "bb": [
+      -70.0,
+      44.5,
+      -35.3,
+      35.3,
+      -3.1754264805429417,
+      103.0
+    ]
+  },
+  {
+    "name": "PrintedParts",
+    "label": "01 ? Printed components (13)",
+    "type": "App::DocumentObjectGroup",
+    "group": [
+      "Base_EarMount_ThrustSupport",
+      "Pan_Replaceable_ThrustRing",
+      "PanYoke_EarBracket_KeyedDrive",
+      "Tilt_Removable_IdlerPillar",
+      "Pan_KeyedHorn_Cover",
+      "TiltCradle_KeyedHorn_CameraFrame",
+      "Tilt_KeyedHorn_CaptiveCover",
+      "Tilt_Journal_FlangedSleeve",
+      "PCB_Spacer_Lower_Left",
+      "PCB_Spacer_Lower_Right",
+      "PCB_Spacer_Upper_Left",
+      "PCB_Spacer_Upper_Right",
+      "CameraPlate_Cut007"
+    ],
+    "solids": 13,
+    "vol": 119192.73628315412,
+    "bb": [
+      -58.2,
+      44.0,
+      -35.3,
+      35.3,
+      0.0,
+      103.0
+    ]
+  },
+  {
+    "name": "HardwareReference",
+    "label": "02 ? Installed hardware references (provisional where marked)",
+    "type": "App::DocumentObjectGroup",
+    "group": [
+      "PanServo_SG90_Reference",
+      "TiltServo_SG90_Reference",
+      "Pan_OriginalStar_PROVISIONAL",
+      "Tilt_OriginalStar_PROVISIONAL",
+      "PanOriginalScrew_PROVISIONAL",
+      "TiltOriginalScrew_PROVISIONAL",
+      "IdlerPillar_M3x10_0",
+      "IdlerPillar_M3x10_1",
+      "PanDrive_M3x10_0",
+      "PanDrive_M3x10_1",
+      "PanDrive_M3x10_2",
+      "PanDrive_M3x10_3",
+      "TiltDrive_M3x10_0",
+      "TiltDrive_M3x10_1",
+      "TiltDrive_M3x10_2",
+      "TiltDrive_M3x10_3",
+      "TiltIdler_M3x12",
+      "TiltIdler_M3_Washer",
+      "PanEar_M1p6x8_0",
+      "PanEar_M1p6x8_1",
+      "TiltEar_M1p6x8_0",
+      "TiltEar_M1p6x8_1",
+      "RailMount_Lower_M3x10_0",
+      "RailMount_Lower_M3x10_1",
+      "Camera_M2x12_Lower_Left",
+      "Camera_M2x12_Lower_Right",
+      "RailMount_Upper_M3x10_0",
+      "RailMount_Upper_M3x10_1",
+      "Camera_M2x12_Upper_Left",
+      "Camera_M2x12_Upper_Right",
+      "Camera_Lens_PROVISIONAL",
+      "Pan_R15_FitEnvelope",
+      "Tilt_R15_FitEnvelope"
+    ],
+    "solids": 58,
+    "vol": 19815.816515394243,
+    "bb": [
+      -70.0,
+      44.5,
+      -30.4,
+      26.675426480542942,
+      -3.1754264805429417,
+      97.5
+    ]
+  },
+  {
+    "name": "Keepouts",
+    "label": "03 ? Camera / ribbon uncertainty envelopes (not physical parts)",
+    "type": "App::DocumentObjectGroup",
+    "group": [
+      "PanServo_WireExit_KEEP_OUT",
+      "TiltServo_WireExit_KEEP_OUT",
+      "Camera_WireExit_KEEP_OUT",
+      "Camera_RearComponents_KEEP_OUT"
+    ],
+    "solids": 4,
+    "vol": 10300.642000000002,
+    "bb": [
+      -65.45,
+      20.0,
+      -1.7,
+      24.4,
+      0.0,
+      102.0
+    ]
+  },
+  {
+    "name": "ReferenceDimensions",
+    "label": "04 ? R15 reference dimensions (read-only notes)",
+    "type": "App::DocumentObjectGroup",
+    "group": []
+  },
+  {
+    "name": "Base_EarMount_ThrustSupport",
+    "label": "Stationary base / pan-servo support",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 50586.79985770291,
+    "bb": [
+      -40.0,
+      40.0,
+      -35.0,
+      35.0,
+      0.0,
+      36.5
+    ]
+  },
+  {
+    "name": "Pan_Replaceable_ThrustRing",
+    "label": "Stationary pan thrust surface",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 833.5273628504433,
+    "bb": [
+      -32.0,
+      32.0,
+      -32.0,
+      32.0,
+      36.0,
+      37.0
+    ]
+  },
+  {
+    "name": "PanServo_SG90_Reference",
+    "label": "Pan SG90 reference ? dimensions provisional",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 7152.840844796366,
+    "bb": [
+      -10.7,
+      21.599999999999998,
+      -6.1,
+      6.1,
+      6.0,
+      36.3
+    ]
+  },
+  {
+    "name": "TiltServo_SG90_Reference",
+    "label": "Tilt SG90 reference ? dimensions provisional",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 7152.840844796365,
+    "bb": [
+      -70.0,
+      -39.7,
+      -6.1,
+      6.1,
+      56.400000000000006,
+      88.7
+    ]
+  },
+  {
+    "name": "Pan_OriginalStar_PROVISIONAL",
+    "label": "Pan SG90 four-arm cross horn \u2014 R15 reference; coupon fit user-confirmed",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 476.19571761711836,
+    "bb": [
+      -19.5,
+      19.5,
+      -10.0,
+      10.0,
+      32.5,
+      36.5
+    ]
+  },
+  {
+    "name": "Tilt_OriginalStar_PROVISIONAL",
+    "label": "Tilt SG90 four-arm cross horn \u2014 R15 reference; coupon fit user-confirmed",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 476.1957176171183,
+    "bb": [
+      -43.5,
+      -39.5,
+      -10.0,
+      10.0,
+      58.5,
+      97.5
+    ]
+  },
+  {
+    "name": "PanOriginalScrew_PROVISIONAL",
+    "label": "PanOriginalScrew_PROVISIONAL",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 19.674223993106082,
+    "bb": [
+      -1.75,
+      1.75,
+      -1.75,
+      1.75,
+      32.0,
+      38.0
+    ]
+  },
+  {
+    "name": "TiltOriginalScrew_PROVISIONAL",
+    "label": "TiltOriginalScrew_PROVISIONAL",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 19.67422399310609,
+    "bb": [
+      -44.0,
+      -38.0,
+      -1.75,
+      1.75,
+      76.25,
+      79.75
+    ]
+  },
+  {
+    "name": "PanYoke_EarBracket_KeyedDrive",
+    "label": "PanYoke_EarBracket_R20_LowProfile_OuterLand",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 27162.310325591618,
+    "bb": [
+      -58.2,
+      44.0,
+      -35.3,
+      35.3,
+      35.199999999999996,
+      103.0
+    ]
+  },
+  {
+    "name": "Tilt_Removable_IdlerPillar",
+    "label": "Opposite-side tilt pivot support",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 7511.695140156739,
+    "bb": [
+      28.0,
+      44.0,
+      -28.5,
+      28.5,
+      41.0,
+      98.0
+    ]
+  },
+  {
+    "name": "IdlerPillar_M3x10_0",
+    "label": "IdlerPillar_M3x10_0",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356758,
+    "bb": [
+      29.7,
+      35.3,
+      -26.675426480542942,
+      -20.324573519457058,
+      33.0,
+      46.0
+    ]
+  },
+  {
+    "name": "IdlerPillar_M3x10_1",
+    "label": "IdlerPillar_M3x10_1",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356758,
+    "bb": [
+      29.7,
+      35.3,
+      20.324573519457058,
+      26.675426480542942,
+      33.0,
+      46.0
+    ]
+  },
+  {
+    "name": "Pan_KeyedHorn_Cover",
+    "label": "Pan horn retainer cover",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 1271.1108327978764,
+    "bb": [
+      -23.8,
+      23.8,
+      -23.8,
+      23.8,
+      30.8,
+      35.0
+    ]
+  },
+  {
+    "name": "PanDrive_M3x10_0",
+    "label": "PanDrive_M3x10_0",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.4849379035676,
+    "bb": [
+      15.2,
+      20.8,
+      -3.1754264805429417,
+      3.1754264805429417,
+      29.0,
+      42.0
+    ]
+  },
+  {
+    "name": "PanDrive_M3x10_1",
+    "label": "PanDrive_M3x10_1",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.4849379035676,
+    "bb": [
+      -20.8,
+      -15.2,
+      -3.1754264805429417,
+      3.1754264805429417,
+      29.0,
+      42.0
+    ]
+  },
+  {
+    "name": "PanDrive_M3x10_2",
+    "label": "PanDrive_M3x10_2",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.4849379035676,
+    "bb": [
+      -2.8,
+      2.8,
+      14.824573519457056,
+      21.175426480542942,
+      29.0,
+      42.0
+    ]
+  },
+  {
+    "name": "PanDrive_M3x10_3",
+    "label": "PanDrive_M3x10_3",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356756,
+    "bb": [
+      -2.8,
+      2.8,
+      -21.175426480542942,
+      -14.824573519457058,
+      29.0,
+      42.0
+    ]
+  },
+  {
+    "name": "TiltCradle_KeyedHorn_CameraFrame",
+    "label": "Tilt cradle \u2014 exact R15 pocket; unchanged R17 BREP",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 24742.034516702675,
+    "bb": [
+      -41.00000000000001,
+      36.0,
+      -24.4,
+      21.0,
+      54.0,
+      99.0
+    ]
+  },
+  {
+    "name": "Tilt_KeyedHorn_CaptiveCover",
+    "label": "Tilt horn retainer cover",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 2386.306021719595,
+    "bb": [
+      -45.2,
+      -41.0,
+      -21.0,
+      21.0,
+      57.0,
+      99.0
+    ]
+  },
+  {
+    "name": "TiltDrive_M3x10_0",
+    "label": "TiltDrive_M3x10_0",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356764,
+    "bb": [
+      -47.0,
+      -34.0,
+      11.824573519457058,
+      18.175426480542942,
+      75.2,
+      80.8
+    ]
+  },
+  {
+    "name": "TiltDrive_M3x10_1",
+    "label": "TiltDrive_M3x10_1",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356764,
+    "bb": [
+      -47.0,
+      -34.0,
+      -18.175426480542942,
+      -11.824573519457058,
+      75.2,
+      80.8
+    ]
+  },
+  {
+    "name": "TiltDrive_M3x10_2",
+    "label": "TiltDrive_M3x10_2",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356764,
+    "bb": [
+      -47.0,
+      -34.0,
+      -3.1754264805429417,
+      3.1754264805429417,
+      90.2,
+      95.8
+    ]
+  },
+  {
+    "name": "TiltDrive_M3x10_3",
+    "label": "TiltDrive_M3x10_3",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356758,
+    "bb": [
+      -47.0,
+      -34.0,
+      -3.1754264805429417,
+      3.1754264805429417,
+      60.2,
+      65.8
+    ]
+  },
+  {
+    "name": "Tilt_Journal_FlangedSleeve",
+    "label": "Opposite-side tilt journal sleeve",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 68.26366676985263,
+    "bb": [
+      35.2,
+      39.3,
+      -3.5,
+      3.5,
+      74.5,
+      81.5
+    ]
+  },
+  {
+    "name": "TiltIdler_M3x12",
+    "label": "TiltIdler_M3x12",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 235.2280008349653,
+    "bb": [
+      29.5,
+      44.5,
+      -3.1754264805429417,
+      3.1754264805429417,
+      75.2,
+      80.8
+    ]
+  },
+  {
+    "name": "TiltIdler_M3_Washer",
+    "label": "TiltIdler_M3_Washer",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 14.965762003538382,
+    "bb": [
+      32.5,
+      33.0,
+      -3.5,
+      3.5,
+      74.5,
+      81.5
+    ]
+  },
+  {
+    "name": "PanEar_M1p6x8_0",
+    "label": "PanEar_M1p6x8_0",
+    "type": "Part::Feature",
+    "solids": 3,
+    "vol": 41.32025330917046,
+    "bb": [
+      -10.15,
+      -6.15,
+      -2.0,
+      2.0,
+      16.9,
+      26.5
+    ]
+  },
+  {
+    "name": "PanEar_M1p6x8_1",
+    "label": "PanEar_M1p6x8_1",
+    "type": "Part::Feature",
+    "solids": 3,
+    "vol": 41.32025330917047,
+    "bb": [
+      17.05,
+      21.05,
+      -2.0,
+      2.0,
+      16.9,
+      26.5
+    ]
+  },
+  {
+    "name": "TiltEar_M1p6x8_0",
+    "label": "TiltEar_M1p6x8_0",
+    "type": "Part::Feature",
+    "solids": 3,
+    "vol": 41.32025330917044,
+    "bb": [
+      -59.1,
+      -49.5,
+      -2.0,
+      2.0,
+      56.95,
+      60.95
+    ]
+  },
+  {
+    "name": "TiltEar_M1p6x8_1",
+    "label": "TiltEar_M1p6x8_1",
+    "type": "Part::Feature",
+    "solids": 3,
+    "vol": 41.32025330917043,
+    "bb": [
+      -59.1,
+      -49.5,
+      -2.0,
+      2.0,
+      84.15,
+      88.15
+    ]
+  },
+  {
+    "name": "RailMount_Lower_M3x10_0",
+    "label": "CameraPlateMount_Lower_M3x10_0",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.4849379035676,
+    "bb": [
+      -26.8,
+      -21.2,
+      -30.4,
+      -17.4,
+      -3.1754264805429417,
+      3.1754264805429417
+    ]
+  },
+  {
+    "name": "RailMount_Lower_M3x10_1",
+    "label": "CameraPlateMount_Lower_M3x10_1",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356764,
+    "bb": [
+      21.2,
+      26.8,
+      -30.4,
+      -17.4,
+      -3.1754264805429417,
+      3.1754264805429417
+    ]
+  },
+  {
+    "name": "PCB_Spacer_Lower_Left",
+    "label": "Camera lower-left spacer",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 45.333181991300705,
+    "bb": [
+      -13.0,
+      -8.0,
+      -30.4,
+      -27.4,
+      66.5,
+      71.5
+    ]
+  },
+  {
+    "name": "Camera_M2x12_Lower_Left",
+    "label": "Camera M2x12 provisional screw/nut",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 79.97555516293382,
+    "bb": [
+      -2.0000000000000004,
+      2.0000000000000004,
+      -2.3094010767585034,
+      2.3094010767585034,
+      -2.0,
+      12.0
+    ]
+  },
+  {
+    "name": "PCB_Spacer_Lower_Right",
+    "label": "Camera lower-right spacer",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 45.333181991300705,
+    "bb": [
+      8.0,
+      13.0,
+      -30.4,
+      -27.4,
+      66.5,
+      71.5
+    ]
+  },
+  {
+    "name": "Camera_M2x12_Lower_Right",
+    "label": "Camera M2x12 provisional screw/nut001",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 79.97555516293382,
+    "bb": [
+      -2.0000000000000004,
+      2.0000000000000004,
+      -2.3094010767585034,
+      2.3094010767585034,
+      -2.0,
+      12.0
+    ]
+  },
+  {
+    "name": "RailMount_Upper_M3x10_0",
+    "label": "CameraPlateMount_Upper_M3x10_0",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.4849379035676,
+    "bb": [
+      -26.8,
+      -21.2,
+      -30.4,
+      -17.4,
+      -3.1754264805429417,
+      3.1754264805429417
+    ]
+  },
+  {
+    "name": "RailMount_Upper_M3x10_1",
+    "label": "CameraPlateMount_Upper_M3x10_1",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 190.48493790356764,
+    "bb": [
+      21.2,
+      26.8,
+      -30.4,
+      -17.4,
+      -3.1754264805429417,
+      3.1754264805429417
+    ]
+  },
+  {
+    "name": "PCB_Spacer_Upper_Left",
+    "label": "Camera upper-left spacer",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 45.333181991300705,
+    "bb": [
+      -13.0,
+      -8.0,
+      -30.4,
+      -27.4,
+      80.5,
+      85.5
+    ]
+  },
+  {
+    "name": "Camera_M2x12_Upper_Left",
+    "label": "Camera M2x12 provisional screw/nut002",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 79.97555516293382,
+    "bb": [
+      -2.0000000000000004,
+      2.0000000000000004,
+      -2.3094010767585034,
+      2.3094010767585034,
+      -2.0,
+      12.0
+    ]
+  },
+  {
+    "name": "PCB_Spacer_Upper_Right",
+    "label": "Camera upper-right spacer",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 45.333181991300705,
+    "bb": [
+      8.0,
+      13.0,
+      -30.4,
+      -27.4,
+      80.5,
+      85.5
+    ]
+  },
+  {
+    "name": "Camera_M2x12_Upper_Right",
+    "label": "Camera M2x12 provisional screw/nut003",
+    "type": "Part::Feature",
+    "solids": 2,
+    "vol": 79.97555516293382,
+    "bb": [
+      -2.0000000000000004,
+      2.0000000000000004,
+      -2.3094010767585034,
+      2.3094010767585034,
+      -2.0,
+      12.0
+    ]
+  },
+  {
+    "name": "PanServo_WireExit_KEEP_OUT",
+    "label": "PanServo_WireExit_KEEP_OUT",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 112.76099999999997,
+    "bb": [
+      -36.0,
+      -5.850000000000001,
+      -1.7,
+      1.7,
+      10.55,
+      11.65
+    ]
+  },
+  {
+    "name": "TiltServo_WireExit_KEEP_OUT",
+    "label": "TiltServo_WireExit_KEEP_OUT",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 67.88099999999966,
+    "bb": [
+      -65.45,
+      -64.35000000000001,
+      -1.7,
+      1.7,
+      83.85,
+      102.0
+    ]
+  },
+  {
+    "name": "CameraPlate_Cut007",
+    "label": "Camera mounting plate ? 21 x 14 mm hole centers",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 4449.355830897155,
+    "bb": [
+      -28.0,
+      28.0,
+      -27.400000000000002,
+      -24.399999999999995,
+      60.0,
+      92.0
+    ]
+  },
+  {
+    "name": "Camera_Lens_PROVISIONAL",
+    "label": "Lens envelope ? provisional dimensions",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 1539.3804002589989,
+    "bb": [
+      -7.0,
+      7.0,
+      -7.0,
+      7.0,
+      0.0,
+      10.0
+    ]
+  },
+  {
+    "name": "Camera_WireExit_KEEP_OUT",
+    "label": "Ribbon/cable routing envelope ? not physical cable",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 360.0,
+    "bb": [
+      0.0,
+      20.0,
+      0.0,
+      18.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Camera_RearComponents_KEEP_OUT",
+    "label": "Rear camera uncertainty envelope ? not hardware",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 9759.999999999998,
+    "bb": [
+      0.0,
+      20.0,
+      0.0,
+      24.4,
+      0.0,
+      20.0
+    ]
+  },
+  {
+    "name": "R15EngineeringAudit",
+    "label": "R15EngineeringAudit",
+    "type": "App::FeaturePython"
+  },
+  {
+    "name": "Pan_R15_FitEnvelope",
+    "label": "Pan horn fit envelope \u2014 R15 pocket-limited; not physical horn CAD",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 142.1671891538203,
+    "bb": [
+      -4.0,
+      4.0,
+      -4.0,
+      4.0,
+      33.0,
+      36.5
+    ]
+  },
+  {
+    "name": "Tilt_R15_FitEnvelope",
+    "label": "Tilt horn fit envelope \u2014 R15 pocket-limited; not physical horn CAD",
+    "type": "Part::Feature",
+    "solids": 1,
+    "vol": 387.07266102559305,
+    "bb": [
+      -41.0,
+      -39.5,
+      -10.0,
+      10.0,
+      58.5,
+      97.5
+    ]
+  }
+]

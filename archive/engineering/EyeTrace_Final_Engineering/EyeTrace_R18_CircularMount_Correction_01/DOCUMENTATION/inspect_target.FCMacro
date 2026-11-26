@@ -1,0 +1,11 @@
+﻿import FreeCAD as App, json, traceback
+p=r'EyeTrace_Final_Engineering\EyeTrace_R18_CircularMount_Correction_01\CAD\EyeTrace_R18_CircularMount_Correction_01.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R18_CircularMount_Correction_01\DOCUMENTATION\inspect_target.json'
+d=App.openDocument(p); d.recompute(); arr=[]
+for o in d.Objects:
+ try:
+  s=o.Shape
+  if s and not s.isNull():
+   arr.append({'name':o.Name,'label':o.Label,'type':o.TypeId,'valid':s.isValid(),'solids':len(s.Solids),'volume':s.Volume,'bbox':[s.BoundBox.XMin,s.BoundBox.XMax,s.BoundBox.YMin,s.BoundBox.YMax,s.BoundBox.ZMin,s.BoundBox.ZMax]})
+ except: pass
+open(out,'w').write(json.dumps(arr,indent=2))

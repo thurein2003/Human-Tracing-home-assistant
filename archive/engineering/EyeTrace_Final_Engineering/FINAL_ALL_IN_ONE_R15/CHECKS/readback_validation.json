@@ -1,0 +1,127 @@
+{
+  "fcstd_assembly": {
+    "opens": true,
+    "printable_count": 13,
+    "invalid_printables": [],
+    "camera_pattern_mm": [
+      21,
+      14
+    ],
+    "pan_recess_valid": true,
+    "tilt_recess_valid": true
+  },
+  "fcstd_bed_layout": {
+    "opens": true,
+    "printable_shape_count": 13,
+    "invalid": [],
+    "camera_plate_label": "CameraPlate_21x14"
+  },
+  "assembly_step": {
+    "valid": true,
+    "solids": 76,
+    "volume_mm3": 168739.556539873,
+    "bbox_mm": [
+      114.5,
+      77.3,
+      103.0
+    ]
+  },
+  "layout_step": {
+    "valid": true,
+    "solids": 13,
+    "volume_mm3": 135913.8749329383,
+    "bbox_mm": [
+      197.0,
+      192.6,
+      77.00000000000004
+    ]
+  },
+  "individual_stls": {
+    "count": 13,
+    "checks": [
+      {
+        "name": "Base_EarMount_ThrustSupport.stl",
+        "facets": 5460,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "CameraPlate_21x14.stl",
+        "facets": 3828,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "PCB_Spacer_Lower_Left.stl",
+        "facets": 840,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "PCB_Spacer_Lower_Right.stl",
+        "facets": 840,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "PCB_Spacer_Upper_Left.stl",
+        "facets": 840,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "PCB_Spacer_Upper_Right.stl",
+        "facets": 840,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "PanYoke_EarBracket_KeyedDrive.stl",
+        "facets": 9942,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "Pan_KeyedHorn_Cover.stl",
+        "facets": 4312,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "Pan_Replaceable_ThrustRing.stl",
+        "facets": 2112,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "TiltCradle_KeyedHorn_CameraFrame.stl",
+        "facets": 9108,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "Tilt_Journal_FlangedSleeve.stl",
+        "facets": 1260,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "Tilt_KeyedHorn_CaptiveCover.stl",
+        "facets": 4312,
+        "components": 1,
+        "watertight": true
+      },
+      {
+        "name": "Tilt_Removable_IdlerPillar.stl",
+        "facets": 1300,
+        "components": 1,
+        "watertight": true
+      }
+    ]
+  },
+  "combined_stl": {
+    "facets": 44994,
+    "components": 13,
+    "watertight_components": true
+  }
+}

@@ -1,0 +1,13 @@
+﻿import json
+from pathlib import Path
+import FreeCAD as App
+out=Path(r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04')
+d=App.openDocument(str(out/'CrossHorn_UltraMinimal_FitTest_04.FCStd'))
+sh=[o for o in d.Objects if hasattr(o,'Shape') and not o.Shape.isNull()]
+assert len(sh)==1
+s=sh[0].Shape
+r={'opened':True,'freecad_version':App.Version(),'shape':sh[0].Name,'valid':s.isValid(),'solid_count':len(s.Solids),'volume_mm3':s.Volume,'bbox_mm':[s.BoundBox.XLength,s.BoundBox.YLength,s.BoundBox.ZLength]}
+assert r['valid'] and r['solid_count']==1
+(out/'fcstd_reopen_validation.json').write_text(json.dumps(r,indent=2),encoding='utf-8')
+print(json.dumps(r))
+App.closeDocument(d.Name)

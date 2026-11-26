@@ -1,0 +1,54 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)"
+  ],
+  "source_compact_r17": "EyeTrace_Final_Engineering\\EyeTrace_Plate02_Compact_Carrier_Test\\CAD\\EyeTrace_CompactCarrier_Candidate.FCStd",
+  "source_current_r18": "EyeTrace_Final_Engineering\\EyeTrace_R18_Lightweight_PrintReady\\CAD\\EyeTrace_R18.FCStd",
+  "output_fcstd": "EyeTrace_Final_Engineering\\EyeTrace_R18_CircularMount_Correction_01\\CAD\\EyeTrace_R18_CircularMount_Correction_01.FCStd",
+  "component": "PanYoke_EarBracket_KeyedDrive",
+  "valid": true,
+  "solids": 1,
+  "source_compact_volume_mm3": 41666.33966724709,
+  "new_volume_mm3": 38324.18031262933,
+  "removed_volume_mm3": 3342.159354617761,
+  "removed_percent": 8.021245401704801,
+  "bbox": [
+    -58.2,
+    -35.3,
+    35.199999999999996,
+    44.0,
+    35.3,
+    103.0
+  ],
+  "original_web_x_range_mm": [
+    -51.0,
+    -43.0
+  ],
+  "remaining_web_x_range_mm": [
+    -51.0,
+    -48.5
+  ],
+  "target_main_web_thickness_mm": 2.5,
+  "local_perimeter_rails_retained_mm": 8.0,
+  "relief_window_yz_mm": [
+    -20.0,
+    20.0,
+    45.0,
+    99.0
+  ],
+  "relief_corner_radius_mm": 3.0,
+  "pivot_keepout_radius_mm": 23.0,
+  "source_curved_pivot_cut_radius_mm": 20.1,
+  "stl_facets": 48384,
+  "stl_bbox": [
+    13.0,
+    13.00462818145752,
+    0.0,
+    115.19999694824219,
+    83.59537506103516,
+    67.80000305175781
+  ]
+}

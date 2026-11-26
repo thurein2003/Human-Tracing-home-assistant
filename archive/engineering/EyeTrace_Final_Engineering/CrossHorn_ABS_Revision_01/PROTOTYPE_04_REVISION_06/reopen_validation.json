@@ -1,0 +1,25 @@
+{
+  "opened": true,
+  "solid_valid": true,
+  "solid_count": 1,
+  "volume_mm3": 1015.4603542751274,
+  "bbox_mm": [
+    38.0,
+    23.0,
+    4.3
+  ],
+  "x_left_nominal_mm": 17.5,
+  "x_right_nominal_mm": 17.5,
+  "x_left_pocket_mm": 17.6,
+  "x_right_pocket_mm": 17.6,
+  "short_plus_y_mm": 10.1,
+  "short_minus_y_mm": 10.1,
+  "front_recess_diameter_mm": 7.4,
+  "rear_recess_diameter_mm": 5.5,
+  "rear_recess_depth_mm": 0.8,
+  "screw_access_mm": 4.5,
+  "mirrored_tip_widths_mm": [
+    5.0047495234791395,
+    5.0047495234791395
+  ]
+}

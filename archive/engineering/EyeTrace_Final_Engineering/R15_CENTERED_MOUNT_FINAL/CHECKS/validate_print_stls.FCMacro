@@ -1,0 +1,6 @@
+﻿import FreeCAD as A,Mesh,json,os
+p=r'EyeTrace_Final_Engineering\R15_CENTERED_MOUNT_FINAL\STL';r=[]
+for fn in sorted(os.listdir(p)):
+ if not fn.lower().endswith('.stl'):continue
+ m=Mesh.Mesh(os.path.join(p,fn));b=m.BoundBox;r.append({'file':fn,'facets':len(m.Facets),'watertight_solid':bool(m.isSolid()),'connected_components':len(m.getSeparateComponents()),'bbox_mm':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]})
+out=r'EyeTrace_Final_Engineering\R15_CENTERED_MOUNT_FINAL\CHECKS\printable_stl_validation.json';open(out,'w').write(json.dumps({'printable_stl_count':len(r),'parts':r},indent=2))

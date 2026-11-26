@@ -1,0 +1,26 @@
+{
+  "source_3mf": "EyeTrace_Final_Engineering\\EyeTrace_R20_UltraLowProfile\\PRINT\\Plate02_R20_LowProfile_Sliced_Candidate.3mf",
+  "output_3mf": "EyeTrace_Final_Engineering\\EyeTrace_R21_SinglePanMountPlate\\PRINT\\Plate02_R21_SingleMountPlate_UNSLICED.3mf",
+  "replaced_mesh": "3D/Objects/object_4.model (Pan_KeyedHorn_Cover)",
+  "retained_component_instance_count": 12,
+  "replacement_stl_facets": 8362,
+  "replacement_3mf_vertices": 4173,
+  "replacement_3mf_triangles": 8362,
+  "replacement_mesh_bbox_local_mm": [
+    [
+      -23.798845,
+      23.799999
+    ],
+    [
+      -23.799225,
+      23.799225
+    ],
+    [
+      -2.1,
+      2.1
+    ]
+  ],
+  "cover_build_transform_unchanged": true,
+  "package_crc_test": "PASS",
+  "slicing_status": "UNSLICED; slicer inspection remains required"
+}

@@ -1,0 +1,21 @@
+﻿import FreeCAD as A, Part, json, math, os
+src=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\CAD\EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R17_COMPACT_DRIVE\CHECKS\r17_geometry_audit.json'
+d=A.openDocument(src)
+def vec(v): return [round(v.x,6),round(v.y,6),round(v.z,6)]
+rows=[]
+for o in d.Objects:
+ try:
+  s=o.Shape
+  if s.isNull(): continue
+  b=s.BoundBox
+  row={'name':o.Name,'label':o.Label,'type':o.TypeId,'placement':{'base':vec(o.Placement.Base),'axis':vec(o.Placement.Rotation.Axis),'angle_deg':round(math.degrees(o.Placement.Rotation.Angle),6)},'bbox_local':[round(x,6) for x in [b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]],'volume':round(s.Volume,6),'valid':s.isValid(),'solids':len(s.Solids),'faces':len(s.Faces),'planar':[]}
+  for i,f in enumerate(s.Faces):
+   if 'Plane' in str(type(f.Surface)) and f.Area>15:
+    n=f.normalAt(0,0); c=f.CenterOfMass
+    row['planar'].append({'face':i+1,'area':round(f.Area,4),'center':vec(c),'normal':vec(n),'bb':[round(x,4) for x in [f.BoundBox.XMin,f.BoundBox.YMin,f.BoundBox.ZMin,f.BoundBox.XMax,f.BoundBox.YMax,f.BoundBox.ZMax]]})
+  rows.append(row)
+ except Exception as e: pass
+with open(out,'w') as f: json.dump({'freecad_version':A.Version()[:4],'source':src,'rows':rows},f,indent=2)
+A.closeDocument(d.Name)
+print('AUDIT_WRITTEN '+out)

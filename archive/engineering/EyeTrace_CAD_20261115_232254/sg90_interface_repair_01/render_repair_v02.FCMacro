@@ -1,0 +1,78 @@
+﻿import FreeCAD as A,FreeCADGui as G,Part,os,json,traceback
+from FreeCAD import Vector as V
+from PySide import QtCore,QtWidgets
+H=r'EyeTrace_CAD_20261115_232254\sg90_interface_repair_01'
+def run():
+ try:
+  d=A.openDocument(os.path.join(H,'EyeTrace_Repair.FCStd'));obs=[o for o in d.Objects if hasattr(o,'KinematicGroup')];parts=[o for o in obs if o.Printable]
+  for o in d.Objects:
+   if hasattr(o,'Shape'):o.Visibility=o in obs
+  for o in obs:
+   c=(.65,.67,.7)
+   if o.Printable:c=(.14,.48,.68)
+   if o.Name.startswith('Base'):c=(.25,.3,.35)
+   if o.Name.startswith(('TiltCradle','Camera_SlidingRail')):c=(.9,.5,.16)
+   if 'ThrustRing' in o.Name:c=(.8,.68,.25)
+   if 'Servo_SG90' in o.Name:c=(.12,.22,.75)
+   if 'OriginalStar' in o.Name:c=(.95,.92,.83)
+   if 'KEEP_OUT' in o.Name:c=(.85,.45,.1);o.ViewObject.Transparency=60
+   if o.TypeId=='Part::Cut':c=(.1,.4,.15)
+   if 'Lens' in o.Name:c=(.08,.09,.11)
+   o.ViewObject.ShapeColor=c
+  d.recompute();d.saveAs(os.path.join(H,'EyeTrace_Repair_Assembly.FCStd'))
+  def shot(name,doc=d,kind='iso'):
+   A.setActiveDocument(doc.Name);v=G.activeDocument().activeView()
+   if kind=='iso':v.viewAxonometric()
+   elif kind=='front':v.viewFront()
+   elif kind=='rear':v.viewRear()
+   elif kind=='bottom':v.viewBottom()
+   elif kind=='top':v.viewTop()
+   G.updateGui();QtWidgets.QApplication.processEvents();v.fitAll();G.updateGui();QtWidgets.QApplication.processEvents();v.fitAll();v.saveImage(os.path.join(H,'renders',name+'.png'),1600,1200,'White')
+  shot('assembled_opaque');shot('assembled_front',kind='front');shot('camera_mount_rear',kind='rear')
+  for o in parts:o.ViewObject.Transparency=72
+  shot('assembled_transparent')
+  # Operating-pose snapshots avoid changing native camera expression constraints.
+  pose=A.newDocument('Motion_P60_T30')
+  for o in obs:
+   s=o.Shape.copy()
+   if o.KinematicGroup=='tilt':s.rotate(V(0,0,78),V(1,0,0),30)
+   if o.KinematicGroup!='fixed':s.rotate(V(),V(0,0,1),60)
+   q=pose.addObject('PartDesign::Feature',o.Name);q.Shape=s;q.ViewObject.ShapeColor=o.ViewObject.ShapeColor;q.ViewObject.Transparency=25 if o.Printable else o.ViewObject.Transparency
+  pose.recompute();shot('pose_pan60_tilt30',pose);A.closeDocument(pose.Name);A.setActiveDocument(d.Name)
+  extra=[]
+  def hide():
+   for o in obs+extra:o.Visibility=False
+  def crop(n,label,p,sz):
+   q=d.addObject('PartDesign::Feature',label);q.Shape=d.getObject(n).Shape.common(Part.makeBox(*sz,V(*p)));q.ViewObject.ShapeColor=(.15,.5,.7);q.ViewObject.Transparency=45;extra.append(q);return q
+  pan=crop('PanYoke_EarBracket_KeyedDrive','PanProfileSection',(-25,-25,34),(50,50,8));hide();pan.Visibility=True
+  for n in ['Pan_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL','Pan_KeyedHorn_Cover']:d.getObject(n).Visibility=True
+  shot('pan_positive_star_pocket',kind='bottom')
+  tilt=crop('TiltCradle_KeyedHorn_CameraFrame','TiltProfileSection',(-41,-23,54),(8,46,49));hide();tilt.Visibility=True
+  for n in ['Tilt_OriginalStar_PROVISIONAL','TiltOriginalScrew_PROVISIONAL','Tilt_KeyedHorn_CaptiveCover','TiltServo_SG90_Reference']:d.getObject(n).Visibility=True
+  shot('tilt_positive_star_pocket')
+  hide()
+  for n in ['Base_EarMount_ThrustSupport','PanServo_SG90_Reference','PanEar_M1p6x8_0','PanEar_M1p6x8_1']:d.getObject(n).Visibility=True
+  shot('pan_ear_installation')
+  hide()
+  for n in ['PanYoke_EarBracket_KeyedDrive','TiltServo_SG90_Reference','TiltEar_M1p6x8_0','TiltEar_M1p6x8_1']:d.getObject(n).Visibility=True
+  shot('tilt_ear_installation')
+  hide()
+  for o in obs:o.Visibility=True
+  for n in ['TiltIdler_M3x12','TiltIdler_M3_Washer','Tilt_Journal_FlangedSleeve','Tilt_Removable_IdlerPillar']:d.getObject(n).Visibility=False
+  tool=d.addObject('PartDesign::Feature','ServiceDriverEnvelope');tool.Shape=Part.makeCylinder(2.5,85,V(-38,0,78),V(1,0,0));tool.ViewObject.ShapeColor=(.85,.05,.15);tool.ViewObject.Transparency=30;extra.append(tool)
+  shot('tilt_retaining_screw_service')
+  bd=A.openDocument(os.path.join(H,'PrintLayout.FCStd'))
+  for o in bd.Objects:
+   if hasattr(o,'Shape'):o.ViewObject.ShapeColor=(.15,.5,.7)
+  shot('complete_print_layout',bd,'top');A.closeDocument(bd.Name)
+  cd=A.openDocument(os.path.join(H,'coupons','FitCoupons_Layout.FCStd'))
+  for o in cd.Objects:
+   if hasattr(o,'Shape'):o.ViewObject.ShapeColor=(.2,.6,.55)
+  shot('fit_coupons',cd);A.closeDocument(cd.Name)
+  json.dump({'renderer':'Installed FreeCAD1.1.4 Coin3D','resolution':[1600,1200],'views':12,'native_recommended':'EyeTrace_Repair_Assembly.FCStd','camera':'Provisional four-hole reference; no user camera photograph supplied','cutaways':'Derived from actual saved component solids; no AI artwork'},open(os.path.join(H,'renders','status.json'),'x'),indent=2)
+ except Exception:open(os.path.join(H,'renders','error.txt'),'x').write(traceback.format_exc())
+ finally:
+  for dn in list(A.listDocuments()):A.closeDocument(dn)
+  QtCore.QTimer.singleShot(1000,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1200,run)
+

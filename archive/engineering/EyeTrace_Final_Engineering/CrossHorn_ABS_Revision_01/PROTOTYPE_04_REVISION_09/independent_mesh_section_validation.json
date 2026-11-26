@@ -1,0 +1,38 @@
+{
+  "stl_triangles": 6800,
+  "stl_circular_wall_samples": {
+    "samples": 2322,
+    "z_min": -1.100000023841858,
+    "z_max": 2.0999999046325684,
+    "wall_vertical_span": 3.1999999284744263
+  },
+  "3mf": {
+    "objects": 1,
+    "vertices": 3400,
+    "triangles": 6800,
+    "cavity_wall": {
+      "samples": 420,
+      "z_min": -1.1,
+      "z_max": 2.1000000000000005,
+      "wall_vertical_span": 3.2000000000000006
+    },
+    "zip_valid": true
+  },
+  "brep_section": {
+    "plane": "X-Z at Y=0",
+    "seat_z_mm": 2.1,
+    "cavity_floor_z_mm": -1.1,
+    "measured_depth_mm": 3.2,
+    "wall_segments_at_radius_3_7": [
+      [
+        2.1,
+        -1.1
+      ],
+      [
+        -1.1,
+        2.1
+      ]
+    ]
+  },
+  "mesh_checks_pass": true
+}

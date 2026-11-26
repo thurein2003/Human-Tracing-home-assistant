@@ -1,0 +1,17 @@
+{
+  "current_revision": "sg90_reference_revision_02",
+  "native": "EyeTrace_SG90_Reference_01.FCStd",
+  "source_references": "../sg90_reference_revision_01/sources",
+  "status": "HOLD: physical clone/horn/screw compatibility UNVERIFIED",
+  "assembly_pair_checks": 59150,
+  "poses": 169,
+  "detected_intersections": 0,
+  "coupon_STLs": 3,
+  "final_print_package_generated": false,
+  "printed_brackets_modified": [
+    "Base",
+    "PanServoRetainer",
+    "PanYoke",
+    "TiltServoRetainer"
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "motor": "PanServo_SG90_Reference",
+    "removed_subassemblies": "pan yoke removed for pan; cradle/horn removed for tilt; ear screws removed",
+    "samples": 11,
+    "unintended": [],
+    "wire_scope": "Rigid case/ears/boss only; flexible cable insertion and connector size unverified"
+  },
+  {
+    "motor": "TiltServo_SG90_Reference",
+    "removed_subassemblies": "pan yoke removed for pan; cradle/horn removed for tilt; ear screws removed",
+    "samples": 11,
+    "unintended": [],
+    "wire_scope": "Rigid case/ears/boss only; flexible cable insertion and connector size unverified"
+  }
+]

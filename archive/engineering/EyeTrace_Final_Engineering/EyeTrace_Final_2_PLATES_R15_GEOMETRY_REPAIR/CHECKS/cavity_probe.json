@@ -1,0 +1,156 @@
+[
+  {
+    "part": "PanYoke_EarBracket_KeyedDrive",
+    "samples": [
+      {
+        "xyz": [
+          0,
+          0,
+          35.85
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          10,
+          0,
+          35.85
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -10,
+          0,
+          35.85
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          0,
+          5,
+          35.85
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          0,
+          -5,
+          35.85
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          15,
+          0,
+          35.85
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -15,
+          0,
+          35.85
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          0,
+          8,
+          35.85
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          0,
+          -8,
+          35.85
+        ],
+        "inside_material": false
+      }
+    ]
+  },
+  {
+    "part": "TiltCradle_KeyedHorn_CameraFrame",
+    "samples": [
+      {
+        "xyz": [
+          -40.15,
+          0,
+          78
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -40.15,
+          10,
+          78
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -40.15,
+          -10,
+          78
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -40.15,
+          0,
+          83
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -40.15,
+          0,
+          73
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -40.15,
+          0,
+          93
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -40.15,
+          0,
+          63
+        ],
+        "inside_material": false
+      },
+      {
+        "xyz": [
+          -40.15,
+          8,
+          83
+        ],
+        "inside_material": true
+      },
+      {
+        "xyz": [
+          -40.15,
+          -8,
+          73
+        ],
+        "inside_material": true
+      }
+    ]
+  }
+]

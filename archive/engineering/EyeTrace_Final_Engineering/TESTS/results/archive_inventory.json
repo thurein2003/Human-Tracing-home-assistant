@@ -1,0 +1,1719 @@
+[
+  {
+    "path": "EyeTrace_CAD_20261115_232254/tochatgpt.zip",
+    "members": [
+      {
+        "name": "camera_mount_21x16_01/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/document_camera.py",
+        "bytes": 7473
+      },
+      {
+        "name": "camera_mount_21x16_01/finalize_camera.py",
+        "bytes": 3911
+      },
+      {
+        "name": "camera_mount_21x16_01/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/render_camera.FCMacro",
+        "bytes": 1743
+      },
+      {
+        "name": "camera_mount_21x16_01/update_camera.py",
+        "bytes": 11356
+      },
+      {
+        "name": "camera_mount_21x16_01/update_camera_v02.py",
+        "bytes": 11429
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/CameraPlate_HoleCenters_21x16.step",
+        "bytes": 20731
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/CameraPlate_HoleCenters_21x16.stl",
+        "bytes": 153684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/camera_dimensions.csv",
+        "bytes": 911
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/checks/camera_alignment.json",
+        "bytes": 1135
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/checks/changed_geometry.json",
+        "bytes": 815
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/checks/collision_motion.json",
+        "bytes": 2330
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/checks/final_QA.json",
+        "bytes": 276
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/checks/independent_plate_readback_and_preservation.json",
+        "bytes": 473
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/checks/mesh_validation.json",
+        "bytes": 2779
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/coupons/Camera_HoleCenters_21x16_Gauge.stl",
+        "bytes": 85684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/EyeTrace_Camera_21x16.FCStd",
+        "bytes": 239727
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/EyeTrace_Camera_21x16.step",
+        "bytes": 1179275
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/EyeTrace_Camera_21x16_Assembly.FCStd",
+        "bytes": 276948
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/EyeTrace_Camera_21x16_Reviewed.FCStd",
+        "bytes": 239788
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/hole_center_diagram.svg",
+        "bytes": 934
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/manifest.sha256",
+        "bytes": 4670
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Base_EarMount_ThrustSupport.step",
+        "bytes": 77651
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Base_EarMount_ThrustSupport.stl",
+        "bytes": 220484
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/CameraPlate_Cut007.step",
+        "bytes": 20731
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/CameraPlate_Cut007.stl",
+        "bytes": 153684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PanYoke_EarBracket_KeyedDrive.step",
+        "bytes": 176334
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PanYoke_EarBracket_KeyedDrive.stl",
+        "bytes": 377384
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Pan_KeyedHorn_Cover.step",
+        "bytes": 51224
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Pan_KeyedHorn_Cover.stl",
+        "bytes": 173684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Pan_Replaceable_ThrustRing.step",
+        "bytes": 9410
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Pan_Replaceable_ThrustRing.stl",
+        "bytes": 84684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PCB_Spacer_Lower_Left.step",
+        "bytes": 4945
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PCB_Spacer_Lower_Left.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PCB_Spacer_Lower_Right.step",
+        "bytes": 4931
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PCB_Spacer_Lower_Right.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PCB_Spacer_Upper_Left.step",
+        "bytes": 4945
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PCB_Spacer_Upper_Left.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PCB_Spacer_Upper_Right.step",
+        "bytes": 4931
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/PCB_Spacer_Upper_Right.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/TiltCradle_KeyedHorn_CameraFrame.step",
+        "bytes": 162410
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/TiltCradle_KeyedHorn_CameraFrame.stl",
+        "bytes": 309384
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Tilt_Journal_FlangedSleeve.step",
+        "bytes": 6591
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Tilt_Journal_FlangedSleeve.stl",
+        "bytes": 50484
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Tilt_KeyedHorn_CaptiveCover.step",
+        "bytes": 51395
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Tilt_KeyedHorn_CaptiveCover.stl",
+        "bytes": 173684
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Tilt_Removable_IdlerPillar.step",
+        "bytes": 16531
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/parts/Tilt_Removable_IdlerPillar.stl",
+        "bytes": 52484
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/README.md",
+        "bytes": 3605
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/README_initial.md",
+        "bytes": 3542
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/renders/assembly_21x16.png",
+        "bytes": 55497
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/renders/plate_21x16.png",
+        "bytes": 11654
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/renders/status.json",
+        "bytes": 176
+      },
+      {
+        "name": "camera_mount_21x16_01/validated/REPORT.html",
+        "bytes": 6380
+      },
+      {
+        "name": "sg90_interface_repair_01/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/actual_contact_clearance_distances.json",
+        "bytes": 2073
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/camera_parameter_trials.json",
+        "bytes": 2015
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/export_and_layout_audit.json",
+        "bytes": 7284
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/fastener_stacks.json",
+        "bytes": 6993
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/independent_alignment.json",
+        "bytes": 550
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/independent_motion.json",
+        "bytes": 356
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/independent_print_geometry.json",
+        "bytes": 3079
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/independent_validation_summary.json",
+        "bytes": 329
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/installation_removal.json",
+        "bytes": 616
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/neutral_pairs.json",
+        "bytes": 840
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/positive_horn_drive.json",
+        "bytes": 2503
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/previous_artifact_preservation.json",
+        "bytes": 458
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/print_layout_positions.json",
+        "bytes": 2436
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/screw_access.json",
+        "bytes": 2520
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/solids.json",
+        "bytes": 5097
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/checks/uncached_guard_poses.json",
+        "bytes": 521
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/component_manifest.json",
+        "bytes": 3388
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/Camera_4Hole_Gauge_PROVISIONAL.step",
+        "bytes": 17569
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/Camera_4Hole_Gauge_PROVISIONAL.stl",
+        "bytes": 69684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/coupon_layout.stl",
+        "bytes": 490084
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/FitCoupons_Layout.FCStd",
+        "bytes": 22936
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/PETG_Hole_Journal_Gauge.step",
+        "bytes": 15532
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/PETG_Hole_Journal_Gauge.stl",
+        "bytes": 102684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/SG90_EarMount_Coupon.step",
+        "bytes": 14762
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/SG90_EarMount_Coupon.stl",
+        "bytes": 35684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/StarHorn_CaptiveCover_Coupon.step",
+        "bytes": 54512
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/StarHorn_CaptiveCover_Coupon.stl",
+        "bytes": 173684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/StarHorn_PositivePocket_Coupon.step",
+        "bytes": 38685
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/coupons/StarHorn_PositivePocket_Coupon.stl",
+        "bytes": 108684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/EyeTrace_Assembly.step",
+        "bytes": 1124074
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/EyeTrace_Repair.FCStd",
+        "bytes": 199105
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/EyeTrace_Repair_Assembly.FCStd",
+        "bytes": 226837
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/measurements/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Base_EarMount_ThrustSupport.step",
+        "bytes": 77651
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Base_EarMount_ThrustSupport.stl",
+        "bytes": 220484
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Camera_SlidingRail_Lower.step",
+        "bytes": 20392
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Camera_SlidingRail_Lower.stl",
+        "bytes": 69484
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Camera_SlidingRail_Upper.step",
+        "bytes": 20394
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Camera_SlidingRail_Upper.stl",
+        "bytes": 69484
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PanYoke_EarBracket_KeyedDrive.step",
+        "bytes": 149685
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PanYoke_EarBracket_KeyedDrive.stl",
+        "bytes": 323984
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Pan_KeyedHorn_Cover.step",
+        "bytes": 51224
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Pan_KeyedHorn_Cover.stl",
+        "bytes": 173684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Pan_Replaceable_ThrustRing.step",
+        "bytes": 9410
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Pan_Replaceable_ThrustRing.stl",
+        "bytes": 84684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PCB_Spacer_Lower_Left.step",
+        "bytes": 4931
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PCB_Spacer_Lower_Left.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PCB_Spacer_Lower_Right.step",
+        "bytes": 4917
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PCB_Spacer_Lower_Right.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PCB_Spacer_Upper_Left.step",
+        "bytes": 4931
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PCB_Spacer_Upper_Left.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PCB_Spacer_Upper_Right.step",
+        "bytes": 4917
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/PCB_Spacer_Upper_Right.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/TiltCradle_KeyedHorn_CameraFrame.step",
+        "bytes": 162439
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/TiltCradle_KeyedHorn_CameraFrame.stl",
+        "bytes": 309384
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Tilt_Journal_FlangedSleeve.step",
+        "bytes": 6591
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Tilt_Journal_FlangedSleeve.stl",
+        "bytes": 50484
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Tilt_KeyedHorn_CaptiveCover.step",
+        "bytes": 51395
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/parts/Tilt_KeyedHorn_CaptiveCover.stl",
+        "bytes": 173684
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/PrintLayout.FCStd",
+        "bytes": 96446
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/prototype_print_layout.stl",
+        "bytes": 1609084
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/assembled_front.png",
+        "bytes": 55253
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/assembled_opaque.png",
+        "bytes": 64977
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/assembled_transparent.png",
+        "bytes": 172265
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/camera_mount_rear.png",
+        "bytes": 45310
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/complete_print_layout.png",
+        "bytes": 9158
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/complete_print_layout_v2.png",
+        "bytes": 25032
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/corrected_view_QA.json",
+        "bytes": 496
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/fit_coupons.png",
+        "bytes": 9175
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/fit_coupons_v2.png",
+        "bytes": 31391
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/pan_ear_installation.png",
+        "bytes": 9192
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/pan_ear_installation_v2.png",
+        "bytes": 79595
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/pan_positive_star_pocket.png",
+        "bytes": 9197
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/pan_positive_star_pocket_v2.png",
+        "bytes": 32946
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/pose_pan60_tilt30.png",
+        "bytes": 141325
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/status.json",
+        "bytes": 332
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/tilt_ear_installation.png",
+        "bytes": 75446
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/tilt_positive_star_pocket.png",
+        "bytes": 106058
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/renders/tilt_retaining_screw_service.png",
+        "bytes": 192151
+      },
+      {
+        "name": "sg90_interface_repair_01/archived_packages/package_01/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/ASSEMBLY_AND_FASTENERS.md",
+        "bytes": 4729
+      },
+      {
+        "name": "sg90_interface_repair_01/ATTRIBUTION.md",
+        "bytes": 2240
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v01.py",
+        "bytes": 14848
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v02.py",
+        "bytes": 15387
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v03.py",
+        "bytes": 15431
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v04.py",
+        "bytes": 15569
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v05.py",
+        "bytes": 15571
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v06.py",
+        "bytes": 15612
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v07.py",
+        "bytes": 15614
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v08.py",
+        "bytes": 16049
+      },
+      {
+        "name": "sg90_interface_repair_01/build_repair_v09.py",
+        "bytes": 16048
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/actual_contact_clearance_distances.json",
+        "bytes": 2070
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/actual_idler_coaxiality.json",
+        "bytes": 654
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/camera_parameter_trials.json",
+        "bytes": 2015
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/deliverable_QA.json",
+        "bytes": 9342
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/export_and_layout_audit.json",
+        "bytes": 7664
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/fastener_stacks.json",
+        "bytes": 7654
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/independent_alignment.json",
+        "bytes": 550
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/independent_motion.json",
+        "bytes": 356
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/independent_print_geometry.json",
+        "bytes": 3317
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/independent_validation_summary.json",
+        "bytes": 329
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/installation_removal.json",
+        "bytes": 1180
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/internal_compound_solids.json",
+        "bytes": 4722
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/neutral_pairs.json",
+        "bytes": 837
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/positive_horn_drive.json",
+        "bytes": 2503
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/previous_artifact_preservation.json",
+        "bytes": 458
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/print_layout_positions.json",
+        "bytes": 2632
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/screw_access.json",
+        "bytes": 2907
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/solids.json",
+        "bytes": 5422
+      },
+      {
+        "name": "sg90_interface_repair_01/checks/uncached_guard_poses.json",
+        "bytes": 521
+      },
+      {
+        "name": "sg90_interface_repair_01/COLLISION_AND_MOTION.md",
+        "bytes": 4673
+      },
+      {
+        "name": "sg90_interface_repair_01/component_manifest.json",
+        "bytes": 3591
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/Camera_4Hole_Gauge_PROVISIONAL.step",
+        "bytes": 17569
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/Camera_4Hole_Gauge_PROVISIONAL.stl",
+        "bytes": 69684
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/coupon_layout.stl",
+        "bytes": 490084
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/FitCoupons_Layout.FCStd",
+        "bytes": 22947
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/PETG_Hole_Journal_Gauge.step",
+        "bytes": 15532
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/PETG_Hole_Journal_Gauge.stl",
+        "bytes": 102684
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/SG90_EarMount_Coupon.step",
+        "bytes": 14762
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/SG90_EarMount_Coupon.stl",
+        "bytes": 35684
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/StarHorn_CaptiveCover_Coupon.step",
+        "bytes": 54512
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/StarHorn_CaptiveCover_Coupon.stl",
+        "bytes": 173684
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/StarHorn_PositivePocket_Coupon.step",
+        "bytes": 38685
+      },
+      {
+        "name": "sg90_interface_repair_01/coupons/StarHorn_PositivePocket_Coupon.stl",
+        "bytes": 108684
+      },
+      {
+        "name": "sg90_interface_repair_01/COUPON_AND_PRINT_GUIDE.md",
+        "bytes": 2502
+      },
+      {
+        "name": "sg90_interface_repair_01/dimensional_audit.csv",
+        "bytes": 3518
+      },
+      {
+        "name": "sg90_interface_repair_01/DIMENSIONAL_AUDIT.md",
+        "bytes": 4322
+      },
+      {
+        "name": "sg90_interface_repair_01/document_checks.py",
+        "bytes": 14749
+      },
+      {
+        "name": "sg90_interface_repair_01/document_core.py",
+        "bytes": 16809
+      },
+      {
+        "name": "sg90_interface_repair_01/export_repair_v01.py",
+        "bytes": 6687
+      },
+      {
+        "name": "sg90_interface_repair_01/export_repair_v02.py",
+        "bytes": 6838
+      },
+      {
+        "name": "sg90_interface_repair_01/export_repair_v03.py",
+        "bytes": 7262
+      },
+      {
+        "name": "sg90_interface_repair_01/EyeTrace_Assembly.step",
+        "bytes": 1199606
+      },
+      {
+        "name": "sg90_interface_repair_01/EyeTrace_Repair.FCStd",
+        "bytes": 211032
+      },
+      {
+        "name": "sg90_interface_repair_01/EyeTrace_Repair_Assembly.FCStd",
+        "bytes": 240199
+      },
+      {
+        "name": "sg90_interface_repair_01/final_deliverable_QA.py",
+        "bytes": 2873
+      },
+      {
+        "name": "sg90_interface_repair_01/final_mechanical_checks.py",
+        "bytes": 3396
+      },
+      {
+        "name": "sg90_interface_repair_01/final_mechanical_checks_v02.py",
+        "bytes": 3995
+      },
+      {
+        "name": "sg90_interface_repair_01/hardware_BOM.csv",
+        "bytes": 1180
+      },
+      {
+        "name": "sg90_interface_repair_01/independent_validate_v01.py",
+        "bytes": 10207
+      },
+      {
+        "name": "sg90_interface_repair_01/independent_validate_v02.py",
+        "bytes": 11596
+      },
+      {
+        "name": "sg90_interface_repair_01/manifest.sha256",
+        "bytes": 29658
+      },
+      {
+        "name": "sg90_interface_repair_01/measurements/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/measurements/authoritative_audit_baseline.md",
+        "bytes": 6641
+      },
+      {
+        "name": "sg90_interface_repair_01/measurements/essential_hardware_results.csv",
+        "bytes": 1352
+      },
+      {
+        "name": "sg90_interface_repair_01/measurements/servo_reference_source_ledger.csv",
+        "bytes": 4074
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Base_EarMount_ThrustSupport.step",
+        "bytes": 77651
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Base_EarMount_ThrustSupport.stl",
+        "bytes": 220484
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Camera_SlidingRail_Lower.step",
+        "bytes": 20394
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Camera_SlidingRail_Lower.stl",
+        "bytes": 69484
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Camera_SlidingRail_Upper.step",
+        "bytes": 20394
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Camera_SlidingRail_Upper.stl",
+        "bytes": 69484
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PanYoke_EarBracket_KeyedDrive.step",
+        "bytes": 176334
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PanYoke_EarBracket_KeyedDrive.stl",
+        "bytes": 377384
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Pan_KeyedHorn_Cover.step",
+        "bytes": 51224
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Pan_KeyedHorn_Cover.stl",
+        "bytes": 173684
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Pan_Replaceable_ThrustRing.step",
+        "bytes": 9410
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Pan_Replaceable_ThrustRing.stl",
+        "bytes": 84684
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PCB_Spacer_Lower_Left.step",
+        "bytes": 4931
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PCB_Spacer_Lower_Left.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PCB_Spacer_Lower_Right.step",
+        "bytes": 4917
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PCB_Spacer_Lower_Right.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PCB_Spacer_Upper_Left.step",
+        "bytes": 4931
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PCB_Spacer_Upper_Left.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PCB_Spacer_Upper_Right.step",
+        "bytes": 4917
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/PCB_Spacer_Upper_Right.stl",
+        "bytes": 33684
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/TiltCradle_KeyedHorn_CameraFrame.step",
+        "bytes": 162439
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/TiltCradle_KeyedHorn_CameraFrame.stl",
+        "bytes": 309384
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Tilt_Journal_FlangedSleeve.step",
+        "bytes": 6591
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Tilt_Journal_FlangedSleeve.stl",
+        "bytes": 50484
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Tilt_KeyedHorn_CaptiveCover.step",
+        "bytes": 51395
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Tilt_KeyedHorn_CaptiveCover.stl",
+        "bytes": 173684
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Tilt_Removable_IdlerPillar.step",
+        "bytes": 16531
+      },
+      {
+        "name": "sg90_interface_repair_01/parts/Tilt_Removable_IdlerPillar.stl",
+        "bytes": 52484
+      },
+      {
+        "name": "sg90_interface_repair_01/PrintLayout.FCStd",
+        "bytes": 103392
+      },
+      {
+        "name": "sg90_interface_repair_01/prototype_print_layout.stl",
+        "bytes": 1714884
+      },
+      {
+        "name": "sg90_interface_repair_01/README.md",
+        "bytes": 3243
+      },
+      {
+        "name": "sg90_interface_repair_01/REMAINING_PHYSICAL_VERIFICATION.md",
+        "bytes": 2269
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/assembled_front.png",
+        "bytes": 25872
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/assembled_opaque.png",
+        "bytes": 66589
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/assembled_transparent.png",
+        "bytes": 189621
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/camera_mount_rear.png",
+        "bytes": 24582
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/complete_print_layout_v2.png",
+        "bytes": 24804
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/corrected_view_QA.json",
+        "bytes": 496
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/fit_coupons_v2.png",
+        "bytes": 31392
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/pan_ear_installation_v2.png",
+        "bytes": 79595
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/pan_positive_star_pocket_v2.png",
+        "bytes": 32946
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/pose_pan60_tilt30.png",
+        "bytes": 114259
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/report_selection.json",
+        "bytes": 1096
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/status.json",
+        "bytes": 332
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/superseded_raw_pass/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/superseded_raw_pass/complete_print_layout.png",
+        "bytes": 9157
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/superseded_raw_pass/fit_coupons.png",
+        "bytes": 9179
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/superseded_raw_pass/pan_ear_installation.png",
+        "bytes": 79530
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/superseded_raw_pass/pan_positive_star_pocket.png",
+        "bytes": 32872
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/tilt_ear_installation.png",
+        "bytes": 80595
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/tilt_positive_star_pocket.png",
+        "bytes": 134373
+      },
+      {
+        "name": "sg90_interface_repair_01/renders/tilt_retaining_screw_service.png",
+        "bytes": 200808
+      },
+      {
+        "name": "sg90_interface_repair_01/render_details_v02.FCMacro",
+        "bytes": 2658
+      },
+      {
+        "name": "sg90_interface_repair_01/render_repair.FCMacro",
+        "bytes": 4886
+      },
+      {
+        "name": "sg90_interface_repair_01/render_repair_v02.FCMacro",
+        "bytes": 5020
+      },
+      {
+        "name": "sg90_interface_repair_01/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/REPORT.html",
+        "bytes": 22373
+      },
+      {
+        "name": "sg90_interface_repair_01/STATUS.json",
+        "bytes": 553
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/checks/fastener_stacks.json",
+        "bytes": 6972
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/checks/neutral_pairs.json",
+        "bytes": 824
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/checks/solids.json",
+        "bytes": 4991
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/component_manifest.json",
+        "bytes": 3324
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/EyeTrace_Repair.FCStd",
+        "bytes": 197862
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_01/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/checks/fastener_stacks.json",
+        "bytes": 6972
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/checks/neutral_pairs.json",
+        "bytes": 824
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/checks/solids.json",
+        "bytes": 4991
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/component_manifest.json",
+        "bytes": 3324
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/EyeTrace_Repair.FCStd",
+        "bytes": 198913
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_02/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/checks/fastener_stacks.json",
+        "bytes": 6991
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/checks/neutral_pairs.json",
+        "bytes": 840
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/checks/solids.json",
+        "bytes": 4989
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/component_manifest.json",
+        "bytes": 3324
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/EyeTrace_Repair.FCStd",
+        "bytes": 199217
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_03/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/checks/fastener_stacks.json",
+        "bytes": 6993
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/checks/neutral_pairs.json",
+        "bytes": 840
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/checks/solids.json",
+        "bytes": 5096
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/component_manifest.json",
+        "bytes": 3388
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/EyeTrace_Repair.FCStd",
+        "bytes": 200244
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_04/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/checks/fastener_stacks.json",
+        "bytes": 6993
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/checks/independent_alignment.json",
+        "bytes": 550
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/checks/neutral_pairs.json",
+        "bytes": 840
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/checks/solids.json",
+        "bytes": 5098
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/component_manifest.json",
+        "bytes": 3388
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/EyeTrace_Repair.FCStd",
+        "bytes": 200250
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_05/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/camera_parameter_trials.json",
+        "bytes": 2015
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/fastener_stacks.json",
+        "bytes": 6993
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/independent_alignment.json",
+        "bytes": 550
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/independent_motion.json",
+        "bytes": 56294
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/independent_print_geometry.json",
+        "bytes": 3079
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/independent_validation_summary.json",
+        "bytes": 331
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/installation_removal.json",
+        "bytes": 616
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/neutral_pairs.json",
+        "bytes": 840
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/positive_horn_drive.json",
+        "bytes": 2503
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/screw_access.json",
+        "bytes": 2520
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/checks/solids.json",
+        "bytes": 5098
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/component_manifest.json",
+        "bytes": 3388
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/EyeTrace_Repair.FCStd",
+        "bytes": 200220
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_06/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/camera_parameter_trials.json",
+        "bytes": 2015
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/fastener_stacks.json",
+        "bytes": 6993
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/independent_alignment.json",
+        "bytes": 550
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/independent_motion.json",
+        "bytes": 356
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/independent_print_geometry.json",
+        "bytes": 3079
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/independent_validation_summary.json",
+        "bytes": 329
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/installation_removal.json",
+        "bytes": 616
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/neutral_pairs.json",
+        "bytes": 840
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/positive_horn_drive.json",
+        "bytes": 2503
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/screw_access.json",
+        "bytes": 2520
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/checks/solids.json",
+        "bytes": 5097
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/component_manifest.json",
+        "bytes": 3388
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/EyeTrace_Repair.FCStd",
+        "bytes": 199105
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_07/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/camera_parameter_trials.json",
+        "bytes": 2015
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/fastener_stacks.json",
+        "bytes": 7654
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/independent_alignment.json",
+        "bytes": 550
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/independent_motion.json",
+        "bytes": 356
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/independent_print_geometry.json",
+        "bytes": 3317
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/independent_validation_summary.json",
+        "bytes": 329
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/installation_removal.json",
+        "bytes": 1180
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/neutral_pairs.json",
+        "bytes": 839
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/positive_horn_drive.json",
+        "bytes": 2503
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/screw_access.json",
+        "bytes": 2907
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/checks/solids.json",
+        "bytes": 5422
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/component_manifest.json",
+        "bytes": 3591
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/EyeTrace_Repair.FCStd",
+        "bytes": 211032
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/parts/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_interface_repair_01/work_08/repair_parameters.json",
+        "bytes": 617
+      },
+      {
+        "name": "sg90_reference_revision_02/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_reference_revision_02/ATTRIBUTION.md",
+        "bytes": 1866
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/coupons.json",
+        "bytes": 532
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/mesh_roundtrip/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/mesh_roundtrip/Base_VALIDATION_ONLY.stl",
+        "bytes": 137884
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/mesh_roundtrip/PanServoRetainer_VALIDATION_ONLY.stl",
+        "bytes": 84484
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/mesh_roundtrip/PanYoke_VALIDATION_ONLY.stl",
+        "bytes": 359684
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/mesh_roundtrip/TiltServoRetainer_VALIDATION_ONLY.stl",
+        "bytes": 38684
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/motion.json",
+        "bytes": 310
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/mounting_interferences.json",
+        "bytes": 653
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/native_alignment_and_STL_readback.json",
+        "bytes": 8266
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/preservation.json",
+        "bytes": 54
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/printed_solid_mesh.json",
+        "bytes": 1369
+      },
+      {
+        "name": "sg90_reference_revision_02/checks/source_hashes.json",
+        "bytes": 663
+      },
+      {
+        "name": "sg90_reference_revision_02/coupons/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_reference_revision_02/coupons/SG90_TabMount_Test.step",
+        "bytes": 14739
+      },
+      {
+        "name": "sg90_reference_revision_02/coupons/SG90_TabMount_Test.stl",
+        "bytes": 35684
+      },
+      {
+        "name": "sg90_reference_revision_02/coupons/SG90_Test_Coupons.FCStd",
+        "bytes": 6761
+      },
+      {
+        "name": "sg90_reference_revision_02/coupons/StarHorn_Clamp_Test.step",
+        "bytes": 10694
+      },
+      {
+        "name": "sg90_reference_revision_02/coupons/StarHorn_Clamp_Test.stl",
+        "bytes": 101684
+      },
+      {
+        "name": "sg90_reference_revision_02/coupons/StarHorn_MatingFace_Test.step",
+        "bytes": 10681
+      },
+      {
+        "name": "sg90_reference_revision_02/coupons/StarHorn_MatingFace_Test.stl",
+        "bytes": 101684
+      },
+      {
+        "name": "sg90_reference_revision_02/dimension_comparison.csv",
+        "bytes": 2552
+      },
+      {
+        "name": "sg90_reference_revision_02/dimension_comparison_with_tolerances.csv",
+        "bytes": 4074
+      },
+      {
+        "name": "sg90_reference_revision_02/EyeTrace_SG90_Reference_01.FCStd",
+        "bytes": 122845
+      },
+      {
+        "name": "sg90_reference_revision_02/manifest.sha256",
+        "bytes": 3087
+      },
+      {
+        "name": "sg90_reference_revision_02/README.md",
+        "bytes": 7682
+      },
+      {
+        "name": "sg90_reference_revision_02/renders/",
+        "bytes": 0
+      },
+      {
+        "name": "sg90_reference_revision_02/renders/assembly_reference_replacement.png",
+        "bytes": 127974
+      },
+      {
+        "name": "sg90_reference_revision_02/renders/pan_tabs_and_horn.png",
+        "bytes": 93871
+      },
+      {
+        "name": "sg90_reference_revision_02/renders/reference_case_tabs_output.png",
+        "bytes": 23141
+      },
+      {
+        "name": "sg90_reference_revision_02/renders/reference_tab_holes.png",
+        "bytes": 27206
+      },
+      {
+        "name": "sg90_reference_revision_02/renders/status.json",
+        "bytes": 188
+      },
+      {
+        "name": "sg90_reference_revision_02/renders/tilt_tabs_and_horn.png",
+        "bytes": 161650
+      },
+      {
+        "name": "sg90_reference_revision_02/REPORT.html",
+        "bytes": 12242
+      },
+      {
+        "name": "sg90_reference_revision_02/verification_summary.json",
+        "bytes": 509
+      }
+    ]
+  }
+]

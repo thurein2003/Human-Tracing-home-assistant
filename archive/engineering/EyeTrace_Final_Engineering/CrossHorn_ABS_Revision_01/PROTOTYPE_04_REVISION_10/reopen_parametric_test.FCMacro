@@ -1,0 +1,55 @@
+﻿import json
+from pathlib import Path
+import FreeCAD as App, Part
+from FreeCAD import Vector as V
+p=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_10")
+d=App.openDocument(str(p/'CrossHorn_UltraMinimal_FitTest_04R10.FCStd'))
+d.recompute()
+pr=d.getObject('Parameters'); f=d.getObject('FinalCoupon'); front=d.getObject('FrontRecessTool'); back=d.getObject('BackRecessTool')
+s=f.Shape
+assert s.isValid() and len(s.Solids)==1
+def cut_at_y(y):
+ face=Part.Face(Part.Wire(Part.makePolygon([V(-50,y,-10),V(50,y,-10),V(50,y,10),V(-50,y,10),V(-50,y,-10)])))
+ return s.section(face)
+widths={}
+for name,y,expected in [('upper_plus_y',6.0,3.4),('bottom_minus_y',-6.0,4.4)]:
+ sec=cut_at_y(y); walls=[]
+ for e in sec.Edges:
+  pts=e.discretize(Deflection=0.001)
+  if len(pts)>1:
+   xs=[v.x for v in pts]; zs=[v.z for v in pts]
+   if max(zs)-min(zs)>1.699 and abs(min(zs)-2.1)<1e-5 and abs(max(zs)-3.8)<1e-5 and max(xs)-min(xs)<1e-5:
+    walls.append(round(xs[0],6))
+ wx=sorted(set(walls)); actual=max(wx)-min(wx) if len(wx)>=2 else None
+ widths[name]={'section_y_mm':y,'wall_x_positions_mm':wx,'measured_width_mm':actual,'expected_mm':expected}
+ assert actual is not None and abs(actual-expected)<1e-5,widths[name]
+# Exact central section and X-axis pocket reach
+pl=Part.Face(Part.Wire(Part.makePolygon([V(-50,0,-10),V(50,0,-10),V(50,0,10),V(-50,0,10),V(-50,0,-10)])))
+sec=s.section(pl); circ=[]
+for e in sec.Edges:
+ pts=e.discretize(Deflection=0.001)
+ if len(pts)>1 and all(abs(abs(v.x)-3.7)<1e-5 for v in pts):
+  zs=[v.z for v in pts]
+  if abs(max(zs)-min(zs)-3.2)<1e-5: circ.append([min(zs),max(zs)])
+assert circ
+reach_segments=[]
+for e in sec.Edges:
+ pts=e.discretize(Deflection=0.001)
+ if len(pts)>1:
+  zs=[v.z for v in pts]; xs=[v.x for v in pts]
+  if max(xs)-min(xs)<1e-5 and abs(max(zs)-min(zs)-1.7)<1e-5 and abs(min(zs)-2.1)<1e-5 and abs(max(zs)-3.8)<1e-5:
+   reach_segments.append([xs[0],min(zs),max(zs)])
+max_reach=max(abs(x) for x,z0,z1 in reach_segments)
+assert abs(max_reach-18.6)<1e-4,reach_segments
+v0=s.Volume; pr.FrontDepth=3.1; d.recompute(); vf=f.Shape.Volume; fh=front.Shape.BoundBox.ZLength
+pr.FrontDepth=3.2; d.recompute(); v1=f.Shape.Volume
+pr.BackDepth=0.5; d.recompute(); vb=f.Shape.Volume; bh=back.Shape.BoundBox.ZLength
+pr.BackDepth=0.3; d.recompute()
+res={'reopened':True,'valid':f.Shape.isValid(),'solid_count':len(f.Shape.Solids),'x_nominal_span_mm':37.0,'x_nominal_reaches_mm':[18.5,18.5],'x_pocket_reaches_mm':[max_reach,max_reach],'x_pocket_envelope_mm':2*max_reach,'y_short_pocket_widths':widths,'front_cavity_wall_z_mm':circ[0],'front_cavity_actual_depth_mm':max(circ[0])-min(circ[0]),'front_cavity_diameter_mm':7.4,'rear_recess_diameter_mm':5.5,'rear_recess_depth_mm':back.Shape.BoundBox.ZLength,'center_web_mm':pr.CalculatedCenterWeb.Value,'front_edit_cutter_height_mm':fh,'front_edit_volume_delta_mm3':vf-v0,'back_edit_cutter_height_mm':bh,'back_edit_volume_delta_mm3':vb-v1,'restored_parameters_mm':{'front_depth':pr.FrontDepth.Value,'back_depth':pr.BackDepth.Value},'restored_volume_mm3':f.Shape.Volume}
+assert abs(res['front_cavity_actual_depth_mm']-3.2)<1e-6
+assert abs(res['rear_recess_depth_mm']-.3)<1e-6
+assert abs(res['center_web_mm']-.8)<1e-6 and abs(vf-v0)>.1 and abs(vb-v1)>.1
+assert abs(pr.FrontDepth.Value-3.2)<1e-8 and abs(pr.BackDepth.Value-.3)<1e-8
+(p/'reopen_parametric_validation.json').write_text(json.dumps(res,indent=2),encoding='utf-8')
+print('R10_REOPEN_VALIDATION='+json.dumps(res))
+App.closeDocument(d.Name)

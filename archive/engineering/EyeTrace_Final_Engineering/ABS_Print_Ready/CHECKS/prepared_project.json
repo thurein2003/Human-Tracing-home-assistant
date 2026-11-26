@@ -1,0 +1,13 @@
+{
+  "STL_facets": 42932,
+  "shifted_facets": {
+    "yoke": 9332,
+    "camera": 3828
+  },
+  "projects": [
+    "Creality_Print/EyeTrace_K2_ABS_Supported_Project.3mf",
+    "FIT_TESTS/Creality_Print/EyeTrace_ABS_FitTest_Project.3mf"
+  ],
+  "source_geometry_scaled": false,
+  "fit_coupon_objects": 7
+}

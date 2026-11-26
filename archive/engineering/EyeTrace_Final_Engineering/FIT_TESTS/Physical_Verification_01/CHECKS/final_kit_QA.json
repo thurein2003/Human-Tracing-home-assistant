@@ -1,0 +1,24 @@
+{
+  "existing_files_checked": 169,
+  "unexpected_validated_file_changes": [],
+  "unchanged_existing_files": 168,
+  "diagnostic_log_changes_left_in_place": [
+    "TESTS/results/slicer_attempt/stdout_hyphen.txt"
+  ],
+  "diagnostic_note": "An old slicer stdout log changed since initial hash capture. Cause not established; kit workflow did not write it and has left it in place. All other prior files match. No CAD/release file changes.",
+  "assembly_native_SHA256_unchanged": true,
+  "release_status_SHA256_unchanged": true,
+  "coupon_STL_geometry_passed": true,
+  "camera_pitch_mm": [
+    21,
+    16
+  ],
+  "CAD_images": 10,
+  "3MF_seven_named_solids_reopened": true,
+  "report_links_missing": [],
+  "camera_pair_rows": 9,
+  "cable_pose_rows": 15,
+  "physical_results": "NOT PERFORMED",
+  "slicer_import_and_toolpaths": "NOT VERIFIED",
+  "full_print_release": "UNCHANGED"
+}

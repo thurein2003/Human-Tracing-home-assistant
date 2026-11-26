@@ -1,0 +1,37 @@
+﻿import FreeCAD as A,json,traceback,itertools
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering\EyeTrace_R19_ThinMountPlate'
+try:
+ d=A.openDocument(root+r'\CAD\EyeTrace_R19_ThinMountPlate.FCStd')
+ yoke=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+ stationary=['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanServo_SG90_Reference']
+ panparts=[d.getObject(n) for n in stationary]
+ tilt_names=['TiltServo_SG90_Reference','Tilt_OriginalStar_PROVISIONAL','TiltOriginalScrew_PROVISIONAL','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','Tilt_Removable_IdlerPillar','CameraPlate_Cut007','Camera_WireExit_KEEP_OUT','Camera_RearComponents_KEEP_OUT']
+ tiltparts=[d.getObject(n) for n in tilt_names if d.getObject(n)]
+ def move(sh,group,pa,ta):
+  q=sh.copy()
+  if group=='tilt':q.rotate(V(0,0,78),V(1,0,0),ta)
+  if group in ('pan','tilt'):q.rotate(V(),V(0,0,1),pa)
+  return q
+ def coll(a,b):
+  x=a.BoundBox;y=b.BoundBox
+  if min(x.XMax,y.XMax)<=max(x.XMin,y.XMin) or min(x.YMax,y.YMax)<=max(x.YMin,y.YMin) or min(x.ZMax,y.ZMax)<=max(x.ZMin,y.ZMin):return 0
+  return a.common(b).Volume
+ def sweep(poses, mode):
+  hits={}; checks=0
+  for pa,ta in poses:
+   yy=move(yoke,'pan',pa,0)
+   parts=panparts if mode=='pan' else tiltparts
+   for o in parts:
+    group=str(o.KinematicGroup) if 'KinematicGroup' in o.PropertiesList else 'fixed'
+    shape=move(o.Shape,group,pa,ta)
+    if coll(yy,shape): checks+=1; v=yy.common(shape).Volume
+    else: v=0
+    if v>.001:hits[o.Name]=max(hits.get(o.Name,0),v)
+  return {'pose_count':len(poses),'exact_BREP_pair_checks':checks,'intersecting_pairs_max_mm3':hits}
+ pan=[(a,0) for a in range(-90,91,5)]
+ tilt=[(0,a) for a in range(-45,46,5)]
+ combined=list(itertools.product([-90,-60,-30,0,30,60,90],[-45,-30,-15,0,15,30,45]))
+ result={'pan_only_-90_to90_step5':sweep(pan,'pan'),'tilt_only_-45_to45_step5':sweep(tilt,'tilt'),'combined_7x7':sweep(combined,'tilt'),'travel_status':'Discrete exploratory ranges; SG90 electrical/mechanical limits, cable movement, physical clearance, and load response are not established.'}
+ open(root+r'\DOCUMENTATION\r19_motion_clearance.json','w').write(json.dumps(result,indent=2)); print(json.dumps(result,indent=2),flush=True)
+except: open(root+r'\DOCUMENTATION\motion_error.txt','w').write(traceback.format_exc());raise

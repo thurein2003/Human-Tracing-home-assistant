@@ -1,0 +1,20 @@
+﻿import FreeCAD as App, FreeCADGui as Gui, traceback, time, os
+log=r'EyeTrace_Final_Engineering\EyeTrace_R18_CircularMount_Correction_01\SCREENSHOTS\render_log.txt'
+try:
+  out=r'EyeTrace_Final_Engineering\EyeTrace_R18_CircularMount_Correction_01\SCREENSHOTS'
+  src=r'EyeTrace_Final_Engineering\EyeTrace_R18_CircularMount_Correction_01\CAD\EyeTrace_R18_CircularMount_Correction_01.FCStd'
+  d=App.openDocument(src)
+  Gui.updateGui()
+  open(log,'w').write('opened '+d.Name+' objects '+str(len(d.Objects))+'\n')
+  for o in d.Objects:
+    try: o.ViewObject.Visibility=False
+    except: pass
+  target=d.getObject('PanYoke_EarBracket_KeyedDrive')
+  if target is None: raise Exception('target missing; '+str([o.Name for o in d.Objects]))
+  target.ViewObject.Visibility=True
+  Gui.activeDocument().activeView().viewAxonometric(); Gui.activeDocument().activeView().fitAll(); Gui.updateGui(); time.sleep(2)
+  Gui.activeDocument().activeView().saveImage(os.path.join(out,'R18C1_isometric.png'),1600,1200,'Current')
+  Gui.activeDocument().activeView().viewTop(); Gui.activeDocument().activeView().fitAll(); Gui.updateGui(); time.sleep(1)
+  Gui.activeDocument().activeView().saveImage(os.path.join(out,'R18C1_top.png'),1600,1200,'Current')
+  open(log,'a').write('saved images\n')
+except: open(log,'a').write(traceback.format_exc())

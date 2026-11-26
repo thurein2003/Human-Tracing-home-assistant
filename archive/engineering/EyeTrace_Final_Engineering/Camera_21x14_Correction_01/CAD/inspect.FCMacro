@@ -1,0 +1,22 @@
+﻿import FreeCAD as A, Part, json, os, traceback
+root=r'EyeTrace_Final_Engineering'
+out=root+r'\Camera_21x14_Correction_01\CHECKS\cad_inspection.json'
+try:
+ d=A.openDocument(root+r'\CAD\EyeTrace_Final_Assembly.FCStd')
+ data=[]
+ for o in d.Objects:
+  row={'name':o.Name,'label':o.Label,'type':o.TypeId,'props':list(o.PropertiesList)}
+  if hasattr(o,'Shape') and not o.Shape.isNull():
+   b=o.Shape.BoundBox
+   row['bbox']=[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax];row['solids']=len(o.Shape.Solids);row['valid']=o.Shape.isValid()
+  for prop in ['Printable','PrintFileName','KinematicGroup','CameraHoleSpacing','CameraPCBWidth','CameraPCBHeight']:
+   if hasattr(o,prop): row[prop]=str(getattr(o,prop))
+  data.append(row)
+ with open(out,'w') as f: json.dump(data,f,indent=2)
+ A.closeDocument(d.Name)
+ m=A.openDocument(root+r'\Motion_Audit_02\Native_Simulations\EyeTrace_Final_Assembly_Native_Simulation_r02.FCStd')
+ with open(root+r'\Camera_21x14_Correction_01\CHECKS\native_doc_objects.json','w') as f:
+  json.dump([{'name':o.Name,'label':o.Label,'type':o.TypeId,'props':list(o.PropertiesList)} for o in m.Objects],f,indent=2)
+except: open(out+'.error','w').write(traceback.format_exc())
+finally:
+ for n in list(A.listDocuments()): A.closeDocument(n)

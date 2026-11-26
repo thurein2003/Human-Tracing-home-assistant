@@ -1,0 +1,33 @@
+# SG90 interface audit — production STOPPED
+
+The audit reads production_candidate_01/EyeTrace_Assembly.FCStd directly. No geometry was resized and no printing package was generated. SG90_Audit_Hold.FCStd changes identity/status labels only: generic motor/horn references are explicitly UNVERIFIED. The geometry lacks the detail needed for an exact replacement. No evidence justifies choosing a new shaft, ear or horn dimension as a correction to your real units.
+
+## Result
+
+FAIL as an exact SG90 reference assembly. Both cases are micro-servo-sized, but this does NOT verify SG90 identity or exclude another micro-servo family with similar dimensions. There is no evidence of a larger-servo case being modeled. Actual identity comes from your two SG90 units; their fit remains UNVERIFIED. Both references have the same23x12x23 case, but output extensions8 and7 produce different overall axial envelopes31 and30. The original model contains NO mounting tabs: close-ups cannot truthfully show tabs that do not exist. Missing tabs, holes, splines and center screws are exposed in the screenshots instead of fabricated.
+
+## Sources and tolerance treatment
+
+[Manufacturer SG90 page](https://towerpro.com.tw/product/sg90-analog/) lists overall23x12.2x29mm and a separate A-F table without a usable mapping in its page text. It does not publish dimensional tolerances or star-horn interface dimensions. [TowerPro-branded SG90 sheet hosted by University Hamburg](https://tams.informatik.uni-hamburg.de/lehre/2019ss/vorlesung/es/doc/sg90.pdf) lists approximately22.2x11.8x31mm and shows tabs. These are conflicting nominal references, NOT a tolerance band. Do not interpret32.2 overall tab span as mounting-hole center distance. Exact ear-plane height, ear hole pitch/diameter, shoulder, spline and your original star profile require your measurements.
+
+CAD numerical comparisons use0.001mm3 intersection threshold; extracted coordinate precision is not manufacturing tolerance. Neither quoted source gives manufacturing tolerances for the interfaces being checked. All hardware manufacturing tolerance, PETG dimensional error and load capacity are UNKNOWN. PASS in mesh/solid tests means digital integrity only. FAIL nominal match identifies source disagreement without asserting that a physical part cannot fit.
+
+## Horn attachment and fasteners
+
+The original horns cannot be verified from the reference stars: their modeled hubs are solid and have no spline cavity, center-screw bore or original arm holes. Boolean tests show shaft/horn positive-volume intersections; the inherited motion test excludes these parts and therefore its zero collisions does not mean a valid full hardware assembly. They might stand in for spline engagement, but no mating geometry exists to prove that interpretation.
+
+The design uses a four-bolt sandwich around each original star, not M3 screws through original horn holes. Those M3 bolts join printed rings and printed yoke/cradle. True compatibility depends on horn web thickness, raised hub faces, contact annulus, tip radius and access to the servo-specific original center screw. The model has2mm flat horns and8mm hub envelopes only. No original SG90 horn hole is assumed to take M3. Original retaining screw thread and head are unknown and MUST NOT be replaced by M3 by assumption. Nominal M3 hardware is modeled as smooth envelopes, without threads. Nuts are2.4mm thick and heads5.6mm diameter x3mm high; actual tolerances and quantities are unconfirmed.
+
+Pan structural holes diameter3.3 lie at radius18; tilt at radius14. The drawn star tip corner radius is sqrt(12^2+1.8^2), about12.134. This leaves only a nominal radial envelope difference0.216 between tip radius and the inward edge of a tilt structural hole (14-1.65). That is an envelope comparison, not a measured actual nearest distance or a proven fit. The flat friction sandwich has no positive anti-rotation key. Creep and slip remain unknown.
+
+## Load path
+
+Pan has NO external bearing or thrust support: the output shaft/horn carries the yoke, offset tilt motor/cage, cradle, camera and cables. The left motor is offset substantially from the pan axis, so pan bending depends on the complete center of mass even at rest. Tilt has an opposite M3 idler but no precision bushing; the servo still transmits torque and shares support load. Whether these unsupported loads are excessive is UNVERIFIED: camera mass, printed-part mass, acceleration, cable drag, bearing load rating and continuous-duty torque are unknown. Calculate force=m*g, bending moment=sum(m*g*horizontal offset), and tilt torque about the X axis using measured masses/centers and dynamics. Stall torque cannot approve these bearing or duty-cycle loads. No stress/torque safety factor has been demonstrated.
+
+## Evidence and remaining estimates
+
+comparison.csv gives measured CAD values, sources and status. checks/geometry_extraction.json contains world bounds, cylinder axes/radii/lengths and overlap volumes. Existing native solids, STEP files and STL files were rechecked without creating new printing exports. checks/limited_motion_rerun.json contains the inherited169-pose test; full hardware compatibility FAILS completeness despite that test's lack of detected intersections. checks/solid_mesh_export_rerun.json records the digital integrity results.
+
+All hardware dimensions remain estimated: both case bodies, boss/spline cylinder, axis offsets, shoulder and seated horn height; all omitted ear dimensions/holes and cable strain reliefs; all star arm widths/lengths/angles, hub raises, spline and screw geometry, horn holes and thickness; actual M3 threads, head/nut dimensions, printed clearances; camera envelope/lens/holes/standoffs, mass/center of mass and cable loads. The previous production_candidate_01/measurements/checklist.csv remains the complete pending measurement list; its blanks are not approvals. Printed dimensions are design choices rather than hardware measurements. Camera four-hole pattern is still absent.
+
+Confirmed errors corrected here are the misleading identity/compatibility metadata and the production-readiness interpretation. The physical geometry errors cannot be responsibly dimension-corrected from inconsistent incomplete references. Obtain measurements of BOTH SG90s, BOTH original horns and original center screws before making a new physical interface revision. Then model the real tabs/holes/shoulders/splines or explicitly bounded mating envelopes, resolve retention/load support, and rerun complete assembly/collision/export checks including all hardware. Until then: no full-print release.

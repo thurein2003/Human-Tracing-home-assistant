@@ -1,0 +1,111 @@
+{
+  "PanServo_ASSUMED": {
+    "body_bounds": {
+      "XMin": -6.0,
+      "XMax": 17.0,
+      "YMin": -6.0,
+      "YMax": 6.0,
+      "ZMin": 6.0,
+      "ZMax": 29.0
+    },
+    "body_world_xyz_mm": [
+      23.0,
+      12.0,
+      23.0
+    ],
+    "whole_world_xyz_mm": [
+      23.0,
+      12.0,
+      31.0
+    ],
+    "cylinders": [
+      {
+        "radius": 3.0,
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "axis_point": [
+          0.0,
+          0.0,
+          29.0
+        ],
+        "length_from_area": 8.0
+      }
+    ],
+    "valid": true,
+    "solids": 1,
+    "tabs_present": false,
+    "mounting_holes_present": false,
+    "spline_present": false,
+    "center_screw_bore_present": false
+  },
+  "TiltServo_ASSUMED": {
+    "body_bounds": {
+      "XMin": -70.0,
+      "XMax": -47.0,
+      "YMin": -6.0,
+      "YMax": 6.0,
+      "ZMin": 61.0,
+      "ZMax": 84.0
+    },
+    "body_world_xyz_mm": [
+      23.0,
+      12.0,
+      23.0
+    ],
+    "whole_world_xyz_mm": [
+      30.0,
+      12.0,
+      23.0
+    ],
+    "cylinders": [
+      {
+        "radius": 3.0,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "axis_point": [
+          -47.0,
+          0.0,
+          78.0
+        ],
+        "length_from_area": 7.0
+      }
+    ],
+    "valid": true,
+    "solids": 1,
+    "tabs_present": false,
+    "mounting_holes_present": false,
+    "spline_present": false,
+    "center_screw_bore_present": false
+  },
+  "PanStarHorn_ASSUMED": {
+    "world_bounds_mm": [
+      22.76621738662582,
+      23.937817570833502,
+      2.000000000000014
+    ],
+    "solid_count": 1,
+    "cylindrical_faces": 5,
+    "shaft_horn_overlap_mm3": 56.548667764616475,
+    "original_horn_holes_present": false,
+    "spline_socket_present": false
+  },
+  "TiltStarHorn_ASSUMED": {
+    "world_bounds_mm": [
+      2.000000000000014,
+      23.937817570833502,
+      22.766217386625826
+    ],
+    "solid_count": 1,
+    "cylindrical_faces": 5,
+    "shaft_horn_overlap_mm3": 28.274333882308333,
+    "original_horn_holes_present": false,
+    "spline_socket_present": false
+  },
+  "interpretation": "Bodies are generic micro-servo-sized envelopes, not verified SG90 models. Physical product identity cannot be inferred from geometry or label."
+}

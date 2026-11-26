@@ -1,0 +1,45 @@
+{
+  "units": "mm",
+  "base_thickness_mm": 3.8,
+  "bottom_center_support_depth_mm": 2.2,
+  "front_recess_diameter_mm": 7.4,
+  "front_recess_depth_mm": 3.2,
+  "rear_recess_diameter_mm": 5.5,
+  "rear_recess_depth_mm": 0.30000000000000004,
+  "center_web_mm": 0.7999999999999996,
+  "x_nominal_reach_mm": [
+    18.5,
+    18.5
+  ],
+  "x_pocket_reach_mm": [
+    18.6,
+    18.6
+  ],
+  "y_pocket_reach_mm": [
+    10.1,
+    10.1
+  ],
+  "upper_positive_y_pocket_width_mm": 3.4000000000000004,
+  "bottom_negative_y_pocket_width_mm": 4.4,
+  "parametric_edit_test_results": [
+    {
+      "property": "FrontDepth",
+      "test_value_mm": 3.1,
+      "tool_height_after_edit_mm": 3.1,
+      "volume_before_mm3": 1139.162972544079,
+      "volume_edited_mm3": 1141.873381605963,
+      "abs_volume_change_mm3": 2.710409061884093,
+      "restored_value_mm": 3.2
+    },
+    {
+      "property": "BackDepth",
+      "test_value_mm": 0.5,
+      "tool_height_after_edit_mm": 0.5,
+      "volume_before_mm3": 1139.162972544079,
+      "volume_edited_mm3": 1137.5921762172834,
+      "abs_volume_change_mm3": 1.5707963267955165,
+      "restored_value_mm": 0.3
+    }
+  ],
+  "design_note": "Native Part::Cylinder and Part::Cut expressions drive both recesses; edit Parameters group values and press F5."
+}

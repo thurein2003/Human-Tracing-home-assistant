@@ -1,0 +1,326 @@
+{
+  "status": "PASS",
+  "files_checked": 21,
+  "bed_xy_span_mm": [
+    241.284,
+    206.294
+  ],
+  "k2_260mm_xy_fit": true,
+  "stls": [
+    {
+      "file": "FIT_TESTS\\ABS_Circular_Clearance_Calibration_Bed.stl",
+      "bytes": 907484,
+      "triangles": 18148,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        0.116,
+        0.106,
+        0.0,
+        241.4,
+        206.4,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Female_C1_ID64p10.stl",
+      "bytes": 64484,
+      "triangles": 1288,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        -35.284,
+        -35.294,
+        0.0,
+        42.0,
+        35.294,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Female_C2_ID64p20.stl",
+      "bytes": 79284,
+      "triangles": 1584,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        -35.284,
+        -35.294,
+        0.0,
+        42.0,
+        35.294,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Female_C3_ID64p30.stl",
+      "bytes": 94484,
+      "triangles": 1888,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        -35.284,
+        -35.294,
+        0.0,
+        42.0,
+        35.294,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Female_C4_ID64p40.stl",
+      "bytes": 109684,
+      "triangles": 2192,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        -35.284,
+        -35.294,
+        0.0,
+        42.0,
+        35.294,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Female_C5_ID64p60.stl",
+      "bytes": 124884,
+      "triangles": 2496,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        -35.284,
+        -35.294,
+        0.0,
+        42.0,
+        35.294,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Male_Control_OD64_ID60_C1.stl",
+      "bytes": 42084,
+      "triangles": 840,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        -31.986,
+        -31.996,
+        0.0,
+        32.0,
+        31.996,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Male_Control_OD64_ID60_C2.stl",
+      "bytes": 42084,
+      "triangles": 840,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        50.014,
+        -31.996,
+        0.0,
+        114.0,
+        31.996,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Male_Control_OD64_ID60_C3.stl",
+      "bytes": 42084,
+      "triangles": 840,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        132.014,
+        -31.996,
+        0.0,
+        196.0,
+        31.996,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Male_Control_OD64_ID60_C4.stl",
+      "bytes": 42084,
+      "triangles": 840,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        -31.986,
+        43.004,
+        0.0,
+        32.0,
+        106.996,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\PAN_Male_Control_OD64_ID60_C5.stl",
+      "bytes": 42084,
+      "triangles": 840,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        50.014,
+        43.004,
+        0.0,
+        114.0,
+        106.996,
+        2.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Bore_T1_ID5p05.stl",
+      "bytes": 22684,
+      "triangles": 452,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        16.0,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Bore_T2_ID5p10.stl",
+      "bytes": 23484,
+      "triangles": 468,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        16.0,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Bore_T3_ID5p15.stl",
+      "bytes": 24284,
+      "triangles": 484,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        16.0,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Bore_T4_ID5p20.stl",
+      "bytes": 25084,
+      "triangles": 500,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        16.0,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Bore_T5_ID5p30.stl",
+      "bytes": 25884,
+      "triangles": 516,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        16.0,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Journal_Control_OD5_T1.stl",
+      "bytes": 20884,
+      "triangles": 416,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        7.501,
+        5.5,
+        0.0,
+        12.5,
+        10.5,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Journal_Control_OD5_T2.stl",
+      "bytes": 20884,
+      "triangles": 416,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        7.501,
+        5.5,
+        0.0,
+        12.5,
+        10.5,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Journal_Control_OD5_T3.stl",
+      "bytes": 20884,
+      "triangles": 416,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        7.501,
+        5.5,
+        0.0,
+        12.5,
+        10.5,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Journal_Control_OD5_T4.stl",
+      "bytes": 20884,
+      "triangles": 416,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        7.501,
+        5.5,
+        0.0,
+        12.5,
+        10.5,
+        6.0
+      ],
+      "watertight_edge_test": true
+    },
+    {
+      "file": "STL\\TILT_Journal_Control_OD5_T5.stl",
+      "bytes": 20884,
+      "triangles": 416,
+      "edge_incidence_non2": 0,
+      "bounds_mm": [
+        7.501,
+        5.5,
+        0.0,
+        12.5,
+        10.5,
+        6.0
+      ],
+      "watertight_edge_test": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+import FreeCAD as App, Part, json
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd'
+d=App.openDocument(src); y=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape; b=d.getObject('Base_EarMount_ThrustSupport').Shape
+out={'objects':[],'sections':[],'columns':[]}
+for name,s in [('yoke',y),('base',b)]:
+ out['objects'].append({'name':name,'valid':s.isValid(),'solids':len(s.Solids),'volume':s.Volume,'bbox':[s.BoundBox.XMin,s.BoundBox.XMax,s.BoundBox.YMin,s.BoundBox.YMax,s.BoundBox.ZMin,s.BoundBox.ZMax]})
+ for z in [34.9,35.0,35.1,35.2,35.5,36,36.5,37,37.2,37.5,37.7,38,38.5,39,39.5,40,41,42]:
+  q=s.common(Part.makeBox(120,120,.03,V(-60,-60,z)))
+  if q.Volume>1e-7: out['sections'].append({'name':name,'z':z,'area':q.Volume/.03,'bbox':[q.BoundBox.XMin,q.BoundBox.XMax,q.BoundBox.YMin,q.BoundBox.YMax]})
+for x in [20,24,27,28,29,30,31,32,33,34,35,36,38,40,42]:
+ for yy in [-27,-25,-23.5,-20,-10,0,10,20,23.5,25,27]:
+  for nm,s in [('yoke',y),('base',b)]:
+   q=s.common(Part.makeBox(.2,.2,20,V(x-.1,yy-.1,30)))
+   if q.Volume>1e-7:out['columns'].append({'part':nm,'xy':[x,yy],'z':[q.BoundBox.ZMin,q.BoundBox.ZMax],'height':q.BoundBox.ZLength})
+path=r'EyeTrace_Final_Engineering\EyeTrace_R24_PanYoke_OneLayer\DOCUMENTATION\r23_stack_geometry.json'
+open(path,'w').write(json.dumps(out,indent=2));print(path)

@@ -1,0 +1,2567 @@
+{
+  "poses": 172,
+  "pair_tests": 185932,
+  "unique_relative_tests": 37135,
+  "all_component_pairs_included": true,
+  "positive_overlap_whitelist": [],
+  "unintended_instances": 213,
+  "events": [
+    {
+      "pose": [
+        -60,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -60,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -50,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -40,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -30,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -20,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -10,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        0,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        10,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        20,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        30,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        40,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        50,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214471,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        -30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909177,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742072,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        -25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552263,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.310912957280333,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        -20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712438,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        -15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252166,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        -10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.46802057200954256,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        10
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.4680205720094593,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        15
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 6.015542915252189,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 11.31091295727969,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        20
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 2.048627429712435,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 5.754006349742117,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 9.998590522552282,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 0.5827035660214457,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        60,
+        30
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 19.89313339909019,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        17.5,
+        -12.5
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 2.572122888109562,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -37.5,
+        22.5
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 9.47158454290367,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        -37.5,
+        22.5
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 5.1498958249197,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        53.25,
+        27.25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_KeyedHorn_CaptiveCover"
+      ],
+      "volume_mm3": 2.8557383696118004,
+      "classification": "UNINTENDED penetration"
+    },
+    {
+      "pose": [
+        53.25,
+        27.25
+      ],
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "TiltDrive_M3x10_2"
+      ],
+      "volume_mm3": 14.498848051148004,
+      "classification": "UNINTENDED penetration"
+    }
+  ],
+  "limits": "Discrete operating poses and nominal exit keep-outs; not continuous motion, spline, flexible cable-loop, stress or physical-fit proof."
+}

@@ -1,0 +1,66 @@
+{
+  "full_bed": {
+    "slicer": "Creality Print 7.3.1.6378 CLI",
+    "exit_code": 0,
+    "warnings": "None in final full-bed slice; conflict and outside checks completed",
+    "parts": 13,
+    "layers": 599,
+    "extrusion_z_planes": 599,
+    "segments": 882168,
+    "density_g_cm3": 1.04,
+    "filament_g": 124.34,
+    "filament_m": 49.71,
+    "time": "11h 46m 25s",
+    "support_segments": {
+      "PanYoke_EarBracket_KeyedDrive": 37584,
+      "TiltCradle_KeyedHorn_CameraFrame": 44221,
+      "Base_EarMount_ThrustSupport": 45030
+    },
+    "protected_intrusions": [],
+    "unanchored_components": 0,
+    "longest_bridge_mm": 5.715,
+    "bridges_over8p5mm": 0,
+    "bead_bounds": [
+      [
+        6.30213,
+        6.30213
+      ],
+      [
+        229.12134350000002,
+        234.78087
+      ]
+    ],
+    "settings": {
+      "layer_mm": "0.2",
+      "walls": "4",
+      "infill": "35%",
+      "pattern": "gyroid",
+      "nozzle_C": "255",
+      "bed_C": "100",
+      "chamber_control": "0",
+      "supports": "tree_slim"
+    }
+  },
+  "fit_bed": {
+    "slicer": "Creality Print 7.3.1.6378 CLI",
+    "exit_code": 0,
+    "warnings": "None in final v5 coupon slice",
+    "coupons": 7,
+    "layers": 21,
+    "density_g_cm3": 1.04,
+    "filament_g": 12.06,
+    "time": "1h 21m 12s",
+    "bounds": [
+      12.0,
+      12.0,
+      0.0,
+      211.0,
+      137.99,
+      4.2
+    ],
+    "nozzle_C": 255,
+    "bed_C": 100,
+    "supports": "off",
+    "brim_mm": 4
+  }
+}

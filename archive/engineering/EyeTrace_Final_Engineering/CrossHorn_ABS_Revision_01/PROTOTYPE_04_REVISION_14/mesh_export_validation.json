@@ -1,0 +1,17 @@
+{
+  "stl_triangles": 5128,
+  "stl_unique_vertices": 2564,
+  "stl_closed_manifold_edge_incidence_all_2": true,
+  "3mf_zip_integrity": true,
+  "3mf_object_count": 1,
+  "3mf_triangles": 5128,
+  "3mf_triangle_count_matches_stl": true,
+  "bbox_mm": [
+    42.0,
+    23.0,
+    6.0
+  ],
+  "approx_solid_volume_mm3": 1211.5218,
+  "minimum_net_abs_mass_g_at_1.04_g_cm3": 1.26,
+  "slicer_toolpath_available": false
+}

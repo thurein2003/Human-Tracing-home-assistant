@@ -1,0 +1,38 @@
+{
+  "PanYoke_EarBracket_KeyedDrive": {
+    "BREP_valid": true,
+    "BREP_solids": 1,
+    "BREP_volume": 45847.22228085674,
+    "native_mesh_solid": true,
+    "native_mesh_volume": 45845.71484375,
+    "print_mesh_solid": true,
+    "print_mesh_volume": 45845.015625,
+    "facet_count": 27036,
+    "bbox": [
+      12.999999046325684,
+      13.000828742980957,
+      0.0,
+      115.19999694824219,
+      83.59917449951172,
+      70.0
+    ]
+  },
+  "TiltCradle_KeyedHorn_CameraFrame": {
+    "BREP_valid": true,
+    "BREP_solids": 1,
+    "BREP_volume": 24742.034516702675,
+    "native_mesh_solid": true,
+    "native_mesh_volume": 24741.599609375,
+    "print_mesh_solid": true,
+    "print_mesh_volume": 24743.134765625,
+    "facet_count": 20976,
+    "bbox": [
+      189.0,
+      102.5999984741211,
+      0.0,
+      234.0,
+      147.99951171875,
+      77.0
+    ]
+  }
+}

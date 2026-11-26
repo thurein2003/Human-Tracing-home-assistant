@@ -1,0 +1,40 @@
+{
+  "cad_valid": true,
+  "solid_count": 1,
+  "mesh_facets": 3080,
+  "mesh_solid": true,
+  "bbox_mm": [
+    43.0,
+    27.0,
+    4.35
+  ],
+  "confirmed_baseline_span_mm": [
+    35,
+    18
+  ],
+  "short_pocket_span_mm": 20.2,
+  "short_extension_each_end_mm": 1.0,
+  "short_pocket_added_width_each_side_mm": 1.0,
+  "base_total_lateral_clearance_mm": 0.2,
+  "short_extra_total_width_mm": 2.0,
+  "hub_diameter_mm": 7.0,
+  "hub_recess_diameter_mm": 7.2,
+  "hub_recess_depth_mm": 2.7,
+  "retaining_access_diameter_mm": 4.5,
+  "short_adjustment": "1 mm per side",
+  "profile_parameters": {
+    "long_arm_width_at_root": 6.0,
+    "long_arm_width_at_tip": 4.0,
+    "short_arm_width_at_root_before_user_adjustment": 4.0,
+    "short_arm_width_at_tip_before_user_adjustment": 3.0,
+    "long_tip_radius": 2.0,
+    "short_tip_radius_before_user_adjustment": 1.5,
+    "hub_offset_x": 0.0,
+    "hub_offset_y": 0.0,
+    "horn_plate_thickness": 1.5,
+    "raised_hub_height": 2.5,
+    "hub_recess_axial_clearance": 0.2,
+    "retaining_screw_access_diameter": 4.5
+  },
+  "secondary_holes": "omitted"
+}

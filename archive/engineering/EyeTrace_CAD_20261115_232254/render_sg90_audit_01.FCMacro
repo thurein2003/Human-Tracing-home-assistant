@@ -1,0 +1,31 @@
+﻿import FreeCAD as A,FreeCADGui as G,Part,os,json,traceback
+from FreeCAD import Vector as V
+from PySide import QtCore,QtWidgets
+R=r'EyeTrace_CAD_20261115_232254\sg90_interface_audit_01'
+def run():
+ try:
+  d=A.openDocument(os.path.join(R,'SG90_Audit_Hold.FCStd'));v=G.activeDocument().activeView();v.viewAxonometric()
+  originals=[o for o in d.Objects if hasattr(o,'Shape')];extras=[]
+  def hide():
+   for o in originals+extras:o.Visibility=False
+  def crop(n,name,p,dim,col):
+   s=d.getObject(n).Shape.common(Part.makeBox(*dim,V(*p)));o=d.addObject('PartDesign::Feature',name);o.Shape=s;o.ViewObject.ShapeColor=col;o.ViewObject.Transparency=65;extras.append(o);return o
+  def show(ns):
+   for n in ns:d.getObject(n).Visibility=True
+  def shot(n):
+   d.recompute();v.fitAll();G.updateGui();v.saveImage(os.path.join(R,'renders',n+'.png'),1400,1100,'White')
+  pbase=crop('Base','PanSocketCutaway',(-16,-18,3),(40,36,29),(0.3,0.4,0.5))
+  platform=crop('PanYoke','PanPlatformCutaway',(-27,-27,36),(54,54,6),(0.15,0.5,0.7))
+  hide();show(['PanServo_ASSUMED','PanStarHorn_ASSUMED','PanHornClamp','PanServoRetainer']);pbase.Visibility=True;platform.Visibility=True
+  d.getObject('PanServoRetainer').ViewObject.Transparency=65;d.getObject('PanHornClamp').ViewObject.Transparency=60;shot('pan_installation')
+  hide();show(['PanStarHorn_ASSUMED','PanHornClamp']);platform.Visibility=True;shot('pan_horn_interface')
+  cage=crop('PanYoke','TiltCageCutaway',(-75,-22,54),(36,44,44),(0.15,0.5,0.7))
+  flange=crop('TiltCameraCradle','TiltFlangeCutaway',(-40,-20,57),(7,40,39),(0.9,0.5,0.15))
+  hide();show(['TiltServo_ASSUMED','TiltStarHorn_ASSUMED','TiltHornClamp','TiltServoRetainer']);cage.Visibility=True;flange.Visibility=True;d.getObject('TiltServoRetainer').ViewObject.Transparency=65;d.getObject('TiltHornClamp').ViewObject.Transparency=60;shot('tilt_installation')
+  hide();show(['TiltStarHorn_ASSUMED','TiltHornClamp']);flange.Visibility=True;shot('tilt_horn_interface')
+  json.dump({'renderer':'FreeCAD 1.1.4 Coin3D','views':4,'cutaways':'Actual native solids cropped for visibility; no fabricated mounting tabs. Screenshots do not show missing features as if present.'},open(os.path.join(R,'renders','status.json'),'w'),indent=2)
+ except Exception:open(os.path.join(R,'renders','error.txt'),'w').write(traceback.format_exc())
+ finally:
+  for dn in list(A.listDocuments()):A.closeDocument(dn)
+  QtCore.QTimer.singleShot(1000,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1200,run)

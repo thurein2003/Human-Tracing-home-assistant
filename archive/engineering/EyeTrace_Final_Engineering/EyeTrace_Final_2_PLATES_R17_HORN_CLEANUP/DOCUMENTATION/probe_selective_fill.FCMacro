@@ -1,0 +1,21 @@
+﻿import FreeCAD as A,Part,os,json
+from FreeCAD import Vector as V
+eng=r'EyeTrace_Final_Engineering';out=os.path.join(eng,'EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR')
+d=A.openDocument(os.path.join(eng,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'));m=A.openDocument(os.path.join(eng,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'))
+base=m.getObject('BaseCoupon').Shape;final=m.getObject('FinalCoupon').Shape;exp=base.cut(final);disk=Part.makeCylinder(20.5,3.8,V(0,0,0),V(0,0,1));rot=A.Rotation(V(1,0,0),180);top=V(0,0,33)
+def tr(sh):
+ q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+env=tr(disk);expG=tr(exp);patch=tr(disk.cut(exp));old=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+keep=[]
+cover=d.getObject('Pan_KeyedHorn_Cover').Shape; keep.append(cover.makeOffsetShape(.2,.05,True))
+for i in range(4):
+ ss=d.getObject('PanDrive_M3x10_'+str(i)).Shape
+ for solid in ss.Solids:keep.append(solid.makeOffsetShape(.2,.05,True))
+safe=patch
+for q in keep:safe=safe.cut(q)
+# union fill into existing carrier before subtracting the exact R15 master void
+candidate=old.fuse(safe).cut(expG)
+res={'valid':bool(candidate.isValid()),'solids':len(candidate.Solids),'volume':float(candidate.Volume),'source_volume':float(old.Volume),'delta_volume':float(candidate.Volume-old.Volume),'bbox':[candidate.BoundBox.XMin,candidate.BoundBox.YMin,candidate.BoundBox.ZMin,candidate.BoundBox.XMax,candidate.BoundBox.YMax,candidate.BoundBox.ZMax],'added_patch_volume':float(safe.Volume),'R15_pocket_void_intersection':float(candidate.common(expG).Volume),'pair_overlap':{}}
+for nm in ['Pan_KeyedHorn_Cover']+['PanDrive_M3x10_'+str(i) for i in range(4)]+['PanServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL']:
+ res['pair_overlap'][nm]=float(candidate.common(d.getObject(nm).Shape).Volume)
+with open(os.path.join(out,'REPORTS','PAN_SELECTIVE_FILL_PROBE.json'),'w') as f:json.dump(res,f,indent=2)

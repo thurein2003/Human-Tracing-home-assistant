@@ -1,0 +1,43 @@
+{
+  "Pan": {
+    "seat_faces": [
+      [
+        1,
+        637.1149901480094,
+        -35.3,
+        -35.3,
+        35.3,
+        35.3
+      ]
+    ],
+    "plane_bbox": [
+      0.0,
+      -180.0,
+      20.0,
+      0.0,
+      -60.0,
+      140.0
+    ],
+    "section_edges": 0,
+    "section_valid": true,
+    "common_faces": 0,
+    "common_solids": 0,
+    "common_vol": 0.0
+  },
+  "Tilt": {
+    "seat_faces": [],
+    "plane_bbox": [
+      -100.0,
+      0.0,
+      20.0,
+      20.0,
+      0.0,
+      140.0
+    ],
+    "section_edges": 51,
+    "section_valid": true,
+    "common_faces": 6,
+    "common_solids": 0,
+    "common_vol": -1.6019736984857734e-16
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "file": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\PRINT\\Plate02_R23_UnifiedBottomBlock_SLICED_HOLD.3mf",
+  "archive_crc": "PASS",
+  "model_objects": 11,
+  "build_items": 11,
+  "plate_instances": 11,
+  "mesh_resource_count": 11,
+  "stale_ring_model_removed": true,
+  "R23_fused_yoke_mesh": {
+    "path": "3D/Objects/object_2.model",
+    "vertices": 40055,
+    "triangles": 80190,
+    "hash": "0808af12ae21a2dd1820c9fee38fb02225ada87e6e591d583498af077a8b3de7"
+  },
+  "mesh_inventories": [
+    {
+      "path": "3D/Objects/object_11.model",
+      "vertices": 420,
+      "triangles": 840,
+      "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738"
+    },
+    {
+      "path": "3D/Objects/object_10.model",
+      "vertices": 420,
+      "triangles": 840,
+      "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738"
+    },
+    {
+      "path": "3D/Objects/object_3.model",
+      "vertices": 646,
+      "triangles": 1300,
+      "hash": "40d7797737501e3f448c4ca30701dfbc1212ae9b637a4963e9f5a6bdd9f5718a"
+    },
+    {
+      "path": "3D/Objects/object_8.model",
+      "vertices": 420,
+      "triangles": 840,
+      "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738"
+    },
+    {
+      "path": "3D/Objects/object_9.model",
+      "vertices": 420,
+      "triangles": 840,
+      "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738"
+    },
+    {
+      "path": "3D/Objects/object_7.model",
+      "vertices": 630,
+      "triangles": 1260,
+      "hash": "950ae3415cabbc17ad3fb344e01d6a03db9f803c81f3ebff893c8e952680cab4"
+    },
+    {
+      "path": "3D/Objects/object_6.model",
+      "vertices": 2148,
+      "triangles": 4312,
+      "hash": "fc64e9527d6779c41181bbb32b581d882206132d5c4425e73939c0d359f6122d"
+    },
+    {
+      "path": "3D/Objects/object_12.model",
+      "vertices": 1898,
+      "triangles": 3828,
+      "hash": "96b2c2e457d9e426d4e5be92f85abaaec1b1eca26675feb667521e74a3f7e313"
+    },
+    {
+      "path": "3D/Objects/object_4.model",
+      "vertices": 4173,
+      "triangles": 8362,
+      "hash": "172b9c84965d315afa51ab365970780817cc8b7a767cb0ebf67ae79f5d2e48e0"
+    },
+    {
+      "path": "3D/Objects/object_5.model",
+      "vertices": 10458,
+      "triangles": 20976,
+      "hash": "42bd076d7846d940719c3afaf7b45b9674a5eca9b64614a4f81ede7f68fdf7a3"
+    },
+    {
+      "path": "3D/Objects/object_2.model",
+      "vertices": 40055,
+      "triangles": 80190,
+      "hash": "0808af12ae21a2dd1820c9fee38fb02225ada87e6e591d583498af077a8b3de7"
+    }
+  ],
+  "slicer_preview_contains_gcode": false,
+  "metadata_files": [
+    "Metadata/process_settings_1.config",
+    "Metadata/filament_settings_1.config",
+    "Metadata/slice_info.config"
+  ]
+}

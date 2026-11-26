@@ -1,0 +1,40 @@
+{
+  "poses": [
+    [
+      -62,
+      -32
+    ],
+    [
+      -62,
+      32
+    ],
+    [
+      62,
+      -32
+    ],
+    [
+      62,
+      32
+    ],
+    [
+      0,
+      -32
+    ],
+    [
+      0,
+      32
+    ],
+    [
+      -62,
+      0
+    ],
+    [
+      62,
+      0
+    ]
+  ],
+  "all_pairs_tested": 8648,
+  "unintended": [],
+  "cache_used": false,
+  "scope": "Extra +/-2 degree guard for nominal pocket backlash only; not enlarged servo control limits or physical-clearance proof"
+}

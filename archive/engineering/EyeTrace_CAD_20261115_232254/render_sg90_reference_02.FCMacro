@@ -1,0 +1,30 @@
+﻿import FreeCAD as A,FreeCADGui as G,Part,os,json,traceback
+from FreeCAD import Vector as V
+from PySide import QtCore,QtWidgets
+R=r'EyeTrace_CAD_20261115_232254\sg90_reference_revision_02'
+def run():
+ try:
+  d=A.openDocument(os.path.join(R,'EyeTrace_SG90_Reference_01.FCStd'));v=G.activeDocument().activeView();v.viewAxonometric()
+  ns=['Base','PanServoRetainer','TiltServoRetainer','PanYoke','TiltCameraCradle','PanHornClamp','TiltHornClamp'];orig=[o for o in d.Objects if hasattr(o,'Shape')];ex=[]
+  for o in orig:o.Visibility=True
+  for n in ns:d.getObject(n).ViewObject.Transparency=65
+  def shot(n):v.fitAll();G.updateGui();v.saveImage(os.path.join(R,'renders',n+'.png'),1500,1150,'White')
+  shot('assembly_reference_replacement')
+  def hide():
+   for o in orig+ex:o.Visibility=False
+  def show(names):
+   for n in names:d.getObject(n).Visibility=True
+  def crop(n,label,p,dim):
+   o=d.addObject('PartDesign::Feature',label);o.Shape=d.getObject(n).Shape.common(Part.makeBox(*dim,V(*p)));o.ViewObject.Transparency=70;o.ViewObject.ShapeColor=(.2,.55,.75);ex.append(o);return o
+  pb=crop('Base','PanBaseSection',(-18,-18,3),(45,36,29));pp=crop('PanYoke','PanPlatformSection',(-26,-26,36),(52,52,6))
+  hide();show(['PanServo_ASSUMED','PanStarHorn_ASSUMED','PanHornClamp','PanServoRetainer','PanOriginalScrew_PROVISIONAL']);pb.Visibility=True;pp.Visibility=True;shot('pan_tabs_and_horn')
+  cg=crop('PanYoke','TiltCageSection',(-75,-22,54),(36,44,44));cf=crop('TiltCameraCradle','TiltFlangeSection',(-40,-20,57),(7,40,39))
+  hide();show(['TiltServo_ASSUMED','TiltStarHorn_ASSUMED','TiltHornClamp','TiltServoRetainer','TiltOriginalScrew_PROVISIONAL']);cg.Visibility=True;cf.Visibility=True;shot('tilt_tabs_and_horn')
+  hide();show(['PanServo_ASSUMED','PanStarHorn_ASSUMED','PanOriginalScrew_PROVISIONAL']);shot('reference_case_tabs_output')
+  hide();show(['PanServo_ASSUMED']);v.viewRear();shot('reference_tab_holes')
+  json.dump({'renderer':'FreeCAD1.1.4 Coin3D','images':5,'scope':'Actual revision native geometry; smooth output and provisional stars/screws are not physical spline representations'},open(os.path.join(R,'renders','status.json'),'w'),indent=2)
+ except Exception:open(os.path.join(R,'renders','error.txt'),'w').write(traceback.format_exc())
+ finally:
+  for dn in list(A.listDocuments()):A.closeDocument(dn)
+  QtCore.QTimer.singleShot(1000,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1200,run)

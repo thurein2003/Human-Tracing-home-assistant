@@ -1,0 +1,8 @@
+import FreeCAD as App,Part,json
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(src);y=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+sl=Part.makeBox(16,57,1.8,V(28,-28.5,35.2));k=Part.makeCylinder(22,2,V(0,0,35.1))
+for x,yy in [(32,0),(27.5,0),(30.9,0)]:k=k.fuse(Part.makeCylinder(3.2,2,V(x,yy,35.1)))
+n=y.cut(sl.cut(k)).removeSplitter();out=[]
+for s in sorted(n.Solids,key=lambda s:s.Volume,reverse=True):out.append({'volume':s.Volume,'bbox':[s.BoundBox.XMin,s.BoundBox.XMax,s.BoundBox.YMin,s.BoundBox.YMax,s.BoundBox.ZMin,s.BoundBox.ZMax]})
+open(r'EyeTrace_Final_Engineering\EyeTrace_R24_PanYoke_OneLayer\DOCUMENTATION\solid_details.json','w').write(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

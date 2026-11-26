@@ -1,0 +1,3 @@
+OpenGL probe display point: x=0, y=0
+OpenGL probe: version=4.6.0 NVIDIA 610.91, vendor=NVIDIA Corporation, renderer=NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2
+[2026-11-16 03:04:19.997731] [0x00008fd0] [error]   crealityprint_main start

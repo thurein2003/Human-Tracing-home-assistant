@@ -1,0 +1,96 @@
+﻿import FreeCAD as A,Part,Mesh,json,os,zipfile,xml.etree.ElementTree as ET,struct,shutil
+from FreeCAD import Vector as V
+E=r'EyeTrace_Final_Engineering';OUT=os.path.join(E,'EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR')
+SRC=os.path.join(E,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO');R17=os.path.join(E,'EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP');MASTER=os.path.join(E,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd')
+d=A.openDocument(os.path.join(SRC,'CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'));r=A.openDocument(os.path.join(R17,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'));m=A.openDocument(MASTER)
+base=m.getObject('BaseCoupon').Shape;final=m.getObject('FinalCoupon').Shape;expLocal=base.cut(final);armTool=m.getObject('ArmPocketTool').Shape
+# Pan: preserve the R16 carrier and its existing interfaces, add only recoverable seat material,
+# reserve the exact R15 negative profile, and cut modeled cover/screw envelopes with 0.20 mm clearance.
+disk=Part.makeCylinder(20.5,3.8,V(0,0,0),V(0,0,1));rotPan=A.Rotation(V(1,0,0),180);topPan=V(0,0,33)
+def tr(sh,rot,top):
+ q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+panExp=tr(expLocal,rotPan,topPan);panArm=tr(armTool,rotPan,topPan);patch=tr(disk.cut(expLocal),rotPan,topPan)
+panObj=d.getObject('PanYoke_EarBracket_KeyedDrive');oldPan=panObj.Shape.copy();panCover=d.getObject('Pan_KeyedHorn_Cover').Shape
+keep=[panCover.makeOffsetShape(0.20,0.05,True)]
+for i in range(4):
+ for solid in d.getObject('PanDrive_M3x10_'+str(i)).Shape.Solids:keep.append(solid.makeOffsetShape(0.20,0.05,True))
+# Union first, restore required keepouts, then cut the master profile. Keep only connected main body;
+# two 0.3 mm high unconnected scraps are nonfunctional and are not exported.
+panFull=oldPan.fuse(patch)
+for q in keep:panFull=panFull.cut(q)
+panFull=panFull.cut(panExp)
+panSolids=sorted(panFull.Solids,key=lambda s:s.Volume,reverse=True);panNew=panSolids[0]
+if not panNew.isValid() or len(panNew.Solids)!=1:raise Exception('repaired pan BREP invalid')
+panObj.Shape=panNew;panObj.Label='Pan yoke — selective R15 seat repair; hardware reliefs retained'
+# Keep the simplified full-depth horn proxy in the document, but replace its visible collision proxy
+# by only the portion occupying the R15 pocket. This is explicitly an envelope, not as-built horn geometry.
+panHorn=d.getObject('Pan_OriginalStar_PROVISIONAL');panHorn.Visibility=False
+panFit=panHorn.Shape.common(panExp)
+fitObj=d.addObject('Part::Feature','Pan_R15_FitEnvelope');fitObj.Shape=panFit;fitObj.Label='Pan horn fit envelope — R15 pocket-limited; not physical horn CAD'
+# Tilt carrier takes the already R15-rebuilt R17 BREP; all other parts and placements stay R16-identical.
+tiltObj=d.getObject('TiltCradle_KeyedHorn_CameraFrame');tiltObj.Shape=r.getObject('TiltCradle_KeyedHorn_CameraFrame').Shape.copy();tiltObj.Label='Tilt cradle — exact R15 pocket; unchanged R17 BREP'
+# Keep an explicit visual envelope for the fit-test pocket; do not imply complete axial horn geometry.
+rotTilt=A.Rotation(V(0,1,0),-90);topTilt=V(-41,0,78);tiltExp=tr(expLocal,rotTilt,topTilt)
+tilthorn=d.getObject('Tilt_OriginalStar_PROVISIONAL');tilthorn.Visibility=False
+tiltFit=tilthorn.Shape.common(tiltExp);tiltFitObj=d.addObject('Part::Feature','Tilt_R15_FitEnvelope');tiltFitObj.Shape=tiltFit;tiltFitObj.Label='Tilt horn fit envelope — R15 pocket-limited; not physical horn CAD'
+# Add fit envelopes under the existing non-printable reference group if supported.
+try:d.getObject('HardwareReference').addObject(fitObj);d.getObject('HardwareReference').addObject(tiltFitObj)
+except:pass
+d.recompute()
+fc=os.path.join(OUT,'CAD','EyeTrace_R17_Plate02_Repaired_HOLD.FCStd');d.saveAs(fc)
+# Export final assembly STEP with the source 13 print parts only; no hardware or keepout solids.
+printNames=['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanYoke_EarBracket_KeyedDrive','Tilt_Removable_IdlerPillar','Pan_KeyedHorn_Cover','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','PCB_Spacer_Lower_Left','PCB_Spacer_Lower_Right','PCB_Spacer_Upper_Left','PCB_Spacer_Upper_Right','CameraPlate_Cut007']
+Part.export([d.getObject(n) for n in printNames],os.path.join(OUT,'CAD','EyeTrace_R17_Plate02_Repaired_HOLD.step'))
+# New 12-component Plate 02 STL inventory; do not copy, open, or write any Plate 01 file.
+plate2=['Pan_Replaceable_ThrustRing.stl','PanYoke_EarBracket_KeyedDrive_R17.stl','Tilt_Removable_IdlerPillar.stl','Pan_KeyedHorn_Cover.stl','TiltCradle_KeyedHorn_CameraFrame_R17.stl','Tilt_KeyedHorn_CaptiveCover.stl','Tilt_Journal_FlangedSleeve.stl','PCB_Spacer_Lower_Left.stl','PCB_Spacer_Lower_Right.stl','PCB_Spacer_Upper_Left.stl','PCB_Spacer_Upper_Right.stl','CameraPlate_21x14.stl']
+for fn in plate2:
+ if fn.startswith('PanYoke_'):continue
+ shutil.copy2(os.path.join(R17,'STL',fn),os.path.join(OUT,'STL',fn))
+# Transform the pan carrier into the existing Plate 02 bed coordinates, unchanged placement.
+def tf(q):return V(q.x+71.2,q.y+48.3,q.z-33.0)
+native=os.path.join(OUT,'CAD','_pan_native_tmp.stl');Part.export([panObj],native);mm=Mesh.Mesh(native);verts,faces=mm.Topology;tv=[tf(v) for v in verts]
+panstl=os.path.join(OUT,'STL','PanYoke_EarBracket_KeyedDrive_R17.stl')
+def normal(a,b,c):
+ n=(b-a).cross(c-a)
+ if n.Length:n.normalize()
+ return n
+with open(panstl,'wb') as f:
+ f.write(b'EyeTrace R17 repaired pan BREP to original Plate 02 placement'.ljust(80,b' '));f.write(struct.pack('<I',len(faces)))
+ for face in faces:
+  a,b,c=[tv[int(i)] for i in face];n=normal(a,b,c);f.write(struct.pack('<12fH',n.x,n.y,n.z,a.x,a.y,a.z,b.x,b.y,b.z,c.x,c.y,c.z,0))
+try:os.remove(native)
+except:pass
+# Validate the new pan print mesh.
+validPan=Mesh.Mesh(panstl)
+# Patch only the pan mesh into the exact R17 Plate 02 3MF; Plate 01 is never touched.
+src3=os.path.join(R17,'PRINT','EyeTrace_R17_Plate_02_ABS_HORN_CLEANUP_HOLD.3mf');dst3=os.path.join(OUT,'PRINT','EyeTrace_R17_Plate_02_ABS_HOLD.3mf')
+ns='http://schemas.microsoft.com/3dmanufacturing/core/2015/02';ET.register_namespace('',ns);tag=lambda x:'{%s}%s'%(ns,x)
+with zipfile.ZipFile(src3,'r') as zin:
+ model=ET.fromstring(zin.read('3D/3dmodel.model'));found=0
+ for ob in model.findall('.//'+tag('object')):
+  if ob.get('name')!='PanYoke_EarBracket_KeyedDrive':continue
+  oldmesh=ob.find(tag('mesh'))
+  if oldmesh is None:continue
+  ob.remove(oldmesh);me=ET.SubElement(ob,tag('mesh'));vv=ET.SubElement(me,tag('vertices'))
+  for q in tv:ET.SubElement(vv,tag('vertex'),{'x':format(q.x,'.9g'),'y':format(q.y,'.9g'),'z':format(q.z,'.9g')})
+  tt=ET.SubElement(me,tag('triangles'))
+  for face in faces:ET.SubElement(tt,tag('triangle'),{'v1':str(int(face[0])),'v2':str(int(face[1])),'v3':str(int(face[2]))})
+  found+=1
+ for md in model.findall(tag('metadata')):
+  if md.get('name')=='Title':md.text='EyeTrace R17 Plate 02 — pan clearance repair — HOLD'
+  if md.get('name')=='Description':md.text='Plate 02 only. Pan carrier repaired around exact R15 interface while retaining cover and fastener clearances. Mechanical/horn-hole and slicer validation remain HOLD.'
+ tmp=dst3+'.tmp'
+ with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as zout:
+  for info in zin.infolist():zout.writestr(info,ET.tostring(model,encoding='utf-8',xml_declaration=True) if info.filename=='3D/3dmodel.model' else zin.read(info.filename))
+shutil.move(tmp,dst3)
+# BREP and assembly checks. Keep intended screw-to-horn engagement as unverified, not a collision pass.
+carrierPairs={}
+for nm in ['Pan_KeyedHorn_Cover']+['PanDrive_M3x10_'+str(i) for i in range(4)]+['PanServo_SG90_Reference','Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing']:
+ carrierPairs[nm]=float(panNew.common(d.getObject(nm).Shape).Volume)
+clipPairs={}
+for nm in ['Pan_KeyedHorn_Cover']+['PanDrive_M3x10_'+str(i) for i in range(4)]+['PanServo_SG90_Reference']:
+ clipPairs[nm]=float(panFit.common(d.getObject(nm).Shape).Volume)
+check={'freecad':'1.1.4','source':'R16 CompactServo assembly','R15_master':MASTER,'pan':{'valid':panNew.isValid(),'solids':len(panNew.Solids),'volume_mm3':panNew.Volume,'volume_before_mm3':oldPan.Volume,'delta_mm3':panNew.Volume-oldPan.Volume,'discarded_disconnected_islands':[float(s.Volume) for s in panSolids[1:]],'R15_envelope_mm':[39.2,20.2],'depth_mm':1.7,'center_bore_mm':8.0,'carrier_to_pocket_common_mm3':panNew.common(panExp).Volume,'carrier_clearance_common_mm3':carrierPairs,'fit_envelope_common_mm3':clipPairs,'unmodified_axis_transform':'pan rotational axis unchanged at source coordinates'},'tilt':{'valid':tiltObj.Shape.isValid(),'solids':len(tiltObj.Shape.Solids),'volume_mm3':tiltObj.Shape.Volume,'R15_envelope_mm':[39.2,20.2],'depth_mm':1.7,'center_bore_mm':8.0},'camera_pattern_mm':[21,14],'base_modified':False,'plate01_opened_or_written':False,'plate02_inventory':len(plate2),'pan_mesh':{'is_solid':validPan.isSolid(),'facets':len(validPan.Facets),'volume_mm3':validPan.Volume,'bbox':[validPan.BoundBox.XMin,validPan.BoundBox.YMin,validPan.BoundBox.ZMin,validPan.BoundBox.XMax,validPan.BoundBox.YMax,validPan.BoundBox.ZMax]},'3mf_pan_mesh_objects_replaced':found,'release':'HOLD — horn axial/small-hole model provisional; no Creality Print slicing performed'}
+with open(os.path.join(OUT,'REPORTS','BUILD_CHECKS.json'),'w') as f:json.dump(check,f,indent=2)
+print('R17_PLATE02_BUILD',json.dumps(check))
+A.closeDocument(m.Name);A.closeDocument(r.Name)

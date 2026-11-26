@@ -1,0 +1,23 @@
+﻿import FreeCAD as App,Part,json
+from FreeCAD import Vector as V
+p=r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\CAD\EyeTrace_R21_SinglePanMountPlate.FCStd'
+d=App.openDocument(p);o=d.getObject('PanYoke_EarBracket_KeyedDrive');s=o.Shape
+rows=[]
+for z in [35.2,35.5,36,36.5,36.9,37,37.5,38,39,40,41,42,43,44]:
+ q=s.common(Part.makeBox(140,100,0.1,V(-60,-50,z)))
+ b=q.BoundBox
+ rows.append({'z':z,'slice_vol_0.1mm':q.Volume,'solids':len(q.Solids),'bbox':[b.XMin,b.XMax,b.YMin,b.YMax,b.ZMin,b.ZMax]})
+# Along relevant XY positions, occupancy intervals and coordinates.
+pts=[(0,0),(10,0),(23.5,0),(30,0),(34,0),(40,0),(0,18),(18,0),(-30,0),(40,20)]
+sec={}
+for x,y in pts:
+ ints=[];inside=False;start=None;prev=None
+ for i in range(0,1401):
+  z=35+i*.05
+  pt=V(x,y,z)
+  now=s.isInside(pt,1e-5,True)
+  if now and not inside:start=z
+  if inside and not now:ints.append([round(start,2),round(z-.05,2)])
+  inside=now
+ sec[str((x,y))]=ints
+print(json.dumps({'yoke_z_slices':rows,'point_intervals':sec},indent=2));App.closeDocument(d.Name)

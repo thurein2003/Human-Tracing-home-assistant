@@ -1,0 +1,13 @@
+import FreeCAD as A, json
+root=r'EyeTrace_Final_Engineering';out=root+r'\FINAL_ALL_IN_ONE_R15_ASSEMBLY';d=A.openDocument(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd')
+pairs=[('PanServo_SG90_Reference','Base_EarMount_ThrustSupport'),('PanServo_SG90_Reference','PanYoke_EarBracket_KeyedDrive'),('TiltServo_SG90_Reference','PanYoke_EarBracket_KeyedDrive'),('TiltServo_SG90_Reference','TiltCradle_KeyedHorn_CameraFrame'),('Pan_OriginalStar_PROVISIONAL','PanYoke_EarBracket_KeyedDrive'),('Tilt_OriginalStar_PROVISIONAL','TiltCradle_KeyedHorn_CameraFrame'),('Pan_OriginalStar_PROVISIONAL','Pan_KeyedHorn_Cover'),('Tilt_OriginalStar_PROVISIONAL','Tilt_KeyedHorn_CaptiveCover'),('TiltCradle_KeyedHorn_CameraFrame','Tilt_Removable_IdlerPillar'),('TiltCradle_KeyedHorn_CameraFrame','Tilt_Journal_FlangedSleeve'),('CameraPlate_Cut007','TiltCradle_KeyedHorn_CameraFrame'),('Camera_Lens_PROVISIONAL','CameraPlate_Cut007'),('PanYoke_EarBracket_KeyedDrive','Pan_KeyedHorn_Cover'),('TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover')]
+rows=[]
+for a,b in pairs:
+ x=d.getObject(a);y=d.getObject(b)
+ if not x or not y:rows.append({'a':a,'b':b,'status':'MISSING'});continue
+ try:
+  vol=x.Shape.common(y.Shape).Volume;dist=x.Shape.distToShape(y.Shape)[0]
+  rows.append({'a':a,'b':b,'intersection_volume_mm3':vol,'minimum_distance_mm':dist,'status':'INTERSECT' if vol>1e-5 else 'NO_SOLID_INTERSECTION'})
+ except Exception as e:rows.append({'a':a,'b':b,'error':str(e)})
+report={'source':out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd','pairs':rows,'camera_mount_pattern_mm':[21,14],'axis_datum_mm':{'pan_axis_z_center':[0,0],'tilt_axis_x_line_y_z':[0,78]},'physical_interfaces':'unverified; horn and servo models are labeled provisional'}
+open(out+r'\CHECKS\critical_interface_pairs.json','w').write(json.dumps(report,indent=2));A.closeDocument(d.Name)

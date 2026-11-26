@@ -1,0 +1,9 @@
+﻿import FreeCAD as App, os, json
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+f=os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd')
+d=App.openDocument(f)
+rows=[]
+for o in d.Objects:
+ if hasattr(o,'Shape') and not o.Shape.isNull():
+  rows.append({'name':o.Name,'label':o.Label,'valid':bool(o.Shape.isValid()),'solids':len(o.Shape.Solids),'volume':float(o.Shape.Volume)})
+with open(os.path.join(p,'FCSTD_REOPEN_VALIDATION.json'),'w') as h: json.dump({'opened':True,'object_count':len(d.Objects),'shaped_objects':len(rows),'objects':rows},h,indent=2)

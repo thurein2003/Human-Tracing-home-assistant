@@ -1,0 +1,40 @@
+﻿import FreeCAD as A, Part, json, os, math, Mesh, zipfile, xml.etree.ElementTree as ET
+from FreeCAD import Vector as V
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'))
+out=os.path.join(p,'RENDERS','BREP_LINE_DATA.json')
+def pts_edge(e,mode):
+ try: ps=e.discretize(Deflection=0.08)
+ except: ps=e.discretize(Number=24)
+ arr=[]
+ for q in ps:
+  if mode=='XY':arr.append([q.x,q.y])
+  elif mode=='YZ':arr.append([q.y,q.z])
+  else:arr.append([q.x,q.z])
+ return arr
+data={}
+for key,n,faceaxis,facevalue,mode,planept,planenorm in [
+ ('Pan','PanYoke_EarBracket_KeyedDrive','z',33,'XY',V(0,0,0),V(1,0,0)),
+ ('Tilt','TiltCradle_KeyedHorn_CameraFrame','x',-41,'YZ',V(0,0,78),V(0,1,0))]:
+ s=d.getObject(n).Shape
+ seat=[]
+ for f in s.Faces:
+  b=f.BoundBox
+  if faceaxis=='z' and abs(b.ZMin-33)<1e-5 and abs(b.ZMax-33)<1e-5 and b.XMin>-25 and b.XMax<25 and b.YMin>-25 and b.YMax<25: seat.extend([pts_edge(e,mode) for e in f.Edges])
+  if faceaxis=='x' and abs(b.XMin+41)<1e-5 and abs(b.XMax+41)<1e-5 and b.YMin>-25 and b.YMax<25 and b.ZMin>52 and b.ZMax<104: seat.extend([pts_edge(e,mode) for e in f.Edges])
+ pl=Part.makePlane(120,120,planept-planenorm*60,planenorm)
+ sec=s.section(pl)
+ sections=[pts_edge(e,mode) for e in sec.Edges]
+ data[key]={'seat_edges':seat,'section_edges':sections,'seat_edge_count':len(seat),'section_edge_count':len(sections)}
+with open(out,'w') as f:json.dump(data,f)
+# Mesh watertight/solid and 3MF integrity summaries using FreeCAD Mesh and archive XML.
+meshchecks={}
+for fn in os.listdir(os.path.join(p,'STL')):
+ if fn.lower().endswith('.stl'):
+  mm=Mesh.Mesh(os.path.join(p,'STL',fn))
+  meshchecks[fn]={'facets':len(mm.Facets),'is_solid':bool(mm.isSolid()),'volume':mm.Volume,'bbox':[mm.BoundBox.XMin,mm.BoundBox.YMin,mm.BoundBox.ZMin,mm.BoundBox.XMax,mm.BoundBox.YMax,mm.BoundBox.ZMax]}
+with open(os.path.join(p,'STL_MESH_VALIDATION.json'),'w') as f:json.dump(meshchecks,f,indent=2)
+print('LINES',[(k,v['seat_edge_count'],v['section_edge_count']) for k,v in data.items()])
+print('STL_CHECKS',[(k,v['facets'],v['is_solid']) for k,v in meshchecks.items()])
+A.closeDocument(d.Name)
+

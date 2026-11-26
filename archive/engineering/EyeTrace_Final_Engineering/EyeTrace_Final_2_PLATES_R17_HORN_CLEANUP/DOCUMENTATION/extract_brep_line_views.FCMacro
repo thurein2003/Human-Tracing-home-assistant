@@ -1,0 +1,26 @@
+﻿import FreeCAD as A,Part,json,os
+from FreeCAD import Vector as V
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'));out={}
+def edge(e,mode):
+ try:vs=e.discretize(Deflection=0.05)
+ except:vs=e.discretize(Number=24)
+ return [[v.x,v.y] if mode=='XY' else ([v.y,v.z] if mode=='YZ' else [v.x,v.z]) for v in vs]
+for key,n,axis,val,seatmode,sectionbox,sectionaxis,sectionvalue,sectionmode in [
+ ('Pan','PanYoke_EarBracket_KeyedDrive','z',33,'XY',Part.makeBox(0.1,50,14,V(-0.05,-25,29)),'x',-0.05,'YZ'),
+ ('Tilt','TiltCradle_KeyedHorn_CameraFrame','x',-41,'YZ',Part.makeBox(15,0.1,44,V(-42,-0.05,56)),'y',-0.05,'XZ')]:
+ s=d.getObject(n).Shape; seat=[]; secshape=s.common(sectionbox); section=[]
+ for f in s.Faces:
+  b=f.BoundBox
+  if axis=='z' and abs(b.ZMin-val)<1e-5 and abs(b.ZMax-val)<1e-5:seat.extend([edge(e,seatmode) for e in f.Edges])
+  if axis=='x' and abs(b.XMin-val)<1e-5 and abs(b.XMax-val)<1e-5:seat.extend([edge(e,seatmode) for e in f.Edges])
+ for f in secshape.Faces:
+  b=f.BoundBox
+  if sectionaxis=='x' and abs(b.XMin-sectionvalue)<1e-4 and abs(b.XMax-sectionvalue)<1e-4:section.extend([edge(e,sectionmode) for e in f.Edges])
+  if sectionaxis=='y' and abs(b.YMin-sectionvalue)<1e-4 and abs(b.YMax-sectionvalue)<1e-4:section.extend([edge(e,sectionmode) for e in f.Edges])
+ out[key]={'seat':seat,'section':section,'seat_edge_groups':len(seat),'section_edge_groups':len(section),'slice_valid':secshape.isValid(),'slice_solids':len(secshape.Solids)}
+with open(os.path.join(p,'RENDERS','BREP_LINE_DATA.json'),'w') as f:json.dump(out,f)
+print({k:(v['seat_edge_groups'],v['section_edge_groups'],v['slice_solids']) for k,v in out.items()})
+A.closeDocument(d.Name)
+
+

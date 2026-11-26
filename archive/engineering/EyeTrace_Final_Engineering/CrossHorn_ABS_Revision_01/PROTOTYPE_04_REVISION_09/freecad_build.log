@@ -1,0 +1,35 @@
+FreeCAD 1.1.4, Libs: 1.1.4R20260928 (Git shallow)
+(C) 2001-2026 FreeCAD contributors
+FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.
+
+Recompute......
+						(8 %)	
+						(16 %)	
+						(25 %)	
+						(33 %)	
+						(41 %)	
+						(50 %)	
+						(58 %)	
+						(66 %)	
+						(75 %)	
+						(83 %)	
+						(91 %)	
+						(100 %)	
+								
+Recompute......
+						(8 %)	
+						(16 %)	
+						(25 %)	
+						(33 %)	
+						(41 %)	
+						(50 %)	
+						(58 %)	
+						(66 %)	
+						(75 %)	
+						(83 %)	
+						(91 %)	
+						(100 %)	
+								
+
+STDERR
+Exception while processing file: EyeTrace_Final_Engineering/CrossHorn_ABS_Revision_01/PROTOTYPE_04_REVISION_09/build_prototype_04_revision_09.FCMacro [Parameter edit did not alter measured geometry: FrontDepth]

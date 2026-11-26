@@ -1,0 +1,4 @@
+import FreeCAD as App,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(p);y=d.getObject('PanYoke_EarBracket_KeyedDrive');pg=d.getObject('PrintedParts');root=d.getObject('AssemblyRoot')
+r={'file':p,'opened':True,'yoke_valid':y.Shape.isValid(),'yoke_solids':len(y.Shape.Solids),'yoke_volume_mm3':y.Shape.Volume,'ring_object_absent':d.getObject('Pan_Replaceable_ThrustRing') is None,'printed_part_group_members':len(pg.Group),'printed_part_names':[o.Name for o in pg.Group],'assembly_compound_solids':len(root.Shape.Solids),'group_label':pg.Label}
+open(r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\DOCUMENTATION\R23_FCSTD_REOPEN_CHECK.json','w').write(json.dumps(r,indent=2));print(json.dumps(r,indent=2))

@@ -1,0 +1,8 @@
+import FreeCAD as App, Part, Mesh, json
+from pathlib import Path
+R=Path(r'EyeTrace_Final_Engineering\EyeTrace_R24_PanYoke_OneLayer')
+f=R/'CAD'/'EyeTrace_R24_PanYoke_OneLayer.FCStd'; stl=R/'STL'/'PanYoke_R24_OneLayer.stl'
+d=App.openDocument(str(f)); y=d.getObject('PanYoke_EarBracket_KeyedDrive'); b=d.getObject('Base_EarMount_ThrustSupport'); t=d.getObject('TiltCradle_KeyedHorn_CameraFrame')
+if not all([y,b,t]):raise RuntimeError('Component missing after FCStd reopen')
+m=Mesh.Mesh(str(stl)); r={'fcstd_reopened':True,'yoke_valid':y.Shape.isValid(),'yoke_solids':len(y.Shape.Solids),'yoke_volume_mm3':y.Shape.Volume,'base_valid':b.Shape.isValid(),'tilt_valid':t.Shape.isValid(),'stl_reopened':True,'stl_facets':len(m.Facets),'stl_is_solid':m.isSolid(),'stl_bbox_mm':[m.BoundBox.XMin,m.BoundBox.XMax,m.BoundBox.YMin,m.BoundBox.YMax,m.BoundBox.ZMin,m.BoundBox.ZMax]}
+(R/'DOCUMENTATION'/'R24_REOPEN_VALIDATION.json').write_text(json.dumps(r,indent=2),encoding='utf8'); print(json.dumps(r,indent=2))

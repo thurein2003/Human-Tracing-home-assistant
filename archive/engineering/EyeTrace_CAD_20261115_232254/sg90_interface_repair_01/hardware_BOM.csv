@@ -1,0 +1,13 @@
+Hardware,Quantity,Availability/status,Use
+M3x10 structural screws,14,Stock described; quantity/head size to confirm,"4 pan,4 tilt,4 rail,2 pillar"
+M3 plain nuts,14,Stock described; quantity/dimensions to confirm,Drive/pillar captive pockets and rail joints
+M3x12 idler screw,1,Additional hardware required,Longer than supplied x10 for locking stack
+"M3 nylon-insert locknut,nominal height4",1,Additional hardware required,Idler locking
+"M3 washer,OD7/ID3.3/thickness0.5",1,Additional hardware required,Around right service bore
+M1.6x8 cap screws,4,"Additional hardware, conditional on real ear holes",Never force M3 into servo ears
+"M1.6 nuts,AF3.2/height1.3",4,Additional hardware,Captive ledge nuts
+"M1.6 washers,OD4/ID1.8/thickness0.5",4,Additional hardware,Across original ear slots
+M2x12 screws,4,"Additional hardware, conditional on real PCB holes",Camera four-hole attachment
+"M2 nuts,AF4/height1.6",4,Additional hardware,PCB rails
+Original servo-specific horn screws,2,Availability and size to confirm,"Keep factory screws, thread unspecified"
+Base-to-host fasteners,As needed,External support dependent,Four3.4mm base holes; length depends on host thickness

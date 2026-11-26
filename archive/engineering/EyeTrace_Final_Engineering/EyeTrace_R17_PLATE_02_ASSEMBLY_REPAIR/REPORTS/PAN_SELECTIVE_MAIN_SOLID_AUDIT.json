@@ -1,0 +1,53 @@
+{
+  "full_candidate": {
+    "valid": true,
+    "solids": 3,
+    "volume": 43713.478906407974
+  },
+  "main_component": {
+    "valid": true,
+    "solids": 1,
+    "volume": 43453.58185395115,
+    "bbox": [
+      -58.2,
+      -35.3,
+      33.0,
+      44.0,
+      35.3,
+      103.0
+    ]
+  },
+  "other_islands": [
+    {
+      "vol": 130.81185894260892,
+      "bbox": [
+        -20.006666666666668,
+        -20.006666666666668,
+        32.99999999999999,
+        20.006666666666668,
+        -2.6159862899555453,
+        33.3
+      ]
+    },
+    {
+      "vol": 129.08519351417823,
+      "bbox": [
+        -20.006666666666668,
+        2.615986289955544,
+        32.99999999999999,
+        20.006666666666668,
+        20.00666666666667,
+        33.3
+      ]
+    }
+  ],
+  "R15_void_common": 0.0,
+  "intersections": [
+    {
+      "name": "Pan_OriginalStar_PROVISIONAL",
+      "label": "Pan SG90 four-arm cross horn \u2014 R15 reference; coupon fit user-confirmed",
+      "R16_mm3": 0.0,
+      "candidate_mm3": 251.42451946116003
+    }
+  ]
+}

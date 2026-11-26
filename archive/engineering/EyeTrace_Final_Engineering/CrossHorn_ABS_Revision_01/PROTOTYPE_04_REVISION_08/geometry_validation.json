@@ -1,0 +1,118 @@
+{
+  "solid_valid": true,
+  "solid_count": 1,
+  "mesh_facets": 6260,
+  "mesh_is_solid": true,
+  "bbox_mm": [
+    37.99956333132853,
+    22.99965311561185,
+    4.3
+  ],
+  "solid_volume_mm3": 1005.8352997826919,
+  "center_geometry": {
+    "front_diameter_mm": 7.4,
+    "front_depth_mm": 3.2,
+    "front_reference_surface_z_mm": 4.3,
+    "front_floor_z_mm": 1.0999999999999996,
+    "back_diameter_mm": 5.5,
+    "back_depth_mm": 0.3,
+    "back_floor_z_mm": 0.3,
+    "center_web_mm": 0.7999999999999996,
+    "pad_rise_mm": 0.5,
+    "pad_diameter_mm": 10.2,
+    "screw_access_diameter_mm": 4.5,
+    "arm_reaches_mm": {
+      "x_minus_pocket": 17.6,
+      "x_plus_pocket": 17.6,
+      "y_plus_pocket": 10.1,
+      "y_minus_pocket": 10.1
+    },
+    "parametric_edit_tests": [
+      {
+        "property": "FrontDepth",
+        "test_value_mm": 3.1,
+        "tool_height_after_edit_mm": 3.1,
+        "volume_before_mm3": 1005.8352997826919,
+        "volume_edited_mm3": 1008.5457088445761,
+        "abs_volume_change_mm3": 2.7104090618842065,
+        "restored_value_mm": 3.2
+      },
+      {
+        "property": "BackDepth",
+        "test_value_mm": 0.5,
+        "tool_height_after_edit_mm": 0.5,
+        "volume_before_mm3": 1005.8352997826919,
+        "volume_edited_mm3": 1004.2645034558965,
+        "abs_volume_change_mm3": 1.5707963267954028,
+        "restored_value_mm": 0.3
+      }
+    ]
+  },
+  "parametric_recompute_verified": true,
+  "single_coupon": true,
+  "parameters": {
+    "units": "mm",
+    "confirmed_user_dimensions": {
+      "long_span": 35.0,
+      "short_span_baseline": 18.0,
+      "hub_diameter": 7.0
+    },
+    "published_horn3_reference": {
+      "source": "https://www.auselectronicsdirect.com.au/assets/brochures/TA0132.pdf, page 5",
+      "drawing_span": 34.5,
+      "hub_to_long_end_a": 16.0,
+      "hub_to_long_end_b": 18.5,
+      "short_span_drawing": 16.3,
+      "raised_hub_diameter_drawing": 6.9,
+      "raised_hub_height_drawing": 2.5,
+      "main_plate_thickness_drawing": 1.5,
+      "long_arm_side_angle_a_deg": 6.3,
+      "long_arm_side_angle_b_deg": 8.0,
+      "confidence": "Published dimensions/profile for a similar Horn #3; actual clone compatibility unverified"
+    },
+    "pocket_parameters_provisional_mm": {
+      "total_lateral_clearance": 0.2,
+      "long_root_width_reference_estimate": 7.0,
+      "short_arm_width_reference_estimate": 3.2,
+      "short_extension_each_end_from_prototype_01": 1.0,
+      "hub_recess_diameter": 7.4,
+      "hub_recess_depth": 3.2,
+      "back_hub_recess_diameter": 5.5,
+      "back_hub_recess_depth": 0.3,
+      "minimum_center_web": 0.8,
+      "local_center_thickness_increase": 0.5,
+      "local_center_pad_diameter": 10.2,
+      "screw_access_diameter": 4.5,
+      "arm_recess_depth": 1.7,
+      "outer_margin": 1.4,
+      "base_thickness": 3.8
+    },
+    "design_interpretations": {
+      "hub_offset_from_geometric_span_center_x": 0.0,
+      "long_taper_angles_treated_as_total_width_convergence_angles": true,
+      "revision_06_x_arms_equal_user_override": true,
+      "revision_06_taper_angle_deg": 7.15,
+      "unmeasured_arm_widths_are_raster/profile_estimates_only": true,
+      "screw_access_not_horn_spline_geometry": true
+    },
+    "printing": {
+      "material": "ABS",
+      "layer_height_mm": 0.2,
+      "walls": 2,
+      "infill_percent": 0,
+      "supports": false,
+      "brim_mm": 4,
+      "orientation": "flat base on bed, pocket upward",
+      "nozzle_C": 255,
+      "bed_C": 100
+    }
+  },
+  "freecad_expressions": {
+    "FrontTool.Height": "Parameters.FrontDepth",
+    "FrontTool.Radius": "Parameters.FrontDiameter / 2",
+    "FrontTool.Placement.Base.z": "Parameters.BaseThickness + Parameters.CenterPadRise - Parameters.FrontDepth",
+    "BackTool.Height": "Parameters.BackDepth",
+    "BackTool.Radius": "Parameters.BackDiameter / 2",
+    "CalculatedCenterWeb": "BaseThickness + CenterPadRise - FrontDepth - BackDepth"
+  }
+}

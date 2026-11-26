@@ -1,0 +1,10 @@
+﻿Pair,Interface,Region,Criterion,Measured gap/height mm,Uncertainty mm,Photo,Result
+1,Camera plate,All solid plate footprint,h+u <=spacer length-0.50mm; no hidden clearance inferred,,,,UNVERIFIED
+2,Spacer Lower Left,OD5mm annular footprint,"Safe flat pad, >=0.50mm component gap",,,,UNVERIFIED
+3,M2 fastener Lower Left,Complete head/shank/nut/tip envelope,>=0.50mm component gap; free hole; full nut and >=1mm projection,,,,UNVERIFIED
+4,Spacer Lower Right,OD5mm annular footprint,"Safe flat pad, >=0.50mm component gap",,,,UNVERIFIED
+5,M2 fastener Lower Right,Complete head/shank/nut/tip envelope,>=0.50mm component gap; free hole; full nut and >=1mm projection,,,,UNVERIFIED
+6,Spacer Upper Left,OD5mm annular footprint,"Safe flat pad, >=0.50mm component gap",,,,UNVERIFIED
+7,M2 fastener Upper Left,Complete head/shank/nut/tip envelope,>=0.50mm component gap; free hole; full nut and >=1mm projection,,,,UNVERIFIED
+8,Spacer Upper Right,OD5mm annular footprint,"Safe flat pad, >=0.50mm component gap",,,,UNVERIFIED
+9,M2 fastener Upper Right,Complete head/shank/nut/tip envelope,>=0.50mm component gap; free hole; full nut and >=1mm projection,,,,UNVERIFIED

@@ -1,0 +1,27 @@
+﻿import FreeCAD as A,FreeCADGui as G,Mesh,Part,os,json,traceback
+from FreeCAD import Vector as V
+from PySide import QtCore,QtWidgets
+R=r'EyeTrace_CAD_20261115_232254\production_candidate_01'
+def run():
+ try:
+  d=A.openDocument(os.path.join(R,'EyeTrace_Assembly.FCStd'));v=G.activeDocument().activeView()
+  names=['Base','PanServoRetainer','TiltServoRetainer','PanYoke','TiltCameraCradle','PanHornClamp','TiltHornClamp']
+  for o in d.Objects:
+   if hasattr(o,'Shape'):o.Visibility=True
+  def shot(n):
+   v.fitAll();G.updateGui();v.saveImage(os.path.join(R,'renders',n+'.png'),1600,1200,'White')
+  v.viewAxonometric();shot('assembled_opaque')
+  for n in names:d.getObject(n).ViewObject.Transparency=78
+  shot('assembled_transparent_all_hardware')
+  v.viewRear();shot('assembled_rear_transparent')
+  v.viewAxonometric()
+  for name,p,q,col in [('PanAxis',V(0,0,0),V(0,0,115),(0.1,0.65,0.1)),('TiltAxis',V(-85,0,78),V(55,0,78),(0.9,0.15,0.1))]:
+   o=d.addObject('PartDesign::Feature',name);o.Shape=Part.makeLine(p,q);o.ViewObject.LineColor=col;o.ViewObject.LineWidth=4
+  shot('pivot_axes')
+  b=A.newDocument('CouponBedReview');o=b.addObject('Mesh::Feature','EightCoupons');o.Mesh=Mesh.Mesh(os.path.join(R,'coupons','coupon_bed.stl'));o.ViewObject.ShapeColor=(0.15,0.5,0.7);b.recompute();v=G.activeDocument().activeView();v.viewAxonometric();shot('coupon_bed');b.saveAs(os.path.join(R,'coupons','FitCoupons_Layout.FCStd'))
+  json.dump({'native_source':'EyeTrace_Assembly.FCStd','printed_visible':names,'hardware_visible':['PanServo_ASSUMED','TiltServo_ASSUMED','PanStarHorn_ASSUMED','TiltStarHorn_ASSUMED','Camera_ASSUMED_38x38x30'],'renderer':'FreeCAD 1.1.4 Coin3D','views':5},open(os.path.join(R,'renders','status.json'),'w'),indent=2)
+ except Exception:open(os.path.join(R,'renders','error.txt'),'w').write(traceback.format_exc())
+ finally:
+  for dn in list(A.listDocuments()):A.closeDocument(dn)
+  QtCore.QTimer.singleShot(1000,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1200,run)

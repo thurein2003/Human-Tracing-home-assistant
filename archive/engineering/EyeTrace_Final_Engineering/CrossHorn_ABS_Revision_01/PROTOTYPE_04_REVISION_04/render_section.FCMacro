@@ -1,0 +1,22 @@
+﻿import json
+from pathlib import Path
+import FreeCAD as App, Part
+from FreeCAD import Vector as V
+out=Path(r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_04')
+d=App.openDocument(str(out/'CrossHorn_UltraMinimal_FitTest_04R04.FCStd'))
+base=d.getObject('Horn3CrossFitCoupon'); assert base and base.Shape.isValid()
+sec=base.Shape.copy(); sec.rotate(V(0,0,0),V(0,0,1),-45)
+bb=sec.BoundBox
+clip=Part.makeBox(bb.XLength+2,bb.YMax+2,bb.ZLength+2,V(bb.XMin-1,0,bb.ZMin-1))
+section=sec.common(clip).removeSplitter(); section.rotate(V(0,0,0),V(0,0,1),45)
+assert section.isValid() and len(section.Solids)==1
+for o in d.Objects:
+    if hasattr(o,'ViewObject'): o.ViewObject.Visibility=False
+cut=d.addObject('PartDesign::Feature','SectionPreview'); cut.Label='45-degree center section for recessed depth verification'; cut.Shape=section
+cut.ViewObject.ShapeColor=(0.84,0.86,0.90); cut.ViewObject.LineColor=(0.08,0.10,0.14)
+d.recompute(); Gui.activeDocument().activeView().viewAxonometric(); Gui.activeDocument().activeView().fitAll(); Gui.activeDocument().activeView().saveImage(str(out/'CrossHorn_UltraMinimal_FitTest_04R04_Section_CAD.png'),1800,1200,'Current')
+r={'valid':section.isValid(),'solid_count':len(section.Solids),'bbox_mm':[section.BoundBox.XLength,section.BoundBox.YLength,section.BoundBox.ZLength],'section_plane':'45 degrees through the two coaxial recesses'}
+(out/'section_validation.json').write_text(json.dumps(r,indent=2),encoding='utf-8'); print(json.dumps(r))
+App.closeDocument(d.Name)
+try: Gui.getMainWindow().close()
+except: pass

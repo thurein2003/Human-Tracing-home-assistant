@@ -1,0 +1,22 @@
+[
+  {
+    "manifest": "manifest.sha256",
+    "entries_checked": 169,
+    "changed": []
+  },
+  {
+    "manifest": "production_candidate_01\\manifest.sha256",
+    "entries_checked": 54,
+    "changed": []
+  },
+  {
+    "manifest": "sg90_interface_audit_01\\manifest.sha256",
+    "entries_checked": 14,
+    "changed": []
+  },
+  {
+    "manifest": "sg90_reference_revision_02\\manifest.sha256",
+    "entries_checked": 31,
+    "changed": []
+  }
+]

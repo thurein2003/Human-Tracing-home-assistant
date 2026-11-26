@@ -1,0 +1,18 @@
+{
+  "CAD\\EyeTrace_R17_DriveSupport_Audit_HOLD.FCStd": "6478270e7489880b4334a943e9ed04091cfa5233ca26e9786d9e25c240401092",
+  "STL\\Base_EarMount_ThrustSupport.stl": "9f6b948516d93d1213205ccf7077e7b8995fc8875bed4fe9d314986df2fb545d",
+  "STL\\CameraPlate_21x14.stl": "5052c5fd996cfc568f0e0d11654368c06f59a363ca68fea71f93ce408aadc5d2",
+  "STL\\Pan_KeyedHorn_Cover.stl": "5e4d6231f29dbfa501f938abcc69e022a99cb684ccdc55e5280989c995903b2b",
+  "STL\\Pan_Replaceable_ThrustRing.stl": "e66a106c07a669fc0e235125ec8bc52406194a77712ea63074d2b1d46e0d5558",
+  "STL\\PanYoke_EarBracket_KeyedDrive.stl": "4caeae1234234ba1d1cd7f6818228a9d1dbbf46b1a57d100a6a9dc5f1def450c",
+  "STL\\PCB_Spacer_Lower_Left.stl": "2dd73533b3920f7bcb2c6150a2e441fcf35907908db2dc226dd18cd3101a0bf0",
+  "STL\\PCB_Spacer_Lower_Right.stl": "2dd73533b3920f7bcb2c6150a2e441fcf35907908db2dc226dd18cd3101a0bf0",
+  "STL\\PCB_Spacer_Upper_Left.stl": "6e4580368135f64265c83d1ad6dc09c0a28de545b08c633076300758772125ac",
+  "STL\\PCB_Spacer_Upper_Right.stl": "6e4580368135f64265c83d1ad6dc09c0a28de545b08c633076300758772125ac",
+  "STL\\Tilt_Journal_FlangedSleeve.stl": "e4040192778e041a5e04b3997e2c1a9068916787b41af768ed5278fd238f8561",
+  "STL\\Tilt_KeyedHorn_CaptiveCover.stl": "502ebffcaf869dd9ab17f163a436d0db2ed3cbbef8ed21a1fc14750c7e9573e9",
+  "STL\\Tilt_Removable_IdlerPillar.stl": "cf521eeb90df0d04c90ffe316cfc91a97f049735a42614a1ed1d796f1b59ad41",
+  "STL\\TiltCradle_KeyedHorn_CameraFrame.stl": "54c753fa1aa169122053e9fe801019593ac2924ac381e30ac7dbce7686188fe4",
+  "PRINT\\Plate_01_ABS_HOLD.3mf": "2904ddcdd6430f8754e6fc5a94206ff7af90e5d8e34cdc532e9c3c9a8a4bb8d8",
+  "PRINT\\Plate_02_ABS_HOLD.3mf": "e6292c4658bb4d40f2e4537b7904d08e796540ed2a1bc14de5311d9387aba0fc"
+}

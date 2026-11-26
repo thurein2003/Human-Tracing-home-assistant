@@ -1,0 +1,72 @@
+{
+  "source_cover_vol": 3022.4785340715316,
+  "candidate_volume": 1312.9654957542546,
+  "saved_volume": 1709.513038317277,
+  "valid": true,
+  "solids": 4,
+  "bbox": [
+    -24.0,
+    24.0,
+    -24.0,
+    24.0,
+    30.8,
+    35.0
+  ],
+  "sections": {
+    "(18, 0)": [],
+    "(-18, 0)": [],
+    "(0, 18)": [],
+    "(0, -18)": [],
+    "(10, 0)": [
+      [
+        33.5,
+        35.0
+      ]
+    ],
+    "(0, 8.5)": [
+      [
+        33.5,
+        35.0
+      ]
+    ],
+    "(0, 11.5)": [
+      [
+        33.5,
+        35.0
+      ]
+    ],
+    "(23.5, 0)": [
+      [
+        33.5,
+        35.0
+      ]
+    ]
+  },
+  "pairs": {
+    "PanYoke_EarBracket_KeyedDrive": {
+      "intersection": 0.0,
+      "distance": 0.19999999999999574
+    },
+    "Pan_OriginalStar_PROVISIONAL": {
+      "intersection": 0.0,
+      "distance": 0.0
+    },
+    "PanDrive_M3x10_0": {
+      "intersection": 0.0,
+      "distance": 0.0
+    },
+    "PanDrive_M3x10_1": {
+      "intersection": 0.0,
+      "distance": 0.0
+    },
+    "PanDrive_M3x10_2": {
+      "intersection": 0.0,
+      "distance": 0.0
+    },
+    "PanDrive_M3x10_3": {
+      "intersection": 0.0,
+      "distance": 0.0
+    }
+  },
+  "yoke_gap": 0.19999999999999574
+}

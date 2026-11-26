@@ -1,0 +1,56 @@
+{
+  "tab_alignment": {
+    "PanServo_SG90_Reference": {
+      "ear_hole_centers": [
+        [
+          -8.15,
+          0.0
+        ],
+        [
+          19.05,
+          0.0
+        ]
+      ],
+      "bolt_axes_match": true,
+      "reference_hole_diameter": 2,
+      "selected_bolt_diameter": 1.6,
+      "physical_clone_fit": "UNVERIFIED"
+    },
+    "TiltServo_SG90_Reference": {
+      "ear_hole_centers": [
+        [
+          0.0,
+          58.95
+        ],
+        [
+          0.0,
+          86.15
+        ]
+      ],
+      "bolt_axes_match": true,
+      "reference_hole_diameter": 2,
+      "selected_bolt_diameter": 1.6,
+      "physical_clone_fit": "UNVERIFIED"
+    }
+  },
+  "idler_axes_YZ_mm": {
+    "Tilt_Removable_IdlerPillar": [
+      [
+        0.0,
+        78.0
+      ]
+    ],
+    "TiltCradle_KeyedHorn_CameraFrame": [
+      [
+        0.0,
+        78.0
+      ]
+    ],
+    "Tilt_Journal_FlangedSleeve": [
+      [
+        0.0,
+        78.0
+      ]
+    ]
+  }
+}

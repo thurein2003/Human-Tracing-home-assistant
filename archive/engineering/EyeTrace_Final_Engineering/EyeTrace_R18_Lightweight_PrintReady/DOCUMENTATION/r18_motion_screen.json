@@ -1,0 +1,81 @@
+{
+  "source": "EyeTrace_Final_Engineering\\EyeTrace_R18_Lightweight_PrintReady\\CAD\\EyeTrace_R18.FCStd",
+  "axes": {
+    "pan": {
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "sampled_deg": [
+        -90,
+        90,
+        5
+      ]
+    },
+    "tilt": {
+      "point": [
+        -46,
+        0,
+        78
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "sampled_deg": [
+        -45,
+        45,
+        5
+      ]
+    }
+  },
+  "pan": {
+    "states": 37,
+    "exact_checks": 812,
+    "positive_pairs": [
+      {
+        "moving": "Pan_OriginalStar_PROVISIONAL",
+        "fixed": "PanServo_SG90_Reference",
+        "max_mm3": 73.2635,
+        "classification": "modeled engagement/contact"
+      }
+    ]
+  },
+  "tilt": {
+    "states": 19,
+    "exact_checks": 487,
+    "positive_pairs": [
+      {
+        "moving": "Tilt_OriginalStar_PROVISIONAL",
+        "fixed": "TiltServo_SG90_Reference",
+        "max_mm3": 73.2635,
+        "classification": "modeled engagement/contact"
+      }
+    ]
+  },
+  "simultaneous": {
+    "states": 49,
+    "exact_checks": 0,
+    "positive_pairs": []
+  },
+  "excluded_unplaced_provisional_camera_hardware": [
+    "Camera_M2x12_*",
+    "Camera_Lens_PROVISIONAL",
+    "camera/servo cable keepouts"
+  ],
+  "missing_objects": [],
+  "known_static_tilt_horn_screw_intersections_mm3": [
+    10.603,
+    10.603
+  ],
+  "known_pan_horn_carrier_overlap_mm3": 5.655,
+  "travel_limits_defined": false,
+  "caveat": "Exploratory discrete screening, not validated mechanical limits; overlaps involving simplified horn proxies are unverified hardware engagement."
+}

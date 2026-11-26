@@ -1,0 +1,53 @@
+{
+  "source_assembly": "EyeTrace_R25_PanYoke_BottomMount.FCStd",
+  "source_sha256": "bdf1be576a46742fa4ef6971ffb967ab874bd68432db132ecd66d7747d311963",
+  "frame_component": "TiltCradle_KeyedHorn_CameraFrame",
+  "shape_count": 1,
+  "difference_vs_R23_frame_mm3": 0.0,
+  "solid_volume_mm3": 24742.034516702675,
+  "print_rotation_deg_about_y": -90,
+  "stl_facets": 14572,
+  "stl_mesh_solid": true,
+  "stl_components": 1,
+  "matched_reference": "EyeTrace_R23_UnifiedBottomBlock\\SCREENSHOTS\\R23_CrealityPrint_Import.png",
+  "matched_object": "The single upright tall frame in the upper-right of the saved Creality plate.",
+  "integral_geometry": [
+    "Top plate with central bore",
+    "Uprights and rectangular frame opening",
+    "Bottom mounting plate",
+    "Circular drive interface"
+  ],
+  "reference_mesh_spans_mm": [
+    45.0,
+    45.39951,
+    77.0
+  ],
+  "exported_mesh_spans_mm": [
+    45.0,
+    45.4,
+    77.0
+  ],
+  "stl_sha256": "a7e67de16b524d32ad4e0e08efe20e4d8242dc9818972cd3f6abaf4b0dcdf5c4",
+  "3mf_sha256": "2f86f3636c4fe6ec147577e2d6ea1c274467168a8fbe08c5d44c37421e68dc36",
+  "build_items": 1,
+  "printable_solid_count": 1,
+  "nonmanifold_edges": 0,
+  "3mf_mesh_equals_stl": true,
+  "archive_crc_verified": true,
+  "build_plate_mm": [
+    260,
+    260
+  ],
+  "print_bounding_box_xy_mm": [
+    107.5,
+    107.29999923706055,
+    152.5,
+    152.70000076293945
+  ],
+  "print_center_xy_mm": [
+    130,
+    130
+  ],
+  "plate_01_exported": false,
+  "project_state": "Unsliced"
+}

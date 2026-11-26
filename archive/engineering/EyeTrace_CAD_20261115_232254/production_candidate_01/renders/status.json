@@ -1,0 +1,21 @@
+{
+  "native_source": "EyeTrace_Assembly.FCStd",
+  "printed_visible": [
+    "Base",
+    "PanServoRetainer",
+    "TiltServoRetainer",
+    "PanYoke",
+    "TiltCameraCradle",
+    "PanHornClamp",
+    "TiltHornClamp"
+  ],
+  "hardware_visible": [
+    "PanServo_ASSUMED",
+    "TiltServo_ASSUMED",
+    "PanStarHorn_ASSUMED",
+    "TiltStarHorn_ASSUMED",
+    "Camera_ASSUMED_38x38x30"
+  ],
+  "renderer": "FreeCAD 1.1.4 Coin3D",
+  "views": 5
+}

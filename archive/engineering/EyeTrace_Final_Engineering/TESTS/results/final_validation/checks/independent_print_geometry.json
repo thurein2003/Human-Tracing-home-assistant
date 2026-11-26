@@ -1,0 +1,119 @@
+{
+  "Base_EarMount_ThrustSupport": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "Pan_Replaceable_ThrustRing": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "PanYoke_EarBracket_KeyedDrive": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "Tilt_Removable_IdlerPillar": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "Pan_KeyedHorn_Cover": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "TiltCradle_KeyedHorn_CameraFrame": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "Tilt_KeyedHorn_CaptiveCover": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "Tilt_Journal_FlangedSleeve": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "PCB_Spacer_Lower_Left": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "PCB_Spacer_Lower_Right": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "PCB_Spacer_Upper_Left": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "PCB_Spacer_Upper_Right": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  },
+  "CameraPlate_Cut007": {
+    "brep_valid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "mesh_components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "inconsistent_normals": false
+  }
+}

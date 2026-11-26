@@ -1,0 +1,441 @@
+{
+  "source_FCStd": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15\\CAD\\EyeTrace_Final_Assembly_R15.FCStd",
+  "component_count": 48,
+  "printable_count": 13,
+  "components": [
+    {
+      "name": "Base_EarMount_ThrustSupport",
+      "label": "Stationary base / pan-servo support",
+      "printable": true,
+      "kinematic_group": "fixed",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Pan_Replaceable_ThrustRing",
+      "label": "Stationary pan thrust surface",
+      "printable": true,
+      "kinematic_group": "fixed",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanServo_SG90_Reference",
+      "label": "Pan SG90 reference ? dimensions provisional",
+      "printable": false,
+      "kinematic_group": "fixed",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltServo_SG90_Reference",
+      "label": "Tilt SG90 reference ? dimensions provisional",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Pan_OriginalStar_PROVISIONAL",
+      "label": "Pan white four-arm horn reference ? profile provisional",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Tilt_OriginalStar_PROVISIONAL",
+      "label": "Tilt white four-arm horn reference ? profile provisional",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanOriginalScrew_PROVISIONAL",
+      "label": "PanOriginalScrew_PROVISIONAL",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltOriginalScrew_PROVISIONAL",
+      "label": "TiltOriginalScrew_PROVISIONAL",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "label": "Rotating pan yoke and pan horn pocket",
+      "printable": true,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar",
+      "label": "Opposite-side tilt pivot support",
+      "printable": true,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "IdlerPillar_M3x10_0",
+      "label": "IdlerPillar_M3x10_0",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "IdlerPillar_M3x10_1",
+      "label": "IdlerPillar_M3x10_1",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Pan_KeyedHorn_Cover",
+      "label": "Pan horn retainer cover",
+      "printable": true,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanDrive_M3x10_0",
+      "label": "PanDrive_M3x10_0",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanDrive_M3x10_1",
+      "label": "PanDrive_M3x10_1",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanDrive_M3x10_2",
+      "label": "PanDrive_M3x10_2",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanDrive_M3x10_3",
+      "label": "PanDrive_M3x10_3",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "label": "Moving tilt cradle and camera frame",
+      "printable": true,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Tilt_KeyedHorn_CaptiveCover",
+      "label": "Tilt horn retainer cover",
+      "printable": true,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltDrive_M3x10_0",
+      "label": "TiltDrive_M3x10_0",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltDrive_M3x10_1",
+      "label": "TiltDrive_M3x10_1",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltDrive_M3x10_2",
+      "label": "TiltDrive_M3x10_2",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltDrive_M3x10_3",
+      "label": "TiltDrive_M3x10_3",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Tilt_Journal_FlangedSleeve",
+      "label": "Opposite-side tilt journal sleeve",
+      "printable": true,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltIdler_M3x12",
+      "label": "TiltIdler_M3x12",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltIdler_M3_Washer",
+      "label": "TiltIdler_M3_Washer",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanEar_M1p6x8_0",
+      "label": "PanEar_M1p6x8_0",
+      "printable": false,
+      "kinematic_group": "fixed",
+      "valid": true,
+      "solids": 3,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanEar_M1p6x8_1",
+      "label": "PanEar_M1p6x8_1",
+      "printable": false,
+      "kinematic_group": "fixed",
+      "valid": true,
+      "solids": 3,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltEar_M1p6x8_0",
+      "label": "TiltEar_M1p6x8_0",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 3,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltEar_M1p6x8_1",
+      "label": "TiltEar_M1p6x8_1",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 3,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "RailMount_Lower_M3x10_0",
+      "label": "CameraPlateMount_Lower_M3x10_0",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "RailMount_Lower_M3x10_1",
+      "label": "CameraPlateMount_Lower_M3x10_1",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left",
+      "label": "Camera lower-left spacer",
+      "printable": true,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Camera_M2x12_Lower_Left",
+      "label": "Camera M2x12 provisional screw/nut",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right",
+      "label": "Camera lower-right spacer",
+      "printable": true,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Camera_M2x12_Lower_Right",
+      "label": "Camera M2x12 provisional screw/nut001",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "RailMount_Upper_M3x10_0",
+      "label": "CameraPlateMount_Upper_M3x10_0",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "RailMount_Upper_M3x10_1",
+      "label": "CameraPlateMount_Upper_M3x10_1",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left",
+      "label": "Camera upper-left spacer",
+      "printable": true,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Camera_M2x12_Upper_Left",
+      "label": "Camera M2x12 provisional screw/nut002",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right",
+      "label": "Camera upper-right spacer",
+      "printable": true,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Camera_M2x12_Upper_Right",
+      "label": "Camera M2x12 provisional screw/nut003",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 2,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "PanServo_WireExit_KEEP_OUT",
+      "label": "PanServo_WireExit_KEEP_OUT",
+      "printable": false,
+      "kinematic_group": "fixed",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "TiltServo_WireExit_KEEP_OUT",
+      "label": "TiltServo_WireExit_KEEP_OUT",
+      "printable": false,
+      "kinematic_group": "pan",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "CameraPlate_Cut007",
+      "label": "Camera mounting plate ? 21 x 14 mm hole centers",
+      "printable": true,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Camera_Lens_PROVISIONAL",
+      "label": "Lens envelope ? provisional dimensions",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Camera_WireExit_KEEP_OUT",
+      "label": "Ribbon/cable routing envelope ? not physical cable",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    },
+    {
+      "name": "Camera_RearComponents_KEEP_OUT",
+      "label": "Rear camera uncertainty envelope ? not hardware",
+      "printable": false,
+      "kinematic_group": "tilt",
+      "valid": true,
+      "solids": 1,
+      "source_shape_placement_reset_to_identity": true
+    }
+  ],
+  "geometry_modified": false,
+  "placements": "All source BREP shapes retained as-is; duplicate non-identity source object placements are not reapplied."
+}

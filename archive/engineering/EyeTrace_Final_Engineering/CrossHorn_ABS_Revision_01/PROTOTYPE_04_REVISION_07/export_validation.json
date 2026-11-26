@@ -1,0 +1,15 @@
+{
+  "fcstd_reopen_valid": true,
+  "solid_count": 1,
+  "stl_facets": 6260,
+  "stl_watertight": true,
+  "3mf_crc_valid": true,
+  "3mf_objects": 1,
+  "3mf_triangles": 6260,
+  "center_web_mm": 0.7999999999999996,
+  "bbox_mm": [
+    38.0,
+    23.0,
+    4.8
+  ]
+}

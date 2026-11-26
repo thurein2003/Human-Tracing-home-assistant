@@ -1,0 +1,17 @@
+﻿import FreeCAD as A, FreeCADGui as G, os, traceback, time
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+log=p+r'\RENDERS\render_debug.txt'
+try:
+ d=A.openDocument(p+r'\CAD\EyeTrace_R17_HornCleanup_Assembly.FCStd')
+ with open(log,'w') as f:f.write('opened '+d.Name+'\n')
+ for o in d.Objects:
+  try:o.Visibility=False
+  except:pass
+ o=d.getObject('PanYoke_EarBracket_KeyedDrive');o.Visibility=True
+ v=G.activeDocument().activeView()
+ v.viewAxonometric();v.fitAll();G.updateGui();time.sleep(2)
+ v.saveImage(p+r'\RENDERS\DEBUG_PAN.png','Current',1600,1200)
+ with open(log,'a') as f:f.write('saved image\n')
+except:
+ with open(log,'a') as f:f.write(traceback.format_exc())
+

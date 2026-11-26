@@ -1,0 +1,94 @@
+{
+  "revision": "R21_SinglePanMountPlate",
+  "modified_only": "Pan_KeyedHorn_Cover",
+  "function": "Removable horn retainer/support; changed from broad lower cover into a connected skeletal retainer.",
+  "source_cover": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 3022.4785340715316,
+    "bbox_mm": [
+      -24.0,
+      24.0,
+      -24.0,
+      24.0,
+      30.8,
+      35.0
+    ]
+  },
+  "revised_retainer": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 1271.1108327978768,
+    "bbox_mm": [
+      -23.8,
+      23.8,
+      -23.8,
+      23.8,
+      30.8,
+      35.0
+    ],
+    "removed_volume_mm3": 1751.3677012736548,
+    "removed_percent": 57.944752345831084
+  },
+  "yoke_geometry_symmetric_difference_volume_mm3": 0.0,
+  "yoke_retainer": {
+    "intersection_mm3": 0.0,
+    "distance_mm": 0.19999999999999574
+  },
+  "horn_retainer": {
+    "intersection_mm3": 0.0,
+    "distance_mm": 0.0
+  },
+  "screw_clearance_checks": [
+    {
+      "center_mm": [
+        18,
+        0
+      ],
+      "clearance_test_cylinder_intersection_mm3": 0.0
+    },
+    {
+      "center_mm": [
+        -18,
+        0
+      ],
+      "clearance_test_cylinder_intersection_mm3": 0.0
+    },
+    {
+      "center_mm": [
+        0,
+        18
+      ],
+      "clearance_test_cylinder_intersection_mm3": 0.0
+    },
+    {
+      "center_mm": [
+        0,
+        -18
+      ],
+      "clearance_test_cylinder_intersection_mm3": 0.0
+    }
+  ],
+  "frame_parameters_mm": {
+    "radial_arm_width": 4.6,
+    "annular_bridge_inner_diameter": 8.2,
+    "annular_bridge_outer_diameter": 10.4,
+    "screw_pad_radius": 5.8
+  },
+  "note": "Only the lower removable retainer shape changed; it is clipped to the original retainer BREP. Main yoke, servo positions, shaft axis, circular mount and all other components are retained. Proxy/hardware physical fit remains unverified.",
+  "mesh_facets": 8362,
+  "mesh_is_solid": true,
+  "mesh_bbox_mm": [
+    -23.798845291137695,
+    23.799999237060547,
+    -23.799224853515625,
+    23.799224853515625,
+    0.0,
+    4.199999809265137
+  ],
+  "files": {
+    "assembly_fcstd": "EyeTrace_Final_Engineering\\EyeTrace_R21_SinglePanMountPlate\\CAD\\EyeTrace_R21_SinglePanMountPlate.FCStd",
+    "retainer_step": "EyeTrace_Final_Engineering\\EyeTrace_R21_SinglePanMountPlate\\CAD\\Pan_KeyedHorn_Cover_R21_OpenFrame.step",
+    "retainer_stl": "EyeTrace_Final_Engineering\\EyeTrace_R21_SinglePanMountPlate\\STL\\Pan_KeyedHorn_Cover_R21_OpenFrame.stl"
+  }
+}

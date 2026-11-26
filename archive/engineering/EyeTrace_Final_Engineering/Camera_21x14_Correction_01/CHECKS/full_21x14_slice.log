@@ -1,0 +1,504 @@
+cli mode, Current CrealityPrint Version 7.3.1.6378
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=ARCHIVE_PREAMBLE END elapsed_ms=0.2345 entries=6
+[UUID-Debug] ModelObject created: id=101, uuid=
+[UUID-Debug] ModelObject created: id=102, uuid=
+[UUID-Debug] ModelObject created: id=103, uuid=
+[UUID-Debug] ModelObject created: id=104, uuid=
+[UUID-Debug] ModelObject created: id=105, uuid=
+[UUID-Debug] ModelObject created: id=106, uuid=
+[UUID-Debug] ModelObject created: id=107, uuid=
+[UUID-Debug] ModelObject created: id=108, uuid=
+[UUID-Debug] ModelObject created: id=109, uuid=
+[UUID-Debug] ModelObject created: id=110, uuid=
+[UUID-Debug] ModelObject created: id=111, uuid=
+[UUID-Debug] ModelObject created: id=112, uuid=
+[UUID-Debug] ModelObject created: id=113, uuid=
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=MODEL_XML_PARSE END elapsed_ms=38.8379 parsed_objects=26
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=ARCHIVE_METADATA END elapsed_ms=27.9416 entries=6
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=1
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=2
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=3
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=4
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=5
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=6
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=7
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=8
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=9
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=10
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=11
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=12
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=13
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=MODEL_ASSEMBLY END elapsed_ms=25.7241 objects=13
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=MODEL_POSTPROCESS END elapsed_ms=0.0469
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=PLATE_DATA END elapsed_ms=0.015 plates=1
+[MODEL_IMPORT_TIMING] level=2 parent=FORMAT_LOAD stage=BBS_3MF_IMPORT_TOTAL END elapsed_ms=92.8732 objects=13 plates=1
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Slic3r::PresetBundle::load_vendor_configs_from_json::<lambda_6fd30a224d33e347c7ed0d6e70632157>::operator (): The config D:\Creality Print 7.2\resources\profiles/Creality/machine/Creality K3.json contains incorrect keys: wait_for_temperature_after_toolchange, which were removed
+PresetConfigCache: vendor=Creality, hits=0, misses=1989
+[PresetBundle] Mixed filament logic: to_delete_filament_id=1, num_filaments=1, old_num_filaments_override=0, is_deletion=false
+MF_REMAP details: Remap[]
+MF_REMAP preset_bundle old_physical=0 new_physical=1 deleting=0 deleted_id=0 old_mixed_enabled=0 new_mixed_enabled=0 stable_id_hits=0 fallback_pair_hits=0 missing_hits=0 remap_size=0
+no filament colors found in projects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+[SLICE_PREFLIGHT_TIMING] stage=USED_EXTRUDERS_COLOR_SETUP elapsed_ms=0.2684
+[SLICE_PREFLIGHT_TIMING] stage=USED_EXTRUDERS_NORMALIZE elapsed_ms=0.2033
+Model::clear_objects() - Clearing 0 objects
+ModelObject::clear_volumes called: object_name=Base_EarMount_ThrustSupport, volumes_to_delete=0, object_id=5
+ModelObject::clear_instances called: object_name=Base_EarMount_ThrustSupport, instances_to_delete=0, object_id=5
+ModelObject::clear_volumes called: object_name=Pan_Replaceable_ThrustRing, volumes_to_delete=0, object_id=9
+ModelObject::clear_instances called: object_name=Pan_Replaceable_ThrustRing, instances_to_delete=0, object_id=9
+ModelObject::clear_volumes called: object_name=PanYoke_EarBracket_KeyedDrive, volumes_to_delete=0, object_id=13
+ModelObject::clear_instances called: object_name=PanYoke_EarBracket_KeyedDrive, instances_to_delete=0, object_id=13
+ModelObject::clear_volumes called: object_name=Tilt_Removable_IdlerPillar, volumes_to_delete=0, object_id=17
+ModelObject::clear_instances called: object_name=Tilt_Removable_IdlerPillar, instances_to_delete=0, object_id=17
+ModelObject::clear_volumes called: object_name=Pan_KeyedHorn_Cover, volumes_to_delete=0, object_id=21
+ModelObject::clear_instances called: object_name=Pan_KeyedHorn_Cover, instances_to_delete=0, object_id=21
+ModelObject::clear_volumes called: object_name=TiltCradle_KeyedHorn_CameraFrame, volumes_to_delete=0, object_id=25
+ModelObject::clear_instances called: object_name=TiltCradle_KeyedHorn_CameraFrame, instances_to_delete=0, object_id=25
+ModelObject::clear_volumes called: object_name=Tilt_KeyedHorn_CaptiveCover, volumes_to_delete=0, object_id=29
+ModelObject::clear_instances called: object_name=Tilt_KeyedHorn_CaptiveCover, instances_to_delete=0, object_id=29
+ModelObject::clear_volumes called: object_name=Tilt_Journal_FlangedSleeve, volumes_to_delete=0, object_id=33
+ModelObject::clear_instances called: object_name=Tilt_Journal_FlangedSleeve, instances_to_delete=0, object_id=33
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Lower_Left, volumes_to_delete=0, object_id=37
+ModelObject::clear_instances called: object_name=PCB_Spacer_Lower_Left, instances_to_delete=0, object_id=37
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Lower_Right, volumes_to_delete=0, object_id=41
+ModelObject::clear_instances called: object_name=PCB_Spacer_Lower_Right, instances_to_delete=0, object_id=41
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Upper_Left, volumes_to_delete=0, object_id=45
+ModelObject::clear_instances called: object_name=PCB_Spacer_Upper_Left, instances_to_delete=0, object_id=45
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Upper_Right, volumes_to_delete=0, object_id=49
+ModelObject::clear_instances called: object_name=PCB_Spacer_Upper_Right, instances_to_delete=0, object_id=49
+ModelObject::clear_volumes called: object_name=CameraPlate_21x14, volumes_to_delete=0, object_id=53
+ModelObject::clear_instances called: object_name=CameraPlate_21x14, instances_to_delete=0, object_id=53
+[SLICE_PREFLIGHT_TIMING] stage=USED_EXTRUDERS_FINAL_NORMALIZE elapsed_ms=0.2193
+[PARALLEL] Print::process enter use_cache=false objects=13
+Slic3r::Print::process start memory info 
+Slic3r::Print::process memory total_bytes 34008997888 memory available_bytes 14210674688
+Slic3r::Print::process: this=000002786343EB40, enter, use_cache=0, object size=13
+[PARALLEL] need_slicing=13 re_slicing=0
+[PARALLEL] fallback to serial: object support disabled
+[PARALLEL] can_parallel=false
+[PARALLEL] Layer1 start: make_perimeters + estimate_curled
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14207791104
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14145544192
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14145544192
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14143266816
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14143266816
+Generating walls...
+Generating perimeters in parallel - start
+Detected missing Voronoi vertex, input polygons will be rotated back and forth.
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14136508416
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14136508416
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14135549952
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14135549952
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14128857088
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14128857088
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14126452736
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14126452736
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124064768
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124064768
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124191744
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124191744
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124171264
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124171264
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124183552
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124183552
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124183552
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124183552
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124183552
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14124183552
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14100385792
+[PERF][PARALLEL] make_perimeters cost 801.831 ms
+[PERF][PARALLEL] estimate_curled_extrusions cost 0.0415 ms
+[PARALLEL][VERIFY] after Layer1(A): total_layers=1171 total_lslices=3241
+[PARALLEL] using serial fallback path
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14100373504
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14039306240
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14039302144
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14039523328
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14039523328
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14064623616
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14064623616
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14064623616
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14064623616
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14064689152
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14064689152
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14066176000
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14066176000
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071971840
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071971840
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071971840
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071971840
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071971840
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071971840
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071971840
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071971840
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071910400
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071910400
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071910400
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14071910400
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14072074240
+[PERF][PARALLEL] infill cost 989.904 ms
+[PERF][PARALLEL] ironing cost 0.2074 ms
+generate_support_material start memory info 
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14072045568
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071615488
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071615488
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071615488
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071480320
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071480320
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071459840
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071459840
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071468032
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071468032
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14071046144
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 13998305280
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 13997875200
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 13997875200
+[PERF][PARALLEL] generate_support_material cost 637.36 ms
+generate_support_material end memory info 
+[PERF][PARALLEL] detect_overhangs_for_lift cost 16.8402 ms
+[PERF][PARALLEL] wipe_tower cost 10.9278 ms
+[PERF][PARALLEL] skirt_brim cost 196.386 ms
+[PERF][PARALLEL] simplify_extrusion_path cost 95.1667 ms
+[PERF][PARALLEL] zaa_path_plan cost 0.0135 ms
+[PERF][PARALLEL] conflict_check cost 228 ms
+[PERF][PARALLEL] toolpath_outside_check cost 20.846 ms
+[PERF][PARALLEL] process total wall cost 3000.07 ms
+Slic3r::Print::process memory total_bytes 34008997888 memory available_bytes 13997948928
+Slic3r::Print::process end memory info 
+[PARALLEL] Print::process exit
+Slic3r::Print::export_gcode start 
+Slic3r::GCode::do_export start  export path CHECKS\SLICE_FULL\plate_1.gcode
+Will export G-code to CHECKS\SLICE_FULL\plate_1.gcode soon
+Exporting G-code...
+[PERF_TIMING] GCODE_GENERATE START
+Slic3r::GCode::_do_export start
+[NO_WIPE_TRACE] export mode no_wipe=false skeleton_packing=false solid_skeleton=false
+Slic3r::GCode::_do_export end
+Start processing gcode, 
+[PERF_TIMING] GCODE_GENERATE END elapsed=5156ms
+[PERF_TIMING] GCODE_PROCESSING START
+Finished processing gcode to CHECKS\SLICE_FULL\plate_1.gcode.tmp 
+rename_file from CHECKS\SLICE_FULL\plate_1.gcode.tmp to CHECKS\SLICE_FULL\plate_1.gcode successfully
+[PERF_TIMING] GCODE_PROCESSING END elapsed=546ms
+Exporting G-code finished
+Slic3r::GCode::do_export end
+Slic3r::Print::export_gcode end
+Model::clear_objects() - Clearing 13 objects
+Model::clear_objects() - Deleting object name: 'Base_EarMount_ThrustSupport', ID: 5, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Base_EarMount_ThrustSupport, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=5
+ModelObject::clear_volumes called: object_name=Base_EarMount_ThrustSupport, volumes_to_delete=1, object_id=5
+ModelObject::clear_instances called: object_name=Base_EarMount_ThrustSupport, instances_to_delete=1, object_id=5
+Model::clear_objects() - Deleting object name: 'Pan_Replaceable_ThrustRing', ID: 9, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Pan_Replaceable_ThrustRing, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=9
+ModelObject::clear_volumes called: object_name=Pan_Replaceable_ThrustRing, volumes_to_delete=1, object_id=9
+ModelObject::clear_instances called: object_name=Pan_Replaceable_ThrustRing, instances_to_delete=1, object_id=9
+Model::clear_objects() - Deleting object name: 'PanYoke_EarBracket_KeyedDrive', ID: 13, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PanYoke_EarBracket_KeyedDrive, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=13
+ModelObject::clear_volumes called: object_name=PanYoke_EarBracket_KeyedDrive, volumes_to_delete=1, object_id=13
+ModelObject::clear_instances called: object_name=PanYoke_EarBracket_KeyedDrive, instances_to_delete=1, object_id=13
+Model::clear_objects() - Deleting object name: 'Tilt_Removable_IdlerPillar', ID: 17, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Tilt_Removable_IdlerPillar, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=17
+ModelObject::clear_volumes called: object_name=Tilt_Removable_IdlerPillar, volumes_to_delete=1, object_id=17
+ModelObject::clear_instances called: object_name=Tilt_Removable_IdlerPillar, instances_to_delete=1, object_id=17
+Model::clear_objects() - Deleting object name: 'Pan_KeyedHorn_Cover', ID: 21, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Pan_KeyedHorn_Cover, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=21
+ModelObject::clear_volumes called: object_name=Pan_KeyedHorn_Cover, volumes_to_delete=1, object_id=21
+ModelObject::clear_instances called: object_name=Pan_KeyedHorn_Cover, instances_to_delete=1, object_id=21
+Model::clear_objects() - Deleting object name: 'TiltCradle_KeyedHorn_CameraFrame', ID: 25, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=TiltCradle_KeyedHorn_CameraFrame, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=25
+ModelObject::clear_volumes called: object_name=TiltCradle_KeyedHorn_CameraFrame, volumes_to_delete=1, object_id=25
+ModelObject::clear_instances called: object_name=TiltCradle_KeyedHorn_CameraFrame, instances_to_delete=1, object_id=25
+Model::clear_objects() - Deleting object name: 'Tilt_KeyedHorn_CaptiveCover', ID: 29, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Tilt_KeyedHorn_CaptiveCover, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=29
+ModelObject::clear_volumes called: object_name=Tilt_KeyedHorn_CaptiveCover, volumes_to_delete=1, object_id=29
+ModelObject::clear_instances called: object_name=Tilt_KeyedHorn_CaptiveCover, instances_to_delete=1, object_id=29
+Model::clear_objects() - Deleting object name: 'Tilt_Journal_FlangedSleeve', ID: 33, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Tilt_Journal_FlangedSleeve, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=33
+ModelObject::clear_volumes called: object_name=Tilt_Journal_FlangedSleeve, volumes_to_delete=1, object_id=33
+ModelObject::clear_instances called: object_name=Tilt_Journal_FlangedSleeve, instances_to_delete=1, object_id=33
+Model::clear_objects() - Deleting object name: 'PCB_Spacer_Lower_Left', ID: 37, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PCB_Spacer_Lower_Left, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=37
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Lower_Left, volumes_to_delete=1, object_id=37
+ModelObject::clear_instances called: object_name=PCB_Spacer_Lower_Left, instances_to_delete=1, object_id=37
+Model::clear_objects() - Deleting object name: 'PCB_Spacer_Lower_Right', ID: 41, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PCB_Spacer_Lower_Right, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=41
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Lower_Right, volumes_to_delete=1, object_id=41
+ModelObject::clear_instances called: object_name=PCB_Spacer_Lower_Right, instances_to_delete=1, object_id=41
+Model::clear_objects() - Deleting object name: 'PCB_Spacer_Upper_Left', ID: 45, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PCB_Spacer_Upper_Left, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=45
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Upper_Left, volumes_to_delete=1, object_id=45
+ModelObject::clear_instances called: object_name=PCB_Spacer_Upper_Left, instances_to_delete=1, object_id=45
+Model::clear_objects() - Deleting object name: 'PCB_Spacer_Upper_Right', ID: 49, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PCB_Spacer_Upper_Right, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=49
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Upper_Right, volumes_to_delete=1, object_id=49
+ModelObject::clear_instances called: object_name=PCB_Spacer_Upper_Right, instances_to_delete=1, object_id=49
+Model::clear_objects() - Deleting object name: 'CameraPlate_21x14', ID: 53, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=CameraPlate_21x14, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=53
+ModelObject::clear_volumes called: object_name=CameraPlate_21x14, volumes_to_delete=1, object_id=53
+ModelObject::clear_instances called: object_name=CameraPlate_21x14, instances_to_delete=1, object_id=53
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 13 objects
+Model::clear_objects() - Deleting object name: 'Base_EarMount_ThrustSupport', ID: 5, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Base_EarMount_ThrustSupport, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=5
+ModelObject::clear_volumes called: object_name=Base_EarMount_ThrustSupport, volumes_to_delete=1, object_id=5
+ModelObject::clear_instances called: object_name=Base_EarMount_ThrustSupport, instances_to_delete=1, object_id=5
+Model::clear_objects() - Deleting object name: 'Pan_Replaceable_ThrustRing', ID: 9, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Pan_Replaceable_ThrustRing, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=9
+ModelObject::clear_volumes called: object_name=Pan_Replaceable_ThrustRing, volumes_to_delete=1, object_id=9
+ModelObject::clear_instances called: object_name=Pan_Replaceable_ThrustRing, instances_to_delete=1, object_id=9
+Model::clear_objects() - Deleting object name: 'PanYoke_EarBracket_KeyedDrive', ID: 13, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PanYoke_EarBracket_KeyedDrive, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=13
+ModelObject::clear_volumes called: object_name=PanYoke_EarBracket_KeyedDrive, volumes_to_delete=1, object_id=13
+ModelObject::clear_instances called: object_name=PanYoke_EarBracket_KeyedDrive, instances_to_delete=1, object_id=13
+Model::clear_objects() - Deleting object name: 'Tilt_Removable_IdlerPillar', ID: 17, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Tilt_Removable_IdlerPillar, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=17
+ModelObject::clear_volumes called: object_name=Tilt_Removable_IdlerPillar, volumes_to_delete=1, object_id=17
+ModelObject::clear_instances called: object_name=Tilt_Removable_IdlerPillar, instances_to_delete=1, object_id=17
+Model::clear_objects() - Deleting object name: 'Pan_KeyedHorn_Cover', ID: 21, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Pan_KeyedHorn_Cover, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=21
+ModelObject::clear_volumes called: object_name=Pan_KeyedHorn_Cover, volumes_to_delete=1, object_id=21
+ModelObject::clear_instances called: object_name=Pan_KeyedHorn_Cover, instances_to_delete=1, object_id=21
+Model::clear_objects() - Deleting object name: 'TiltCradle_KeyedHorn_CameraFrame', ID: 25, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=TiltCradle_KeyedHorn_CameraFrame, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=25
+ModelObject::clear_volumes called: object_name=TiltCradle_KeyedHorn_CameraFrame, volumes_to_delete=1, object_id=25
+ModelObject::clear_instances called: object_name=TiltCradle_KeyedHorn_CameraFrame, instances_to_delete=1, object_id=25
+Model::clear_objects() - Deleting object name: 'Tilt_KeyedHorn_CaptiveCover', ID: 29, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Tilt_KeyedHorn_CaptiveCover, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=29
+ModelObject::clear_volumes called: object_name=Tilt_KeyedHorn_CaptiveCover, volumes_to_delete=1, object_id=29
+ModelObject::clear_instances called: object_name=Tilt_KeyedHorn_CaptiveCover, instances_to_delete=1, object_id=29
+Model::clear_objects() - Deleting object name: 'Tilt_Journal_FlangedSleeve', ID: 33, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Tilt_Journal_FlangedSleeve, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=33
+ModelObject::clear_volumes called: object_name=Tilt_Journal_FlangedSleeve, volumes_to_delete=1, object_id=33
+ModelObject::clear_instances called: object_name=Tilt_Journal_FlangedSleeve, instances_to_delete=1, object_id=33
+Model::clear_objects() - Deleting object name: 'PCB_Spacer_Lower_Left', ID: 37, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PCB_Spacer_Lower_Left, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=37
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Lower_Left, volumes_to_delete=1, object_id=37
+ModelObject::clear_instances called: object_name=PCB_Spacer_Lower_Left, instances_to_delete=1, object_id=37
+Model::clear_objects() - Deleting object name: 'PCB_Spacer_Lower_Right', ID: 41, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PCB_Spacer_Lower_Right, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=41
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Lower_Right, volumes_to_delete=1, object_id=41
+ModelObject::clear_instances called: object_name=PCB_Spacer_Lower_Right, instances_to_delete=1, object_id=41
+Model::clear_objects() - Deleting object name: 'PCB_Spacer_Upper_Left', ID: 45, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PCB_Spacer_Upper_Left, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=45
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Upper_Left, volumes_to_delete=1, object_id=45
+ModelObject::clear_instances called: object_name=PCB_Spacer_Upper_Left, instances_to_delete=1, object_id=45
+Model::clear_objects() - Deleting object name: 'PCB_Spacer_Upper_Right', ID: 49, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=PCB_Spacer_Upper_Right, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=49
+ModelObject::clear_volumes called: object_name=PCB_Spacer_Upper_Right, volumes_to_delete=1, object_id=49
+ModelObject::clear_instances called: object_name=PCB_Spacer_Upper_Right, instances_to_delete=1, object_id=49
+Model::clear_objects() - Deleting object name: 'CameraPlate_21x14', ID: 53, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=CameraPlate_21x14, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=53
+ModelObject::clear_volumes called: object_name=CameraPlate_21x14, volumes_to_delete=1, object_id=53
+ModelObject::clear_instances called: object_name=CameraPlate_21x14, instances_to_delete=1, object_id=53

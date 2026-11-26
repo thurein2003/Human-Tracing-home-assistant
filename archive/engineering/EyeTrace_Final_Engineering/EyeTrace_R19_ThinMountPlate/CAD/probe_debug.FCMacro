@@ -1,0 +1,7 @@
+﻿import FreeCAD as App,Part,json
+from FreeCAD import Vector
+p=r'EyeTrace_Final_Engineering\EyeTrace_R19_ThinMountPlate\BACKUP\EyeTrace_R18_CircularMount_Correction_01.FCStd'; d=App.openDocument(p); s=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+for name,sh in [('source',s)]:
+ print(name)
+ for x,y in [(10,10),(6,0),(23.5,0),(34,0),(0,25),(25,0)]:
+  c=sh.common(Part.makeCylinder(.05,7,Vector(x,y,35),Vector(0,0,1))); print((x,y),[(q.BoundBox.ZMin,q.BoundBox.ZMax,q.Volume) for q in c.Solids])

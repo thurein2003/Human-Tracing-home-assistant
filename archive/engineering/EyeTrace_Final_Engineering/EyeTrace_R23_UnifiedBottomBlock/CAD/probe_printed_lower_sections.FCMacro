@@ -1,0 +1,13 @@
+import FreeCAD as App,Part,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(p);g=d.getObject('PrintedParts');out=[]
+for o in g.Group:
+ s=o.Shape
+ if s.isNull():continue
+ bb=s.BoundBox; rows=[]; dz=max(.5,bb.ZLength/25); z=bb.ZMin+.15
+ while z<bb.ZMax-.15:
+  sec=s.section(Part.makePlane(bb.XLength+4,bb.YLength+4,App.Vector(bb.XMin-2,bb.YMin-2,z)))
+  if not sec.isNull() and sec.Edges:
+   b=sec.BoundBox; rows.append({'z':round(z,3),'edge_count':len(sec.Edges),'xy_bbox':[round(b.XMin,3),round(b.XMax,3),round(b.YMin,3),round(b.YMax,3)]})
+  z+=dz
+ out.append({'name':o.Name,'label':o.Label,'bbox':[bb.XMin,bb.XMax,bb.YMin,bb.YMax,bb.ZMin,bb.ZMax],'vol':s.Volume,'solids':len(s.Solids),'sections':rows})
+open(r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\DOCUMENTATION\printed_lower_section_probe.json','w').write(json.dumps(out,indent=2))

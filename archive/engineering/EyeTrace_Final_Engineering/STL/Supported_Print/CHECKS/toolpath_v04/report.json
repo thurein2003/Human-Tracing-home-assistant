@@ -1,0 +1,284 @@
+{
+  "Gcode": "TOOLPATHS\\v04\\plate_1.gcode",
+  "declared_model_layers": 1056,
+  "actual_layer_change_events": 1056,
+  "extrusion_Z_planes": 1053,
+  "extrusion_segments": 1313699,
+  "role_segment_counts": {
+    "Brim": 4913,
+    "Outer wall": 130226,
+    "Inner wall": 366553,
+    "Bottom surface": 3421,
+    "Gap infill": 3834,
+    "Support": 123682,
+    "Internal solid infill": 106654,
+    "Top surface": 4272,
+    "Sparse infill": 539823,
+    "Internal Bridge": 2182,
+    "Overhang wall": 702,
+    "Bridge": 696,
+    "Support transition": 5265,
+    "Support interface": 21476
+  },
+  "roles": [
+    "Brim",
+    "Outer wall",
+    "Inner wall",
+    "Bottom surface",
+    "Gap infill",
+    "Support",
+    "Internal solid infill",
+    "Top surface",
+    "Sparse infill",
+    "Internal Bridge",
+    "Overhang wall",
+    "Bridge",
+    "Support transition",
+    "Support interface"
+  ],
+  "objects": [
+    "Base_EarMount_ThrustSupport",
+    "PanYoke_EarBracket_KeyedDrive",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "Pan_KeyedHorn_Cover",
+    "Tilt_Removable_IdlerPillar",
+    "Pan_Replaceable_ThrustRing",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "CameraPlate_21x16",
+    "PCB_Spacer_Lower_Right",
+    "PCB_Spacer_Lower_Left",
+    "Tilt_Journal_FlangedSleeve",
+    "PCB_Spacer_Upper_Left",
+    "PCB_Spacer_Upper_Right"
+  ],
+  "object_model_layer_counts": {
+    "Base_EarMount_ThrustSupport": 183,
+    "PanYoke_EarBracket_KeyedDrive": 670,
+    "Tilt_KeyedHorn_CaptiveCover": 41,
+    "Pan_KeyedHorn_Cover": 41,
+    "Tilt_Removable_IdlerPillar": 285,
+    "Pan_Replaceable_ThrustRing": 5,
+    "TiltCradle_KeyedHorn_CameraFrame": 225,
+    "CameraPlate_21x16": 15,
+    "PCB_Spacer_Lower_Right": 15,
+    "PCB_Spacer_Lower_Left": 15,
+    "Tilt_Journal_FlangedSleeve": 40,
+    "PCB_Spacer_Upper_Left": 15,
+    "PCB_Spacer_Upper_Right": 15
+  },
+  "support_segments_by_object": {
+    "PanYoke_EarBracket_KeyedDrive": 61172,
+    "TiltCradle_KeyedHorn_CameraFrame": 44221,
+    "Base_EarMount_ThrustSupport": 45030
+  },
+  "filament_metadata": {
+    "filament used [mm]": "49529.40",
+    "filament used [cm3]": "119.13",
+    "filament used [g]": "151.30",
+    "total filament used [g]": "151.30",
+    "estimated printing time (normal mode)": "13h 15m 40s"
+  },
+  "role_filament_volume_cm3": {
+    "Brim": 0.9734428544887809,
+    "Outer wall": 18.81282083587052,
+    "Inner wall": 51.18074781230011,
+    "Bottom surface": 1.995186222423216,
+    "Gap infill": 0.025313763724408814,
+    "Support": 4.072956018129881,
+    "Internal solid infill": 21.30456319004312,
+    "Top surface": 2.564451235139878,
+    "Sparse infill": 15.052811761150872,
+    "Internal Bridge": 2.114530608562759,
+    "Overhang wall": 0.10129849428830591,
+    "Bridge": 0.07909668425429557,
+    "Support transition": 0.3126955192927289,
+    "Support interface": 0.5160970987094757
+  },
+  "role_filament_mass_g_at1p27": {
+    "Brim": 1.2362724252007518,
+    "Outer wall": 23.892282461555567,
+    "Inner wall": 64.99954972162115,
+    "Bottom surface": 2.5338865024774844,
+    "Gap infill": 0.032148479929999196,
+    "Support": 5.17265414302495,
+    "Internal solid infill": 27.05679525135476,
+    "Top surface": 3.2568530686276453,
+    "Sparse infill": 19.11707093666161,
+    "Internal Bridge": 2.685453872874704,
+    "Overhang wall": 0.1286490877461485,
+    "Bridge": 0.10045278900295537,
+    "Support transition": 0.3971233095017657,
+    "Support interface": 0.6554433153610343
+  },
+  "support_centerline_samples": 364227,
+  "protected_region_intrusions": [],
+  "bead_XY_bounds_mm": [
+    [
+      9.026259999999999,
+      9.026259999999999
+    ],
+    [
+      226.97173999999998,
+      232.97173999999998
+    ]
+  ],
+  "unanchored_model_components": [
+    {
+      "nozzle_Z": 21.0,
+      "area_mm2": 0.48,
+      "centroid_xy": [
+        131.7,
+        47.5
+      ]
+    },
+    {
+      "nozzle_Z": 21.1,
+      "area_mm2": 0.32,
+      "centroid_xy": [
+        128.9,
+        47.3
+      ]
+    },
+    {
+      "nozzle_Z": 33.7,
+      "area_mm2": 0.48,
+      "centroid_xy": [
+        144.3,
+        29.3
+      ]
+    },
+    {
+      "nozzle_Z": 33.7,
+      "area_mm2": 0.32,
+      "centroid_xy": [
+        144.3,
+        65.3
+      ]
+    },
+    {
+      "nozzle_Z": 34.1,
+      "area_mm2": 0.64,
+      "centroid_xy": [
+        144.9,
+        47.3
+      ]
+    },
+    {
+      "nozzle_Z": 46.5,
+      "area_mm2": 0.32,
+      "centroid_xy": [
+        157.3,
+        47.3
+      ]
+    }
+  ],
+  "longest_sampled_unsupported_bridge_mm": 5.715,
+  "bridge_spans_above8p5mm": [],
+  "raster_resolution_mm": 0.2,
+  "fine_island_reviews": [
+    {
+      "coarse_event": {
+        "nozzle_Z": 21.0,
+        "area_mm2": 0.48,
+        "centroid_xy": [
+          131.7,
+          47.5
+        ]
+      },
+      "resolution_mm": 0.05,
+      "unanchored_local_components": [
+        {
+          "label": 2,
+          "area_mm2": 0.3675
+        }
+      ]
+    },
+    {
+      "coarse_event": {
+        "nozzle_Z": 21.1,
+        "area_mm2": 0.32,
+        "centroid_xy": [
+          128.9,
+          47.3
+        ]
+      },
+      "resolution_mm": 0.05,
+      "unanchored_local_components": [
+        {
+          "label": 2,
+          "area_mm2": 0.2425
+        }
+      ]
+    },
+    {
+      "coarse_event": {
+        "nozzle_Z": 33.7,
+        "area_mm2": 0.48,
+        "centroid_xy": [
+          144.3,
+          29.3
+        ]
+      },
+      "resolution_mm": 0.05,
+      "unanchored_local_components": [
+        {
+          "label": 2,
+          "area_mm2": 0.4
+        }
+      ]
+    },
+    {
+      "coarse_event": {
+        "nozzle_Z": 33.7,
+        "area_mm2": 0.32,
+        "centroid_xy": [
+          144.3,
+          65.3
+        ]
+      },
+      "resolution_mm": 0.05,
+      "unanchored_local_components": [
+        {
+          "label": 2,
+          "area_mm2": 0.21
+        }
+      ]
+    },
+    {
+      "coarse_event": {
+        "nozzle_Z": 34.1,
+        "area_mm2": 0.64,
+        "centroid_xy": [
+          144.9,
+          47.3
+        ]
+      },
+      "resolution_mm": 0.05,
+      "unanchored_local_components": [
+        {
+          "label": 2,
+          "area_mm2": 0.4525
+        }
+      ]
+    },
+    {
+      "coarse_event": {
+        "nozzle_Z": 46.5,
+        "area_mm2": 0.32,
+        "centroid_xy": [
+          157.3,
+          47.3
+        ]
+      },
+      "resolution_mm": 0.05,
+      "unanchored_local_components": [
+        {
+          "label": 2,
+          "area_mm2": 0.21
+        }
+      ]
+    }
+  ],
+  "fine_reviews_with_flags": 6,
+  "limits": "Raster extrusion screening is not continuous3D physics. Support-air-gap reach0.50mm, model interlayer reach0.261mm; one-pixel XY allowance. Protected void checks sample support centerlines every<=0.25mm; not full bead-volume metrology. Physical PETG bridge sag, adhesion and mating fit unverified."
+}

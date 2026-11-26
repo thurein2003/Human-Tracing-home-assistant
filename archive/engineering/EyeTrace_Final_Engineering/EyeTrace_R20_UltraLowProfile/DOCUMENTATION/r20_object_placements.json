@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Base_EarMount_ThrustSupport",
+    "label": "Stationary base / pan-servo support",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      -40.0,
+      40.0,
+      -35.0,
+      35.0,
+      0.0,
+      36.5
+    ],
+    "volume": 50586.79985770291
+  },
+  {
+    "name": "Pan_Replaceable_ThrustRing",
+    "label": "Stationary pan thrust surface",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      -32.0,
+      32.0,
+      -32.0,
+      32.0,
+      36.0,
+      37.0
+    ],
+    "volume": 833.5273628504433
+  },
+  {
+    "name": "PanYoke_EarBracket_KeyedDrive",
+    "label": "PanYoke_EarBracket_R20_LowProfile_OuterLand",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      -58.2,
+      44.0,
+      -35.3,
+      35.3,
+      35.199999999999996,
+      103.0
+    ],
+    "volume": 28124.74950373492
+  },
+  {
+    "name": "PanServo_SG90_Reference",
+    "label": "Pan SG90 reference ? dimensions provisional",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      -10.7,
+      21.599999999999998,
+      -6.1,
+      6.1,
+      6.0,
+      36.3
+    ],
+    "volume": 7152.840844796366
+  },
+  {
+    "name": "Pan_OriginalStar_PROVISIONAL",
+    "label": "Pan SG90 four-arm cross horn \u2014 R15 reference; coupon fit user-confirmed",
+    "placement": [
+      0.0,
+      0.0,
+      35.0
+    ],
+    "bbox": [
+      -19.5,
+      19.5,
+      -10.0,
+      10.0,
+      32.5,
+      36.5
+    ],
+    "volume": 476.19571761711836
+  },
+  {
+    "name": "Pan_KeyedHorn_Cover",
+    "label": "Pan horn retainer cover",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      -24.0,
+      24.0,
+      -24.0,
+      24.0,
+      30.8,
+      35.0
+    ],
+    "volume": 3022.4785340715316
+  },
+  {
+    "name": "PanDrive_M3x10_0",
+    "label": "PanDrive_M3x10_0",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      15.2,
+      20.8,
+      -3.1754264805429417,
+      3.1754264805429417,
+      29.0,
+      42.0
+    ],
+    "volume": 190.4849379035676
+  },
+  {
+    "name": "PanDrive_M3x10_1",
+    "label": "PanDrive_M3x10_1",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      -20.8,
+      -15.2,
+      -3.1754264805429417,
+      3.1754264805429417,
+      29.0,
+      42.0
+    ],
+    "volume": 190.4849379035676
+  },
+  {
+    "name": "PanDrive_M3x10_2",
+    "label": "PanDrive_M3x10_2",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      -2.8,
+      2.8,
+      14.824573519457056,
+      21.175426480542942,
+      29.0,
+      42.0
+    ],
+    "volume": 190.4849379035676
+  },
+  {
+    "name": "PanDrive_M3x10_3",
+    "label": "PanDrive_M3x10_3",
+    "placement": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bbox": [
+      -2.8,
+      2.8,
+      -21.175426480542942,
+      -14.824573519457058,
+      29.0,
+      42.0
+    ],
+    "volume": 190.48493790356756
+  }
+]

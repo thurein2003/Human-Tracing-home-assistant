@@ -1,0 +1,49 @@
+﻿import FreeCAD as A,FreeCADGui as Gui,Part,Mesh,os,traceback,json
+from FreeCAD import Vector as V
+from PySide import QtCore,QtWidgets
+ROOT=r'EyeTrace_CAD_20261115_232254\final_prototype'
+def run():
+ try:
+  src=open(os.path.join(os.path.dirname(ROOT),'build_final.py'),encoding='utf-8-sig').read()
+  scope={'A':A,'Part':Part,'Mesh':Mesh,'V':V,'ROOT':ROOT,'os':os,'math':__import__('math')}
+  doc=A.newDocument('EyeTrace_RenderedAssembly');scope['doc']=doc
+  exec(src[src.index('def box'):src.index('report=')],scope)
+  parts=scope['parts'];fixtures=scope['fixtures'];groups=scope['fastener_groups']
+  pg=doc.addObject('App::DocumentObjectGroup','PrintedParts');pg.addObjects(parts)
+  hg=doc.addObject('App::DocumentObjectGroup','HardwareEnvelopes');hg.addObjects(fixtures)
+  doc.addObject('App::DocumentObjectGroup','PrototypeStatus').Label='PROTOTYPE - camera and horn fit unverified'
+  doc.recompute();doc.saveAs(os.path.join(ROOT,'EyeTrace_Assembly.FCStd'))
+  view=Gui.activeDocument().activeView()
+  def render(name,kind='iso'):
+   if kind=='iso':view.viewAxonometric()
+   elif kind=='front':view.viewFront()
+   elif kind=='right':view.viewRight()
+   elif kind=='top':view.viewTop()
+   view.fitAll();Gui.updateGui();view.saveImage(os.path.join(ROOT,'renders',name+'.png'),1600,1200,'White')
+  render('assembly_isometric');render('assembly_front','front');render('assembly_right','right');render('assembly_top','top')
+  original={o.Name:A.Placement(o.Placement) for o in parts+fixtures}
+  tilt_names=['TiltCameraCradle','Camera_ASSUMED_38x38x30','TiltStarHorn_ASSUMED','TiltHornClamp']
+  pan_names=['PanYoke','TiltServo_ASSUMED','TiltServoRetainer','PanHornClamp','PanStarHorn_ASSUMED']
+  for o in parts+fixtures:
+   p=A.Placement()
+   if o.Name in tilt_names or groups.get(o.Name)=='tilt':p=A.Placement(V(),A.Rotation(),V()) # overridden below with explicit pivot
+   if o.Name in tilt_names or groups.get(o.Name)=='tilt':
+    rot=A.Rotation(V(1,0,0),30);p=A.Placement(V(0,0,78)-rot.multVec(V(0,0,78)),rot)
+   if o.Name in tilt_names+pan_names or groups.get(o.Name) in ['pan','tilt']:
+    p=A.Placement(V(),A.Rotation(V(0,0,1),60)).multiply(p);o.Placement=p.multiply(original[o.Name])
+  doc.recompute();render('pose_pan60_tilt30')
+  for o in parts+fixtures:o.Placement=original[o.Name]
+  for o in fixtures:o.Visibility=False
+  offsets={'Base':V(0,0,-25),'PanServoRetainer':V(0,-65,0),'PanYoke':V(0,0,15),'TiltCameraCradle':V(35,0,45),'PanHornClamp':V(0,0,-8),'TiltHornClamp':V(-45,0,15),'TiltServoRetainer':V(-25,0,45)}
+  for o in parts:o.Placement.Base=o.Placement.Base+offsets.get(o.Name,V())
+  doc.recompute();render('exploded_printed_parts')
+  for o in parts+fixtures:o.Placement=original[o.Name];o.Visibility=True
+  doc.recompute()
+  bed=A.newDocument('EyeTrace_PrintBed');b=bed.addObject('Mesh::Feature','SevenParts');b.Mesh=Mesh.Mesh(os.path.join(ROOT,'single_bed.stl'));b.ViewObject.ShapeColor=(0.18,0.48,0.66)
+  bed.recompute();view=Gui.activeDocument().activeView();render('single_bed','top')
+  A.closeDocument(bed.Name);Gui.activeDocument().activeView().viewAxonometric();Gui.activeDocument().activeView().fitAll()
+  open(os.path.join(ROOT,'renders','render_status.json'),'w').write(json.dumps({'renderer':'FreeCAD 1.1.4 GUI Coin3D','resolution':[1600,1200],'status':'completed','views':7},indent=2))
+ except Exception:
+  open(os.path.join(ROOT,'renders','render_error.txt'),'w').write(traceback.format_exc())
+ finally:QtCore.QTimer.singleShot(1000,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1500,run)

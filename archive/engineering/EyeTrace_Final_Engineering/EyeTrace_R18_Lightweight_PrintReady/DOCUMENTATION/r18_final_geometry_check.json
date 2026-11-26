@@ -1,0 +1,62 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)"
+  ],
+  "unchanged_component_shape_differences": [],
+  "unchanged_component_count_checked": 49,
+  "pan_r15_lower_region_difference_mm3": 0.0,
+  "pan_web_planes": [
+    {
+      "face": 53,
+      "x": -51.0,
+      "area": 2510.4999999999995,
+      "bb": [
+        -51.0,
+        -24.0,
+        41.0,
+        -51.0,
+        24.0,
+        103.0
+      ]
+    },
+    {
+      "face": 55,
+      "x": -48.5,
+      "area": 1500.774333882307,
+      "bb": [
+        -48.5,
+        -18.0,
+        45.0,
+        -48.499999999999986,
+        18.0,
+        99.0
+      ]
+    }
+  ],
+  "step_reopen": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 36613.82621052031,
+    "bbox": [
+      -58.2,
+      -35.3,
+      35.2,
+      44.0,
+      35.3,
+      103.0
+    ]
+  },
+  "r18_pan_valid": true,
+  "r18_pan_solids": 1,
+  "camera_plate_bbox": [
+    -28.0,
+    -27.400000000000002,
+    60.0,
+    28.0,
+    -24.399999999999995,
+    92.0
+  ]
+}

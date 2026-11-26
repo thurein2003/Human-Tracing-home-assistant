@@ -1,0 +1,15 @@
+import json,zipfile,xml.etree.ElementTree as ET
+from pathlib import Path
+import FreeCAD as App,Part,Mesh
+out=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_02\CORRECTION_01")
+r={'freecad_version':App.Version()}
+d=App.openDocument(str(out/'CrossHorn_Single_FitTest_02.FCStd')); o=d.getObject('SingleCrossHornFitCoupon')
+r['fcstd']={'opened':True,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids),'feature_count':len([x for x in d.Objects if hasattr(x,'Shape') and not x.Shape.isNull()])}; App.closeDocument(d.Name)
+m=Mesh.Mesh(str(out/'CrossHorn_Single_FitTest_02.stl')); r['stl']={'facets':len(m.Facets),'watertight_solid':m.isSolid(),'bbox_mm':[m.BoundBox.XLength,m.BoundBox.YLength,m.BoundBox.ZLength],'fits_k2_260_cube':m.BoundBox.XLength<=260 and m.BoundBox.YLength<=260 and m.BoundBox.ZLength<=260}
+s=Part.read(str(out/'CrossHorn_Single_FitTest_02.step')); r['step']={'valid':s.isValid(),'solids':len(s.Solids)}
+p=out/'CrossHorn_Single_FitTest_02.3mf'; ns={'m':'http://schemas.microsoft.com/3dmanufacturing/core/2015/02'}
+with zipfile.ZipFile(p) as z:
+    model=ET.fromstring(z.read('3D/3dmodel.model')); objs=model.findall('.//m:object',ns); tris=sum(len(x.findall('m:mesh/m:triangles/m:triangle',ns)) for x in objs)
+    r['3mf']={'crc_valid':z.testzip() is None,'objects':len(objs),'triangles':tris}
+r['status']='SOFTWARE_GEOMETRY_PASS; PHYSICAL_FIT_UNVERIFIED; TOOLPATH_PREVIEW_UNVERIFIED'
+(out/'validation_results.json').write_text(json.dumps(r,indent=2),encoding='utf-8'); print(json.dumps(r,indent=2))

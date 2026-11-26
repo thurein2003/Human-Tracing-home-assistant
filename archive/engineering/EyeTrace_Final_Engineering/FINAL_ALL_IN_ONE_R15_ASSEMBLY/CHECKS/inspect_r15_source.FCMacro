@@ -1,0 +1,16 @@
+import FreeCAD as A, json, os
+root=r'EyeTrace_Final_Engineering'
+src=root+r'\FINAL_ALL_IN_ONE_R15\CAD\EyeTrace_Final_Assembly_R15.FCStd'
+d=A.openDocument(src)
+rows=[]
+for o in d.Objects:
+ r={'name':o.Name,'label':o.Label,'type':o.TypeId}
+ if hasattr(o,'Shape') and not o.Shape.isNull():
+  b=o.Shape.BoundBox;r.update({'bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax],'volume':o.Shape.Volume,'solids':len(o.Shape.Solids),'valid':o.Shape.isValid(),'placement':([o.Placement.Base.x,o.Placement.Base.y,o.Placement.Base.z,o.Placement.Rotation.Axis.x,o.Placement.Rotation.Axis.y,o.Placement.Rotation.Axis.z,o.Placement.Rotation.Angle*180/3.141592653589793] if hasattr(o,'Placement') else None)})
+  for pn in ['Printable','KinematicGroup','PrintFileName']:
+   if hasattr(o,pn):r[pn]=str(getattr(o,pn))
+ rows.append(r)
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY\CHECKS\source_doc_audit.json'
+open(out,'w').write(json.dumps({'version':A.Version()[:4],'doc':d.Label,'objects':rows},indent=2))
+A.closeDocument(d.Name)
+

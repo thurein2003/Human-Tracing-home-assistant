@@ -1,0 +1,11 @@
+{
+  "poses": 169,
+  "pair_tests": 59150,
+  "unique_tests": 10910,
+  "collision_instances": 0,
+  "collisions": [],
+  "excluded_contact": [
+    "camera to cradle shelf"
+  ],
+  "limits": "Discrete poses, no physical tolerances, threads, cable, tool or load proof; star and screw envelopes provisional"
+}

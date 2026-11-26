@@ -1,0 +1,82 @@
+[
+  {
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "pairs": [
+      {
+        "other": "Pan_OriginalStar_PROVISIONAL",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 291.2719014290791
+      },
+      {
+        "other": "Pan_KeyedHorn_Cover",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 1655.7706736182986
+      },
+      {
+        "other": "PanDrive_M3x10_0",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 4.016622855340315
+      },
+      {
+        "other": "PanDrive_M3x10_1",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 4.016622855340239
+      },
+      {
+        "other": "PanDrive_M3x10_2",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 8.41296133229591
+      },
+      {
+        "other": "PanDrive_M3x10_3",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 8.4129613322959
+      },
+      {
+        "other": "PanServo_SG90_Reference",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 0.0
+      }
+    ]
+  },
+  {
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "pairs": [
+      {
+        "other": "Tilt_OriginalStar_PROVISIONAL",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 0.0
+      },
+      {
+        "other": "Tilt_KeyedHorn_CaptiveCover",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 0.0
+      },
+      {
+        "other": "TiltDrive_M3x10_0",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 0.0
+      },
+      {
+        "other": "TiltDrive_M3x10_1",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 0.0
+      },
+      {
+        "other": "TiltDrive_M3x10_2",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 0.0
+      },
+      {
+        "other": "TiltDrive_M3x10_3",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 0.0
+      },
+      {
+        "other": "TiltServo_SG90_Reference",
+        "R16_common_mm3": 0.0,
+        "R17_common_mm3": 0.0
+      }
+    ]
+  }
+]

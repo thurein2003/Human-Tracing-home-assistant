@@ -1,0 +1,29 @@
+# Dimensional audit — physical fit unverified
+
+| Interface | Nominal CAD | Source/confidence | Status |
+|---|---|---|---|
+| Servo main case L/W/H | 22.7 /12.2 /22.7 | TowerPro B/D plus Juan Fenoy native case height; Published nominal + community detail | CAD consistent; physical clone fit UNVERIFIED |
+| Shoulder/output top from base | 27 /30.3 | TowerPro C/A drawing; headline29 conflicts; Datum interpretation/conflicting sources | Actual seated height UNVERIFIED |
+| Ear span/bottom/thickness | 32.3 /15.9 /2.5 | TowerPro E + community native placement; Nominal/community | UNVERIFIED for clones |
+| Ear pitch/hole/open slot | 27.2 /2.0 /1.3 | Community native geometry; Community reference | M3 NOT suitable for modeled ear holes |
+| Output center from near end | 5.9 | Community native geometry; Community reference | UNVERIFIED for clones |
+| Output/bore envelope | diameter5 /diameter1.7 | Community bounds, smooth envelopes only; LOW for physical mating | Spline teeth NOT modeled; thread fit UNVERIFIED |
+| Wire notch W/H/elevation | 3.6 /1.2 /4.5 | Community native sketch; Community reference | Actual strain relief/connector UNVERIFIED |
+| Original star profile | 5 arms, length12,width3.6,hub diameter8,web2 | Inherited PROVISIONAL outline; configurable arrays; LOW, no measured horn trace | Actual profile fit UNVERIFIED |
+| Original retaining screw envelope | diameter1.6,head3.5x1,length5 | PROVISIONAL visualization, not a thread specification; LOW | Retain original screws; physical seating UNVERIFIED |
+| Positive horn pocket | 0.25 side clearance,2.2 depth | Printed design choice; CAD verified against provisional outline | Positive wall engagement PASS; physical fit/strength UNVERIFIED |
+| Horn pocket free play | No contact at +/-1deg; wall probe contact at +/-2deg | Independent relative-rotation test; CAD verified | Actual backlash/torque UNVERIFIED |
+| Pan thrust/radial support | thrust ring r27.5..32,thickness1; radial gap0.3 | Printed design and actual CAD distances; CAD verified | Bearing load, wear, creep UNVERIFIED |
+| Tilt journal | sleeve OD5,bore5.2,radial gap0.1 | Actual saved cylindrical surfaces; CAD verified | PETG running fit UNVERIFIED |
+| Idler anti-pinching gaps | flange-to-wall0.2,nut-to-wall0.3 | Actual geometry and distance check; CAD verified | Compressed physical stack UNVERIFIED |
+| Idler bolt | M3x12,grip6.8,nut4,projection1.2 | Selected nominal hardware; Requires extra bolt/washer/locknut | CAD contact PASS; actual hardware fit UNVERIFIED |
+| Ear fasteners | M1.6x8,grip5.5,nut1.3,projection1.2 | Selected nominal hardware, conditional on ear holes; Extra hardware required | Not M3; physical fit UNVERIFIED |
+| Drive fasteners | 8xM3x10,grip5.5,nut2.4,projection2.1 | Selected nominal hardware/design stack; CAD contact verified | Physical hardware/PETG fit UNVERIFIED |
+| Removable pillar/rail fasteners | 6xM3x10,grip6,nut2.4,projection1.6 | Design stack; CAD contact verified | Physical hardware/PETG fit UNVERIFIED |
+| Camera PCB/holes | 38x38x1.6,diameter2.2 | PROVISIONAL layout, no user camera photograph/dimensions; LOW | Actual PCB UNVERIFIED |
+| Camera hole pitch | Default28x28; mechanical travel20..32 X/Z | PROVISIONAL default, live native expressions; LOW for actual board | Only default28 full-assembly validation; actual pitch UNVERIFIED |
+| Camera standoff/rear keep-out | spacers3; rear keep-out20x24.4x20 | PROVISIONAL layout; LOW | Real components/IR emitters UNVERIFIED |
+| Camera PCB fasteners | M2x12,grip7.6,nut1.6,projection2.8 | Selected nominal hardware; Additional hardware required | Only if real holes permit M2 |
+| Complete prototype layout | 237x192.6x77,minimum gap8 | Native/STL read-back and packing; CAD verified | Slicer supports/brims and actual printing pending |
+
+No manufacturing tolerance was established for the actual SG90 clones, original horns or camera. Source disagreements are not tolerance bands. CAD intersection threshold0.001mm3 and STL comparison threshold0.01mm are numerical validation limits, not physical dimensional accuracy. See measurements/servo_reference_source_ledger.csv for original source details and measurements/authoritative_audit_baseline.md for the unchanged authoritative audit. No actual camera photograph or measured camera dimensions were supplied.

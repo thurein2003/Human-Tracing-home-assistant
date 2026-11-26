@@ -1,0 +1,16 @@
+﻿import FreeCAD as A,Part,json,os
+out=r'EyeTrace_Final_Engineering\R15_CENTERED_MOUNT_FINAL';fn=out+r'\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd';d=A.openDocument(fn)
+for n,l in [('Pan_OriginalStar_PROVISIONAL','Pan SG90 four-arm cross horn — R15 reference; coupon fit user-confirmed'),('Tilt_OriginalStar_PROVISIONAL','Tilt SG90 four-arm cross horn — R15 reference; coupon fit user-confirmed')]:
+ o=d.getObject(n)
+ if o:o.Label=l
+# save label update in new revision only
+d.recompute();d.save()
+allgeo=[o for o in d.Objects if hasattr(o,'Shape') and not o.Shape.isNull() and len(o.Shape.Solids)>0]
+ex=A.newDocument('R15_AllGeometryExport');exobjs=[]
+for o in allgeo:
+ e=ex.addObject('PartDesign::Feature',o.Name);e.Label=o.Label;e.Shape=o.Shape.copy();exobjs.append(e)
+ex.recompute();step=out+r'\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.step';Part.export(exobjs,step);A.closeDocument(ex.Name)
+check=A.newDocument('R15StepReopen');Part.insert(step,check.Name);check.recompute();stepobjs=[o for o in check.Objects if hasattr(o,'Shape') and not o.Shape.isNull()]
+stepdata=[{'name':o.Name,'solids':len(o.Shape.Solids),'valid':o.Shape.isValid(),'volume_mm3':o.Shape.Volume} for o in stepobjs]
+with open(out+r'\CHECKS\step_reopen_validation.json','w') as f:json.dump({'objects_with_solids_in_source':len(allgeo),'imported_step_shape_objects':len(stepobjs),'step_shapes':stepdata},f,indent=2)
+A.closeDocument(check.Name);A.closeDocument(d.Name)

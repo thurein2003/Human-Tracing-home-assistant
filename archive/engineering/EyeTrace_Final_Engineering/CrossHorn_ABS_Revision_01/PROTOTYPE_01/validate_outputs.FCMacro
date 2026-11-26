@@ -1,0 +1,30 @@
+import json, os, zipfile
+from pathlib import Path
+import FreeCAD as App, Part, Mesh
+out=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_01")
+result={'freecad_version':App.Version(),'fcstd':{},'step':{},'stl':{},'creality_3mf':{}}
+d=App.openDocument(str(out/'CrossHorn_ABS_FitTest_Prototype_01.FCStd'))
+solids=[]
+for o in d.Objects:
+    if hasattr(o,'Shape') and not o.Shape.isNull(): solids.append({'name':o.Name,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids)})
+result['fcstd']={'opened':True,'shapes':solids,'valid':all(x['valid'] for x in solids)}
+App.closeDocument(d.Name)
+s=Part.read(str(out/'CrossHorn_Reference_Envelope.step'))
+result['step']={'opened':not s.isNull(),'valid':s.isValid(),'solids':len(s.Solids)}
+for name in ['CrossHorn_ABS_Clearance_Coupons_01.stl','CrossHorn_Reference_Envelope.stl']:
+    m=Mesh.Mesh(str(out/name)); result['stl'][name]={'facets':len(m.Facets),'solid_mesh':m.isSolid(),'bbox':[m.BoundBox.XLength,m.BoundBox.YLength,m.BoundBox.ZLength]}
+p=out/'Creality_Print_CrossHorn_ABS_FitTest_01.3mf'
+with zipfile.ZipFile(p) as z: result['creality_3mf']={'crc_ok':z.testzip() is None,'bytes':p.stat().st_size,'entries':len(z.namelist())}
+(out/'prototype_validation.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+# Check the one-coupon outputs requested in the follow-up without editing earlier files.
+single=App.openDocument(str(out/'CrossHorn_Single_FitTest_020.FCStd'))
+single_obj=single.getObject('CrossHornCoupon020')
+result['single_coupon_fcstd']={'opened':True,'valid':single_obj.Shape.isValid(),'solids':len(single_obj.Shape.Solids),'clearance_mm':single_obj.TotalLateralClearance.Value}
+App.closeDocument(single.Name)
+sm=Mesh.Mesh(str(out/'CrossHorn_Single_FitTest_020.stl'))
+result['single_coupon_stl']={'facets':len(sm.Facets),'solid_mesh':sm.isSolid(),'bbox':[sm.BoundBox.XLength,sm.BoundBox.YLength,sm.BoundBox.ZLength]}
+sp=out/'CrossHorn_Single_FitTest_020.3mf'
+with zipfile.ZipFile(sp) as z: result['single_coupon_3mf']={'crc_ok':z.testzip() is None,'bytes':sp.stat().st_size,'entries':len(z.namelist())}
+result['status']='CAD_AND_MESH_PASS; PHYSICAL_FIT_UNVERIFIED'
+(out/'prototype_validation.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps(result,indent=2))

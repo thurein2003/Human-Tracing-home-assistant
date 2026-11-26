@@ -1,0 +1,18 @@
+{
+  "TiltCradle_KeyedHorn_CameraFrame": 81.60000000000012,
+  "Camera_SlidingRail_Lower": "replaced by fixed camera plate",
+  "RailMount_Lower_M3x10_0": 380.45816786051705,
+  "RailMount_Lower_M3x10_1": 380.45816786051705,
+  "PCB_Spacer_Lower_Left": 90.66636398260141,
+  "Camera_M2x12_Lower_Left": 159.9511103258676,
+  "PCB_Spacer_Lower_Right": 90.66636398260141,
+  "Camera_M2x12_Lower_Right": 159.9511103258676,
+  "Camera_SlidingRail_Upper": "replaced by fixed camera plate",
+  "RailMount_Upper_M3x10_0": 380.45816786051705,
+  "RailMount_Upper_M3x10_1": 380.45816786051705,
+  "PCB_Spacer_Upper_Left": 90.66636398260141,
+  "Camera_M2x12_Upper_Left": 159.9511103258676,
+  "PCB_Spacer_Upper_Right": 90.66636398260141,
+  "Camera_M2x12_Upper_Right": 159.9511103258676,
+  "PCB_Cut003": 48.65698701879879
+}

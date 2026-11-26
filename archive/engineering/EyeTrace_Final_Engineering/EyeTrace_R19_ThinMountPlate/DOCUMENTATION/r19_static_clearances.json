@@ -1,0 +1,110 @@
+[
+  {
+    "part": "Base_EarMount_ThrustSupport",
+    "min_distance_mm": 0.2999999999999927,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "Pan_Replaceable_ThrustRing",
+    "min_distance_mm": 0.0,
+    "intersection_volume_mm3": 0.0,
+    "classification": "intentional thrust contact"
+  },
+  {
+    "part": "PanServo_SG90_Reference",
+    "min_distance_mm": 1.4999999999999927,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "Pan_OriginalStar_PROVISIONAL",
+    "min_distance_mm": 0.0,
+    "intersection_volume_mm3": 5.655341824014158,
+    "classification": "modeled horn engagement proxy"
+  },
+  {
+    "part": "Pan_KeyedHorn_Cover",
+    "min_distance_mm": 0.20000000000000284,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "PanDrive_M3x10_0",
+    "min_distance_mm": 0.19999999999999624,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "PanDrive_M3x10_1",
+    "min_distance_mm": 0.1999999999999961,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "PanDrive_M3x10_2",
+    "min_distance_mm": 0.19999999999999815,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "PanDrive_M3x10_3",
+    "min_distance_mm": 0.19999999999999815,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "TiltServo_SG90_Reference",
+    "min_distance_mm": 0.0,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "TiltCradle_KeyedHorn_CameraFrame",
+    "min_distance_mm": 1.999999999999993,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "Tilt_Removable_IdlerPillar",
+    "min_distance_mm": 0.0,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "Tilt_KeyedHorn_CaptiveCover",
+    "min_distance_mm": 0.3999999999999915,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "Tilt_Journal_FlangedSleeve",
+    "min_distance_mm": 33.499999999999986,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "TiltDrive_M3x10_0",
+    "min_distance_mm": 0.29999999999999716,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "TiltDrive_M3x10_1",
+    "min_distance_mm": 0.29999999999999716,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "TiltDrive_M3x10_2",
+    "min_distance_mm": 0.29999999999999716,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  },
+  {
+    "part": "TiltDrive_M3x10_3",
+    "min_distance_mm": 4.100340118365192,
+    "intersection_volume_mm3": 0.0,
+    "classification": "geometric clearance/contact; hardware fit not verified"
+  }
+]

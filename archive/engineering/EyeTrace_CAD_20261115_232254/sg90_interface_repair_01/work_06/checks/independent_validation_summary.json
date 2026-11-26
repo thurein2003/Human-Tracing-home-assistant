@@ -1,0 +1,12 @@
+{
+  "critical_software_failures": [],
+  "motion_penetrations": 213,
+  "positive_horn_drive": [
+    true,
+    true
+  ],
+  "physical_fit": "UNVERIFIED",
+  "native_components": 47,
+  "printed_components": 13,
+  "independent_of_builder": "Validator imports no builder code; opens saved native BRep and native expressions."
+}

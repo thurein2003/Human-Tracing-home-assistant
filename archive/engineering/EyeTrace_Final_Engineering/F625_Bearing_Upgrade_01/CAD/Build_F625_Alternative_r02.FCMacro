@@ -1,0 +1,168 @@
+﻿import FreeCAD as App, FreeCADGui as Gui, Part, MeshPart, ImportGui, os, sys, math, json, traceback, hashlib
+ROOT=r'EyeTrace_Final_Engineering\F625_Bearing_Upgrade_01'
+SRC=r'EyeTrace_Final_Engineering\Motion_Audit_02\Native_Simulations\EyeTrace_Final_Assembly_Native_Simulation_r02.FCStd'
+FCSTD=os.path.join(ROOT,'CAD','EyeTrace_F625_Alternative_r02.FCStd')
+LOG=os.path.join(ROOT,'CHECKS','build_log.txt')
+os.makedirs(os.path.join(ROOT,'CAD'),exist_ok=True)
+sys.path.append(r'D:\App files\Mod\Assembly')
+V=App.Vector
+try:
+ import JointObject, UtilsAssembly, CommandCreateSimulation as SimMod
+ doc=App.openDocument(SRC); doc.Label='Eye Trace - F625 optional bearing alternative'
+ asm=doc.getObject('EyeTraceNativeAssembly')
+ if asm is None: raise RuntimeError('Native assembly root missing')
+ links={k:doc.getObject(k+'Link') for k in ['BaseBody','PanServoBody','PanRotorBody','PanHornBody','TiltServoBody','TiltCradleBody','TiltHornBody']}
+ panbody=doc.getObject('PanRotorBody'); tiltbody=doc.getObject('TiltCradleBody')
+ axis=V(1,0,0)
+ def axial_cyl(r,length,x,y=0,z=78): return Part.makeCylinder(r,length,V(x,y,z),axis)
+ # Parametric, dimension-derived seat; the ABS allowance is nominal pending coupon calibration.
+ pillar_src=doc.getObject('Tilt_Removable_IdlerPillar').Shape.copy()
+ seat_cut=axial_cyl(9.10,1.10,36.0).fuse(axial_cyl(8.10,7.0,37.0) )
+ # Two M3 retaining screws at y=+/-13; counter pockets open on the outboard face.
+ def hex_prism(cx,cy,cz,across_flats,xlen):
+  rad=across_flats/math.sqrt(3.0)
+  pts=[V(cx,cy+rad*math.cos(math.radians(30+60*i)),cz+rad*math.sin(math.radians(30+60*i))) for i in range(6)]; pts.append(pts[0])
+  return Part.Face(Part.Wire(Part.makePolygon(pts).Edges)).extrude(V(xlen,0,0))
+ for yy in (-13.0,13.0):
+  seat_cut=seat_cut.fuse(Part.makeCylinder(1.70,8.0,V(36,yy,78),axis))
+  seat_cut=seat_cut.fuse(hex_prism(41.6,yy,78,5.7,2.4))
+ pillar_shape=pillar_src.cut(seat_cut)
+ if not pillar_shape.isValid() or len(pillar_shape.Solids)!=1: raise RuntimeError('F625 pillar seat boolean invalid')
+ # Catalog external envelope only: bore 5, OD16, width5, flange OD18 x 1; internal races/shields not fabricated.
+ bearing=axial_cyl(8.0,5.0,36.0).cut(axial_cyl(2.5,5.0,36.0))
+ bearing=bearing.fuse(axial_cyl(9.0,1.0,36.0).cut(axial_cyl(2.5,1.0,36.0)))
+ # Removable outer-race-only retainer. 0.15 mm axial float; 13 mm clear bore is provisional pending face inspection.
+ cap=Part.makeBox(6.0,34.0,28.0,V(44,-17,64)).cut(Part.makeCylinder(6.5,9.0,V(41,0,78),axis))
+ boss=axial_cyl(8.0,2.85,41.15).cut(axial_cyl(6.5,2.85,41.15))
+ cap=cap.fuse(boss)
+ for yy in (-13.0,13.0): cap=cap.cut(Part.makeCylinder(1.70,6.0,V(44,yy,78),axis))
+ # Simplified hardware representations: two M3x10 retainer screws/nuts and pivot M3x16, washer, stepped tube.
+ def axial_screw(length,xhead,cy=0,cz=78,head_r=2.8,head_l=2.8):
+  shaft=Part.makeCylinder(1.5,length,V(xhead-head_l-length,cy,cz),axis)
+  head=Part.makeCylinder(head_r,head_l,V(xhead-head_l,cy,cz),axis)
+  return shaft.fuse(head)
+ # cap exterior is x=50; screw head at x=50. Axis directed inward (-X).
+ retain_screws=[]; retain_nuts=[]
+ for i,yy in enumerate((-13.0,13.0)):
+  sh=Part.makeCylinder(1.5,10.0,V(40,yy,78),axis).fuse(Part.makeCylinder(2.8,2.2,V(50,yy,78),axis))
+  retain_screws.append(sh)
+  retain_nuts.append(hex_prism(41.6,yy,78,5.7,2.4).cut(Part.makeCylinder(1.6,2.4,V(41.6,yy,78),axis)))
+ bearing_feature=doc.addObject('Part::Feature','F625_ZZ_Envelope'); bearing_feature.Label='F625 ZZ external envelope (catalog dims; race internals schematic)'; bearing_feature.Shape=bearing; bearing_feature.ViewObject.ShapeColor=(0.68,0.70,0.74); bearing_feature.ViewObject.Transparency=15
+ pillar_feature=doc.addObject('Part::Feature','Tilt_IdlerPillar_F625'); pillar_feature.Label='Tilt idler pillar - F625 through seat'; pillar_feature.Shape=pillar_shape; pillar_feature.ViewObject.ShapeColor=(0.78,0.52,0.22)
+ cap_feature=doc.addObject('Part::Feature','F625_OuterRace_Retainer'); cap_feature.Label='F625 outer-race retainer cap - ABS'; cap_feature.Shape=cap; cap_feature.ViewObject.ShapeColor=(0.85,0.62,0.24)
+ def ref_feature(name,label,shape,color=(0.55,0.58,0.62)):
+  o=doc.addObject('Part::Feature',name); o.Label=label; o.Shape=shape; o.ViewObject.ShapeColor=color; o.ViewObject.Visibility=False; return o
+ screw_features=[ref_feature('F625_Cap_M3x10_'+str(i+1),'M3x10 cap screw reference '+str(i+1),s) for i,s in enumerate(retain_screws)]
+ nut_features=[ref_feature('F625_Cap_M3_Nut_'+str(i+1),'M3 nut reference '+str(i+1),s) for i,s in enumerate(retain_nuts)]
+ # Replace old plain-journal sleeve/bolt/washer with a coaxial stepped metal adapter tube and longer M3 pivot screw.
+ adapter=axial_cyl(2.475,8.0,33.0).cut(Part.makeCylinder(1.6,8.0,V(33.0,0,78),axis))
+ axle_screw=axial_cyl(1.5,16.0,33.0).fuse(Part.makeCylinder(2.8,2.8,V(30.2,0,78),axis))
+ inner_washer=axial_cyl(3.0,0.5,41.0).cut(Part.makeCylinder(1.6,0.5,V(41.0,0,78),axis))
+ def hex_nut(x0,y0,z0,af=5.5,thick=2.4,bore=3.2):
+  rad=af/math.sqrt(3.0)
+  pts=[V(x0,y0+rad*math.cos(math.radians(60*i)),z0+rad*math.sin(math.radians(60*i))) for i in range(6)];pts.append(pts[0])
+  return Part.Face(Part.Wire(Part.makePolygon(pts).Edges)).extrude(V(thick,0,0)).cut(Part.makeCylinder(bore/2,thick,V(x0,y0,z0),axis))
+ axle_nut=hex_nut(41.5,0,78)
+ adapter_f=ref_feature('F625_Stepped_Adapter_Sleeve','Nonprinted precision adapter sleeve: 4.95 OD / 3.2 ID; 8 mm clamp stack',adapter,(0.72,0.72,0.76))
+ axle_f=ref_feature('Tilt_Axle_M3x16','M3x16 pivot screw reference (purchase if needed)',axle_screw)
+ washer_f=ref_feature('Tilt_Axle_InnerRace_Washer','M3 inner-race washer reference OD6',inner_washer)
+ nut_f=ref_feature('Tilt_Axle_M3_Nut','M3 pivot nut reference',axle_nut)
+ # Compact ABS fit coupon: four vertical bearing seats and three retainer-aperture gauges.
+ coupon=Part.makeBox(90.0,44.0,2.4,V(0,0,0))
+ seat_ds=[16.0,16.1,16.2,16.3]
+ for x,dia in zip((12.0,34.0,56.0,78.0),seat_ds):
+  post=Part.makeCylinder(10.2,6.0,V(x,12.5,2.4),V(0,0,1))
+  coupon=coupon.fuse(post)
+  coupon=coupon.cut(Part.makeCylinder(dia/2,8.4,V(x,12.5,0),V(0,0,1)))
+  coupon=coupon.cut(Part.makeCylinder(9.1,1.1,V(x,12.5,7.3),V(0,0,1)))
+ for x,dia in zip((20.0,45.0,70.0),(12.5,13.5,14.5)):
+  ring=Part.makeCylinder(9.1,1.8,V(x,34.0,2.4),V(0,0,1)).cut(Part.makeCylinder(dia/2,1.8,V(x,34.0,2.4),V(0,0,1)))
+  coupon=coupon.fuse(ring)
+ coupon=coupon.removeSplitter()
+ if not coupon.isValid() or len(coupon.Solids)!=1: raise RuntimeError('Fit coupon boolean invalid')
+ coupon_f=doc.addObject('Part::Feature','F625_ABS_Fit_Coupon'); coupon_f.Label='F625 ABS coupon - seat IDs 16.0/16.1/16.2/16.3 and cap IDs 12.5/13.5/14.5'; coupon_f.Shape=coupon; coupon_f.ViewObject.ShapeColor=(0.28,0.70,0.42)
+ # Replace rigid link source shapes in the copied assembly; all earlier files remain untouched.
+ panmembers=list(panbody.RigidMembers)
+ pan_shapes=[]
+ for n in panmembers:
+  pan_shapes.append(pillar_shape if n=='Tilt_Removable_IdlerPillar' else doc.getObject(n).Shape.copy())
+ pan_shapes += [bearing,cap]+retain_screws+retain_nuts
+ panbody.Shape=Part.makeCompound(pan_shapes)
+ panbody.RigidMembers=[n for n in panmembers if n!='Tilt_Removable_IdlerPillar']+['Tilt_IdlerPillar_F625','F625_ZZ_Envelope','F625_OuterRace_Retainer','F625 cap fasteners (2x M3x10 + 2x M3 nuts)']
+ tilt_members=list(tiltbody.RigidMembers); tilt_shapes=[]
+ for n in tilt_members:
+  if n in ['Tilt_Journal_FlangedSleeve','TiltIdler_M3x12','TiltIdler_M3_Washer']: continue
+  tilt_shapes.append(doc.getObject(n).Shape.copy())
+ tilt_shapes += [adapter,axle_screw,inner_washer,axle_nut]
+ tiltbody.Shape=Part.makeCompound(tilt_shapes)
+ tiltbody.RigidMembers=[n for n in tilt_members if n not in ['Tilt_Journal_FlangedSleeve','TiltIdler_M3x12','TiltIdler_M3_Washer']]+['F625_Stepped_Adapter_Sleeve','Tilt_Axle_M3x16','Tilt_Axle_InnerRace_Washer','Tilt_Axle_M3_Nut']
+ doc.recompute()
+ solver=asm.solve()
+ if solver!=0: raise RuntimeError('Assembly solver return '+str(solver))
+ doc.recompute(); doc.saveAs(FCSTD)
+ # Make updated printable and hardware features discoverable without making a production print bed.
+ printed=doc.getObject('PrintedComponents')
+ if printed:
+  printed.addObject(pillar_feature); printed.addObject(cap_feature); printed.addObject(coupon_f)
+ hw=doc.getObject('HardwareReferences')
+ if hw:
+  for o in [bearing_feature,adapter_f,axle_f,washer_f,nut_f]+screw_features+nut_features: hw.addObject(o)
+ for o in [pillar_feature,cap_feature,coupon_f,bearing_feature,adapter_f,axle_f,washer_f,nut_f]+screw_features+nut_features: o.ViewObject.Visibility=False
+ # Relevant geometry and interference validation in actual component transforms.
+ base=doc.getObject('BaseBody').Shape.copy(); pan_servo=doc.getObject('PanServoBody').Shape.copy(); rotor=panbody.Shape.copy(); pan_horn=doc.getObject('PanHornBody').Shape.copy(); tilt_servo=doc.getObject('TiltServoBody').Shape.copy(); moving=tiltbody.Shape.copy().fuse(doc.getObject('TiltHornBody').Shape.copy())
+ base_and_servo=Part.makeCompound([base,pan_servo]); rotor_all=Part.makeCompound([rotor,pan_horn,tilt_servo])
+ def rotated(sh,center,ax,deg): q=sh.copy(); q.rotate(center,ax,deg); return q
+ tilt_rows=[]
+ for deg in range(-30,31):
+  m=rotated(moving,V(-41,0,78),V(1,0,0),deg)
+  vals={name:round(m.common(sh).Volume,7) for name,sh in [('rotor',rotor_all),('bearing',bearing),('pillar',pillar_shape),('retainer',cap)]}
+  if any(v>1e-5 for v in vals.values()): tilt_rows.append({'tilt_deg':deg,'overlap_mm3':vals})
+ pan_rows=[]
+ for deg in range(-90,91,2):
+  r=rotated(rotor_all,V(0,0,35),V(0,0,1),deg); m=rotated(moving,V(-41,0,78),V(1,0,0),0); m=rotated(m,V(0,0,35),V(0,0,1),deg)
+  ov=r.common(base_and_servo).Volume+m.common(base_and_servo).Volume
+  if ov>1e-5: pan_rows.append({'pan_deg':deg,'overlap_mm3':ov})
+ combined=[]
+ for pdeg in range(-90,91,15):
+  r=rotated(rotor_all,V(0,0,35),V(0,0,1),pdeg)
+  for tdeg in range(-30,31,10):
+   m=rotated(moving,V(-41,0,78),V(1,0,0),tdeg); m=rotated(m,V(0,0,35),V(0,0,1),pdeg)
+   ov=r.common(base_and_servo).Volume+m.common(base_and_servo).Volume
+   if ov>1e-5: combined.append({'pan_deg':pdeg,'tilt_deg':tdeg,'overlap_mm3':ov})
+ # Assembly-native simulations are regenerated with the new bearing and axle rigid bodies.
+ sg=UtilsAssembly.getSimulationGroup(asm); simchecks=[]
+ for sim in sg.Group:
+  savepls={k:l.Placement for k,l in links.items()}
+  asm.generateSimulation(sim); n=asm.numberOfFrames(); asm.updateForFrame(max(1,n//4))
+  rel=links['PanRotorBody'].Placement.inverse().multiply(links['TiltCradleBody'].Placement)
+  simchecks.append({'name':sim.Label,'frames':n,'pan_link_angle_deg':round(links['PanRotorBody'].Placement.Rotation.Angle*180/math.pi,4),'tilt_relative_angle_deg':round(rel.Rotation.Angle*180/math.pi,4)})
+  for k,l in links.items(): l.Placement=savepls[k]
+  doc.recompute()
+ # Mesh export helper, retaining CAD source orientation for fit coupon; pillar print orientation is separately oriented to put bearing axis vertical.
+ def write_stl(shape,path,rotate_to_bed=False):
+  s=shape.copy()
+  if rotate_to_bed:
+   c=V(36,0,78); s.rotate(c,V(0,1,0),-90)
+   bb=s.BoundBox; s.translate(V(-bb.XMin,-bb.YMin,-bb.ZMin))
+  mesh=MeshPart.meshFromShape(Shape=s,LinearDeflection=0.10,AngularDeflection=0.10,Relative=False)
+  mesh.write(path)
+ write_stl(pillar_shape,os.path.join(ROOT,'STL','Tilt_IdlerPillar_F625_ABS_SeatAxisVertical_r02.stl'),True)
+ write_stl(cap,os.path.join(ROOT,'STL','F625_OuterRace_Retainer_ABS_r02.stl'),True)
+ write_stl(coupon,os.path.join(ROOT,'FIT_TESTS','F625_ABS_Fit_Coupon_r02.stl'),False)
+ # Full editable file and STEP assembly export.
+ doc.recompute(); doc.saveAs(FCSTD)
+ try:
+  ImportGui.export([asm],os.path.join(ROOT,'CAD','EyeTrace_F625_Alternative_r02.step'))
+  step_status='exported'
+ except Exception as e: step_status='failed: '+repr(e)
+ # Actual CAD viewport screenshots after returning links to neutral placements.
+ Gui.activeDocument().activeView().viewAxonometric(); Gui.activeDocument().activeView().fitAll(); Gui.activeDocument().activeView().saveImage(os.path.join(ROOT,'RENDERS','F625_assembly_neutral.png'),1400,1000,'Current')
+ # Export report and hashes.
+ srcfile=r'EyeTrace_Final_Engineering\CAD\EyeTrace_Final_Assembly.FCStd'
+ data={'source_assembly':srcfile,'source_sha256':hashlib.sha256(open(srcfile,'rb').read()).hexdigest(),'freecad_version':App.Version(),'assembly_file':FCSTD,'assembly_solver_return':solver,'joint_counts':{'grounded':1,'fixed':4,'revolute':2,'intended_dof':2},'bearing_dimensions_mm':{'bore':5.0,'od':16.0,'width':5.0,'flange_od':18.0,'flange_width':1.0,'source':'NSK F625ZZ product data; actual physical lot still measure'},'seat':{'barrel_diam_mm':16.2,'flange_recess_diam_mm':18.2,'seat_axis':'X through (0,0,78), coaxial with tilt pivot','radial_clearance_nominal_mm':0.1,'axial_endplay_design_mm':0.15},'pillar':{'valid':pillar_shape.isValid(),'solids':len(pillar_shape.Solids),'volume_mm3':pillar_shape.Volume,'removed_volume_mm3':pillar_src.Volume-pillar_shape.Volume},'bearing_envelope':{'valid':bearing.isValid(),'solids':len(bearing.Solids),'collision_class':'outer-envelope only; race/shield internal geometry schematic and not modeled'},'retainer':{'valid':cap.isValid(),'solids':len(cap.Solids),'center_clearance_diam_mm':13.0,'fixings':'2x M3x10 into M3 nuts captured in pillar'},'adapter':{'nominal_od_mm':4.95,'id_mm':3.2,'length_mm':8.0,'hardware':'nonprinted precision metal sleeve; measured actual shaft/bore required'},'coupon':{'valid':coupon.isValid(),'solids':len(coupon.Solids),'seat_ids_mm':seat_ds,'retainer_openings_mm':[12.5,13.5,14.5],'bbox_mm':[coupon.BoundBox.XLength,coupon.BoundBox.YLength,coupon.BoundBox.ZLength]},'collisions':{'tilt_sweep_deg':[-30,30],'tilt_samples':61,'tilt_interferences':tilt_rows,'pan_sweep_deg':[-90,90],'pan_step_deg':2,'pan_interferences':pan_rows,'simultaneous_samples':91,'simultaneous_interferences':combined},'native_simulations':simchecks,'step_export':step_status}
+ with open(os.path.join(ROOT,'CHECKS','f625_upgrade_validation.json'),'w',encoding='utf-8') as f: json.dump(data,f,indent=2)
+ with open(LOG,'w',encoding='utf-8') as f: f.write('SUCCESS\n'+json.dumps({'step':step_status,'solver':solver,'tilt_collisions':len(tilt_rows),'pan_collisions':len(pan_rows),'combined_collisions':len(combined),'sims':simchecks},indent=2))
+except Exception:
+ with open(LOG,'w',encoding='utf-8') as f: f.write(traceback.format_exc())
+
+

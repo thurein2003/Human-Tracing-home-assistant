@@ -1,0 +1,9 @@
+import FreeCAD as App,Part,json
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(src); y=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape;b=d.getObject('Base_EarMount_ThrustSupport').Shape
+sl=Part.makeBox(16.4,57,1.8,V(27.6,-28.5,35.2));k=Part.makeCylinder(22,2,V(0,0,35.1)); contacts=[(32,0),(27.5,0),(30.9,0),(-14.1,-25.9807621135),(-14.1,25.9807621135)]
+for x,yy in contacts[:3]:k=k.fuse(Part.makeCylinder(3.2,2,V(x,yy,35.1)))
+n=y.cut(sl.cut(k)).removeSplitter();out={'valid':n.isValid(),'solids':len(n.Solids),'vol_before':y.Volume,'vol_after':n.Volume,'removed':y.Volume-n.Volume,'bbox':[n.BoundBox.XMin,n.BoundBox.XMax,n.BoundBox.YMin,n.BoundBox.YMax,n.BoundBox.ZMin,n.BoundBox.ZMax],'base_intersection':n.common(b).Volume,'contact_columns':[]}
+for x,yy in contacts:
+ q=n.common(Part.makeBox(.1,.1,10,V(x-.05,yy-.05,34)));out['contact_columns'].append([x,yy,q.BoundBox.ZMin if q.Volume else None,q.BoundBox.ZMax if q.Volume else None])
+open(r'EyeTrace_Final_Engineering\EyeTrace_R24_PanYoke_OneLayer\DOCUMENTATION\overlap_trim_test_v3.json','w').write(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

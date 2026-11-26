@@ -1,0 +1,7 @@
+﻿import FreeCAD as App,Mesh,json
+d=App.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_R20_UltraLowProfile\CAD\EyeTrace_R20_UltraLowProfile.FCStd')
+o=d.getObject('Pan_KeyedHorn_Cover'); b=o.Shape.BoundBox
+m=Mesh.Mesh(r'EyeTrace_Final_Engineering\EyeTrace_R20_UltraLowProfile\STL\Pan_KeyedHorn_Cover.stl')
+q=m.BoundBox
+print(json.dumps({'cover_shape':[b.XMin,b.XMax,b.YMin,b.YMax,b.ZMin,b.ZMax],'stl_bbox':[q.XMin,q.XMax,q.YMin,q.YMax,q.ZMin,q.ZMax],'stl_facets':len(m.Facets),'stl_solid':m.isSolid()}))
+App.closeDocument(d.Name)

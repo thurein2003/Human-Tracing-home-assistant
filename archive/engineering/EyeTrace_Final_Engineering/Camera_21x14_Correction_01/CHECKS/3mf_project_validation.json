@@ -1,0 +1,14 @@
+{
+  "EyeTrace_K2_ABS_Full_21x14.3mf": {
+    "zip_test": null,
+    "mesh_objects": 13,
+    "build_items": 13,
+    "bytes": 386235
+  },
+  "Camera_21x14_ABS_FitTest.3mf": {
+    "zip_test": null,
+    "mesh_objects": 1,
+    "build_items": 1,
+    "bytes": 23889
+  }
+}

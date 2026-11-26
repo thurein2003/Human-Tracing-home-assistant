@@ -1,0 +1,11 @@
+{
+  "renderer": "Installed FreeCAD1.1.4 Coin3D",
+  "resolution": [
+    1600,
+    1200
+  ],
+  "views": 12,
+  "native_recommended": "EyeTrace_Repair_Assembly.FCStd",
+  "camera": "Provisional four-hole reference; no user camera photograph supplied",
+  "cutaways": "Derived from actual saved component solids; no AI artwork"
+}

@@ -1,0 +1,89 @@
+{
+  "revision": "R22_UnifiedBottomMount",
+  "modified_component": "PanYoke_EarBracket_KeyedDrive only",
+  "preserved_components": [
+    "1 mm Pan_Replaceable_ThrustRing (separate thrust interface)",
+    "Pan_KeyedHorn_Cover R21 frame",
+    "all servos, fasteners, tilt and camera components"
+  ],
+  "web_change": {
+    "rectangular_web_original_mm": 4.0,
+    "rectangular_web_final_mm": 2.500000000000007,
+    "measurement_xy_mm": [
+      40,
+      20
+    ],
+    "z_range_mm": [
+      36.99999999999999,
+      39.5
+    ],
+    "reinforced_hole_centers_mm": [
+      [
+        32.5,
+        23.5
+      ],
+      [
+        32.5,
+        -23.5
+      ]
+    ],
+    "bosses_retained_original_top_height_mm": 4.0,
+    "hole_checks": [
+      {
+        "center_mm": [
+          32.5,
+          23.5
+        ],
+        "interference_mm3": 0.0
+      },
+      {
+        "center_mm": [
+          32.5,
+          -23.5
+        ],
+        "interference_mm3": 0.0
+      }
+    ]
+  },
+  "circular_land_change": {
+    "original_mm": 2.8,
+    "final_measured_mm": 2.5,
+    "measurement_xy_mm": [
+      34,
+      0
+    ],
+    "z_range_mm": [
+      35.2,
+      37.7
+    ],
+    "thrust_ring_footprint_protected_radius_mm": 32.5
+  },
+  "volume_mm3": {
+    "original_yoke": 28124.74950373492,
+    "final_yoke": 27162.310325591618,
+    "removed": 962.4391781433042
+  },
+  "central_horn_shaft_region_symmetric_difference_mm3": 0.0,
+  "mating_clearances": {
+    "yoke_thrust_ring_intersection_mm3": 0.0,
+    "yoke_retainer_intersection_mm3": 0.0
+  },
+  "valid_solid": true,
+  "solid_count": 1,
+  "mesh_watertight": true,
+  "mesh_facets": 77030,
+  "mesh_bbox_bed_mm": [
+    13.0,
+    115.19999694824219,
+    13.002087593078613,
+    83.59791564941406,
+    0.0,
+    67.80000305175781
+  ],
+  "physical_fit": "Not physically verified; CAD geometry only.",
+  "files": {
+    "fcstd": "EyeTrace_Final_Engineering\\EyeTrace_R22_UnifiedBottomMount\\CAD\\EyeTrace_R22_UnifiedBottomMount.FCStd",
+    "step": "EyeTrace_Final_Engineering\\EyeTrace_R22_UnifiedBottomMount\\CAD\\PanYoke_R22_UnifiedBottomMount.step",
+    "stl": "EyeTrace_Final_Engineering\\EyeTrace_R22_UnifiedBottomMount\\STL\\PanYoke_R22_UnifiedBottomMount.stl"
+  }
+}

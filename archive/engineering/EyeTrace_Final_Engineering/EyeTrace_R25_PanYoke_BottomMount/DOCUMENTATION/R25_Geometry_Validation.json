@@ -1,0 +1,184 @@
+{
+  "source_assembly_sha256": "8ee0ee8d7562c0ac15d543c3a9b17731a59848eff0c421e8c39fb1a89f418675",
+  "updated_assembly_sha256": "bdf1be576a46742fa4ef6971ffb967ab874bd68432db132ecd66d7747d311963",
+  "stl_sha256": "7ea3d1e90d51b66fd88a1ac9f2825e2561d2ccc4c8b318439efa6c56f990146f",
+  "modified_component": "PanYoke_EarBracket_KeyedDrive",
+  "assembly_object_count": 55,
+  "brep_valid": true,
+  "brep_solids": 1,
+  "exact_preview_match_mm3": 0.0,
+  "baseline_yoke_volume_mm3": 27995.837688442032,
+  "updated_yoke_volume_mm3": 30158.42878251536,
+  "preserved_shape_objects": [
+    "Base_EarMount_ThrustSupport",
+    "PanServo_SG90_Reference",
+    "TiltServo_SG90_Reference",
+    "Pan_OriginalStar_PROVISIONAL",
+    "Tilt_OriginalStar_PROVISIONAL",
+    "PanOriginalScrew_PROVISIONAL",
+    "TiltOriginalScrew_PROVISIONAL",
+    "Tilt_Removable_IdlerPillar",
+    "IdlerPillar_M3x10_0",
+    "IdlerPillar_M3x10_1",
+    "Pan_KeyedHorn_Cover",
+    "PanDrive_M3x10_0",
+    "PanDrive_M3x10_1",
+    "PanDrive_M3x10_2",
+    "PanDrive_M3x10_3",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "TiltDrive_M3x10_0",
+    "TiltDrive_M3x10_1",
+    "TiltDrive_M3x10_2",
+    "TiltDrive_M3x10_3",
+    "Tilt_Journal_FlangedSleeve",
+    "TiltIdler_M3x12",
+    "TiltIdler_M3_Washer",
+    "PanEar_M1p6x8_0",
+    "PanEar_M1p6x8_1",
+    "TiltEar_M1p6x8_0",
+    "TiltEar_M1p6x8_1",
+    "RailMount_Lower_M3x10_0",
+    "RailMount_Lower_M3x10_1",
+    "PCB_Spacer_Lower_Left",
+    "Camera_M2x12_Lower_Left",
+    "PCB_Spacer_Lower_Right",
+    "Camera_M2x12_Lower_Right",
+    "RailMount_Upper_M3x10_0",
+    "RailMount_Upper_M3x10_1",
+    "PCB_Spacer_Upper_Left",
+    "Camera_M2x12_Upper_Left",
+    "PCB_Spacer_Upper_Right",
+    "Camera_M2x12_Upper_Right",
+    "PanServo_WireExit_KEEP_OUT",
+    "TiltServo_WireExit_KEEP_OUT",
+    "CameraPlate_Cut007",
+    "Camera_Lens_PROVISIONAL",
+    "Camera_WireExit_KEEP_OUT",
+    "Camera_RearComponents_KEEP_OUT",
+    "Pan_R15_FitEnvelope",
+    "Tilt_R15_FitEnvelope"
+  ],
+  "all_object_placements_preserved": true,
+  "horn_shaft_and_drive_region_difference_mm3": 0.0,
+  "thrust_and_register_inside_diameter_difference_mm3": 0.0,
+  "fastener_bores_and_nut_seats_difference_mm3": {
+    "-23.5": 0.0,
+    "23.5": 0.0
+  },
+  "plate_01_intersection_mm3": 0.0,
+  "plate_01_contact_distance_mm": 0.0,
+  "thrust_contact_face_area_mm2": 833.527362850445,
+  "deck_sections_z_mm": {
+    "(0, 34)": {
+      "R23": [
+        [
+          35.2,
+          37.7
+        ]
+      ],
+      "R25": [
+        [
+          37.0,
+          39.5
+        ]
+      ]
+    },
+    "(34, 0)": {
+      "R23": [
+        [
+          35.2,
+          37.7
+        ]
+      ],
+      "R25": [
+        [
+          37.0,
+          39.5
+        ]
+      ]
+    },
+    "(-35, 0)": {
+      "R23": [
+        [
+          35.2,
+          37.7
+        ]
+      ],
+      "R25": [
+        [
+          37.0,
+          39.5
+        ]
+      ]
+    },
+    "(40, 20)": {
+      "R23": [
+        [
+          37.0,
+          39.5
+        ]
+      ],
+      "R25": [
+        [
+          37.0,
+          39.5
+        ]
+      ]
+    },
+    "(35, -10)": {
+      "R23": [
+        [
+          37.0,
+          39.5
+        ]
+      ],
+      "R25": [
+        [
+          37.0,
+          39.5
+        ]
+      ]
+    },
+    "(30, 0)": {
+      "R23": [
+        [
+          37.0,
+          37.7
+        ]
+      ],
+      "R25": [
+        [
+          37.0,
+          39.5
+        ]
+      ]
+    }
+  },
+  "added_material_mm3": 3203.0257216735718,
+  "removed_material_mm3": 1040.4346276003816,
+  "new_static_interference_mm3": {
+    "PanOriginalScrew_PROVISIONAL": 0.0,
+    "IdlerPillar_M3x10_0": 0.0,
+    "IdlerPillar_M3x10_1": 0.0,
+    "PanDrive_M3x10_0": 0.0,
+    "PanDrive_M3x10_1": 0.0,
+    "PanDrive_M3x10_2": 0.0,
+    "PanDrive_M3x10_3": 0.0
+  },
+  "stl": {
+    "watertight": true,
+    "components": 1,
+    "nonmanifold_edges": 0,
+    "facets": 127406,
+    "bounds_mm": [
+      13.0,
+      115.2,
+      13.00137,
+      83.59863,
+      0.0,
+      67.8
+    ],
+    "mesh_volume_mm3": 30156.849609375
+  }
+}

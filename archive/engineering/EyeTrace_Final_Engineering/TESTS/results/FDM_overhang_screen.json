@@ -1,0 +1,145 @@
+{
+  "Base_EarMount_ThrustSupport": {
+    "surface_area_mm2": 26559.153027396245,
+    "downward_area_over45deg_excluding_first_layer_mm2": 341.15132904361514,
+    "support_review_required": true,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      80.0,
+      70.0,
+      36.5
+    ]
+  },
+  "Pan_Replaceable_ThrustRing": {
+    "surface_area_mm2": 2056.2236518593472,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      64.0,
+      64.0,
+      1.0
+    ]
+  },
+  "PanYoke_EarBracket_KeyedDrive": {
+    "surface_area_mm2": 23823.419965712397,
+    "downward_area_over45deg_excluding_first_layer_mm2": 5004.311379411723,
+    "support_review_required": true,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      102.2,
+      70.6,
+      70.0
+    ]
+  },
+  "Tilt_Removable_IdlerPillar": {
+    "surface_area_mm2": 7016.6757538167185,
+    "downward_area_over45deg_excluding_first_layer_mm2": 10.693881563029109,
+    "support_review_required": true,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      16.0,
+      57.0,
+      57.0
+    ]
+  },
+  "Pan_KeyedHorn_Cover": {
+    "surface_area_mm2": 4308.816267808999,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      48.0,
+      48.0,
+      4.200000000000006
+    ]
+  },
+  "TiltCradle_KeyedHorn_CameraFrame": {
+    "surface_area_mm2": 17542.359203376454,
+    "downward_area_over45deg_excluding_first_layer_mm2": 2193.2403539990028,
+    "support_review_required": true,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      45.000000000000014,
+      45.4,
+      77.0
+    ]
+  },
+  "Tilt_KeyedHorn_CaptiveCover": {
+    "surface_area_mm2": 3433.1092636660514,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      42.00000000000001,
+      42.0,
+      4.200000000000017
+    ]
+  },
+  "Tilt_Journal_FlangedSleeve": {
+    "surface_area_mm2": 173.33292360975773,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      7.0,
+      7.0,
+      4.099999999999994
+    ]
+  },
+  "PCB_Spacer_Lower_Left": {
+    "surface_area_mm2": 99.9210460991505,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      5.0,
+      4.9999999999999964,
+      3.0
+    ]
+  },
+  "PCB_Spacer_Lower_Right": {
+    "surface_area_mm2": 99.9210460991505,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      5.0,
+      4.9999999999999964,
+      3.0
+    ]
+  },
+  "PCB_Spacer_Upper_Left": {
+    "surface_area_mm2": 99.9210460991505,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      5.0,
+      4.9999999999999964,
+      3.0
+    ]
+  },
+  "PCB_Spacer_Upper_Right": {
+    "surface_area_mm2": 99.9210460991505,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      5.0,
+      4.9999999999999964,
+      3.0
+    ]
+  },
+  "CameraPlate_21x16": {
+    "surface_area_mm2": 3883.023460135332,
+    "downward_area_over45deg_excluding_first_layer_mm2": 0.0,
+    "support_review_required": false,
+    "screen": "Triangle normal area screening; bridge length, support access and toolpaths must be reviewed in slicer",
+    "bbox_print_mm": [
+      56.0,
+      32.0,
+      3.0000000000000107
+    ]
+  }
+}

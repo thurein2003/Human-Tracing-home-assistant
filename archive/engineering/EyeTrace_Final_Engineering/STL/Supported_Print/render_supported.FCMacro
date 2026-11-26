@@ -1,0 +1,27 @@
+﻿import FreeCAD as A,FreeCADGui as G,Mesh,os,traceback,json,zipfile,xml.etree.ElementTree as E
+from FreeCAD import Vector as V
+from PySide import QtCore,QtWidgets,QtGui
+R=os.path.dirname(os.path.abspath(__file__))
+def run():
+ try:
+  d=A.openDocument(os.path.join(R,'CAD','Supported_Print_Layout_v02.FCStd'));obs=[o for o in d.Objects if hasattr(o,'SourceComponent')];qa={}
+  def shot(name,items,top=False):
+   s=A.newDocument('Photo_'+name)
+   for label,shape,color,tr in items:
+    q=s.addObject('PartDesign::Feature',label);q.Shape=shape;q.ViewObject.ShapeColor=color;q.ViewObject.Transparency=tr
+   s.recompute();G.updateGui();QtWidgets.QApplication.processEvents();v=G.activeDocument().activeView();v.viewTop() if top else v.viewAxonometric();G.updateGui();v.fitAll();G.updateGui();QtWidgets.QApplication.processEvents();v.fitAll();path=os.path.join(R,'IMAGES',name+'.png');v.saveImage(path,1600,1200,'White');im=QtGui.QImage(path);n=sum(min(im.pixelColor(x,y).red(),im.pixelColor(x,y).green(),im.pixelColor(x,y).blue())<235 for x in range(0,1600,12) for y in range(0,1200,12));assert n>20;qa[name]={'nonwhite_samples':n,'type':'actual CAD'};A.closeDocument(s.Name)
+  items=[(o.Name,o.Shape,(.85,.5,.15) if o.Name.startswith('CameraPlate') else (.15,.45,.7),0) for o in obs];shot('layout_iso',items);shot('layout_top',items,True)
+  with zipfile.ZipFile(os.path.join(R,'EyeTrace_K2_PETG_Supported_Project_v04.3mf')) as z:root=E.fromstring(z.read('3D/3dmodel.model'))
+  ns={'m':'http://schemas.microsoft.com/3dmanufacturing/core/2015/02'}
+  for meshobj in root.findall('m:resources/m:object',ns):
+   mesh=meshobj.find('m:mesh',ns)
+   if mesh is None:continue
+   painted=[t for t in mesh.findall('m:triangles/m:triangle',ns) if t.get('paint_supports')=='4']
+   if not painted:continue
+   vs=[V(float(v.get('x')),float(v.get('y')),float(v.get('z'))) for v in mesh.findall('m:vertices/m:vertex',ns)];facets=[[vs[int(t.get(k))] for k in ['v1','v2','v3']] for t in painted];name=meshobj.get('name');o=next(o for o in obs if o.Name==name);s=A.newDocument('Contacts_'+name);q=s.addObject('PartDesign::Feature','ActualPart');q.Shape=o.Shape;q.ViewObject.ShapeColor=(.2,.5,.7);q.ViewObject.Transparency=75;p=s.addObject('Mesh::Feature','SelectedSupportContacts');p.Mesh=Mesh.Mesh(facets);p.ViewObject.ShapeColor=(.1,.8,.2);p.ViewObject.DisplayMode='Flat Lines';s.recompute();G.updateGui();QtWidgets.QApplication.processEvents();v=G.activeDocument().activeView();v.viewAxonometric();G.updateGui();v.fitAll();G.updateGui();QtWidgets.QApplication.processEvents();v.fitAll();fn='contacts_'+name;v.saveImage(os.path.join(R,'IMAGES',fn+'.png'),1600,1200,'White');qa[fn]={'type':'Actual3MF support-enforcer faces GREEN; part transparent, NOT generated support mesh'};A.closeDocument(s.Name)
+  json.dump(qa,open(os.path.join(R,'CHECKS','CAD_render_QA.json'),'x'),indent=2)
+ except Exception:open(os.path.join(R,'CHECKS','render_error.txt'),'x').write(traceback.format_exc())
+ finally:
+  for name in list(A.listDocuments()):A.closeDocument(name)
+  QtCore.QTimer.singleShot(500,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1200,run)

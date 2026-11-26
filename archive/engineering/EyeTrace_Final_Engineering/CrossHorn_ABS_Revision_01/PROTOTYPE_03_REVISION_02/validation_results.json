@@ -1,0 +1,62 @@
+{
+  "freecad_brep": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1750.891169350904
+  },
+  "stl": {
+    "binary_length_valid": true,
+    "triangles": 5120,
+    "freecad_mesh_is_solid": true,
+    "bbox_mm": [
+      40.599395415015366,
+      25.599507647965204,
+      4.2
+    ]
+  },
+  "3mf": {
+    "zip_crc_ok": true,
+    "printable_object_count": 1,
+    "triangles": 5120,
+    "stl_triangle_match": true,
+    "file_bytes": 57773
+  },
+  "creality_k2_bed": {
+    "usable_build_volume_mm": [
+      260,
+      260,
+      260
+    ],
+    "part_bbox_with_4mm_brim_mm": [
+      48.599395415015366,
+      33.599507647965204,
+      4.2
+    ],
+    "fits": true
+  },
+  "motion_or_full_assembly_tests": "Not applicable: coupon only; production pan/tilt assembly unchanged",
+  "slicer_toolpath": "NOT VERIFIED: project metadata prepared; actual Creality Print sliced preview/G-code not inspected",
+  "physical_horn_fit": "UNVERIFIED: coupon not yet printed/tested",
+  "saved_fcstd_reopen": {
+    "opened": true,
+    "freecad_version": [
+      "1",
+      "1",
+      "4",
+      "20260928 (Git shallow)",
+      "Unknown",
+      "2026/09/28 13:46:34",
+      "(HEAD detached at 4fd3bf320)",
+      "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+    ],
+    "shape_name": "Horn3CrossFitCoupon",
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 1750.891169350904,
+    "bbox_mm": [
+      40.6,
+      25.6,
+      4.2
+    ]
+  }
+}

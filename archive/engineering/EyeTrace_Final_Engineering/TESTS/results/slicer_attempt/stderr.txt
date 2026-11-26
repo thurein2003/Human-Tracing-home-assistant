@@ -1,0 +1,2 @@
+Invalid option --load_settings
+GUI parameter parsing failed

@@ -1,0 +1,51 @@
+[
+  {
+    "stage": "old",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "volume": 24528.289698365388
+  },
+  {
+    "stage": "env",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "volume": 1619.4176098890953
+  },
+  {
+    "stage": "patch",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "volume": 1052.1252003539546
+  },
+  {
+    "stage": "old-cut-env",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "volume": 23624.579173742215
+  },
+  {
+    "stage": "fuse-patch",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "volume": 24676.704393266256
+  },
+  {
+    "stage": "refine",
+    "null": false,
+    "valid": false,
+    "solids": 1,
+    "volume": 20982.19143264465
+  },
+  {
+    "stage": "screw0",
+    "null": false,
+    "valid": true,
+    "solids": 0,
+    "volume": 0.0
+  }
+]

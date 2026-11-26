@@ -1,0 +1,10 @@
+﻿import FreeCAD as A,json
+root=r'EyeTrace_Final_Engineering\EyeTrace_R19_ThinMountPlate';d=A.openDocument(root+r'\CAD\EyeTrace_R19_ThinMountPlate.FCStd'); y=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+names=['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','Pan_KeyedHorn_Cover','PanDrive_M3x10_0','PanDrive_M3x10_1','PanDrive_M3x10_2','PanDrive_M3x10_3','TiltServo_SG90_Reference','TiltCradle_KeyedHorn_CameraFrame','Tilt_Removable_IdlerPillar','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','TiltDrive_M3x10_0','TiltDrive_M3x10_1','TiltDrive_M3x10_2','TiltDrive_M3x10_3']
+r=[]
+for n in names:
+ o=d.getObject(n)
+ if not o:continue
+ s=o.Shape; v=y.common(s).Volume; dist=y.distToShape(s)[0]
+ r.append({'part':n,'min_distance_mm':dist,'intersection_volume_mm3':v,'classification':'modeled horn engagement proxy' if 'OriginalStar' in n else ('intentional thrust contact' if n=='Pan_Replaceable_ThrustRing' else 'geometric clearance/contact; hardware fit not verified')})
+open(root+r'\DOCUMENTATION\r19_static_clearances.json','w').write(json.dumps(r,indent=2));print(json.dumps(r,indent=2))

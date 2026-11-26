@@ -1,0 +1,280 @@
+{
+  "stls": [
+    {
+      "file": "Base_EarMount_ThrustSupport.stl",
+      "facets": 4408,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -40.0,
+        -35.0,
+        0.0,
+        40.0,
+        35.0,
+        36.5
+      ]
+    },
+    {
+      "file": "Base_EarMount_ThrustSupport_R15.stl",
+      "facets": 4408,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -40.0,
+        -35.0,
+        0.0,
+        40.0,
+        35.0,
+        36.5
+      ]
+    },
+    {
+      "file": "CameraPlate_Cut007.stl",
+      "facets": 3072,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -28.0,
+        -27.399999618530273,
+        60.0,
+        28.0,
+        -24.399999618530273,
+        92.0
+      ]
+    },
+    {
+      "file": "PCB_Spacer_Lower_Left.stl",
+      "facets": 672,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -13.0,
+        -30.399999618530273,
+        66.5,
+        -8.0,
+        -27.399999618530273,
+        71.5
+      ]
+    },
+    {
+      "file": "PCB_Spacer_Lower_Right.stl",
+      "facets": 672,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        8.0,
+        -30.399999618530273,
+        66.5,
+        13.0,
+        -27.399999618530273,
+        71.5
+      ]
+    },
+    {
+      "file": "PCB_Spacer_Upper_Left.stl",
+      "facets": 672,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -13.0,
+        -30.399999618530273,
+        80.5,
+        -8.0,
+        -27.399999618530273,
+        85.5
+      ]
+    },
+    {
+      "file": "PCB_Spacer_Upper_Right.stl",
+      "facets": 672,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        8.0,
+        -30.399999618530273,
+        80.5,
+        13.0,
+        -27.399999618530273,
+        85.5
+      ]
+    },
+    {
+      "file": "PanYoke_EarBracket_KeyedDrive.stl",
+      "facets": 8058,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -58.20000076293945,
+        -35.29999923706055,
+        33.0,
+        44.0,
+        35.29999923706055,
+        103.0
+      ]
+    },
+    {
+      "file": "Pan_KeyedHorn_Cover.stl",
+      "facets": 3472,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -24.0,
+        -24.0,
+        30.799999237060547,
+        24.0,
+        24.0,
+        35.0
+      ]
+    },
+    {
+      "file": "Pan_Replaceable_ThrustRing.stl",
+      "facets": 1692,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -32.0,
+        -32.0,
+        36.0,
+        32.0,
+        32.0,
+        37.0
+      ]
+    },
+    {
+      "file": "TiltCradle_KeyedHorn_CameraFrame.stl",
+      "facets": 7362,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -41.0,
+        -24.399999618530273,
+        54.0,
+        36.0,
+        21.0,
+        99.0
+      ]
+    },
+    {
+      "file": "Tilt_Journal_FlangedSleeve.stl",
+      "facets": 1008,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        35.20000076293945,
+        -3.5,
+        74.5,
+        39.29999923706055,
+        3.5,
+        81.5
+      ]
+    },
+    {
+      "file": "Tilt_KeyedHorn_CaptiveCover.stl",
+      "facets": 3472,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        -45.20000076293945,
+        -21.0,
+        57.0,
+        -41.0,
+        21.0,
+        99.0
+      ]
+    },
+    {
+      "file": "Tilt_Removable_IdlerPillar.stl",
+      "facets": 1048,
+      "is_solid": true,
+      "components": 1,
+      "bbox": [
+        28.0,
+        -28.5,
+        41.0,
+        44.0,
+        28.5,
+        98.0
+      ]
+    }
+  ],
+  "step_shapes": [
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD",
+      "solids": 1,
+      "valid": true,
+      "volume": 50586.79985770301
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD001",
+      "solids": 1,
+      "valid": true,
+      "volume": 833.5273628504435
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD002",
+      "solids": 1,
+      "valid": true,
+      "volume": 42345.82609243587
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD003",
+      "solids": 1,
+      "valid": true,
+      "volume": 7511.695140156739
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD004",
+      "solids": 1,
+      "valid": true,
+      "volume": 3022.4785340715057
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD005",
+      "solids": 1,
+      "valid": true,
+      "volume": 24528.289698364002
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD006",
+      "solids": 1,
+      "valid": true,
+      "volume": 2386.3060217195703
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD007",
+      "solids": 1,
+      "valid": true,
+      "volume": 68.26366676985252
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD008",
+      "solids": 1,
+      "valid": true,
+      "volume": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD009",
+      "solids": 1,
+      "valid": true,
+      "volume": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD010",
+      "solids": 1,
+      "valid": true,
+      "volume": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD011",
+      "solids": 1,
+      "valid": true,
+      "volume": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD012",
+      "solids": 1,
+      "valid": true,
+      "volume": 4449.355830897155
+    }
+  ]
+}

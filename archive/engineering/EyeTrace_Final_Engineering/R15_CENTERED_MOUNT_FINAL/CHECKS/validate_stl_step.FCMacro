@@ -1,0 +1,17 @@
+﻿import FreeCAD as A, Mesh, Part, json, os
+out=r'EyeTrace_Final_Engineering\R15_CENTERED_MOUNT_FINAL'
+rows=[]
+for fn in sorted(os.listdir(out+r'\STL')):
+ if not fn.lower().endswith('.stl'):continue
+ m=Mesh.Mesh(os.path.join(out,'STL',fn)); b=m.BoundBox
+ try:solid=m.isSolid()
+ except:solid=None
+ rows.append({'file':fn,'facets':len(m.Facets),'is_solid':solid,'components':len(m.getSeparateComponents()),'bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]})
+stepdoc=A.newDocument('StepCheck'); Part.insert(out+r'\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.step',stepdoc.Name); stepdoc.recompute()
+step=[]
+for o in stepdoc.Objects:
+ if hasattr(o,'Shape') and not o.Shape.isNull():step.append({'name':o.Name,'solids':len(o.Shape.Solids),'valid':o.Shape.isValid(),'volume':o.Shape.Volume})
+with open(out+r'\CHECKS\mesh_step_validation.json','w') as f:json.dump({'stls':rows,'step_shapes':step},f,indent=2)
+A.closeDocument(stepdoc.Name)
+
+

@@ -1,0 +1,191 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "parameters": {
+    "servo_body": [
+      23,
+      12,
+      23
+    ],
+    "servo_clearance": 0.6,
+    "camera_envelope": [
+      38,
+      38,
+      30
+    ],
+    "pan_limit_deg": 60,
+    "tilt_limit_deg": 30,
+    "units": "mm",
+    "status": "PROTOTYPE: physical fit unverified"
+  },
+  "solids": {
+    "Base": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 28917.554152871995
+    },
+    "PanServoRetainer": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2621.571363859417
+    },
+    "TiltServoRetainer": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1907.235070003009
+    },
+    "PanYoke": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 35184.90036814296
+    },
+    "TiltCameraCradle": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18964.359917838614
+    },
+    "PanHornClamp": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2154.0801268236464
+    },
+    "TiltHornClamp": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1235.164275648631
+    }
+  },
+  "meshes": {
+    "Base": {
+      "facets": 2716,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        80.0,
+        70.0,
+        29.0
+      ]
+    },
+    "PanServoRetainer": {
+      "facets": 1032,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        31.0,
+        36.0,
+        2.5
+      ]
+    },
+    "TiltServoRetainer": {
+      "facets": 692,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        26.0,
+        30.0,
+        2.5
+      ]
+    },
+    "PanYoke": {
+      "facets": 6420,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        114.5,
+        50.0,
+        60.0
+      ]
+    },
+    "TiltCameraCradle": {
+      "facets": 3442,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        41.000000000000014,
+        40.0,
+        75.0
+      ]
+    },
+    "PanHornClamp": {
+      "facets": 2032,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        44.0,
+        44.0,
+        1.5
+      ]
+    },
+    "TiltHornClamp": {
+      "facets": 2032,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        34.00000000000001,
+        34.0,
+        1.500000000000007
+      ]
+    }
+  },
+  "motion": {
+    "sampled_poses": 169,
+    "pan_range": [
+      -60,
+      60
+    ],
+    "tilt_range": [
+      -30,
+      30
+    ],
+    "pan_step": 10,
+    "tilt_step": 5,
+    "collision_count": 0,
+    "collisions": [],
+    "minimum_separation_mm": 0.0,
+    "limitation": "sampled rigid envelopes only; excludes wires, fasteners, horn deformation, servo torque and continuous sweep; no installed motion stops"
+  },
+  "hardware_fit": "NOT VALIDATED",
+  "joint_stacks": {
+    "pan_horn": {
+      "grip_mm": 5.5,
+      "nut_mm": 2.4,
+      "thread_projection_mm": 2.1
+    },
+    "tilt_horn": {
+      "grip_mm": 5.5,
+      "nut_mm": 2.4,
+      "thread_projection_mm": 2.1
+    },
+    "idler": {
+      "grip_mm": 6,
+      "nut_mm": 2.4,
+      "thread_projection_mm": 1.6
+    },
+    "servo_retainers": {
+      "grip_mm": 5,
+      "nut_mm": 2.4,
+      "thread_projection_mm": 2.6
+    },
+    "assumptions": "10 mm under-head screws, 2.4 mm nuts, 2 mm horn web; no washers; no clamping torque validated"
+  },
+  "release_status": "NOT PRINT-RELEASED: measurement and attachment blockers",
+  "bed": {
+    "bounds_mm": [
+      215.5,
+      170.0,
+      75.0
+    ],
+    "minimum_gap_mm": 8,
+    "fits_assumed_260_square": true,
+    "printer_bed_dimension": "assumed 260 mm; verify exact K2 variant",
+    "orientation": "base and yoke upright; camera cradle on side; supports required for yoke and cradle"
+  }
+}

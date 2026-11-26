@@ -1,0 +1,4 @@
+﻿import FreeCAD as App,json
+d=App.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\CAD\EyeTrace_R21_SinglePanMountPlate.FCStd')
+print(json.dumps([{'n':o.Name,'l':o.Label,'t':o.TypeId} for o in d.Objects if 'Pan' in o.Name or 'Servo' in o.Name or 'SG90' in o.Name]))
+App.closeDocument(d.Name)

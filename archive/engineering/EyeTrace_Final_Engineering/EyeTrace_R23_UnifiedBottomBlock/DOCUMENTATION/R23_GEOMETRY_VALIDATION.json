@@ -1,0 +1,56 @@
+{
+  "revision": "R23_UnifiedBottomBlock",
+  "source": "R22_UnifiedBottomMount",
+  "only_modified_printable_geometry": "PanYoke_EarBracket_KeyedDrive plus integration of its co-located Pan_Replaceable_ThrustRing",
+  "base_modified": false,
+  "ring_action": "integrated into moving pan-yoke solid; separate duplicate ring removed from this revision",
+  "geometry": {
+    "one_valid_yoke_solid": true,
+    "combined_volume_mm3": 27995.837688442032,
+    "union_vs_separate_sum_delta_mm3": -2.9103830456733704e-11,
+    "removed_interpart_seam_without_scaling_or_remeshing": true,
+    "rectangular_web_thickness_mm": 2.500000000000007,
+    "annular_land_thickness_mm": 2.5,
+    "M3_hole_centers_mm": [
+      [
+        32.5,
+        23.5
+      ],
+      [
+        32.5,
+        -23.5
+      ]
+    ],
+    "M3_hole_interference_mm3": [
+      0.0,
+      0.0
+    ],
+    "base_interference_mm3": 0.0,
+    "base_clearance_mm": 0.0,
+    "print_mesh_watertight": true,
+    "facet_count": 80190,
+    "print_bbox_mm": [
+      13.0,
+      115.19999694824219,
+      13.002087593078613,
+      83.59791564941406,
+      0.0,
+      67.80000305175781
+    ]
+  },
+  "contact_probe": {
+    "base_interference_mm3": 0.0,
+    "base_clearance_mm": 0.0,
+    "ring_yoke_intersection_before_mm3": 0.0,
+    "combined_solid_count": 1,
+    "combined_volume_mm3": 27995.837688442032,
+    "separate_sum_mm3": 27995.83768844206
+  },
+  "physical_fit": "Not physically reverified; R15/servo interfaces unchanged in CAD.",
+  "files": {
+    "fcstd": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\CAD\\EyeTrace_R23_UnifiedBottomBlock.FCStd",
+    "component_step": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\CAD\\PanYoke_R23_UnifiedBottomBlock.step",
+    "assembly_step": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\CAD\\EyeTrace_R23_FullAssembly.step",
+    "stl": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\STL\\PanYoke_R23_UnifiedBottomBlock.stl"
+  }
+}

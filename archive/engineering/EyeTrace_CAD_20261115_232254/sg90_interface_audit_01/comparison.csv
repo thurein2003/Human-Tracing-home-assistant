@@ -1,0 +1,20 @@
+Feature,CAD mm unless noted,Measurement source,Document comparison,Status
+Body envelope both,23 x 12 x 23,Derived planar-face bounds,SG90 manufacturer overall 23 x 12.2 x 29; not identical datums,UNVERIFIED
+Overall pan along output axis,31,Native solid bounding box,Manufacturer overall29; other branded sheet approx31,UNVERIFIED
+Overall tilt along output axis,30,Native solid bounding box,Differs from pan by1 for supposedly identical hardware,FAIL reference consistency
+Width both,12,Native planar bounds,Manufacturer12.2; delta -0.2; no published tolerance,FAIL nominal source match; actual fit UNVERIFIED
+Mounting tabs and holes,ABSENT,Exactly6 body planes + cylinder/cap; no tabs or bores,Documented SG90 drawings have tabs,FAIL reference completeness
+Base pilot pitch / bore,32 / 2.2,Inherited structure dimensions; NOT measured servo holes,"32.2 in circulated drawing is overall tab span, not proven hole pitch",UNVERIFIED; previous pitch assumption unsupported
+Tilt pilot pitch / bore,32 / 2.2,Inherited wall pilots z56.5..88.5,Actual holes unknown; pilot heights not matched to ear plane,UNVERIFIED
+Pan output axis,X0 Y0; 6 from short end and side,Cylinder axis + case bounds,Manufacturer source does not specify this datum,UNVERIFIED
+Tilt output axis,Y0 Z78;17 above bottom and6 across width,Cylinder axis + case bounds,Manufacturer table F17 has ambiguous axis mapping without drawing,UNVERIFIED
+Output cylinder diameter,6 both,Cylindrical radius3,Plain cylinders combine shoulder/spline; no tooth profile,UNVERIFIED
+Output cylinder length,Pan8 / tilt7,Cylinder area divided by2piR,Same intended servo but inconsistent references,FAIL reference consistency
+Horn height from case end,Pan6 to underside8 to top; tilt6 to underside8 to top,Face coordinates,"Pan shaft reaches top, tilt ends1 before horn top",UNVERIFIED
+Horn web / hub / arms,2 / diameter8 / five arms,Native envelope; inherited source arms12 x3.6 at72deg,No manufacturer dimensional horn drawing found,UNVERIFIED
+Horn spline socket and center screw,ABSENT,"Native solid, no hole",Original horns need actual spline socket and retaining screw,FAIL reference completeness
+Shaft/horn engagement,Positive solid overlap,Boolean common measured in geometry_extraction.json,Could represent unmodeled spline engagement; cannot count as valid clearance,FAIL full CAD mating; physical UNVERIFIED
+M3 hole fit in original horn,No horn holes modeled,Native horn shapes,M3 compatibility must NOT be assumed,UNVERIFIED
+M3 structural clamp joints,10 long; grip5.5;nut2.4;nominal projection2.1,"Nominal structural stack, not horn-hole engagement","No washer, real hub or screw-head tolerances",UNVERIFIED
+M3 idler,Grip6; projection1.6; gap0.5,Native stack,"Retention, wear, loosening, threads as bearing not validated",UNVERIFIED
+Load capacity and bearing reactions,UNKNOWN,No mass/inertia/bearing-load rating,Manufacturer stall torque is not bearing or continuous-duty rating,UNVERIFIED; release blocked

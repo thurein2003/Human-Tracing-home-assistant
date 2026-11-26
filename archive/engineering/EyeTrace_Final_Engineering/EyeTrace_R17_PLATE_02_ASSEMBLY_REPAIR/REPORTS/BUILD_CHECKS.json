@@ -1,0 +1,75 @@
+{
+  "freecad": "1.1.4",
+  "source": "R16 CompactServo assembly",
+  "R15_master": "EyeTrace_Final_Engineering\\CrossHorn_ABS_Revision_01\\PROTOTYPE_04_REVISION_15\\CrossHorn_UltraMinimal_FitTest_04R15.FCStd",
+  "pan": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 43453.58185395115,
+    "volume_before_mm3": 42345.82609243497,
+    "delta_mm3": 1107.7557615161859,
+    "discarded_disconnected_islands": [
+      130.81185894260892,
+      129.08519351417823
+    ],
+    "R15_envelope_mm": [
+      39.2,
+      20.2
+    ],
+    "depth_mm": 1.7,
+    "center_bore_mm": 8.0,
+    "carrier_to_pocket_common_mm3": 0.0,
+    "carrier_clearance_common_mm3": {
+      "Pan_KeyedHorn_Cover": 0.0,
+      "PanDrive_M3x10_0": 0.0,
+      "PanDrive_M3x10_1": 0.0,
+      "PanDrive_M3x10_2": 0.0,
+      "PanDrive_M3x10_3": 0.0,
+      "PanServo_SG90_Reference": 0.0,
+      "Base_EarMount_ThrustSupport": 0.0,
+      "Pan_Replaceable_ThrustRing": 0.0
+    },
+    "fit_envelope_common_mm3": {
+      "Pan_KeyedHorn_Cover": 0.0,
+      "PanDrive_M3x10_0": 0.0,
+      "PanDrive_M3x10_1": 0.0,
+      "PanDrive_M3x10_2": 0.0,
+      "PanDrive_M3x10_3": 0.0,
+      "PanServo_SG90_Reference": 55.43890015973567
+    },
+    "unmodified_axis_transform": "pan rotational axis unchanged at source coordinates"
+  },
+  "tilt": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 24742.034516702675,
+    "R15_envelope_mm": [
+      39.2,
+      20.2
+    ],
+    "depth_mm": 1.7,
+    "center_bore_mm": 8.0
+  },
+  "camera_pattern_mm": [
+    21,
+    14
+  ],
+  "base_modified": false,
+  "plate01_opened_or_written": false,
+  "plate02_inventory": 12,
+  "pan_mesh": {
+    "is_solid": true,
+    "facets": 133864,
+    "volume_mm3": 43449.078125,
+    "bbox": [
+      12.999999046325684,
+      13.000828742980957,
+      0.0,
+      115.19999694824219,
+      83.59917449951172,
+      70.0
+    ]
+  },
+  "3mf_pan_mesh_objects_replaced": 1,
+  "release": "HOLD \u2014 horn axial/small-hole model provisional; no Creality Print slicing performed"
+}

@@ -1,0 +1,13 @@
+﻿import json
+from pathlib import Path
+import FreeCAD as App
+out=Path(r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_04')
+d=App.openDocument(str(out/'CrossHorn_UltraMinimal_FitTest_04R04.FCStd'))
+sh=[o for o in d.Objects if hasattr(o,'Shape') and not o.Shape.isNull()]
+assert len(sh)==1
+s=sh[0].Shape; o=sh[0]
+r={'opened':True,'freecad_version':App.Version(),'valid':s.isValid(),'solid_count':len(s.Solids),'volume_mm3':s.Volume,'bbox_mm':[s.BoundBox.XLength,s.BoundBox.YLength,s.BoundBox.ZLength],'front_diameter_mm':o.FrontHubRecessDiameter.Value,'front_depth_mm':o.FrontHubRecessDepth.Value,'back_diameter_mm':o.BackHubRecessDiameter.Value,'back_depth_mm':o.BackHubRecessDepth.Value,'center_web_mm':o.RemainingCenterWeb.Value,'local_pad_mm':o.LocalCenterThicknessIncrease.Value,'maximum_local_thickness_mm':o.MaximumLocalThickness.Value}
+assert r['valid'] and r['solid_count']==1 and abs(r['back_depth_mm']-0.8)<1e-7 and abs(r['center_web_mm']-0.8)<1e-7
+(out/'fcstd_reopen_validation.json').write_text(json.dumps(r,indent=2),encoding='utf-8')
+print(json.dumps(r))
+App.closeDocument(d.Name)

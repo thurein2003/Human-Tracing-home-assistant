@@ -1,0 +1,41 @@
+﻿import FreeCAD as App, Part, Mesh, json, traceback, math
+from FreeCAD import Vector
+src=r'EyeTrace_Final_Engineering\EyeTrace_R19_ThinMountPlate\BACKUP\EyeTrace_R18_CircularMount_Correction_01.FCStd'; masterp=r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'; out=r'EyeTrace_Final_Engineering\EyeTrace_R19_ThinMountPlate'
+try:
+ d=App.openDocument(src); d.recompute(); obj=d.getObject('PanYoke_EarBracket_KeyedDrive'); shape=obj.Shape.copy(); assert shape.isValid() and len(shape.Solids)==1
+ # Actual broad plate lies above the pan-facing R15 recess. Thin general web to 2.5 mm, measured from z35.2; preserve a 2.5 mm roof above the 1.7 mm horn recess.
+ md=App.openDocument(masterp); pocket=md.getObject('ArmPocketTool').Shape
+ crossface=next(f for f in pocket.Faces if type(f.Surface).__name__=='Plane' and abs(f.BoundBox.ZMin-2.1)<1e-5 and abs(f.BoundBox.ZMax-2.1)<1e-5 and f.Area>200)
+ crossprism=crossface.extrude(Vector(0,0,1.7)); crossprism.translate(Vector(0,0,35.6)) # exact R15 footprint, z37.7–39.4
+ # Remove the upper plate mass inside the circular interior; retain 2.5 mm floor, exact R15 floor backing, five-hole bosses and mounting rails.
+ cutter=Part.makeCylinder(32.3,3.4,Vector(0,0,37.7),Vector(0,0,1)).common(shape)
+ cutter=cutter.cut(crossprism.common(cutter))
+ keep=[Part.makeCylinder(8.0,3.4,Vector(0,0,37.7),Vector(0,0,1))]
+ for x,y in [(18,0),(-18,0),(0,18),(0,-18)]: keep.append(Part.makeCylinder(6.5,3.4,Vector(x,y,37.7),Vector(0,0,1)))
+ # Local tie rails from the central web to the vertical frame foot; outside of the rail zones the plate is genuinely relieved.
+ for y0,y1 in [(-24,-21.5),(-1.25,1.25),(21.5,24)]: keep.append(Part.makeBox(13.0,y1-y0,3.4,Vector(-43.5,y0,37.7)))
+ for k in keep: cutter=cutter.cut(k.common(shape))
+ result=shape.cut(cutter).removeSplitter()
+ if not result.isValid() or len(result.Solids)!=1: raise Exception('invalid/disconnected result '+str(result.isValid())+' solids='+str(len(result.Solids)))
+ def intervals(x,y):
+  c=result.common(Part.makeCylinder(.05,8,Vector(x,y,34),Vector(0,0,1))); return sorted([(round(q.BoundBox.ZMin,4),round(q.BoundBox.ZMax,4)) for q in c.Solids])
+ # Exact-section probes: normal plate, R15 pocket roof, four-hole pad wall, central boss and outer land.
+ probes={'plain_plate_xy10_10':intervals(10,10),'R15_long_arm_floor_xy10_0':intervals(10,0),'mount_boss_wall_xy23p5_0':intervals(23.5,0),'center_boss_wall_xy6_0':intervals(6,0),'outer_land_xy34_0':intervals(34,0)}
+ plain=max(b-a for a,b in probes['plain_plate_xy10_10']); arm=max(b-a for a,b in probes['R15_long_arm_floor_xy10_0'])
+ if abs(plain-2.5)>0.04: raise Exception('plain plate thickness not 2.5: '+str(plain))
+ if abs(arm-2.5)>0.04: raise Exception('R15 floor backing not 2.5: '+str(arm))
+ vol0=shape.Volume; vol1=result.Volume
+ obj.Shape=result; obj.Label='PanYoke_EarBracket_R19_ThinMountPlate'
+ obj.addProperty('App::PropertyLength','MainPlateThickness','R19','Measured general mounting web thickness'); obj.MainPlateThickness=2.5
+ obj.addProperty('App::PropertyLength','HornFloorBacking','R19','Remaining material above the 1.7 mm R15 pocket floor'); obj.HornFloorBacking=2.5
+ obj.addProperty('App::PropertyLength','SourcePlateThickness','R19','Source total outer-face-to-top plate thickness at ordinary plate probe'); obj.SourcePlateThickness=5.8
+ obj.addProperty('App::PropertyString','R19Reinforcement','R19','Full-height features retained for shaft, fasteners and support loads'); obj.R19Reinforcement='Exact R15 cross roof; center shaft boss; four Ø13 mount pads at ±18; three 2.5 mm frame rails; outer circular land'
+ d.recompute(); d.saveAs(out+r'\CAD\EyeTrace_R19_ThinMountPlate.FCStd')
+ Part.export([obj],out+r'\CAD\PanYoke_R19_ThinMountPlate.step')
+ verts,faces=result.tessellate(0.08); m=Mesh.Mesh((verts,faces)); m.translate(71.2,48.3,-35.2); m.write(out+r'\STL\PanYoke_R19_ThinMountPlate.stl')
+ report={'component':'PanYoke_EarBracket_KeyedDrive','valid':result.isValid(),'solids':len(result.Solids),'source_volume_mm3':vol0,'new_volume_mm3':vol1,'removed_mm3':vol0-vol1,'removed_percent':100*(vol0-vol1)/vol0,'source_top_z_mm':41.0,'source_low_face_z_mm':35.2,'source_plain_plate_thickness_mm':5.8,'new_plain_web_measured_mm':plain,'R15_pocket_depth_preserved_mm':1.7,'new_material_above_R15_floor_measured_mm':arm,'probes_z_intervals_mm':probes,'preserved_features':['exact R15 cross pocket','Ø8 shaft opening','four existing hole centers at (±18,0),(0,±18)','full-height local screw pads','full-height circular land','three narrow frame tie rails'],'bbox_mm':[result.BoundBox.XMin,result.BoundBox.XMax,result.BoundBox.YMin,result.BoundBox.YMax,result.BoundBox.ZMin,result.BoundBox.ZMax]}
+ open(out+r'\DOCUMENTATION\r19_geometry.json','w').write(json.dumps(report,indent=2)); print(json.dumps(report,indent=2))
+ App.closeDocument(md.Name)
+except:
+ open(out+r'\DOCUMENTATION\build_error.txt','w').write(traceback.format_exc()); raise
+

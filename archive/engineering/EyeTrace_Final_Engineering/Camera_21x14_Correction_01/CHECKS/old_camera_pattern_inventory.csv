@@ -1,0 +1,19 @@
+﻿path,kind,old_pattern_or_geometry,status
+CAD/parameters.json,parameter source,21x16 nominal pitch,Preserved; new 21x14 parameters in correction folder
+CAD/generate_final.py,script,asserts 21x16,Preserved historical generator
+CAD/EyeTrace_Final_Assembly.FCStd and .step,assembly,old camera interface,Preserved; superseded for camera interface
+CAD/individual_STEP/CameraPlate_21x16.step,plate STEP,old hole spacing,Preserved; do not use for corrected camera
+CAD/SOURCE_SNAPSHOT/Camera_21x16_HoleCenter_Gauge.step,gauge STEP,old vertical pitch,Preserved; do not use for corrected camera
+CAD/SOURCE_SNAPSHOT/Integrated_Source.FCStd,source CAD,old camera pitch,Preserved historical source
+STL/individual/CameraPlate_21x16.stl,individual STL,old camera pitch,Preserved; superseded
+STL/Supported_Print/STL/CameraPlate_21x16.stl,individual STL,old camera pitch,Preserved; superseded
+STL/EyeTrace_Final_K2_SingleBed.stl,full-bed STL,old camera plate,Preserved; superseded
+ABS_Print_Ready/Creality_Print/EyeTrace_K2_ABS_Supported_Project_v2.3mf,full-bed 3MF,old camera plate,Preserved; superseded
+ABS_Print_Ready/STL/EyeTrace_K2_ABS_SingleBed.stl,full-bed STL,old camera plate,Preserved; superseded
+ABS_Print_Ready/TOOLPATHS/full/plate_1.gcode,full-bed G-code,old camera plate,Preserved; superseded
+STL/Supported_Print/EyeTrace_K2_PETG_Supported_Project*.3mf,full-bed 3MF archives,old camera plate,Preserved; superseded for camera interface
+STL/Supported_Print/TOOLPATHS/plate_1.gcode and v02-v05/plate_1.gcode,full-bed G-code,old camera plate,Preserved; superseded
+FIT_TESTS/Camera_21x16_HoleCenter_Gauge.stl,fit gauge STL,21x16 hole centers,Preserved; do not use for new measurement
+ABS_Print_Ready/FIT_TESTS/Creality_Print/EyeTrace_ABS_FitTest_Project*.3mf,fit-test 3MF,contains old camera coupon,Preserved; six other coupons still usable individually
+ABS_Print_Ready/FIT_TESTS/STL/EyeTrace_ABS_FitTests_SevenCoupons*.stl,fit-test bed STL,contains old camera coupon,Preserved; camera test superseded
+FIT_TESTS/FitTests.FCStd and Physical_Verification_01 guide,fit-test CAD/docs,old 21x16 gauge dimensions,Preserved; use new corrected coupon instructions

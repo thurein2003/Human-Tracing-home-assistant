@@ -1,0 +1,178 @@
+[
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": -80,
+    "distance_mm": 112.23230372758104,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": -40,
+    "distance_mm": 72.6366987135291,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": -35,
+    "distance_mm": 67.72067631085797,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": -20,
+    "distance_mm": 53.066844639567556,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": -5,
+    "distance_mm": 38.50012921827722,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": 0,
+    "distance_mm": 33.500148504507315,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": 5,
+    "distance_mm": 28.500174557781982,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": 20,
+    "distance_mm": 13.500368506972087,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": 35,
+    "distance_mm": 0.09974880472445259,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": 40,
+    "distance_mm": 0.0,
+    "intersection_mm3": 171.6601464311774
+  },
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "axis": "z",
+    "translation_mm": 80,
+    "distance_mm": 24.306901875694635,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": -80,
+    "distance_mm": 57.51956188984753,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": -40,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": -35,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": -20,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": -5,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": 0,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": 5,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": 20,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": 35,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": 40,
+    "distance_mm": 52.5,
+    "intersection_mm3": 0.0
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "axis": "x",
+    "translation_mm": 80,
+    "distance_mm": 57.93530875036397,
+    "intersection_mm3": 0.0
+  }
+]

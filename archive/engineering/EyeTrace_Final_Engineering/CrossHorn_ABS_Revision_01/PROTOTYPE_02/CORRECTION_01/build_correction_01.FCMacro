@@ -1,0 +1,57 @@
+import json
+from pathlib import Path
+import FreeCAD as App, Part, MeshPart, Import
+from FreeCAD import Vector as V
+OUT=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_02\CORRECTION_01")
+p=json.loads((OUT/'correction_parameters.json').read_text(encoding='utf-8'))
+c=p['confirmed']; q=p['provisional_adjustments']; d=p['derived_pocket_dimensions']
+def tapered_arm_pair(span,root_w,tip_w,end_r,height,axis='x'):
+    # Rounded distal tips are separate from the adjustable straight-side tip width.
+    half=span/2.0; cap_x=half-end_r
+    if cap_x<=0 or min(root_w,tip_w,end_r)<=0: raise ValueError('Invalid arm dimensions')
+    shapes=[]
+    for sign in (-1.0,1.0):
+        pts=[V(0,-root_w/2,0),V(sign*cap_x,-tip_w/2,0),V(sign*cap_x,tip_w/2,0),V(0,root_w/2,0),V(0,-root_w/2,0)]
+        web=Part.Face(Part.Wire(Part.makePolygon(pts))).extrude(V(0,0,height))
+        tip=Part.makeCylinder(end_r,height,V(sign*cap_x,0,0))
+        shapes.append(web.fuse(tip))
+    s=shapes[0].fuse(shapes[1]).removeSplitter()
+    if axis=='y': s.rotate(V(0,0,0),V(0,0,1),90)
+    return s
+total=c['base_lateral_clearance_total']
+long_cut=tapered_arm_pair(c['horn_long_span']+total,
+    q['long_arm_root_width']+total,q['long_arm_tip_width']+total,
+    q['long_arm_end_radius']+total/2,1.7,'x')
+# Short pockets preserve the 18 mm horn baseline but add 1 mm of pocket length at each tip.
+# A separate 0.5 mm per-side widening beyond failed Prototype 02 is applied to both short arms.
+short_root=q['short_arm_root_width_before_clearance_and_extensions']+2*(1.0+q['short_width_additional_per_side_beyond_failed_prototype_02'])+total
+short_tip=q['short_arm_tip_width_before_clearance_and_extensions']+2*(1.0+q['short_width_additional_per_side_beyond_failed_prototype_02'])+total
+short_end_radius=q['short_arm_end_radius']+1.0+q['short_width_additional_per_side_beyond_failed_prototype_02']+total/2
+short_cut=tapered_arm_pair(c['horn_short_span_baseline']+2*c['short_arm_end_extension_each_end_from_prototype_01']+total,
+    short_root,short_tip,short_end_radius,1.7,'y')
+profile=long_cut.fuse(short_cut).removeSplitter()
+plate=Part.makeBox(43,27,4,V(-21.5,-13.5,0))
+profile.translate(V(0,0,2.3)); plate=plate.cut(profile)
+# Hub seat diameter and depth are independent adjustable values. Screw/driver through-opening remains separate.
+plate=plate.cut(Part.makeCylinder(c['hub_recess_diameter']/2,q['hub_recess_depth'],V(0,0,4-q['hub_recess_depth'])))
+plate=plate.cut(Part.makeCylinder(q['servo_retaining_screw_and_driver_access_diameter']/2,5,V(0,0,-0.5)))
+# Two raised dots are the physical test coupon identifier, not fastener holes.
+for x in (-17,-15): plate=plate.fuse(Part.makeCylinder(0.65,0.35,V(x,-9.5,4)))
+plate=plate.removeSplitter()
+if not plate.isValid() or len(plate.Solids)!=1: raise RuntimeError('Coupon is not one valid solid')
+doc=App.newDocument('CrossHorn_Single_FitTest_02_Correction_01')
+obj=doc.addObject('PartDesign::Feature','SingleCrossHornFitCoupon'); obj.Label='Single ABS cross-horn fit coupon - Correction 01'; obj.Shape=plate
+for n,v in [('HornLongSpan',35.0),('HornShortSpanBaseline',18.0),('ShortPocketSpan',20.2),('HubNominalDiameter',7.0),('HubRecessDiameter',c['hub_recess_diameter']),('HubRecessDepth',q['hub_recess_depth']),('ScrewDriverAccessDiameter',q['servo_retaining_screw_and_driver_access_diameter']),('BaseTotalLateralClearance',total),('LongRootWidth',q['long_arm_root_width']+total),('LongTipWidth',q['long_arm_tip_width']+total),('LongEndRadius',q['long_arm_end_radius']+total/2),('ShortRootWidth',short_root),('ShortTipWidth',short_tip),('ShortEndRadius',short_end_radius)]:
+    obj.addProperty('App::PropertyLength',n,'Parameters'); setattr(obj,n,v)
+obj.addProperty('App::PropertyString','FitStatus','Engineering'); obj.FitStatus='PROVISIONAL - test with actual white horn; no physical fit claim'
+obj.addProperty('App::PropertyString','UnmeasuredGeometry','Engineering'); obj.UnmeasuredGeometry='Actual arm widths, arm-specific end radii/centering, hub projection height and screw/tool geometry'
+doc.recompute(); doc.saveAs(str(OUT/'CrossHorn_Single_FitTest_02.FCStd'))
+mesh=MeshPart.meshFromShape(Shape=plate,LinearDeflection=0.05,AngularDeflection=0.10,Relative=False)
+mesh.write(str(OUT/'CrossHorn_Single_FitTest_02.stl'))
+Import.export([obj],str(OUT/'CrossHorn_Single_FitTest_02.step'))
+report={'solid_valid':plate.isValid(),'solid_count':len(plate.Solids),'mesh_facets':len(mesh.Facets),'mesh_solid':mesh.isSolid(),'bbox_mm':[plate.BoundBox.XLength,plate.BoundBox.YLength,plate.BoundBox.ZLength],
+ 'horn_baselines_mm':[35.0,18.0],'long_pocket_span_mm':d['long_pocket_span'],'long_root_width_mm':d['long_root_width'],'long_tip_width_mm':d['long_tip_width'],'long_end_radius_mm':q['long_arm_end_radius']+total/2,
+ 'short_pocket_span_mm':d['short_pocket_span'],'short_root_width_mm':short_root,'short_tip_width_mm':short_tip,'short_end_radius_mm':short_end_radius,
+ 'hub_nominal_diameter_mm':7.0,'hub_recess_diameter_mm':c['hub_recess_diameter'],'hub_recess_depth_mm':q['hub_recess_depth'],'screw_access_diameter_mm':q['servo_retaining_screw_and_driver_access_diameter'],
+ 'short_width_increment_per_side_beyond_previous_failed_coupon_mm':q['short_width_additional_per_side_beyond_failed_prototype_02'],'secondary_holes':'omitted','all_unmeasured_profile_values':'PROVISIONAL'}
+(OUT/'geometry_results.json').write_text(json.dumps(report,indent=2),encoding='utf-8'); print(json.dumps(report,indent=2))

@@ -1,0 +1,36 @@
+﻿import FreeCAD as A,FreeCADGui as G,Part,os,json,traceback
+from FreeCAD import Vector as V
+from PySide import QtCore,QtWidgets,QtGui
+H=r'EyeTrace_CAD_20261115_232254\sg90_interface_repair_01'
+def run():
+ try:
+  src=A.openDocument(os.path.join(H,'EyeTrace_Repair_Assembly.FCStd'));qa={}
+  def render(n,items,kind='iso'):
+   doc=A.newDocument(n)
+   for label,shape,col,tr in items:
+    o=doc.addObject('PartDesign::Feature',label);o.Shape=shape.copy();o.ViewObject.ShapeColor=col;o.ViewObject.Transparency=tr;o.Visibility=True
+   doc.recompute();G.updateGui();QtWidgets.QApplication.processEvents();v=G.activeDocument().activeView()
+   if kind=='bottom':v.viewBottom()
+   elif kind=='top':v.viewTop()
+   else:v.viewAxonometric()
+   G.updateGui();QtWidgets.QApplication.processEvents();v.fitAll();G.updateGui();QtWidgets.QApplication.processEvents();v.fitAll()
+   p=os.path.join(H,'renders',n+'.png');v.saveImage(p,1600,1200,'White');im=QtGui.QImage(p);nonwhite=0
+   for yy in range(0,im.height(),12):
+    for xx in range(0,im.width(),12):
+     c=im.pixelColor(xx,yy)
+     if min(c.red(),c.green(),c.blue())<235:nonwhite+=1
+   qa[n]={'sampled_nonwhite_pixels':nonwhite,'components':len(items),'valid_render':nonwhite>20};assert nonwhite>20,n
+   A.closeDocument(doc.Name)
+  def get(n,tr=0):
+   o=src.getObject(n);return (n,o.Shape,o.ViewObject.ShapeColor,tr)
+  render('pan_ear_installation_v2',[get(n,35 if n.startswith('Base') else 0) for n in ['Base_EarMount_ThrustSupport','PanServo_SG90_Reference','PanEar_M1p6x8_0','PanEar_M1p6x8_1']])
+  sh=src.getObject('PanYoke_EarBracket_KeyedDrive').Shape.common(Part.makeBox(50,50,8,V(-25,-25,34)))
+  render('pan_positive_star_pocket_v2',[('CarrierSection',sh,(.15,.5,.7),55)]+[get(n,55 if 'Cover' in n else 0) for n in ['Pan_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL','Pan_KeyedHorn_Cover']],'bottom')
+  bd=A.openDocument(os.path.join(H,'PrintLayout.FCStd'));render('complete_print_layout_v2',[(o.Name,o.Shape,(.15,.5,.7),0) for o in bd.Objects if hasattr(o,'Shape')],'top');A.closeDocument(bd.Name)
+  cd=A.openDocument(os.path.join(H,'coupons','FitCoupons_Layout.FCStd'));render('fit_coupons_v2',[(o.Name,o.Shape,(.2,.6,.55),0) for o in cd.Objects if hasattr(o,'Shape')]);A.closeDocument(cd.Name)
+  json.dump(qa,open(os.path.join(H,'renders','corrected_view_QA.json'),'x'),indent=2)
+ except Exception:open(os.path.join(H,'renders','detail_error.txt'),'x').write(traceback.format_exc())
+ finally:
+  for dn in list(A.listDocuments()):A.closeDocument(dn)
+  QtCore.QTimer.singleShot(1000,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1200,run)

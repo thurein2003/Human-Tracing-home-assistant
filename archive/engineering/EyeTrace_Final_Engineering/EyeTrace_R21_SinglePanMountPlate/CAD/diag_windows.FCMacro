@@ -1,0 +1,16 @@
+﻿import FreeCAD as App,Part,json,itertools
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_R20_UltraLowProfile\CAD\EyeTrace_R20_UltraLowProfile.FCStd'
+d=App.openDocument(src); s=d.getObject('Pan_KeyedHorn_Cover').Shape; b=s.BoundBox; z=b.ZMin-1; h=b.ZLength+2; results=[]
+for lo,hi in [(4,11),(5,12),(6,12),(6,14),(7,14),(7,15),(8,15),(8,16),(5,15)]:
+ tools=[]
+ for sx in [-1,1]:
+  for sy in [-1,1]:
+   x0=lo if sx>0 else -hi; y0=lo if sy>0 else -hi
+   tools.append(Part.makeBox(hi-lo,hi-lo,h,V(x0,y0,z)))
+ tool=tools[0]
+ for t in tools[1:]:tool=tool.fuse(t)
+ r=s.cut(tool).removeSplitter()
+ results.append({'lo':lo,'hi':hi,'valid':r.isValid(),'solids':len(r.Solids),'vol':round(r.Volume,3),'removed':round(s.Volume-r.Volume,3),'bboxes':[[round(q.BoundBox.XMin,2),round(q.BoundBox.XMax,2),round(q.BoundBox.YMin,2),round(q.BoundBox.YMax,2)] for q in r.Solids]})
+print(json.dumps(results))
+App.closeDocument(d.Name)

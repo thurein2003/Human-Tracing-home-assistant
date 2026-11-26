@@ -1,0 +1,16 @@
+﻿import FreeCAD as A,Part,MeshPart,json,os
+from FreeCAD import Vector as V
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'))
+out=os.path.join(p,'RENDERS','CAD_BREP_MESH'); os.makedirs(out,exist_ok=True); checks={}
+for key,n in [('Pan','PanYoke_EarBracket_KeyedDrive'),('Tilt','TiltCradle_KeyedHorn_CameraFrame')]:
+ s=d.getObject(n).Shape
+ checks[key]={'valid':s.isValid(),'solids':len(s.Solids),'volume':s.Volume,'faces':len(s.Faces),'bbox':[s.BoundBox.XMin,s.BoundBox.YMin,s.BoundBox.ZMin,s.BoundBox.XMax,s.BoundBox.YMax,s.BoundBox.ZMax]}
+ me=MeshPart.meshFromShape(Shape=s,LinearDeflection=0.08,AngularDeflection=0.15,Relative=False); me.write(os.path.join(out,key+'_Full.stl'))
+ sec=s.common(Part.makeBox(120,60,16,V(-60,0,28))) if key=='Pan' else s.common(Part.makeBox(20,60,60,V(-46,0,48)))
+ me=MeshPart.meshFromShape(Shape=sec,LinearDeflection=0.05,AngularDeflection=0.10,Relative=False); me.write(os.path.join(out,key+'_Section.stl'))
+ checks[key]['section_valid']=sec.isValid(); checks[key]['section_solids']=len(sec.Solids); checks[key]['section_bbox']=[sec.BoundBox.XMin,sec.BoundBox.YMin,sec.BoundBox.ZMin,sec.BoundBox.XMax,sec.BoundBox.YMax,sec.BoundBox.ZMax]
+with open(os.path.join(out,'BREP_RENDER_INPUTS.json'),'w') as f:json.dump(checks,f,indent=2)
+print('BREP_MESHES',json.dumps(checks))
+A.closeDocument(d.Name)
+

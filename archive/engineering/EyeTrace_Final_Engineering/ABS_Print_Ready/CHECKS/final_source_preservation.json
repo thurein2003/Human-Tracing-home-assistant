@@ -1,0 +1,47 @@
+﻿{
+    "checked_utc":  "2026-11-16T01:07:12.4882022Z",
+    "all_unchanged":  true,
+    "source_files":  [
+                         {
+                             "path":  "STL\\EyeTrace_Final_K2_SingleBed.stl",
+                             "expected":  "e228c69178e5bb9738505c11c32e66e3658a2bcb47860d4d0ac259a1ceb9f54f",
+                             "actual":  "e228c69178e5bb9738505c11c32e66e3658a2bcb47860d4d0ac259a1ceb9f54f",
+                             "unchanged":  true
+                         },
+                         {
+                             "path":  "CAD\\EyeTrace_Final_Assembly.FCStd",
+                             "expected":  "e6ab2cc261ee79528a6cedf12601531d7531141a5e4a3147d9b41d37fa382124",
+                             "actual":  "e6ab2cc261ee79528a6cedf12601531d7531141a5e4a3147d9b41d37fa382124",
+                             "unchanged":  true
+                         },
+                         {
+                             "path":  "DOCUMENTATION\\RELEASE_STATUS.json",
+                             "expected":  "e7f9a70d46ec73d78246ed22112d1936d502d543144c4bb5f217cfbea80f9601",
+                             "actual":  "e7f9a70d46ec73d78246ed22112d1936d502d543144c4bb5f217cfbea80f9601",
+                             "unchanged":  true
+                         },
+                         {
+                             "path":  "STL\\Supported_Print\\EyeTrace_K2_PETG_Supported_Project_v05.3mf",
+                             "expected":  "208ce34c578b453abb9e69e5d1b3219731d90298aae09b3b0171f78d946976c7",
+                             "actual":  "208ce34c578b453abb9e69e5d1b3219731d90298aae09b3b0171f78d946976c7",
+                             "unchanged":  true
+                         },
+                         {
+                             "path":  "FIT_TESTS\\Physical_Verification_01\\PRINT_FIRST_FitTests_Optimized.stl",
+                             "expected":  "6fdd7d662fd98aad09fb7c1f5c9f3a8c5826bdc92c4df7aa0f4aac1bebe2ab0b",
+                             "actual":  "6fdd7d662fd98aad09fb7c1f5c9f3a8c5826bdc92c4df7aa0f4aac1bebe2ab0b",
+                             "unchanged":  true
+                         },
+                         {
+                             "path":  "FIT_TESTS\\Physical_Verification_01\\SLICER\\Named_Geometry_Only.3mf",
+                             "expected":  "0828fc69d9d4f6255873be07b2db4229c71e7ebec485be12ab2521b5bff70f45",
+                             "actual":  "0828fc69d9d4f6255873be07b2db4229c71e7ebec485be12ab2521b5bff70f45",
+                             "unchanged":  true
+                         }
+                     ],
+    "final_full_stl_sha256":  "df69b8299a79d33f00e325b9b7eb00e864332080f8eb83543ae629e65e09576d",
+    "adjusted_reference_matches":  true,
+    "full_project":  "Creality_Print/EyeTrace_K2_ABS_Supported_Project_v2.3mf",
+    "coupon_stl":  "FIT_TESTS/STL/EyeTrace_ABS_FitTests_SevenCoupons_FINAL.stl",
+    "slicer_report":  "CHECKS/ABS_slicer_validation.json"
+}

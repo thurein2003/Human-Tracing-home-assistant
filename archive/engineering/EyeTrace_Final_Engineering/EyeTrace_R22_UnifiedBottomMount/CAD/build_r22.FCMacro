@@ -1,0 +1,49 @@
+﻿import FreeCAD as App, Part, MeshPart, json
+from FreeCAD import Vector as V
+from pathlib import Path
+ROOT=Path(r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount')
+SRC=Path(r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\CAD\EyeTrace_R21_SinglePanMountPlate.FCStd')
+CAD=ROOT/'CAD';STL=ROOT/'STL';DOC=ROOT/'DOCUMENTATION'
+d=App.openDocument(str(SRC));yoke=d.getObject('PanYoke_EarBracket_KeyedDrive');ring=d.getObject('Pan_Replaceable_ThrustRing');cover=d.getObject('Pan_KeyedHorn_Cover')
+if not all([yoke,ring,cover]):raise RuntimeError('Required components missing')
+old=yoke.Shape.copy();v0=old.Volume
+# Outer circular land: 2.8 -> 2.5 mm.
+land_cut=Part.makeCylinder(35.3,.3,V(0,0,37.7)).cut(Part.makeCylinder(32.5,.5,V(0,0,37.6)))
+# Rectangular lower web: 4.0 -> 2.5 mm. Keep the circular mating area and local 4 mm screw bosses.
+web=Part.makeBox(16.0,57.0,1.5,V(28.0,-28.5,39.5))
+protect=Part.makeCylinder(32.5,2.0,V(0,0,39.4))
+for x,y in [(32.5,23.5),(32.5,-23.5)]:
+ protect=protect.fuse(Part.makeCylinder(5.5,2.0,V(x,y,39.4)))
+web_cut=web.cut(protect)
+new=old.cut(land_cut.fuse(web_cut)).removeSplitter()
+if not new.isValid() or len(new.Solids)!=1:raise RuntimeError('Result not a single valid yoke solid')
+# Verify central cross-horn, pan-axis and four drive-screw interface BREP exactly unchanged.
+core=Part.makeCylinder(22,120,V(0,0,0))
+coreDiff=old.common(core).cut(new.common(core)).Volume+new.common(core).cut(old.common(core)).Volume
+if coreDiff>1e-6:raise RuntimeError('Central R15/shaft/screw interface changed')
+# Measure thickness at sample locations directly from BREP slabs.
+def zspan(x,y):
+ q=new.common(Part.makeBox(.1,.1,120,V(x-.05,y-.05,0)))
+ if q.Volume<1e-8:return None
+ return [q.BoundBox.ZMin,q.BoundBox.ZMax,q.BoundBox.ZLength]
+land=zspan(34,0);webspan=zspan(40,20)
+if abs(land[2]-2.5)>.02:raise RuntimeError('Circular annular land is not 2.5 mm')
+if abs(webspan[2]-2.5)>.02:raise RuntimeError('Rectangular web is not 2.5 mm: '+str(webspan))
+# Hole cores are untouched and remain M3 clearance.
+holetests=[]
+for x,y in [(32.5,23.5),(32.5,-23.5)]:
+ hole=Part.makeCylinder(1.65,8,V(x,y,34))
+ holetests.append({'center_mm':[x,y],'interference_mm3':new.common(hole).Volume})
+if any(h['interference_mm3']>1e-7 for h in holetests):raise RuntimeError('A rectangular-flange M3 hole was filled')
+yoke.Shape=new;d.recompute()
+if new.common(ring.Shape).Volume>1e-7 or new.common(cover.Shape).Volume>1e-7:raise RuntimeError('New yoke penetrates a mating component')
+fc=CAD/'EyeTrace_R22_UnifiedBottomMount.FCStd';d.saveAs(str(fc))
+Part.export([yoke],str(CAD/'PanYoke_R22_UnifiedBottomMount.step'))
+pr=new.copy();pr.translate(V(71.2,48.3,-35.2))
+mesh=MeshPart.meshFromShape(Shape=pr,LinearDeflection=.025,AngularDeflection=.08,Relative=False)
+stl=STL/'PanYoke_R22_UnifiedBottomMount.stl';mesh.write(str(stl))
+if not mesh.isSolid():raise RuntimeError('Exported STL not watertight')
+report={'revision':'R22_UnifiedBottomMount','modified_component':'PanYoke_EarBracket_KeyedDrive only','preserved_components':['1 mm Pan_Replaceable_ThrustRing (separate thrust interface)','Pan_KeyedHorn_Cover R21 frame','all servos, fasteners, tilt and camera components'],'web_change':{'rectangular_web_original_mm':4.0,'rectangular_web_final_mm':webspan[2],'measurement_xy_mm':[40,20],'z_range_mm':webspan[:2],'reinforced_hole_centers_mm':[[32.5,23.5],[32.5,-23.5]],'bosses_retained_original_top_height_mm':4.0,'hole_checks':holetests},'circular_land_change':{'original_mm':2.8,'final_measured_mm':land[2],'measurement_xy_mm':[34,0],'z_range_mm':land[:2],'thrust_ring_footprint_protected_radius_mm':32.5},'volume_mm3':{'original_yoke':v0,'final_yoke':new.Volume,'removed':v0-new.Volume},'central_horn_shaft_region_symmetric_difference_mm3':coreDiff,'mating_clearances':{'yoke_thrust_ring_intersection_mm3':new.common(ring.Shape).Volume,'yoke_retainer_intersection_mm3':new.common(cover.Shape).Volume},'valid_solid':new.isValid(),'solid_count':len(new.Solids),'mesh_watertight':mesh.isSolid(),'mesh_facets':len(mesh.Facets),'mesh_bbox_bed_mm':[mesh.BoundBox.XMin,mesh.BoundBox.XMax,mesh.BoundBox.YMin,mesh.BoundBox.YMax,mesh.BoundBox.ZMin,mesh.BoundBox.ZMax],'physical_fit':'Not physically verified; CAD geometry only.','files':{'fcstd':str(fc),'step':str(CAD/'PanYoke_R22_UnifiedBottomMount.step'),'stl':str(stl)}}
+(DOC/'R22_BOTTOM_MOUNT_VALIDATION.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+print(json.dumps(report,indent=2));App.closeDocument(d.Name)
+

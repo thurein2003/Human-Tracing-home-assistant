@@ -1,0 +1,133 @@
+{
+  "Gcode": "TOOLPATHS\\full\\plate_1.gcode",
+  "slicer_header_layer_count": 599,
+  "filament_density_g_cm3": 1.04,
+  "actual_layer_change_events": 599,
+  "extrusion_Z_planes": 599,
+  "extrusion_segments": 882168,
+  "role_segment_counts": {
+    "Brim": 8661,
+    "Outer wall": 99026,
+    "Inner wall": 236674,
+    "Bottom surface": 3551,
+    "Gap infill": 10031,
+    "Support": 107203,
+    "Internal solid infill": 69848,
+    "Top surface": 4518,
+    "Sparse infill": 319184,
+    "Internal Bridge": 2415,
+    "Overhang wall": 703,
+    "Bridge": 722,
+    "Support transition": 5471,
+    "Support interface": 14161
+  },
+  "roles": [
+    "Brim",
+    "Outer wall",
+    "Inner wall",
+    "Bottom surface",
+    "Gap infill",
+    "Support",
+    "Internal solid infill",
+    "Top surface",
+    "Sparse infill",
+    "Internal Bridge",
+    "Overhang wall",
+    "Bridge",
+    "Support transition",
+    "Support interface"
+  ],
+  "objects": [
+    "Base_EarMount_ThrustSupport",
+    "PanYoke_EarBracket_KeyedDrive",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "Pan_KeyedHorn_Cover",
+    "Tilt_Removable_IdlerPillar",
+    "Pan_Replaceable_ThrustRing",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "CameraPlate_21x16",
+    "PCB_Spacer_Lower_Right",
+    "PCB_Spacer_Lower_Left",
+    "Tilt_Journal_FlangedSleeve",
+    "PCB_Spacer_Upper_Left",
+    "PCB_Spacer_Upper_Right"
+  ],
+  "object_model_layer_counts": {
+    "Base_EarMount_ThrustSupport": 183,
+    "PanYoke_EarBracket_KeyedDrive": 335,
+    "Tilt_KeyedHorn_CaptiveCover": 21,
+    "Pan_KeyedHorn_Cover": 21,
+    "Tilt_Removable_IdlerPillar": 285,
+    "Pan_Replaceable_ThrustRing": 5,
+    "TiltCradle_KeyedHorn_CameraFrame": 225,
+    "CameraPlate_21x16": 15,
+    "PCB_Spacer_Lower_Right": 15,
+    "PCB_Spacer_Lower_Left": 15,
+    "Tilt_Journal_FlangedSleeve": 20,
+    "PCB_Spacer_Upper_Left": 15,
+    "PCB_Spacer_Upper_Right": 15
+  },
+  "support_segments_by_object": {
+    "PanYoke_EarBracket_KeyedDrive": 37584,
+    "TiltCradle_KeyedHorn_CameraFrame": 44221,
+    "Base_EarMount_ThrustSupport": 45030
+  },
+  "filament_metadata": {
+    "filament used [mm]": "49707.12",
+    "filament used [cm3]": "119.56",
+    "filament used [g]": "124.34",
+    "total filament used [g]": "124.34",
+    "estimated printing time (normal mode)": "11h 46m 25s"
+  },
+  "role_filament_volume_cm3": {
+    "Brim": 1.6796811655302728,
+    "Outer wall": 18.420211197279944,
+    "Inner wall": 50.239480437515006,
+    "Bottom surface": 2.061461094637135,
+    "Gap infill": 0.4616114269740594,
+    "Support": 4.0585645191376205,
+    "Internal solid infill": 23.878056096229642,
+    "Top surface": 2.912352793084446,
+    "Sparse infill": 12.599549876105796,
+    "Internal Bridge": 2.1264415644097645,
+    "Overhang wall": 0.09931509885384723,
+    "Bridge": 0.10773916567171354,
+    "Support transition": 0.3407756458076787,
+    "Support interface": 0.5482411654282953
+  },
+  "role_filament_mass_g_at_actual_profile_density": {
+    "Brim": 1.746868412151484,
+    "Outer wall": 19.157019645171143,
+    "Inner wall": 52.24905965501561,
+    "Bottom surface": 2.1439195384226206,
+    "Gap infill": 0.48007588405302176,
+    "Support": 4.220907099903125,
+    "Internal solid infill": 24.833178340078828,
+    "Top surface": 3.0288469048078244,
+    "Sparse infill": 13.103531871150027,
+    "Internal Bridge": 2.211499226986155,
+    "Overhang wall": 0.10328770280800112,
+    "Bridge": 0.1120487322985821,
+    "Support transition": 0.3544066716399859,
+    "Support interface": 0.5701708120454271
+  },
+  "support_centerline_samples": 312305,
+  "protected_region_intrusions": [],
+  "bead_XY_bounds_mm": [
+    [
+      6.30213,
+      6.30213
+    ],
+    [
+      229.12134350000002,
+      234.78087
+    ]
+  ],
+  "unanchored_model_components": [],
+  "longest_sampled_unsupported_bridge_mm": 5.715,
+  "bridge_spans_above8p5mm": [],
+  "raster_resolution_mm": 0.2,
+  "fine_island_reviews": [],
+  "fine_reviews_with_flags": 0,
+  "limits": "Raster extrusion screening is not continuous3D physics. Support-air-gap reach0.50mm, model interlayer reach0.261mm; one-pixel XY allowance. Protected void checks sample support centerlines every<=0.25mm; not full bead-volume metrology. ABS warping, bridge sag, adhesion, shrink and hardware fit unverified."
+}

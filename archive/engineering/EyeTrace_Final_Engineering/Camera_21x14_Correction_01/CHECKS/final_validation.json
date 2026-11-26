@@ -1,0 +1,489 @@
+{
+  "CAD_geometry": {
+    "cad_version": [
+      "1",
+      "1",
+      "4",
+      "20260928 (Git shallow)"
+    ],
+    "object_count": 80,
+    "kinematic_shape_count": 49,
+    "printable_component_count": 13,
+    "invalid_solids": [],
+    "camera_hole_pattern": {
+      "pitch_mm": [
+        21.0,
+        14.0
+      ],
+      "centers_xz_mm": [
+        [
+          -10.5,
+          69.0
+        ],
+        [
+          -10.5,
+          83.0
+        ],
+        [
+          10.5,
+          69.0
+        ],
+        [
+          10.5,
+          83.0
+        ]
+      ],
+      "source": "user-supplied nominal",
+      "PCB_envelope_mm": [
+        38.0,
+        1.6,
+        38.0
+      ],
+      "plate_outside_mm": [
+        56.0,
+        3.000000000000007,
+        32.0
+      ],
+      "plate_height_parameter_mm": 32.0,
+      "plate_hole_diameter_mm": 2.4,
+      "PCB_hole_diameter_assumed_mm": 2.2
+    },
+    "clearances_and_uncertainty_intersections": {
+      "plate_to_lens": {
+        "intersection_mm3": 0.0,
+        "minimum_distance_mm": 5.0159744815937835
+      },
+      "plate_to_PCB_reference": {
+        "intersection_mm3": 0.0,
+        "minimum_distance_mm": 3.0
+      },
+      "plate_to_camera_fastener_lower_left": {
+        "intersection_mm3": 0.0,
+        "minimum_distance_mm": 0.0
+      },
+      "plate_to_camera_fastener_upper_left": {
+        "intersection_mm3": 0.0,
+        "minimum_distance_mm": 0.0
+      },
+      "rear_uncertainty_to_lower_left_fastener": {
+        "intersection_mm3": 13.025850227181568,
+        "minimum_distance_mm": 0.0
+      },
+      "rear_uncertainty_to_upper_left_fastener": {
+        "intersection_mm3": 13.025850227181568,
+        "minimum_distance_mm": 0.0
+      },
+      "rear_uncertainty_to_all_four_camera_fasteners": {
+        "Camera_M2x12_Lower_Left": {
+          "intersection_mm3": 13.025850227181568,
+          "minimum_distance_mm": 0.0
+        },
+        "Camera_M2x12_Lower_Right": {
+          "intersection_mm3": 13.02585022718156,
+          "minimum_distance_mm": 0.0
+        },
+        "Camera_M2x12_Upper_Left": {
+          "intersection_mm3": 13.025850227181568,
+          "minimum_distance_mm": 0.0
+        },
+        "Camera_M2x12_Upper_Right": {
+          "intersection_mm3": 13.025850227181563,
+          "minimum_distance_mm": 0.0
+        }
+      },
+      "ribbon_reservation_to_cradle": {
+        "intersection_mm3": 0.0,
+        "minimum_distance_mm": 18.09447429465692
+      },
+      "ribbon_reservation_to_plate": {
+        "intersection_mm3": 0.0,
+        "minimum_distance_mm": 18.399999999999995
+      }
+    },
+    "physical_fit": "UNVERIFIED"
+  },
+  "STEP_readback": {
+    "EyeTrace_Final_Assembly_21x14.step": {
+      "valid": true,
+      "solids": 76,
+      "volume_mm3": 168947.73614993918,
+      "bbox_mm": [
+        114.5,
+        77.3,
+        103.0
+      ]
+    },
+    "CameraPlate_21x14.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4449.355830897155,
+      "bbox_mm": [
+        56.0,
+        3.000000000000007,
+        32.0
+      ]
+    },
+    "K2_PrintLayout_21x14.step": {
+      "valid": true,
+      "solids": 13,
+      "volume_mm3": 136350.2114794024,
+      "bbox_mm": [
+        197.0,
+        192.6,
+        77.0
+      ]
+    }
+  },
+  "full_print_mesh": {
+    "project_mesh_count": 13,
+    "project_names": [
+      "Base_EarMount_ThrustSupport",
+      "Pan_Replaceable_ThrustRing",
+      "PanYoke_EarBracket_KeyedDrive",
+      "Tilt_Removable_IdlerPillar",
+      "Pan_KeyedHorn_Cover",
+      "TiltCradle_KeyedHorn_CameraFrame",
+      "Tilt_KeyedHorn_CaptiveCover",
+      "Tilt_Journal_FlangedSleeve",
+      "PCB_Spacer_Lower_Left",
+      "PCB_Spacer_Lower_Right",
+      "PCB_Spacer_Upper_Left",
+      "PCB_Spacer_Upper_Right",
+      "CameraPlate_21x14"
+    ],
+    "per_part_mesh_checks": [
+      {
+        "name": "Base_EarMount_ThrustSupport",
+        "facets": 4408,
+        "closed_solid": true,
+        "bbox_mm": [
+          12.0,
+          12.0,
+          0.0,
+          92.0,
+          82.0,
+          36.5
+        ]
+      },
+      {
+        "name": "Pan_Replaceable_ThrustRing",
+        "facets": 1692,
+        "closed_solid": true,
+        "bbox_mm": [
+          12.0,
+          98.5999984741211,
+          0.0,
+          76.0,
+          162.60000610351562,
+          1.0
+        ]
+      },
+      {
+        "name": "PanYoke_EarBracket_KeyedDrive",
+        "facets": 7546,
+        "closed_solid": true,
+        "bbox_mm": [
+          112.0,
+          12.000000953674316,
+          0.0,
+          229.0968780517578,
+          82.5999984741211,
+          67.1751480102539
+        ]
+      },
+      {
+        "name": "Tilt_Removable_IdlerPillar",
+        "facets": 1048,
+        "closed_solid": true,
+        "bbox_mm": [
+          90.0,
+          98.5999984741211,
+          0.0,
+          106.0,
+          155.60000610351562,
+          57.0
+        ]
+      },
+      {
+        "name": "Pan_KeyedHorn_Cover",
+        "facets": 3472,
+        "closed_solid": true,
+        "bbox_mm": [
+          120.0,
+          98.5999984741211,
+          0.0,
+          168.0,
+          146.60000610351562,
+          4.200000762939453
+        ]
+      },
+      {
+        "name": "TiltCradle_KeyedHorn_CameraFrame",
+        "facets": 6186,
+        "closed_solid": true,
+        "bbox_mm": [
+          12.0,
+          176.60000610351562,
+          0.0,
+          89.0,
+          222.0,
+          45.0
+        ]
+      },
+      {
+        "name": "Tilt_KeyedHorn_CaptiveCover",
+        "facets": 3472,
+        "closed_solid": true,
+        "bbox_mm": [
+          182.0,
+          98.5999984741211,
+          0.0,
+          224.0,
+          140.60000610351562,
+          4.200000762939453
+        ]
+      },
+      {
+        "name": "Tilt_Journal_FlangedSleeve",
+        "facets": 1008,
+        "closed_solid": true,
+        "bbox_mm": [
+          178.0,
+          178.0,
+          7.629394644936838e-07,
+          185.0,
+          185.0,
+          4.09999942779541
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Lower_Left",
+        "facets": 672,
+        "closed_solid": true,
+        "bbox_mm": [
+          177.0,
+          202.0,
+          3.814697322468419e-07,
+          182.0,
+          207.0,
+          3.000000476837158
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Lower_Right",
+        "facets": 672,
+        "closed_solid": true,
+        "bbox_mm": [
+          177.0,
+          225.0,
+          3.814697322468419e-07,
+          182.0,
+          230.0,
+          3.000000476837158
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Upper_Left",
+        "facets": 672,
+        "closed_solid": true,
+        "bbox_mm": [
+          201.0,
+          178.0,
+          3.814697322468419e-07,
+          206.0,
+          183.0,
+          3.000000476837158
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Upper_Right",
+        "facets": 672,
+        "closed_solid": true,
+        "bbox_mm": [
+          201.0,
+          202.0,
+          3.814697322468419e-07,
+          206.0,
+          207.0,
+          3.000000476837158
+        ]
+      },
+      {
+        "name": "CameraPlate_21x14",
+        "facets": 3828,
+        "closed_solid": true,
+        "bbox_mm": [
+          105.0,
+          176.60000610351562,
+          -3.552713678800501e-15,
+          161.0,
+          208.60000610351562,
+          3.0
+        ]
+      }
+    ],
+    "combined_facets": 35348,
+    "combined_components": 13,
+    "combined_closed": true,
+    "bounds_mm": [
+      12.0,
+      12.0,
+      -3.552713678800501e-15,
+      229.0968780517578,
+      230.0,
+      67.1751480102539
+    ],
+    "bed_xy_mm": [
+      260,
+      260
+    ],
+    "inside_bed": true
+  },
+  "camera_coupon_mesh": {
+    "facets": 1708,
+    "closed_solid": true,
+    "components": 1,
+    "bounds_mm": [
+      -14.5,
+      -11.0,
+      0.0,
+      14.5,
+      11.0,
+      2.0
+    ]
+  },
+  "Creality_support_configuration": {
+    "Base_EarMount_ThrustSupport": {
+      "enabled": "1",
+      "style": "tree_slim"
+    },
+    "Pan_Replaceable_ThrustRing": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "PanYoke_EarBracket_KeyedDrive": {
+      "enabled": "1",
+      "style": "tree_slim"
+    },
+    "Tilt_Removable_IdlerPillar": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "Pan_KeyedHorn_Cover": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "TiltCradle_KeyedHorn_CameraFrame": {
+      "enabled": "1",
+      "style": "tree_slim"
+    },
+    "Tilt_KeyedHorn_CaptiveCover": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "Tilt_Journal_FlangedSleeve": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "PCB_Spacer_Lower_Left": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "PCB_Spacer_Lower_Right": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "PCB_Spacer_Upper_Left": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "PCB_Spacer_Upper_Right": {
+      "enabled": "0",
+      "style": "tree_slim"
+    },
+    "CameraPlate_21x14": {
+      "enabled": "0",
+      "style": "tree_slim"
+    }
+  },
+  "sliced_full_print": {
+    "layer_count": 599,
+    "minx": 12.0,
+    "miny": 12.0,
+    "minz": 0.0,
+    "maxx": 229.1,
+    "maxy": 230.0,
+    "maxz": 67.18,
+    "filament_g": 124.33,
+    "estimated_time": "11h 45m 59s",
+    "nozzle_C": 255,
+    "bed_C": 100,
+    "extrusion_xy_bounds_mm": [
+      6.644,
+      6.644,
+      228.788,
+      234.439
+    ],
+    "layer_change_markers": 599,
+    "support_feature_regions": 546,
+    "extrusion_moves": 952239,
+    "first_layer_extrusion_moves": 21510,
+    "gcode_bytes": 35986634
+  },
+  "sliced_camera_coupon": {
+    "layer_count": 10,
+    "minx": 120.5,
+    "miny": 97.5,
+    "minz": 0.0,
+    "maxx": 149.5,
+    "maxy": 119.5,
+    "maxz": 2.0,
+    "filament_g": 1.35,
+    "estimated_time": "8m 34s",
+    "nozzle_C": 255,
+    "bed_C": 100,
+    "extrusion_xy_bounds_mm": [
+      116.972,
+      93.972,
+      153.028,
+      123.028
+    ],
+    "layer_change_markers": 10,
+    "support_feature_regions": 0,
+    "extrusion_moves": 6858,
+    "first_layer_extrusion_moves": 984,
+    "gcode_bytes": 376835
+  },
+  "preserved_old_21x16_file_hashes": {
+    "CAD\\EyeTrace_Final_Assembly.FCStd": {
+      "exists": true,
+      "sha256": "e6ab2cc261ee79528a6cedf12601531d7531141a5e4a3147d9b41d37fa382124"
+    },
+    "ABS_Print_Ready\\Creality_Print\\EyeTrace_K2_ABS_Supported_Project_v2.3mf": {
+      "exists": true,
+      "sha256": "af613f4dbe0f3f833c7ef7acf1946633bd4a74cee5c0be87aeeb6b122d25f96c"
+    },
+    "ABS_Print_Ready\\STL\\EyeTrace_K2_ABS_SingleBed.stl": {
+      "exists": true,
+      "sha256": "df69b8299a79d33f00e325b9b7eb00e864332080f8eb83543ae629e65e09576d"
+    },
+    "STL\\individual\\CameraPlate_21x16.stl": {
+      "exists": true,
+      "sha256": "9cdae54f53d364f008ed093ca613e3d88d5da84f2c8f60f92fe48d2490d38230"
+    },
+    "CAD\\individual_STEP\\CameraPlate_21x16.step": {
+      "exists": true,
+      "sha256": "c1cce32e6d767da189216df137f2462963f3af28edaf3a7b7709c31a30cc36c4"
+    },
+    "FIT_TESTS\\Camera_21x16_HoleCenter_Gauge.stl": {
+      "exists": true,
+      "sha256": "7f1b62823377cd8ead081220334a60e3d0a34b39f63820fe588d24c8d33848d1"
+    },
+    "ABS_Print_Ready\\FIT_TESTS\\Creality_Print\\EyeTrace_ABS_FitTest_Project_v5.3mf": {
+      "exists": true,
+      "sha256": "ba3fb33e0b6fda505d8de1e0fff091ec4d2d71a2a05b0eb58c9207e279ca62a0"
+    }
+  },
+  "overall_software_validation": "PASS with provisional physical fit; see known rear-envelope intersection",
+  "physical_camera_fit": "UNVERIFIED"
+}

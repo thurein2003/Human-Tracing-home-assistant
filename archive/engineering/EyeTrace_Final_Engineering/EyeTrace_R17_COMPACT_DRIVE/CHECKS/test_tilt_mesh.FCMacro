@@ -1,0 +1,15 @@
+﻿import FreeCAD as A,Mesh,MeshPart,json,os
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'))
+o=d.getObject('TiltCradle_KeyedHorn_CameraFrame');s=o.Shape
+m=MeshPart.meshFromShape(Shape=s,LinearDeflection=0.08,AngularDeflection=0.15,Relative=False)
+rows=[{'stage':'initial','solid':m.isSolid(),'vol':m.Volume,'facets':len(m.Facets)}]
+for method in ['harmonizeNormals','removeDuplicatedPoints','removeDuplicatedFacets','fixDeformations','removeNonManifolds']:
+ try:
+  getattr(m,method)()
+  rows.append({'stage':method,'solid':m.isSolid(),'vol':m.Volume,'facets':len(m.Facets)})
+ except Exception as e:rows.append({'stage':method,'error':str(e)})
+out=os.path.join(p,'CHECKS_mesh_methods.json')
+with open(out,'w') as f:json.dump(rows,f,indent=2)
+print(rows)
+

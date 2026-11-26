@@ -1,0 +1,14 @@
+import FreeCAD as App, Part, json
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(src); y=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape;b=d.getObject('Base_EarMount_ThrustSupport').Shape
+slab=Part.makeBox(16,57,1.8,V(28,-28.5,35.2)); keep=Part.makeCylinder(22,2,V(0,0,35.1));contacts=[(32,0),(27.5,0),(30.9,0),(-14.1,-25.9807621135),(-14.1,25.9807621135)]
+for x,yy in contacts[:3]:keep=keep.fuse(Part.makeCylinder(3.2,2,V(x,yy,35.1)))
+cutter=slab.cut(keep);new=y.cut(cutter).removeSplitter()
+def diff(a,b):return a.cut(b).Volume+b.cut(a).Volume
+def col(s,x,yy):
+ q=s.common(Part.makeBox(.1,.1,10,V(x-.05,yy-.05,34)));return None if q.Volume<1e-8 else [q.BoundBox.ZMin,q.BoundBox.ZMax]
+above=Part.makeBox(120,120,80,V(-60,-60,37.0)); lower=Part.makeBox(120,120,1.8,V(-60,-60,35.2));core=Part.makeCylinder(22,2,V(0,0,35.1))
+out={'valid':new.isValid(),'solids':len(new.Solids),'volume_before':y.Volume,'volume_after':new.Volume,'removed_mm3':y.Volume-new.Volume,'cut_vol':cutter.Volume,'intersection_with_base':new.common(b).Volume,'upper_geometry_diff_zge37_mm3':diff(y.common(above),new.common(above)),'core_diff_mm3':diff(y.common(core),new.common(core)),'contacts':[],'samples':{}}
+for x,yy in contacts:out['contacts'].append({'xy':[x,yy],'before':col(y,x,yy),'after':col(new,x,yy)})
+for x,yy in [(30,20),(32,20),(34,20),(40,20),(30,-20),(34,-20),(40,-20),(28,0),(32,0),(34,0),(30,24),(34,24)]:out['samples'][str((x,yy))]={'before':col(y,x,yy),'after':col(new,x,yy)}
+path=r'EyeTrace_Final_Engineering\EyeTrace_R24_PanYoke_OneLayer\DOCUMENTATION\overlap_trim_test_v2.json';open(path,'w').write(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

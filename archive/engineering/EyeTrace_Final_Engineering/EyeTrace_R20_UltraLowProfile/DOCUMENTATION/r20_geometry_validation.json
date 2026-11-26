@@ -1,0 +1,149 @@
+{
+  "source": "EyeTrace_R19_ThinMountPlate.FCStd",
+  "component": "PanYoke_EarBracket_KeyedDrive",
+  "operation": "outer annular land top shortened locally; lower mating face unchanged",
+  "valid": true,
+  "solids": 1,
+  "before_volume_mm3": 30038.90627376939,
+  "after_volume_mm3": 28124.74950373493,
+  "removed_mm3": 1914.1567700344604,
+  "removed_percent_yoke": 6.372258538940024,
+  "outer_land_height_before_mm": 5.799999999999997,
+  "outer_land_height_after_mm": 2.799999999999997,
+  "outer_land_top_before_z_mm": 41.0,
+  "outer_land_top_after_z_mm": 38.0,
+  "complete_column_intervals_before": [
+    [
+      35.2,
+      41.0
+    ]
+  ],
+  "complete_column_intervals_after": [
+    [
+      35.2,
+      38.0
+    ]
+  ],
+  "sections": {
+    "outer_ring_xy34_0_before": [
+      [
+        35.2,
+        41.0
+      ]
+    ],
+    "outer_ring_xy34_0_after": [
+      [
+        35.2,
+        38.0
+      ]
+    ],
+    "plain_web_xy10_10": [
+      [
+        35.2,
+        37.7
+      ]
+    ],
+    "R15_pocket_floor_backing_xy10_0": [
+      [
+        36.9,
+        39.4
+      ]
+    ],
+    "screw_pad_xy23p5_0": [
+      [
+        37.0,
+        41.0
+      ]
+    ],
+    "center_region_xy6_0": [
+      [
+        36.9,
+        41.0
+      ]
+    ]
+  },
+  "R15_pocket_depth_mm": 1.7,
+  "R15_floor_backing_mm": 2.5,
+  "R15_lower_geometry_symdiff_below_z37p7_mm3": 0.0,
+  "shaft_hole_diameter_mm": 8.0,
+  "mount_hole_centers_mm": [
+    [
+      -18,
+      0
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      0,
+      -18
+    ],
+    [
+      0,
+      18
+    ]
+  ],
+  "clearances": [
+    {
+      "component": "Base_EarMount_ThrustSupport",
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.2999999999999927
+    },
+    {
+      "component": "Pan_Replaceable_ThrustRing",
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.0
+    },
+    {
+      "component": "PanServo_SG90_Reference",
+      "intersection_mm3": 0.0,
+      "distance_mm": 1.4999999999999927
+    },
+    {
+      "component": "Pan_OriginalStar_PROVISIONAL",
+      "intersection_mm3": 5.655341824014153,
+      "distance_mm": 0.0
+    },
+    {
+      "component": "Pan_KeyedHorn_Cover",
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.20000000000000284
+    },
+    {
+      "component": "PanDrive_M3x10_0",
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.19999999999999624
+    },
+    {
+      "component": "PanDrive_M3x10_1",
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.1999999999999961
+    },
+    {
+      "component": "PanDrive_M3x10_2",
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.19999999999999815
+    },
+    {
+      "component": "PanDrive_M3x10_3",
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.19999999999999815
+    },
+    {
+      "component": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_mm3": 0.0,
+      "distance_mm": 1.999999999999993
+    }
+  ],
+  "bbox": [
+    -58.2,
+    44.0,
+    -35.29537210066535,
+    35.29537210066535,
+    35.2,
+    103.0
+  ],
+  "screen_measurement_8p049_endpoint_pair_identified": false,
+  "status": "CAD candidate only; structural validation and slicer verification pending"
+}

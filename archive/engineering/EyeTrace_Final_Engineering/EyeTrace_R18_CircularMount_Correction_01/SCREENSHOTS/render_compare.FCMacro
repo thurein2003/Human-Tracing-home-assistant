@@ -1,0 +1,20 @@
+﻿import FreeCAD as App, FreeCADGui as Gui
+from pathlib import Path
+out=Path(r'EyeTrace_Final_Engineering\EyeTrace_R18_CircularMount_Correction_01\SCREENSHOTS')
+files=[(r'EyeTrace_R18_Lightweight_PrintReady\CAD\EyeTrace_R18.FCStd','PanYoke_EarBracket_KeyedDrive','R18_before'),(r'EyeTrace_R18_CircularMount_Correction_01\CAD\EyeTrace_R18_CircularMount_Correction_01.FCStd','PanYoke_EarBracket_KeyedDrive','R18C1_after')]
+for path,name,label in files:
+    try:
+        if App.ActiveDocument: App.closeDocument(App.ActiveDocument.Name)
+    except: pass
+    doc=App.openDocument(path)
+    Gui.activeDocument().activeView().viewAxonometric()
+    for obj in doc.Objects:
+        try: obj.ViewObject.Visibility=(obj.Name==name)
+        except: pass
+    Gui.activeDocument().activeView().fitAll()
+    Gui.activeDocument().activeView().saveImage(str(out/(label+'_isometric.png')),1600,1200,'Current')
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().fitAll()
+    Gui.activeDocument().activeView().saveImage(str(out/(label+'_top.png')),1600,1200,'Current')
+    App.closeDocument(doc.Name)
+App.closeDocument(App.ActiveDocument.Name) if App.ActiveDocument else None

@@ -1,0 +1,4 @@
+* -text
+archive/engineering/** -whitespace
+
+hardware/3d-models/** -whitespace

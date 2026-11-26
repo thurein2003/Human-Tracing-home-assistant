@@ -1,0 +1,298 @@
+{
+  "components": [
+    {
+      "name": "Base_EarMount_ThrustSupport",
+      "label": "Base_EarMount_ThrustSupport",
+      "printable": true,
+      "frame": "fixed"
+    },
+    {
+      "name": "Pan_Replaceable_ThrustRing",
+      "label": "Pan_Replaceable_ThrustRing",
+      "printable": true,
+      "frame": "fixed"
+    },
+    {
+      "name": "PanServo_SG90_Reference",
+      "label": "PanServo_SG90_Reference",
+      "printable": false,
+      "frame": "fixed"
+    },
+    {
+      "name": "TiltServo_SG90_Reference",
+      "label": "TiltServo_SG90_Reference",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "Pan_OriginalStar_PROVISIONAL",
+      "label": "Pan_OriginalStar_PROVISIONAL",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "Tilt_OriginalStar_PROVISIONAL",
+      "label": "Tilt_OriginalStar_PROVISIONAL",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PanOriginalScrew_PROVISIONAL",
+      "label": "PanOriginalScrew_PROVISIONAL",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "TiltOriginalScrew_PROVISIONAL",
+      "label": "TiltOriginalScrew_PROVISIONAL",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "label": "PanYoke_EarBracket_KeyedDrive",
+      "printable": true,
+      "frame": "pan"
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar",
+      "label": "Tilt_Removable_IdlerPillar",
+      "printable": true,
+      "frame": "pan"
+    },
+    {
+      "name": "IdlerPillar_M3x10_0",
+      "label": "IdlerPillar_M3x10_0",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "IdlerPillar_M3x10_1",
+      "label": "IdlerPillar_M3x10_1",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "Pan_KeyedHorn_Cover",
+      "label": "Pan_KeyedHorn_Cover",
+      "printable": true,
+      "frame": "pan"
+    },
+    {
+      "name": "PanDrive_M3x10_0",
+      "label": "PanDrive_M3x10_0",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "PanDrive_M3x10_1",
+      "label": "PanDrive_M3x10_1",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "PanDrive_M3x10_2",
+      "label": "PanDrive_M3x10_2",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "PanDrive_M3x10_3",
+      "label": "PanDrive_M3x10_3",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "label": "TiltCradle_KeyedHorn_CameraFrame",
+      "printable": true,
+      "frame": "tilt"
+    },
+    {
+      "name": "Tilt_KeyedHorn_CaptiveCover",
+      "label": "Tilt_KeyedHorn_CaptiveCover",
+      "printable": true,
+      "frame": "tilt"
+    },
+    {
+      "name": "TiltDrive_M3x10_0",
+      "label": "TiltDrive_M3x10_0",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "TiltDrive_M3x10_1",
+      "label": "TiltDrive_M3x10_1",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "TiltDrive_M3x10_2",
+      "label": "TiltDrive_M3x10_2",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "TiltDrive_M3x10_3",
+      "label": "TiltDrive_M3x10_3",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "Tilt_Journal_FlangedSleeve",
+      "label": "Tilt_Journal_FlangedSleeve",
+      "printable": true,
+      "frame": "tilt"
+    },
+    {
+      "name": "TiltIdler_M3x12",
+      "label": "TiltIdler_M3x12",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "TiltIdler_M3_Washer",
+      "label": "TiltIdler_M3_Washer",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PanEar_M1p6x8_0",
+      "label": "PanEar_M1p6x8_0",
+      "printable": false,
+      "frame": "fixed"
+    },
+    {
+      "name": "PanEar_M1p6x8_1",
+      "label": "PanEar_M1p6x8_1",
+      "printable": false,
+      "frame": "fixed"
+    },
+    {
+      "name": "TiltEar_M1p6x8_0",
+      "label": "TiltEar_M1p6x8_0",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "TiltEar_M1p6x8_1",
+      "label": "TiltEar_M1p6x8_1",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "RailMount_Lower_M3x10_0",
+      "label": "CameraPlateMount_Lower_M3x10_0",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "RailMount_Lower_M3x10_1",
+      "label": "CameraPlateMount_Lower_M3x10_1",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left",
+      "label": "PCB_Spacer_Lower_Left",
+      "printable": true,
+      "frame": "tilt"
+    },
+    {
+      "name": "Camera_M2x12_Lower_Left",
+      "label": "Camera_M2x12_Lower_Left",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right",
+      "label": "PCB_Spacer_Lower_Right",
+      "printable": true,
+      "frame": "tilt"
+    },
+    {
+      "name": "Camera_M2x12_Lower_Right",
+      "label": "Camera_M2x12_Lower_Right",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "RailMount_Upper_M3x10_0",
+      "label": "CameraPlateMount_Upper_M3x10_0",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "RailMount_Upper_M3x10_1",
+      "label": "CameraPlateMount_Upper_M3x10_1",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left",
+      "label": "PCB_Spacer_Upper_Left",
+      "printable": true,
+      "frame": "tilt"
+    },
+    {
+      "name": "Camera_M2x12_Upper_Left",
+      "label": "Camera_M2x12_Upper_Left",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right",
+      "label": "PCB_Spacer_Upper_Right",
+      "printable": true,
+      "frame": "tilt"
+    },
+    {
+      "name": "Camera_M2x12_Upper_Right",
+      "label": "Camera_M2x12_Upper_Right",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PCB_Cut003",
+      "label": "PCB reference:21x16 hole centers USER NOMINAL; outside size unverified",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "Camera_RearComponents_KEEP_OUT",
+      "label": "UNKNOWN rear-component envelope - NOT measured camera geometry",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "PanServo_WireExit_KEEP_OUT",
+      "label": "PanServo_WireExit_KEEP_OUT",
+      "printable": false,
+      "frame": "fixed"
+    },
+    {
+      "name": "TiltServo_WireExit_KEEP_OUT",
+      "label": "TiltServo_WireExit_KEEP_OUT",
+      "printable": false,
+      "frame": "pan"
+    },
+    {
+      "name": "CameraPlate_Cut007",
+      "label": "Camera mounting plate -21x16mm HOLE CENTERS",
+      "printable": true,
+      "frame": "tilt"
+    },
+    {
+      "name": "Camera_Lens_PROVISIONAL",
+      "label": "Camera_Lens_PROVISIONAL",
+      "printable": false,
+      "frame": "tilt"
+    },
+    {
+      "name": "Camera_WireExit_KEEP_OUT",
+      "label": "Ribbon clearance reservation20x18x1 - physical route UNVERIFIED",
+      "printable": false,
+      "frame": "tilt"
+    }
+  ]
+}

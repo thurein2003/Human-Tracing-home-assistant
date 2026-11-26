@@ -1,0 +1,7 @@
+﻿import FreeCAD as App,json
+d=App.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount\CAD\EyeTrace_R22_UnifiedBottomMount.FCStd');a=[]
+for n in ['AssemblyRoot','PrintedParts']:
+ o=d.getObject(n)
+ if o:
+  s=o.Shape;b=s.BoundBox;a.append({'name':n,'type':o.TypeId,'solids':len(s.Solids),'valid':s.isValid(),'volume':s.Volume,'bbox':[b.XMin,b.XMax,b.YMin,b.YMax,b.ZMin,b.ZMax]})
+print(json.dumps(a,indent=2));App.closeDocument(d.Name)

@@ -1,0 +1,18 @@
+{
+  "scope": "Windows loopback only",
+  "model": "gemma3:4b",
+  "text": {
+    "done": true,
+    "prompt": "Reply with exactly EYETRACE_OK.",
+    "response": "EYETRACE_OK",
+    "eval_count": 8,
+    "total_duration_ns": 935035400
+  },
+  "vision": {
+    "done": true,
+    "input": "../media/CAD-renders/corrected-assembly.png",
+    "eval_count": 341,
+    "total_duration_ns": 15472193500,
+    "observation": "Identified a rotating head and likely optical opening. Some described internal parts are unsupported by the render."
+  }
+}

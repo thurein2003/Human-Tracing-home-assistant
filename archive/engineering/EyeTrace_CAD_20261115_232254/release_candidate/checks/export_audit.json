@@ -1,0 +1,122 @@
+{
+  "Base.stl": {
+    "facets": 2716,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "nonuniform_orientation": false,
+    "volume_mm3": 29477.708984375,
+    "z_min_mm": 0.0
+  },
+  "PanHornClamp.stl": {
+    "facets": 2032,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "nonuniform_orientation": false,
+    "volume_mm3": 2152.07421875,
+    "z_min_mm": 0.0
+  },
+  "PanServoRetainer.stl": {
+    "facets": 1508,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "nonuniform_orientation": false,
+    "volume_mm3": 4213.513671875,
+    "z_min_mm": 0.0
+  },
+  "PanYoke.stl": {
+    "facets": 7153,
+    "closed": false,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": true,
+    "nonuniform_orientation": false,
+    "volume_mm3": 37468.66015625,
+    "z_min_mm": 0.0
+  },
+  "TiltCameraCradle.stl": {
+    "facets": 3442,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "nonuniform_orientation": false,
+    "volume_mm3": 18963.830078125,
+    "z_min_mm": -7.105427357601002e-15
+  },
+  "TiltHornClamp.stl": {
+    "facets": 2032,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "nonuniform_orientation": false,
+    "volume_mm3": 1234.0142822265625,
+    "z_min_mm": -7.105427357601002e-15
+  },
+  "TiltServoRetainer.stl": {
+    "facets": 692,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "nonuniform_orientation": false,
+    "volume_mm3": 1907.2760009765625,
+    "z_min_mm": 0.0
+  },
+  "single_bed.stl": {
+    "facets": 19454,
+    "closed": false,
+    "components": 7,
+    "nonmanifold": false,
+    "self_intersections": true,
+    "nonuniform_orientation": false,
+    "volume_mm3": 94275.7890625,
+    "z_min_mm": -7.105427357601002e-15
+  },
+  "Base.step": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 29477.55415287209
+  },
+  "PanHornClamp.step": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 2154.0801268236464
+  },
+  "PanServoRetainer.step": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 4212.992982991329
+  },
+  "PanYoke.step": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 37468.724064711205
+  },
+  "TiltCameraCradle.step": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 18964.359917838763
+  },
+  "TiltHornClamp.step": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 1235.1642756486306
+  },
+  "TiltServoRetainer.step": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 1907.235070003009
+  },
+  "neutral_hardware_envelopes": {
+    "tested_pairs": 28,
+    "positive_volume_intersections": [],
+    "limitation": "simplified case and horn envelopes only; no spline mating validation"
+  }
+}

@@ -1,0 +1,9 @@
+import FreeCAD as App,FreeCADGui as Gui
+p=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(p)
+for n in ['PanYoke_EarBracket_KeyedDrive','TiltCradle_KeyedHorn_CameraFrame']:
+ for o in d.Objects:
+  if hasattr(o,'ViewObject'):o.ViewObject.Visibility=False
+ o=d.getObject(n);o.ViewObject.Visibility=True;o.ViewObject.ShapeColor=(0.28,0.58,0.82);o.ViewObject.DisplayMode='Flat Lines'
+ Gui.activeDocument().activeView().viewAxonometric();Gui.activeDocument().activeView().fitAll()
+ out=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\SCREENSHOTS\'+n+'_isolated.png'
+ Gui.activeDocument().activeView().saveImage(out,1400,1000,'Current')

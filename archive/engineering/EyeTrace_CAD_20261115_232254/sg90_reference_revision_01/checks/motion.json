@@ -1,0 +1,3054 @@
+{
+  "poses": 169,
+  "pair_tests": 59150,
+  "unique_tests": 10910,
+  "collision_instances": 338,
+  "collisions": [
+    {
+      "pan": -60,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -60,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -60,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -50,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -50,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -40,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -40,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -30,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -30,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -20,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -20,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": -10,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": -10,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 0,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 0,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 10,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 10,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 20,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 20,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 30,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 30,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 40,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 40,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 50,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 50,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": -30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": -30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": -25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": -25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": -20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": -20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": -15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": -15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": -10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": -10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": -5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": -5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": 0,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": 0,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": 5,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": 5,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": 10,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": 10,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": 15,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": 15,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": 20,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": 20,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": 25,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": 25,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    },
+    {
+      "pan": 60,
+      "tilt": 30,
+      "pair": [
+        "PanServoRetainer",
+        "PanServo_ASSUMED"
+      ],
+      "volume": 25.52517373319362
+    },
+    {
+      "pan": 60,
+      "tilt": 30,
+      "pair": [
+        "TiltServoRetainer",
+        "TiltServo_ASSUMED"
+      ],
+      "volume": 0.044072641643834884
+    }
+  ],
+  "excluded_contact": [
+    "camera to cradle shelf"
+  ],
+  "limits": "Discrete poses, no physical tolerances, threads, cable, tool or load proof; star and screw envelopes provisional"
+}

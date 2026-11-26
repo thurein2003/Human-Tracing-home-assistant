@@ -1,0 +1,23 @@
+﻿import FreeCAD as A,Part,os,json,traceback
+from FreeCAD import Vector as V
+E=r'EyeTrace_Final_Engineering'; out=os.path.join(E,'EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR'); log=[]
+def item(n,s):
+ if s is None:log.append({'stage':n,'none':True});return
+ try:log.append({'stage':n,'null':s.isNull(),'valid':s.isValid(),'solids':len(s.Solids),'vol':float(s.Volume)})
+ except Exception as ex:log.append({'stage':n,'err':str(ex)})
+try:
+ d=A.openDocument(os.path.join(E,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'));m=A.openDocument(os.path.join(E,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'))
+ base=m.getObject('BaseCoupon').Shape;final=m.getObject('FinalCoupon').Shape;exp=base.cut(final); disk=Part.makeCylinder(20.5,3.8,V(0,0,0),V(0,0,1));rot=A.Rotation(V(1,0,0),180);top=V(0,0,33)
+ def tr(sh):
+  q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+ env=tr(disk); expG=tr(exp); patch=tr(disk.cut(exp));old=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+ item('disk',disk);item('exp',exp);item('env',env);item('expG',expG);item('patch',patch);item('old',old)
+ cover=d.getObject('Pan_KeyedHorn_Cover').Shape;co=cover.makeOffsetShape(.2,.05,True);item('cover_offset',co);safe=patch.cut(co);item('safe_after_cover',safe)
+ for i in range(4):
+  ss=d.getObject('PanDrive_M3x10_'+str(i)).Shape
+  for k,solid in enumerate(ss.Solids):
+   off=solid.makeOffsetShape(.2,.05,True);item('screw_offset_%s_%s'%(i,k),off);safe=safe.cut(off);item('safe_after_%s_%s'%(i,k),safe)
+ fused=old.fuse(safe);item('fused',fused)
+ cut=fused.cut(expG);item('after_profile_cut',cut)
+except Exception as ex:log.append({'exception':str(ex),'trace':traceback.format_exc()})
+with open(os.path.join(out,'REPORTS','PAN_SELECTIVE_FILL_DEBUG.json'),'w') as f:json.dump(log,f,indent=2)

@@ -1,0 +1,13 @@
+{
+  "render_nonwhite_samples": {
+    "assembly_21x16": 2647,
+    "plate_21x16": 3074
+  },
+  "reviewed_native_geometry_unchanged": true,
+  "hole_spacing_mm": [
+    21,
+    16
+  ],
+  "spacing_source": "USER NOMINAL CENTER-TO-CENTER",
+  "physical_fit": "UNVERIFIED"
+}

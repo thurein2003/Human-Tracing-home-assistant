@@ -1,0 +1,90 @@
+{
+  "source": "EyeTrace_Final_Engineering\\Motion_Audit_02\\Native_Simulations\\EyeTrace_Final_Assembly_Native_Simulation_r02.FCStd",
+  "output": "EyeTrace_Final_Engineering\\Camera_21x14_Correction_01\\CAD\\EyeTrace_Final_Assembly_Native_21x14.FCStd",
+  "solver_return_before_and_after_sim": [
+    0,
+    0
+  ],
+  "grounded": "BaseBodyLink",
+  "joint_names": [
+    "Fix_PanServo_To_Base:Fixed",
+    "PanRevolute:Revolute",
+    "Fix_PanHorn_To_Rotor:Fixed",
+    "Fix_TiltServo_To_PanRotor:Fixed",
+    "TiltRevolute:Revolute",
+    "Fix_TiltHorn_To_Cradle:Fixed"
+  ],
+  "intended_rotational_dof": 2,
+  "simulation_results": [
+    {
+      "label": "Pan only - native motion",
+      "frames": 52,
+      "motion_count": 1,
+      "pan_rotated_at_quarter": true,
+      "tilt_relative_rotated_at_quarter": false
+    },
+    {
+      "label": "Tilt only - native motion",
+      "frames": 52,
+      "motion_count": 1,
+      "pan_rotated_at_quarter": false,
+      "tilt_relative_rotated_at_quarter": true
+    },
+    {
+      "label": "Combined pan and tilt - native motion",
+      "frames": 52,
+      "motion_count": 2,
+      "pan_rotated_at_quarter": true,
+      "tilt_relative_rotated_at_quarter": true
+    }
+  ],
+  "rigid_bodies": {
+    "BaseBody": {
+      "valid": true,
+      "solids": 2
+    },
+    "PanServoBody": {
+      "valid": true,
+      "solids": 9
+    },
+    "PanRotorBody": {
+      "valid": true,
+      "solids": 15
+    },
+    "PanHornBody": {
+      "valid": true,
+      "solids": 1
+    },
+    "TiltServoBody": {
+      "valid": true,
+      "solids": 8
+    },
+    "TiltCradleBody": {
+      "valid": true,
+      "solids": 39
+    },
+    "TiltHornBody": {
+      "valid": true,
+      "solids": 2
+    }
+  },
+  "camera_pattern_xz_mm": [
+    [
+      -10.5,
+      69
+    ],
+    [
+      -10.5,
+      83
+    ],
+    [
+      10.5,
+      69
+    ],
+    [
+      10.5,
+      83
+    ]
+  ],
+  "physical_fit": "UNVERIFIED"
+}

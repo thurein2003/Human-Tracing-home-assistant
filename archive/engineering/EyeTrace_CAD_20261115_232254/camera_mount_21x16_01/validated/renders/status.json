@@ -1,0 +1,12 @@
+{
+  "renderer": "FreeCAD1.1.4 Coin3D",
+  "views": [
+    "assembly_21x16",
+    "plate_21x16"
+  ],
+  "pitch_mm": [
+    21,
+    16
+  ],
+  "physical_fit": "UNVERIFIED"
+}

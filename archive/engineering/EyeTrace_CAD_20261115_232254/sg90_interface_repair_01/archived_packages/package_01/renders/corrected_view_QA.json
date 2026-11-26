@@ -1,0 +1,22 @@
+{
+  "pan_ear_installation_v2": {
+    "sampled_nonwhite_pixels": 3835,
+    "components": 4,
+    "valid_render": true
+  },
+  "pan_positive_star_pocket_v2": {
+    "sampled_nonwhite_pixels": 4908,
+    "components": 4,
+    "valid_render": true
+  },
+  "complete_print_layout_v2": {
+    "sampled_nonwhite_pixels": 2006,
+    "components": 13,
+    "valid_render": true
+  },
+  "fit_coupons_v2": {
+    "sampled_nonwhite_pixels": 1090,
+    "components": 5,
+    "valid_render": true
+  }
+}

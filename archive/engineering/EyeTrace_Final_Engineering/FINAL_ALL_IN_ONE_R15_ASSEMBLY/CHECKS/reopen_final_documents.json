@@ -1,0 +1,241 @@
+{
+  "assembly": {
+    "opened": true,
+    "FreeCAD_version": [
+      "1",
+      "1",
+      "4",
+      "20260928 (Git shallow)"
+    ],
+    "printable_count": 13,
+    "invalid_or_disconnected": [],
+    "printable_objects_with_nonidentity_placement": [
+      {
+        "name": "PCB_Spacer_Lower_Left",
+        "base": [
+          -10.5,
+          0.0,
+          69.0
+        ],
+        "angle": 0.0
+      },
+      {
+        "name": "PCB_Spacer_Lower_Right",
+        "base": [
+          10.5,
+          0.0,
+          69.0
+        ],
+        "angle": 0.0
+      },
+      {
+        "name": "PCB_Spacer_Upper_Left",
+        "base": [
+          -10.5,
+          0.0,
+          83.0
+        ],
+        "angle": 0.0
+      },
+      {
+        "name": "PCB_Spacer_Upper_Right",
+        "base": [
+          10.5,
+          0.0,
+          83.0
+        ],
+        "angle": 0.0
+      }
+    ],
+    "neutral_intersection_pairs": [],
+    "camera_pitch_mm": [
+      21.0,
+      14.0
+    ]
+  },
+  "print_layout": {
+    "opened": true,
+    "mesh_feature_count": 13,
+    "all_meshes_closed_positive": true,
+    "bounds_mm": [
+      13.0,
+      13.0,
+      -7.105427357601002e-15,
+      234.0,
+      227.59530029296874,
+      77.0
+    ],
+    "within_k2_260mm": true,
+    "parts": [
+      {
+        "name": "Base_EarMount_ThrustSupport",
+        "facets": 5460,
+        "solid": true,
+        "bbox": [
+          134.2,
+          13.0,
+          0.0,
+          214.2,
+          83.0,
+          36.5
+        ]
+      },
+      {
+        "name": "Pan_Replaceable_ThrustRing",
+        "facets": 2112,
+        "solid": true,
+        "bbox": [
+          13.0,
+          102.6,
+          0.0,
+          76.98567771911621,
+          166.59283981323242,
+          1.0
+        ]
+      },
+      {
+        "name": "PanYoke_EarBracket_KeyedDrive",
+        "facets": 9942,
+        "solid": true,
+        "bbox": [
+          13.0,
+          13.0,
+          0.0,
+          115.19999694824219,
+          83.59210205078125,
+          70.0
+        ]
+      },
+      {
+        "name": "Tilt_Removable_IdlerPillar",
+        "facets": 1300,
+        "solid": true,
+        "bbox": [
+          93.0,
+          102.6,
+          0.0,
+          109.0,
+          159.6,
+          57.0
+        ]
+      },
+      {
+        "name": "Pan_KeyedHorn_Cover",
+        "facets": 4312,
+        "solid": true,
+        "bbox": [
+          125.0,
+          102.6,
+          0.0,
+          172.9892578125,
+          150.59462890625,
+          4.199999809265137
+        ]
+      },
+      {
+        "name": "TiltCradle_KeyedHorn_CameraFrame",
+        "facets": 9108,
+        "solid": true,
+        "bbox": [
+          189.0,
+          102.6,
+          -7.105427357601002e-15,
+          234.0,
+          147.99765167236328,
+          77.0
+        ]
+      },
+      {
+        "name": "Tilt_KeyedHorn_CaptiveCover",
+        "facets": 4312,
+        "solid": true,
+        "bbox": [
+          13.0,
+          185.6,
+          0.0,
+          54.9906005859375,
+          227.59530029296874,
+          4.199999809265137
+        ]
+      },
+      {
+        "name": "Tilt_Journal_FlangedSleeve",
+        "facets": 1260,
+        "solid": true,
+        "bbox": [
+          143.0,
+          185.6,
+          0.0,
+          149.9984335899353,
+          192.59921655654907,
+          4.099999904632568
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Lower_Left",
+        "facets": 840,
+        "solid": true,
+        "bbox": [
+          166.0,
+          185.6,
+          0.0,
+          170.99944067001343,
+          190.59888110160827,
+          3.0
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Lower_Right",
+        "facets": 840,
+        "solid": true,
+        "bbox": [
+          187.0,
+          185.6,
+          0.0,
+          191.99944067001343,
+          190.59888110160827,
+          3.0
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Upper_Left",
+        "facets": 840,
+        "solid": true,
+        "bbox": [
+          208.0,
+          185.6,
+          0.0,
+          212.99944067001343,
+          190.59888110160827,
+          3.0
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Upper_Right",
+        "facets": 840,
+        "solid": true,
+        "bbox": [
+          229.0,
+          185.6,
+          0.0,
+          233.99944067001343,
+          190.59888110160827,
+          3.0
+        ]
+      },
+      {
+        "name": "CameraPlate_21x14",
+        "facets": 3828,
+        "solid": true,
+        "bbox": [
+          71.0,
+          185.6,
+          0.0,
+          127.0,
+          217.6,
+          3.0
+        ]
+      }
+    ]
+  }
+}

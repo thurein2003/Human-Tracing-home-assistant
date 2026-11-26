@@ -1,0 +1,14 @@
+{
+  "stl_facets": 6800,
+  "stl_edge_check": {
+    "unique_edges": 10200,
+    "non_two_face_edges": 0,
+    "watertight": true
+  },
+  "3mf_facets": 6800,
+  "3mf_edge_check": {
+    "unique_edges": 10200,
+    "non_two_face_edges": 0,
+    "watertight": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "units": "mm",
+  "confirmed_user_dimensions": {
+    "long_span": 35.0,
+    "short_span_baseline": 18.0,
+    "hub_diameter": 7.0
+  },
+  "published_horn3_reference": {
+    "source": "https://www.auselectronicsdirect.com.au/assets/brochures/TA0132.pdf, page 5",
+    "drawing_span": 34.5,
+    "hub_to_long_end_a": 16.0,
+    "hub_to_long_end_b": 18.5,
+    "short_span_drawing": 16.3,
+    "raised_hub_diameter_drawing": 6.9,
+    "raised_hub_height_drawing": 2.5,
+    "main_plate_thickness_drawing": 1.5,
+    "long_arm_side_angle_a_deg": 6.3,
+    "long_arm_side_angle_b_deg": 8.0,
+    "confidence": "Published dimensions/profile for a similar Horn #3; actual clone compatibility unverified"
+  },
+  "pocket_parameters_provisional_mm": {
+    "total_lateral_clearance": 0.2,
+    "long_root_width_reference_estimate": 7.0,
+    "short_arm_width_reference_estimate": 3.2,
+    "short_extension_each_end_from_prototype_01": 1.0,
+    "hub_recess_diameter": 7.4,
+    "hub_recess_depth": 2.7,
+    "screw_access_diameter": 4.5,
+    "arm_recess_depth": 1.7,
+    "outer_margin": 1.4,
+    "base_thickness": 3.7
+  },
+  "design_interpretations": {
+    "hub_offset_from_geometric_span_center_x": -1.25,
+    "long_taper_angles_treated_as_total_width_convergence_angles": true,
+    "unmeasured_arm_widths_are_raster/profile_estimates_only": true,
+    "screw_access_not_horn_spline_geometry": true
+  },
+  "printing": {
+    "material": "ABS",
+    "layer_height_mm": 0.2,
+    "walls": 2,
+    "infill_percent": 0,
+    "supports": false,
+    "brim_mm": 4,
+    "orientation": "flat base on bed, pocket upward",
+    "nozzle_C": 255,
+    "bed_C": 100
+  }
+}

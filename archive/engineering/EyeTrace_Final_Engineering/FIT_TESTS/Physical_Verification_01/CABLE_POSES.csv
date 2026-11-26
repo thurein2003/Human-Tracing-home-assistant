@@ -1,0 +1,16 @@
+﻿Pan deg,Tilt deg,Drives physically disengaged/axis supported,Min rigid gap mm >=3,Min bend radius mm,Cable-maker minimum mm,Connector shift/tension/rub/crease,Photo,Result
+-55,-25,,,,,,,UNVERIFIED
+-55,0,,,,,,,UNVERIFIED
+-55,25,,,,,,,UNVERIFIED
+-30,-25,,,,,,,UNVERIFIED
+-30,0,,,,,,,UNVERIFIED
+-30,25,,,,,,,UNVERIFIED
+0,-25,,,,,,,UNVERIFIED
+0,0,,,,,,,UNVERIFIED
+0,25,,,,,,,UNVERIFIED
+30,-25,,,,,,,UNVERIFIED
+30,0,,,,,,,UNVERIFIED
+30,25,,,,,,,UNVERIFIED
+55,-25,,,,,,,UNVERIFIED
+55,0,,,,,,,UNVERIFIED
+55,25,,,,,,,UNVERIFIED

@@ -1,0 +1,98 @@
+{
+    "valid":  true,
+    "solids":  1,
+    "master_arm_cutter_common_mm3":  0.0,
+    "center_bore_common_mm3":  0.0,
+    "volume_removed_mm3":  1787.2421867040684,
+    "original_bbox":  [
+                          -58.2,
+                          -35.3,
+                          33.0,
+                          44.0,
+                          35.3,
+                          103.0
+                      ],
+    "candidate_bbox":  [
+                           -58.2,
+                           -35.3,
+                           35.199999999999996,
+                           44.0,
+                           35.3,
+                           103.0
+                       ],
+    "clearances":  {
+                       "Pan_KeyedHorn_Cover":  {
+                                                   "common_mm3":  0.0,
+                                                   "minimum_distance_mm":  0.20000000000000284
+                                               },
+                       "Pan_OriginalStar_PROVISIONAL":  {
+                                                            "common_mm3":  5.655341824014155,
+                                                            "minimum_distance_mm":  0.0
+                                                        },
+                       "PanServo_SG90_Reference":  {
+                                                       "common_mm3":  0.0,
+                                                       "minimum_distance_mm":  1.4999999999999925
+                                                   },
+                       "Base_EarMount_ThrustSupport":  {
+                                                           "common_mm3":  0.0,
+                                                           "minimum_distance_mm":  0.2999999999999927
+                                                       },
+                       "Pan_Replaceable_ThrustRing":  {
+                                                          "common_mm3":  0.0,
+                                                          "minimum_distance_mm":  0.0
+                                                      },
+                       "PanDrive_M3x10_0":  {
+                                                "common_mm3":  0.0,
+                                                "minimum_distance_mm":  0.19999999999999618
+                                            },
+                       "PanDrive_M3x10_1":  {
+                                                "common_mm3":  0.0,
+                                                "minimum_distance_mm":  0.19999999999999654
+                                            },
+                       "PanDrive_M3x10_2":  {
+                                                "common_mm3":  0.0,
+                                                "minimum_distance_mm":  0.19999999999999815
+                                            },
+                       "PanDrive_M3x10_3":  {
+                                                "common_mm3":  0.0,
+                                                "minimum_distance_mm":  0.19999999999999815
+                                            }
+                   },
+    "stl":  {
+                "path":  "EyeTrace_Final_Engineering\\EyeTrace_Plate02_Compact_Carrier_Test\\STL\\PanYoke_Compact_R15_Carrier_Candidate.stl",
+                "is_solid":  true,
+                "facets":  58918,
+                "volume_mm3":  41662.97265625,
+                "bbox":  [
+                             13.0,
+                             13.0,
+                             -7.1054273576010019E-15,
+                             115.19999694824219,
+                             83.5999984741211,
+                             67.80000305175781
+                         ],
+                "section_ray_at_long_arm":  {
+                                                "xy_mm":  [
+                                                              81.2,
+                                                              48.3
+                                                          ],
+                                                "vertical_intersections_z_mm":  [
+                                                                                    1.70000005,
+                                                                                    5.8
+                                                                                ],
+                                                "measured_pocket_depth_mm":  1.70000005,
+                                                "center_axis_ray_intersections":  [
+
+                                                                                  ],
+                                                "interpretation":  "R15 pocket floor and continuous center bore confirmed in independently reimported STL"
+                                            }
+            },
+    "independent_reopen":  {
+                               "fcstd_opened":  true,
+                               "source_object_count":  56,
+                               "candidate_object_count":  56,
+                               "non_pan_part_shape_differences":  0,
+                               "carrier_valid":  true,
+                               "carrier_solids":  1
+                           }
+}

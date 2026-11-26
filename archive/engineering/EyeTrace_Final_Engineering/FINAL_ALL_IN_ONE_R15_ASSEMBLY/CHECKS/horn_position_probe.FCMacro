@@ -1,0 +1,10 @@
+import FreeCAD as A,json
+from FreeCAD import Vector as V
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY';d=A.openDocument(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd');rows=[]
+pairs=[('Pan_OriginalStar_PROVISIONAL','PanYoke_EarBracket_KeyedDrive','z'),('Tilt_OriginalStar_PROVISIONAL','TiltCradle_KeyedHorn_CameraFrame','x')]
+for hn,cn,ax in pairs:
+ h=d.getObject(hn).Shape;y=d.getObject(cn).Shape
+ for delta in [-80,-40,-35,-20,-5,0,5,20,35,40,80]:
+  q=h.copy();q.translate(V(0,0,delta) if ax=='z' else V(delta,0,0));dist=q.distToShape(y)[0];vol=q.common(y).Volume
+  rows.append({'horn':hn,'carrier':cn,'axis':ax,'translation_mm':delta,'distance_mm':dist,'intersection_mm3':vol})
+open(out+r'\CHECKS\horn_position_probe.json','w').write(json.dumps(rows,indent=2));A.closeDocument(d.Name)

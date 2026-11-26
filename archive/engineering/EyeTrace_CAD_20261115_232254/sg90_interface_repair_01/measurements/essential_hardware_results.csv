@@ -1,0 +1,10 @@
+ID,Hardware/test,Essential data/result,Reason,Pan/unit A,Tilt/unit B,Camera/shared
+E1,Both servo ears,"Hole pitch/diameter, underside height and thickness",27.2/2.0/15.9/2.5 reference; confirm selected M1.6,,,
+E2,Both servo envelopes,"Max case/boss dimensions, axis offset and seated horn plane relative ears",Reference is not clone certified,,,
+H1,Both original stars,"Measured outline/arm count, web and raised-hub dimensions OR trace and coupon fit",Five-arm profile is provisional,,,
+H2,Original center screws,Correct originals present; seated horn height and screw-head/tool access,No spline-tooth measurement needed for external printed carrier,,,
+C1,Camera mounting face,"Both hole-center pitches, each hole diameter, PCB outline/thickness",Current28x28/diameter2.2/38x38x1.6 unmeasured,,,
+C2,Camera keep-outs,"Rear components, standoff space, lens/IR/connector positions and screw intrusion limit",Actual camera photograph/drawing helpful; none supplied,,,
+W1,Real cables,Plug passage/exit positions and bend/slack throughout movement,Only nominal exit envelopes checked,,,
+P1,PETG coupons,"As-printed sizes, nut seats, positive profile/play and journal fit",CAD gaps are not manufacturing tolerances,,,
+L1,Payload test,"Actual mass/center of mass, friction/backlash and warm duty behavior",No material/bearing/servo load approval,,,

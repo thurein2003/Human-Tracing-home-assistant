@@ -1,0 +1,9 @@
+﻿import FreeCAD as A, os, json
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+f=os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd');d=A.openDocument(f)
+out=[]
+for o in d.Objects:
+ if hasattr(o,'Shape') and not o.Shape.isNull() and o.Name not in ('AssemblyRoot','PrintedParts','HardwareReference','Keepouts'):
+  b=o.Shape.BoundBox; pl=o.Placement
+  out.append({'name':o.Name,'label':o.Label,'valid':bool(o.Shape.isValid()),'solids':len(o.Shape.Solids),'placement':{'xyz':[pl.Base.x,pl.Base.y,pl.Base.z],'rot_axis':[pl.Rotation.Axis.x,pl.Rotation.Axis.y,pl.Rotation.Axis.z],'rot_deg':pl.Rotation.Angle*180/3.141592653589793},'bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]})
+with open(os.path.join(p,'ASSEMBLY_PLACEMENTS.json'),'w') as h:json.dump(out,h,indent=2)

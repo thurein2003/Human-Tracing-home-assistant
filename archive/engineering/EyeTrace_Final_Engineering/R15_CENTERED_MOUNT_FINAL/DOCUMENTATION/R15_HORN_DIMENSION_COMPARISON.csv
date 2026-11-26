@@ -1,0 +1,14 @@
+﻿Feature,Master_R15,Pan_yoke,Tilt_cradle,Difference_mm,Status
+Pocket envelope X,39.2,39.2,39.2,0,CAD PASS
+Pocket reach left X,19.6,19.6,19.6,0,CAD PASS
+Pocket reach right X,19.6,19.6,19.6,0,CAD PASS
+Pocket envelope Y,20.2,20.2,20.2,0,CAD PASS
+Pocket depth,1.7,1.7,1.7,0,CAD PASS
+Center through-hole diameter,8.0,8.0,8.0,0,CAD PASS
+Long arm root width,7.2,7.2,7.2,0,CAD PASS
+Long tip width,4.7539,4.7539,4.7539,<0.001,CAD PASS
+Long rounded-end radius,2.3769,2.3769,2.3769,<0.001,CAD PASS
+Upper short-arm width,3.4,3.4,3.4,0,CAD PASS
+Lower short-arm width,4.4,4.4,4.4,0,CAD PASS
+Camera mounting pattern horizontal,21,21,21,0,CAD PASS
+Camera mounting pattern vertical,14,14,14,0,CAD PASS

@@ -1,0 +1,15 @@
+import FreeCAD as A, json, os
+from FreeCAD import Placement,Vector
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY';fn=out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd';d=A.openDocument(fn)
+# These source features already contain assembled/world-coordinate BREP shapes; their non-identity object Placement would apply the same translation/orientation a second time.
+fix=['Pan_OriginalStar_PROVISIONAL','Tilt_OriginalStar_PROVISIONAL','RailMount_Lower_M3x10_0','RailMount_Lower_M3x10_1','PCB_Spacer_Lower_Left','PCB_Spacer_Lower_Right','Camera_M2x12_Lower_Left','Camera_M2x12_Lower_Right','RailMount_Upper_M3x10_0','RailMount_Upper_M3x10_1','PCB_Spacer_Upper_Left','PCB_Spacer_Upper_Right','Camera_M2x12_Upper_Left','Camera_M2x12_Upper_Right','Camera_Lens_PROVISIONAL','Camera_WireExit_KEEP_OUT','Camera_RearComponents_KEEP_OUT']
+changes=[]
+for n in fix:
+ o=d.getObject(n)
+ if not o:continue
+ p=o.Placement
+ if p.Base.Length>1e-7 or abs(p.Rotation.Angle)>1e-7:
+  changes.append({'name':n,'old_base':[p.Base.x,p.Base.y,p.Base.z],'old_angle_deg':p.Rotation.Angle*180/3.141592653589793,'shape_bbox':[o.Shape.BoundBox.XMin,o.Shape.BoundBox.YMin,o.Shape.BoundBox.ZMin,o.Shape.BoundBox.XMax,o.Shape.BoundBox.YMax,o.Shape.BoundBox.ZMax]})
+  o.Placement=Placement(Vector(0,0,0),A.Rotation())
+d.recompute();d.save()
+open(out+r'\CHECKS\assembly_placement_repairs.json','w').write(json.dumps({'moved_object_placement_to_identity_without_altering_BREP':changes,'R15_printable_BREP_geometry_modified':False,'result':'Output assembly copy only; originals preserved.'},indent=2));A.closeDocument(d.Name)

@@ -1,0 +1,8 @@
+import FreeCAD as App,Part,json
+from FreeCAD import Vector as V
+p=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(p);old=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+slab=Part.makeBox(16,57,1.8,V(28,-28.5,35.2));prot=Part.makeCylinder(35.3,2,V(0,0,35.1))
+for yy in [-23.5,23.5]:prot=prot.fuse(Part.makeCylinder(5.5,2,V(32.5,yy,35.1)))
+c=slab.cut(prot);raw=old.cut(c);new=raw.removeSplitter()
+r={'valid':new.isValid(),'solids':len(new.Solids),'vol_orig':old.Volume,'vol_after':new.Volume,'cut_vol':c.Volume,'solid_volumes':[s.Volume for s in new.Solids],'bboxes':[[s.BoundBox.XMin,s.BoundBox.XMax,s.BoundBox.YMin,s.BoundBox.YMax,s.BoundBox.ZMin,s.BoundBox.ZMax] for s in new.Solids]}
+open(r'EyeTrace_Final_Engineering\EyeTrace_R24_PanYoke_OneLayer\DOCUMENTATION\cut_boss_keep_diagnosis.json','w').write(json.dumps(r,indent=2));print(json.dumps(r,indent=2))

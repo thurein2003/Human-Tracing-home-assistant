@@ -1,0 +1,5 @@
+V0_Baseline_4W_35pct_ABS.3mf | walls=4 | gyroid=35% | support=tree(manual) | mesh-sha256=0ae1680f1efd93f52243116f06b6fc1b0fb8b2ec778811b1df3b192045fc19d7
+V1_3W_10pct_Gyroid_ABS.3mf | walls=3 | gyroid=10% | support=tree(manual) | mesh-sha256=0ae1680f1efd93f52243116f06b6fc1b0fb8b2ec778811b1df3b192045fc19d7
+V2_3W_15pct_Gyroid_ABS.3mf | walls=3 | gyroid=15% | support=tree(manual) | mesh-sha256=0ae1680f1efd93f52243116f06b6fc1b0fb8b2ec778811b1df3b192045fc19d7
+V3_3W_20pct_Gyroid_ABS.3mf | walls=3 | gyroid=20% | support=tree(manual) | mesh-sha256=0ae1680f1efd93f52243116f06b6fc1b0fb8b2ec778811b1df3b192045fc19d7
+V4_AutoTreeSupport_ABS.3mf | walls=4 | gyroid=35% | support=tree(auto) | mesh-sha256=0ae1680f1efd93f52243116f06b6fc1b0fb8b2ec778811b1df3b192045fc19d7

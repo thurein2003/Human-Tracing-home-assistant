@@ -1,0 +1,82 @@
+[
+  {
+    "name": "BaseCoupon",
+    "label": "Outer cross coupon body",
+    "type": "Part::Feature",
+    "volume": 1619.4176098890955,
+    "valid": true,
+    "solids": 1,
+    "bbox": [
+      -21.0,
+      -11.5,
+      0.0,
+      21.0,
+      11.5,
+      3.8
+    ]
+  },
+  {
+    "name": "ArmPocketTool",
+    "label": "Fixed X/Y arm pocket cutter",
+    "type": "Part::Feature",
+    "volume": 461.6567346548272,
+    "valid": true,
+    "solids": 1,
+    "bbox": [
+      -19.6,
+      -10.1,
+      2.0999999999999996,
+      19.6,
+      10.099999999999998,
+      3.8
+    ]
+  },
+  {
+    "name": "ArmPocketCut",
+    "label": "Arm-pocketed coupon blank",
+    "type": "Part::Cut",
+    "volume": 1157.760875234268,
+    "valid": true,
+    "solids": 1,
+    "bbox": [
+      -21.0,
+      -11.5,
+      0.0,
+      21.0,
+      11.5,
+      3.8
+    ]
+  },
+  {
+    "name": "ThroughBoreTool",
+    "label": "Single continuous 8.00 mm center bore",
+    "type": "Part::Cylinder",
+    "volume": 241.27431579569608,
+    "valid": true,
+    "solids": 1,
+    "bbox": [
+      -4.0,
+      -4.0,
+      0.0,
+      4.0,
+      4.0,
+      4.8
+    ]
+  },
+  {
+    "name": "FinalCoupon",
+    "label": "Cross-horn ultra-minimal fit-test coupon",
+    "type": "Part::Cut",
+    "volume": 1052.1252003539548,
+    "valid": true,
+    "solids": 1,
+    "bbox": [
+      -21.0,
+      -11.5,
+      0.0,
+      21.0,
+      11.5,
+      3.8
+    ]
+  }
+]

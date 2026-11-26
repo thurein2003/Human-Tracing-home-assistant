@@ -1,0 +1,37 @@
+import FreeCAD as App, Part, Mesh, MeshPart, json, os, math
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering'
+src=root+r'\R15_CENTERED_MOUNT_FINAL\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd'
+master=root+r'\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'
+out=root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CHECKS\fresh_brep_audit.json'
+stld=root+r'\EyeTrace_Final_2_PLATES_R15\STL'
+d=App.openDocument(src)
+m=App.openDocument(master)
+def bb(s):
+ b=s.BoundBox
+ return [b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]
+def facestats(s):
+ areas=[f.Area for f in s.Faces]
+ edges=[e.Length for e in s.Edges]
+ return {'faces':len(areas),'edges':len(edges),'min_face_area_mm2':min(areas) if areas else None,'faces_below_0_01_mm2':sum(x<0.01 for x in areas),'edges_below_0_05_mm':sum(x<0.05 for x in edges),'min_edge_mm':min(edges) if edges else None}
+tool=m.getObject('ArmPocketTool').Shape
+rows=[]
+for nm,fn,rot,shift in [
+ ('PanYoke_EarBracket_KeyedDrive','PanYoke_EarBracket_KeyedDrive.stl',None,V(0,0,33.0)),
+ ('TiltCradle_KeyedHorn_CameraFrame','TiltCradle_KeyedHorn_CameraFrame.stl',App.Rotation(V(0,1,0),90),V(-43.1,0,78.0))]:
+ o=d.getObject(nm); s=o.Shape.copy(); s.check(True)
+ cutter=tool.copy()
+ if rot: cutter.rotate(V(0,0,0),rot.Axis,rot.Angle*180/math.pi)
+ cutter.translate(shift)
+ common=s.common(cutter)
+ # Exact original mesh object is inspected independently for watertightness and component count.
+ mp=Mesh.Mesh(os.path.join(stld,fn))
+ # Convert STL triangles into a diagnostic Part shape for shape check and volumetric comparison.
+ ms=Part.Shape(); ms.makeShapeFromMesh(mp.Topology,0.02)
+ rows.append({'part':nm,'source_fcstd':src,'stl':fn,'brep_valid':s.isValid(),'brep_solid_count':len(s.Solids),'brep_volume_mm3':s.Volume,'brep_bbox_mm':bb(s),'brep_face_edge_stats':facestats(s),'master_cutter_transformed_bbox_mm':bb(cutter),'master_cutter_volume_mm3':cutter.Volume,'carrier_cutter_common_mm3':common.Volume,'carrier_cutter_common_solids':len(common.Solids),'stl_facets':mp.CountFacets,'stl_is_solid':mp.isSolid(),'stl_components':mp.countComponents(),'stl_bbox_mm':[mp.BoundBox.XMin,mp.BoundBox.YMin,mp.BoundBox.ZMin,mp.BoundBox.XMax,mp.BoundBox.YMax,mp.BoundBox.ZMax],'stl_shape_valid':ms.isValid(),'stl_shape_solids':len(ms.Solids),'stl_shape_volume_mm3':ms.Volume,'stl_shape_bbox_mm':bb(ms),'stl_shape_face_edge_stats':facestats(ms)})
+# Master source profile metrics
+master_shape=m.getObject('FinalCoupon').Shape if m.getObject('FinalCoupon') else None
+report={'freecad_version':App.Version()[:4],'master_file':master,'master_tool_bbox_mm':bb(tool),'master_tool_volume_mm3':tool.Volume,'master_tool_valid':tool.isValid(),'master_tool_solids':len(tool.Solids),'master_coupon_bbox_mm':bb(master_shape) if master_shape else None,'master_coupon_valid':master_shape.isValid() if master_shape else None,'pockets':rows,'interpretation':'Fresh validity, STL, and source-cutter intersection audit. Nonzero cutter intersection means remaining material intrudes into the nominal master cavity and must be evaluated against the intentional annular land.'}
+with open(out,'w') as f: json.dump(report,f,indent=2)
+App.closeDocument(m.Name); App.closeDocument(d.Name)
+print(json.dumps(report,indent=2))

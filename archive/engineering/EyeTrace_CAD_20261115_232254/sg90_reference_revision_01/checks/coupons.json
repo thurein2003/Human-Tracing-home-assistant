@@ -1,0 +1,26 @@
+{
+  "SG90_TabMount_Test": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false
+  },
+  "StarHorn_Clamp_Test": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false
+  },
+  "StarHorn_MatingFace_Test": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false
+  }
+}

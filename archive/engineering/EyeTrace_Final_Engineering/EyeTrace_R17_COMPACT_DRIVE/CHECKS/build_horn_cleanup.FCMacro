@@ -1,0 +1,84 @@
+﻿import FreeCAD as A, Part, Mesh, MeshPart, json, os, math, shutil
+from FreeCAD import Vector as V, Rotation
+ROOT=r'EyeTrace_Final_Engineering'
+OUT=os.path.join(ROOT,'EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP')
+os.makedirs(os.path.join(OUT,'CAD'),exist_ok=True)
+os.makedirs(os.path.join(OUT,'STL'),exist_ok=True)
+os.makedirs(os.path.join(OUT,'PRINT'),exist_ok=True)
+os.makedirs(os.path.join(OUT,'DOCUMENTATION'),exist_ok=True)
+os.makedirs(os.path.join(OUT,'RENDERS'),exist_ok=True)
+SRC=os.path.join(ROOT,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd')
+MASTER=os.path.join(ROOT,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd')
+d=A.openDocument(SRC); m=A.openDocument(MASTER)
+base=m.getObject('BaseCoupon').Shape
+final=m.getObject('FinalCoupon').Shape
+expected=base.cut(final)
+rotPan=Rotation(V(1,0,0),180)
+rotTilt=Rotation(V(0,1,0),-90)
+def transform(shape,rot,top):
+ q=shape.copy()
+ q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/math.pi)
+ q.translate(top-rot.multVec(V(0,0,3.8)))
+ return q
+def mesh_export(shape,path):
+ sh=shape.copy()
+ me=MeshPart.meshFromShape(Shape=sh,LinearDeflection=0.08,AngularDeflection=0.15,Relative=False)
+ me.write(path)
+def repair(name,rot,top,holes,axis,axisstart,axisend):
+ o=d.getObject(name); old=o.Shape.copy()
+ env=transform(base,rot,top)
+ exp=transform(expected,rot,top)
+ patch=transform(final,rot,top)
+ result=old.cut(env).fuse(patch)
+ screwTools=[]
+ for h in holes:
+  c=Part.makeCylinder(h[0],axisend-axisstart,V(*h[1]),V(*axis))
+  screwTools.append(c)
+ alltools=screwTools[:]
+ # master continuous Ø8 bore through the complete drive thickness
+ center=Part.makeCylinder(4.0,axisend-axisstart,V(*(([0,0,axisstart] if axis==[0,0,1] else [axisstart,0,78]))),V(*axis))
+ alltools.append(center)
+ for tool in alltools: result=result.cut(tool)
+ # no removeSplitter: it invalidates the tilt carrier BREP
+ if not result.isValid() or len(result.Solids)!=1:
+  raise Exception(name+' invalid or multi-solid after repair: valid='+str(result.isValid())+' solids='+str(len(result.Solids)))
+ # measure local void; compensate only explicitly retained functional screw and center bores for profile comparison
+ local=env.cut(result)
+ allowed=exp.copy()
+ for tool in alltools: allowed=allowed.fuse(env.common(tool))
+ deltaA=local.cut(allowed); deltaE=allowed.cut(local)
+ o.Shape=result
+ o.Label=('Pan yoke — exact R15 horn recess; legacy slots removed' if 'PanYoke' in name else 'Tilt cradle — exact R15 horn recess; legacy slots removed')
+ return {'name':name,'valid':result.isValid(),'solids':len(result.Solids),'volume_before':old.Volume,'volume_after':result.Volume,'volume_delta':result.Volume-old.Volume,'faces_after':len(result.Faces),'envelope_volume':env.Volume,'r15_void_volume':exp.Volume,'local_void_volume_including_preserved_fasteners':local.Volume,'expected_void_plus_preserved_fasteners':allowed.Volume,'profile_difference_actual_only_mm3':deltaA.Volume,'profile_difference_expected_only_mm3':deltaE.Volume,'bbox':[result.BoundBox.XMin,result.BoundBox.YMin,result.BoundBox.ZMin,result.BoundBox.XMax,result.BoundBox.YMax,result.BoundBox.ZMax]}
+pan=repair('PanYoke_EarBracket_KeyedDrive',rotPan,V(0,0,33),
+ [(1.65,(18,0,30)),(1.65,(-18,0,30)),(1.65,(0,18,30)),(1.65,(0,-18,30))],[0,0,1],30,42)
+tilt=repair('TiltCradle_KeyedHorn_CameraFrame',rotTilt,V(-41,0,78),
+ [(1.65,(-46,0,93)),(1.65,(-46,0,63)),(1.65,(-46,15,78)),(1.65,(-46,-15,78))],[1,0,0],-46,-32)
+A.closeDocument(m.Name)
+d.recompute()
+outfc=os.path.join(OUT,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd')
+d.saveAs(outfc)
+# Export assembled BREP STEP
+printed=[d.getObject(n) for n in ['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanYoke_EarBracket_KeyedDrive','Tilt_Removable_IdlerPillar','Pan_KeyedHorn_Cover','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','PCB_Spacer_Lower_Left','PCB_Spacer_Lower_Right','PCB_Spacer_Upper_Left','PCB_Spacer_Upper_Right','CameraPlate_21x14']]
+Part.export(printed,os.path.join(OUT,'CAD','EyeTrace_R17_HornCleanup_Assembly.step'))
+# Print-bed rigid transforms taken from existing 3MF tessellation (no scaling)
+panPrint=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape.copy(); panPrint.translate(V(71.2,48.3,-33))
+tiltPrint=d.getObject('TiltCradle_KeyedHorn_CameraFrame').Shape.copy()
+tiltPrint.rotate(V(0,0,0),V(0,1,0),-90); tiltPrint.translate(V(288,127,41))
+mesh_export(panPrint,os.path.join(OUT,'STL','PanYoke_EarBracket_KeyedDrive_R17.stl'))
+mesh_export(tiltPrint,os.path.join(OUT,'STL','TiltCradle_KeyedHorn_CameraFrame_R17.stl'))
+for ob in printed:
+ if ob.Name in ('PanYoke_EarBracket_KeyedDrive','TiltCradle_KeyedHorn_CameraFrame'): continue
+ # copy matching existing printable STL unchanged for traceability
+srcstl=os.path.join(ROOT,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','STL')
+for fn in os.listdir(srcstl):
+ if fn.lower().endswith('.stl') and 'PanYoke' not in fn and 'TiltCradle' not in fn:
+  shutil.copy2(os.path.join(srcstl,fn),os.path.join(OUT,'STL',fn))
+report={'freecad':'1.1.4','source_assembly':SRC,'master_r15':MASTER,'pan':pan,'tilt':tilt,'camera_pattern_mm':[21,14],'print_transform_pan':{'translation_mm':[71.2,48.3,-33.0]},'print_transform_tilt':{'rotation_y_deg':-90,'translation_mm':[288,127,41]},'printable_component_count':13,'slicer_status':'HOLD; new geometry requires reslicing in Creality Print'}
+with open(os.path.join(OUT,'CHECKS.json'),'w') as f: json.dump(report,f,indent=2)
+print('R17_HORN_CLEANUP_WRITTEN',outfc)
+print('PAN',json.dumps(pan))
+print('TILT',json.dumps(tilt))
+
+
+

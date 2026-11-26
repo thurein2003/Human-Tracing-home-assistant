@@ -1,0 +1,12 @@
+﻿import FreeCAD as A,json,Part
+r=r'EyeTrace_Final_Engineering';d=A.openDocument(r+r'\Camera_21x14_Correction_01\CAD\EyeTrace_Final_Assembly_21x14.FCStd'); out={}
+for name,axis,center in [('PanYoke_EarBracket_KeyedDrive','z',(0,0)),('TiltCradle_KeyedHorn_CameraFrame','x',(0,78))]:
+ s=d.getObject(name).Shape; arr=[]
+ for e in s.Edges:
+  c=e.Curve
+  if hasattr(c,'Radius') and hasattr(c,'Center'):
+   cc=c.Center
+   if axis=='z' and abs(cc.x)<1e-4 and abs(cc.y)<1e-4: arr.append({'r':c.Radius,'center':[cc.x,cc.y,cc.z],'edge_bbox':[e.BoundBox.XMin,e.BoundBox.YMin,e.BoundBox.ZMin,e.BoundBox.XMax,e.BoundBox.YMax,e.BoundBox.ZMax]})
+   if axis=='x' and abs(cc.y)<1e-4 and abs(cc.z-78)<1e-4: arr.append({'r':c.Radius,'center':[cc.x,cc.y,cc.z],'edge_bbox':[e.BoundBox.XMin,e.BoundBox.YMin,e.BoundBox.ZMin,e.BoundBox.XMax,e.BoundBox.YMax,e.BoundBox.ZMax]})
+ out[name]=arr
+open(r+r'\FINAL_ALL_IN_ONE_R15\existing_axis_circles.json','w').write(json.dumps(out,indent=2));A.closeDocument(d.Name)

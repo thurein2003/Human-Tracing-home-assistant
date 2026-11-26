@@ -1,0 +1,27 @@
+﻿import FreeCAD as A, Part,json,math,os,traceback
+from FreeCAD import Vector as V,Rotation
+root=r'EyeTrace_Final_Engineering'
+out=root+r'\EyeTrace_R17_COMPACT_DRIVE\CHECKS\tilt_boolean_diagnostic.json'
+st=[]
+def record(label,s):
+ try: st.append({'stage':label,'null':s.isNull(),'valid':s.isValid(),'solids':len(s.Solids),'volume':s.Volume})
+ except Exception as e: st.append({'stage':label,'error':str(e)})
+ with open(out,'w') as f:json.dump(st,f,indent=2)
+d=A.openDocument(root+r'\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\CAD\EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd')
+m=A.openDocument(root+r'\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd')
+rot=Rotation(V(0,1,0),-90); top=V(-41,0,78)
+def tr(sh):
+ q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/math.pi);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+o=d.getObject('TiltCradle_KeyedHorn_CameraFrame'); old=o.Shape.copy();record('old',old)
+env=tr(m.getObject('BaseCoupon').Shape);record('env',env)
+patch=tr(m.getObject('FinalCoupon').Shape);record('patch',patch)
+s1=old.cut(env);record('old-cut-env',s1)
+s2=s1.fuse(patch);record('fuse-patch',s2)
+if not s2.isNull():
+ s3=s2.removeSplitter();record('refine',s3)
+ for i,(y,z) in enumerate([(0,93),(0,63),(15,78),(-15,78)]):
+  c=Part.makeCylinder(1.65,14,V(-46,y,z),V(1,0,0))
+  s3=s3.cut(c);record('screw'+str(i),s3)
+ c=Part.makeCylinder(4,14,V(-46,0,78),V(1,0,0));s3=s3.cut(c);record('center8',s3)
+print('DIAG',json.dumps(st))
+

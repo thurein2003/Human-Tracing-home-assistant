@@ -1,0 +1,252 @@
+{
+  "source_3mf": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED\\EyeTrace_K2_ABS_All_In_One_R15_Fixed.3mf",
+  "source_meshes": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED\\STL",
+  "placements_crosschecked_to_exact_3mf": true,
+  "part_count": 13,
+  "parts": [
+    {
+      "name": "Base_EarMount_ThrustSupport",
+      "facets": 5460,
+      "translation_mm": [
+        174.2,
+        48.0,
+        0.0
+      ],
+      "bounds": [
+        134.2,
+        13.0,
+        0.0,
+        214.2,
+        83.0,
+        36.5
+      ],
+      "solid": true
+    },
+    {
+      "name": "Pan_Replaceable_ThrustRing",
+      "facets": 2112,
+      "translation_mm": [
+        44.98567771911621,
+        134.5964199066162,
+        0.0
+      ],
+      "bounds": [
+        13.0,
+        102.6,
+        0.0,
+        76.98567771911621,
+        166.59283981323242,
+        1.0
+      ],
+      "solid": true
+    },
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "facets": 9942,
+      "translation_mm": [
+        64.0999984741211,
+        48.296051025390625,
+        0.0
+      ],
+      "bounds": [
+        13.0,
+        13.0,
+        0.0,
+        115.19999694824219,
+        83.59210205078125,
+        70.0
+      ],
+      "solid": true
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar",
+      "facets": 1300,
+      "translation_mm": [
+        101.0,
+        131.1,
+        0.0
+      ],
+      "bounds": [
+        93.0,
+        102.6,
+        0.0,
+        109.0,
+        159.6,
+        57.0
+      ],
+      "solid": true
+    },
+    {
+      "name": "Pan_KeyedHorn_Cover",
+      "facets": 4312,
+      "translation_mm": [
+        148.9892578125,
+        126.597314453125,
+        0.0
+      ],
+      "bounds": [
+        125.0,
+        102.6,
+        0.0,
+        172.9892578125,
+        150.59462890625,
+        4.199999809265137
+      ],
+      "solid": true
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "facets": 9108,
+      "translation_mm": [
+        211.5,
+        125.30000076293945,
+        0.0
+      ],
+      "bounds": [
+        189.0,
+        102.6,
+        -7.105427357601002e-15,
+        234.0,
+        147.99765167236328,
+        77.0
+      ],
+      "solid": true
+    },
+    {
+      "name": "Tilt_KeyedHorn_CaptiveCover",
+      "facets": 4312,
+      "translation_mm": [
+        33.9906005859375,
+        206.59765014648437,
+        0.0
+      ],
+      "bounds": [
+        13.0,
+        185.6,
+        0.0,
+        54.9906005859375,
+        227.59530029296874,
+        4.199999809265137
+      ],
+      "solid": true
+    },
+    {
+      "name": "Tilt_Journal_FlangedSleeve",
+      "facets": 1260,
+      "translation_mm": [
+        146.5,
+        189.09960827827453,
+        0.0
+      ],
+      "bounds": [
+        143.0,
+        185.6,
+        0.0,
+        149.9984335899353,
+        192.59921655654907,
+        4.099999904632568
+      ],
+      "solid": true
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left",
+      "facets": 840,
+      "translation_mm": [
+        168.4997203350067,
+        188.1,
+        0.0
+      ],
+      "bounds": [
+        166.0,
+        185.6,
+        0.0,
+        170.99944067001343,
+        190.59888110160827,
+        3.0
+      ],
+      "solid": true
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right",
+      "facets": 840,
+      "translation_mm": [
+        189.4997203350067,
+        188.1,
+        0.0
+      ],
+      "bounds": [
+        187.0,
+        185.6,
+        0.0,
+        191.99944067001343,
+        190.59888110160827,
+        3.0
+      ],
+      "solid": true
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left",
+      "facets": 840,
+      "translation_mm": [
+        210.4997203350067,
+        188.1,
+        0.0
+      ],
+      "bounds": [
+        208.0,
+        185.6,
+        0.0,
+        212.99944067001343,
+        190.59888110160827,
+        3.0
+      ],
+      "solid": true
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right",
+      "facets": 840,
+      "translation_mm": [
+        231.4997203350067,
+        188.1,
+        0.0
+      ],
+      "bounds": [
+        229.0,
+        185.6,
+        0.0,
+        233.99944067001343,
+        190.59888110160827,
+        3.0
+      ],
+      "solid": true
+    },
+    {
+      "name": "CameraPlate_21x14",
+      "facets": 3828,
+      "translation_mm": [
+        99.0,
+        201.6,
+        0.0
+      ],
+      "bounds": [
+        71.0,
+        185.6,
+        0.0,
+        127.0,
+        217.6,
+        3.0
+      ],
+      "solid": true
+    }
+  ],
+  "overall_bounds_mm": [
+    13.0,
+    13.0,
+    -7.105427357601002e-15,
+    234.0,
+    227.59530029296874,
+    77.0
+  ],
+  "within_260x260_bed": true,
+  "all_z0": true
+}

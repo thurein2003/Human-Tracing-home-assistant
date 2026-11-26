@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "solids": 20,
+  "bbox_candidate_pairs_checked": 10,
+  "pairs_with_solid_intersection": 0,
+  "pair_results": [
+    {
+      "a": "PAN Female C1 ID64.10",
+      "b": "PAN Male Control OD64 ID60 C1",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "PAN Female C2 ID64.20",
+      "b": "PAN Male Control OD64 ID60 C2",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "PAN Female C3 ID64.30",
+      "b": "PAN Male Control OD64 ID60 C3",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "PAN Female C4 ID64.40",
+      "b": "PAN Male Control OD64 ID60 C4",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "PAN Female C5 ID64.60",
+      "b": "PAN Male Control OD64 ID60 C5",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "TILT Bore T1 ID5.05",
+      "b": "TILT Journal Control OD5 T1",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "TILT Bore T2 ID5.10",
+      "b": "TILT Journal Control OD5 T2",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "TILT Bore T3 ID5.15",
+      "b": "TILT Journal Control OD5 T3",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "TILT Bore T4 ID5.20",
+      "b": "TILT Journal Control OD5 T4",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "a": "TILT Bore T5 ID5.30",
+      "b": "TILT Journal Control OD5 T5",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    }
+  ]
+}

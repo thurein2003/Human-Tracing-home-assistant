@@ -1,0 +1,34 @@
+import json,zipfile,xml.etree.ElementTree as ET
+from pathlib import Path
+import FreeCAD as App,Part,Mesh
+OUT=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_03")
+ROOT=OUT.parent
+r={'freecad_version':App.Version()}
+d=App.openDocument(str(OUT/'CrossHorn_Minimal_FitTest_03.FCStd')); o=d.getObject('MinimalCrossHornCoupon')
+r['prototype03_fcstd']={'opened':True,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids),'shape_objects':len([x for x in d.Objects if hasattr(x,'Shape') and not x.Shape.isNull()]),'volume_mm3':o.Shape.Volume}; App.closeDocument(d.Name)
+m=Mesh.Mesh(str(OUT/'CrossHorn_Minimal_FitTest_03.stl')); r['prototype03_stl']={'facets':len(m.Facets),'watertight_solid':m.isSolid(),'bbox_mm':[m.BoundBox.XLength,m.BoundBox.YLength,m.BoundBox.ZLength],'fits_k2_260_cube':m.BoundBox.XLength<=260 and m.BoundBox.YLength<=260 and m.BoundBox.ZLength<=260}
+p=OUT/'CrossHorn_Minimal_FitTest_03.3mf'; ns={'m':'http://schemas.microsoft.com/3dmanufacturing/core/2015/02'}
+with zipfile.ZipFile(p) as z:
+ model=ET.fromstring(z.read('3D/3dmodel.model')); objs=model.findall('.//m:object',ns); tri=sum(len(x.findall('m:mesh/m:triangles/m:triangle',ns)) for x in objs); cfg=json.loads(z.read('Metadata/project_settings.config'))
+ r['prototype03_3mf']={'crc_valid':z.testzip() is None,'object_count':len(objs),'triangles':tri,'settings':{k:cfg.get(k) for k in ['layer_height','wall_loops','sparse_infill_density','sparse_infill_pattern','enable_support','brim_width']}}
+# Compare with actual three-coupon CAD from Prototype 01, whose 3MF config used 100% infill and four walls.
+old=App.openDocument(str(ROOT/'PROTOTYPE_01'/'CrossHorn_ABS_FitTest_Prototype_01.FCStd'))
+old_shapes=[x for x in old.Objects if hasattr(x,'Shape') and not x.Shape.isNull() and len(x.Shape.Solids)>0]
+coupon_objs=[x for x in old_shapes if 'coupon' in x.Label.lower() or 'clearance' in x.Label.lower()]
+if not coupon_objs: coupon_objs=[x for x in old_shapes if x.Name!='ParametricCrossHorn']
+oldvol=sum(x.Shape.Volume for x in coupon_objs)
+r['prototype01_reference']={'coupon_object_count':len(coupon_objs),'coupon_objects':[{'name':x.Name,'label':x.Label,'volume_mm3':x.Shape.Volume} for x in coupon_objs],'all_shape_objects':[{'name':x.Name,'label':x.Label,'volume_mm3':x.Shape.Volume} for x in old_shapes],'total_solid_volume_mm3':oldvol,'project_infill':'100%','project_walls':4}
+App.closeDocument(old.Name)
+density=1.04 # g/cm^3 ABS estimate; brand-specific density not supplied
+vnew=float(r['prototype03_fcstd']['volume_mm3'])
+# Estimated new filament fraction bracket for 3 walls, 5 top/bottom layers and 12% infill.
+fractions=[0.55,0.80]
+oldmass=oldvol*density/1000
+newmasses=[vnew*f*density/1000 for f in fractions]
+reductions=[100*(1-newm/oldmass) for newm in newmasses] if oldmass else []
+flow=2.5 # mm^3/s conservative average effective extrusion flow; not a slicer measurement
+times=[vnew*f/flow/60+5 for f in fractions]
+oldtime=oldvol/flow/60+5
+r['estimates']={'ABS_density_g_cm3_assumed':density,'prototype01_mass_g_estimate':oldmass,'prototype03_mass_g_range':sorted(newmasses),'filament_reduction_percent_range':[min(reductions),max(reductions)],'prototype01_print_time_min_estimate':oldtime,'prototype03_print_time_min_range':sorted(times),'time_model':'effective extrusion flow 2.5 mm3/s plus 5 min setup/travel; estimate only','prototype03_effective_material_fraction_assumed_range':fractions}
+r['status']='GEOMETRY_AND_MESH_PASS; SLICER_TOOLPATHS_NOT_VERIFIED; PHYSICAL_FIT_UNVERIFIED'
+(OUT/'validation_results.json').write_text(json.dumps(r,indent=2),encoding='utf-8'); print(json.dumps(r,indent=2))

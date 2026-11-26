@@ -1,0 +1,12 @@
+﻿import json,FreeCAD as App
+p=r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_05\CrossHorn_UltraMinimal_FitTest_04R05.FCStd'
+d=App.openDocument(p)
+o=d.getObject('Horn3CrossFitCoupon')
+s=o.Shape
+r={'opened':True,'valid':s.isValid(),'solid_count':len(s.Solids),'volume_mm3':s.Volume,'bbox_mm':[s.BoundBox.XLength,s.BoundBox.YLength,s.BoundBox.ZLength],'arm_center_to_tip_mm':{n:getattr(o,n).Value for n in ['LongLeftNominalCenterToTip','LongRightNominalCenterToTip','LongLeftPocketCenterToTip','LongRightPocketCenterToTip','ShortUpperNominalCenterToTip','ShortLowerNominalCenterToTip','ShortUpperPocketCenterToTip','ShortLowerPocketCenterToTip']},'front_recess_diameter_mm':o.FrontHubRecessDiameter.Value,'front_recess_depth_mm':o.FrontHubRecessDepth.Value,'back_recess_diameter_mm':o.BackHubRecessDiameter.Value,'back_recess_depth_mm':o.BackHubRecessDepth.Value,'screw_access_diameter_mm':o.ScrewAccessDiameter.Value}
+print('REV05_REOPEN='+json.dumps(r))
+assert r['valid'] and r['solid_count']==1
+assert abs(r['bbox_mm'][0]-38)<0.01 and abs(r['bbox_mm'][1]-23)<0.01
+assert abs(r['arm_center_to_tip_mm']['LongLeftNominalCenterToTip']-16.25)<1e-6
+assert abs(r['arm_center_to_tip_mm']['LongRightNominalCenterToTip']-18.75)<1e-6
+App.closeDocument(d.Name)

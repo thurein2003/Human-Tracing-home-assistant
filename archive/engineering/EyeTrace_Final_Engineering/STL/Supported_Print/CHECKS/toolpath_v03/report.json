@@ -1,0 +1,162 @@
+{
+  "Gcode": "TOOLPATHS\\v03\\plate_1.gcode",
+  "declared_model_layers": 600,
+  "extrusion_Z_planes": 600,
+  "extrusion_segments": 995727,
+  "role_segment_counts": {
+    "Brim": 4912,
+    "Outer wall": 101107,
+    "Inner wall": 265619,
+    "Bottom surface": 3421,
+    "Gap infill": 2974,
+    "Support": 107203,
+    "Internal solid infill": 80365,
+    "Top surface": 4543,
+    "Sparse infill": 402237,
+    "Internal Bridge": 2268,
+    "Overhang wall": 717,
+    "Bridge": 729,
+    "Support transition": 5471,
+    "Support interface": 14161
+  },
+  "roles": [
+    "Brim",
+    "Outer wall",
+    "Inner wall",
+    "Bottom surface",
+    "Gap infill",
+    "Support",
+    "Internal solid infill",
+    "Top surface",
+    "Sparse infill",
+    "Internal Bridge",
+    "Overhang wall",
+    "Bridge",
+    "Support transition",
+    "Support interface"
+  ],
+  "objects": [
+    "Base_EarMount_ThrustSupport",
+    "PanYoke_EarBracket_KeyedDrive",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "Pan_KeyedHorn_Cover",
+    "Tilt_Removable_IdlerPillar",
+    "Pan_Replaceable_ThrustRing",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "CameraPlate_21x16",
+    "PCB_Spacer_Lower_Right",
+    "PCB_Spacer_Lower_Left",
+    "Tilt_Journal_FlangedSleeve",
+    "PCB_Spacer_Upper_Left",
+    "PCB_Spacer_Upper_Right"
+  ],
+  "object_model_layer_counts": {
+    "Base_EarMount_ThrustSupport": 183,
+    "PanYoke_EarBracket_KeyedDrive": 336,
+    "Tilt_KeyedHorn_CaptiveCover": 21,
+    "Pan_KeyedHorn_Cover": 21,
+    "Tilt_Removable_IdlerPillar": 285,
+    "Pan_Replaceable_ThrustRing": 5,
+    "TiltCradle_KeyedHorn_CameraFrame": 225,
+    "CameraPlate_21x16": 15,
+    "PCB_Spacer_Lower_Right": 15,
+    "PCB_Spacer_Lower_Left": 15,
+    "Tilt_Journal_FlangedSleeve": 20,
+    "PCB_Spacer_Upper_Left": 15,
+    "PCB_Spacer_Upper_Right": 15
+  },
+  "support_segments_by_object": {
+    "PanYoke_EarBracket_KeyedDrive": 37584,
+    "TiltCradle_KeyedHorn_CameraFrame": 44221,
+    "Base_EarMount_ThrustSupport": 45030
+  },
+  "filament_metadata": {
+    "filament used [mm]": "49867.54",
+    "filament used [cm3]": "119.95",
+    "filament used [g]": "152.33",
+    "total filament used [g]": "152.33",
+    "estimated printing time (normal mode)": "10h 7m 47s"
+  },
+  "role_filament_volume_cm3": {
+    "Brim": 0.973718307369153,
+    "Outer wall": 18.417486253442735,
+    "Inner wall": 50.43102015289281,
+    "Bottom surface": 1.995186222423216,
+    "Gap infill": 0.02440040603786162,
+    "Support": 4.0585645191376205,
+    "Internal solid infill": 23.822663561070094,
+    "Top surface": 2.917058077647559,
+    "Sparse infill": 14.087972479664737,
+    "Internal Bridge": 2.094521766173008,
+    "Overhang wall": 0.09957390718364077,
+    "Bridge": 0.10814279602322724,
+    "Support transition": 0.3407756458076787,
+    "Support interface": 0.5482411654282953
+  },
+  "role_filament_mass_g_at1p27": {
+    "Brim": 1.2366222503588244,
+    "Outer wall": 23.39020754187227,
+    "Inner wall": 64.04739559417388,
+    "Bottom surface": 2.5338865024774844,
+    "Gap infill": 0.030988515668084256,
+    "Support": 5.154376939304779,
+    "Internal solid infill": 30.25478272255902,
+    "Top surface": 3.7046637586124,
+    "Sparse infill": 17.891725049174216,
+    "Internal Bridge": 2.6600426430397204,
+    "Overhang wall": 0.1264588621232238,
+    "Bridge": 0.1373413509494986,
+    "Support transition": 0.43278507017575196,
+    "Support interface": 0.6962662800939351
+  },
+  "support_centerline_samples": 312305,
+  "protected_region_intrusions": [],
+  "bead_XY_bounds_mm": [
+    [
+      9.026259999999999,
+      9.026259999999999
+    ],
+    [
+      226.97173999999998,
+      232.97173999999998
+    ]
+  ],
+  "unanchored_model_components": [
+    {
+      "nozzle_Z": 30.4,
+      "area_mm2": 0.32,
+      "centroid_xy": [
+        203.675,
+        40.65
+      ]
+    },
+    {
+      "nozzle_Z": 33.8,
+      "area_mm2": 0.32,
+      "centroid_xy": [
+        144.3,
+        29.3
+      ]
+    },
+    {
+      "nozzle_Z": 33.8,
+      "area_mm2": 0.32,
+      "centroid_xy": [
+        144.3,
+        65.3
+      ]
+    },
+    {
+      "nozzle_Z": 46.6,
+      "area_mm2": 0.32,
+      "centroid_xy": [
+        154.3,
+        47.3
+      ]
+    }
+  ],
+  "longest_sampled_unsupported_bridge_mm": 5.715,
+  "bridge_spans_above8p5mm": [],
+  "raster_resolution_mm": 0.2,
+  "limits": "Raster extrusion screening is not continuous3D physics. Support-air-gap reach0.50mm, model interlayer reach0.261mm; one-pixel XY allowance. Protected void checks sample support centerlines every<=0.25mm; not full bead-volume metrology. Physical PETG bridge sag, adhesion and mating fit unverified."
+}

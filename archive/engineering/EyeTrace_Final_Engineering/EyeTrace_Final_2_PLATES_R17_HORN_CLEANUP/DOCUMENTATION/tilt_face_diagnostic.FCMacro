@@ -1,0 +1,12 @@
+﻿import FreeCAD as A,json,os,Part
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd')); o=d.getObject('TiltCradle_KeyedHorn_CameraFrame');rows=[]
+for i,f in enumerate(o.Shape.Faces):
+ try:
+  v,t=f.tessellate(0.08)
+  if not t:rows.append({'face':i+1,'area':f.Area,'bbox':[f.BoundBox.XMin,f.BoundBox.YMin,f.BoundBox.ZMin,f.BoundBox.XMax,f.BoundBox.YMax,f.BoundBox.ZMax],'surface':str(type(f.Surface)),'valid':f.isValid()})
+ except Exception as e:rows.append({'face':i+1,'error':str(e),'area':f.Area})
+with open(os.path.join(p,'TILT_NULL_TRIANGULATION.json'),'w') as f:json.dump(rows,f,indent=2)
+print('BAD_FACES',rows)
+A.closeDocument(d.Name)
+

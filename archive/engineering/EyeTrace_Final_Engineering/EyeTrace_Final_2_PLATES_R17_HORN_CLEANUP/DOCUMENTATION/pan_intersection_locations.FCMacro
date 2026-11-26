@@ -1,0 +1,11 @@
+﻿import FreeCAD as A,os,json
+root=r'EyeTrace_Final_Engineering'; p=os.path.join(root,'EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP')
+n=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'));o=A.openDocument(os.path.join(root,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'))
+out=[]
+for carrier,names in [('PanYoke_EarBracket_KeyedDrive',['Pan_OriginalStar_PROVISIONAL','Pan_KeyedHorn_Cover','PanDrive_M3x10_0','PanDrive_M3x10_1','PanDrive_M3x10_2','PanDrive_M3x10_3'])]:
+ ns=n.getObject(carrier).Shape; osrc=o.getObject(carrier).Shape; row={'carrier':carrier}
+ delta=ns.cut(osrc);bb=delta.BoundBox;row['delta']={'vol':float(delta.Volume),'bbox':[bb.XMin,bb.YMin,bb.ZMin,bb.XMax,bb.YMax,bb.ZMax]};row['pairs']=[]
+ for name in names:
+  s=n.getObject(name).Shape; old=o.getObject(name).Shape; a=ns.common(s);b=osrc.common(old);c=delta.common(s);row['pairs'].append({'name':name,'R16':float(b.Volume),'R17':float(a.Volume),'added_intersection':float(c.Volume),'bbox_added':[c.BoundBox.XMin,c.BoundBox.YMin,c.BoundBox.ZMin,c.BoundBox.XMax,c.BoundBox.YMax,c.BoundBox.ZMax]})
+ out.append(row)
+with open(os.path.join(root,'EyeTrace_R17_FINAL_PRINT_VALIDATION','REPORTS','PAN_INTERSECTION_LOCATIONS.json'),'w') as f:json.dump(out,f,indent=2)

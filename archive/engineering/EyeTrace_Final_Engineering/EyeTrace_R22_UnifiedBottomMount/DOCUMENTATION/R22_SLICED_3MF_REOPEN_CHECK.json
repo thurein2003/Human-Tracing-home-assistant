@@ -1,0 +1,500 @@
+{
+  "unsliced": {
+    "file": "EyeTrace_Final_Engineering\\EyeTrace_R22_UnifiedBottomMount\\PRINT\\Plate02_R22_UnifiedBottomMount_UNSLICED.3mf",
+    "crc": "PASS",
+    "instances": 12,
+    "mesh_count": 12,
+    "meshes": [
+      {
+        "name": "3D/Objects/object_10.model",
+        "v": 420,
+        "t": 840,
+        "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738",
+        "bbox": [
+          [
+            -2.49971771,
+            2.49971771
+          ],
+          [
+            -2.49943542,
+            2.49943542
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_8.model",
+        "v": 420,
+        "t": 840,
+        "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738",
+        "bbox": [
+          [
+            -2.49971771,
+            2.49971771
+          ],
+          [
+            -2.49943542,
+            2.49943542
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_7.model",
+        "v": 630,
+        "t": 1260,
+        "hash": "950ae3415cabbc17ad3fb344e01d6a03db9f803c81f3ebff893c8e952680cab4",
+        "bbox": [
+          [
+            -3.49921417,
+            3.49921417
+          ],
+          [
+            -3.49960327,
+            3.49960327
+          ],
+          [
+            -2.04999995,
+            2.04999995
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_9.model",
+        "v": 420,
+        "t": 840,
+        "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738",
+        "bbox": [
+          [
+            -2.49971771,
+            2.49971771
+          ],
+          [
+            -2.49943542,
+            2.49943542
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_11.model",
+        "v": 420,
+        "t": 840,
+        "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738",
+        "bbox": [
+          [
+            -2.49971771,
+            2.49971771
+          ],
+          [
+            -2.49943542,
+            2.49943542
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_3.model",
+        "v": 646,
+        "t": 1300,
+        "hash": "40d7797737501e3f448c4ca30701dfbc1212ae9b637a4963e9f5a6bdd9f5718a",
+        "bbox": [
+          [
+            -8.0,
+            8.0
+          ],
+          [
+            -28.5000038,
+            28.5000038
+          ],
+          [
+            -28.5,
+            28.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_1.model",
+        "v": 1050,
+        "t": 2112,
+        "hash": "4e6b07ad9bf44cf82a6fcdd2cde4b4ed625fd0c7c2a9564e2d0fbabf0172f17e",
+        "bbox": [
+          [
+            -31.9928398,
+            31.9928398
+          ],
+          [
+            -31.996418,
+            31.996418
+          ],
+          [
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_12.model",
+        "v": 1898,
+        "t": 3828,
+        "hash": "96b2c2e457d9e426d4e5be92f85abaaec1b1eca26675feb667521e74a3f7e313",
+        "bbox": [
+          [
+            -28.0,
+            28.0
+          ],
+          [
+            -16.0,
+            16.0
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_6.model",
+        "v": 2148,
+        "t": 4312,
+        "hash": "fc64e9527d6779c41181bbb32b581d882206132d5c4425e73939c0d359f6122d",
+        "bbox": [
+          [
+            -20.9953003,
+            20.9953003
+          ],
+          [
+            -20.9976501,
+            20.9976501
+          ],
+          [
+            -2.0999999,
+            2.0999999
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_4.model",
+        "v": 4173,
+        "t": 8362,
+        "hash": "172b9c84965d315afa51ab365970780817cc8b7a767cb0ebf67ae79f5d2e48e0",
+        "bbox": [
+          [
+            -23.7994232,
+            23.7994232
+          ],
+          [
+            -23.7992249,
+            23.7992249
+          ],
+          [
+            -2.0999999,
+            2.0999999
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_5.model",
+        "v": 10458,
+        "t": 20976,
+        "hash": "42bd076d7846d940719c3afaf7b45b9674a5eca9b64614a4f81ede7f68fdf7a3",
+        "bbox": [
+          [
+            -22.5,
+            22.5
+          ],
+          [
+            -22.6997566,
+            22.6997566
+          ],
+          [
+            -38.5,
+            38.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_2.model",
+        "v": 38475,
+        "t": 77030,
+        "hash": "dbcef38c0e172f6580443c8ee1b4efb40f66b41e25e332a475fb18a9794266af",
+        "bbox": [
+          [
+            -51.1,
+            51.099997
+          ],
+          [
+            -35.297912,
+            35.297916
+          ],
+          [
+            -33.9,
+            33.900003
+          ]
+        ]
+      }
+    ]
+  },
+  "sliced": {
+    "file": "EyeTrace_Final_Engineering\\EyeTrace_R22_UnifiedBottomMount\\PRINT\\Plate02_R22_UnifiedBottomMount_SLICED_HOLD.3mf",
+    "crc": "PASS",
+    "instances": 12,
+    "mesh_count": 12,
+    "meshes": [
+      {
+        "name": "3D/Objects/object_10.model",
+        "v": 420,
+        "t": 840,
+        "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738",
+        "bbox": [
+          [
+            -2.49971771,
+            2.49971771
+          ],
+          [
+            -2.49943542,
+            2.49943542
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_7.model",
+        "v": 630,
+        "t": 1260,
+        "hash": "950ae3415cabbc17ad3fb344e01d6a03db9f803c81f3ebff893c8e952680cab4",
+        "bbox": [
+          [
+            -3.49921417,
+            3.49921417
+          ],
+          [
+            -3.49960327,
+            3.49960327
+          ],
+          [
+            -2.04999995,
+            2.04999995
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_8.model",
+        "v": 420,
+        "t": 840,
+        "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738",
+        "bbox": [
+          [
+            -2.49971771,
+            2.49971771
+          ],
+          [
+            -2.49943542,
+            2.49943542
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_11.model",
+        "v": 420,
+        "t": 840,
+        "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738",
+        "bbox": [
+          [
+            -2.49971771,
+            2.49971771
+          ],
+          [
+            -2.49943542,
+            2.49943542
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_3.model",
+        "v": 646,
+        "t": 1300,
+        "hash": "40d7797737501e3f448c4ca30701dfbc1212ae9b637a4963e9f5a6bdd9f5718a",
+        "bbox": [
+          [
+            -8.0,
+            8.0
+          ],
+          [
+            -28.5000038,
+            28.5000038
+          ],
+          [
+            -28.5,
+            28.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_9.model",
+        "v": 420,
+        "t": 840,
+        "hash": "9ed0a4d53103777b025a1d9ca9a4aa8644245b8ab0a97b1f1a9beb4a86644738",
+        "bbox": [
+          [
+            -2.49971771,
+            2.49971771
+          ],
+          [
+            -2.49943542,
+            2.49943542
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_1.model",
+        "v": 1050,
+        "t": 2112,
+        "hash": "4e6b07ad9bf44cf82a6fcdd2cde4b4ed625fd0c7c2a9564e2d0fbabf0172f17e",
+        "bbox": [
+          [
+            -31.9928398,
+            31.9928398
+          ],
+          [
+            -31.996418,
+            31.996418
+          ],
+          [
+            -0.5,
+            0.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_12.model",
+        "v": 1898,
+        "t": 3828,
+        "hash": "96b2c2e457d9e426d4e5be92f85abaaec1b1eca26675feb667521e74a3f7e313",
+        "bbox": [
+          [
+            -28.0,
+            28.0
+          ],
+          [
+            -16.0,
+            16.0
+          ],
+          [
+            -1.5,
+            1.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_6.model",
+        "v": 2148,
+        "t": 4312,
+        "hash": "fc64e9527d6779c41181bbb32b581d882206132d5c4425e73939c0d359f6122d",
+        "bbox": [
+          [
+            -20.9953003,
+            20.9953003
+          ],
+          [
+            -20.9976501,
+            20.9976501
+          ],
+          [
+            -2.0999999,
+            2.0999999
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_4.model",
+        "v": 4173,
+        "t": 8362,
+        "hash": "172b9c84965d315afa51ab365970780817cc8b7a767cb0ebf67ae79f5d2e48e0",
+        "bbox": [
+          [
+            -23.7994232,
+            23.7994232
+          ],
+          [
+            -23.7992249,
+            23.7992249
+          ],
+          [
+            -2.0999999,
+            2.0999999
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_5.model",
+        "v": 10458,
+        "t": 20976,
+        "hash": "42bd076d7846d940719c3afaf7b45b9674a5eca9b64614a4f81ede7f68fdf7a3",
+        "bbox": [
+          [
+            -22.5,
+            22.5
+          ],
+          [
+            -22.6997566,
+            22.6997566
+          ],
+          [
+            -38.5,
+            38.5
+          ]
+        ]
+      },
+      {
+        "name": "3D/Objects/object_2.model",
+        "v": 38475,
+        "t": 77030,
+        "hash": "5ee660bdc910a2c09df62f55b6efd3b417be61278f3851ba46f7158fac397cdb",
+        "bbox": [
+          [
+            -51.0999985,
+            51.0999985
+          ],
+          [
+            -35.2979126,
+            35.2979126
+          ],
+          [
+            -33.9000015,
+            33.9000015
+          ]
+        ]
+      }
+    ]
+  },
+  "sliced_profile_estimate": "83.53 g, 9 h 31 min (Creality Print preview)",
+  "slicer_warning": "Pan_KeyedHorn_Cover floating cantilever warning; requires support/reorientation review"
+}

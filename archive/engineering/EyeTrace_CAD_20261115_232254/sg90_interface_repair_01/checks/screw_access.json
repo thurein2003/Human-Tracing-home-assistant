@@ -1,0 +1,82 @@
+[
+  {
+    "test": "Pan ear screw 0",
+    "procedure": "Yoke/horn removed; small nuts captive; driver diameter3.2 from above",
+    "unintended": []
+  },
+  {
+    "test": "Pan ear screw 1",
+    "procedure": "Yoke/horn removed; small nuts captive; driver diameter3.2 from above",
+    "unintended": []
+  },
+  {
+    "test": "Tilt ear screw 0",
+    "procedure": "Cradle/horn removed; small nuts captive; driver diameter3.2 from fork side",
+    "unintended": []
+  },
+  {
+    "test": "Tilt ear screw 1",
+    "procedure": "Cradle/horn removed; small nuts captive; driver diameter3.2 from fork side",
+    "unintended": []
+  },
+  {
+    "test": "Original pan retaining screw",
+    "procedure": "Camera/lead removed; retained cradle has diameter6 service hole; driver diameter5",
+    "unintended": []
+  },
+  {
+    "test": "Original tilt retaining screw",
+    "procedure": "Power off, support cradle, remove idler bolt/washer and removable pillar, then sleeve; through-axis diameter5.2 access; driver diameter5",
+    "unintended": []
+  },
+  {
+    "test": "TiltDrive_M3x10_0 service",
+    "procedure": "Camera removed; internal stubby tool length50, bit diameter5, body diameter11; final approach envelope only",
+    "unintended": []
+  },
+  {
+    "test": "TiltDrive_M3x10_1 service",
+    "procedure": "Camera removed; internal stubby tool length50, bit diameter5, body diameter11; final approach envelope only",
+    "unintended": []
+  },
+  {
+    "test": "TiltDrive_M3x10_2 service",
+    "procedure": "Camera removed; internal stubby tool length50, bit diameter5, body diameter11; final approach envelope only",
+    "unintended": []
+  },
+  {
+    "test": "TiltDrive_M3x10_3 service",
+    "procedure": "Camera removed; internal stubby tool length50, bit diameter5, body diameter11; final approach envelope only",
+    "unintended": []
+  },
+  {
+    "test": "PanDrive_M3x10_0 service",
+    "procedure": "Tilt cradle/camera removed; driver diameter5 from top; captive nuts below",
+    "unintended": []
+  },
+  {
+    "test": "PanDrive_M3x10_1 service",
+    "procedure": "Tilt cradle/camera removed; driver diameter5 from top; captive nuts below",
+    "unintended": []
+  },
+  {
+    "test": "PanDrive_M3x10_2 service",
+    "procedure": "Tilt cradle/camera removed; driver diameter5 from top; captive nuts below",
+    "unintended": []
+  },
+  {
+    "test": "PanDrive_M3x10_3 service",
+    "procedure": "Tilt cradle/camera removed; driver diameter5 from top; captive nuts below",
+    "unintended": []
+  },
+  {
+    "test": "IdlerPillar_M3x10_0 access",
+    "procedure": "Cradle at neutral; diameter5 long shaft; handle above fixture; two captive M3 nuts",
+    "unintended": []
+  },
+  {
+    "test": "IdlerPillar_M3x10_1 access",
+    "procedure": "Cradle at neutral; diameter5 long shaft; handle above fixture; two captive M3 nuts",
+    "unintended": []
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "interface": "Pan ear bearing seat",
+    "pair": [
+      "Base_EarMount_ThrustSupport",
+      "PanServo_SG90_Reference"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Tilt ear bearing seat",
+    "pair": [
+      "PanYoke_EarBracket_KeyedDrive",
+      "TiltServo_SG90_Reference"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Pan captured nut clamp",
+    "pair": [
+      "PanDrive_M3x10_0",
+      "Pan_KeyedHorn_Cover"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Tilt captured nut clamp",
+    "pair": [
+      "TiltDrive_M3x10_0",
+      "Tilt_KeyedHorn_CaptiveCover"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Idler nut does not pinch wall",
+    "pair": [
+      "TiltIdler_M3x12",
+      "PanYoke_EarBracket_KeyedDrive"
+    ],
+    "distance_mm": 0.29999999999999716
+  },
+  {
+    "interface": "Idler nut bears sleeve",
+    "pair": [
+      "TiltIdler_M3x12",
+      "Tilt_Journal_FlangedSleeve"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Idler washer bears cheek",
+    "pair": [
+      "TiltIdler_M3_Washer",
+      "TiltCradle_KeyedHorn_CameraFrame"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Camera spacer touches PCB",
+    "pair": [
+      "PCB_Spacer_Lower_Left",
+      "PCB_Cut003"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Camera spacer touches rail",
+    "pair": [
+      "PCB_Spacer_Lower_Left",
+      "Camera_SlidingRail_Lower"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Camera nut bears rail",
+    "pair": [
+      "Camera_M2x12_Lower_Left",
+      "Camera_SlidingRail_Lower"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Rail nut bears frame",
+    "pair": [
+      "RailMount_Lower_M3x10_0",
+      "TiltCradle_KeyedHorn_CameraFrame"
+    ],
+    "distance_mm": 0.0
+  },
+  {
+    "interface": "Pan radial backup gap",
+    "pair": [
+      "Base_EarMount_ThrustSupport",
+      "PanYoke_EarBracket_KeyedDrive"
+    ],
+    "distance_mm": 0.29999999999999405
+  }
+]

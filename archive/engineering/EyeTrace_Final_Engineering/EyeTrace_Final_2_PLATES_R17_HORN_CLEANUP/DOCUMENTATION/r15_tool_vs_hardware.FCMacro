@@ -1,0 +1,12 @@
+﻿import FreeCAD as A,Part,json,os
+from FreeCAD import Vector as V
+e=r'EyeTrace_Final_Engineering'
+d=A.openDocument(os.path.join(e,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'));m=A.openDocument(os.path.join(e,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'))
+rot=A.Rotation(V(1,0,0),180);top=V(0,0,33)
+def tr(sh):
+ q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+cover=d.getObject('Pan_KeyedHorn_Cover').Shape; objs={'ArmPocketTool':tr(m.getObject('ArmPocketTool').Shape),'ThroughBoreTool':tr(m.getObject('ThroughBoreTool').Shape),'expBaseDiff':tr(m.getObject('BaseCoupon').Shape.cut(m.getObject('FinalCoupon').Shape)),'horn':d.getObject('Pan_OriginalStar_PROVISIONAL').Shape}
+res={'cover_vs':{k:float(cover.common(v).Volume) for k,v in objs.items()}}
+for i in range(4):
+ s=d.getObject('PanDrive_M3x10_'+str(i)).Shape;res['screw'+str(i)]={k:float(s.common(v).Volume) for k,v in objs.items()}
+with open(os.path.join(e,'EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR','REPORTS','R15_TOOL_VS_PAN_HARDWARE.json'),'w') as f:json.dump(res,f,indent=2)

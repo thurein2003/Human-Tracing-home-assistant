@@ -1,0 +1,1 @@
+﻿This file was generated during an initial probe that was superseded by the successful R19 build. See r19_geometry.json and r19_validation.json for the final validated results; the final FreeCAD macro completed successfully.

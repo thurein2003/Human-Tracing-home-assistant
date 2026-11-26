@@ -1,0 +1,85 @@
+{
+  "probes": [
+    {
+      "interface": "RailMount_Lower_M3x10_0 front driver",
+      "tool_diameter_mm": 5,
+      "unintended": []
+    },
+    {
+      "interface": "RailMount_Lower_M3x10_1 front driver",
+      "tool_diameter_mm": 5,
+      "unintended": []
+    },
+    {
+      "interface": "Camera_M2x12_Lower_Left front driver",
+      "tool_diameter_mm": 3,
+      "unintended": []
+    },
+    {
+      "interface": "Camera_M2x12_Lower_Left rear socket bit - camera module removed",
+      "tool_diameter_mm": 6,
+      "unintended": []
+    },
+    {
+      "interface": "Camera_M2x12_Lower_Right front driver",
+      "tool_diameter_mm": 3,
+      "unintended": []
+    },
+    {
+      "interface": "Camera_M2x12_Lower_Right rear socket bit - camera module removed",
+      "tool_diameter_mm": 6,
+      "unintended": []
+    },
+    {
+      "interface": "RailMount_Upper_M3x10_0 front driver",
+      "tool_diameter_mm": 5,
+      "unintended": []
+    },
+    {
+      "interface": "RailMount_Upper_M3x10_1 front driver",
+      "tool_diameter_mm": 5,
+      "unintended": []
+    },
+    {
+      "interface": "Camera_M2x12_Upper_Left front driver",
+      "tool_diameter_mm": 3,
+      "unintended": []
+    },
+    {
+      "interface": "Camera_M2x12_Upper_Left rear socket bit - camera module removed",
+      "tool_diameter_mm": 6,
+      "unintended": []
+    },
+    {
+      "interface": "Camera_M2x12_Upper_Right front driver",
+      "tool_diameter_mm": 3,
+      "unintended": []
+    },
+    {
+      "interface": "Camera_M2x12_Upper_Right rear socket bit - camera module removed",
+      "tool_diameter_mm": 6,
+      "unintended": []
+    },
+    {
+      "interface": "Base host screw approach BEFORE yoke installation (-32, -27)",
+      "tool_diameter_mm": 5,
+      "unintended": []
+    },
+    {
+      "interface": "Base host screw approach BEFORE yoke installation (-32, 27)",
+      "tool_diameter_mm": 5,
+      "unintended": []
+    },
+    {
+      "interface": "Base host screw approach BEFORE yoke installation (32, -27)",
+      "tool_diameter_mm": 5,
+      "unintended": []
+    },
+    {
+      "interface": "Base host screw approach BEFORE yoke installation (32, 27)",
+      "tool_diameter_mm": 5,
+      "unintended": []
+    }
+  ],
+  "scope": "Camera rear nuts accessed with complete module removed; Rear M2 socket envelope diameter6; actual tool and finger access still physical checks. Two base corners are obstructed in the completed assembly: secure base before yoke installation, remove upper assembly for host-screw service. No host fastener size inferred."
+}

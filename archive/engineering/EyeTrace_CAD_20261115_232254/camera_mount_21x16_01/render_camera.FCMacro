@@ -1,0 +1,23 @@
+﻿import FreeCAD as A,FreeCADGui as G,os,json,traceback
+from PySide import QtCore,QtWidgets,QtGui
+H=r'EyeTrace_CAD_20261115_232254\camera_mount_21x16_01\validated'
+def run():
+ try:
+  d=A.openDocument(os.path.join(H,'EyeTrace_Camera_21x16.FCStd'));obs=[o for o in d.Objects if hasattr(o,'KinematicGroup')];plate=d.getObjectsByLabel('Camera mounting plate -21x16mm HOLE CENTERS')[0]
+  for o in d.Objects:
+   if hasattr(o,'Shape'):o.Visibility=o in obs
+  plate.ViewObject.ShapeColor=(.9,.5,.15);d.getObject('Camera_RearComponents_KEEP_OUT').ViewObject.Transparency=85
+  d.recompute();d.saveAs(os.path.join(H,'EyeTrace_Camera_21x16_Assembly.FCStd'))
+  def shot(name,doc,front=False):
+   A.setActiveDocument(doc.Name);G.updateGui();QtWidgets.QApplication.processEvents();v=G.activeDocument().activeView()
+   if front:v.viewFront()
+   else:v.viewAxonometric()
+   G.updateGui();v.fitAll();G.updateGui();QtWidgets.QApplication.processEvents();v.fitAll();v.saveImage(os.path.join(H,'renders',name+'.png'),1500,1100,'White')
+  shot('assembly_21x16',d)
+  pd=A.newDocument('PlateHolePattern21x16');q=pd.addObject('PartDesign::Feature','Plate');q.Shape=plate.Shape.copy();q.ViewObject.ShapeColor=(.9,.5,.15);pd.recompute();shot('plate_21x16',pd,True)
+  json.dump({'renderer':'FreeCAD1.1.4 Coin3D','views':['assembly_21x16','plate_21x16'],'pitch_mm':[21,16],'physical_fit':'UNVERIFIED'},open(os.path.join(H,'renders','status.json'),'x'),indent=2)
+ except Exception:open(os.path.join(H,'renders','error.txt'),'x').write(traceback.format_exc())
+ finally:
+  for dn in list(A.listDocuments()):A.closeDocument(dn)
+  QtCore.QTimer.singleShot(1000,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1200,run)

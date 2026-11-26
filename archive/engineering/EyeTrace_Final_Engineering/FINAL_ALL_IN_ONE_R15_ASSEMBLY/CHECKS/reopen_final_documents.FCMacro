@@ -1,0 +1,22 @@
+import FreeCAD as A,json,os
+from FreeCAD import Vector as V
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY';res={}
+d=A.openDocument(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd');ps=[o for o in d.Objects if bool(getattr(o,'Printable',False)) and hasattr(o,'Shape') and not o.Shape.isNull()];bad=[];pl=[]
+for o in ps:
+ if not o.Shape.isValid() or len(o.Shape.Solids)!=1:bad.append({'name':o.Name,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids)})
+ p=o.Placement
+ if p.Base.Length>1e-7 or abs(p.Rotation.Angle)>1e-7:pl.append({'name':o.Name,'base':[p.Base.x,p.Base.y,p.Base.z],'angle':p.Rotation.Angle})
+hits=[]
+for i,a in enumerate(ps):
+ for b in ps[i+1:]:
+  if not a.Shape.BoundBox.intersect(b.Shape.BoundBox):continue
+  vol=a.Shape.common(b.Shape).Volume
+  if vol>1e-5:hits.append({'a':a.Name,'b':b.Name,'volume':vol})
+res['assembly']={'opened':True,'FreeCAD_version':A.Version()[:4],'printable_count':len(ps),'invalid_or_disconnected':bad,'printable_objects_with_nonidentity_placement':pl,'neutral_intersection_pairs':hits,'camera_pitch_mm':[float(d.RepairParameters.CameraPitchX.Value),float(d.RepairParameters.CameraPitchZ.Value)]}
+A.closeDocument(d.Name)
+l=A.openDocument(out+r'\CAD\EyeTrace_R15_Print_Layout.FCStd');meshes=[o for o in l.Objects if o.TypeId=='Mesh::Feature'];rows=[]
+for o in meshes:
+ b=o.Mesh.BoundBox;rows.append({'name':o.Label,'facets':o.Mesh.CountFacets,'solid':o.Mesh.isSolid(),'bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]})
+bounds=[min(r['bbox'][i] for r in rows) for i in range(3)]+[max(r['bbox'][i+3] for r in rows) for i in range(3)]
+res['print_layout']={'opened':True,'mesh_feature_count':len(meshes),'all_meshes_closed_positive':all(r['solid'] for r in rows),'bounds_mm':bounds,'within_k2_260mm':bounds[0]>=0 and bounds[1]>=0 and bounds[3]<=260 and bounds[4]<=260,'parts':rows}
+open(out+r'\CHECKS\reopen_final_documents.json','w').write(json.dumps(res,indent=2));A.closeDocument(l.Name)

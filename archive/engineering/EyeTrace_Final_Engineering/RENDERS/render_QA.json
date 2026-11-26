@@ -1,0 +1,131 @@
+{
+  "renderer": "Installed FreeCAD1.1.4 Coin3D",
+  "images": {
+    "assembled": {
+      "nonwhite_samples": 3192,
+      "objects": 49
+    },
+    "assembled_side": {
+      "nonwhite_samples": 2069,
+      "objects": 49
+    },
+    "assembled_front": {
+      "nonwhite_samples": 2418,
+      "objects": 49
+    },
+    "assembled_transparent": {
+      "nonwhite_samples": 3192,
+      "objects": 49
+    },
+    "pose_pan60_tilt30": {
+      "nonwhite_samples": 2452,
+      "objects": 49
+    },
+    "exploded": {
+      "nonwhite_samples": 1724,
+      "objects": 72
+    },
+    "camera_21x16_attachment": {
+      "nonwhite_samples": 2905,
+      "objects": 14
+    },
+    "servo_ear_installations": {
+      "nonwhite_samples": 2884,
+      "objects": 10
+    },
+    "camera_plate_21x16": {
+      "nonwhite_samples": 3541,
+      "objects": 1
+    },
+    "single_bed": {
+      "nonwhite_samples": 2394,
+      "objects": 13
+    },
+    "fit_test_coupons": {
+      "nonwhite_samples": 726,
+      "objects": 7
+    },
+    "ribbon_reservation": {
+      "nonwhite_samples": 2459,
+      "objects": 49
+    },
+    "pan_servo_horn_closeup": {
+      "nonwhite_samples": 2316,
+      "objects": 12
+    },
+    "tilt_servo_horn_closeup": {
+      "nonwhite_samples": 2554,
+      "objects": 12
+    },
+    "motion_00": {
+      "nonwhite_samples": 2359,
+      "objects": 49
+    },
+    "motion_01": {
+      "nonwhite_samples": 2209,
+      "objects": 49
+    },
+    "motion_02": {
+      "nonwhite_samples": 2430,
+      "objects": 49
+    },
+    "motion_03": {
+      "nonwhite_samples": 2865,
+      "objects": 49
+    },
+    "motion_04": {
+      "nonwhite_samples": 3128,
+      "objects": 49
+    },
+    "motion_05": {
+      "nonwhite_samples": 2715,
+      "objects": 49
+    },
+    "motion_06": {
+      "nonwhite_samples": 2412,
+      "objects": 49
+    },
+    "motion_07": {
+      "nonwhite_samples": 2339,
+      "objects": 49
+    },
+    "motion_08": {
+      "nonwhite_samples": 2412,
+      "objects": 49
+    },
+    "motion_09": {
+      "nonwhite_samples": 2402,
+      "objects": 49
+    },
+    "motion_10": {
+      "nonwhite_samples": 2602,
+      "objects": 49
+    },
+    "motion_11": {
+      "nonwhite_samples": 2975,
+      "objects": 49
+    },
+    "motion_12": {
+      "nonwhite_samples": 3044,
+      "objects": 49
+    },
+    "motion_13": {
+      "nonwhite_samples": 2565,
+      "objects": 49
+    },
+    "motion_14": {
+      "nonwhite_samples": 2234,
+      "objects": 49
+    },
+    "motion_15": {
+      "nonwhite_samples": 2263,
+      "objects": 49
+    },
+    "motion_16": {
+      "nonwhite_samples": 2359,
+      "objects": 49
+    }
+  },
+  "exploded_scope": "Actual solid leaves separated for explanation; reference keep-outs hidden in exploded view. Written instructions define assembly order.",
+  "physical_fit": "UNVERIFIED"
+}

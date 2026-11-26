@@ -1,0 +1,9 @@
+﻿import FreeCAD as App,json,Part
+from FreeCAD import Vector as V
+d=App.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount\CAD\EyeTrace_R22_UnifiedBottomMount.FCStd');s=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+pts=[(-45,0),(-40,0),(-35,0),(-30,0),(-20,0),(0,0),(20,0),(30,0),(34,0),(36,0),(40,0),(43,0),(40,20),(40,-20),(30,25),(30,-25),(0,25),(0,-25),(-40,20),(-40,-20)]
+rows=[]
+for x,y in pts:
+ q=s.common(Part.makeBox(.1,.1,120,V(x-.05,y-.05,0))); b=q.BoundBox
+ rows.append({'xy':[x,y],'z_intervals_bbox':[round(b.ZMin,3),round(b.ZMax,3)] if q.Volume>1e-8 else None,'volume':round(q.Volume,5)})
+print(json.dumps(rows,indent=2));App.closeDocument(d.Name)

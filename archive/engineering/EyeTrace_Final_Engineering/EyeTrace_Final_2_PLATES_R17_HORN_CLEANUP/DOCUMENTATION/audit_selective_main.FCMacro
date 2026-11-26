@@ -1,0 +1,24 @@
+﻿import FreeCAD as A,Part,os,json
+from FreeCAD import Vector as V
+E=r'EyeTrace_Final_Engineering';out=os.path.join(E,'EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR')
+d=A.openDocument(os.path.join(E,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'));m=A.openDocument(os.path.join(E,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'))
+base=m.getObject('BaseCoupon').Shape;final=m.getObject('FinalCoupon').Shape;exp=base.cut(final);disk=Part.makeCylinder(20.5,3.8,V(0,0,0),V(0,0,1));rot=A.Rotation(V(1,0,0),180);top=V(0,0,33)
+def tr(sh):
+ q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+expG=tr(exp);patch=tr(disk.cut(exp));old=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape;cover=d.getObject('Pan_KeyedHorn_Cover').Shape
+keep=[cover.makeOffsetShape(.2,.05,True)]
+for i in range(4):
+ for so in d.getObject('PanDrive_M3x10_'+str(i)).Shape.Solids:keep.append(so.makeOffsetShape(.2,.05,True))
+sh=old.fuse(patch)
+for q in keep:sh=sh.cut(q)
+sh=sh.cut(expG)
+solids=sorted(sh.Solids,key=lambda x:x.Volume,reverse=True);main=solids[0]
+inter=[]
+for o in d.Objects:
+ if o.Name=='PanYoke_EarBracket_KeyedDrive' or o.Name in ('AssemblyRoot','PrintedParts','HardwareReference','Keepouts') or not hasattr(o,'Shape') or o.Shape.isNull():continue
+ nv=float(main.common(o.Shape).Volume)
+ ov=float(old.common(o.Shape).Volume)
+ if nv>0.001 or ov>0.001:inter.append({'name':o.Name,'label':o.Label,'R16_mm3':ov,'candidate_mm3':nv})
+b=main.BoundBox
+res={'full_candidate':{'valid':bool(sh.isValid()),'solids':len(sh.Solids),'volume':float(sh.Volume)},'main_component':{'valid':bool(main.isValid()),'solids':len(main.Solids),'volume':float(main.Volume),'bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]},'other_islands':[{'vol':float(s.Volume),'bbox':[s.BoundBox.XMin,s.BoundBox.YMin,s.BoundBox.ZMin,s.BoundBox.XMax,s.BoundBox.YMax,s.BoundBox.ZMax]} for s in solids[1:]],'R15_void_common':float(main.common(expG).Volume),'intersections':inter}
+with open(os.path.join(out,'REPORTS','PAN_SELECTIVE_MAIN_SOLID_AUDIT.json'),'w') as f:json.dump(res,f,indent=2)

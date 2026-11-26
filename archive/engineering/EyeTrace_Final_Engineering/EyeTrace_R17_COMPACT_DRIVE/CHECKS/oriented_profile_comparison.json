@@ -1,0 +1,56 @@
+{
+  "PAN": {
+    "component": "PanYoke_EarBracket_KeyedDrive",
+    "envVol": 1619.4176098890953,
+    "expectedVoidVol": 567.2924095351401,
+    "actualVoidWithinHornEnvelope": 1459.7531810561295,
+    "commonVol": 567.2924095351398,
+    "actualOnlyVol": 892.4607715209889,
+    "expectedOnlyVol": 0.0,
+    "envBBox": [
+      -21.0,
+      -11.5,
+      33.0,
+      21.0,
+      11.500000000000002,
+      36.8
+    ],
+    "expectedBB": [
+      -19.6,
+      -10.099999999999998,
+      32.99999999999999,
+      19.6,
+      10.100000000000001,
+      36.8
+    ],
+    "actualValid": true,
+    "actualSolids": 1
+  },
+  "TILT": {
+    "component": "TiltCradle_KeyedHorn_CameraFrame",
+    "envVol": 1619.4176098890953,
+    "expectedVoidVol": 567.2924095351405,
+    "actualVoidWithinHornEnvelope": 715.7071044360606,
+    "commonVol": 567.2924095351412,
+    "actualOnlyVol": 148.41469490092086,
+    "expectedOnlyVol": 0.0,
+    "envBBox": [
+      -41.00000000000001,
+      -11.5,
+      57.0,
+      -37.2,
+      11.5,
+      99.0
+    ],
+    "expectedBB": [
+      -41.00000000000001,
+      -10.1,
+      58.4,
+      -37.2,
+      10.099999999999998,
+      97.6
+    ],
+    "actualValid": true,
+    "actualSolids": 1
+  }
+}

@@ -1,0 +1,80 @@
+﻿[
+    {
+        "identical":  true,
+        "source_hash":  "9F6B948516D93D1213205CCF7077E7B8995FC8875BED4FE9D314986DF2FB545D",
+        "file":  "Base_EarMount_ThrustSupport.stl",
+        "output_hash":  "9F6B948516D93D1213205CCF7077E7B8995FC8875BED4FE9D314986DF2FB545D"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "5052C5FD996CFC568F0E0D11654368C06F59A363CA68FEA71F93CE408AADC5D2",
+        "file":  "CameraPlate_21x14.stl",
+        "output_hash":  "5052C5FD996CFC568F0E0D11654368C06F59A363CA68FEA71F93CE408AADC5D2"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "4CAEAE1234234BA1D1CD7F6818228A9D1DBBF46B1A57D100A6A9DC5F1DEF450C",
+        "file":  "PanYoke_EarBracket_KeyedDrive.stl",
+        "output_hash":  "4CAEAE1234234BA1D1CD7F6818228A9D1DBBF46B1A57D100A6A9DC5F1DEF450C"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "5E4D6231F29DBFA501F938ABCC69E022A99CB684CCDC55E5280989C995903B2B",
+        "file":  "Pan_KeyedHorn_Cover.stl",
+        "output_hash":  "5E4D6231F29DBFA501F938ABCC69E022A99CB684CCDC55E5280989C995903B2B"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "E66A106C07A669FC0E235125EC8BC52406194A77712EA63074D2B1D46E0D5558",
+        "file":  "Pan_Replaceable_ThrustRing.stl",
+        "output_hash":  "E66A106C07A669FC0E235125EC8BC52406194A77712EA63074D2B1D46E0D5558"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "2DD73533B3920F7BCB2C6150A2E441FCF35907908DB2DC226DD18CD3101A0BF0",
+        "file":  "PCB_Spacer_Lower_Left.stl",
+        "output_hash":  "2DD73533B3920F7BCB2C6150A2E441FCF35907908DB2DC226DD18CD3101A0BF0"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "2DD73533B3920F7BCB2C6150A2E441FCF35907908DB2DC226DD18CD3101A0BF0",
+        "file":  "PCB_Spacer_Lower_Right.stl",
+        "output_hash":  "2DD73533B3920F7BCB2C6150A2E441FCF35907908DB2DC226DD18CD3101A0BF0"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "6E4580368135F64265C83D1AD6DC09C0A28DE545B08C633076300758772125AC",
+        "file":  "PCB_Spacer_Upper_Left.stl",
+        "output_hash":  "6E4580368135F64265C83D1AD6DC09C0A28DE545B08C633076300758772125AC"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "6E4580368135F64265C83D1AD6DC09C0A28DE545B08C633076300758772125AC",
+        "file":  "PCB_Spacer_Upper_Right.stl",
+        "output_hash":  "6E4580368135F64265C83D1AD6DC09C0A28DE545B08C633076300758772125AC"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "54C753FA1AA169122053E9FE801019593AC2924AC381E30AC7DBCE7686188FE4",
+        "file":  "TiltCradle_KeyedHorn_CameraFrame.stl",
+        "output_hash":  "54C753FA1AA169122053E9FE801019593AC2924AC381E30AC7DBCE7686188FE4"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "E4040192778E041A5E04B3997E2C1A9068916787B41AF768ED5278FD238F8561",
+        "file":  "Tilt_Journal_FlangedSleeve.stl",
+        "output_hash":  "E4040192778E041A5E04B3997E2C1A9068916787B41AF768ED5278FD238F8561"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "502EBFFCAF869DD9AB17F163A436D0DB2ED3CBBEF8ED21A1FC14750C7E9573E9",
+        "file":  "Tilt_KeyedHorn_CaptiveCover.stl",
+        "output_hash":  "502EBFFCAF869DD9AB17F163A436D0DB2ED3CBBEF8ED21A1FC14750C7E9573E9"
+    },
+    {
+        "identical":  true,
+        "source_hash":  "CF521EEB90DF0D04C90FFE316CFC91A97F049735A42614A1ED1D796F1B59AD41",
+        "file":  "Tilt_Removable_IdlerPillar.stl",
+        "output_hash":  "CF521EEB90DF0D04C90FFE316CFC91A97F049735A42614A1ED1D796F1B59AD41"
+    }
+]

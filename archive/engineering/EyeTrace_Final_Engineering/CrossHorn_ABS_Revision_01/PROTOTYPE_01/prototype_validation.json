@@ -1,0 +1,89 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "fcstd": {
+    "opened": true,
+    "shapes": [
+      {
+        "name": "ParametricCrossHorn",
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "ClearanceCoupon_1",
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "ClearanceCoupon_2",
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "ClearanceCoupon_3",
+        "valid": true,
+        "solids": 1
+      }
+    ],
+    "valid": true
+  },
+  "step": {
+    "opened": true,
+    "valid": true,
+    "solids": 1
+  },
+  "stl": {
+    "CrossHorn_ABS_Clearance_Coupons_01.stl": {
+      "facets": 9270,
+      "solid_mesh": true,
+      "bbox": [
+        137.0,
+        27.0,
+        4.349999904632568
+      ]
+    },
+    "CrossHorn_Reference_Envelope.stl": {
+      "facets": 2066,
+      "solid_mesh": true,
+      "bbox": [
+        34.999502182006836,
+        17.999533653259277,
+        4.0
+      ]
+    }
+  },
+  "creality_3mf": {
+    "crc_ok": true,
+    "bytes": 124487,
+    "entries": 17
+  },
+  "single_coupon_fcstd": {
+    "opened": true,
+    "valid": true,
+    "solids": 1,
+    "clearance_mm": 0.2
+  },
+  "single_coupon_stl": {
+    "facets": 3088,
+    "solid_mesh": true,
+    "bbox": [
+      43.0,
+      27.0,
+      4.349999904632568
+    ]
+  },
+  "single_coupon_3mf": {
+    "crc_ok": true,
+    "bytes": 38609,
+    "entries": 6
+  },
+  "status": "CAD_AND_MESH_PASS; PHYSICAL_FIT_UNVERIFIED"
+}

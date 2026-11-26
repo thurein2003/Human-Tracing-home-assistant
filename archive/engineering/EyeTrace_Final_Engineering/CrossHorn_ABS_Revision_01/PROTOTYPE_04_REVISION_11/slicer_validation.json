@@ -1,0 +1,29 @@
+{
+  "layers": 36,
+  "roles": {
+    "Custom": 2,
+    "Support": 8,
+    "Brim": 1,
+    "Outer wall": 52,
+    "Inner wall": 52,
+    "Overhang wall": 9,
+    "Bridge": 2,
+    "Internal solid infill": 15,
+    "Support transition": 6,
+    "Top surface": 3,
+    "Gap infill": 14,
+    "Floating vertical shell": 9,
+    "Support interface": 2,
+    "Internal Bridge": 1
+  },
+  "support_sections": 8,
+  "brim_sections": 1,
+  "filament_g": 1.55,
+  "time": "14m 52s",
+  "start_temperatures": "START_PRINT EXTRUDER_TEMP=255 BED_TEMP=100",
+  "supports_global": "1",
+  "support_on_bed_only": "1",
+  "support_style": "tree_slim",
+  "supports_object": "1",
+  "gcode_bytes": 1020360
+}

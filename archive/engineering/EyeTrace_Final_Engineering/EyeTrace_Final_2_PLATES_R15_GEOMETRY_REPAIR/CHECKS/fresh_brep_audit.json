@@ -1,0 +1,162 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)"
+  ],
+  "master_file": "EyeTrace_Final_Engineering\\CrossHorn_ABS_Revision_01\\PROTOTYPE_04_REVISION_15\\CrossHorn_UltraMinimal_FitTest_04R15.FCStd",
+  "master_tool_bbox_mm": [
+    -19.6,
+    -10.1,
+    2.0999999999999996,
+    19.6,
+    10.099999999999998,
+    3.8
+  ],
+  "master_tool_volume_mm3": 461.6567346548272,
+  "master_tool_valid": true,
+  "master_tool_solids": 1,
+  "master_coupon_bbox_mm": [
+    -21.0,
+    -11.5,
+    0.0,
+    21.0,
+    11.5,
+    3.8
+  ],
+  "master_coupon_valid": true,
+  "pockets": [
+    {
+      "part": "PanYoke_EarBracket_KeyedDrive",
+      "source_fcstd": "EyeTrace_Final_Engineering\\R15_CENTERED_MOUNT_FINAL\\CAD\\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd",
+      "stl": "PanYoke_EarBracket_KeyedDrive.stl",
+      "brep_valid": true,
+      "brep_solid_count": 1,
+      "brep_volume_mm3": 42345.82609243497,
+      "brep_bbox_mm": [
+        -58.2,
+        -35.3,
+        33.0,
+        44.0,
+        35.3,
+        103.0
+      ],
+      "brep_face_edge_stats": {
+        "faces": 152,
+        "edges": 457,
+        "min_face_area_mm2": 0.3013775616914723,
+        "faces_below_0_01_mm2": 0,
+        "edges_below_0_05_mm": 0,
+        "min_edge_mm": 0.08325171042392937
+      },
+      "master_cutter_transformed_bbox_mm": [
+        -19.6,
+        -10.1,
+        35.1,
+        19.6,
+        10.099999999999998,
+        36.800000000000004
+      ],
+      "master_cutter_volume_mm3": 461.6567346548267,
+      "carrier_cutter_common_mm3": 13.05251179912251,
+      "carrier_cutter_common_solids": 2,
+      "stl_facets": 9942,
+      "stl_is_solid": true,
+      "stl_components": 1,
+      "stl_bbox_mm": [
+        -51.099998474121094,
+        -35.296051025390625,
+        0.0,
+        51.099998474121094,
+        35.296051025390625,
+        70.0
+      ],
+      "stl_shape_valid": true,
+      "stl_shape_solids": 0,
+      "stl_shape_volume_mm3": 42340.88067064069,
+      "stl_shape_bbox_mm": [
+        -51.099998474121094,
+        -35.296051025390625,
+        0.0,
+        51.099998474121094,
+        35.296051025390625,
+        70.0
+      ],
+      "stl_shape_face_edge_stats": {
+        "faces": 9942,
+        "edges": 14913,
+        "min_face_area_mm2": 0.0002842821527337964,
+        "faces_below_0_01_mm2": 60,
+        "edges_below_0_05_mm": 9,
+        "min_edge_mm": 0.027750156983843425
+      }
+    },
+    {
+      "part": "TiltCradle_KeyedHorn_CameraFrame",
+      "source_fcstd": "EyeTrace_Final_Engineering\\R15_CENTERED_MOUNT_FINAL\\CAD\\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd",
+      "stl": "TiltCradle_KeyedHorn_CameraFrame.stl",
+      "brep_valid": true,
+      "brep_solid_count": 1,
+      "brep_volume_mm3": 24528.289698365388,
+      "brep_bbox_mm": [
+        -41.00000000000001,
+        -24.4,
+        54.0,
+        36.0,
+        21.0,
+        99.0
+      ],
+      "brep_face_edge_stats": {
+        "faces": 146,
+        "edges": 434,
+        "min_face_area_mm2": 0.3013775616914999,
+        "faces_below_0_01_mm2": 0,
+        "edges_below_0_05_mm": 0,
+        "min_edge_mm": 0.0832517104239498
+      },
+      "master_cutter_transformed_bbox_mm": [
+        -41.0,
+        -10.1,
+        58.4,
+        -39.3,
+        10.099999999999998,
+        97.6
+      ],
+      "master_cutter_volume_mm3": 461.6567346548269,
+      "carrier_cutter_common_mm3": 0.0,
+      "carrier_cutter_common_solids": 0,
+      "stl_facets": 9108,
+      "stl_is_solid": true,
+      "stl_components": 1,
+      "stl_bbox_mm": [
+        -22.5,
+        -22.700000762939453,
+        -7.105427357601002e-15,
+        22.5,
+        22.697650909423828,
+        77.0
+      ],
+      "stl_shape_valid": true,
+      "stl_shape_solids": 0,
+      "stl_shape_volume_mm3": 24526.262126662208,
+      "stl_shape_bbox_mm": [
+        -22.5,
+        -22.700000762939453,
+        -7.105427357601002e-15,
+        22.5,
+        22.697650909423828,
+        77.0
+      ],
+      "stl_shape_face_edge_stats": {
+        "faces": 9108,
+        "edges": 13662,
+        "min_face_area_mm2": 0.00028422775073977564,
+        "faces_below_0_01_mm2": 74,
+        "edges_below_0_05_mm": 9,
+        "min_edge_mm": 0.027750478918746692
+      }
+    }
+  ],
+  "interpretation": "Fresh validity, STL, and source-cutter intersection audit. Nonzero cutter intersection means remaining material intrudes into the nominal master cavity and must be evaluated against the intentional annular land."
+}

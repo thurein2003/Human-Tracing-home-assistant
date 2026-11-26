@@ -1,0 +1,11 @@
+﻿import FreeCAD as A,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\CAD\EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd';d=A.openDocument(p);res=[]
+for nm in ['PanDrive_M3x10_0','PanDrive_M3x10_1','PanDrive_M3x10_2','PanDrive_M3x10_3']:
+ o=d.getObject(nm);row={'name':nm,'shape_solids':len(o.Shape.Solids),'parts':[]}
+ for i,s in enumerate(o.Shape.Solids):
+  b=s.BoundBox;item={'i':i,'v':float(s.Volume),'bb':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]}
+  try:q=s.makeOffsetShape(.2,.05,True);item.update({'offset':bool(q.isValid()),'offset_vol':float(q.Volume),'offset_bb':[q.BoundBox.XMin,q.BoundBox.YMin,q.BoundBox.ZMin,q.BoundBox.XMax,q.BoundBox.YMax,q.BoundBox.ZMax]})
+  except Exception as e:item['error']=str(e)
+  row['parts'].append(item)
+ res.append(row)
+with open(r'EyeTrace_Final_Engineering\EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR\REPORTS\PAN_SCREW_SOLID_PROBE.json','w') as f:json.dump(res,f,indent=2)

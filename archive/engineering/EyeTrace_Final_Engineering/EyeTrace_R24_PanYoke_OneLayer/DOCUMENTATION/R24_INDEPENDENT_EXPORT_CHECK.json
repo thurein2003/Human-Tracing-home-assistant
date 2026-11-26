@@ -1,0 +1,28 @@
+{
+  "stl_path": "EyeTrace_Final_Engineering\\EyeTrace_R24_PanYoke_OneLayer\\STL\\PanYoke_R24_OneLayer.stl",
+  "stl_facets": 126522,
+  "unique_vertices": 63221,
+  "nonmanifold_edges": 0,
+  "connected_components": 1,
+  "bed_bbox_mm": [
+    [
+      13.0,
+      115.2
+    ],
+    [
+      13.0014,
+      83.5986
+    ],
+    [
+      0.0,
+      67.8
+    ]
+  ],
+  "3mf_path": "EyeTrace_Final_Engineering\\EyeTrace_R24_PanYoke_OneLayer\\PRINT\\Plate02_R24_PanYoke_OneLayer_UNSLICED.3mf",
+  "crc": "PASS",
+  "build_items": 11,
+  "stl_3mf_triangles_same_order": true,
+  "maximum_coordinate_delta_mm": 5.000000001276206e-05,
+  "other_3mf_archive_resources_modified": [],
+  "replacement_scope": "PanYoke mesh only"
+}

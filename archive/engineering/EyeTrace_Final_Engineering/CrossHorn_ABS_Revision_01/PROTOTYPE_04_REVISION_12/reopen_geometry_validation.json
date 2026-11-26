@@ -1,0 +1,35 @@
+{
+  "reopened": true,
+  "valid": true,
+  "solid_count": 1,
+  "underside_inner_wall_x_mm": [
+    -2.75,
+    2.75
+  ],
+  "measured_underside_inner_diameter_mm": 5.5,
+  "inner_hole_axial_range_mm": [
+    -1.9,
+    -1.1
+  ],
+  "outer_ring_wall_x_mm": [
+    -5.25,
+    5.25
+  ],
+  "outer_shallow_recess_diameter_mm": 10.5,
+  "outer_recess_depth_mm": 0.3,
+  "front_wall_x_mm": [
+    -3.7,
+    3.7
+  ],
+  "front_recess_diameter_mm": 7.4,
+  "front_depth_mm": 3.2,
+  "concentric_about_origin": true,
+  "annular_radial_width_mm": 2.5,
+  "screw_parameter_edit_test": {
+    "edited_diameter_mm": 5.4,
+    "actual_tool_diameter_mm": 5.4,
+    "solid_volume_delta_mm3": 0.6848671984830617,
+    "restored_diameter_mm": 5.5
+  },
+  "restored_volume_mm3": 1204.2426351595177
+}

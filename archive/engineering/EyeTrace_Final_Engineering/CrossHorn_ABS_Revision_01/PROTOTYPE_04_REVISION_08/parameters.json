@@ -1,0 +1,39 @@
+{
+  "units": "mm",
+  "base_thickness_mm": 3.8,
+  "center_pad_rise_mm": 0.5,
+  "front_recess_diameter_mm": 7.4,
+  "front_recess_depth_mm": 3.2,
+  "rear_recess_diameter_mm": 5.5,
+  "rear_recess_depth_mm": 0.3,
+  "center_web_mm": 0.7999999999999996,
+  "x_arm_reach_mm": [
+    17.6,
+    17.6
+  ],
+  "y_arm_reach_mm": [
+    10.1,
+    10.1
+  ],
+  "parametric_edit_test_results": [
+    {
+      "property": "FrontDepth",
+      "test_value_mm": 3.1,
+      "tool_height_after_edit_mm": 3.1,
+      "volume_before_mm3": 1005.8352997826919,
+      "volume_edited_mm3": 1008.5457088445761,
+      "abs_volume_change_mm3": 2.7104090618842065,
+      "restored_value_mm": 3.2
+    },
+    {
+      "property": "BackDepth",
+      "test_value_mm": 0.5,
+      "tool_height_after_edit_mm": 0.5,
+      "volume_before_mm3": 1005.8352997826919,
+      "volume_edited_mm3": 1004.2645034558965,
+      "abs_volume_change_mm3": 1.5707963267954028,
+      "restored_value_mm": 0.3
+    }
+  ],
+  "design_note": "Native Part::Cylinder and Part::Cut expressions drive both recesses; edit Parameters group values and press F5."
+}

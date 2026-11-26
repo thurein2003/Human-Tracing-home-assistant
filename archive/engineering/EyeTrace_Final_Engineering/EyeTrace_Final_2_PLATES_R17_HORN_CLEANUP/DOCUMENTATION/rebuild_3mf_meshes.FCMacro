@@ -1,0 +1,51 @@
+﻿import FreeCAD as A,Part,Mesh,json,os,zipfile,xml.etree.ElementTree as ET,math,shutil
+from FreeCAD import Vector as V
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+srcroot=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'))
+transforms={'PanYoke_EarBracket_KeyedDrive':(V(71.2,48.3,-33),None),'TiltCradle_KeyedHorn_CameraFrame':(V(288,127,41),-90)}
+tempobjs=[]; meshdata={}; check={}
+for name,(trans,angle) in transforms.items():
+ src=d.getObject(name); sh=src.Shape.copy()
+ if angle is not None:sh.rotate(V(0,0,0),V(0,1,0),angle)
+ sh.translate(trans)
+ tmp=d.addObject('PartDesign::Feature','PrintMesh_'+name);tmp.Shape=sh;tempobjs.append(tmp)
+ stl=os.path.join(p,'STL',name+'_R17.stl')
+ Part.export([tmp],stl)
+ mm=Mesh.Mesh(stl); verts,faces=mm.Topology
+ check[name]={'brep_valid':src.Shape.isValid(),'brep_solids':len(src.Shape.Solids),'brep_volume':src.Shape.Volume,'mesh_solid':mm.isSolid(),'mesh_volume':mm.Volume,'mesh_facets':len(mm.Facets),'vertex_count':len(verts),'bbox':[mm.BoundBox.XMin,mm.BoundBox.YMin,mm.BoundBox.ZMin,mm.BoundBox.XMax,mm.BoundBox.YMax,mm.BoundBox.ZMax]}
+ meshdata[name]=(verts,faces)
+ns='http://schemas.microsoft.com/3dmanufacturing/core/2015/02'; ET.register_namespace('',ns); tag=lambda x:'{%s}%s'%(ns,x)
+def replace_mesh(src,dst):
+ with zipfile.ZipFile(src,'r') as zin:
+  model=ET.fromstring(zin.read('3D/3dmodel.model'))
+  count=0
+  for ob in model.findall('.//'+tag('object')):
+   name=ob.get('name')
+   if name not in meshdata:continue
+   verts,faces=meshdata[name]; old=ob.find(tag('mesh'))
+   if old is None:continue
+   ob.remove(old); mesh=ET.SubElement(ob,tag('mesh')); vv=ET.SubElement(mesh,tag('vertices'))
+   for q in verts:ET.SubElement(vv,tag('vertex'),{'x':format(q.x,'.9g'),'y':format(q.y,'.9g'),'z':format(q.z,'.9g')})
+   tt=ET.SubElement(mesh,tag('triangles'))
+   for f in faces:ET.SubElement(tt,tag('triangle'),{'v1':str(int(f[0])),'v2':str(int(f[1])),'v3':str(int(f[2]))})
+   count+=1
+  for md in model.findall(tag('metadata')):
+   if md.get('name')=='Title':md.text='EyeTrace R17 R15 horn cleanup — reslice required'
+   if md.get('name')=='Description':md.text='Pan and tilt horn seats rebuilt from exact R15 BREP. Updated meshes; reslicing and support verification required.'
+  tmp=dst+'.tmp'
+  with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as zout:
+   for info in zin.infolist():
+    data=ET.tostring(model,encoding='utf-8',xml_declaration=True) if info.filename=='3D/3dmodel.model' else zin.read(info.filename)
+    zout.writestr(info,data)
+ shutil.move(tmp,dst);return count
+for i in (1,2):
+ s=os.path.join(srcroot,'PRINT','EyeTrace_R16_Plate_%02d_ABS_HOLD.3mf'%i)
+ t=os.path.join(p,'PRINT','EyeTrace_R17_Plate_%02d_ABS_HORN_CLEANUP_HOLD.3mf'%i)
+ print('PATCHED',i,replace_mesh(s,t))
+with open(os.path.join(p,'STL_NATIVE_MESH_VALIDATION.json'),'w') as f:json.dump(check,f,indent=2)
+print('NATIVE_MESH_CHECK',json.dumps(check))
+for ob in tempobjs:d.removeObject(ob.Name)
+d.recompute()
+A.closeDocument(d.Name)
+

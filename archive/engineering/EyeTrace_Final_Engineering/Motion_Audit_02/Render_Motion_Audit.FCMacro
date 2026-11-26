@@ -1,0 +1,75 @@
+﻿import FreeCAD as App, FreeCADGui as Gui, Part, os, math, json, traceback
+OUT=r"EyeTrace_Final_Engineering\Motion_Audit_02"
+FC=r"EyeTrace_Final_Engineering\Motion_Audit_02\EyeTrace_Motion_Audit_Assembly_r03.FCStd"
+logp=os.path.join(OUT,"CHECKS","render_log.txt")
+def log(s):
+ with open(logp,"a",encoding="utf-8") as f:f.write(str(s)+"\n")
+try:
+ if os.path.exists(logp):os.remove(logp)
+ d=App.openDocument(FC)
+ view=Gui.activeDocument().activeView()
+ for o in d.Objects:
+  if hasattr(o,"ViewObject"):o.ViewObject.Visibility=False
+ # CAD-source close-ups: expose the actual SG90 reference solids and their mounts/horns.
+ pan_names=["Base_EarMount_ThrustSupport","Pan_Replaceable_ThrustRing","PanServo_SG90_Reference","PanOriginalScrew_PROVISIONAL","Pan_OriginalStar_PROVISIONAL","PanYoke_EarBracket_KeyedDrive","Pan_KeyedHorn_Cover","PanDrive_M3x10_0","PanDrive_M3x10_1","PanDrive_M3x10_2","PanDrive_M3x10_3","PanEar_M1p6x8_0","PanEar_M1p6x8_1"]
+ for n in pan_names:d.getObject(n).ViewObject.Visibility=True
+ d.getObject("Base_EarMount_ThrustSupport").ViewObject.Transparency=78
+ d.getObject("PanYoke_EarBracket_KeyedDrive").ViewObject.Transparency=55
+ view.viewAxonometric();view.fitAll();view.saveImage(os.path.join(OUT,"RENDERS","pan_servo_horn_closeup.png"),1600,1200)
+ for o in d.Objects:
+  if hasattr(o,"ViewObject"):o.ViewObject.Visibility=False
+ tilt_names=["PanYoke_EarBracket_KeyedDrive","TiltServo_SG90_Reference","Tilt_OriginalStar_PROVISIONAL","TiltOriginalScrew_PROVISIONAL","TiltCradle_KeyedHorn_CameraFrame","Tilt_KeyedHorn_CaptiveCover","Tilt_Removable_IdlerPillar","Tilt_Journal_FlangedSleeve","TiltIdler_M3x12","TiltIdler_M3_Washer","TiltEar_M1p6x8_0","TiltEar_M1p6x8_1","TiltDrive_M3x10_0","TiltDrive_M3x10_1","TiltDrive_M3x10_2","TiltDrive_M3x10_3"]
+ for n in tilt_names:d.getObject(n).ViewObject.Visibility=True
+ d.getObject("PanYoke_EarBracket_KeyedDrive").ViewObject.Transparency=78
+ d.getObject("TiltCradle_KeyedHorn_CameraFrame").ViewObject.Transparency=55
+ view.viewAxonometric();view.fitAll();view.saveImage(os.path.join(OUT,"RENDERS","tilt_servo_horn_closeup.png"),1600,1200)
+ # Animate the actual FreeCAD assembly links through the two joint-coordinate transforms.
+ for o in d.Objects:
+  if hasattr(o,"ViewObject"):o.ViewObject.Visibility=False
+ links=[d.getObject(n) for n in ["KinematicBaseLink","KinematicPanRotorLink","KinematicTiltCradleLink"]]
+ for l in links:l.ViewObject.Visibility=True
+ d.getObject("MotionAuditAssembly").ViewObject.Visibility=True
+ p0=App.Vector(0,0,0); z=App.Vector(0,0,1); c=App.Vector(-41,0,78); x=App.Vector(1,0,0)
+ def rp(center,axis,deg):
+  r=App.Rotation(axis,deg);return App.Placement(center-r.multVec(center),r)
+ def state(p,t):
+  P=rp(p0,z,p); T=rp(c,x,t);links[0].Placement=App.Placement();links[1].Placement=P;links[2].Placement=P.multiply(T);d.recompute()
+  pan1=links[0].Placement.multiply(d.getObject("PanRevolute").Placement1);pan2=links[1].Placement.multiply(d.getObject("PanRevolute").Placement2)
+  til1=links[1].Placement.multiply(d.getObject("TiltRevolute").Placement1);til2=links[2].Placement.multiply(d.getObject("TiltRevolute").Placement2)
+  e=max((pan1.Base-pan2.Base).Length,(til1.Base-til2.Base).Length)
+  if e>1e-6:raise RuntimeError("Joint center mismatch: "+str(e))
+  return e
+ # Collision-screened endpoint, neutral and combined screenshots for soft limits.
+ state_rows=[]
+ for axisname,vals in [("pan",[-90,0,90]),("tilt",[-30,0,30])]:
+  for v in vals:
+   p,t=(v,0) if axisname=="pan" else (0,v)
+   e=state(p,t);fn=("%s_%s%03d_deg.png"%(axisname,"m" if v<0 else "p",abs(v)))
+   view.viewAxonometric();view.fitAll();view.saveImage(os.path.join(OUT,"RENDERS",fn),1600,1200)
+   state_rows.append({"mode":axisname+"_only","pan_joint_deg":p,"tilt_joint_deg":t,"connector_center_error_mm":e,"image":fn})
+ for p,t in [(-90,-30),(90,30)]:
+  e=state(p,t);fn="simultaneous_pan_%s90_tilt_%s30.png"%("m" if p<0 else "p","m" if t<0 else "p")
+  view.viewAxonometric();view.fitAll();view.saveImage(os.path.join(OUT,"RENDERS",fn),1600,1200)
+  state_rows.append({"mode":"simultaneous","pan_joint_deg":p,"tilt_joint_deg":t,"connector_center_error_mm":e,"image":fn})
+ fr=os.path.join(OUT,"RENDERS","animation_frames");os.makedirs(fr,exist_ok=True)
+ seq=[("pan_only",p,0) for p in range(-90,91,10)]+[("tilt_only",0,t) for t in range(-30,31,5)]+[("simultaneous",p,int(round(p*30.0/90.0))) for p in range(-90,91,10)]
+ view.viewAxonometric();view.fitAll(); records=[]
+ for i,(mode,p,t) in enumerate(seq):
+  e=state(p,t);fn="frame_%03d.png"%i;view.saveImage(os.path.join(fr,fn),1200,900);records.append({"frame":i,"mode":mode,"pan_joint_deg":p,"tilt_joint_deg":t,"connector_center_error_mm":e,"image":"animation_frames/"+fn})
+ state(0,0);view.viewAxonometric();view.fitAll()
+ with open(os.path.join(OUT,"CHECKS","transform_states.json"),"w",encoding="utf-8") as f:json.dump({"states":state_rows,"animation_frames":records,"pan_joint_axis":[0,0,1],"pan_axis_center_mm":[0,0,35],"tilt_joint_axis":[1,0,0],"tilt_axis_center_mm":[-41,0,78],"limits":{"pan_deg":[-90,90],"tilt_deg":[-30,30]},"limits_are":"CAD collision-screen soft limits; not physical hard stops or measured servo command endpoints"},f,indent=2)
+ with open(os.path.join(OUT,"CHECKS","animation_frames.json"),"w",encoding="utf-8") as f:json.dump(records,f,indent=2)
+ log("closeups=2; frames="+str(len(records))+"; max_joint_center_error_mm="+str(max(r["connector_center_error_mm"] for r in records)))
+ log("completed=1")
+except Exception:log(traceback.format_exc())
+finally:
+ try:App.closeDocument(App.ActiveDocument.Name)
+ except:pass
+ try:Gui.getMainWindow().close()
+ except:pass
+
+
+
+
+
+

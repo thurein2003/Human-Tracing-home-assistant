@@ -1,0 +1,116 @@
+{
+  "pan_main_valid": true,
+  "pan_main_solids": 1,
+  "pan_main_volume": 43453.58185395115,
+  "pan_pocket_intersection": 0.0,
+  "pan_pairs": [
+    {
+      "part": "Pan_KeyedHorn_Cover",
+      "main_brep": 0.0,
+      "fit_envelope": 0.0
+    },
+    {
+      "part": "PanDrive_M3x10_0",
+      "main_brep": 0.0,
+      "fit_envelope": 0.0
+    },
+    {
+      "part": "PanDrive_M3x10_1",
+      "main_brep": 0.0,
+      "fit_envelope": 0.0
+    },
+    {
+      "part": "PanDrive_M3x10_2",
+      "main_brep": 0.0,
+      "fit_envelope": 0.0
+    },
+    {
+      "part": "PanDrive_M3x10_3",
+      "main_brep": 0.0,
+      "fit_envelope": 0.0
+    },
+    {
+      "part": "PanServo_SG90_Reference",
+      "main_brep": 0.0,
+      "fit_envelope": 55.43890015973567
+    },
+    {
+      "part": "Base_EarMount_ThrustSupport",
+      "main_brep": 0.0,
+      "fit_envelope": 0.0
+    },
+    {
+      "part": "Pan_Replaceable_ThrustRing",
+      "main_brep": 0.0,
+      "fit_envelope": 0.0
+    }
+  ],
+  "tilt_pairs": [
+    {
+      "part": "Tilt_KeyedHorn_CaptiveCover",
+      "carrier": 0.0
+    },
+    {
+      "part": "TiltDrive_M3x10_0",
+      "carrier": 0.0
+    },
+    {
+      "part": "TiltDrive_M3x10_1",
+      "carrier": 0.0
+    },
+    {
+      "part": "TiltDrive_M3x10_2",
+      "carrier": 0.0
+    },
+    {
+      "part": "TiltDrive_M3x10_3",
+      "carrier": 0.0
+    },
+    {
+      "part": "TiltServo_SG90_Reference",
+      "carrier": 0.0
+    },
+    {
+      "part": "Tilt_Removable_IdlerPillar",
+      "carrier": 0.0
+    },
+    {
+      "part": "Tilt_Journal_FlangedSleeve",
+      "carrier": 0.0
+    },
+    {
+      "part": "TiltIdler_M3x12",
+      "carrier": 0.0
+    },
+    {
+      "part": "TiltIdler_M3_Washer",
+      "carrier": 0.0
+    }
+  ],
+  "tilt_horn_pairs": [
+    {
+      "part": "Tilt_KeyedHorn_CaptiveCover",
+      "horn_common": 0.0
+    },
+    {
+      "part": "TiltDrive_M3x10_0",
+      "horn_common": 0.0
+    },
+    {
+      "part": "TiltDrive_M3x10_1",
+      "horn_common": 0.0
+    },
+    {
+      "part": "TiltDrive_M3x10_2",
+      "horn_common": 10.602875205865551
+    },
+    {
+      "part": "TiltDrive_M3x10_3",
+      "horn_common": 10.602875205865546
+    },
+    {
+      "part": "TiltServo_SG90_Reference",
+      "horn_common": 73.26351147804073
+    }
+  ]
+}

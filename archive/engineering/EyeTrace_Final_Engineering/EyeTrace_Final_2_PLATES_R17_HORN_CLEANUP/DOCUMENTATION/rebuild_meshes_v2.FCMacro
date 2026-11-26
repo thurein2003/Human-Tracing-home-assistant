@@ -1,0 +1,60 @@
+﻿import FreeCAD as A, Part, Mesh, json, os, zipfile, xml.etree.ElementTree as ET, math, struct, shutil
+from FreeCAD import Vector as V
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+srcroot=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'))
+trans={'PanYoke_EarBracket_KeyedDrive':('pan',None),'TiltCradle_KeyedHorn_CameraFrame':('tilt',None)}
+meshdata={}; checks={}
+def pointtf(q,mode):
+ if mode=='pan':return V(q.x+71.2,q.y+48.3,q.z-33.0)
+ return V(-q.z+288.0,q.y+127.0,q.x+41.0)
+def norm(a,b,c):
+ n=(b-a).cross(c-a)
+ if n.Length>0:n.normalize()
+ return n
+for name,(mode,_) in trans.items():
+ ob=d.getObject(name)
+ native=os.path.join(p,'STL','_'+name+'_native.stl')
+ Part.export([ob],native)
+ mm=Mesh.Mesh(native)
+ verts,faces=mm.Topology
+ tv=[pointtf(v,mode) for v in verts]
+ outstl=os.path.join(p,'STL',name+'_R17.stl')
+ with open(outstl,'wb') as f:
+  f.write(('EyeTrace R17 '+name+' native BREP rigid transformed').encode('ascii')[:80].ljust(80,b' '))
+  f.write(struct.pack('<I',len(faces)))
+  for face in faces:
+   a,b,c=[tv[int(i)] for i in face]; n=norm(a,b,c)
+   f.write(struct.pack('<12fH',n.x,n.y,n.z,a.x,a.y,a.z,b.x,b.y,b.z,c.x,c.y,c.z,0))
+ verified=Mesh.Mesh(outstl)
+ checks[name]={'brep_valid':ob.Shape.isValid(),'brep_solids':len(ob.Shape.Solids),'brep_volume':ob.Shape.Volume,'native_mesh_solid':mm.isSolid(),'native_mesh_volume':mm.Volume,'final_mesh_solid':verified.isSolid(),'final_mesh_volume':verified.Volume,'facets':len(verified.Facets),'bbox':[verified.BoundBox.XMin,verified.BoundBox.YMin,verified.BoundBox.ZMin,verified.BoundBox.XMax,verified.BoundBox.YMax,verified.BoundBox.ZMax]}
+ meshdata[name]=(tv,faces)
+ns='http://schemas.microsoft.com/3dmanufacturing/core/2015/02';ET.register_namespace('',ns);tag=lambda x:'{%s}%s'%(ns,x)
+def update(src,dst):
+ with zipfile.ZipFile(src,'r') as zin:
+  model=ET.fromstring(zin.read('3D/3dmodel.model')); touched=0
+  for ob in model.findall('.//'+tag('object')):
+   name=ob.get('name')
+   if name not in meshdata:continue
+   vs,fs=meshdata[name]; old=ob.find(tag('mesh'))
+   if old is None:continue
+   ob.remove(old);m=ET.SubElement(ob,tag('mesh'));vv=ET.SubElement(m,tag('vertices'))
+   for q in vs:ET.SubElement(vv,tag('vertex'),{'x':format(q.x,'.9g'),'y':format(q.y,'.9g'),'z':format(q.z,'.9g')})
+   tt=ET.SubElement(m,tag('triangles'))
+   for face in fs:ET.SubElement(tt,tag('triangle'),{'v1':str(int(face[0])),'v2':str(int(face[1])),'v3':str(int(face[2]))})
+   touched+=1
+  for md in model.findall(tag('metadata')):
+   if md.get('name')=='Title':md.text='EyeTrace R17 R15 horn cleanup — reslice required'
+   if md.get('name')=='Description':md.text='Exact R15 BREP horn pockets integrated into pan and tilt carriers. Reslicing and support verification required.'
+  tmp=dst+'.tmp'
+  with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as zout:
+   for info in zin.infolist():zout.writestr(info,ET.tostring(model,encoding='utf-8',xml_declaration=True) if info.filename=='3D/3dmodel.model' else zin.read(info.filename))
+ shutil.move(tmp,dst);return touched
+for i in (1,2):
+ a=os.path.join(srcroot,'PRINT','EyeTrace_R16_Plate_%02d_ABS_HOLD.3mf'%i)
+ b=os.path.join(p,'PRINT','EyeTrace_R17_Plate_%02d_ABS_HORN_CLEANUP_HOLD.3mf'%i)
+ print('PATCHED_3MF',i,update(a,b))
+with open(os.path.join(p,'STL_NATIVE_MESH_VALIDATION.json'),'w') as f:json.dump(checks,f,indent=2)
+print('MESH_FINAL',json.dumps(checks))
+A.closeDocument(d.Name)
+

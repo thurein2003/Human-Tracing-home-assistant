@@ -1,0 +1,16 @@
+﻿import FreeCAD as App,json,Part
+from FreeCAD import Vector as V
+d=App.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\CAD\EyeTrace_R21_SinglePanMountPlate.FCStd')
+a={n:d.getObject(n) for n in ['PanYoke_EarBracket_KeyedDrive','Pan_Replaceable_ThrustRing','Pan_KeyedHorn_Cover','PanServo_SG90_Reference']}
+r={}
+for x,y in [('PanYoke_EarBracket_KeyedDrive','Pan_Replaceable_ThrustRing'),('PanYoke_EarBracket_KeyedDrive','Pan_KeyedHorn_Cover'),('Pan_KeyedHorn_Cover','Pan_Replaceable_ThrustRing'),('PanYoke_EarBracket_KeyedDrive','PanServo_SG90_Reference')]:
+ s=a[x].Shape;t=a[y].Shape;c=s.common(t);r[x+'__'+y]={'common_mm3':c.Volume,'dist_mm':s.distToShape(t)[0]}
+ys=a['PanYoke_EarBracket_KeyedDrive'].Shape
+rows=[]
+for z in [35.2,36,36.9,37,37.2,38,39.4,40,41]:
+ c=ys.common(Part.makeBox(120,90,.1,V(-60,-45,z)))
+ b=c.BoundBox; rows.append({'z':z,'volume_at_slice':c.Volume,'bbox':[b.XMin,b.XMax,b.YMin,b.YMax]})
+for obj in d.Objects:
+ if obj.Name in a and obj.ViewObject: pass
+print(json.dumps({'pairs':r,'slices':rows},indent=2))
+App.closeDocument(d.Name)

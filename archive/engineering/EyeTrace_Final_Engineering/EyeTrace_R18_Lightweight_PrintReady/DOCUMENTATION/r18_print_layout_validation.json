@@ -1,0 +1,221 @@
+{
+  "3mf_crc_error": null,
+  "3mf_entries": 6,
+  "build_item_count": 12,
+  "all_components_on_bed": true,
+  "xy_aabb_overlaps": [],
+  "minimum_xy_aabb_gap_mm": 16.0,
+  "objects": [
+    {
+      "name": "Pan_Replaceable_ThrustRing",
+      "triangles": 2112,
+      "bbox": [
+        13.0,
+        102.6,
+        0.0,
+        76.98567772,
+        166.5928398,
+        1.0
+      ]
+    },
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "triangles": 35546,
+      "bbox": [
+        13.0,
+        13.00395,
+        0.0,
+        115.199997,
+        83.596046,
+        67.800003
+      ]
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar",
+      "triangles": 1300,
+      "bbox": [
+        93.0,
+        102.6,
+        0.0,
+        109.0,
+        159.6,
+        57.0
+      ]
+    },
+    {
+      "name": "Pan_KeyedHorn_Cover",
+      "triangles": 4312,
+      "bbox": [
+        125.0,
+        102.6,
+        0.0,
+        172.9892578,
+        150.5946289,
+        4.199999809
+      ]
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "triangles": 20976,
+      "bbox": [
+        189.0,
+        102.6,
+        0.0,
+        234.0,
+        147.99951,
+        77.0
+      ]
+    },
+    {
+      "name": "Tilt_KeyedHorn_CaptiveCover",
+      "triangles": 4312,
+      "bbox": [
+        13.0,
+        185.6,
+        0.0,
+        54.99060059,
+        227.5953003,
+        4.199999809
+      ]
+    },
+    {
+      "name": "Tilt_Journal_FlangedSleeve",
+      "triangles": 1260,
+      "bbox": [
+        143.0,
+        185.6,
+        0.0,
+        149.9984336,
+        192.5992166,
+        4.099999905
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left",
+      "triangles": 840,
+      "bbox": [
+        166.0,
+        185.6,
+        0.0,
+        170.9994407,
+        190.5988811,
+        3.0
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right",
+      "triangles": 840,
+      "bbox": [
+        187.0,
+        185.6,
+        0.0,
+        191.9994407,
+        190.5988811,
+        3.0
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left",
+      "triangles": 840,
+      "bbox": [
+        208.0,
+        185.6,
+        0.0,
+        212.9994407,
+        190.5988811,
+        3.0
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right",
+      "triangles": 840,
+      "bbox": [
+        229.0,
+        185.6,
+        0.0,
+        233.9994407,
+        190.5988811,
+        3.0
+      ]
+    },
+    {
+      "name": "CameraPlate_21x14",
+      "triangles": 3828,
+      "bbox": [
+        71.0,
+        185.6,
+        0.0,
+        127.0,
+        217.6,
+        3.0
+      ]
+    }
+  ],
+  "individual_stl_count": 12,
+  "all_individual_stls_closed_edge_manifold": true,
+  "individual_stls": [
+    {
+      "name": "CameraPlate_21x14.stl",
+      "triangles": 3828,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive_R18.stl",
+      "triangles": 35546,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "Pan_KeyedHorn_Cover.stl",
+      "triangles": 4312,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "Pan_Replaceable_ThrustRing.stl",
+      "triangles": 2112,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left.stl",
+      "triangles": 840,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right.stl",
+      "triangles": 840,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left.stl",
+      "triangles": 840,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right.stl",
+      "triangles": 840,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame_R17.stl",
+      "triangles": 20976,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "Tilt_Journal_FlangedSleeve.stl",
+      "triangles": 1260,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "Tilt_KeyedHorn_CaptiveCover.stl",
+      "triangles": 4312,
+      "bad_edge_count": 0
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar.stl",
+      "triangles": 1300,
+      "bad_edge_count": 0
+    }
+  ],
+  "slicing_completed": false,
+  "filament_estimate_available": false,
+  "print_time_available": false
+}

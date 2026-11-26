@@ -1,0 +1,8 @@
+import FreeCAD as App,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount\CAD\EyeTrace_R22_UnifiedBottomMount.FCStd';d=App.openDocument(p);out=[]
+for o in d.Objects:
+ r={'name':o.Name,'label':o.Label,'type':o.TypeId}
+ if hasattr(o,'Group'):r['group']=[x.Name for x in o.Group]
+ if hasattr(o,'Shape') and not o.Shape.isNull():r.update({'solids':len(o.Shape.Solids),'vol':o.Shape.Volume,'bb':[o.Shape.BoundBox.XMin,o.Shape.BoundBox.XMax,o.Shape.BoundBox.YMin,o.Shape.BoundBox.YMax,o.Shape.BoundBox.ZMin,o.Shape.BoundBox.ZMax]})
+ out.append(r)
+open(r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount\DOCUMENTATION\doc_tree_probe.json','w').write(json.dumps(out,indent=2))

@@ -1,0 +1,13 @@
+﻿import FreeCAD as App, FreeCADGui as Gui, os
+out=r'EyeTrace_Final_Engineering\R15_CENTERED_MOUNT_FINAL\RENDERS'
+base=App.openDocument(r'EyeTrace_Final_Engineering\R15_CENTERED_MOUNT_FINAL\CAD\R15_Base_OriginalMountGeometry.FCStd')
+v=Gui.activeDocument().activeView();v.viewTop();v.fitAll();Gui.updateGui();v.saveImage(out+r'\R15_Base_Top_ActualCAD.png',1920,1080,'Current');App.closeDocument(base.Name)
+d=App.openDocument(r'EyeTrace_Final_Engineering\R15_CENTERED_MOUNT_FINAL\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd')
+show=set([o.Name for o in d.Objects if hasattr(o,'Shape') and not o.Shape.isNull() and hasattr(o,'Printable') and bool(o.Printable)])
+show.update(['PanServo_SG90_Reference','TiltServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','Tilt_OriginalStar_PROVISIONAL','Camera_Lens_PROVISIONAL'])
+for o in d.Objects:
+ if hasattr(o,'ViewObject') and hasattr(o,'Shape'):
+  o.ViewObject.Visibility=(o.Name in show)
+  if o.Name in ['Pan_OriginalStar_PROVISIONAL','Tilt_OriginalStar_PROVISIONAL']:o.ViewObject.ShapeColor=(0.95,0.85,0.25)
+Gui.activeDocument().activeView().viewIsometric();Gui.activeDocument().activeView().fitAll();Gui.updateGui();Gui.activeDocument().activeView().saveImage(out+r'\R15_Assembly_AxisAligned_ActualCAD.png',1920,1080,'Current')
+Gui.activeDocument().activeView().viewTop();Gui.activeDocument().activeView().fitAll();Gui.updateGui();Gui.activeDocument().activeView().saveImage(out+r'\R15_Horn_and_Mount_Top_ActualCAD.png',1920,1080,'Current')

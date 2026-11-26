@@ -1,0 +1,18 @@
+﻿{
+  "profile_name": "Eye Trace F625 coupon - K2 ABS starting point",
+  "machine": "Creality K2, 260x260x260 mm",
+  "material": "ABS; confirm the specific spool's processing range",
+  "nozzle_diameter_mm": 0.4,
+  "layer_height_mm": 0.2,
+  "wall_loops": 4,
+  "infill_pattern": "gyroid",
+  "infill_density_percent": 35,
+  "nozzle_temperature_c": 255,
+  "bed_temperature_c": 100,
+  "support": "none for the coupon when printed flat with seat axes vertical",
+  "brim_width_mm": 6,
+  "part_cooling_fan_percent": "low/off except if the filament maker requires otherwise",
+  "orientation": "coupon flat; bearing seats vertical",
+  "shrinkage_compensation": "none; choose seat ID from printed coupon measurements",
+  "note": "Starting settings only; check the filament maker and K2 profile limits. No sliced toolpath has been verified in this package."
+}

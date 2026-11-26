@@ -1,0 +1,28 @@
+[
+  {
+    "motor": "PanServo_SG90_Reference",
+    "removed_subassemblies": "pan yoke removed for pan; cradle/horn removed for tilt; ear screws removed",
+    "samples": 11,
+    "unintended": [],
+    "wire_scope": "Rigid case/ears/boss only; flexible cable insertion and connector size unverified"
+  },
+  {
+    "motor": "TiltServo_SG90_Reference",
+    "removed_subassemblies": "pan yoke removed for pan; cradle/horn removed for tilt; ear screws removed",
+    "samples": 11,
+    "unintended": [],
+    "wire_scope": "Rigid case/ears/boss only; flexible cable insertion and connector size unverified"
+  },
+  {
+    "operation": "Cradle axial insertion",
+    "samples": 8,
+    "unintended": [],
+    "procedure": "Camera PCB and drive screws removed; insert cradle from right with pillar off; fit sleeve into cheek, then slide pillar over sleeve from right before its two bolts"
+  },
+  {
+    "operation": "Right pillar over sleeve",
+    "samples": 8,
+    "unintended": [],
+    "procedure": "Camera PCB and drive screws removed; insert cradle from right with pillar off; fit sleeve into cheek, then slide pillar over sleeve from right before its two bolts"
+  }
+]

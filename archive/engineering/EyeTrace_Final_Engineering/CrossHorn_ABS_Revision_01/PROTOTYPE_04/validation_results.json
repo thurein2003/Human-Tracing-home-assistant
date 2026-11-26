@@ -1,0 +1,60 @@
+{
+  "freecad_saved_document_reopen": {
+    "opened": true,
+    "freecad_version": [
+      "1",
+      "1",
+      "4",
+      "20260928 (Git shallow)",
+      "Unknown",
+      "2026/09/28 13:46:34",
+      "(HEAD detached at 4fd3bf320)",
+      "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+    ],
+    "shape": "Horn3CrossFitCoupon",
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 965.5175198879914,
+    "bbox_mm": [
+      38.0,
+      23.0,
+      3.7
+    ]
+  },
+  "solid_valid": true,
+  "solid_count": 1,
+  "freecad_mesh_solid": true,
+  "stl_triangles": 5120,
+  "3mf_crc_valid": true,
+  "3mf_objects": 1,
+  "3mf_triangles": 5120,
+  "3mf_matches_stl": true,
+  "settings": {
+    "layer_height": "0.2",
+    "wall_loops": "2",
+    "sparse_infill_density": "0%",
+    "enable_support": "0",
+    "brim_width": [
+      "4"
+    ],
+    "nozzle_temperature": [
+      "255"
+    ],
+    "hot_plate_temp": [
+      "100"
+    ]
+  },
+  "k2_bbox_with_brim_mm": [
+    45.99954088266202,
+    30.99965311561185,
+    3.7
+  ],
+  "k2_fits": true,
+  "hub_floor_mm": 1.0,
+  "arm_floor_mm": 2.0,
+  "prototype03_solid_volume_mm3": 1750.891169350904,
+  "prototype04_solid_volume_mm3": 965.5175198879914,
+  "cad_volume_reduction_percent_not_material_savings": 44.85565197944707,
+  "actual_sliced_filament_mass": "UNVERIFIED - slicer emitted no toolpaths",
+  "physical_horn_fit": "UNVERIFIED"
+}

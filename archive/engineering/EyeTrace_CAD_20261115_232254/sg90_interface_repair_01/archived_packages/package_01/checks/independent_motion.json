@@ -1,0 +1,10 @@
+{
+  "poses": 172,
+  "pair_tests": 185932,
+  "unique_relative_tests": 37135,
+  "all_component_pairs_included": true,
+  "positive_overlap_whitelist": [],
+  "unintended_instances": 0,
+  "events": [],
+  "limits": "Discrete operating poses and nominal exit keep-outs; not continuous motion, spline, flexible cable-loop, stress or physical-fit proof."
+}

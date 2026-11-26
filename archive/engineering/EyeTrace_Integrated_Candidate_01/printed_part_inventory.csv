@@ -1,0 +1,14 @@
+Part,Quantity,STL file,Native object,Moving frame,Print X mm,Print Y mm,Print Z mm
+Base_EarMount_ThrustSupport,1,Base_EarMount_ThrustSupport.stl,Base_EarMount_ThrustSupport,fixed,80.0,70.0,36.5
+Pan_Replaceable_ThrustRing,1,Pan_Replaceable_ThrustRing.stl,Pan_Replaceable_ThrustRing,fixed,64.0,64.0,1.0
+PanYoke_EarBracket_KeyedDrive,1,PanYoke_EarBracket_KeyedDrive.stl,PanYoke_EarBracket_KeyedDrive,pan,102.2,70.6,70.0
+Tilt_Removable_IdlerPillar,1,Tilt_Removable_IdlerPillar.stl,Tilt_Removable_IdlerPillar,pan,16.0,57.0,57.0
+Pan_KeyedHorn_Cover,1,Pan_KeyedHorn_Cover.stl,Pan_KeyedHorn_Cover,pan,48.0,48.0,4.200000000000006
+TiltCradle_KeyedHorn_CameraFrame,1,TiltCradle_KeyedHorn_CameraFrame.stl,TiltCradle_KeyedHorn_CameraFrame,tilt,45.000000000000014,45.4,77.0
+Tilt_KeyedHorn_CaptiveCover,1,Tilt_KeyedHorn_CaptiveCover.stl,Tilt_KeyedHorn_CaptiveCover,tilt,42.00000000000001,42.0,4.200000000000017
+Tilt_Journal_FlangedSleeve,1,Tilt_Journal_FlangedSleeve.stl,Tilt_Journal_FlangedSleeve,tilt,7.0,7.0,4.099999999999994
+PCB_Spacer_Lower_Left,1,PCB_Spacer_Lower_Left.stl,PCB_Spacer_Lower_Left,tilt,5.0,4.9999999999999964,3.0
+PCB_Spacer_Lower_Right,1,PCB_Spacer_Lower_Right.stl,PCB_Spacer_Lower_Right,tilt,5.0,4.9999999999999964,3.0
+PCB_Spacer_Upper_Left,1,PCB_Spacer_Upper_Left.stl,PCB_Spacer_Upper_Left,tilt,5.0,4.9999999999999964,3.0
+PCB_Spacer_Upper_Right,1,PCB_Spacer_Upper_Right.stl,PCB_Spacer_Upper_Right,tilt,5.0,4.9999999999999964,3.0
+CameraPlate_21x16,1,CameraPlate_21x16.stl,CameraPlate_Cut007,tilt,56.0,32.0,3.0000000000000107

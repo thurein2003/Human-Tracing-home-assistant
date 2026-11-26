@@ -1,0 +1,32 @@
+{
+  "cover_vs": {
+    "ArmPocketTool": 254.2971415383413,
+    "ThroughBoreTool": 0.0,
+    "expBaseDiff": 254.29714153834135,
+    "horn": 0.0
+  },
+  "screw0": {
+    "ArmPocketTool": 17.08169249811956,
+    "ThroughBoreTool": 0.0,
+    "expBaseDiff": 17.081692498119555,
+    "horn": 10.602875205865553
+  },
+  "screw1": {
+    "ArmPocketTool": 17.081692498119555,
+    "ThroughBoreTool": 0.0,
+    "expBaseDiff": 17.08169249811956,
+    "horn": 10.602875205865553
+  },
+  "screw2": {
+    "ArmPocketTool": 0.0,
+    "ThroughBoreTool": 0.0,
+    "expBaseDiff": 0.0,
+    "horn": 0.0
+  },
+  "screw3": {
+    "ArmPocketTool": 0.0,
+    "ThroughBoreTool": 0.0,
+    "expBaseDiff": 0.0,
+    "horn": 0.0
+  }
+}

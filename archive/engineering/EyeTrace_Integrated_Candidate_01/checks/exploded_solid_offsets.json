@@ -1,0 +1,762 @@
+[
+  {
+    "source": "Base_EarMount_ThrustSupport",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Pan_Replaceable_ThrustRing",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      10.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanServo_SG90_Reference",
+    "solid_index": 0,
+    "offset_mm": [
+      -65.0,
+      0.0,
+      10.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltServo_SG90_Reference",
+    "solid_index": 0,
+    "offset_mm": [
+      -30.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Pan_OriginalStar_PROVISIONAL",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      25.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Tilt_OriginalStar_PROVISIONAL",
+    "solid_index": 0,
+    "offset_mm": [
+      5.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanOriginalScrew_PROVISIONAL",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      25.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltOriginalScrew_PROVISIONAL",
+    "solid_index": 0,
+    "offset_mm": [
+      5.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanYoke_EarBracket_KeyedDrive",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Tilt_Removable_IdlerPillar",
+    "solid_index": 0,
+    "offset_mm": [
+      70.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "IdlerPillar_M3x10_0",
+    "solid_index": 0,
+    "offset_mm": [
+      70.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "IdlerPillar_M3x10_0",
+    "solid_index": 1,
+    "offset_mm": [
+      70.0,
+      0.0,
+      31.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "IdlerPillar_M3x10_1",
+    "solid_index": 0,
+    "offset_mm": [
+      70.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "IdlerPillar_M3x10_1",
+    "solid_index": 1,
+    "offset_mm": [
+      70.0,
+      0.0,
+      31.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Pan_KeyedHorn_Cover",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      15.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanDrive_M3x10_0",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanDrive_M3x10_0",
+    "solid_index": 1,
+    "offset_mm": [
+      0.0,
+      0.0,
+      31.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanDrive_M3x10_1",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanDrive_M3x10_1",
+    "solid_index": 1,
+    "offset_mm": [
+      0.0,
+      0.0,
+      31.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanDrive_M3x10_2",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanDrive_M3x10_2",
+    "solid_index": 1,
+    "offset_mm": [
+      0.0,
+      0.0,
+      31.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanDrive_M3x10_3",
+    "solid_index": 0,
+    "offset_mm": [
+      0.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanDrive_M3x10_3",
+    "solid_index": 1,
+    "offset_mm": [
+      0.0,
+      0.0,
+      31.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltCradle_KeyedHorn_CameraFrame",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Tilt_KeyedHorn_CaptiveCover",
+    "solid_index": 0,
+    "offset_mm": [
+      -10.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltDrive_M3x10_0",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltDrive_M3x10_0",
+    "solid_index": 1,
+    "offset_mm": [
+      31.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltDrive_M3x10_1",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltDrive_M3x10_1",
+    "solid_index": 1,
+    "offset_mm": [
+      31.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltDrive_M3x10_2",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltDrive_M3x10_2",
+    "solid_index": 1,
+    "offset_mm": [
+      31.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltDrive_M3x10_3",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltDrive_M3x10_3",
+    "solid_index": 1,
+    "offset_mm": [
+      31.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Tilt_Journal_FlangedSleeve",
+    "solid_index": 0,
+    "offset_mm": [
+      55.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltIdler_M3x12",
+    "solid_index": 0,
+    "offset_mm": [
+      80.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltIdler_M3x12",
+    "solid_index": 1,
+    "offset_mm": [
+      84.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltIdler_M3_Washer",
+    "solid_index": 0,
+    "offset_mm": [
+      80.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanEar_M1p6x8_0",
+    "solid_index": 0,
+    "offset_mm": [
+      -65.0,
+      0.0,
+      10.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanEar_M1p6x8_0",
+    "solid_index": 1,
+    "offset_mm": [
+      -65.0,
+      0.0,
+      6.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanEar_M1p6x8_0",
+    "solid_index": 2,
+    "offset_mm": [
+      -65.0,
+      0.0,
+      2.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanEar_M1p6x8_1",
+    "solid_index": 0,
+    "offset_mm": [
+      -65.0,
+      0.0,
+      10.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanEar_M1p6x8_1",
+    "solid_index": 1,
+    "offset_mm": [
+      -65.0,
+      0.0,
+      6.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PanEar_M1p6x8_1",
+    "solid_index": 2,
+    "offset_mm": [
+      -65.0,
+      0.0,
+      2.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltEar_M1p6x8_0",
+    "solid_index": 0,
+    "offset_mm": [
+      -30.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltEar_M1p6x8_0",
+    "solid_index": 1,
+    "offset_mm": [
+      -34.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltEar_M1p6x8_0",
+    "solid_index": 2,
+    "offset_mm": [
+      -38.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltEar_M1p6x8_1",
+    "solid_index": 0,
+    "offset_mm": [
+      -30.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltEar_M1p6x8_1",
+    "solid_index": 1,
+    "offset_mm": [
+      -34.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "TiltEar_M1p6x8_1",
+    "solid_index": 2,
+    "offset_mm": [
+      -38.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "RailMount_Lower_M3x10_0",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -15.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "RailMount_Lower_M3x10_0",
+    "solid_index": 1,
+    "offset_mm": [
+      35.0,
+      -11.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "RailMount_Lower_M3x10_1",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -15.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "RailMount_Lower_M3x10_1",
+    "solid_index": 1,
+    "offset_mm": [
+      35.0,
+      -11.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PCB_Spacer_Lower_Left",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_M2x12_Lower_Left",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_M2x12_Lower_Left",
+    "solid_index": 1,
+    "offset_mm": [
+      35.0,
+      -46.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PCB_Spacer_Lower_Right",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_M2x12_Lower_Right",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_M2x12_Lower_Right",
+    "solid_index": 1,
+    "offset_mm": [
+      35.0,
+      -46.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "RailMount_Upper_M3x10_0",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -15.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "RailMount_Upper_M3x10_0",
+    "solid_index": 1,
+    "offset_mm": [
+      35.0,
+      -11.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "RailMount_Upper_M3x10_1",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -15.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "RailMount_Upper_M3x10_1",
+    "solid_index": 1,
+    "offset_mm": [
+      35.0,
+      -11.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PCB_Spacer_Upper_Left",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_M2x12_Upper_Left",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_M2x12_Upper_Left",
+    "solid_index": 1,
+    "offset_mm": [
+      35.0,
+      -46.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PCB_Spacer_Upper_Right",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_M2x12_Upper_Right",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_M2x12_Upper_Right",
+    "solid_index": 1,
+    "offset_mm": [
+      35.0,
+      -46.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "PCB_Cut003",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_RearComponents_KEEP_OUT",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": true
+  },
+  {
+    "source": "PanServo_WireExit_KEEP_OUT",
+    "solid_index": 0,
+    "offset_mm": [
+      -65.0,
+      0.0,
+      10.0
+    ],
+    "reference_reservation_hidden": true
+  },
+  {
+    "source": "TiltServo_WireExit_KEEP_OUT",
+    "solid_index": 0,
+    "offset_mm": [
+      -30.0,
+      0.0,
+      35.0
+    ],
+    "reference_reservation_hidden": true
+  },
+  {
+    "source": "CameraPlate_Cut007",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -25.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_Lens_PROVISIONAL",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": false
+  },
+  {
+    "source": "Camera_WireExit_KEEP_OUT",
+    "solid_index": 0,
+    "offset_mm": [
+      35.0,
+      -50.0,
+      35.0
+    ],
+    "reference_reservation_hidden": true
+  }
+]

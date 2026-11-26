@@ -1,0 +1,29 @@
+﻿import FreeCAD as A, Part, Mesh, json, os, traceback
+root=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15'
+report={}
+def path(*parts): return os.path.join(root,*parts)
+try:
+ d=A.openDocument(path('CAD','EyeTrace_Final_Assembly_R15.FCStd'))
+ printable=[o for o in d.Objects if bool(getattr(o,'Printable',False)) and hasattr(o,'Shape') and not o.Shape.isNull()]
+ report['fcstd_assembly']={'opens':True,'printable_count':len(printable),'invalid_printables':[o.Name for o in printable if not o.Shape.isValid() or len(o.Shape.Solids)!=1], 'camera_pattern_mm':[21,14], 'pan_recess_valid':d.getObject('PanYoke_EarBracket_KeyedDrive').Shape.isValid(),'tilt_recess_valid':d.getObject('TiltCradle_KeyedHorn_CameraFrame').Shape.isValid()}
+ A.closeDocument(d.Name)
+ l=A.openDocument(path('CAD','EyeTrace_K2_All_In_One_R15.FCStd'))
+ parts=[o for o in l.Objects if hasattr(o,'Shape') and not o.Shape.isNull() and len(o.Shape.Solids)>0]
+ report['fcstd_bed_layout']={'opens':True,'printable_shape_count':len(parts),'invalid':[o.Name for o in parts if not o.Shape.isValid() or len(o.Shape.Solids)!=1], 'camera_plate_label':next((o.Label for o in l.Objects if o.Label=='CameraPlate_21x14'),None)}
+ A.closeDocument(l.Name)
+ for name,rel,expected in [('assembly_step',('CAD','EyeTrace_Final_Assembly_R15.step'),None),('layout_step',('CAD','EyeTrace_K2_All_In_One_R15.step'),13)]:
+  sh=Part.read(path(*rel)); report[name]={'valid':sh.isValid(),'solids':len(sh.Solids),'volume_mm3':sh.Volume,'bbox_mm':[sh.BoundBox.XLength,sh.BoundBox.YLength,sh.BoundBox.ZLength]}
+  if expected and len(sh.Solids)!=expected: raise RuntimeError(name+' has wrong solid count')
+ stls=[]
+ for fn in sorted(os.listdir(path('STL','individual'))):
+  if fn.lower().endswith('.stl'):
+   mm=Mesh.Mesh(path('STL','individual',fn)); stls.append({'name':fn,'facets':mm.CountFacets,'components':mm.countComponents(),'watertight':mm.isSolid()})
+ report['individual_stls']={'count':len(stls),'checks':stls}
+ merged=Mesh.Mesh(path('STL','EyeTrace_K2_ABS_All_In_One_R15.stl'))
+ report['combined_stl']={'facets':merged.CountFacets,'components':merged.countComponents(),'watertight_components':merged.isSolid()}
+ if len(stls)!=13 or any(not q['watertight'] or q['components']!=1 for q in stls): raise RuntimeError('Individual STL mesh QA failed')
+ if report['fcstd_assembly']['printable_count']!=13 or report['fcstd_assembly']['invalid_printables'] or report['fcstd_bed_layout']['printable_shape_count']!=13 or report['fcstd_bed_layout']['invalid']: raise RuntimeError('FCStd QA failed')
+except Exception as e:
+ report['error']=repr(e); report['traceback']=traceback.format_exc()
+open(path('CHECKS','readback_validation.json'),'w').write(json.dumps(report,indent=2))
+print(json.dumps(report,indent=2))

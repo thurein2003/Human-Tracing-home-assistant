@@ -1,0 +1,35 @@
+{
+  "step": {
+    "EyeTrace_Final_Assembly_21x14.step": {
+      "valid": true,
+      "solids": 76
+    },
+    "K2_PrintLayout_21x14.step": {
+      "valid": true,
+      "solids": 13
+    }
+  },
+  "slicer": {
+    "EyeTrace_K2_ABS_Full_21x14.3mf": {
+      "build_items": 13,
+      "layer_mm": "0.2",
+      "walls": "4",
+      "infill": "35%",
+      "support": "1"
+    },
+    "Camera_21x14_ABS_FitTest.3mf": {
+      "build_items": 1,
+      "layer_mm": "0.2",
+      "walls": "3",
+      "infill": "100%",
+      "support": "0"
+    },
+    "EyeTrace_ABS_Circular_Clearance_Calibration.3mf": {
+      "build_items": 1,
+      "layer_mm": "0.2",
+      "walls": "4",
+      "infill": "100%",
+      "support": "0"
+    }
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "source": {
+    "assembly": "EyeTrace_R25_PanYoke_BottomMount.FCStd",
+    "assembly_sha256": "bdf1be576a46742fa4ef6971ffb967ab874bd68432db132ecd66d7747d311963",
+    "R26_STL_sha256": "a7e67de16b524d32ad4e0e08efe20e4d8242dc9818972cd3f6abaf4b0dcdf5c4"
+  },
+  "component": "TiltCradle_KeyedHorn_CameraFrame",
+  "valid_BREP": true,
+  "solid_count": 1,
+  "shell_count": 1,
+  "mass_properties": {
+    "baseline_volume_mm3": 24742.034516702675,
+    "revised_volume_mm3": 19686.934515555495,
+    "removed_mm3": 5055.100001060568
+  },
+  "geometry": {
+    "original_flange_diameter_mm": 42,
+    "remaining_original_flange_faces": 0,
+    "near_bed_section_area_mm2": {
+      "before": 1096.73,
+      "after": 395.61
+    },
+    "nominal_main_web_yz_dimensions_mm": [
+      33,
+      38.5
+    ],
+    "ordinary_axial_thickness_mm": 2.5,
+    "ordinary_axial_probes": {
+      "(12, 87)": {
+        "before_mm": 8.0,
+        "after_mm": 2.5
+      },
+      "(-12, 87)": {
+        "before_mm": 8.0,
+        "after_mm": 2.5
+      },
+      "(12, 68)": {
+        "before_mm": 8.0,
+        "after_mm": 2.5
+      },
+      "(-12, 68)": {
+        "before_mm": 8.0,
+        "after_mm": 2.5
+      },
+      "(8, 93)": {
+        "before_mm": 8.0,
+        "after_mm": 2.5
+      },
+      "(12, 66)": {
+        "before_mm": 8.0,
+        "after_mm": 2.5
+      }
+    },
+    "mount_body_axial_envelope_mm_excluding_frame_root_transition": {
+      "before": 8,
+      "after": 7
+    },
+    "full_end_region_axis_envelope_mm_including_sidewall_root": {
+      "before": 8,
+      "after": 8
+    },
+    "configuration": "One continuous web and localized original horn-pocket ribs and fastener seats."
+  },
+  "interface": {
+    "axis_assembly_direction": [
+      1,
+      0,
+      0
+    ],
+    "shaft_center_yz_mm": [
+      0,
+      78
+    ],
+    "unchanged_cover_mating_datum_x_mm": -41,
+    "retained_horn_pocket_depth_mm": 1.7,
+    "central_screw_service_bore_diameter_mm": 8,
+    "original_fastener_seats": [
+      {
+        "YZ_mm": [
+          15,
+          78
+        ],
+        "through_bore_diameter_mm": 3.3,
+        "clear_head_diameter_mm": 5.6,
+        "clear_head_depth_mm": 3,
+        "bearing_and_bore_region_delta_mm3": 0
+      },
+      {
+        "YZ_mm": [
+          -15,
+          78
+        ],
+        "through_bore_diameter_mm": 3.3,
+        "clear_head_diameter_mm": 5.6,
+        "clear_head_depth_mm": 3,
+        "bearing_and_bore_region_delta_mm3": 0
+      },
+      {
+        "YZ_mm": [
+          0,
+          93
+        ],
+        "through_bore_diameter_mm": 3.3,
+        "clear_head_diameter_mm": 5.6,
+        "clear_head_depth_mm": 3,
+        "bearing_and_bore_region_delta_mm3": 0
+      },
+      {
+        "YZ_mm": [
+          0,
+          63
+        ],
+        "through_bore_diameter_mm": 3.3,
+        "clear_head_diameter_mm": 5.6,
+        "clear_head_depth_mm": 3,
+        "bearing_and_bore_region_delta_mm3": 0
+      }
+    ],
+    "clearances": {
+      "TiltServo_SG90_Reference": {
+        "baseline_gap_mm": 1.5,
+        "revised_gap_mm": 1.5,
+        "revised_intersection_mm3": 0.0
+      },
+      "Tilt_KeyedHorn_CaptiveCover": {
+        "baseline_gap_mm": 0.0,
+        "revised_gap_mm": 0.0,
+        "revised_intersection_mm3": 0.0
+      },
+      "Tilt_Journal_FlangedSleeve": {
+        "baseline_gap_mm": 0.0,
+        "revised_gap_mm": 0.0,
+        "revised_intersection_mm3": 0.0
+      },
+      "Tilt_OriginalStar_PROVISIONAL": {
+        "baseline_gap_mm": 0.099749,
+        "revised_gap_mm": 0.099749,
+        "revised_intersection_mm3": 0.0
+      },
+      "TiltOriginalScrew_PROVISIONAL": {
+        "baseline_gap_mm": 2.25,
+        "revised_gap_mm": 2.25,
+        "revised_intersection_mm3": 0.0
+      },
+      "Tilt_R15_FitEnvelope": {
+        "baseline_gap_mm": 0.099749,
+        "revised_gap_mm": 0.099749,
+        "revised_intersection_mm3": 0.0
+      },
+      "TiltDrive_M3x10_0": {
+        "baseline_gap_mm": 0.0,
+        "revised_gap_mm": 0.0,
+        "revised_intersection_mm3": 0.0
+      },
+      "TiltDrive_M3x10_1": {
+        "baseline_gap_mm": 0.0,
+        "revised_gap_mm": 0.0,
+        "revised_intersection_mm3": 0.0
+      },
+      "TiltDrive_M3x10_2": {
+        "baseline_gap_mm": 0.0,
+        "revised_gap_mm": 0.0,
+        "revised_intersection_mm3": 0.0
+      },
+      "TiltDrive_M3x10_3": {
+        "baseline_gap_mm": 0.0,
+        "revised_gap_mm": 0.0,
+        "revised_intersection_mm3": 0.0
+      }
+    },
+    "positive_drive_probe_overlap_mm3_by_angle": {
+      "-5": 50.858373,
+      "-3": 27.551042,
+      "-2": 15.898001,
+      "-1": 4.738761,
+      "0": 0.0,
+      "1": 4.738761,
+      "2": 15.898001,
+      "3": 27.551042,
+      "5": 50.858373
+    },
+    "physical_fit": "SG90 horn and screw references are provisional. Real-horn fit, rotation limits, and strength have not been tested."
+  },
+  "scope": {
+    "components_unchanged": [
+      "Base_EarMount_ThrustSupport",
+      "PanServo_SG90_Reference",
+      "TiltServo_SG90_Reference",
+      "Pan_OriginalStar_PROVISIONAL",
+      "Tilt_OriginalStar_PROVISIONAL",
+      "PanOriginalScrew_PROVISIONAL",
+      "TiltOriginalScrew_PROVISIONAL",
+      "PanYoke_EarBracket_KeyedDrive",
+      "Tilt_Removable_IdlerPillar",
+      "IdlerPillar_M3x10_0",
+      "IdlerPillar_M3x10_1",
+      "Pan_KeyedHorn_Cover",
+      "PanDrive_M3x10_0",
+      "PanDrive_M3x10_1",
+      "PanDrive_M3x10_2",
+      "PanDrive_M3x10_3",
+      "Tilt_KeyedHorn_CaptiveCover",
+      "TiltDrive_M3x10_0",
+      "TiltDrive_M3x10_1",
+      "TiltDrive_M3x10_2",
+      "TiltDrive_M3x10_3",
+      "Tilt_Journal_FlangedSleeve",
+      "TiltIdler_M3x12",
+      "TiltIdler_M3_Washer",
+      "PanEar_M1p6x8_0",
+      "PanEar_M1p6x8_1",
+      "TiltEar_M1p6x8_0",
+      "TiltEar_M1p6x8_1",
+      "RailMount_Lower_M3x10_0",
+      "RailMount_Lower_M3x10_1",
+      "PCB_Spacer_Lower_Left",
+      "Camera_M2x12_Lower_Left",
+      "PCB_Spacer_Lower_Right",
+      "Camera_M2x12_Lower_Right",
+      "RailMount_Upper_M3x10_0",
+      "RailMount_Upper_M3x10_1",
+      "PCB_Spacer_Upper_Left",
+      "Camera_M2x12_Upper_Left",
+      "PCB_Spacer_Upper_Right",
+      "Camera_M2x12_Upper_Right",
+      "PanServo_WireExit_KEEP_OUT",
+      "TiltServo_WireExit_KEEP_OUT",
+      "CameraPlate_Cut007",
+      "Camera_Lens_PROVISIONAL",
+      "Camera_WireExit_KEEP_OUT",
+      "Camera_RearComponents_KEEP_OUT",
+      "Pan_R15_FitEnvelope",
+      "Tilt_R15_FitEnvelope"
+    ],
+    "placements_unchanged": true,
+    "upper_frame_and_rail_BREP_delta_mm3": 0,
+    "camera_hole_centers_xz_mm": [
+      [
+        -10.5,
+        69.0
+      ],
+      [
+        -10.5,
+        83.0
+      ],
+      [
+        10.5,
+        69.0
+      ],
+      [
+        10.5,
+        83.0
+      ]
+    ]
+  },
+  "interference": {
+    "neutral_new_overlaps": 0,
+    "neutral_preexisting_overlaps": {},
+    "sampled_tilt": {
+      "angles_deg": [
+        -45,
+        -38,
+        -31,
+        -24,
+        -17,
+        -10,
+        -3,
+        0,
+        4,
+        11,
+        18,
+        25,
+        32,
+        39,
+        45
+      ],
+      "new_collision_count": 0,
+      "baseline_existing_overlaps": []
+    }
+  },
+  "export": {
+    "fcstd_sha256": "7662bd97d3526c14d71fdd0e2c1224d66dc3a3c14fa338de24a0bf559e715a6f",
+    "step_exact_solid_delta_mm3": 0.0,
+    "step_sha256": "d4aeb9d108f321b82cb2912ce6141d527fa99eb381f0c3aed27c9f199e0d9824",
+    "stl_sha256": "b0c84edb86d67c003891790f6fb68067afa4b8a45af2da8c525cf16e0873ba55",
+    "stl_components": 1,
+    "stl_watertight": true,
+    "stl_facets": 14156,
+    "stl_bbox_mm": [
+      -22.275,
+      22.275,
+      -22.200001,
+      22.200001,
+      0.0,
+      77.0
+    ],
+    "stl_volume_mm3": 19687.146484375
+  },
+  "3mf": {
+    "crc_verified": true,
+    "build_items": 1,
+    "stl_facets": 14156,
+    "mesh_edges_not_manifold": 0,
+    "3mf_exact_stl_triangle_match": true,
+    "upright_height_mm": 77.0,
+    "plate_mm": [
+      260,
+      260
+    ],
+    "print_xy_bbox_mm": [
+      107.72500038146973,
+      107.79999923706055,
+      152.27499961853027,
+      152.20000076293945
+    ],
+    "project_sha256": "98bc66d2942939ad4b3becffc529bbc78d8baa010911abdc076df81fdbe2b185"
+  },
+  "creality_print": {
+    "version": "7.3.2.6412",
+    "slice_succeeded": true,
+    "printer": "Creality K2",
+    "material": "ABS",
+    "nozzle_mm": 0.4,
+    "printed_objects": 1,
+    "outside_bed": false,
+    "supports_used": true,
+    "layers": 616,
+    "estimate_seconds": 13409,
+    "estimate_filament_g": 31.39,
+    "slice_extent_xy_mm": [
+      93.86259000000001,
+      97.49317,
+      169.25727,
+      166.79804000000001
+    ],
+    "sliced_3mf_crc_and_gcode_checksum_verified": true,
+    "sliced_3mf_sha256": "0a4f3435b1dbf5c1145c66d4d52231028b8684dda8c14af4a62e57ce155858dd"
+  },
+  "visual_check": {
+    "reference": "R26 Creality Print window, rear close-up",
+    "CAD_pair": "The same rear projection and part coordinates were used for R26 and R27. The angle and crop were reconstructed from the reference screenshot."
+  }
+}

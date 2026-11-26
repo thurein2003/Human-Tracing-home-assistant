@@ -1,0 +1,103 @@
+{
+  "Base": {
+    "native_valid": true,
+    "native_solids": 1,
+    "step_symmetric_difference_mm3": 0.0,
+    "stl_closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false,
+    "all_stl_vertices_surface_error_mm": 3.3625927917296117e-06,
+    "volume_relative_error": 5.252522044344969e-06,
+    "bounds_error_mm": 0.0
+  },
+  "PanServoRetainer": {
+    "native_valid": true,
+    "native_solids": 1,
+    "step_symmetric_difference_mm3": 0.0,
+    "stl_closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false,
+    "all_stl_vertices_surface_error_mm": 1.8532827855240026e-06,
+    "volume_relative_error": 0.00012359120601078017,
+    "bounds_error_mm": 1.0658141036401503e-14
+  },
+  "TiltServoRetainer": {
+    "native_valid": true,
+    "native_solids": 1,
+    "step_symmetric_difference_mm3": 0.0,
+    "stl_closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false,
+    "all_stl_vertices_surface_error_mm": 5.515185511895809e-07,
+    "volume_relative_error": 2.1460896036086933e-05,
+    "bounds_error_mm": 0.0
+  },
+  "PanYoke": {
+    "native_valid": true,
+    "native_solids": 1,
+    "step_symmetric_difference_mm3": 0.0,
+    "stl_closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false,
+    "all_stl_vertices_surface_error_mm": 3.7870190679150367e-06,
+    "volume_relative_error": 1.6898072032929538e-05,
+    "bounds_error_mm": 0.0
+  },
+  "TiltCameraCradle": {
+    "native_valid": true,
+    "native_solids": 1,
+    "step_symmetric_difference_mm3": 0.0,
+    "stl_closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false,
+    "all_stl_vertices_surface_error_mm": 2.0617685515637884e-06,
+    "volume_relative_error": 2.7938707971082572e-05,
+    "bounds_error_mm": 7.105427357601002e-15
+  },
+  "PanHornClamp": {
+    "native_valid": true,
+    "native_solids": 1,
+    "step_symmetric_difference_mm3": 0.0,
+    "stl_closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false,
+    "all_stl_vertices_surface_error_mm": 1.6280160444005548e-06,
+    "volume_relative_error": 0.000931213304773526,
+    "bounds_error_mm": 0.0
+  },
+  "TiltHornClamp": {
+    "native_valid": true,
+    "native_solids": 1,
+    "step_symmetric_difference_mm3": 0.0,
+    "stl_closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false,
+    "all_stl_vertices_surface_error_mm": 1.718992408966092e-06,
+    "volume_relative_error": 0.0009310449182677458,
+    "bounds_error_mm": 7.105427357601002e-15
+  },
+  "bed": {
+    "closed": true,
+    "components": 7,
+    "self_intersections": false
+  },
+  "assembly_STEP": {
+    "valid": true,
+    "solids": 38
+  },
+  "scope": "All STL vertices checked against bed-oriented native BRep surface; volume and bounds also checked. Not a full Hausdorff proof."
+}

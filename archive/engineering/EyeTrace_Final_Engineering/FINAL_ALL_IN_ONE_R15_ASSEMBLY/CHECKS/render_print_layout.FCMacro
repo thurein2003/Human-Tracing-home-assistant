@@ -1,0 +1,2 @@
+import FreeCAD as A,os
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY';d=A.openDocument(out+r'\CAD\EyeTrace_R15_Print_Layout.FCStd');v=Gui.activeDocument().activeView();v.viewTop();v.fitAll();Gui.updateGui();v.saveImage(os.path.join(out,'RENDERS','EyeTrace_R15_Print_Layout.png'),1800,1300,'Current')

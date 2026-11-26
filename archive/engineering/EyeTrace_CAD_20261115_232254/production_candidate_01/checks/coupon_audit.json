@@ -1,0 +1,74 @@
+{
+  "ServoBodyGauge_24p2x13p2": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "normals_inconsistent": false
+  },
+  "PanHornClamp_Exact": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "normals_inconsistent": false
+  },
+  "TiltHornClamp_Exact": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "normals_inconsistent": false
+  },
+  "PanHornMatingFace_Diagnostic": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "normals_inconsistent": false
+  },
+  "TiltHornMatingFace_Diagnostic": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "normals_inconsistent": false
+  },
+  "CameraSlotRail_A": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "normals_inconsistent": false
+  },
+  "CameraSlotRail_B": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "normals_inconsistent": false
+  },
+  "CameraWidthGauge_38p4": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "normals_inconsistent": false
+  }
+}

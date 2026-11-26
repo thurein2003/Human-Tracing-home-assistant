@@ -1,0 +1,18 @@
+﻿import FreeCAD as A,Part,os,json
+from FreeCAD import Vector as V
+eng=r'EyeTrace_Final_Engineering'; out=os.path.join(eng,'EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR')
+d=A.openDocument(os.path.join(eng,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'));m=A.openDocument(os.path.join(eng,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'))
+base=m.getObject('BaseCoupon').Shape;final=m.getObject('FinalCoupon').Shape;exp=base.cut(final);disk=Part.makeCylinder(20.5,3.8,V(0,0,0),V(0,0,1));rot=A.Rotation(V(1,0,0),180);top=V(0,0,33)
+def tr(sh):
+ q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+env=tr(disk);expG=tr(exp);patch=tr(disk.cut(exp));old=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+cover=d.getObject('Pan_KeyedHorn_Cover').Shape;screws=[d.getObject('PanDrive_M3x10_'+str(i)).Shape for i in range(4)]
+cutters=[cover]+screws;safe=patch
+for q in cutters:safe=safe.cut(q)
+cand=old.cut(env).fuse(safe)
+refs=['Pan_KeyedHorn_Cover']+['PanDrive_M3x10_'+str(i) for i in range(4)]+['PanServo_SG90_Reference']
+res={'valid':bool(cand.isValid()),'solids':len(cand.Solids),'volume':float(cand.Volume),'source_vol':float(old.Volume),'added_vol':float(cand.Volume-old.Volume),'bbox':[cand.BoundBox.XMin,cand.BoundBox.YMin,cand.BoundBox.ZMin,cand.BoundBox.XMax,cand.BoundBox.YMax,cand.BoundBox.ZMax],'patch_material_added':float(safe.Volume),'clearances':{},'pocket_occupancy_overlap':float(cand.common(expG).Volume)}
+for n in refs:res['clearances'][n]=float(cand.common(d.getObject(n).Shape).Volume)
+res['cover_vs_r15_occupancy']=float(cover.common(expG).Volume);res['screws_vs_r15_occupancy']=[float(s.common(expG).Volume) for s in screws]
+h=d.getObject('Pan_OriginalStar_PROVISIONAL').Shape;res['old_horn_bbox']=[h.BoundBox.XMin,h.BoundBox.YMin,h.BoundBox.ZMin,h.BoundBox.XMax,h.BoundBox.YMax,h.BoundBox.ZMax];res['old_horn_vs_cand']=float(cand.common(h).Volume)
+with open(os.path.join(out,'REPORTS','PAN_SAFE_PATCH_CANDIDATE.json'),'w') as f:json.dump(res,f,indent=2)

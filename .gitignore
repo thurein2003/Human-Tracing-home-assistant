@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.ppk
+config/*.local.*
+software/raspberry-pi/captures/
+media/demonstration/EyeTrace-Live-Demo.mp4
+archive/delivery/EyeTrace_Final_Engineering.zip*

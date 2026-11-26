@@ -1,0 +1,501 @@
+{
+  "states": [
+    {
+      "mode": "pan_only",
+      "pan_joint_deg": -90,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "pan_m090_deg.png"
+    },
+    {
+      "mode": "pan_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "pan_p000_deg.png"
+    },
+    {
+      "mode": "pan_only",
+      "pan_joint_deg": 90,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "pan_p090_deg.png"
+    },
+    {
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": -30,
+      "connector_center_error_mm": 9.353671349608547e-47,
+      "image": "tilt_m030_deg.png"
+    },
+    {
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "tilt_p000_deg.png"
+    },
+    {
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 30,
+      "connector_center_error_mm": 2.986308668472507e-31,
+      "image": "tilt_p030_deg.png"
+    },
+    {
+      "mode": "simultaneous",
+      "pan_joint_deg": -90,
+      "tilt_joint_deg": -30,
+      "connector_center_error_mm": 8.750360656168091e-15,
+      "image": "simultaneous_pan_m90_tilt_m30.png"
+    },
+    {
+      "mode": "simultaneous",
+      "pan_joint_deg": 90,
+      "tilt_joint_deg": 30,
+      "connector_center_error_mm": 1.6876850730849092e-14,
+      "image": "simultaneous_pan_p90_tilt_p30.png"
+    }
+  ],
+  "animation_frames": [
+    {
+      "frame": 0,
+      "mode": "pan_only",
+      "pan_joint_deg": -90,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "animation_frames/frame_000.png"
+    },
+    {
+      "frame": 1,
+      "mode": "pan_only",
+      "pan_joint_deg": -80,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 4.944938806758029e-32,
+      "image": "animation_frames/frame_001.png"
+    },
+    {
+      "frame": 2,
+      "mode": "pan_only",
+      "pan_joint_deg": -70,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "animation_frames/frame_002.png"
+    },
+    {
+      "frame": 3,
+      "mode": "pan_only",
+      "pan_joint_deg": -60,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 1.5623172083439606e-35,
+      "image": "animation_frames/frame_003.png"
+    },
+    {
+      "frame": 4,
+      "mode": "pan_only",
+      "pan_joint_deg": -50,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 4.931885327123368e-32,
+      "image": "animation_frames/frame_004.png"
+    },
+    {
+      "frame": 5,
+      "mode": "pan_only",
+      "pan_joint_deg": -40,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 6.810227408270992e-32,
+      "image": "animation_frames/frame_005.png"
+    },
+    {
+      "frame": 6,
+      "mode": "pan_only",
+      "pan_joint_deg": -30,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "animation_frames/frame_006.png"
+    },
+    {
+      "frame": 7,
+      "mode": "pan_only",
+      "pan_joint_deg": -20,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 7.105427357601002e-15,
+      "image": "animation_frames/frame_007.png"
+    },
+    {
+      "frame": 8,
+      "mode": "pan_only",
+      "pan_joint_deg": -10,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 2.492200691701318e-32,
+      "image": "animation_frames/frame_008.png"
+    },
+    {
+      "frame": 9,
+      "mode": "pan_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "animation_frames/frame_009.png"
+    },
+    {
+      "frame": 10,
+      "mode": "pan_only",
+      "pan_joint_deg": 10,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 4.940076006853803e-32,
+      "image": "animation_frames/frame_010.png"
+    },
+    {
+      "frame": 11,
+      "mode": "pan_only",
+      "pan_joint_deg": 20,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 7.105427357601002e-15,
+      "image": "animation_frames/frame_011.png"
+    },
+    {
+      "frame": 12,
+      "mode": "pan_only",
+      "pan_joint_deg": 30,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 7.944109290391274e-15,
+      "image": "animation_frames/frame_012.png"
+    },
+    {
+      "frame": 13,
+      "mode": "pan_only",
+      "pan_joint_deg": 40,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 1.1133759872387897e-31,
+      "image": "animation_frames/frame_013.png"
+    },
+    {
+      "frame": 14,
+      "mode": "pan_only",
+      "pan_joint_deg": 50,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 2.465169132793327e-31,
+      "image": "animation_frames/frame_014.png"
+    },
+    {
+      "frame": 15,
+      "mode": "pan_only",
+      "pan_joint_deg": 60,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 1.5623172083439606e-35,
+      "image": "animation_frames/frame_015.png"
+    },
+    {
+      "frame": 16,
+      "mode": "pan_only",
+      "pan_joint_deg": 70,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 7.663350976776343e-47,
+      "image": "animation_frames/frame_016.png"
+    },
+    {
+      "frame": 17,
+      "mode": "pan_only",
+      "pan_joint_deg": 80,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 5.310316081487069e-32,
+      "image": "animation_frames/frame_017.png"
+    },
+    {
+      "frame": 18,
+      "mode": "pan_only",
+      "pan_joint_deg": 90,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "animation_frames/frame_018.png"
+    },
+    {
+      "frame": 19,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": -30,
+      "connector_center_error_mm": 9.353671349608547e-47,
+      "image": "animation_frames/frame_019.png"
+    },
+    {
+      "frame": 20,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": -25,
+      "connector_center_error_mm": 1.318096368005531e-43,
+      "image": "animation_frames/frame_020.png"
+    },
+    {
+      "frame": 21,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": -20,
+      "connector_center_error_mm": 3.351623381340333e-14,
+      "image": "animation_frames/frame_021.png"
+    },
+    {
+      "frame": 22,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": -15,
+      "connector_center_error_mm": 5.887178784854121e-32,
+      "image": "animation_frames/frame_022.png"
+    },
+    {
+      "frame": 23,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": -10,
+      "connector_center_error_mm": 2.6028717328731113e-32,
+      "image": "animation_frames/frame_023.png"
+    },
+    {
+      "frame": 24,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": -5,
+      "connector_center_error_mm": 1.5922800163970508e-14,
+      "image": "animation_frames/frame_024.png"
+    },
+    {
+      "frame": 25,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "animation_frames/frame_025.png"
+    },
+    {
+      "frame": 26,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 5,
+      "connector_center_error_mm": 1.59385538513538e-14,
+      "image": "animation_frames/frame_026.png"
+    },
+    {
+      "frame": 27,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 10,
+      "connector_center_error_mm": 1.7763568394002505e-15,
+      "image": "animation_frames/frame_027.png"
+    },
+    {
+      "frame": 28,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 15,
+      "connector_center_error_mm": 5.887178784854121e-32,
+      "image": "animation_frames/frame_028.png"
+    },
+    {
+      "frame": 29,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 20,
+      "connector_center_error_mm": 1.464821375527116e-14,
+      "image": "animation_frames/frame_029.png"
+    },
+    {
+      "frame": 30,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 25,
+      "connector_center_error_mm": 2.0068531560705358e-43,
+      "image": "animation_frames/frame_030.png"
+    },
+    {
+      "frame": 31,
+      "mode": "tilt_only",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 30,
+      "connector_center_error_mm": 2.986308668472507e-31,
+      "image": "animation_frames/frame_031.png"
+    },
+    {
+      "frame": 32,
+      "mode": "simultaneous",
+      "pan_joint_deg": -90,
+      "tilt_joint_deg": -30,
+      "connector_center_error_mm": 8.750360656168091e-15,
+      "image": "animation_frames/frame_032.png"
+    },
+    {
+      "frame": 33,
+      "mode": "simultaneous",
+      "pan_joint_deg": -80,
+      "tilt_joint_deg": -27,
+      "connector_center_error_mm": 1.6280579355608324e-14,
+      "image": "animation_frames/frame_033.png"
+    },
+    {
+      "frame": 34,
+      "mode": "simultaneous",
+      "pan_joint_deg": -70,
+      "tilt_joint_deg": -23,
+      "connector_center_error_mm": 7.944109290391274e-15,
+      "image": "animation_frames/frame_034.png"
+    },
+    {
+      "frame": 35,
+      "mode": "simultaneous",
+      "pan_joint_deg": -60,
+      "tilt_joint_deg": -20,
+      "connector_center_error_mm": 1.6280579355608324e-14,
+      "image": "animation_frames/frame_035.png"
+    },
+    {
+      "frame": 36,
+      "mode": "simultaneous",
+      "pan_joint_deg": -50,
+      "tilt_joint_deg": -17,
+      "connector_center_error_mm": 2.95110562224397e-14,
+      "image": "animation_frames/frame_036.png"
+    },
+    {
+      "frame": 37,
+      "mode": "simultaneous",
+      "pan_joint_deg": -40,
+      "tilt_joint_deg": -13,
+      "connector_center_error_mm": 1.6280579355608324e-14,
+      "image": "animation_frames/frame_037.png"
+    },
+    {
+      "frame": 38,
+      "mode": "simultaneous",
+      "pan_joint_deg": -30,
+      "tilt_joint_deg": -10,
+      "connector_center_error_mm": 1.0658141036401503e-14,
+      "image": "animation_frames/frame_038.png"
+    },
+    {
+      "frame": 39,
+      "mode": "simultaneous",
+      "pan_joint_deg": -20,
+      "tilt_joint_deg": -7,
+      "connector_center_error_mm": 2.0097183471152322e-14,
+      "image": "animation_frames/frame_039.png"
+    },
+    {
+      "frame": 40,
+      "mode": "simultaneous",
+      "pan_joint_deg": -10,
+      "tilt_joint_deg": -3,
+      "connector_center_error_mm": 1.7763568394002505e-15,
+      "image": "animation_frames/frame_040.png"
+    },
+    {
+      "frame": 41,
+      "mode": "simultaneous",
+      "pan_joint_deg": 0,
+      "tilt_joint_deg": 0,
+      "connector_center_error_mm": 0.0,
+      "image": "animation_frames/frame_041.png"
+    },
+    {
+      "frame": 42,
+      "mode": "simultaneous",
+      "pan_joint_deg": 10,
+      "tilt_joint_deg": 3,
+      "connector_center_error_mm": 1.7763568394002505e-15,
+      "image": "animation_frames/frame_042.png"
+    },
+    {
+      "frame": 43,
+      "mode": "simultaneous",
+      "pan_joint_deg": 20,
+      "tilt_joint_deg": 7,
+      "connector_center_error_mm": 4.2780337774645346e-14,
+      "image": "animation_frames/frame_043.png"
+    },
+    {
+      "frame": 44,
+      "mode": "simultaneous",
+      "pan_joint_deg": 30,
+      "tilt_joint_deg": 10,
+      "connector_center_error_mm": 7.105427357601002e-15,
+      "image": "animation_frames/frame_044.png"
+    },
+    {
+      "frame": 45,
+      "mode": "simultaneous",
+      "pan_joint_deg": 40,
+      "tilt_joint_deg": 13,
+      "connector_center_error_mm": 1.5888218580782548e-14,
+      "image": "animation_frames/frame_045.png"
+    },
+    {
+      "frame": 46,
+      "mode": "simultaneous",
+      "pan_joint_deg": 50,
+      "tilt_joint_deg": 17,
+      "connector_center_error_mm": 7.944109290391274e-15,
+      "image": "animation_frames/frame_046.png"
+    },
+    {
+      "frame": 47,
+      "mode": "simultaneous",
+      "pan_joint_deg": 60,
+      "tilt_joint_deg": 20,
+      "connector_center_error_mm": 1.4210854715202004e-14,
+      "image": "animation_frames/frame_047.png"
+    },
+    {
+      "frame": 48,
+      "mode": "simultaneous",
+      "pan_joint_deg": 70,
+      "tilt_joint_deg": 23,
+      "connector_center_error_mm": 7.105427357601002e-15,
+      "image": "animation_frames/frame_048.png"
+    },
+    {
+      "frame": 49,
+      "mode": "simultaneous",
+      "pan_joint_deg": 80,
+      "tilt_joint_deg": 27,
+      "connector_center_error_mm": 7.32410687763558e-15,
+      "image": "animation_frames/frame_049.png"
+    },
+    {
+      "frame": 50,
+      "mode": "simultaneous",
+      "pan_joint_deg": 90,
+      "tilt_joint_deg": 30,
+      "connector_center_error_mm": 1.6876850730849092e-14,
+      "image": "animation_frames/frame_050.png"
+    }
+  ],
+  "pan_joint_axis": [
+    0,
+    0,
+    1
+  ],
+  "pan_axis_center_mm": [
+    0,
+    0,
+    35
+  ],
+  "tilt_joint_axis": [
+    1,
+    0,
+    0
+  ],
+  "tilt_axis_center_mm": [
+    -41,
+    0,
+    78
+  ],
+  "limits": {
+    "pan_deg": [
+      -90,
+      90
+    ],
+    "tilt_deg": [
+      -30,
+      30
+    ]
+  },
+  "limits_are": "CAD collision-screen soft limits; not physical hard stops or measured servo command endpoints"
+}

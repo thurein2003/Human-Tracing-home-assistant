@@ -1,0 +1,6 @@
+﻿import FreeCAD as App,json
+p=r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'; d=App.openDocument(p); s=d.getObject('ArmPocketTool').Shape; a=[]
+for i,f in enumerate(s.Faces):
+ b=f.BoundBox; surf=f.Surface
+ a.append({'i':i+1,'surface':type(surf).__name__,'area':f.Area,'bbox':[b.XMin,b.XMax,b.YMin,b.YMax,b.ZMin,b.ZMax],'wires':len(f.Wires)})
+print(json.dumps(a,indent=2))

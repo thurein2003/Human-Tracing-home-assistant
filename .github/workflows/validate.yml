@@ -1,0 +1,34 @@
+name: Validate Eye Trace archive
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate Python diagnostics
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate archive and documentation
+        run: python3 tests/validate-repository.py
+      - name: Parse Bash helpers
+        run: |
+          for script in software/raspberry-pi/*.sh; do bash -n "$script" || exit; done
+      - name: Parse PowerShell helper
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile(
+            (Resolve-Path 'software/windows/EyeTrace.ps1').Path,
+            [ref]$tokens, [ref]$errors
+          ) | Out-Null
+          if ($errors.Count -gt 0) { $errors | Write-Error; exit 1 }

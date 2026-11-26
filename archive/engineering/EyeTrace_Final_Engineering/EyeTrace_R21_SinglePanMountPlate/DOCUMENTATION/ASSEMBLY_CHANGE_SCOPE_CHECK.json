@@ -1,0 +1,29 @@
+{
+  "common_shape_objects_checked": 54,
+  "unexpectedly_changed_objects": [],
+  "retainer_comparison": [
+    {
+      "name": "Pan_KeyedHorn_Cover",
+      "volume_abs_delta_mm3": 1751.3677012736553,
+      "bbox_max_delta_mm": 0.1999999999999993,
+      "symmetric_difference_mm3": 1751.3677012736573,
+      "expected_modified": true
+    }
+  ],
+  "all_other_shapes_same": true,
+  "aggregate_group_differences": [
+    {
+      "name": "AssemblyRoot",
+      "volume_abs_delta_mm3": 1751.3677012736152,
+      "bbox_max_delta_mm": 0.0,
+      "symmetric_difference_mm3": 1751.3677012736573
+    },
+    {
+      "name": "PrintedParts",
+      "volume_abs_delta_mm3": 1751.367701273688,
+      "bbox_max_delta_mm": 0.0,
+      "symmetric_difference_mm3": 1751.3677012736573
+    }
+  ],
+  "all_other_component_shapes_unchanged": true
+}

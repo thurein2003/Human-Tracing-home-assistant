@@ -1,0 +1,12 @@
+{
+  "facets": 52210,
+  "points": 26065,
+  "isSolid": true,
+  "isClosed": null,
+  "volume_mm3": 28122.541015625,
+  "bbox": "BoundBox (13, 13.0046, 0, 115.2, 83.5954, 67.8)",
+  "ring_r34_sample_vertex_count": 0,
+  "ring_r34_z_min": null,
+  "ring_r34_z_max": null,
+  "ring_r34_mesh_height": null
+}

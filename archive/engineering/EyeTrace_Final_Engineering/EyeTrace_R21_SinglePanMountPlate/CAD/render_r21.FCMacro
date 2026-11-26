@@ -1,0 +1,21 @@
+﻿import FreeCAD as App, FreeCADGui as Gui
+from pathlib import Path
+p=r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\CAD\EyeTrace_R21_SinglePanMountPlate.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\SCREENSHOTS\R21_OneMountingPlate_Isometric.png'
+d=App.openDocument(p)
+for o in d.Objects:
+ if hasattr(o,'ViewObject'): o.ViewObject.Visibility=False
+names=['PanYoke_EarBracket_KeyedDrive','Pan_KeyedHorn_Cover','PanServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL','PanDrive_M3x10_0','PanDrive_M3x10_1','PanDrive_M3x10_2','PanDrive_M3x10_3']
+for n in names:
+ o=d.getObject(n)
+ if o and hasattr(o,'ViewObject'):
+  o.ViewObject.Visibility=True
+  if n=='PanYoke_EarBracket_KeyedDrive':o.ViewObject.ShapeColor=(0.72,0.79,0.86)
+  elif n=='Pan_KeyedHorn_Cover':o.ViewObject.ShapeColor=(0.93,0.48,0.16)
+  elif n=='Pan_OriginalStar_PROVISIONAL':o.ViewObject.ShapeColor=(0.92,0.92,0.95)
+  else:o.ViewObject.ShapeColor=(0.34,0.38,0.43)
+  o.ViewObject.DisplayMode='Flat Lines'
+Gui.activeDocument().activeView().viewAxonometric()
+Gui.activeDocument().activeView().fitAll()
+Gui.activeDocument().activeView().saveImage(out,1400,1000,'Current')
+

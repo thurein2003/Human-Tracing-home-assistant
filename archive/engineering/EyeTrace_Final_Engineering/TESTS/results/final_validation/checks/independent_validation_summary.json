@@ -1,0 +1,14 @@
+{
+  "critical_software_failures": [],
+  "motion_penetrations": 0,
+  "unverified_rear_clearance_conflicts": 9,
+  "release_status": "HOLD for physical-fit evidence",
+  "positive_horn_drive": [
+    true,
+    true
+  ],
+  "physical_fit": "UNVERIFIED",
+  "native_components": 49,
+  "printed_components": 13,
+  "independent_of_builder": "Validator imports no builder code; opens saved native BRep and native expressions."
+}

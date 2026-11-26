@@ -1,0 +1,121 @@
+﻿import json, math
+from pathlib import Path
+import FreeCAD as App, Part, MeshPart
+from FreeCAD import Vector as V
+OUT=Path(r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_14')
+# Horn #3 PDF dimensions are provisional reference data. Confirmed user dimensions override its total spans/hub.
+P={
+ 'units':'mm',
+ 'confirmed_user_dimensions':{'long_span':39.0,'short_span_baseline':18.0,'hub_diameter':7.0},
+ 'published_horn3_reference':{'source':'https://www.auselectronicsdirect.com.au/assets/brochures/TA0132.pdf, page 5','drawing_span':34.5,'hub_to_long_end_a':16.0,'hub_to_long_end_b':18.5,'short_span_drawing':16.3,'raised_hub_diameter_drawing':6.9,'raised_hub_height_drawing':2.5,'main_plate_thickness_drawing':1.5,'long_arm_side_angle_a_deg':6.3,'long_arm_side_angle_b_deg':8.0,'confidence':'Published dimensions/profile for a similar Horn #3; actual clone compatibility unverified'},
+ 'pocket_parameters_provisional_mm':{'total_lateral_clearance':0.20,'long_root_width_reference_estimate':7.0,'short_arm_width_reference_estimate':3.2,'short_extension_each_end_from_prototype_01':1.0,'bottom_short_width_extra_total':1.0,'through_opening_diameter':8.0,'local_center_support_depth':2.2,'local_center_pad_diameter':12.5,'arm_recess_depth':1.7,'outer_margin':1.4,'base_thickness':3.8},
+ 'design_interpretations':{'hub_offset_from_geometric_span_center_x':0.0,'long_taper_angles_treated_as_total_width_convergence_angles':True,'revision_06_x_arms_equal_user_override':True,'revision_06_taper_angle_deg':7.15,'unmeasured_arm_widths_are_raster/profile_estimates_only':True,'screw_access_not_horn_spline_geometry':True},
+ 'printing':{'material':'ABS','layer_height_mm':0.20,'walls':2,'infill_percent':0,'supports':False,'brim_mm':4,'orientation':'flat base on bed, pocket upward','nozzle_C':255,'bed_C':100}
+}
+# Preserve actual measured overall span, while using Horn #3 end-length asymmetry and taper-angle guidance.
+clear=P['pocket_parameters_provisional_mm']['total_lateral_clearance']; m=P['pocket_parameters_provisional_mm']['outer_margin']
+ref=P['published_horn3_reference']; q=P['pocket_parameters_provisional_mm']; b=q['base_thickness']
+nominal_span=P['confirmed_user_dimensions']['long_span']; huboff=P['design_interpretations']['hub_offset_from_geometric_span_center_x']
+# Revision 06 symmetric X arms retained; Revision 07 changes only local center stack depth.
+left_nom=nominal_span/2.0
+right_nom=nominal_span/2.0
+huboff=0.0
+short_tip_nom=P['confirmed_user_dimensions']['short_span_baseline']/2.0+q['short_extension_each_end_from_prototype_01']
+left_L=left_nom+clear/2.0; right_L=right_nom+clear/2.0
+root_nom=q['long_root_width_reference_estimate']
+# Mirror profile completely: same averaged provisional taper angle and widths on both arms.
+sym_taper_deg=(ref['long_arm_side_angle_a_deg']+ref['long_arm_side_angle_b_deg'])/2.0
+left_tip_nom=root_nom-left_nom*math.tan(math.radians(sym_taper_deg))
+right_tip_nom=left_tip_nom
+short_nom=2*short_tip_nom
+short_pocket_span=short_nom+clear
+short_half=short_pocket_span/2.0
+root_pocket=root_nom+clear
+left_tip=left_tip_nom+clear; right_tip=right_tip_nom+clear
+short_width_nom=q['short_arm_width_reference_estimate']; short_width=short_width_nom+clear; bottom_short_width=short_width+q['bottom_short_width_extra_total']
+if min(left_tip_nom,right_tip_nom,short_width_nom)<=0: raise ValueError('non-positive provisional profile dimension')
+
+def make_arm(length, rootw, tipw, z, height, sign=1, axis='x'):
+    rad=tipw/2.0; c=length-rad
+    poly=[V(0,-rootw/2,z),V(sign*c,-tipw/2,z),V(sign*c,tipw/2,z),V(0,rootw/2,z),V(0,-rootw/2,z)]
+    web=Part.Face(Part.Wire(Part.makePolygon(poly))).extrude(V(0,0,height))
+    cap=Part.makeCylinder(rad,height,V(sign*c,0,z))
+    s=web.fuse(cap).removeSplitter()
+    if axis=='y': s.rotate(V(0,0,z),V(0,0,1),90)
+    return s
+
+def cross_profile(xleft,xright,yhalf,rootw,lefttip,righttip,shortw_pos,z,h,shortw_neg=None):
+    if shortw_neg is None: shortw_neg=shortw_pos
+    bits=[make_arm(xleft,rootw,lefttip,z,h,-1,'x'),make_arm(xright,rootw,righttip,z,h,1,'x'),make_arm(yhalf,shortw_neg,shortw_neg,z,h,-1,'y'),make_arm(yhalf,shortw_pos,shortw_pos,z,h,1,'y')]
+    return bits[0].fuse(bits[1]).fuse(bits[2]).fuse(bits[3]).removeSplitter()
+# Build a native recompute chain. Arm envelope and arm pockets are fixed from Revision 07;
+# circular center recess cutters are native Part::Cylinder features driven by Parameters expressions.
+base_shape=cross_profile(left_L+m,right_L+m,short_half+m,root_pocket+2*m,left_tip+2*m,right_tip+2*m,short_width+2*m,0,b,bottom_short_width+2*m)
+seat_z=b-q['arm_recess_depth']; bottom_pad_depth=q['local_center_support_depth']; top_z=seat_z
+z_arm=seat_z; arm_cut_depth=q['arm_recess_depth']
+pockets=[make_arm(left_L,root_pocket,left_tip,z_arm,arm_cut_depth,-1,'x'),make_arm(right_L,root_pocket,right_tip,z_arm,arm_cut_depth,1,'x'),make_arm(short_half,bottom_short_width,bottom_short_width,z_arm,arm_cut_depth,-1,'y'),make_arm(short_half,short_width,short_width,z_arm,arm_cut_depth,1,'y')]
+arm_tool_shape=pockets[0].fuse(pockets[1]).fuse(pockets[2]).fuse(pockets[3]).removeSplitter()
+if abs(left_nom-19.5)>1e-9 or abs(right_nom-19.5)>1e-9 or abs(left_L+right_L-39.2)>1e-9: raise RuntimeError('X nominal span/reaches/clearance incorrect')
+if abs(pockets[2].BoundBox.XLength-bottom_short_width)>1e-6 or abs(pockets[3].BoundBox.XLength-short_width)>1e-6 or abs(bottom_short_width-short_width-1.0)>1e-9: raise RuntimeError('Asymmetric Y short-arm width check failed')
+if not base_shape.isValid() or not arm_tool_shape.isValid(): raise RuntimeError('Invalid base or arm-pocket tool')
+doc=App.newDocument('CrossHorn_UltraMinimal_FitTest_04R14')
+params=doc.addObject('App::DocumentObjectGroup','Parameters'); params.Label='Editable center recess parameters (F5 recompute)'
+def addlen(name,val):
+    params.addProperty('App::PropertyLength',name,'Editable dimensions'); setattr(params,name,val)
+addlen('BaseThickness',b); addlen('ArmRecessDepth',q['arm_recess_depth']); addlen('BottomPadDepth',q['local_center_support_depth']); addlen('CenterPadDiameter',q['local_center_pad_diameter'])
+addlen('ThroughDiameter',q['through_opening_diameter']); addlen('UpperShortPocketWidth',short_width); addlen('BottomShortPocketWidth',bottom_short_width); addlen('XNominalReach',nominal_span/2.0)
+base=doc.addObject('Part::Feature','BaseCoupon'); base.Label='Outer cross coupon body'; base.Shape=base_shape
+pad=doc.addObject('Part::Cylinder','CenterReinforcement'); pad.Label='Local underside center reinforcement'; pad.Radius=q['local_center_pad_diameter']/2; pad.Height=bottom_pad_depth; pad.Placement.Base=V(0,0,-bottom_pad_depth)
+pad.setExpression('Radius','Parameters.CenterPadDiameter / 2'); pad.setExpression('Height','Parameters.BottomPadDepth'); pad.setExpression('Placement.Base.z','-Parameters.BottomPadDepth')
+blank=doc.addObject('Part::Fuse','ReinforcedBlank'); blank.Label='Body with local center reinforcement'; blank.Base=base; blank.Tool=pad
+armtool=doc.addObject('Part::Feature','ArmPocketTool'); armtool.Label='Fixed X/Y arm pocket cutter'; armtool.Shape=arm_tool_shape
+armcut=doc.addObject('Part::Cut','ArmPocketCut'); armcut.Label='Arm-pocketed coupon blank'; armcut.Base=blank; armcut.Tool=armtool
+through=doc.addObject('Part::Cylinder','ThroughBoreTool'); through.Label='Single continuous 8.00 mm center bore'; through.Radius=q['through_opening_diameter']/2; through.Height=b+bottom_pad_depth+1; through.Placement.Base=V(0,0,-bottom_pad_depth)
+through.setExpression('Radius','Parameters.ThroughDiameter / 2'); through.setExpression('Height','Parameters.BaseThickness + Parameters.BottomPadDepth + 1 mm'); through.setExpression('Placement.Base.z','-Parameters.BottomPadDepth')
+final=doc.addObject('Part::Cut','FinalCoupon'); final.Label='Cross-horn ultra-minimal fit-test coupon'; final.Base=armcut; final.Tool=through
+
+helpers=[base,pad,blank,armtool,armcut,through]
+for ob in helpers:
+    if ob.ViewObject: ob.ViewObject.Visibility=False
+if final.ViewObject: final.ViewObject.Visibility=True
+for ob in [base,pad,blank,armtool,armcut,through,final]:
+    if hasattr(ob,'ViewObject') and ob.ViewObject: ob.ViewObject.ShapeColor=(0.78,0.82,0.88); ob.ViewObject.LineColor=(0.12,0.15,0.20)
+doc.recompute()
+# Verify the single bore parameter changes the actual solid and restores correctly.
+v0=final.Shape.Volume; old_d=params.ThroughDiameter.Value
+params.ThroughDiameter=7.3; doc.recompute(); v_edit=final.Shape.Volume; d_edit=through.Radius.Value*2
+if abs(v_edit-v0)<0.1 or abs(d_edit-7.3)>1e-7: raise RuntimeError('Through-bore parameter did not update final geometry')
+params.ThroughDiameter=old_d; doc.recompute()
+tests=[{'property':'ThroughDiameter','test_value_mm':7.3,'actual_tool_diameter_mm':d_edit,'volume_before_mm3':v0,'volume_edited_mm3':v_edit,'volume_delta_mm3':v_edit-v0,'restored_value_mm':params.ThroughDiameter.Value}]
+doc.recompute(); shape=final.Shape
+if not shape.isValid() or len(shape.Solids)!=1: raise RuntimeError('Final recomputed coupon is not one valid solid')
+bore_actual_diameter=through.Shape.BoundBox.XLength; bore_actual_height=through.Shape.BoundBox.ZLength; bore_z0=through.Placement.Base.z; bore_z1=bore_z0+bore_actual_height
+if abs(bore_actual_diameter-8.0)>1e-7 or abs(bore_z0+bottom_pad_depth)>1e-7 or bore_z1<b-1e-7: raise RuntimeError('Single diameter bore does not pass through complete coupon height')
+annular_support_radial_width=(q['local_center_pad_diameter']-bore_actual_diameter)/2.0
+doc.recompute(); doc.saveAs(str(OUT/'CrossHorn_UltraMinimal_FitTest_04R14.FCStd'))
+mesh=MeshPart.meshFromShape(Shape=shape,LinearDeflection=0.025,AngularDeflection=0.06,Relative=False); mesh.write(str(OUT/'CrossHorn_UltraMinimal_FitTest_04R14.stl'))
+bbox=shape.BoundBox
+props={'through_opening_diameter_mm':bore_actual_diameter,'through_opening_z_range_mm':[bore_z0,bore_z1],'coupon_body_top_z_mm':b,'coupon_bottom_z_mm':-bottom_pad_depth,'same_diameter_full_depth':True,'center_support_pad_diameter_mm':params.CenterPadDiameter.Value,'annular_support_radial_width_mm':annular_support_radial_width,'centered_on_origin':True,'arm_reaches_mm':{'x_minus_nominal':left_nom,'x_plus_nominal':right_nom,'x_minus_pocket':left_L,'x_plus_pocket':right_L,'y_plus_pocket':short_half,'y_minus_pocket':short_half},'short_pocket_widths_mm':{'upper_positive_y':short_width,'bottom_negative_y':bottom_short_width},'parametric_edit_tests':tests}
+res={'solid_valid':shape.isValid(),'solid_count':len(shape.Solids),'mesh_facets':len(mesh.Facets),'mesh_is_solid':mesh.isSolid(),'bbox_mm':[bbox.XLength,bbox.YLength,bbox.ZLength],'solid_volume_mm3':shape.Volume,'center_geometry':props,'parametric_recompute_verified':True,'single_coupon':True,'parameters':P,'freecad_expressions':{'ThroughBoreTool.Radius':'Parameters.ThroughDiameter / 2','ThroughBoreTool.Height':'Parameters.BaseThickness + Parameters.BottomPadDepth + 1 mm','ThroughBoreTool.Placement.Base.z':'-Parameters.BottomPadDepth'}}
+(OUT/'geometry_validation.json').write_text(json.dumps(res,indent=2),encoding='utf-8'); (OUT/'parameters.json').write_text(json.dumps({'units':'mm','base_thickness_mm':b,'bottom_center_support_depth_mm':params.BottomPadDepth.Value,'through_opening_diameter_mm':bore_actual_diameter,'through_opening_height_mm':bore_actual_height,'x_nominal_reach_mm':[left_nom,right_nom],'x_nominal_span_mm':nominal_span,'x_pocket_reach_mm':[left_L,right_L],'x_pocket_envelope_mm':left_L+right_L,'y_pocket_reach_mm':[short_half,short_half],'upper_positive_y_pocket_width_mm':short_width,'bottom_negative_y_pocket_width_mm':bottom_short_width,'center_support_pad_diameter_mm':params.CenterPadDiameter.Value,'parametric_edit_test_results':tests,'design_note':'A single native Part::Cylinder creates the continuous through opening; edit Parameters.ThroughDiameter and press F5.'},indent=2),encoding='utf-8')
+paths=[]
+for edge in shape.Edges:
+    pts=edge.discretize(Deflection=0.06)
+    if len(pts)>1 and max(v.z for v in pts)-min(v.z for v in pts)<1e-6: paths.append([[v.x,v.y] for v in pts])
+(OUT/'top_edges.json').write_text(json.dumps(paths),encoding='utf-8')
+secface=Part.Face(Part.Wire(Part.makePolygon([V(-50,0,-10),V(50,0,-10),V(50,0,10),V(-50,0,10),V(-50,0,-10)])))
+sec=shape.section(secface); secpaths=[]
+for edge in sec.Edges:
+    pts=edge.discretize(Deflection=0.01)
+    if len(pts)>1: secpaths.append([[v.x,v.z] for v in pts])
+sectiondata={'paths':secpaths,'section_edge_count':len(sec.Edges),'top_z_mm':bbox.ZMax if 'bbox' in globals() else shape.BoundBox.ZMax,'bottom_z_mm':shape.BoundBox.ZMin,'plane':'Vertical X-Z section at Y=0 through horn-seat and center recess'}
+(OUT/'vertical_section_brep.json').write_text(json.dumps(sectiondata),encoding='utf-8')
+wall_segments=[]
+for edge in sec.Edges:
+    pts=edge.discretize(Deflection=0.001)
+    if len(pts)>1 and abs(max(v.z for v in pts)-min(v.z for v in pts)-(seat_z+bottom_pad_depth))<1e-5 and all(abs(abs(v.x)-4.0)<1e-5 for v in pts): wall_segments.append([min(v.z for v in pts),max(v.z for v in pts)])
+if not wall_segments: raise RuntimeError('Vertical BRep section did not show the Ã˜7.40 bore throughout the solid wall')
+print(json.dumps(res,indent=2)); App.closeDocument(doc.Name)
+
+
+

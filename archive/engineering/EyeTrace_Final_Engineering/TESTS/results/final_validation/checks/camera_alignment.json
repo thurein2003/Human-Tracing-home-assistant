@@ -1,0 +1,51 @@
+{
+  "source": "USER supplied nominal CENTER spacing",
+  "spacing_mm": [
+    21,
+    16
+  ],
+  "plate_centers_XZ_mm": [
+    [
+      -10.5,
+      -8
+    ],
+    [
+      -10.5,
+      8
+    ],
+    [
+      10.5,
+      -8
+    ],
+    [
+      10.5,
+      8
+    ]
+  ],
+  "pcb_outside_mm": [
+    38.0,
+    38.0,
+    1.6
+  ],
+  "pcb_outside_status": "UNVERIFIED, not derived from21x16",
+  "independent_parameter_trials": [
+    {
+      "changed_independent_property": "CameraPCBWidth",
+      "hole_center_pattern_still21x16": true
+    },
+    {
+      "changed_independent_property": "CameraPCBHeight",
+      "hole_center_pattern_still21x16": true
+    },
+    {
+      "changed_independent_property": "CameraPCBMountHoleDiameter",
+      "hole_center_pattern_still21x16": true
+    },
+    {
+      "changed_independent_property": "CameraLensClearanceDiameter",
+      "hole_center_pattern_still21x16": true
+    }
+  ],
+  "lens_nominal_radial_opening_margin_mm": 2.0,
+  "physical_lens_IR_FOV_status": "UNVERIFIED"
+}

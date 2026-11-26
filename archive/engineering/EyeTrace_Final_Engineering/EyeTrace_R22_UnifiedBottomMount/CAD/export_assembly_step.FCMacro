@@ -1,0 +1,11 @@
+﻿import FreeCAD as App,Part,json
+from pathlib import Path
+root=Path(r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount')
+d=App.openDocument(str(root/'CAD'/'EyeTrace_R22_UnifiedBottomMount.FCStd'));a=d.getObject('AssemblyRoot')
+if a is None or not a.Shape.isValid():raise RuntimeError('Invalid assembly aggregate')
+compound=Part.makeCompound(a.Shape.Solids)
+t=App.newDocument('R22_STEP_Export');o=t.addObject('PartDesign::Feature','EyeTrace_R22_AssemblyCompound');o.Shape=compound;t.recompute()
+if len(o.Shape.Solids)!=75 or not o.Shape.isValid():raise RuntimeError('Export compound invalid')
+out=root/'CAD'/'EyeTrace_R22_UnifiedBottomMount.step';Part.export([o],str(out))
+rep={'file':str(out),'method':'compound of AssemblyRoot BREP solids','valid':o.Shape.isValid(),'solid_count':len(o.Shape.Solids),'volume_mm3':o.Shape.Volume,'bbox_mm':[o.Shape.BoundBox.XMin,o.Shape.BoundBox.XMax,o.Shape.BoundBox.YMin,o.Shape.BoundBox.YMax,o.Shape.BoundBox.ZMin,o.Shape.BoundBox.ZMax]}
+(root/'DOCUMENTATION'/'R22_ASSEMBLY_STEP_VALIDATION.json').write_text(json.dumps(rep,indent=2));print(json.dumps(rep,indent=2));App.closeDocument(t.Name);App.closeDocument(d.Name)

@@ -1,0 +1,11 @@
+﻿import FreeCAD as A,json,os
+root=r'EyeTrace_Final_Engineering';d=A.openDocument(root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CAD\EyeTrace_R15_Final_Assembly.FCStd')
+r=[]
+for o in d.Objects:
+ x={'name':o.Name,'label':o.Label,'type':o.TypeId}
+ if hasattr(o,'Shape') and not o.Shape.isNull():
+  b=o.Shape.BoundBox;x.update({'volume':o.Shape.Volume,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids),'bb':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]})
+ if hasattr(o,'Placement'): x['placement']=[o.Placement.Base.x,o.Placement.Base.y,o.Placement.Base.z,o.Placement.Rotation.Axis.x,o.Placement.Rotation.Axis.y,o.Placement.Rotation.Axis.z,o.Placement.Rotation.Angle]
+ if hasattr(o,'Group'): x['group']=[q.Name for q in o.Group]
+ r.append(x)
+print(json.dumps(r,indent=2));open(root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CHECKS\assembly_tree.json','w').write(json.dumps(r,indent=2))

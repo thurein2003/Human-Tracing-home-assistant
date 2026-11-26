@@ -1,0 +1,38 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "fcstd": {
+    "opened": true,
+    "valid": true,
+    "solids": 1,
+    "feature_count": 1
+  },
+  "stl": {
+    "facets": 3080,
+    "watertight_solid": true,
+    "bbox_mm": [
+      43.0,
+      27.0,
+      4.349999904632568
+    ],
+    "fits_k2_260_cube": true
+  },
+  "step": {
+    "valid": true,
+    "solids": 1
+  },
+  "3mf": {
+    "crc_valid": true,
+    "objects": 1,
+    "triangles": 3080
+  },
+  "status": "SOFTWARE_GEOMETRY_PASS; PHYSICAL_FIT_UNVERIFIED; TOOLPATH_PREVIEW_UNVERIFIED"
+}

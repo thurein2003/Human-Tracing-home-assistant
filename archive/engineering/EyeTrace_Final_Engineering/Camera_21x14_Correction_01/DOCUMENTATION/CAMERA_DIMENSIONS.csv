@@ -1,0 +1,17 @@
+﻿feature,value_mm,source,confidence,status
+horizontal hole-center spacing,21,User supplied correction,High for nominal only,PROVISIONAL physical test pending
+vertical hole-center spacing,14,User supplied correction,High for nominal only,PROVISIONAL physical test pending
+hole center x offsets,-10.5 and +10.5,Derived from user nominal pitch,High for nominal only,CAD PASS
+hole center z offsets,-7 and +7,Derived from user nominal pitch,High for nominal only,CAD PASS
+PCB outside width,38,Existing CAD parameter,Low / not physically measured,UNVERIFIED
+PCB outside height,38,Existing CAD parameter,Low / not physically measured,UNVERIFIED
+PCB thickness,1.6,Existing CAD parameter,Low / not physically measured,UNVERIFIED
+PCB hole diameter,2.2,Existing CAD parameter,Low / not physically measured,UNVERIFIED
+printed plate bore diameter,2.4,Existing design parameter,Medium CAD known / no print test,PROVISIONAL
+plate outside width,56,Updated CAD B-rep,High for CAD only,CAD PASS
+plate outside height,32,Independent parameter added in correction,High for CAD only,CAD PASS
+plate thickness,3,Updated CAD B-rep,High for CAD only,CAD PASS
+lens envelope diameter,14,Existing CAD parameter,Low / not physically measured,UNVERIFIED
+lens clearance diameter,18,Existing CAD parameter,Low / not physically measured,UNVERIFIED
+rear component envelope,20 x 24.4 x 20,Existing uncertainty reservation,Low / not physically measured,UNVERIFIED; overlaps modeled camera screws
+ribbon reservation,20 x 1 x 18,Existing CAD reservation,Low / not physically measured,UNVERIFIED

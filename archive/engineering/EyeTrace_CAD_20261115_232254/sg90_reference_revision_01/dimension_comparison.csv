@@ -1,0 +1,21 @@
+Critical dimension,Old mm,Revised mm,Source,Confidence / status
+Case length,23,22.7,TowerPro table B + label image,High for published nominal; clone unverified
+Case width,12,12.2,TowerPro D + headline,High for published nominal; clone unverified
+Case main height,23,22.7,Juan Fenoy native Box.Height,Medium community reference; clone unverified
+Shoulder height above base,unseparated,27,TowerPro C label image,Medium datum reading; clone unverified
+Output top above base,31 pan /30 tilt,30.3 both,TowerPro A label image,High nominal drawing; headline29 conflicts
+Ear total span,absent,32.3,TowerPro E label image,High nominal drawing; clone unverified
+Ear bottom / thickness,absent,15.9 /2.5,Juan Fenoy Box001 placement/height,Medium community reference; F17 datum unresolved
+Hole pitch / diameter / open slot,absent,27.2 /2.0 /1.3,Native hole centers/radii and slot Box geometry,Medium community reference; no M3 fit claim
+Output center from case end,6,5.9,Native cylinder center and case end,Medium; clone unverified
+Boss diameter / height,unseparated,12.2 /4.3,D width + C27 minus community case22.7,"Medium mixed-source envelope, unverified"
+Secondary gear boss diameter / offset,absent,5 / -6.3 from output,Native cylinder geometry,Medium community reference
+Cable notch width / height / height from base,absent,3.6 /1.2 /4.5,Native sketch bounds,Medium community reference; wire keep-out absent
+Output envelope diameter / length,6x8 pan;6x7 tilt,5x3.3 both,Conservative rounded community shaft bounds; A-C height,Low as actual spline fit; smooth keep-out ONLY
+Axial bore diameter,absent,1.7,Community shaft inner cylinder diameter,Low; NOT thread spec
+Spline teeth/profile,absent,NOT MODELED,No authoritative spline drawing found,UNKNOWN; no fabricated teeth
+Star exterior arms / width / length / thickness,five /3.6 /12 /2,"unchanged, PROVISIONAL","Inherited EyeTrace placeholder, NOT measured",LOW; original star profile needed
+Star socket stepped bore,absent,5.2x1.4 deep +1.9 through,PROVISIONAL clearance layout only,LOW; not a spline or physical mating claim
+Retaining screw shank/head/length,absent,1.6 /3.5x1 /5,PROVISIONAL visualization only,LOW; thread/head/length must be measured
+Motor mounting datum,pan baseZ6;tilt baseX-70,unchanged axes; native placements in report,Inherited EyeTrace axes retained,Design choice; alignment checked
+Printed bore correction,8 pan cap center,12.8 pan cap center; ear clearance+.3,Referenced boss/tab envelope +design allowance,"Geometric clearance fix, physical fit UNVERIFIED"

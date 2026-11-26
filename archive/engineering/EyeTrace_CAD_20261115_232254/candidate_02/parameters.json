@@ -1,0 +1,17 @@
+{
+  "servo_body": [
+    23,
+    12,
+    23
+  ],
+  "servo_clearance": 0.6,
+  "camera_envelope": [
+    38,
+    38,
+    30
+  ],
+  "pan_limit_deg": 60,
+  "tilt_limit_deg": 30,
+  "units": "mm",
+  "status": "PROTOTYPE: physical fit unverified"
+}

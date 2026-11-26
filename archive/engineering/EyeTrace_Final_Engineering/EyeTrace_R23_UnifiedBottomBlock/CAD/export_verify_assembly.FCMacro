@@ -1,0 +1,8 @@
+import FreeCAD as App,Part,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd'; out=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_FullAssembly.step'
+d=App.openDocument(p); root=d.getObject('AssemblyRoot'); sh=Part.makeCompound(root.Shape.Solids)
+t=App.newDocument('R23StepExport'); f=t.addObject('Part::Feature','AssemblyCompound');f.Shape=sh;t.recompute();Part.export([f],out)
+s=Part.read(out)
+r={'file':out,'exported_compound_solid_count':len(sh.Solids),'reimport_valid':s.isValid(),'reimport_solid_count':len(s.Solids),'reimport_volume_mm3':s.Volume,'source_volume_mm3':sh.Volume,'volume_delta_mm3':s.Volume-sh.Volume,'bbox_mm':[s.BoundBox.XMin,s.BoundBox.XMax,s.BoundBox.YMin,s.BoundBox.YMax,s.BoundBox.ZMin,s.BoundBox.ZMax]}
+open(r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\DOCUMENTATION\R23_ASSEMBLY_STEP_REIMPORT.json','w').write(json.dumps(r,indent=2))
+print(json.dumps(r,indent=2))

@@ -1,0 +1,38 @@
+﻿import json
+from pathlib import Path
+import FreeCAD as App,Part
+from FreeCAD import Vector as V
+p=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_11")
+d=App.openDocument(str(p/'CrossHorn_UltraMinimal_FitTest_04R11.FCStd')); d.recompute()
+params=d.getObject('Parameters'); final=d.getObject('FinalCoupon'); back=d.getObject('BackRecessTool'); front=d.getObject('FrontRecessTool')
+s=final.Shape
+assert s.isValid() and len(s.Solids)==1
+plane=Part.Face(Part.Wire(Part.makePolygon([V(-50,0,-10),V(50,0,-10),V(50,0,10),V(-50,0,10),V(-50,0,-10)])))
+sec=s.section(plane)
+def vertical_edges_at_x(absx, dz, zlo,zhi):
+ vals=[]
+ for e in sec.Edges:
+  pts=e.discretize(Deflection=0.001)
+  if len(pts)>1:
+   xs=[v.x for v in pts]; zs=[v.z for v in pts]
+   if max(zs)-min(zs)>dz and max(xs)-min(xs)<1e-5 and abs(abs(xs[0])-absx)<1e-5 and abs(min(zs)-zlo)<1e-5 and abs(max(zs)-zhi)<1e-5: vals.append([xs[0],min(zs),max(zs)])
+ return vals
+rear=vertical_edges_at_x(5.25,.29,-2.2,-1.9)
+frontwall=vertical_edges_at_x(3.7,3.19,-1.1,2.1)
+boss=vertical_edges_at_x(6.25,2.19,-2.2,0.0)
+assert rear and frontwall and boss,(rear,frontwall,boss)
+bd=back.Shape.BoundBox.XLength
+radial=(params.CenterPadDiameter.Value-params.BackDiameter.Value)/2
+web=params.CalculatedCenterWeb.Value
+v0=s.Volume
+params.FrontDepth=3.1; d.recompute(); vf=final.Shape.Volume; fh=front.Shape.BoundBox.ZLength
+params.FrontDepth=3.2; d.recompute(); vr=final.Shape.Volume
+params.BackDepth=.5; d.recompute(); vb=final.Shape.Volume; bh=back.Shape.BoundBox.ZLength
+params.BackDepth=.3; d.recompute()
+result={'reopened':True,'valid':final.Shape.isValid(),'solid_count':len(final.Shape.Solids),'back_opening_section_wall_x_mm':[v[0] for v in rear],'back_opening_actual_diameter_mm':2*max(abs(v[0]) for v in rear),'back_opening_section_z_mm':[-2.2,-1.9],'back_opening_depth_mm':0.3,'local_support_land_actual_diameter_mm':2*max(abs(v[0]) for v in boss),'remaining_radial_land_mm':radial,'front_cavity_wall_x_mm':[v[0] for v in frontwall],'front_cavity_actual_diameter_mm':2*max(abs(v[0]) for v in frontwall),'front_cavity_actual_depth_mm':max(frontwall[0][2],frontwall[0][1])-min(frontwall[0][2],frontwall[0][1]),'rear_and_front_features_independent':True,'web_mm':web,'separate_screw_hole_diameter_mm':2*d.getObject('RetainingScrewAccessTool').Radius.Value,'front_depth_edit_height_mm':fh,'front_edit_volume_delta_mm3':vf-v0,'back_depth_edit_height_mm':bh,'back_edit_volume_delta_mm3':vb-vr,'restored_depths_mm':[params.FrontDepth.Value,params.BackDepth.Value]}
+assert abs(result['back_opening_actual_diameter_mm']-10.5)<1e-5 and abs(result['front_cavity_actual_diameter_mm']-7.4)<1e-5 and abs(result['front_cavity_actual_depth_mm']-3.2)<1e-5
+assert abs(web-.8)<1e-5 and abs(radial-1.0)<1e-5 and abs(bd-10.5)<1e-5 and abs(bh-.5)<1e-5 and abs(fh-3.1)<1e-5
+assert abs(vf-v0)>.1 and abs(vb-vr)>.1 and abs(params.FrontDepth.Value-3.2)<1e-8 and abs(params.BackDepth.Value-.3)<1e-8
+(p/'reopen_geometry_validation.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print('R11_REOPEN_SECTION='+json.dumps(result))
+App.closeDocument(d.Name)

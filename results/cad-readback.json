@@ -1,0 +1,787 @@
+{
+  "freecad": [
+    "1",
+    "1",
+    "4"
+  ],
+  "documents": {
+    "EyeTrace_Final_Assembly_Native_21x14.FCStd": {
+      "objects": 119,
+      "shape_objects": 82,
+      "invalid_shapes": [],
+      "small_cylinders": {
+        "CameraPlate_Cut": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut001": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut002": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut003": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut004": [
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut005": [
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut006": [
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut007": [
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              24.0,
+              -28.0,
+              83.0
+            ]
+          }
+        ]
+      }
+    },
+    "Camera_Hole_Pattern_21x14_coupon.FCStd": {
+      "objects": 1,
+      "shape_objects": 1,
+      "invalid_shapes": [],
+      "small_cylinders": {
+        "CameraPatternCoupon": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -7.0,
+              0.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -7.0,
+              0.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              7.0,
+              0.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              7.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    },
+    "EyeTrace_Final_Assembly_21x14.FCStd": {
+      "objects": 80,
+      "shape_objects": 75,
+      "invalid_shapes": [],
+      "small_cylinders": {
+        "CameraPlate_Cut": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut001": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut002": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut003": [
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut004": [
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut005": [
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut006": [
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          }
+        ],
+        "CameraPlate_Cut007": [
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              -24.0,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              -10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              24.0,
+              -28.0,
+              69.0
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              10.5,
+              -28.0,
+              83.0
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              24.0,
+              -28.0,
+              83.0
+            ]
+          }
+        ]
+      }
+    },
+    "K2_PrintLayout_21x14.FCStd": {
+      "objects": 13,
+      "shape_objects": 13,
+      "invalid_shapes": [],
+      "small_cylinders": {
+        "CameraPlate_21x16": [
+          {
+            "radius": 1.7,
+            "center": [
+              64.0,
+              183.6,
+              -0.6
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              77.5,
+              183.6,
+              -0.6
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              64.0,
+              169.6,
+              -0.6
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              77.5,
+              169.6,
+              -0.6
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              98.5,
+              183.6,
+              -0.6
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              112.0,
+              183.6,
+              -0.6
+            ]
+          },
+          {
+            "radius": 1.2,
+            "center": [
+              98.5,
+              169.6,
+              -0.6
+            ]
+          },
+          {
+            "radius": 1.7,
+            "center": [
+              112.0,
+              169.6,
+              -0.6
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "meshes": {
+    "ABS_Circular_Clearance_Calibration_Bed.stl": {
+      "facets": 18148,
+      "components": 20,
+      "closed_mesh": true,
+      "size_mm": [
+        241.284,
+        206.294,
+        6.0
+      ]
+    },
+    "Camera_Hole_Pattern_21x14_ABS.stl": {
+      "facets": 1708,
+      "components": 1,
+      "closed_mesh": true,
+      "size_mm": [
+        29.0,
+        22.0,
+        2.0
+      ]
+    },
+    "PRINT_FIRST_FitTests_Optimized.stl": {
+      "facets": 15988,
+      "components": 7,
+      "closed_mesh": true,
+      "size_mm": [
+        159.289,
+        115.6,
+        4.2
+      ]
+    },
+    "EyeTrace_Final_K2_SingleBed_21x14.stl": {
+      "facets": 35348,
+      "components": 13,
+      "closed_mesh": true,
+      "size_mm": [
+        217.097,
+        218.0,
+        67.175
+      ]
+    }
+  }
+}

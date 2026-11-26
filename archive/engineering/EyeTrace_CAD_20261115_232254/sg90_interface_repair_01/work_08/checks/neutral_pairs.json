@@ -1,0 +1,37 @@
+{
+  "unintended": [],
+  "designed_contacts": [
+    {
+      "pair": [
+        "Base_EarMount_ThrustSupport",
+        "Pan_Replaceable_ThrustRing"
+      ],
+      "kind": "static keyed bearing ring",
+      "distance_mm": 0.0
+    },
+    {
+      "pair": [
+        "Pan_Replaceable_ThrustRing",
+        "PanYoke_EarBracket_KeyedDrive"
+      ],
+      "kind": "sliding thrust face",
+      "distance_mm": 0.0
+    },
+    {
+      "pair": [
+        "PanYoke_EarBracket_KeyedDrive",
+        "Tilt_Journal_FlangedSleeve"
+      ],
+      "kind": "journal with radial clearance",
+      "distance_mm": 33.499999999999986
+    },
+    {
+      "pair": [
+        "TiltCradle_KeyedHorn_CameraFrame",
+        "Tilt_Journal_FlangedSleeve"
+      ],
+      "kind": "sleeve flange against rotor",
+      "distance_mm": 0.0
+    }
+  ]
+}

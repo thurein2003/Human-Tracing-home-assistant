@@ -1,0 +1,10 @@
+import FreeCAD as App,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(p);o=d.getObject('TiltCradle_KeyedHorn_CameraFrame');s=o.Shape;rows=[]
+for i,f in enumerate(s.Faces):
+ b=f.BoundBox; surf=f.Surface; row={'i':i+1,'type':type(surf).__name__,'area':round(f.Area,4),'bb':[round(b.XMin,3),round(b.XMax,3),round(b.YMin,3),round(b.YMax,3),round(b.ZMin,3),round(b.ZMax,3)]}
+ if type(surf).__name__=='Plane':
+  try:row['normal']=[round(x,4) for x in f.normalAt(0,0)]
+  except:pass
+ if hasattr(surf,'Radius'):row['radius']=surf.Radius
+ rows.append(row)
+open(r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\DOCUMENTATION\tiltcradle_faces.json','w').write(json.dumps({'name':o.Name,'volume':s.Volume,'faces':rows},indent=2))

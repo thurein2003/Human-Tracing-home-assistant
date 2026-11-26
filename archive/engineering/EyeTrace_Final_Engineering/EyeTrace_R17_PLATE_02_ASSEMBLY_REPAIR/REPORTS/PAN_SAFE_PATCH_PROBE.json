@@ -1,0 +1,64 @@
+{
+  "exp_volume": 567.2924095351405,
+  "exp_solids": 1,
+  "exp_bbox": [
+    -19.6,
+    -10.1,
+    0.0,
+    19.6,
+    10.099999999999998,
+    3.8
+  ],
+  "cover_offset": {
+    "ok": true,
+    "solids": 1,
+    "vol": 3882.883254758677,
+    "bbox": [
+      -26.193891247075936,
+      -26.193891247075936,
+      30.599999999999937,
+      26.193891247075936,
+      26.193891247075936,
+      35.2
+    ]
+  },
+  "cover_patch_intersection": 1655.7706736182984,
+  "cover_oldcarrier_intersection": 0.0,
+  "screw0_offset": {
+    "ok": false,
+    "err": "BRepOffsetAPI_MakeOffsetShape not done"
+  },
+  "screw0_patch_intersection": 18.88437452424241,
+  "screw0_oldcarrier_intersection": 0.0,
+  "screw1_offset": {
+    "ok": false,
+    "err": "BRepOffsetAPI_MakeOffsetShape not done"
+  },
+  "screw1_patch_intersection": 18.884374524242396,
+  "screw1_oldcarrier_intersection": 0.0,
+  "screw2_offset": {
+    "ok": false,
+    "err": "BRepOffsetAPI_MakeOffsetShape not done"
+  },
+  "screw2_patch_intersection": 36.01577978489925,
+  "screw2_oldcarrier_intersection": 0.0,
+  "screw3_offset": {
+    "ok": false,
+    "err": "BRepOffsetAPI_MakeOffsetShape not done"
+  },
+  "screw3_patch_intersection": 36.01577978489917,
+  "screw3_oldcarrier_intersection": 0.0,
+  "horn": {
+    "bbox": [
+      -19.5,
+      -10.0,
+      32.5,
+      19.5,
+      10.0,
+      36.5
+    ],
+    "volume": 476.19571761711836,
+    "horn_in_pocket_volume": 142.1671891538203,
+    "added_patch_intersection": 316.20391714499317
+  }
+}

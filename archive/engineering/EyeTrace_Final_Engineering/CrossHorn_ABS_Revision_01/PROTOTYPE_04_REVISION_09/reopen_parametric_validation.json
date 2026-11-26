@@ -1,0 +1,29 @@
+{
+  "reopened": true,
+  "brep_section_vertical_wall_z_mm": [
+    [
+      -1.100000000000001,
+      2.099999999999999
+    ],
+    [
+      -1.100000000000001,
+      2.099999999999999
+    ]
+  ],
+  "brep_measured_depth_mm": 3.2,
+  "seat_z_mm": 2.1,
+  "floor_z_mm": -1.1,
+  "baseline_volume_mm3": 1087.4812153541482,
+  "front_depth_edit_mm": 3.1,
+  "front_cutter_height_mm": 3.1,
+  "front_volume_delta_mm3": 2.71040906188432,
+  "back_depth_edit_mm": 0.5,
+  "back_cutter_height_mm": 0.5,
+  "back_volume_delta_mm3": -1.5707963267955165,
+  "restored_front_depth_mm": 3.2,
+  "restored_back_depth_mm": 0.3,
+  "web_mm": 0.7999999999999996,
+  "restored_volume_mm3": 1087.4812153541482,
+  "valid": true,
+  "solids": 1
+}

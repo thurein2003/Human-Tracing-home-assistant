@@ -1,0 +1,57 @@
+﻿{
+    "file":  "EyeTrace_Final_Engineering\\EyeTrace_R20_UltraLowProfile\\PRINT\\Plate02_R20_LowProfile_Sliced_Candidate.3mf",
+    "archive":  "PASS: required entries reopened",
+    "entry_count":  29,
+    "creality_print_version":  "7.3.2.6412",
+    "build_objects":  12,
+    "unique_names":  12,
+    "parts":  [
+                  "Pan_Replaceable_ThrustRing",
+                  "PanYoke_EarBracket_KeyedDrive",
+                  "Tilt_Removable_IdlerPillar",
+                  "Pan_KeyedHorn_Cover",
+                  "TiltCradle_KeyedHorn_CameraFrame",
+                  "Tilt_KeyedHorn_CaptiveCover",
+                  "Tilt_Journal_FlangedSleeve",
+                  "PCB_Spacer_Lower_Left",
+                  "PCB_Spacer_Lower_Right",
+                  "PCB_Spacer_Upper_Left",
+                  "PCB_Spacer_Upper_Right",
+                  "CameraPlate_21x14"
+              ],
+    "printer_model":  "Creality K2",
+    "printer_settings":  "Creality K2 0.4 nozzle",
+    "nozzle_mm":  0.4000000059604645,
+    "bed_type":  "textured_plate",
+    "filament_profile":  [
+                             "EyeTrace ABS 255C K2 100C(Plate02_R20_LowProfile_Candidate_HOLD.3mf)"
+                         ],
+    "nozzle_temp":  [
+                        "255"
+                    ],
+    "nozzle_first_layer":  [
+                               "255"
+                           ],
+    "bed_temp":  [
+                     "100"
+                 ],
+    "bed_first_layer":  [
+                            "100"
+                        ],
+    "layer_height":  "0.2",
+    "walls":  "3",
+    "infill":  "20%",
+    "plate_xy_bbox":  [
+                          4.066260000000001,
+                          5.597700000000001,
+                          250.88568,
+                          232.26541000000003
+                      ],
+    "slicer_estimated_filament_g":  85.65,
+    "slicer_estimated_time":  "9h39m",
+    "screenshots":  [
+                        "R20_CrealityPrint_Sliced_FullPlate.png",
+                        "R20_CrealityPrint_FirstLayer.png",
+                        "R20_CrealityPrint_PocketLayers.png"
+                    ]
+}

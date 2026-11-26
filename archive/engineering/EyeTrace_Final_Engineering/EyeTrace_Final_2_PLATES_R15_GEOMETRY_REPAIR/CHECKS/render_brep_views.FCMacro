@@ -1,0 +1,38 @@
+﻿import FreeCAD as App, Part, os, math
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering'
+src=root+r'\R15_CENTERED_MOUNT_FINAL\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd'
+out=root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\RENDERS'
+d=App.openDocument(src)
+g=App.Gui.activeDocument(); v=g.activeView()
+for ob in d.Objects:
+ try: ob.ViewObject.Visibility=False
+ except: pass
+
+def savepart(name,viewname,path,zoom=2):
+ ob=d.getObject(name); ob.ViewObject.Visibility=True; d.recompute()
+ getattr(v,viewname)(); v.fitAll()
+ for _ in range(zoom): v.zoomIn()
+ v.saveImage(os.path.join(out,path),2200,1600,'White')
+ ob.ViewObject.Visibility=False
+# CAD geometry screenshots, unchanged source BREP.
+savepart('PanYoke_EarBracket_KeyedDrive','viewTop','PanYoke_R15_Top_BREP.png',2)
+savepart('PanYoke_EarBracket_KeyedDrive','viewBottom','PanYoke_R15_Bottom_BREP.png',2)
+savepart('TiltCradle_KeyedHorn_CameraFrame','viewRight','TiltCradle_R15_HornAxis_BREP.png',2)
+savepart('TiltCradle_KeyedHorn_CameraFrame','viewAxonometric','TiltCradle_R15_Isometric_BREP.png',1)
+# Construct exact BREP plane sections, visible in CAD as section-line views.
+secD=App.newDocument('R15PocketSections')
+pan=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape.section(Part.makePlane(140,140,V(-70,-70,35.85),V(0,0,1)))
+tilt=d.getObject('TiltCradle_KeyedHorn_CameraFrame').Shape.section(Part.makePlane(140,140,V(-40.15,-70,8),V(1,0,0)))
+for nm,sh in [('PanYoke_InterfaceSection_Z35_85',pan),('TiltCradle_InterfaceSection_Xminus40_15',tilt)]:
+ o=secD.addObject('Part::Feature',nm);o.Shape=sh;o.ViewObject.LineColor=(0.05,0.1,0.2);o.ViewObject.LineWidth=2.0
+secD.recompute(); sg=App.Gui.activeDocument();sv=sg.activeView()
+# pan section is XY plane
+sv.viewTop();sv.fitAll()
+for _ in range(2):sv.zoomIn()
+sv.saveImage(os.path.join(out,'PanYoke_R15_InterfaceSection_Z35_85.png'),2200,1600,'White')
+# tilt section lies in YZ plane; view along +X
+sv.viewRight();sv.fitAll()
+for _ in range(2):sv.zoomIn()
+sv.saveImage(os.path.join(out,'TiltCradle_R15_InterfaceSection_Xminus40_15.png'),2200,1600,'White')
+print('Saved FreeCAD BREP views to '+out)

@@ -1,0 +1,20 @@
+﻿import FreeCAD as A,Part,json,os,math
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering'; out=root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CHECKS'
+d=A.openDocument(root+r'\R15_CENTERED_MOUNT_FINAL\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd'); md=A.openDocument(root+r'\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'); tool=md.getObject('ArmPocketTool').Shape
+pan=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape; tilt=d.getObject('TiltCradle_KeyedHorn_CameraFrame').Shape
+ptool=tool.copy(); ptool.rotate(V(0,0,0),V(0,1,0),180); ptool.translate(V(0,0,38.8))
+ttool=tool.copy(); ttool.rotate(V(0,0,0),V(0,1,0),-90); ttool.translate(V(-37.2,0,78))
+def paths(sh,mapper):
+ out=[]
+ for e in sh.Edges:
+  try: pts=e.discretize(Deflection=0.04)
+  except: pts=[e.Vertexes[0].Point,e.Vertexes[-1].Point]
+  if len(pts)>1: out.append([mapper(p) for p in pts])
+ return out
+plane_p=Part.Face(Part.Wire(Part.makePolygon([V(-60,-60,35.85),V(60,-60,35.85),V(60,60,35.85),V(-60,60,35.85),V(-60,-60,35.85)])))
+plane_t=Part.Face(Part.Wire(Part.makePolygon([V(-40.15,-60,18),V(-40.15,60,18),V(-40.15,60,138),V(-40.15,-60,138),V(-40.15,-60,18)])))
+ps=pan.section(plane_p); pms=ptool.section(plane_p); ts=tilt.section(plane_t); tms=ttool.section(plane_t)
+report={'pan':{'section_z_mm':35.85,'world_section':paths(ps,lambda p:[p.x,p.y]),'master_profile_section':paths(pms,lambda p:[-p.x,p.y])},'tilt':{'section_x_mm':-40.15,'world_section':paths(ts,lambda p:[p.z-78,p.y]),'master_profile_section':paths(tms,lambda p:[p.z-78,p.y])}}
+with open(out+r'\fresh_section_paths.json','w') as f:json.dump(report,f)
+print(json.dumps({k:{x:len(v) if isinstance(v,list) else v for x,v in dct.items()} for k,dct in report.items()},indent=2))

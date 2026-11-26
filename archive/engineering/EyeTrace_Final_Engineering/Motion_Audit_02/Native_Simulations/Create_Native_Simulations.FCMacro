@@ -1,0 +1,108 @@
+﻿import FreeCAD as App, FreeCADGui as Gui, Part, os, sys, json, traceback
+OUT=r'EyeTrace_Final_Engineering\Motion_Audit_02\Native_Simulations'
+SRC=r'EyeTrace_Final_Engineering\Motion_Audit_02\EyeTrace_Motion_Audit_Assembly_r03.FCStd'
+FCSTD=os.path.join(OUT,'EyeTrace_Final_Assembly_Native_Simulation_r02.FCStd')
+LOG=os.path.join(OUT,'native_simulation_build.log')
+sys.path.append(r'D:\App files\Mod\Assembly')
+try:
+ import JointObject, CommandCreateSimulation as SimMod, UtilsAssembly
+ doc=App.openDocument(SRC)
+ old=doc.getObject('MotionAuditAssembly')
+ if not old: raise RuntimeError('Native audit assembly not found')
+ # Remove only the old kinematic container and its three aggregate bodies in this new document copy.
+ old_names=[o.Name for o in doc.Objects if o.Name in ['MotionAuditJoints','KinematicBaseLink','KinematicPanRotorLink','KinematicTiltCradleLink','GroundedBase','PanRevolute','TiltRevolute']]
+ doc.removeObject(old.Name)
+ for n in old_names:
+  if doc.getObject(n): doc.removeObject(n)
+ for n in ['KinematicBase','KinematicPanRotor','KinematicTiltCradle']:
+  if doc.getObject(n): doc.removeObject(n)
+ groups={
+  'BaseBody':['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing'],
+  'PanServoBody':['PanServo_SG90_Reference','PanOriginalScrew_PROVISIONAL','PanEar_M1p6x8_0','PanEar_M1p6x8_1','PanServo_WireExit_KEEP_OUT'],
+  'PanRotorBody':['PanYoke_EarBracket_KeyedDrive','Pan_KeyedHorn_Cover','PanDrive_M3x10_0','PanDrive_M3x10_1','PanDrive_M3x10_2','PanDrive_M3x10_3','Tilt_Removable_IdlerPillar','IdlerPillar_M3x10_0','IdlerPillar_M3x10_1'],
+  'PanHornBody':['Pan_OriginalStar_PROVISIONAL'],
+  'TiltServoBody':['TiltServo_SG90_Reference','TiltEar_M1p6x8_0','TiltEar_M1p6x8_1','TiltServo_WireExit_KEEP_OUT'],
+  'TiltCradleBody':['TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','TiltDrive_M3x10_0','TiltDrive_M3x10_1','TiltDrive_M3x10_2','TiltDrive_M3x10_3','Tilt_Journal_FlangedSleeve','TiltIdler_M3x12','TiltIdler_M3_Washer','RailMount_Lower_M3x10_0','RailMount_Lower_M3x10_1','RailMount_Upper_M3x10_0','RailMount_Upper_M3x10_1','PCB_Spacer_Lower_Left','PCB_Spacer_Lower_Right','PCB_Spacer_Upper_Left','PCB_Spacer_Upper_Right','Camera_M2x12_Lower_Left','Camera_M2x12_Lower_Right','Camera_M2x12_Upper_Left','Camera_M2x12_Upper_Right','CameraPlate_Cut007','PCB_Cut003','Camera_Lens_PROVISIONAL','Camera_WireExit_KEEP_OUT','Camera_RearComponents_KEEP_OUT'],
+  'TiltHornBody':['Tilt_OriginalStar_PROVISIONAL','TiltOriginalScrew_PROVISIONAL']}
+ labels={'BaseBody':'Grounded base and seated pan ring','PanServoBody':'Pan SG90 stator and mounting hardware','PanRotorBody':'Pan carrier, yoke and tilt support','PanHornBody':'Pan original star horn (provisional)','TiltServoBody':'Tilt SG90 stator and mounting hardware','TiltCradleBody':'Tilt cradle, idler axle, camera and camera plate','TiltHornBody':'Tilt original star horn and retaining screw (provisional)'}
+ links={}
+ for key,members in groups.items():
+  shapes=[]
+  for n in members:
+   o=doc.getObject(n)
+   if o is None or not hasattr(o,'Shape') or o.Shape.isNull(): raise RuntimeError('Missing source geometry '+n)
+   shapes.append(o.Shape.copy())
+  body=doc.addObject('Part::Feature',key)
+  body.Label=labels[key]
+  body.Shape=Part.makeCompound(shapes)
+  body.addProperty('App::PropertyStringList','RigidMembers','Native mechanism', 'Source CAD solids represented rigidly')
+  body.RigidMembers=members
+  body.ViewObject.Visibility=False
+  for n in members: doc.getObject(n).ViewObject.Visibility=False
+ asm=doc.addObject('Assembly::AssemblyObject','EyeTraceNativeAssembly')
+ asm.Label='Eye Trace - native two axis assembly simulation'
+ asm.Type='Assembly'
+ jg=asm.newObject('Assembly::JointGroup','Joints')
+ for key in groups:
+  link=asm.newObject('App::Link',key+'Link'); link.setLink(doc.getObject(key)); link.Label=labels[key]; links[key]=link
+ def joint(kind,name,a,b,pos=(0,0,0),axis=(0,0,1),limits=None):
+  j=jg.newObject('App::FeaturePython',name)
+  JointObject.Joint(j,0 if kind=='Fixed' else 1)
+  JointObject.ViewProviderJoint(j.ViewObject)
+  j.Label=name
+  j.Detach1=True; j.Detach2=True
+  j.Reference1=(links[a],['','']); j.Reference2=(links[b],['',''])
+  rot=App.Rotation(App.Vector(0,0,1),App.Vector(*axis)); J=App.Placement(App.Vector(*pos),rot)
+  j.Placement1=links[a].Placement.inverse().multiply(J); j.Placement2=links[b].Placement.inverse().multiply(J)
+  if limits:
+   j.EnableAngleMin=True; j.AngleMin=App.Units.Quantity(str(limits[0])+' deg')
+   j.EnableAngleMax=True; j.AngleMax=App.Units.Quantity(str(limits[1])+' deg')
+  j.ViewObject.Visibility=False
+  return j
+ ground=jg.newObject('App::FeaturePython','GroundedBase'); JointObject.GroundedJoint(ground,links['BaseBody']); JointObject.ViewProviderGroundedJoint(ground.ViewObject); ground.Label='Ground - stationary base'
+ joint('Fixed','Fix_PanServo_To_Base','BaseBody','PanServoBody')
+ pan=joint('Revolute','PanRevolute','PanServoBody','PanRotorBody',(0,0,35),(0,0,1),(-90,90))
+ joint('Fixed','Fix_PanHorn_To_Rotor','PanRotorBody','PanHornBody')
+ joint('Fixed','Fix_TiltServo_To_PanRotor','PanRotorBody','TiltServoBody')
+ tilt=joint('Revolute','TiltRevolute','TiltServoBody','TiltCradleBody',(-41,0,78),(1,0,0),(-30,30))
+ joint('Fixed','Fix_TiltHorn_To_Cradle','TiltCradleBody','TiltHornBody')
+ doc.recompute()
+ solve=asm.solve()
+ if solve!=0: raise RuntimeError('Assembly solver returned '+str(solve))
+ sg=UtilsAssembly.getSimulationGroup(asm)
+ def make_sim(label,specs):
+  sim=sg.newObject('App::FeaturePython','Simulation'); SimMod.Simulation(sim); SimMod.ViewProviderSimulation(sim.ViewObject)
+  sim.Label=label; sim.aTimeStart=0.0; sim.bTimeEnd=1.0; sim.cTimeStepOutput=0.02; sim.jFramesPerSecond=30
+  for motion_label,joint_obj,formula in specs:
+   m=asm.newObject('App::FeaturePython','Motion'); SimMod.Motion(m,'Angular',None,formula); m.Joint=(joint_obj,['','']); SimMod.ViewProviderMotion(m.ViewObject); m.Label=motion_label
+   sim.Group=list(sim.Group)+[m]
+  return sim
+ specs=[('Pan plus/minus 60 deg',pan,'1.0471975512*sin(6.28318530718*time)'),('Tilt plus/minus 25 deg',tilt,'0.4363323130*sin(6.28318530718*time)')]
+ sims=[make_sim('Pan only - native motion',[specs[0]]),make_sim('Tilt only - native motion',[specs[1]]),make_sim('Combined pan and tilt - native motion',[('Pan plus/minus 45 deg',pan,'0.7853981634*sin(6.28318530718*time)'),('Tilt plus/minus 20 deg',tilt,'0.3490658504*sin(6.28318530718*time)')])]
+ doc.recompute()
+ results=[]
+ for index,sim in enumerate(sims):
+  neutral_rel=links['PanRotorBody'].Placement.inverse().multiply(links['TiltCradleBody'].Placement)
+  asm.generateSimulation(sim); n=asm.numberOfFrames()
+  if n<10: raise RuntimeError('Insufficient generated frames: '+str(n))
+  asm.updateForFrame(n//4)
+  pan_changed=(links['PanRotorBody'].Placement.Rotation.Angle>1e-4)
+  rel_now=links['PanRotorBody'].Placement.inverse().multiply(links['TiltCradleBody'].Placement)
+  tilt_changed=(neutral_rel.Rotation.inverted().multiply(rel_now.Rotation).Angle>1e-4)
+  results.append({'simulation':sim.Label,'motion_count':len(sim.Group),'frames':n,'quarter_frame_pan_rotated':pan_changed,'quarter_frame_tilt_rotated':tilt_changed})
+  view=Gui.activeDocument().activeView(); view.viewAxonometric(); view.fitAll()
+  view.saveImage(os.path.join(OUT,['pan_native_quarter.png','tilt_native_quarter.png','combined_native_quarter.png'][index]),1200,900,'Current')
+  for o in links.values(): o.Placement=App.Placement()
+  doc.recompute()
+ asm.solve(); doc.recompute()
+ doc.saveAs(FCSTD)
+ with open(os.path.join(OUT,'native_simulation_validation.json'),'w',encoding='utf-8') as f:
+  json.dump({'freecad_version':App.Version(),'assembly':asm.Name,'link_count':len(links),'links':list(links.keys()),'joints':[o.Name+':'+o.JointType for o in jg.Group if hasattr(o,'JointType')],'grounded':ground.ObjectToGround.Name,'independent_rotational_dof':2,'simulation_group':sg.Name,'simulations':results,'solver_return':asm.solve(),'file':FCSTD},f,indent=2)
+ with open(LOG,'w',encoding='utf-8') as f: f.write('SUCCESS\n'+json.dumps(results,indent=2)+'\nSaved: '+FCSTD)
+ Gui.activeDocument().activeView().viewAxonometric(); Gui.activeDocument().activeView().fitAll()
+except Exception:
+ with open(LOG,'w',encoding='utf-8') as f: f.write(traceback.format_exc())
+
+
+
+

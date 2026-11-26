@@ -1,0 +1,87 @@
+﻿import FreeCAD as A,FreeCADGui as G,Part,os,json,traceback
+from FreeCAD import Vector as V
+from PySide import QtCore,QtWidgets,QtGui
+H=r'EyeTrace_Integrated_Candidate_01'
+def run():
+ try:
+  d=A.openDocument(os.path.join(H,'work_02','Integrated_Snapshot.FCStd'));obs=[o for o in d.Objects if hasattr(o,'KinematicGroup')];qa={}
+  for o in d.Objects:
+   if hasattr(o,'Shape'):o.Visibility=o in obs
+  for o in obs:
+   color=(.65,.67,.7)
+   if o.Printable:color=(.14,.48,.68)
+   if o.Name.startswith('Base'):color=(.25,.3,.35)
+   if o.Name.startswith('TiltCradle') or (o.Printable and o.PrintFileName=='CameraPlate_21x16'):color=(.9,.5,.15)
+   if 'ThrustRing' in o.Name:color=(.85,.7,.25)
+   if 'Servo_SG90' in o.Name:color=(.12,.22,.75)
+   if 'OriginalStar' in o.Name:color=(.95,.92,.83)
+   if 'KEEP_OUT' in o.Name:color=(.85,.45,.1);o.ViewObject.Transparency=82
+   if o.Name=='PCB_Cut003':color=(.1,.4,.15)
+   if 'Lens' in o.Name:color=(.07,.08,.1)
+   o.ViewObject.ShapeColor=color
+  d.recompute();d.saveAs(os.path.join(H,'EyeTrace_Integrated_Assembly.FCStd'))
+  def scene(name,items,view='iso',native=None):
+   doc=A.newDocument(name)
+   for label,s,color,tr in items:
+    o=doc.addObject('PartDesign::Feature',label);o.Shape=s.copy();o.ViewObject.ShapeColor=color;o.ViewObject.Transparency=tr;o.Visibility=True
+   doc.recompute();G.updateGui();QtWidgets.QApplication.processEvents();v=G.activeDocument().activeView()
+   if view=='front':v.viewFront()
+   elif view=='rear':v.viewRear()
+   elif view=='top':v.viewTop()
+   elif view=='bottom':v.viewBottom()
+   else:v.viewAxonometric()
+   G.updateGui();v.fitAll();G.updateGui();QtWidgets.QApplication.processEvents();v.fitAll();p=os.path.join(H,'renders',name+'.png');v.saveImage(p,1600,1200,'White')
+   im=QtGui.QImage(p);nonwhite=sum(min(im.pixelColor(x,y).red(),im.pixelColor(x,y).green(),im.pixelColor(x,y).blue())<235 for y in range(0,im.height(),12) for x in range(0,im.width(),12));assert nonwhite>20,name
+   qa[name]={'nonwhite_samples':nonwhite,'objects':len(items)}
+   if native:doc.saveAs(native)
+   A.closeDocument(doc.Name)
+  def item(o,trans=None):return (o.Name,o.Shape,o.ViewObject.ShapeColor,o.ViewObject.Transparency if trans is None else trans)
+  scene('assembled',[item(o) for o in obs]);scene('assembled_front',[item(o) for o in obs],'front');scene('assembled_transparent',[item(o,70 if o.Printable else None) for o in obs])
+  posed=[]
+  for o in obs:
+   s=o.Shape.copy()
+   if o.KinematicGroup=='tilt':s.rotate(V(0,0,78),V(1,0,0),30)
+   if o.KinematicGroup!='fixed':s.rotate(V(),V(0,0,1),60)
+   posed.append((o.Name,s,o.ViewObject.ShapeColor,30 if o.Printable else o.ViewObject.Transparency))
+  scene('pose_pan60_tilt30',posed)
+  # Exploded actual solid leaves, with source labels and recorded offsets.
+  ed=A.newDocument('EyeTrace_Exploded');offsets=[];exploded=[]
+  for o in obs:
+   n=o.Name;off=V(0,0,0)
+   if o.KinematicGroup=='pan':off=V(0,0,35)
+   if o.KinematicGroup=='tilt':off=V(35,0,35)
+   if n.startswith(('PanServo','PanEar_')):off=V(-65,0,10)
+   if n=='Pan_Replaceable_ThrustRing':off=V(0,0,10)
+   if n=='Pan_KeyedHorn_Cover':off=V(0,0,15)
+   if n.startswith(('Pan_OriginalStar','PanOriginalScrew')):off=V(0,0,25)
+   if n.startswith(('TiltServo','TiltEar_')):off=V(-30,0,35)
+   if n=='Tilt_KeyedHorn_CaptiveCover':off=V(-10,0,35)
+   if n.startswith(('Tilt_OriginalStar','TiltOriginalScrew')):off=V(5,0,35)
+   if n=='Tilt_Removable_IdlerPillar' or n.startswith('IdlerPillar_'):off=V(70,0,35)
+   if n=='Tilt_Journal_FlangedSleeve':off=V(55,0,35)
+   if n.startswith('TiltIdler_'):off=V(80,0,35)
+   if o.Printable and o.PrintFileName=='CameraPlate_21x16':off=V(35,-25,35)
+   if n.startswith('RailMount_'):off=V(35,-15,35)
+   if n=='PCB_Cut003' or n.startswith(('PCB_Spacer','Camera_M2','Camera_Rear','Camera_Lens','Camera_Wire')):off=V(35,-50,35)
+   cylinders=[f for f in o.Shape.Faces if type(f.Surface).__name__=='Cylinder'];ax=max(cylinders,key=lambda f:f.Area).Surface.Axis if cylinders else V(0,0,1)
+   for i,solid in enumerate(o.Shape.Solids):
+    s=solid.copy();extra=ax*(i*4) if len(o.Shape.Solids)>1 else V();s.translate(off+extra);name=n+'_Solid'+str(i+1);q=ed.addObject('PartDesign::Feature',name);q.Shape=s;q.Label=o.Label+' / solid'+str(i+1);q.addProperty('App::PropertyString','SourceComponent');q.SourceComponent=n;q.ViewObject.ShapeColor=o.ViewObject.ShapeColor
+    visible='KEEP_OUT' not in n;q.Visibility=visible
+    if visible:exploded.append((name,s,o.ViewObject.ShapeColor,0))
+    offsets.append({'source':n,'solid_index':i,'offset_mm':[off.x+extra.x,off.y+extra.y,off.z+extra.z],'reference_reservation_hidden':not visible})
+  ed.recompute();ed.saveAs(os.path.join(H,'EyeTrace_Exploded.FCStd'));scene('exploded',exploded);A.closeDocument(ed.Name)
+  json.dump(offsets,open(os.path.join(H,'checks','exploded_solid_offsets.json'),'x'),indent=2)
+  # Camera interface detail, with uncertainty omitted only from this explanatory view.
+  cam=[o for o in obs if (o.Printable and o.PrintFileName=='CameraPlate_21x16') or o.Name=='PCB_Cut003' or o.Name.startswith(('Camera_M2','PCB_Spacer','RailMount_'))]
+  scene('camera_21x16_attachment',[item(o,65 if o.Name=='PCB_Cut003' else 0) for o in cam])
+  scene('servo_ear_installations',[item(o,60 if o.Printable else 0) for o in obs if o.Name.startswith(('Base','PanYoke','PanServo','TiltServo','PanEar_','TiltEar_'))])
+  plate=[o for o in obs if o.Printable and o.PrintFileName=='CameraPlate_21x16'][0];scene('camera_plate_21x16',[item(plate,0)],'front')
+  bd=A.openDocument(os.path.join(H,'K2_PrintLayout.FCStd'));scene('single_bed',[(o.Name,o.Shape,(.15,.5,.7),0) for o in bd.Objects if hasattr(o,'Shape')],'top');A.closeDocument(bd.Name)
+  cd=A.openDocument(os.path.join(H,'coupons','FitTests.FCStd'));scene('fit_test_coupons',[(o.Name,o.Shape,(.2,.6,.55),0) for o in cd.Objects if hasattr(o,'Shape')]);A.closeDocument(cd.Name)
+  scene('ribbon_reservation',[item(o,78 if o.Printable else None) for o in obs],'rear')
+  json.dump({'renderer':'Installed FreeCAD1.1.4 Coin3D','images':qa,'exploded_scope':'Actual solid leaves separated for explanation; reference keep-outs hidden in exploded view. Written instructions define assembly order.','physical_fit':'UNVERIFIED'},open(os.path.join(H,'renders','render_QA.json'),'x'),indent=2)
+ except Exception:open(os.path.join(H,'renders','error.txt'),'x').write(traceback.format_exc())
+ finally:
+  for n in list(A.listDocuments()):A.closeDocument(n)
+  QtCore.QTimer.singleShot(1000,QtWidgets.QApplication.instance().quit)
+QtCore.QTimer.singleShot(1200,run)

@@ -1,0 +1,65 @@
+{
+  "Base": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false
+  },
+  "PanServoRetainer": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false
+  },
+  "TiltServoRetainer": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false
+  },
+  "PanYoke": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false
+  },
+  "TiltCameraCradle": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false
+  },
+  "PanHornClamp": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false
+  },
+  "TiltHornClamp": {
+    "valid": true,
+    "solids": 1,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false
+  }
+}

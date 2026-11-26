@@ -1,0 +1,72 @@
+{
+  "archive_ok": true,
+  "mesh_object_count": 13,
+  "build_item_count": 13,
+  "objects": [
+    {
+      "id": "1",
+      "name": "Base_EarMount_ThrustSupport",
+      "triangles": 4408
+    },
+    {
+      "id": "2",
+      "name": "Pan_Replaceable_ThrustRing",
+      "triangles": 1692
+    },
+    {
+      "id": "3",
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "triangles": 9942
+    },
+    {
+      "id": "4",
+      "name": "Tilt_Removable_IdlerPillar",
+      "triangles": 1048
+    },
+    {
+      "id": "5",
+      "name": "Pan_KeyedHorn_Cover",
+      "triangles": 3472
+    },
+    {
+      "id": "6",
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "triangles": 9108
+    },
+    {
+      "id": "7",
+      "name": "Tilt_KeyedHorn_CaptiveCover",
+      "triangles": 3472
+    },
+    {
+      "id": "8",
+      "name": "Tilt_Journal_FlangedSleeve",
+      "triangles": 1008
+    },
+    {
+      "id": "9",
+      "name": "PCB_Spacer_Lower_Left",
+      "triangles": 672
+    },
+    {
+      "id": "10",
+      "name": "PCB_Spacer_Lower_Right",
+      "triangles": 672
+    },
+    {
+      "id": "11",
+      "name": "PCB_Spacer_Upper_Left",
+      "triangles": 672
+    },
+    {
+      "id": "12",
+      "name": "PCB_Spacer_Upper_Right",
+      "triangles": 672
+    },
+    {
+      "id": "13",
+      "name": "CameraPlate_21x14",
+      "triangles": 3828
+    }
+  ]
+}

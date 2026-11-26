@@ -1,0 +1,26 @@
+# Physical verification checklist ? BLANK RESULTS
+Full-print release is UNCHANGED. Date_____ Filament/lot_____ Profile_____ Nozzle_____ Temperatures_____ Instrument uncertainty_____ Finishing_____
+
+Mark PASS / FAIL / UNVERIFIED for every line; do not tick unmeasured claims.
+
+- [ ] Preview7 grounded pieces; supports OFF; by-layer; no touching brims;100% scale.
+- [ ] Printed dimensions/open holes checked; actual profile/finishing recorded.
+- [ ]01 ServoA body/ears and M1.6 fit without force or deformation.
+- [ ]01 ServoB independently passes.
+- [ ]02 HornA seats, positive stops both ways, total free play<=4deg/1.4mm atR20.
+- [ ]02 HornB independently passes.
+- [ ]03 Four M3 seats/threads; rim gap<=0.10mm; horn lift<=0.20mm; projection>=1mm.
+- [ ]03 Both horn results and factory screw availability/access recorded separately.
+- [ ]04 Printed21x16 within+/-0.15mm; all four axes align with no PCB/lens contact.
+- [ ]04 Actual camera screw-hole compatibility recorded separately.
+- [ ]05/06 OD/ID/ovality measured; gap0.30..0.90mm; two free turns EACH direction.
+- [ ]06/07 Tilt gap0.10..0.35mm; end projection>=0.20mm; M3 passes; tab unclamped/free.
+- [ ]8 Nine camera rows EACH completed; all hidden regions markedUNVERIFIED.
+- [ ]9 Safe existing fixture, all power unplugged, horns physically removed, axis supported.
+- [ ]9 Sweeps/15 poses:>=3mm gap, slack, seated connector, no rubbing/crease/tension.
+- [ ]9 Actual cable bend requirement and minimum radius recorded; otherwiseUNVERIFIED.
+- [ ] Only relevant failure evidence collected; no full-production approval inferred.
+
+Summary: PASS_____ FAIL_____ UNVERIFIED_____ Notes/photo IDs_________________
+
+Coupon success does not certify complete assembly, payload, creep or powered motion. Report evidence for a separate review; do not modify existing release file.

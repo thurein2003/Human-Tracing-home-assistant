@@ -1,0 +1,232 @@
+{
+  "Base_EarMount_ThrustSupport": {
+    "valid": true,
+    "solids": 1,
+    "volume": 50585.30534170316
+  },
+  "Pan_Replaceable_ThrustRing": {
+    "valid": true,
+    "solids": 1,
+    "volume": 833.5273628504433
+  },
+  "PanYoke_EarBracket_KeyedDrive": {
+    "valid": true,
+    "solids": 1,
+    "volume": 46507.31048794522
+  },
+  "Pan_KeyedHorn_Cover": {
+    "valid": true,
+    "solids": 1,
+    "volume": 3014.246490637965
+  },
+  "TiltCradle_KeyedHorn_CameraFrame": {
+    "valid": true,
+    "solids": 1,
+    "volume": 24910.031016388028
+  },
+  "Tilt_KeyedHorn_CaptiveCover": {
+    "valid": true,
+    "solids": 1,
+    "volume": 2378.073978286032
+  },
+  "Tilt_Journal_FlangedSleeve": {
+    "valid": true,
+    "solids": 1,
+    "volume": 44.20220863600839
+  },
+  "Camera_SlidingRail_Lower": {
+    "valid": true,
+    "solids": 1,
+    "volume": 839.981422859737
+  },
+  "PCB_Spacer_Lower_Left": {
+    "valid": true,
+    "solids": 1,
+    "volume": 45.33318199130071
+  },
+  "PCB_Spacer_Lower_Right": {
+    "valid": true,
+    "solids": 1,
+    "volume": 45.33318199130071
+  },
+  "Camera_SlidingRail_Upper": {
+    "valid": true,
+    "solids": 1,
+    "volume": 839.981422859737
+  },
+  "PCB_Spacer_Upper_Left": {
+    "valid": true,
+    "solids": 1,
+    "volume": 45.333181991300705
+  },
+  "PCB_Spacer_Upper_Right": {
+    "valid": true,
+    "solids": 1,
+    "volume": 45.333181991300705
+  },
+  "PanServo_SG90_Reference": {
+    "valid": true,
+    "solids": 1,
+    "volume": 7152.840844796366
+  },
+  "TiltServo_SG90_Reference": {
+    "valid": true,
+    "solids": 1,
+    "volume": 7152.840844796365
+  },
+  "Pan_OriginalStar_PROVISIONAL": {
+    "valid": true,
+    "solids": 1,
+    "volume": 362.11724941364275
+  },
+  "Tilt_OriginalStar_PROVISIONAL": {
+    "valid": true,
+    "solids": 1,
+    "volume": 362.11724941364287
+  },
+  "PanOriginalScrew_PROVISIONAL": {
+    "valid": true,
+    "solids": 1,
+    "volume": 19.674223993106082
+  },
+  "TiltOriginalScrew_PROVISIONAL": {
+    "valid": true,
+    "solids": 1,
+    "volume": 19.67422399310609
+  },
+  "PanDrive_M3x10_0": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.4849379035676
+  },
+  "PanDrive_M3x10_1": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.4849379035676
+  },
+  "PanDrive_M3x10_2": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.4849379035676
+  },
+  "PanDrive_M3x10_3": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.48493790356756
+  },
+  "TiltDrive_M3x10_0": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.48493790356775
+  },
+  "TiltDrive_M3x10_1": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.48493790356775
+  },
+  "TiltDrive_M3x10_2": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.48493790356778
+  },
+  "TiltDrive_M3x10_3": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.48493790356773
+  },
+  "TiltIdler_M3x12": {
+    "valid": true,
+    "solids": 2,
+    "volume": 235.22800083496543
+  },
+  "PanEar_M1p6x8_0": {
+    "valid": true,
+    "solids": 3,
+    "volume": 41.32025330917047
+  },
+  "PanEar_M1p6x8_1": {
+    "valid": true,
+    "solids": 3,
+    "volume": 41.32025330917047
+  },
+  "TiltEar_M1p6x8_0": {
+    "valid": true,
+    "solids": 3,
+    "volume": 41.32025330917047
+  },
+  "TiltEar_M1p6x8_1": {
+    "valid": true,
+    "solids": 3,
+    "volume": 41.320253309170496
+  },
+  "RailMount_Lower_M3x10_0": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.4849379035677
+  },
+  "RailMount_Lower_M3x10_1": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.4849379035677
+  },
+  "Camera_M2x12_Lower_Left": {
+    "valid": true,
+    "solids": 2,
+    "volume": 79.97555516293386
+  },
+  "Camera_M2x12_Lower_Right": {
+    "valid": true,
+    "solids": 2,
+    "volume": 79.97555516293386
+  },
+  "RailMount_Upper_M3x10_0": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.48493790356775
+  },
+  "RailMount_Upper_M3x10_1": {
+    "valid": true,
+    "solids": 2,
+    "volume": 190.48493790356775
+  },
+  "Camera_M2x12_Upper_Left": {
+    "valid": true,
+    "solids": 2,
+    "volume": 79.97555516293384
+  },
+  "Camera_M2x12_Upper_Right": {
+    "valid": true,
+    "solids": 2,
+    "volume": 79.97555516293384
+  },
+  "PCB_Cut003": {
+    "valid": true,
+    "solids": 1,
+    "volume": 2286.0715064906017
+  },
+  "Camera_RearComponents_KEEP_OUT": {
+    "valid": true,
+    "solids": 1,
+    "volume": 9759.999999999998
+  },
+  "Camera_Lens_PROVISIONAL": {
+    "valid": true,
+    "solids": 1,
+    "volume": 1539.3804002589986
+  },
+  "PanServo_WireExit_KEEP_OUT": {
+    "valid": true,
+    "solids": 1,
+    "volume": 112.76099999999997
+  },
+  "TiltServo_WireExit_KEEP_OUT": {
+    "valid": true,
+    "solids": 1,
+    "volume": 67.88099999999967
+  },
+  "Camera_WireExit_KEEP_OUT": {
+    "valid": true,
+    "solids": 1,
+    "volume": 127.2345024703866
+  }
+}

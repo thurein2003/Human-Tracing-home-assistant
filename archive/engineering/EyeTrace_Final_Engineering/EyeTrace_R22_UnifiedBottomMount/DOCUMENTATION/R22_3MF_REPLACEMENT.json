@@ -1,0 +1,26 @@
+{
+  "source": "EyeTrace_Final_Engineering\\EyeTrace_R21_SinglePanMountPlate\\PRINT\\Plate02_R21_SingleMountPlate_SLICED_HOLD.3mf",
+  "output": "EyeTrace_Final_Engineering\\EyeTrace_R22_UnifiedBottomMount\\PRINT\\Plate02_R22_UnifiedBottomMount_UNSLICED.3mf",
+  "replaced_component": "PanYoke_EarBracket_KeyedDrive mesh only",
+  "mesh_path": "3D/Objects/object_2.model",
+  "triangles": 77030,
+  "vertices": 38475,
+  "local_bbox_mm": [
+    [
+      -51.1,
+      51.099997
+    ],
+    [
+      -35.297912,
+      35.297916
+    ],
+    [
+      -33.9,
+      33.900003
+    ]
+  ],
+  "component_instances": 12,
+  "placement_transform_unchanged": true,
+  "archive_crc": "PASS",
+  "slice_state": "UNSLICED; must be sliced in Creality Print"
+}

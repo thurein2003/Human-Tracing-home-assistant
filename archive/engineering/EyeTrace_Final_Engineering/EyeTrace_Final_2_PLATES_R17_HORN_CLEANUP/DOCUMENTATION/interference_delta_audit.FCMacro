@@ -1,0 +1,13 @@
+﻿import FreeCAD as A, os, json
+root=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+new=A.openDocument(os.path.join(root,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'))
+old=A.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\CAD\EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd')
+checks=[]
+for nm in ['PanYoke_EarBracket_KeyedDrive','TiltCradle_KeyedHorn_CameraFrame']:
+ n=new.getObject(nm).Shape; o=old.getObject(nm).Shape; delta=n.cut(o); pairs=[]
+ for q in new.Objects:
+  if q.Name==nm or q.Name in ('AssemblyRoot','PrintedParts','HardwareReference','Keepouts') or not hasattr(q,'Shape') or q.Shape.isNull():continue
+  v=delta.common(q.Shape).Volume
+  if v>0.01:pairs.append({'name':q.Name,'label':q.Label,'intersection_mm3':float(v)})
+ checks.append({'component':nm,'added_volume_mm3':float(delta.Volume),'new_material_intersections_over_0p01_mm3':pairs})
+with open(os.path.join(root,'DELTA_INTERFERENCE_AUDIT.json'),'w') as f:json.dump(checks,f,indent=2)

@@ -1,0 +1,131 @@
+{
+  "native": {
+    "opens": true,
+    "invalid_geometric_features": [],
+    "components": 49,
+    "printable_parts": 13,
+    "component_solids": 76
+  },
+  "camera_center_pattern_mm": [
+    21,
+    16
+  ],
+  "STEP": {
+    "solid_count": 76,
+    "all_solids_match_native": true,
+    "max_solid_symmetric_difference_mm3": 0
+  },
+  "individual_meshes": {
+    "Base_EarMount_ThrustSupport": {
+      "reopened": true,
+      "watertight": true
+    },
+    "Pan_Replaceable_ThrustRing": {
+      "reopened": true,
+      "watertight": true
+    },
+    "PanYoke_EarBracket_KeyedDrive": {
+      "reopened": true,
+      "watertight": true
+    },
+    "Tilt_Removable_IdlerPillar": {
+      "reopened": true,
+      "watertight": true
+    },
+    "Pan_KeyedHorn_Cover": {
+      "reopened": true,
+      "watertight": true
+    },
+    "TiltCradle_KeyedHorn_CameraFrame": {
+      "reopened": true,
+      "watertight": true
+    },
+    "Tilt_KeyedHorn_CaptiveCover": {
+      "reopened": true,
+      "watertight": true
+    },
+    "Tilt_Journal_FlangedSleeve": {
+      "reopened": true,
+      "watertight": true
+    },
+    "PCB_Spacer_Lower_Left": {
+      "reopened": true,
+      "watertight": true
+    },
+    "PCB_Spacer_Lower_Right": {
+      "reopened": true,
+      "watertight": true
+    },
+    "PCB_Spacer_Upper_Left": {
+      "reopened": true,
+      "watertight": true
+    },
+    "PCB_Spacer_Upper_Right": {
+      "reopened": true,
+      "watertight": true
+    },
+    "CameraPlate_21x16": {
+      "reopened": true,
+      "watertight": true
+    }
+  },
+  "EyeTrace_Final_K2_SingleBed.stl": {
+    "components": 13,
+    "bounds_mm": [
+      10.0,
+      10.0,
+      -7.105427357601002e-15,
+      207.0,
+      202.60000610351562,
+      77.0
+    ],
+    "watertight": true
+  },
+  "FitTests_K2_Bed.stl": {
+    "components": 7,
+    "bounds_mm": [
+      10.0,
+      10.0,
+      -7.105427357601002e-15,
+      202.60000610351562,
+      130.60000610351562,
+      4.199999809265137
+    ],
+    "watertight": true
+  },
+  "modeled_fastener_counts": {
+    "pan_M3x10": 4,
+    "tilt_M3x10": 4,
+    "camera_frame_M3x10": 4,
+    "pillar_M3x10": 2,
+    "camera_M2": 4,
+    "pan_ear_M1p6": 2,
+    "tilt_ear_M1p6": 2
+  },
+  "exploded_solid_count": 76,
+  "report_missing_links": [],
+  "preservation": {
+    "prior_files_checked": 743,
+    "changed_or_missing": []
+  },
+  "source_archive_CRC": {
+    "EyeTrace_CAD_20261115_232254/tochatgpt.zip": "PASS"
+  },
+  "final_motion_summary": {
+    "critical_software_failures": [],
+    "motion_penetrations": 0,
+    "unverified_rear_clearance_conflicts": 9,
+    "release_status": "HOLD for physical-fit evidence",
+    "positive_horn_drive": [
+      true,
+      true
+    ],
+    "physical_fit": "UNVERIFIED",
+    "native_components": 49,
+    "printed_components": 13,
+    "independent_of_builder": "Validator imports no builder code; opens saved native BRep and native expressions."
+  },
+  "source_preserved_nominal_geometry": true,
+  "CAD_PNG_views": 31,
+  "release": "CAD VERIFIED within nominal scope; FIT-TEST READY; FULL PRINT BLOCKED; PHYSICAL FIT UNVERIFIED"
+}

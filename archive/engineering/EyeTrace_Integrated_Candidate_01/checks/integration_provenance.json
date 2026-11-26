@@ -1,0 +1,60 @@
+{
+  "selected_sources": {
+    "camera": "EyeTrace_CAD_20261115_232254\\camera_mount_21x16_01\\validated\\EyeTrace_Camera_21x16_Reviewed.FCStd",
+    "repair": "EyeTrace_CAD_20261115_232254\\sg90_interface_repair_01\\EyeTrace_Repair_Assembly.FCStd",
+    "reference": "EyeTrace_CAD_20261115_232254\\sg90_reference_revision_02\\EyeTrace_SG90_Reference_01.FCStd"
+  },
+  "retained_geometry_checks": {
+    "PanServo_SG90_Reference": {
+      "source": "sg90_reference_revision_02",
+      "symmetric_difference_mm3": 0.0
+    },
+    "TiltServo_SG90_Reference": {
+      "source": "sg90_reference_revision_02",
+      "symmetric_difference_mm3": 0.0
+    },
+    "Base_EarMount_ThrustSupport": {
+      "source": "sg90_interface_repair_01",
+      "symmetric_difference_mm3": 0.0
+    },
+    "PanYoke_EarBracket_KeyedDrive": {
+      "source": "sg90_interface_repair_01",
+      "symmetric_difference_mm3": 0.0
+    },
+    "Pan_KeyedHorn_Cover": {
+      "source": "sg90_interface_repair_01",
+      "symmetric_difference_mm3": 0.0
+    },
+    "Tilt_KeyedHorn_CaptiveCover": {
+      "source": "sg90_interface_repair_01",
+      "symmetric_difference_mm3": 0.0
+    },
+    "Tilt_Removable_IdlerPillar": {
+      "source": "sg90_interface_repair_01",
+      "symmetric_difference_mm3": 0.0
+    },
+    "Tilt_Journal_FlangedSleeve": {
+      "source": "sg90_interface_repair_01",
+      "symmetric_difference_mm3": 0.0
+    },
+    "Pan_Replaceable_ThrustRing": {
+      "source": "sg90_interface_repair_01",
+      "symmetric_difference_mm3": 0.0
+    },
+    "camera": {
+      "source": "camera_mount_21x16_01",
+      "hole_pitch_mm": [
+        21,
+        16
+      ],
+      "changes_retained": "Fixed four-hole plate and frame slots extended for16mm vertical spacing; PCB dimensions remain separate"
+    }
+  },
+  "integration_geometry_changes": {
+    "Camera_WireExit_KEEP_OUT": 381.26923489338765
+  },
+  "component_count": 49,
+  "printed_count": 13,
+  "original_star_status": "Provisional exterior; original factory spline kept physically; no teeth invented",
+  "ribbon_scope": "Flat exit reservation only; flexible loop, actual connector and minimum bend unknown"
+}

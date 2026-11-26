@@ -1,0 +1,16 @@
+﻿import FreeCAD as A, Part, Mesh, MeshPart, json, os
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'));o=d.getObject('TiltCradle_KeyedHorn_CameraFrame'); rows=[]
+for df in [0.5,0.2,0.08,0.02]:
+ m=MeshPart.meshFromShape(Shape=o.Shape,LinearDeflection=df,AngularDeflection=0.15,Relative=False)
+ q=os.path.join(p,'STL','_mesh_try_'+str(df)+'.stl');m.write(q);r=Mesh.Mesh(q)
+ rows.append({'type':'meshpart','deflection':df,'facets':len(r.Facets),'solid':r.isSolid(),'vol':r.Volume})
+for kind,func in [('part',Part.export),('mesh',Mesh.export)]:
+ q=os.path.join(p,'STL','_mesh_try_'+kind+'.stl')
+ try:
+  func([o],q);r=Mesh.Mesh(q);rows.append({'type':kind,'facets':len(r.Facets),'solid':r.isSolid(),'vol':r.Volume})
+ except Exception as e:rows.append({'type':kind,'error':str(e)})
+with open(os.path.join(p,'STL','_tilt_mesh_trials.json'),'w') as f:json.dump(rows,f,indent=2)
+print(rows)
+A.closeDocument(d.Name)
+

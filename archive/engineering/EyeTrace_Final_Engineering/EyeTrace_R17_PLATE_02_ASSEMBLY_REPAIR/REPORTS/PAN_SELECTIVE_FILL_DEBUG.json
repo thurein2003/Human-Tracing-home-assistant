@@ -1,0 +1,97 @@
+[
+  {
+    "stage": "disk",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 5016.96638815022
+  },
+  {
+    "stage": "exp",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 567.2924095351405
+  },
+  {
+    "stage": "env",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 5016.96638815022
+  },
+  {
+    "stage": "expG",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 567.2924095351401
+  },
+  {
+    "stage": "patch",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 4449.673978615081
+  },
+  {
+    "stage": "old",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 42345.82609243497
+  },
+  {
+    "stage": "cover_offset",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 3882.8831969894572
+  },
+  {
+    "stage": "safe_after_cover",
+    "null": false,
+    "valid": true,
+    "solids": 5,
+    "vol": 2345.758645892341
+  },
+  {
+    "stage": "screw_offset_0_0",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 186.5166893450797
+  },
+  {
+    "stage": "safe_after_0_0",
+    "null": false,
+    "valid": true,
+    "solids": 5,
+    "vol": 2327.804327648244
+  },
+  {
+    "stage": "screw_offset_0_1",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 65.23617501468351
+  },
+  {
+    "stage": "safe_after_0_1",
+    "null": false,
+    "valid": true,
+    "solids": 4,
+    "vol": 2328.1183544441997
+  },
+  {
+    "stage": "screw_offset_1_0",
+    "null": false,
+    "valid": true,
+    "solids": 1,
+    "vol": 186.5166893450797
+  },
+  {
+    "exception": "Null shape",
+    "trace": "Traceback (most recent call last):\n  File \"EyeTrace_Final_Engineering/EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP/DOCUMENTATION/probe_selective_debug.FCMacro\", line 19, in <module>\n    off=solid.makeOffsetShape(.2,.05,True);item('screw_offset_%s_%s'%(i,k),off);safe=safe.cut(off);item('safe_after_%s_%s'%(i,k),safe)\n                                                                                     ^^^^^^^^^^^^^\nValueError: Null shape\n"
+  }
+]

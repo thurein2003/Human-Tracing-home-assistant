@@ -1,0 +1,171 @@
+[
+  {
+    "name": "PanYoke_EarBracket_KeyedDrive",
+    "offset_mm": [
+      10,
+      10,
+      0
+    ],
+    "size_mm": [
+      99.7,
+      70.6,
+      70.0
+    ]
+  },
+  {
+    "name": "Base_EarMount_ThrustSupport",
+    "offset_mm": [
+      117.7,
+      10,
+      0
+    ],
+    "size_mm": [
+      80.0,
+      70.0,
+      36.5
+    ]
+  },
+  {
+    "name": "Pan_Replaceable_ThrustRing",
+    "offset_mm": [
+      10,
+      88.6,
+      0
+    ],
+    "size_mm": [
+      64.0,
+      64.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Pan_KeyedHorn_Cover",
+    "offset_mm": [
+      82.0,
+      88.6,
+      0
+    ],
+    "size_mm": [
+      48.0,
+      48.0,
+      4.200000000000006
+    ]
+  },
+  {
+    "name": "TiltCradle_KeyedHorn_CameraFrame",
+    "offset_mm": [
+      138.0,
+      88.6,
+      0
+    ],
+    "size_mm": [
+      45.000000000000014,
+      45.4,
+      77.0
+    ]
+  },
+  {
+    "name": "Tilt_KeyedHorn_CaptiveCover",
+    "offset_mm": [
+      191.0,
+      88.6,
+      0
+    ],
+    "size_mm": [
+      42.00000000000001,
+      42.0,
+      4.200000000000017
+    ]
+  },
+  {
+    "name": "Tilt_Journal_FlangedSleeve",
+    "offset_mm": [
+      241.0,
+      88.6,
+      0
+    ],
+    "size_mm": [
+      7.0,
+      7.0,
+      4.099999999999994
+    ]
+  },
+  {
+    "name": "Camera_SlidingRail_Lower",
+    "offset_mm": [
+      10,
+      160.6,
+      0
+    ],
+    "size_mm": [
+      56.0,
+      6.0,
+      3.0
+    ]
+  },
+  {
+    "name": "Camera_SlidingRail_Upper",
+    "offset_mm": [
+      74.0,
+      160.6,
+      0
+    ],
+    "size_mm": [
+      56.0,
+      6.0,
+      3.0
+    ]
+  },
+  {
+    "name": "PCB_Spacer_Lower_Left",
+    "offset_mm": [
+      138.0,
+      160.6,
+      0
+    ],
+    "size_mm": [
+      5.0,
+      4.9999999999999964,
+      3.0
+    ]
+  },
+  {
+    "name": "PCB_Spacer_Lower_Right",
+    "offset_mm": [
+      151.0,
+      160.6,
+      0
+    ],
+    "size_mm": [
+      5.0,
+      4.9999999999999964,
+      3.0
+    ]
+  },
+  {
+    "name": "PCB_Spacer_Upper_Left",
+    "offset_mm": [
+      164.0,
+      160.6,
+      0
+    ],
+    "size_mm": [
+      5.0,
+      4.9999999999999964,
+      3.0
+    ]
+  },
+  {
+    "name": "PCB_Spacer_Upper_Right",
+    "offset_mm": [
+      177.0,
+      160.6,
+      0
+    ],
+    "size_mm": [
+      5.0,
+      4.9999999999999964,
+      3.0
+    ]
+  }
+]

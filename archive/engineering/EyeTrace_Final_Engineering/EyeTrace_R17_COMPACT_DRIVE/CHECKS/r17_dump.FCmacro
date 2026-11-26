@@ -1,0 +1,16 @@
+﻿import FreeCAD as A, Part, json
+from FreeCAD import Vector as V
+paths={
+'assembly':r'EyeTrace_Final_Engineering\EyeTrace_R17_COMPACT_DRIVE\CAD\EyeTrace_R17_DriveSupport_Audit_HOLD.FCStd',
+'master':r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'}
+out=r'EyeTrace_Final_Engineering\EyeTrace_R17_COMPACT_DRIVE\CHECKS\r17_master_and_drives.json'
+res={}
+for key,path in paths.items():
+ d=A.openDocument(path); rows=[]
+ for o in d.Objects:
+  if not hasattr(o,'Shape') or o.Shape.isNull(): continue
+  b=o.Shape.BoundBox
+  rows.append({'name':o.Name,'label':o.Label,'type':o.TypeId,'bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax],'volume':o.Shape.Volume,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids)})
+ res[key]={'file':path,'objects':rows}; A.closeDocument(d.Name)
+with open(out,'w') as f: json.dump(res,f,indent=2)
+print('WROTE',out)

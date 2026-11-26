@@ -1,0 +1,24 @@
+﻿import FreeCAD as A, Part, json
+from FreeCAD import Vector as V, Rotation
+assy=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\CAD\EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'
+master=r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R17_COMPACT_DRIVE\CHECKS\interface_compare.json'
+d=A.openDocument(assy); m=A.openDocument(master)
+void=m.getObject('BaseCoupon').Shape.cut(m.getObject('FinalCoupon').Shape)
+rows={}
+for name, candidates in [
+('PAN',[(Rotation(),V(0,0,z)) for z in [41.0,37.0,35.0,33.0]]),
+('TILT_PLUS',[(Rotation(V(0,0,1),V(1,0,0)),V(x,0,78)) for x in [-41,-39.3,-37,-33]]),
+('TILT_MINUS',[(Rotation(V(0,0,1),V(-1,0,0)),V(x,0,78)) for x in [-41,-39.3,-37,-33]])]:
+ obj=d.getObject('PanYoke_EarBracket_KeyedDrive') if name=='PAN' else d.getObject('TiltCradle_KeyedHorn_CameraFrame')
+ arr=[]
+ for rot,top in candidates:
+  sh=void.copy(); sh.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793)
+  sh.translate(top-rot.multVec(V(0,0,3.8)))
+  inter=obj.Shape.common(sh)
+  arr.append({'top':list(top),'rotation_axis':list(rot.Axis),'angle_deg':rot.Angle*180/3.141592653589793,'voidVol':void.Volume,'intersectVol':inter.Volume,'bbox':([inter.BoundBox.XMin,inter.BoundBox.YMin,inter.BoundBox.ZMin,inter.BoundBox.XMax,inter.BoundBox.YMax,inter.BoundBox.ZMax] if not inter.isNull() else [])})
+ rows[name]=arr
+with open(out,'w') as f: json.dump(rows,f,indent=2)
+print('WROTE',out)
+A.closeDocument(m.Name); A.closeDocument(d.Name)
+

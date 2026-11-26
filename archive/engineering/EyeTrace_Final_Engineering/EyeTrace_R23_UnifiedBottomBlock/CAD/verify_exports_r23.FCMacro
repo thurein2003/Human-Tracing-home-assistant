@@ -1,0 +1,6 @@
+import FreeCAD as App, Part, Mesh, json
+from pathlib import Path
+root=Path(r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock')
+step=Part.read(str(root/'CAD'/'PanYoke_R23_UnifiedBottomBlock.step')); stl=Mesh.Mesh(str(root/'STL'/'PanYoke_R23_UnifiedBottomBlock.stl'))
+r={'component_step_reimport':{'valid':step.isValid(),'solids':len(step.Solids),'volume_mm3':step.Volume,'bbox':[step.BoundBox.XMin,step.BoundBox.XMax,step.BoundBox.YMin,step.BoundBox.YMax,step.BoundBox.ZMin,step.BoundBox.ZMax]},'stl_reimport':{'facets':len(stl.Facets),'is_solid':stl.isSolid(),'bbox':[stl.BoundBox.XMin,stl.BoundBox.XMax,stl.BoundBox.YMin,stl.BoundBox.YMax,stl.BoundBox.ZMin,stl.BoundBox.ZMax]}}
+(root/'DOCUMENTATION'/'R23_EXPORT_REIMPORT_CHECK.json').write_text(json.dumps(r,indent=2));print(json.dumps(r,indent=2))

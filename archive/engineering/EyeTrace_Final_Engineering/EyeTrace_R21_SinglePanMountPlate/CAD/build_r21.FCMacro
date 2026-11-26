@@ -1,0 +1,49 @@
+﻿import FreeCAD as App, Part, MeshPart, json
+from FreeCAD import Vector as V
+from pathlib import Path
+ROOT=Path(r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate')
+SRC=Path(r'EyeTrace_Final_Engineering\EyeTrace_R20_UltraLowProfile\CAD\EyeTrace_R20_UltraLowProfile.FCStd')
+CAD=ROOT/'CAD'; STL=ROOT/'STL'; DOC=ROOT/'DOCUMENTATION'
+doc=App.openDocument(str(SRC))
+cover=doc.getObject('Pan_KeyedHorn_Cover'); yoke=doc.getObject('PanYoke_EarBracket_KeyedDrive')
+if cover is None or yoke is None: raise RuntimeError('R20 pan components missing')
+original=cover.Shape.copy(); bb=original.BoundBox; z0=bb.ZMin; h=bb.ZLength
+# Four orthogonal retainer arms, four existing screw pads and a narrow annular connection.
+rails=[Part.makeBox(44.0,4.6,h,V(-22.0,-2.3,z0)),Part.makeBox(4.6,44.0,h,V(-2.3,-22.0,z0))]
+pads=[]
+for x,y in [(18,0),(-18,0),(0,18),(0,-18)]: pads.append(Part.makeCylinder(5.8,h,V(x,y,z0)))
+network=rails[0].fuse(rails[1])
+for p in pads: network=network.fuse(p)
+network=network.fuse(Part.makeCylinder(5.2,h,V(0,0,z0)).cut(Part.makeCylinder(4.1,h+2,V(0,0,z0-1)))).removeSplitter()
+candidate=original.common(network).removeSplitter()
+if not candidate.isValid() or len(candidate.Solids)!=1: raise RuntimeError('R21 retainer must be one valid solid')
+# measure exact clearance/engagement against existing assembly reference objects
+horn=doc.getObject('Pan_OriginalStar_PROVISIONAL')
+yoke_before=yoke.Shape.copy()
+cover.Shape=candidate
+doc.recompute()
+def pair(a,b):
+ if a is None or b is None:return None
+ q=a.Shape.common(b.Shape);return {'intersection_mm3':q.Volume,'distance_mm':a.Shape.distToShape(b.Shape)[0]}
+yoke_change=yoke.Shape.cut(yoke_before).Volume+yoke_before.cut(yoke.Shape).Volume
+holechecks=[]
+for x,y in [(18,0),(-18,0),(0,18),(0,-18)]:
+ q=candidate.common(Part.makeCylinder(1.6,h+2,V(x,y,z0-1)))
+ holechecks.append({'center_mm':[x,y],'clearance_test_cylinder_intersection_mm3':q.Volume})
+if any(t['clearance_test_cylinder_intersection_mm3']>1e-7 for t in holechecks): raise RuntimeError('Retainer obstructs a 3.2 mm nominal screw clearance')
+if yoke_change>1e-7: raise RuntimeError('Yoke changed unexpectedly')
+if horn and candidate.common(horn.Shape).Volume>1e-7: raise RuntimeError('Candidate retainer intersects pan horn proxy')
+cover.Shape=candidate
+doc.recompute()
+fc=CAD/'EyeTrace_R21_SinglePanMountPlate.FCStd'; doc.saveAs(str(fc))
+# Assembly-coordinate STEP and print-normalized STL (bottom Z=0).
+Part.export([cover],str(CAD/'Pan_KeyedHorn_Cover_R21_OpenFrame.step'))
+print_shape=candidate.copy(); print_shape.translate(V(0,0,-z0))
+mesh=MeshPart.meshFromShape(Shape=print_shape,LinearDeflection=0.025,AngularDeflection=0.08,Relative=False)
+stl=STL/'Pan_KeyedHorn_Cover_R21_OpenFrame.stl'; mesh.write(str(stl))
+res={'revision':'R21_SinglePanMountPlate','modified_only':'Pan_KeyedHorn_Cover','function':'Removable horn retainer/support; changed from broad lower cover into a connected skeletal retainer.','source_cover':{'valid':original.isValid(),'solid_count':len(original.Solids),'volume_mm3':original.Volume,'bbox_mm':[bb.XMin,bb.XMax,bb.YMin,bb.YMax,bb.ZMin,bb.ZMax]},'revised_retainer':{'valid':candidate.isValid(),'solid_count':len(candidate.Solids),'volume_mm3':candidate.Volume,'bbox_mm':[candidate.BoundBox.XMin,candidate.BoundBox.XMax,candidate.BoundBox.YMin,candidate.BoundBox.YMax,candidate.BoundBox.ZMin,candidate.BoundBox.ZMax],'removed_volume_mm3':original.Volume-candidate.Volume,'removed_percent':100*(original.Volume-candidate.Volume)/original.Volume},'yoke_geometry_symmetric_difference_volume_mm3':yoke_change,'yoke_retainer':pair(yoke,cover),'horn_retainer':pair(horn,cover),'screw_clearance_checks':holechecks,'frame_parameters_mm':{'radial_arm_width':4.6,'annular_bridge_inner_diameter':8.2,'annular_bridge_outer_diameter':10.4,'screw_pad_radius':5.8},'note':'Only the lower removable retainer shape changed; it is clipped to the original retainer BREP. Main yoke, servo positions, shaft axis, circular mount and all other components are retained. Proxy/hardware physical fit remains unverified.'}
+res['mesh_facets']=len(mesh.Facets);res['mesh_is_solid']=mesh.isSolid();res['mesh_bbox_mm']=[mesh.BoundBox.XMin,mesh.BoundBox.XMax,mesh.BoundBox.YMin,mesh.BoundBox.YMax,mesh.BoundBox.ZMin,mesh.BoundBox.ZMax]
+if not mesh.isSolid():raise RuntimeError('Exported R21 mesh is not watertight')
+res['files']={'assembly_fcstd':str(fc),'retainer_step':str(CAD/'Pan_KeyedHorn_Cover_R21_OpenFrame.step'),'retainer_stl':str(stl)}
+(DOC/'DOUBLE_PLATE_REPAIR_GEOMETRY.json').write_text(json.dumps(res,indent=2),encoding='utf-8')
+App.closeDocument(doc.Name)

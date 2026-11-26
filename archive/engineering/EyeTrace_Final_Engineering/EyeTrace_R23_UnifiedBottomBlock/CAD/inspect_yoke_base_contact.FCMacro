@@ -1,0 +1,4 @@
+import FreeCAD as App,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd';d=App.openDocument(p);y=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape;b=d.getObject('Base_EarMount_ThrustSupport').Shape
+q=y.distToShape(b);out={'dist':q[0],'pairs':[[[v.x,v.y,v.z] for v in pair] for pair in q[1]],'base_bbox':[b.BoundBox.XMin,b.BoundBox.XMax,b.BoundBox.YMin,b.BoundBox.YMax,b.BoundBox.ZMin,b.BoundBox.ZMax]}
+open(r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\DOCUMENTATION\yoke_base_contact_points.json','w').write(json.dumps(out,indent=2))

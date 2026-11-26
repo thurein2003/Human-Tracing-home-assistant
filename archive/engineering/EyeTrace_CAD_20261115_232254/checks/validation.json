@@ -1,0 +1,108 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "parameters": {
+    "servo_body": [
+      23,
+      12,
+      23
+    ],
+    "servo_clearance": 0.6,
+    "camera_envelope": [
+      38,
+      38,
+      30
+    ],
+    "pan_limit_deg": 60,
+    "tilt_limit_deg": 30,
+    "units": "mm",
+    "status": "PROTOTYPE: physical fit unverified"
+  },
+  "solids": {
+    "Base": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27995.775376725396
+    },
+    "PanYoke": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 28798.087636069737
+    },
+    "TiltCameraCradle": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 20375.910302618828
+    }
+  },
+  "meshes": {
+    "Base": {
+      "facets": 1672,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        80.0,
+        70.0,
+        29.0
+      ]
+    },
+    "PanYoke": {
+      "facets": 1624,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        88.5,
+        50.0,
+        60.0
+      ]
+    },
+    "TiltCameraCradle": {
+      "facets": 1190,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        41.000000000000014,
+        40.0,
+        76.0
+      ]
+    }
+  },
+  "motion": {
+    "sampled_poses": 169,
+    "pan_range": [
+      -60,
+      60
+    ],
+    "tilt_range": [
+      -30,
+      30
+    ],
+    "pan_step": 10,
+    "tilt_step": 5,
+    "collision_count": 0,
+    "collisions": [],
+    "minimum_separation_mm": 2.999999999999985,
+    "limitation": "sampled rigid envelopes only; excludes wires, fasteners, horn deformation, servo torque and continuous sweep; no installed motion stops"
+  },
+  "hardware_fit": "NOT VALIDATED",
+  "release_status": "NOT PRINT-RELEASED: measurement and attachment blockers",
+  "bed": {
+    "bounds_mm": [
+      225.5,
+      70.0,
+      76.0
+    ],
+    "minimum_gap_mm": 8,
+    "fits_assumed_260_square": true,
+    "printer_bed_dimension": "assumed 260 mm; verify exact K2 variant",
+    "orientation": "base and yoke upright; camera cradle on side; supports required for yoke and cradle"
+  }
+}

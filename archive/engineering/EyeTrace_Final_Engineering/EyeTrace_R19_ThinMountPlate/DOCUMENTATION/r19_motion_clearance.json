@@ -1,0 +1,18 @@
+{
+  "pan_only_-90_to90_step5": {
+    "pose_count": 37,
+    "exact_BREP_pair_checks": 0,
+    "intersecting_pairs_max_mm3": {}
+  },
+  "tilt_only_-45_to45_step5": {
+    "pose_count": 19,
+    "exact_BREP_pair_checks": 0,
+    "intersecting_pairs_max_mm3": {}
+  },
+  "combined_7x7": {
+    "pose_count": 49,
+    "exact_BREP_pair_checks": 0,
+    "intersecting_pairs_max_mm3": {}
+  },
+  "travel_status": "Discrete exploratory ranges; SG90 electrical/mechanical limits, cable movement, physical clearance, and load response are not established."
+}

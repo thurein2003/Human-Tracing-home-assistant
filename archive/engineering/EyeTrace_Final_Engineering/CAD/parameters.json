@@ -1,0 +1,70 @@
+{
+  "camera_hole_spacing_mm": [
+    21,
+    16
+  ],
+  "camera_pcb_width_mm": 38,
+  "camera_pcb_height_mm": 38,
+  "camera_pcb_thickness_mm": 1.6,
+  "camera_hole_diameter_mm": 2.2,
+  "lens_envelope_diameter_mm": 14,
+  "lens_projection_mm": 10,
+  "lens_clearance_diameter_mm": 18,
+  "lens_offset_x_mm": 0,
+  "lens_offset_z_mm": 0,
+  "rear_component_envelope_mm": [
+    20,
+    24.4,
+    20
+  ],
+  "rear_envelope_center_x_z_mm": [
+    0,
+    76
+  ],
+  "ribbon_reservation_width_thickness_length_mm": [
+    20,
+    1,
+    18
+  ],
+  "horn_arm_angles_deg": [
+    0,
+    72,
+    144,
+    216,
+    288
+  ],
+  "horn_arm_lengths_mm": [
+    12,
+    12,
+    12,
+    12,
+    12
+  ],
+  "horn_arm_widths_mm": [
+    3.6,
+    3.6,
+    3.6,
+    3.6,
+    3.6
+  ],
+  "horn_hub_radius_mm": 4,
+  "horn_web_thickness_mm": 2,
+  "horn_pocket_clearance_mm": 0.25,
+  "horn_pocket_depth_mm": 2.2,
+  "horn_socket_envelope_diameter_mm": 5.2,
+  "horn_socket_envelope_depth_mm": 1.4,
+  "horn_clearance_bore_mm": 1.9,
+  "safe_command_pan_deg": [
+    -55,
+    55
+  ],
+  "safe_command_tilt_deg": [
+    -25,
+    25
+  ],
+  "status": "All dimensions other than user nominal camera center spacing are source nominal or explicitly provisional; smooth socket is not spline spec",
+  "camera_standoff_height_mm": 3,
+  "camera_standoff_outer_diameter_mm": 5,
+  "camera_plate_hole_diameter_mm": 2.4,
+  "camera_mount_screw_length_mm": 12
+}

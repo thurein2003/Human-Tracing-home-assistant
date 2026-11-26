@@ -1,0 +1,345 @@
+{
+  "selected_renders": {
+    "assembled_opaque": {
+      "nonwhite_samples": 3135,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "assembled_front": {
+      "nonwhite_samples": 2392,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "assembled_transparent": {
+      "nonwhite_samples": 3135,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "pose_pan60_tilt30": {
+      "nonwhite_samples": 2433,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "pan_positive_star_pocket_v2": {
+      "nonwhite_samples": 4908,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "tilt_positive_star_pocket": {
+      "nonwhite_samples": 3207,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "pan_ear_installation_v2": {
+      "nonwhite_samples": 3835,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "tilt_ear_installation": {
+      "nonwhite_samples": 2466,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "camera_mount_rear": {
+      "nonwhite_samples": 2427,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "tilt_retaining_screw_service": {
+      "nonwhite_samples": 3051,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "complete_print_layout_v2": {
+      "nonwhite_samples": 1883,
+      "resolution": [
+        1600,
+        1200
+      ]
+    },
+    "fit_coupons_v2": {
+      "nonwhite_samples": 1090,
+      "resolution": [
+        1600,
+        1200
+      ]
+    }
+  },
+  "colored_native_matches_geometry_snapshot": {
+    "Base_EarMount_ThrustSupport": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Pan_Replaceable_ThrustRing": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanServo_SG90_Reference": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltServo_SG90_Reference": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Pan_OriginalStar_PROVISIONAL": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Tilt_OriginalStar_PROVISIONAL": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanOriginalScrew_PROVISIONAL": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltOriginalScrew_PROVISIONAL": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanYoke_EarBracket_KeyedDrive": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Tilt_Removable_IdlerPillar": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "IdlerPillar_M3x10_0": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "IdlerPillar_M3x10_1": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Pan_KeyedHorn_Cover": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanDrive_M3x10_0": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanDrive_M3x10_1": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanDrive_M3x10_2": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanDrive_M3x10_3": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltCradle_KeyedHorn_CameraFrame": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Tilt_KeyedHorn_CaptiveCover": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltDrive_M3x10_0": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltDrive_M3x10_1": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltDrive_M3x10_2": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltDrive_M3x10_3": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Tilt_Journal_FlangedSleeve": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltIdler_M3x12": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltIdler_M3_Washer": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanEar_M1p6x8_0": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanEar_M1p6x8_1": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltEar_M1p6x8_0": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltEar_M1p6x8_1": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_SlidingRail_Lower": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "RailMount_Lower_M3x10_0": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "RailMount_Lower_M3x10_1": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PCB_Spacer_Lower_Left": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_M2x12_Lower_Left": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PCB_Spacer_Lower_Right": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_M2x12_Lower_Right": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_SlidingRail_Upper": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "RailMount_Upper_M3x10_0": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "RailMount_Upper_M3x10_1": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PCB_Spacer_Upper_Left": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_M2x12_Upper_Left": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PCB_Spacer_Upper_Right": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_M2x12_Upper_Right": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PCB_Cut003": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_RearComponents_KEEP_OUT": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_Lens_PROVISIONAL": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "PanServo_WireExit_KEEP_OUT": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "TiltServo_WireExit_KEEP_OUT": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    },
+    "Camera_WireExit_KEEP_OUT": {
+      "volume_difference_mm3": 0.0,
+      "bounds_difference_mm": 0.0,
+      "colored_shape_valid": true
+    }
+  },
+  "report_missing_links": [],
+  "current_print_STL_count": 14,
+  "source_preservation_evidence": "previous_artifact_preservation.json",
+  "physical_fit": "UNVERIFIED",
+  "production_ready": false
+}

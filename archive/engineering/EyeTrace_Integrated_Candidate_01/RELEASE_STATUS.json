@@ -1,0 +1,26 @@
+{
+  "release": "HOLD",
+  "physical_fit": "UNVERIFIED",
+  "software_nominal_checks": "PASS within documented scope",
+  "components": 49,
+  "printed_parts": 13,
+  "reference_solids": 76,
+  "motion_poses": 180,
+  "pair_tests": 211680,
+  "unintended_nominal_penetrations": 0,
+  "unverified_rear_envelope_conflicts": 9,
+  "single_bed_mm": [
+    197,
+    192.6,
+    77
+  ],
+  "coupon_count": 8,
+  "critical_pending": [
+    "Actual clone case/ear geometry",
+    "Original star horn pocket fit and retaining screw access",
+    "Camera rear electronics and fasteners",
+    "Real cable sweep",
+    "PETG journals and structural/load testing"
+  ],
+  "slicer_test_print_verified": false
+}

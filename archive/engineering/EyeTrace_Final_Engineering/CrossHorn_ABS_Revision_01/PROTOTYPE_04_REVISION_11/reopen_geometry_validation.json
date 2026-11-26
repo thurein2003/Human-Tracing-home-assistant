@@ -1,0 +1,34 @@
+{
+  "reopened": true,
+  "valid": true,
+  "solid_count": 1,
+  "back_opening_section_wall_x_mm": [
+    -5.25,
+    5.25
+  ],
+  "back_opening_actual_diameter_mm": 10.5,
+  "back_opening_section_z_mm": [
+    -2.2,
+    -1.9
+  ],
+  "back_opening_depth_mm": 0.3,
+  "local_support_land_actual_diameter_mm": 12.5,
+  "remaining_radial_land_mm": 1.0,
+  "front_cavity_wall_x_mm": [
+    -3.7,
+    3.7
+  ],
+  "front_cavity_actual_diameter_mm": 7.4,
+  "front_cavity_actual_depth_mm": 3.2,
+  "rear_and_front_features_independent": true,
+  "web_mm": 0.7999999999999996,
+  "separate_screw_hole_diameter_mm": 4.5,
+  "front_depth_edit_height_mm": 3.1,
+  "front_edit_volume_delta_mm3": 2.7104090618845476,
+  "back_depth_edit_height_mm": 0.5,
+  "back_edit_volume_delta_mm3": -14.137166941154646,
+  "restored_depths_mm": [
+    3.2,
+    0.3
+  ]
+}

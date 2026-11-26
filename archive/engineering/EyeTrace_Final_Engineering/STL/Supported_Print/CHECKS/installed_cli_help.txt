@@ -1,0 +1,48 @@
+Creality-7.3.1.6378:
+Usage: CrealityPrint --cli [ OPTIONS ] [ file.3mf/file.stl ... ]
+OPTIONS:
+ --allow-multicolor-oneplate
+                     Allow automatic STL/OBJ arrangement to place multiple colors on one plate.
+ --allow-newer-file option
+                     Allow slicing a 3MF project created by a newer application version.
+ --avoid-extrusion-cali-region
+                     Keep automatically arranged STL/OBJ objects outside the extrusion calibration
+                     region.
+ --datadir           Load settings from the given data directory.
+ --debug level       Set debug logging level: 0=fatal, 1=error, 2=warning, 3=info, 4=debug, 5=trace.
+ --diagnostics fingerprint|performance
+                     Collect fingerprint or performance diagnostics while slicing.
+ --enable-timelapse  Slice with timelapse behavior enabled.
+ --load-custom-gcodes custom_gcode_toolchange.json
+                     Load plate custom G-code from JSON.
+ --load-filament-ids "1,2,3,1"
+                     Assign a filament slot to each STL/OBJ input object.
+ --load-filaments "filament1.json;filament2.json;..."
+                     Load filament settings for STL/OBJ slicing.
+ --load-settings "setting1.json;setting2.json"
+                     Load process/machine settings for STL/OBJ slicing.
+ --logfile file      Write debug logs to a file.
+ --need-business-report
+                     Write slicing business metrics to business-report.json under the output
+                     directory.
+ --need-gcode-file   Write plate_N.gcode files under the output directory.
+ --outputdir dir     Output directory for requested command-line artifacts.
+ --skip-objects "3,5,10,77"
+                     Exclude the specified object IDs from slicing.
+ --export-slicedata slicing_data_directory
+                     Export slicing cache data to a folder.
+ --help, -h          Show command help.
+ --load-defaultfila option
+                     Load first filament as default for those not loaded
+ --load-slicedata slicing_data_directory
+                     Load slicing cache data from a folder.
+ --mstpp seconds     Maximum slicing time allowed per plate in seconds.
+ --mtcpp count       Maximum triangle count allowed per plate for slicing.
+ --no-check          Do not run validity checks such as G-code path conflict checks.
+ --normative-check option
+                     Check the normative items.
+ --pipe pipename     Send slicing progress to a named pipe.
+ --slice option      Slice the plates: 0-all plates, i-plate i, others-invalid
+Configuration priority:
+        3MF: command-line print overrides > settings embedded in the project
+        STL/OBJ: command-line print overrides > --load_settings/--load_filaments presets

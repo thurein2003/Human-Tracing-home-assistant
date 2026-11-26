@@ -1,0 +1,43 @@
+[
+  {
+    "component": "PanYoke_EarBracket_KeyedDrive",
+    "added_volume_mm3": 3501.3961884217442,
+    "new_material_intersections_over_0p01_mm3": [
+      {
+        "name": "Pan_OriginalStar_PROVISIONAL",
+        "label": "Pan SG90 four-arm cross horn \u2014 R15 reference; coupon fit user-confirmed",
+        "intersection_mm3": 291.271901429079
+      },
+      {
+        "name": "Pan_KeyedHorn_Cover",
+        "label": "Pan horn retainer cover",
+        "intersection_mm3": 1655.7706736182981
+      },
+      {
+        "name": "PanDrive_M3x10_0",
+        "label": "PanDrive_M3x10_0",
+        "intersection_mm3": 4.016622855340316
+      },
+      {
+        "name": "PanDrive_M3x10_1",
+        "label": "PanDrive_M3x10_1",
+        "intersection_mm3": 4.016622855340239
+      },
+      {
+        "name": "PanDrive_M3x10_2",
+        "label": "PanDrive_M3x10_2",
+        "intersection_mm3": 8.412961332295907
+      },
+      {
+        "name": "PanDrive_M3x10_3",
+        "label": "PanDrive_M3x10_3",
+        "intersection_mm3": 8.412961332295902
+      }
+    ]
+  },
+  {
+    "component": "TiltCradle_KeyedHorn_CameraFrame",
+    "added_volume_mm3": 249.087735690206,
+    "new_material_intersections_over_0p01_mm3": []
+  }
+]

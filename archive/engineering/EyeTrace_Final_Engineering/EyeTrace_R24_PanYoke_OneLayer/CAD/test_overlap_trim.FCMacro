@@ -1,0 +1,18 @@
+import FreeCAD as App, Part, json
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd'
+d=App.openDocument(src); y=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape; b=d.getObject('Base_EarMount_ThrustSupport').Shape
+# Candidate removes only the lower 1.8 mm of the pan-yoke land beneath the rectangular plate footprint.
+slab=Part.makeBox(16,57,1.8,V(28,-28.5,35.2))
+keep=Part.makeCylinder(22,2,V(0,0,35.1))
+for yy in [-23.5,23.5]: keep=keep.fuse(Part.makeCylinder(5.5,2,V(32.5,yy,35.1)))
+contacts=[(32,0),(27.5,0),(30.9,0),(-14.1,-25.9807621135),(-14.1,25.9807621135)]
+for x,yy in contacts[:3]:keep=keep.fuse(Part.makeCylinder(3.2,2,V(x,yy,35.1)))
+cutter=slab.cut(keep); raw=y.cut(cutter).removeSplitter()
+def col(s,x,yy):
+ q=s.common(Part.makeBox(.1,.1,10,V(x-.05,yy-.05,34)))
+ return None if q.Volume<1e-8 else [q.BoundBox.ZMin,q.BoundBox.ZMax]
+out={'valid':raw.isValid(),'solids':len(raw.Solids),'volume_before':y.Volume,'volume_after':raw.Volume,'removed_mm3':y.Volume-raw.Volume,'cutter_mm3':cutter.Volume,'bbox':[raw.BoundBox.XMin,raw.BoundBox.XMax,raw.BoundBox.YMin,raw.BoundBox.YMax,raw.BoundBox.ZMin,raw.BoundBox.ZMax],'base_intersection_mm3':raw.common(b).Volume,'contacts':[],'protected_core_diff_mm3':y.common(keep).cut(raw.common(keep)).Volume+raw.common(keep).cut(y.common(keep)).Volume,'samples':{}}
+for x,yy in contacts:out['contacts'].append({'xy':[x,yy],'before':col(y,x,yy),'after':col(raw,x,yy)})
+for x,yy in [(30,20),(32,20),(34,20),(40,20),(30,-20),(34,-20),(40,-20),(28,0),(32,0),(34,0),(30,24),(34,24)]:out['samples'][str((x,yy))]={'before':col(y,x,yy),'after':col(raw,x,yy)}
+path=r'EyeTrace_Final_Engineering\EyeTrace_R24_PanYoke_OneLayer\DOCUMENTATION\overlap_trim_test.json';open(path,'w').write(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

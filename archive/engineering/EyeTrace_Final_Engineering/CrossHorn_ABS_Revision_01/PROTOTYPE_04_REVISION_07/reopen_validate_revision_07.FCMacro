@@ -1,0 +1,9 @@
+﻿import json,FreeCAD as App
+from pathlib import Path
+p=Path(r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_07')
+d=App.openDocument(str(p/'CrossHorn_UltraMinimal_FitTest_04R07.FCStd')); o=d.getObject('Horn3CrossFitCoupon'); s=o.Shape
+r={'opened':True,'solid_valid':s.isValid(),'solid_count':len(s.Solids),'volume_mm3':s.Volume,'bbox_mm':[s.BoundBox.XLength,s.BoundBox.YLength,s.BoundBox.ZLength],'front_diameter_mm':o.FrontHubRecessDiameter.Value,'front_depth_mm':o.FrontHubRecessDepth.Value,'rear_diameter_mm':o.BackHubRecessDiameter.Value,'rear_depth_mm':o.BackHubRecessDepth.Value,'center_web_mm':o.RemainingCenterWeb.Value,'local_pad_increase_mm':o.LocalCenterThicknessIncrease.Value,'local_pad_diameter_mm':o.LocalCenterPadDiameter.Value,'screw_access_diameter_mm':o.ScrewAccessDiameter.Value,'x_pocket_reaches_mm':[o.LongLeftPocketCenterToTip.Value,o.LongRightPocketCenterToTip.Value],'y_pocket_reaches_mm':[o.ShortUpperPocketCenterToTip.Value,o.ShortLowerPocketCenterToTip.Value],'x_tip_widths_mm':[o.LeftTipWidthPocket.Value,o.RightTipWidthPocket.Value]}
+assert r['solid_valid'] and r['solid_count']==1
+assert abs(r['front_depth_mm']-3.2)<1e-8 and abs(r['rear_depth_mm']-.8)<1e-8 and abs(r['center_web_mm']-.8)<1e-8
+assert r['x_pocket_reaches_mm']==[17.6,17.6] and r['y_pocket_reaches_mm']==[10.1,10.1]
+(p/'reopen_validation.json').write_text(json.dumps(r,indent=2),encoding='utf-8'); print('REV07_REOPEN='+json.dumps(r)); App.closeDocument(d.Name)

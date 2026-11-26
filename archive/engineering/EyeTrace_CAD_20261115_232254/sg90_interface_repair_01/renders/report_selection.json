@@ -1,0 +1,50 @@
+[
+  [
+    "assembled_opaque",
+    "Complete nominal assembly; camera geometry is provisional"
+  ],
+  [
+    "assembled_front",
+    "Four-hole PCB attachment; actual camera unmeasured"
+  ],
+  [
+    "assembled_transparent",
+    "Both motor references and original-star proxies"
+  ],
+  [
+    "pose_pan60_tilt30",
+    "Actual BRep pose: pan60 / tilt30"
+  ],
+  [
+    "pan_positive_star_pocket_v2",
+    "Positive arm-wall profile, provisional star outline"
+  ],
+  [
+    "tilt_positive_star_pocket",
+    "Tilt profiled carrier and captured cover"
+  ],
+  [
+    "pan_ear_installation_v2",
+    "Pan ear mounting and small fasteners"
+  ],
+  [
+    "tilt_ear_installation",
+    "Tilt ear mounting, cradle removed for access"
+  ],
+  [
+    "camera_mount_rear",
+    "Adjustable rails and separate PCB spacers"
+  ],
+  [
+    "tilt_retaining_screw_service",
+    "Idler/pillar removed for original screw access"
+  ],
+  [
+    "complete_print_layout_v2",
+    "All14 printable mechanism components"
+  ],
+  [
+    "fit_coupons_v2",
+    "Five diagnostic coupon pieces"
+  ]
+]

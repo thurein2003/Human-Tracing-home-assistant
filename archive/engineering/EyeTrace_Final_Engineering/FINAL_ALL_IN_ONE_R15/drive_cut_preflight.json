@@ -1,0 +1,56 @@
+{
+  "arm_tool": {
+    "valid": true,
+    "solids": 1,
+    "bbox": [
+      -19.6,
+      -10.1,
+      2.0999999999999996,
+      19.6,
+      10.099999999999998,
+      3.8
+    ]
+  },
+  "pan": {
+    "before_valid": true,
+    "before_solids": 1,
+    "before_volume": 42535.65616146409,
+    "tool_valid": true,
+    "tool_solids": 1,
+    "tool_common_volume": 201.1834032556671,
+    "bore_common_volume": 0.0,
+    "after_valid": true,
+    "after_solids": 1,
+    "after_volume": 42334.47275820838,
+    "removed_volume": 201.18340325570898,
+    "after_bbox": [
+      -58.2,
+      -35.3,
+      33.0,
+      44.0,
+      35.3,
+      103.0
+    ]
+  },
+  "tilt": {
+    "before_valid": true,
+    "before_solids": 1,
+    "before_volume": 24774.79617580965,
+    "tool_valid": true,
+    "tool_solids": 1,
+    "tool_common_volume": 223.47906134931395,
+    "bore_common_volume": 9.424777960769095,
+    "after_valid": true,
+    "after_solids": 1,
+    "after_volume": 24541.892336499586,
+    "removed_volume": 232.90383931006363,
+    "after_bbox": [
+      -41.00000000000001,
+      -24.4,
+      54.0,
+      36.0,
+      21.0,
+      99.0
+    ]
+  }
+}

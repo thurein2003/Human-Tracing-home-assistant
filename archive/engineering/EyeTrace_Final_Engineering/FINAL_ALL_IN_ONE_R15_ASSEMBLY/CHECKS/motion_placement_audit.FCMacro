@@ -1,0 +1,25 @@
+import FreeCAD as A, json, os
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering';out=root+r'\FINAL_ALL_IN_ONE_R15_ASSEMBLY';d=A.openDocument(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd');printed=[o for o in d.Objects if bool(getattr(o,'Printable',False)) and hasattr(o,'Shape') and not o.Shape.isNull()];pivot=V(-41,0,78);res=[]
+def calc(pan,tilt):
+ shapes=[]
+ for o in printed:
+  sh=o.Shape.copy();kg=str(getattr(o,'KinematicGroup',''))
+  if kg=='tilt':sh.rotate(pivot,V(1,0,0),tilt);sh.rotate(V(0,0,0),V(0,0,1),pan)
+  elif kg=='pan':sh.rotate(V(0,0,0),V(0,0,1),pan)
+  shapes.append((o.Name,sh))
+ hits=[]
+ for i,(na,a) in enumerate(shapes):
+  for nb,b in shapes[i+1:]:
+   if not a.BoundBox.intersect(b.BoundBox):continue
+   try:
+    vol=a.common(b).Volume
+    if vol>1e-5:hits.append({'a':na,'b':nb,'intersection_mm3':vol})
+   except Exception as e:hits.append({'a':na,'b':nb,'error':str(e)})
+ return {'pan_deg':pan,'tilt_deg':tilt,'printable_intersections':hits}
+# Representative test poses only; they are not travel limits.
+for p,t in [(0,0),(-30,0),(30,0),(0,-15),(0,15),(-30,-15),(-30,15),(30,-15),(30,15)]:res.append(calc(p,t))
+# CAD datum checks: pan z axis at origin; tilt drive and opposite journal centerline y=0,z=78 along X, per source model geometry.
+servo=[d.getObject(n) for n in ['PanServo_SG90_Reference','TiltServo_SG90_Reference']]
+report={'source':out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd','poses':res,'all_sampled_printable_pairs_clear':all(not x['printable_intersections'] for x in res),'axes':{'pan':'Z through (0,0); carrier and pan horn nominal center at (0,0,35)','tilt':'X through y=0,z=78; servo-side output and opposite journal nominally coaxial'},'sample_angles_are_limits':False,'physical_motion':'not verified; geometry transform only'}
+open(out+r'\CHECKS\motion_placement_audit.json','w').write(json.dumps(report,indent=2));A.closeDocument(d.Name)

@@ -1,0 +1,18 @@
+import FreeCAD as A, os
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY';d=A.openDocument(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd');view=Gui.activeDocument().activeView()
+visible=['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanServo_SG90_Reference','TiltServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','Tilt_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL','TiltOriginalScrew_PROVISIONAL','PanYoke_EarBracket_KeyedDrive','Tilt_Removable_IdlerPillar','Pan_KeyedHorn_Cover','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','CameraPlate_Cut007','Camera_Lens_PROVISIONAL','IdlerPillar_M3x10_0','IdlerPillar_M3x10_1','PanDrive_M3x10_0','PanDrive_M3x10_1','PanDrive_M3x10_2','PanDrive_M3x10_3','TiltDrive_M3x10_0','TiltDrive_M3x10_1','TiltDrive_M3x10_2','TiltDrive_M3x10_3','TiltIdler_M3x12','TiltIdler_M3_Washer','PanEar_M1p6x8_0','PanEar_M1p6x8_1','TiltEar_M1p6x8_0','TiltEar_M1p6x8_1']
+for o in d.Objects:
+ if hasattr(o,'ViewObject'):o.ViewObject.Visibility=False
+ if getattr(o,'Printable',False) and hasattr(o,'ViewObject'):o.ViewObject.Transparency=58
+for n in visible:
+ o=d.getObject(n)
+ if o and hasattr(o,'ViewObject'):
+  o.ViewObject.Visibility=True
+  o.ViewObject.LineColor=(0.10,0.12,0.16)
+  if getattr(o,'Printable',False):o.ViewObject.ShapeColor=(0.83,0.48,0.19)
+  elif 'Servo' in n:o.ViewObject.ShapeColor=(0.24,0.26,0.30);o.ViewObject.Transparency=0
+  elif 'Horn' in n or 'Screw_PROVISIONAL' in n:o.ViewObject.ShapeColor=(0.93,0.93,0.87);o.ViewObject.Transparency=0
+  elif 'CameraPlate' in n:o.ViewObject.ShapeColor=(0.16,0.55,0.72);o.ViewObject.Transparency=25
+  elif 'Lens' in n:o.ViewObject.ShapeColor=(0.98,0.78,0.12);o.ViewObject.Transparency=0
+  else:o.ViewObject.ShapeColor=(0.52,0.56,0.61);o.ViewObject.Transparency=0
+view.viewAxonometric();view.fitAll();Gui.updateGui();view.saveImage(os.path.join(out,'RENDERS','EyeTrace_R15_Assembled_View.png'),1800,1300,'Current')

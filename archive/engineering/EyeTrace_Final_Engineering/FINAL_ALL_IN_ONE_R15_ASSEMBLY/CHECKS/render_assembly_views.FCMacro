@@ -1,0 +1,69 @@
+import FreeCAD as A, Part, os
+from FreeCAD import Vector as V
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY'; fn=out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd'; d=A.openDocument(fn); gd=Gui.activeDocument(); view=gd.activeView()
+# render the original assembly solids and explicitly identified hardware reference solids; hide construction cutters/keep-out reservations.
+physical=['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanServo_SG90_Reference','TiltServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','Tilt_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL','TiltOriginalScrew_PROVISIONAL','PanYoke_EarBracket_KeyedDrive','Tilt_Removable_IdlerPillar','Pan_KeyedHorn_Cover','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','CameraPlate_Cut007','Camera_Lens_PROVISIONAL']
+for o in d.Objects:
+ if hasattr(o,'ViewObject'):o.ViewObject.Visibility=False
+for n in physical:
+ o=d.getObject(n)
+ if o and hasattr(o,'ViewObject'):
+  o.ViewObject.Visibility=True
+  o.ViewObject.DisplayMode='Flat Lines' if n in ['Pan_OriginalStar_PROVISIONAL','Tilt_OriginalStar_PROVISIONAL'] else 'Flat Lines'
+  if 'Servo' in n:o.ViewObject.ShapeColor=(0.28,0.30,0.34)
+  elif 'PROVISIONAL' in n:o.ViewObject.ShapeColor=(0.95,0.82,0.25)
+  elif n=='Camera_Lens_PROVISIONAL':o.ViewObject.ShapeColor=(0.20,0.55,0.72)
+  elif 'CameraPlate' in n:o.ViewObject.ShapeColor=(0.20,0.52,0.68)
+  elif n.startswith('Base_'):o.ViewObject.ShapeColor=(0.72,0.73,0.75)
+  else:o.ViewObject.ShapeColor=(0.82,0.45,0.16)
+  o.ViewObject.LineColor=(0.12,0.14,0.16)
+
+def capture(name,orient):
+ view.setCameraOrientation(orient); view.fitAll(); Gui.updateGui(); view.saveImage(os.path.join(out,'RENDERS',name+'.png'),1800,1300,'Current')
+# standard orthographic poses
+capture('EyeTrace_R15_Assembled_View',view.getCameraOrientation())
+# use standard named camera views with true CAD geometry
+view.viewFront();view.fitAll();Gui.updateGui();view.saveImage(out+r'\RENDERS\EyeTrace_R15_Front.png',1800,1300,'Current')
+view.viewRight();view.fitAll();Gui.updateGui();view.saveImage(out+r'\RENDERS\EyeTrace_R15_Side.png',1800,1300,'Current')
+view.viewTop();view.fitAll();Gui.updateGui();view.saveImage(out+r'\RENDERS\EyeTrace_R15_Top.png',1800,1300,'Current')
+view.viewAxonometric();view.fitAll();Gui.updateGui();view.saveImage(out+r'\RENDERS\EyeTrace_R15_Assembled_View.png',1800,1300,'Current')
+# Exploded view: visually separate existing components without saving altered positions to the assembly.
+orig={n:d.getObject(n).Placement.copy() for n in physical if d.getObject(n)}
+for n in physical:
+ o=d.getObject(n)
+ if not o:continue
+ kg=str(getattr(o,'KinematicGroup',''))
+ delta=V(0,0,0)
+ if kg=='fixed' and n!='Base_EarMount_ThrustSupport':delta=V(0,0,-10)
+ elif kg=='pan':delta=V(18,0,0)
+ elif kg=='tilt':delta=V(-15,0,18)
+ o.Placement.Base=o.Placement.Base+delta
+view.viewAxonometric();view.fitAll();Gui.updateGui();view.saveImage(out+r'\RENDERS\EyeTrace_R15_Exploded_View.png',1800,1300,'Current')
+for n,p in orig.items():d.getObject(n).Placement=p
+# Section snapshots from actual BREP solids clipped by a half-space at the specified pivot plane.
+def section_capture(label,axis,coord,keep_less):
+ # hide real solids, display exact BREP intersections with half-space.
+ for o in d.Objects:
+  if hasattr(o,'ViewObject'):o.ViewObject.Visibility=False
+ if axis=='y': clip=Part.makeBox(400,coord+200,400,V(-200,-200,-200)) if keep_less else Part.makeBox(400,200-coord,400,V(-200,coord,-200))
+ else: clip=Part.makeBox(coord+200,400,400,V(-200,-200,-200)) if keep_less else Part.makeBox(200-coord,400,400,V(coord,-200,-200))
+ grp=d.addObject('App::DocumentObjectGroup','Temporary_'+label);grp.Label=label+' section cut (temporary display geometry)'
+ for n in physical:
+  src=d.getObject(n)
+  if not src:continue
+  try:
+   sh=src.Shape.common(clip)
+   if not sh.isNull() and sh.Volume>1e-7:
+    ob=d.addObject('Part::Feature','Section_'+label+'_'+n);ob.Label=src.Label;ob.Shape=sh;grp.addObject(ob);ob.ViewObject.Visibility=True;ob.ViewObject.ShapeColor=src.ViewObject.ShapeColor;ob.ViewObject.LineColor=(0.12,0.14,0.16)
+  except:pass
+ view.viewAxonometric();view.fitAll();Gui.updateGui();view.saveImage(os.path.join(out,'RENDERS',label+'.png'),1800,1300,'Current')
+ for ob in list(grp.Group):d.removeObject(ob.Name)
+ d.removeObject(grp.Name)
+section_capture('EyeTrace_R15_Pan_Section','y',0,True)
+section_capture('EyeTrace_R15_Tilt_Section','x',-41,False)
+# restore visibility for assembled scene; no save to avoid changing source package
+for o in d.Objects:
+ if hasattr(o,'ViewObject'):o.ViewObject.Visibility=(o.Name in physical)
+view.viewAxonometric();view.fitAll();Gui.updateGui()
+
+

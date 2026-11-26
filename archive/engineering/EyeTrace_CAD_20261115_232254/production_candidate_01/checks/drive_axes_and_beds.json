@@ -1,0 +1,72 @@
+{
+  "pan_horn_driven_yoke": {
+    "distance_mm": 0.0,
+    "common_area_mm2": 0.0,
+    "meaning": "nominal touching surfaces only, no torque or physical mating proof"
+  },
+  "pan_horn_clamp": {
+    "distance_mm": 0.0,
+    "common_area_mm2": 0.0,
+    "meaning": "nominal touching surfaces only, no torque or physical mating proof"
+  },
+  "tilt_horn_driven_cradle": {
+    "distance_mm": 0.0,
+    "common_area_mm2": 0.0,
+    "meaning": "nominal touching surfaces only, no torque or physical mating proof"
+  },
+  "tilt_horn_clamp": {
+    "distance_mm": 0.0,
+    "common_area_mm2": 0.0,
+    "meaning": "nominal touching surfaces only, no torque or physical mating proof"
+  },
+  "mechanism_bed": {
+    "closed": true,
+    "components": 7,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false
+  },
+  "coupon_bed": {
+    "closed": true,
+    "components": 8,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "normals_inconsistent": false
+  },
+  "coaxial_tilt_holes": {
+    "PanYoke": [
+      {
+        "radius": 1.65,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "center": [
+          35.5,
+          0.0,
+          78.0
+        ]
+      }
+    ],
+    "TiltCameraCradle": [
+      {
+        "radius": 1.65,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "center": [
+          32.0,
+          0.0,
+          78.0
+        ]
+      }
+    ]
+  },
+  "original_preserved": {
+    "manifest_files_checked": 32,
+    "all_unchanged": true
+  }
+}

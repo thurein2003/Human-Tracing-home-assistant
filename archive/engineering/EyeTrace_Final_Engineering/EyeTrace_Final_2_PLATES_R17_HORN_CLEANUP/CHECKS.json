@@ -1,0 +1,103 @@
+{
+  "freecad": "1.1.4",
+  "source": "EyeTrace_Final_Engineering\\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\\CAD\\EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd",
+  "master": "EyeTrace_Final_Engineering\\CrossHorn_ABS_Revision_01\\PROTOTYPE_04_REVISION_15\\CrossHorn_UltraMinimal_FitTest_04R15.FCStd",
+  "components": {
+    "pan": {
+      "valid": true,
+      "solids": 1,
+      "volume_before": 42345.82609243497,
+      "volume_after": 45847.22228085674,
+      "volume_change": 3501.3961884217715,
+      "faces": 159,
+      "R15_pocket_envelope": [
+        39.2,
+        20.2
+      ],
+      "R15_recess_depth": 1.7,
+      "R15_center_bore": 8.0,
+      "extra_void_mm3": 0.0,
+      "missing_void_mm3": 0.0,
+      "bbox": [
+        -58.2,
+        -35.3,
+        32.99999999999999,
+        44.0,
+        35.3,
+        103.0
+      ]
+    },
+    "tilt": {
+      "valid": true,
+      "solids": 1,
+      "volume_before": 24528.289698365388,
+      "volume_after": 24742.034516702675,
+      "volume_change": 213.74481833728714,
+      "faces": 118,
+      "R15_pocket_envelope": [
+        39.2,
+        20.2
+      ],
+      "R15_recess_depth": 1.7,
+      "R15_center_bore": 8.0,
+      "extra_void_mm3": 0.0,
+      "missing_void_mm3": 0.0,
+      "bbox": [
+        -41.00000000000001,
+        -24.4,
+        54.0,
+        36.0,
+        21.0,
+        99.0
+      ]
+    }
+  },
+  "mesh_validation": {
+    "PanYoke_EarBracket_KeyedDrive": {
+      "BREP_valid": true,
+      "BREP_solids": 1,
+      "BREP_volume": 45847.22228085674,
+      "native_mesh_solid": true,
+      "native_mesh_volume": 45845.71484375,
+      "print_mesh_solid": true,
+      "print_mesh_volume": 45845.015625,
+      "facet_count": 27036,
+      "bbox": [
+        12.999999046325684,
+        13.000828742980957,
+        0.0,
+        115.19999694824219,
+        83.59917449951172,
+        70.0
+      ]
+    },
+    "TiltCradle_KeyedHorn_CameraFrame": {
+      "BREP_valid": true,
+      "BREP_solids": 1,
+      "BREP_volume": 24742.034516702675,
+      "native_mesh_solid": true,
+      "native_mesh_volume": 24741.599609375,
+      "print_mesh_solid": true,
+      "print_mesh_volume": 24743.134765625,
+      "facet_count": 20976,
+      "bbox": [
+        189.0,
+        102.5999984741211,
+        0.0,
+        234.0,
+        147.99951171875,
+        77.0
+      ]
+    }
+  },
+  "printable_parts": 13,
+  "camera_hole_pattern_mm": [
+    21,
+    14
+  ],
+  "3mf_objects_replaced_per_project": [
+    2,
+    2
+  ],
+  "release": "HOLD \u2014 inspect/reslice both 3MF projects in Creality Print; no slicer verification performed"
+}

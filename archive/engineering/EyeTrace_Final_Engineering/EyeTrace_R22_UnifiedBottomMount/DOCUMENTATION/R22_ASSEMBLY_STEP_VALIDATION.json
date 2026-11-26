@@ -1,0 +1,15 @@
+{
+  "file": "EyeTrace_Final_Engineering\\EyeTrace_R22_UnifiedBottomMount\\CAD\\EyeTrace_R22_UnifiedBottomMount.step",
+  "method": "compound of AssemblyRoot BREP solids",
+  "valid": true,
+  "solid_count": 75,
+  "volume_mm3": 149309.19479854862,
+  "bbox_mm": [
+    -70.0,
+    44.5,
+    -35.3,
+    35.3,
+    -3.1754264805429417,
+    103.0
+  ]
+}

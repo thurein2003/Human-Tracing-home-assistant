@@ -1,0 +1,19 @@
+﻿import FreeCAD as A,Part,os,json,traceback
+from FreeCAD import Vector as V
+E=r'EyeTrace_Final_Engineering'; out=os.path.join(E,'EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR')
+d=A.openDocument(os.path.join(E,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'));m=A.openDocument(os.path.join(E,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'))
+base=m.getObject('BaseCoupon').Shape;final=m.getObject('FinalCoupon').Shape;exp=base.cut(final);disk=Part.makeCylinder(20.5,3.8,V(0,0,0),V(0,0,1));rot=A.Rotation(V(1,0,0),180);top=V(0,0,33)
+def tr(sh):
+ q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+env=tr(disk);expG=tr(exp);patch=tr(disk.cut(exp));old=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+cover=d.getObject('Pan_KeyedHorn_Cover').Shape;keep=[cover.makeOffsetShape(.2,.05,True)]
+for i in range(4):
+ for s in d.getObject('PanDrive_M3x10_'+str(i)).Shape.Solids:keep.append(s.makeOffsetShape(.2,.05,True))
+# Union first, then remove exact hardware clearance volumes, and finally make the unchanged R15 recess.
+sh=old.fuse(patch)
+for q in keep:sh=sh.cut(q)
+sh=sh.cut(expG)
+res={'valid':bool(sh.isValid()),'solids':len(sh.Solids),'volume':float(sh.Volume),'old_volume':float(old.Volume),'volume_delta':float(sh.Volume-old.Volume),'bbox':[sh.BoundBox.XMin,sh.BoundBox.YMin,sh.BoundBox.ZMin,sh.BoundBox.XMax,sh.BoundBox.YMax,sh.BoundBox.ZMax],'pocket_common':float(sh.common(expG).Volume),'pairs':{}}
+for nm in ['Pan_KeyedHorn_Cover']+['PanDrive_M3x10_'+str(i) for i in range(4)]+['PanServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL']:
+ res['pairs'][nm]=float(sh.common(d.getObject(nm).Shape).Volume)
+with open(os.path.join(out,'REPORTS','PAN_UNION_THEN_RELIEF_PROBE.json'),'w') as f:json.dump(res,f,indent=2)

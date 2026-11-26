@@ -1,0 +1,6 @@
+import FreeCAD as A,Part,json
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY';d=A.openDocument(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd');rows=[]
+for n in ['TiltServo_SG90_Reference','Tilt_OriginalStar_PROVISIONAL','Camera_Lens_PROVISIONAL','CameraPlate_Cut007','TiltCradle_KeyedHorn_CameraFrame','Pan_OriginalStar_PROVISIONAL']:
+ o=d.getObject(n);s=o.Shape.copy();s.transformShape(o.Placement.toMatrix(),True);b=o.Shape.BoundBox;w=s.BoundBox;p=o.Placement
+ rows.append({'name':n,'shape_bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax],'placement':[p.Base.x,p.Base.y,p.Base.z,p.Rotation.Axis.x,p.Rotation.Axis.y,p.Rotation.Axis.z,p.Rotation.Angle*180/3.141592653589793],'transformed_bbox':[w.XMin,w.YMin,w.ZMin,w.XMax,w.YMax,w.ZMax]})
+open(out+r'\CHECKS\placement_probe.json','w').write(json.dumps(rows,indent=2));A.closeDocument(d.Name)

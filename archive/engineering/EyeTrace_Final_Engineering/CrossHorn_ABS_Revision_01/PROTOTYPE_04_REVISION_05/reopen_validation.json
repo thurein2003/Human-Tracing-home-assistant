@@ -1,0 +1,32 @@
+{
+  "freecad_saved_document_reopen": "PASS",
+  "solid_valid": true,
+  "solid_count": 1,
+  "volume_mm3": 1013.6561279579183,
+  "bbox_mm": [
+    38.0,
+    23.0,
+    4.3
+  ],
+  "arm_center_to_tip_mm": {
+    "long_left_nominal": 16.25,
+    "long_right_nominal": 18.75,
+    "long_left_pocket": 16.35,
+    "long_right_pocket": 18.85,
+    "short_upper_nominal": 10.0,
+    "short_lower_nominal": 10.0,
+    "short_upper_pocket": 10.1,
+    "short_lower_pocket": 10.1
+  },
+  "front_recess_diameter_mm": 7.4,
+  "front_recess_depth_mm": 2.7,
+  "rear_recess_diameter_mm": 5.5,
+  "rear_recess_depth_mm": 0.8,
+  "screw_access_diameter_mm": 4.5,
+  "stl_facets": 6260,
+  "stl_mesh_solid": true,
+  "3mf_crc_valid": true,
+  "3mf_object_count": 1,
+  "3mf_triangle_count": 6260,
+  "physical_fit": "UNVERIFIED"
+}

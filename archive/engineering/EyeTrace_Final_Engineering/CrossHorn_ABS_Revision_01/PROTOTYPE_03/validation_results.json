@@ -1,0 +1,112 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "prototype03_fcstd": {
+    "opened": true,
+    "valid": true,
+    "solids": 1,
+    "shape_objects": 1,
+    "volume_mm3": 1820.32476860347
+  },
+  "prototype03_stl": {
+    "facets": 3872,
+    "watertight_solid": true,
+    "bbox_mm": [
+      40.59895133972168,
+      25.598854064941406,
+      4.199999809265137
+    ],
+    "fits_k2_260_cube": true
+  },
+  "prototype03_3mf": {
+    "crc_valid": true,
+    "object_count": 1,
+    "triangles": 3872,
+    "settings": {
+      "layer_height": "0.2",
+      "wall_loops": "3",
+      "sparse_infill_density": "12%",
+      "sparse_infill_pattern": "gyroid",
+      "enable_support": "0",
+      "brim_width": [
+        "4"
+      ]
+    }
+  },
+  "prototype01_reference": {
+    "coupon_object_count": 3,
+    "coupon_objects": [
+      {
+        "name": "ClearanceCoupon_1",
+        "label": "Coupon 1 - 0.10 mm TOTAL lateral clearance",
+        "volume_mm3": 4306.609655707533
+      },
+      {
+        "name": "ClearanceCoupon_2",
+        "label": "Coupon 2 - 0.20 mm TOTAL lateral clearance",
+        "volume_mm3": 4297.662323453044
+      },
+      {
+        "name": "ClearanceCoupon_3",
+        "label": "Coupon 3 - 0.30 mm TOTAL lateral clearance",
+        "volume_mm3": 4288.6768062835545
+      }
+    ],
+    "all_shape_objects": [
+      {
+        "name": "ParametricCrossHorn",
+        "label": "Reference horn envelope - provisional, not for printing",
+        "volume_mm3": 296.34353212952976
+      },
+      {
+        "name": "ClearanceCoupon_1",
+        "label": "Coupon 1 - 0.10 mm TOTAL lateral clearance",
+        "volume_mm3": 4306.609655707533
+      },
+      {
+        "name": "ClearanceCoupon_2",
+        "label": "Coupon 2 - 0.20 mm TOTAL lateral clearance",
+        "volume_mm3": 4297.662323453044
+      },
+      {
+        "name": "ClearanceCoupon_3",
+        "label": "Coupon 3 - 0.30 mm TOTAL lateral clearance",
+        "volume_mm3": 4288.6768062835545
+      }
+    ],
+    "total_solid_volume_mm3": 12892.948785444132,
+    "project_infill": "100%",
+    "project_walls": 4
+  },
+  "estimates": {
+    "ABS_density_g_cm3_assumed": 1.04,
+    "prototype01_mass_g_estimate": 13.408666736861898,
+    "prototype03_mass_g_range": [
+      1.041225767641185,
+      1.5145102074780872
+    ],
+    "filament_reduction_percent_range": [
+      88.70499030813755,
+      92.23468083684457
+    ],
+    "prototype01_print_time_min_estimate": 90.95299190296087,
+    "prototype03_print_time_min_range": [
+      11.674524151546056,
+      14.708398765885173
+    ],
+    "time_model": "effective extrusion flow 2.5 mm3/s plus 5 min setup/travel; estimate only",
+    "prototype03_effective_material_fraction_assumed_range": [
+      0.55,
+      0.8
+    ]
+  },
+  "status": "GEOMETRY_AND_MESH_PASS; SLICER_TOOLPATHS_NOT_VERIFIED; PHYSICAL_FIT_UNVERIFIED"
+}

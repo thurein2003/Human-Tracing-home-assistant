@@ -1,0 +1,17 @@
+﻿import FreeCAD as A,Part,json,os
+from FreeCAD import Vector as V
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+d=A.openDocument(os.path.join(p,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'));r={}
+for key,n,pl in [('Pan','PanYoke_EarBracket_KeyedDrive',Part.makePlane(120,120,V(0,-60,20),V(1,0,0))),('Tilt','TiltCradle_KeyedHorn_CameraFrame',Part.makePlane(120,120,V(-100,0,20),V(0,1,0)))]:
+ s=d.getObject(n).Shape
+ info=[]
+ for i,f in enumerate(s.Faces):
+  b=f.BoundBox
+  if key=='Pan' and abs(b.ZMin-33)<0.001 and abs(b.ZMax-33)<0.001:info.append([i+1,f.Area,b.XMin,b.YMin,b.XMax,b.YMax])
+ sec=s.section(pl)
+ co=s.common(pl)
+ r[key]={'seat_faces':info,'plane_bbox':[pl.BoundBox.XMin,pl.BoundBox.YMin,pl.BoundBox.ZMin,pl.BoundBox.XMax,pl.BoundBox.YMax,pl.BoundBox.ZMax],'section_edges':len(sec.Edges),'section_valid':sec.isValid(),'common_faces':len(co.Faces),'common_solids':len(co.Solids),'common_vol':co.Volume}
+with open(os.path.join(p,'RENDERS','section_probe.json'),'w') as f:json.dump(r,f,indent=2)
+print(r)
+A.closeDocument(d.Name)
+

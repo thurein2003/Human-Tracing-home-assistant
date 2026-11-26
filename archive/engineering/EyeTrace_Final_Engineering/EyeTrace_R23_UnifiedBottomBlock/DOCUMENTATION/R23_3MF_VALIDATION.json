@@ -1,0 +1,30 @@
+{
+  "source": "EyeTrace_Final_Engineering\\EyeTrace_R22_UnifiedBottomMount\\PRINT\\Plate02_R22_UnifiedBottomMount_UNSLICED.3mf",
+  "output": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\PRINT\\Plate02_R23_UnifiedBottomBlock_UNSLICED.3mf",
+  "operation": "replace pan-yoke resource with fused R23 yoke+thrust-ring mesh; remove separate ring instance/resource",
+  "component_instances": 11,
+  "build_items": 11,
+  "fused_yoke_vertices": 40055,
+  "fused_yoke_triangles": 80190,
+  "fused_yoke_bbox_local_mm": [
+    [
+      -51.1,
+      51.099997
+    ],
+    [
+      -35.297912,
+      35.297916
+    ],
+    [
+      -33.9,
+      33.900003
+    ]
+  ],
+  "nonmanifold_edges": 0,
+  "connected_mesh_components": 1,
+  "archive_crc": "PASS",
+  "source_yoke_transform_preserved": true,
+  "other_component_meshes_and_transforms_preserved": true,
+  "base_geometry_changed": false,
+  "slice_state": "UNSLICED; must slice in Creality Print"
+}

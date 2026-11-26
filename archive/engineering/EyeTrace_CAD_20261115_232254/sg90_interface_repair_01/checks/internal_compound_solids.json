@@ -1,0 +1,254 @@
+{
+  "pairs": 31,
+  "results": [
+    {
+      "component": "IdlerPillar_M3x10_0",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "IdlerPillar_M3x10_1",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanDrive_M3x10_0",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanDrive_M3x10_1",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanDrive_M3x10_2",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanDrive_M3x10_3",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltDrive_M3x10_0",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltDrive_M3x10_1",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltDrive_M3x10_2",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltDrive_M3x10_3",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltIdler_M3x12",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_0",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_0",
+      "solid_indices": [
+        0,
+        2
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_0",
+      "solid_indices": [
+        1,
+        2
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_1",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_1",
+      "solid_indices": [
+        0,
+        2
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_1",
+      "solid_indices": [
+        1,
+        2
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_0",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_0",
+      "solid_indices": [
+        0,
+        2
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_0",
+      "solid_indices": [
+        1,
+        2
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_1",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_1",
+      "solid_indices": [
+        0,
+        2
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_1",
+      "solid_indices": [
+        1,
+        2
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "RailMount_Lower_M3x10_0",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "RailMount_Lower_M3x10_1",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "Camera_M2x12_Lower_Left",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "Camera_M2x12_Lower_Right",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "RailMount_Upper_M3x10_0",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "RailMount_Upper_M3x10_1",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "Camera_M2x12_Upper_Left",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    },
+    {
+      "component": "Camera_M2x12_Upper_Right",
+      "solid_indices": [
+        0,
+        1
+      ],
+      "common_volume_mm3": 0.0
+    }
+  ],
+  "scope": "Suppressed threads; simplified designed engagement, not actual thread-fit proof"
+}

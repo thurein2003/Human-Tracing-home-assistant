@@ -1,0 +1,30 @@
+{
+  "units": "mm",
+  "horn_reference": {
+    "long_span_confirmed": 35.0,
+    "short_span_confirmed_baseline": 18.0,
+    "hub_diameter_confirmed": 7.0,
+    "base_total_lateral_clearance": 0.20
+  },
+  "pocket_parameters_provisional_mm": {
+    "long_root_width": 7.5,
+    "long_tip_width": 5.0,
+    "long_end_radius": 2.5,
+    "short_root_width": 7.2,
+    "short_tip_width": 6.2,
+    "short_end_radius": 3.1,
+    "short_extension_each_end_from_prototype_01": 1.0,
+    "hub_recess_diameter": 7.4,
+    "hub_recess_depth": 2.7,
+    "retaining_screw_driver_access_diameter": 4.5,
+    "arm_recess_depth": 1.7
+  },
+  "coupon_parameters_mm": {
+    "outer_material_margin_around_pocket": 2.7,
+    "base_thickness": 4.2,
+    "minimum_floor_under_hub": 1.5,
+    "minimum_floor_under_arms": 2.5
+  },
+  "assumptions": "Arm widths/radii, hub centering, horn plate thickness and hub height are provisional values copied from Prototype 02 Correction 01; latest photos provide shape guidance only. The compact outer boundary is a rounded-cross envelope with 2.7 mm nominal material margin.",
+  "printing": {"material":"ABS","layer_height_mm":0.2,"walls":3,"infill_percent":12,"support":false,"brim_mm":4,"nozzle_C":255,"bed_C":100}
+}

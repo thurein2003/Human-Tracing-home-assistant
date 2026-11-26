@@ -1,0 +1,18 @@
+﻿import FreeCAD as A,json,os,math
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering'; out=root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CHECKS'
+d=A.openDocument(root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CAD\EyeTrace_R15_Final_Assembly.FCStd'); md=A.openDocument(root+r'\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'); tool=md.getObject('ArmPocketTool').Shape; pan=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape; tilt=d.getObject('TiltCradle_KeyedHorn_CameraFrame').Shape
+step=0.25; zlocal=2.95; data={}
+for name,carrier,fn in [('PanYoke_EarBracket_KeyedDrive',pan,lambda x,y:V(-x,y,35.85)),('TiltCradle_KeyedHorn_CameraFrame',tilt,lambda x,y:V(-40.15,y,78+x))]:
+ points=[]; mismatch=0; tested=0; xi=-19.5
+ while xi<=19.5001:
+  yi=-10.0
+  while yi<=10.0001:
+   if tool.isInside(V(xi,yi,zlocal),1e-6,True):
+    mat=carrier.isInside(fn(xi,yi),1e-5,True); tested+=1
+    if mat: mismatch+=1
+    points.append([round(xi,3),round(yi,3),bool(mat)])
+   yi+=step
+  xi+=step
+ data[name]={'section_local_z_mm':zlocal,'sample_pitch_mm':step,'tested_profile_points':tested,'intruding_material_points':mismatch,'void_points':tested-mismatch,'master_profile_dimensions_mm':[39.2,20.2],'points':points}
+print(json.dumps({k:{kk:v for kk,v in x.items() if kk!='points'} for k,x in data.items()},indent=2));open(out+r'\pocket_grid_comparison.json','w').write(json.dumps(data))

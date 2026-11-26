@@ -1,0 +1,37 @@
+{
+  "before": [
+    {
+      "hardware": "PanServo_ASSUMED",
+      "printed": "Base",
+      "volume_mm3": 184.6391009914285
+    },
+    {
+      "hardware": "PanServo_ASSUMED",
+      "printed": "PanServoRetainer",
+      "volume_mm3": 195.69588431363036
+    },
+    {
+      "hardware": "TiltServo_ASSUMED",
+      "printed": "TiltServoRetainer",
+      "volume_mm3": 70.6534980782529
+    },
+    {
+      "hardware": "TiltServo_ASSUMED",
+      "printed": "PanYoke",
+      "volume_mm3": 83.56237254531649
+    }
+  ],
+  "after": [
+    {
+      "hardware": "PanServo_ASSUMED",
+      "printed": "PanServoRetainer",
+      "volume_mm3": 25.52517373319362
+    },
+    {
+      "hardware": "TiltServo_ASSUMED",
+      "printed": "TiltServoRetainer",
+      "volume_mm3": 0.04407264164383456
+    }
+  ],
+  "scope": "Neutral hardware versus printed parts; reference geometry dimensions remain clone-unverified"
+}

@@ -1,0 +1,34 @@
+﻿import FreeCAD as App, FreeCADGui as Gui, Part
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\CAD\EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\RENDERS'
+d=App.openDocument(src); gd=Gui.activeDocument(); view=gd.activeView()
+allnames=['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanYoke_EarBracket_KeyedDrive','Tilt_Removable_IdlerPillar','Pan_KeyedHorn_Cover','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','PCB_Spacer_Lower_Left','PCB_Spacer_Lower_Right','PCB_Spacer_Upper_Left','PCB_Spacer_Upper_Right','CameraPlate_Cut007','PanServo_SG90_Reference','TiltServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','Tilt_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL','TiltOriginalScrew_PROVISIONAL']
+for n in ['AssemblyRoot','PrintedParts','HardwareReference','Keepouts','ReferenceDimensions']:
+ o=d.getObject(n)
+ if o and hasattr(o,'ViewObject'):o.ViewObject.Visibility=True
+def visible(names):
+ for o in d.Objects:
+  if hasattr(o,'ViewObject') and hasattr(o,'Shape') and not o.Shape.isNull(): o.ViewObject.Visibility=o.Name in names
+  if hasattr(o,'ViewObject') and hasattr(o,'Shape') and not o.Shape.isNull() and o.Name in names:
+   if 'Servo' in o.Name:o.ViewObject.ShapeColor=(0.72,0.74,0.77)
+   elif 'OriginalStar' in o.Name:o.ViewObject.ShapeColor=(0.98,0.72,0.12)
+   elif 'Yoke' in o.Name or 'Cradle' in o.Name:o.ViewObject.ShapeColor=(0.16,0.43,0.72)
+   elif 'Cover' in o.Name:o.ViewObject.ShapeColor=(0.82,0.36,0.19)
+   else:o.ViewObject.ShapeColor=(0.55,0.68,0.49)
+ d.recompute(); Gui.updateGui()
+visible(allnames); view.viewIsometric(); view.fitAll(); Gui.updateGui(); view.saveImage(out+r'\R16_Assembly_ActualCAD.png',1920,1200,'Current')
+# Close-ups omit obstructing outer base/other structures but retain hardware, horn, carrier, removable retainer.
+visible(['PanYoke_EarBracket_KeyedDrive','Pan_KeyedHorn_Cover','PanServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL']); view.viewIsometric(); view.fitAll(); Gui.updateGui(); view.saveImage(out+r'\R16_PanDrive_ActualCAD.png',1920,1200,'Current')
+visible(['PanYoke_EarBracket_KeyedDrive','Tilt_Removable_IdlerPillar','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','TiltServo_SG90_Reference','Tilt_OriginalStar_PROVISIONAL','TiltOriginalScrew_PROVISIONAL']); view.viewIsometric(); view.fitAll(); Gui.updateGui(); view.saveImage(out+r'\R16_TiltDrive_ActualCAD.png',1920,1200,'Current')
+box=Part.makeBox(500,250,500,V(-250,-250,-100))
+for label,names in [('R16_PanDrive_Section_ActualCAD',['Base_EarMount_ThrustSupport','PanYoke_EarBracket_KeyedDrive','Pan_KeyedHorn_Cover','PanServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL']),('R16_TiltDrive_Section_ActualCAD',['PanYoke_EarBracket_KeyedDrive','Tilt_Removable_IdlerPillar','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','TiltServo_SG90_Reference','Tilt_OriginalStar_PROVISIONAL','TiltOriginalScrew_PROVISIONAL'])]:
+ visible([])
+ created=[]
+ for n in names:
+  o=d.getObject(n); sh=o.Shape.common(box)
+  if not sh.isNull():
+   q=d.addObject('PartDesign::Feature',label+'_'+n); q.Label=n+' — y≤0 half-section'; q.Shape=sh; created.append(q.Name)
+   q.ViewObject.ShapeColor=(0.72,0.74,0.77) if 'Servo' in n else ((0.98,0.72,0.12) if 'OriginalStar' in n else ((0.82,0.36,0.19) if 'Cover' in n else (0.16,0.43,0.72)))
+ d.recompute(); visible(created); view.viewRear(); view.fitAll(); Gui.updateGui(); view.saveImage(out+'\\'+label+'.png',1920,1200,'Current')
+App.closeDocument(d.Name)

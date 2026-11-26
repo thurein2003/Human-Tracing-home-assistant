@@ -1,0 +1,924 @@
+{
+  "assembly": {
+    "file": "EyeTrace_Final_Engineering\\EyeTrace_R17_COMPACT_DRIVE\\CAD\\EyeTrace_R17_DriveSupport_Audit_HOLD.FCStd",
+    "objects": [
+      {
+        "name": "AssemblyRoot",
+        "label": "Eye Trace R15 ? operational-coordinate assembly",
+        "type": "App::DocumentObjectGroup",
+        "bbox": [
+          -70.0,
+          -35.3,
+          -3.1754264805429417,
+          44.5,
+          35.3,
+          103.0
+        ],
+        "volume": 166453.48503338272,
+        "valid": true,
+        "solids": 75
+      },
+      {
+        "name": "PrintedParts",
+        "label": "01 ? Printed components (13)",
+        "type": "App::DocumentObjectGroup",
+        "bbox": [
+          -58.2,
+          -35.3,
+          0.0,
+          44.0,
+          35.3,
+          103.0
+        ],
+        "volume": 135913.8749329339,
+        "valid": true,
+        "solids": 13
+      },
+      {
+        "name": "HardwareReference",
+        "label": "02 ? Installed hardware references (provisional where marked)",
+        "type": "App::DocumentObjectGroup",
+        "bbox": [
+          -70.0,
+          -30.4,
+          -3.1754264805429417,
+          44.5,
+          26.675426480542942,
+          97.5
+        ],
+        "volume": 20238.96810044902,
+        "valid": true,
+        "solids": 58
+      },
+      {
+        "name": "Keepouts",
+        "label": "03 ? Camera / ribbon uncertainty envelopes (not physical parts)",
+        "type": "App::DocumentObjectGroup",
+        "bbox": [
+          -65.45,
+          -1.7,
+          0.0,
+          20.0,
+          24.4,
+          102.0
+        ],
+        "volume": 10300.642000000002,
+        "valid": true,
+        "solids": 4
+      },
+      {
+        "name": "Base_EarMount_ThrustSupport",
+        "label": "Stationary base / pan-servo support",
+        "type": "Part::Feature",
+        "bbox": [
+          -40.0,
+          -35.0,
+          0.0,
+          40.0,
+          35.0,
+          36.5
+        ],
+        "volume": 50586.79985770291,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Pan_Replaceable_ThrustRing",
+        "label": "Stationary pan thrust surface",
+        "type": "Part::Feature",
+        "bbox": [
+          -32.0,
+          -32.0,
+          36.0,
+          32.0,
+          32.0,
+          37.0
+        ],
+        "volume": 833.5273628504433,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "PanServo_SG90_Reference",
+        "label": "Pan SG90 reference ? dimensions provisional",
+        "type": "Part::Feature",
+        "bbox": [
+          -10.7,
+          -6.1,
+          6.0,
+          21.599999999999998,
+          6.1,
+          36.3
+        ],
+        "volume": 7152.840844796366,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "TiltServo_SG90_Reference",
+        "label": "Tilt SG90 reference ? dimensions provisional",
+        "type": "Part::Feature",
+        "bbox": [
+          -70.0,
+          -6.1,
+          56.400000000000006,
+          -39.7,
+          6.1,
+          88.7
+        ],
+        "volume": 7152.840844796365,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Pan_OriginalStar_PROVISIONAL",
+        "label": "Pan SG90 four-arm cross horn \u2014 R15 reference; coupon fit user-confirmed",
+        "type": "Part::Feature",
+        "bbox": [
+          -19.5,
+          -10.0,
+          32.5,
+          19.5,
+          10.0,
+          36.5
+        ],
+        "volume": 476.19571761711836,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Tilt_OriginalStar_PROVISIONAL",
+        "label": "Tilt SG90 four-arm cross horn \u2014 R15 reference; coupon fit user-confirmed",
+        "type": "Part::Feature",
+        "bbox": [
+          -43.5,
+          -10.0,
+          58.5,
+          -39.5,
+          10.0,
+          97.5
+        ],
+        "volume": 476.1957176171183,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "PanOriginalScrew_PROVISIONAL",
+        "label": "PanOriginalScrew_PROVISIONAL",
+        "type": "Part::Feature",
+        "bbox": [
+          -1.75,
+          -1.75,
+          32.0,
+          1.75,
+          1.75,
+          38.0
+        ],
+        "volume": 19.674223993106082,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "TiltOriginalScrew_PROVISIONAL",
+        "label": "TiltOriginalScrew_PROVISIONAL",
+        "type": "Part::Feature",
+        "bbox": [
+          -44.0,
+          -1.75,
+          76.25,
+          -38.0,
+          1.75,
+          79.75
+        ],
+        "volume": 19.67422399310609,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "PanYoke_EarBracket_KeyedDrive",
+        "label": "Rotating pan yoke and pan horn pocket",
+        "type": "Part::Feature",
+        "bbox": [
+          -58.2,
+          -35.3,
+          33.0,
+          44.0,
+          35.3,
+          103.0
+        ],
+        "volume": 42345.82609243497,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Tilt_Removable_IdlerPillar",
+        "label": "Opposite-side tilt pivot support",
+        "type": "Part::Feature",
+        "bbox": [
+          28.0,
+          -28.5,
+          41.0,
+          44.0,
+          28.5,
+          98.0
+        ],
+        "volume": 7511.695140156739,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "IdlerPillar_M3x10_0",
+        "label": "IdlerPillar_M3x10_0",
+        "type": "Part::Feature",
+        "bbox": [
+          29.7,
+          -26.675426480542942,
+          33.0,
+          35.3,
+          -20.324573519457058,
+          46.0
+        ],
+        "volume": 190.48493790356758,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "IdlerPillar_M3x10_1",
+        "label": "IdlerPillar_M3x10_1",
+        "type": "Part::Feature",
+        "bbox": [
+          29.7,
+          20.324573519457058,
+          33.0,
+          35.3,
+          26.675426480542942,
+          46.0
+        ],
+        "volume": 190.48493790356758,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "Pan_KeyedHorn_Cover",
+        "label": "Pan horn retainer cover",
+        "type": "Part::Feature",
+        "bbox": [
+          -24.0,
+          -24.0,
+          30.8,
+          24.0,
+          24.0,
+          35.0
+        ],
+        "volume": 3022.4785340715316,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "PanDrive_M3x10_0",
+        "label": "PanDrive_M3x10_0",
+        "type": "Part::Feature",
+        "bbox": [
+          15.2,
+          -3.1754264805429417,
+          29.0,
+          20.8,
+          3.1754264805429417,
+          42.0
+        ],
+        "volume": 190.4849379035676,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "PanDrive_M3x10_1",
+        "label": "PanDrive_M3x10_1",
+        "type": "Part::Feature",
+        "bbox": [
+          -20.8,
+          -3.1754264805429417,
+          29.0,
+          -15.2,
+          3.1754264805429417,
+          42.0
+        ],
+        "volume": 190.4849379035676,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "PanDrive_M3x10_2",
+        "label": "PanDrive_M3x10_2",
+        "type": "Part::Feature",
+        "bbox": [
+          -2.8,
+          14.824573519457056,
+          29.0,
+          2.8,
+          21.175426480542942,
+          42.0
+        ],
+        "volume": 190.4849379035676,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "PanDrive_M3x10_3",
+        "label": "PanDrive_M3x10_3",
+        "type": "Part::Feature",
+        "bbox": [
+          -2.8,
+          -21.175426480542942,
+          29.0,
+          2.8,
+          -14.824573519457058,
+          42.0
+        ],
+        "volume": 190.48493790356756,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "TiltCradle_KeyedHorn_CameraFrame",
+        "label": "Moving tilt cradle and camera frame",
+        "type": "Part::Feature",
+        "bbox": [
+          -41.00000000000001,
+          -24.4,
+          54.0,
+          36.0,
+          21.0,
+          99.0
+        ],
+        "volume": 24528.289698365388,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Tilt_KeyedHorn_CaptiveCover",
+        "label": "Tilt horn retainer cover",
+        "type": "Part::Feature",
+        "bbox": [
+          -45.2,
+          -21.0,
+          57.0,
+          -41.0,
+          21.0,
+          99.0
+        ],
+        "volume": 2386.306021719595,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "TiltDrive_M3x10_0",
+        "label": "TiltDrive_M3x10_0",
+        "type": "Part::Feature",
+        "bbox": [
+          -47.0,
+          11.824573519457058,
+          75.2,
+          -34.0,
+          18.175426480542942,
+          80.8
+        ],
+        "volume": 190.48493790356764,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "TiltDrive_M3x10_1",
+        "label": "TiltDrive_M3x10_1",
+        "type": "Part::Feature",
+        "bbox": [
+          -47.0,
+          -18.175426480542942,
+          75.2,
+          -34.0,
+          -11.824573519457058,
+          80.8
+        ],
+        "volume": 190.48493790356764,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "TiltDrive_M3x10_2",
+        "label": "TiltDrive_M3x10_2",
+        "type": "Part::Feature",
+        "bbox": [
+          -47.0,
+          -3.1754264805429417,
+          90.2,
+          -34.0,
+          3.1754264805429417,
+          95.8
+        ],
+        "volume": 190.48493790356764,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "TiltDrive_M3x10_3",
+        "label": "TiltDrive_M3x10_3",
+        "type": "Part::Feature",
+        "bbox": [
+          -47.0,
+          -3.1754264805429417,
+          60.2,
+          -34.0,
+          3.1754264805429417,
+          65.8
+        ],
+        "volume": 190.48493790356758,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "Tilt_Journal_FlangedSleeve",
+        "label": "Opposite-side tilt journal sleeve",
+        "type": "Part::Feature",
+        "bbox": [
+          35.2,
+          -3.5,
+          74.5,
+          39.3,
+          3.5,
+          81.5
+        ],
+        "volume": 68.26366676985263,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "TiltIdler_M3x12",
+        "label": "TiltIdler_M3x12",
+        "type": "Part::Feature",
+        "bbox": [
+          29.5,
+          -3.1754264805429417,
+          75.2,
+          44.5,
+          3.1754264805429417,
+          80.8
+        ],
+        "volume": 235.2280008349653,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "TiltIdler_M3_Washer",
+        "label": "TiltIdler_M3_Washer",
+        "type": "Part::Feature",
+        "bbox": [
+          32.5,
+          -3.5,
+          74.5,
+          33.0,
+          3.5,
+          81.5
+        ],
+        "volume": 14.965762003538382,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "PanEar_M1p6x8_0",
+        "label": "PanEar_M1p6x8_0",
+        "type": "Part::Feature",
+        "bbox": [
+          -10.15,
+          -2.0,
+          16.9,
+          -6.15,
+          2.0,
+          26.5
+        ],
+        "volume": 41.32025330917046,
+        "valid": true,
+        "solids": 3
+      },
+      {
+        "name": "PanEar_M1p6x8_1",
+        "label": "PanEar_M1p6x8_1",
+        "type": "Part::Feature",
+        "bbox": [
+          17.05,
+          -2.0,
+          16.9,
+          21.05,
+          2.0,
+          26.5
+        ],
+        "volume": 41.32025330917047,
+        "valid": true,
+        "solids": 3
+      },
+      {
+        "name": "TiltEar_M1p6x8_0",
+        "label": "TiltEar_M1p6x8_0",
+        "type": "Part::Feature",
+        "bbox": [
+          -59.1,
+          -2.0,
+          56.95,
+          -49.5,
+          2.0,
+          60.95
+        ],
+        "volume": 41.32025330917044,
+        "valid": true,
+        "solids": 3
+      },
+      {
+        "name": "TiltEar_M1p6x8_1",
+        "label": "TiltEar_M1p6x8_1",
+        "type": "Part::Feature",
+        "bbox": [
+          -59.1,
+          -2.0,
+          84.15,
+          -49.5,
+          2.0,
+          88.15
+        ],
+        "volume": 41.32025330917043,
+        "valid": true,
+        "solids": 3
+      },
+      {
+        "name": "RailMount_Lower_M3x10_0",
+        "label": "CameraPlateMount_Lower_M3x10_0",
+        "type": "Part::Feature",
+        "bbox": [
+          -26.8,
+          -30.4,
+          -3.1754264805429417,
+          -21.2,
+          -17.4,
+          3.1754264805429417
+        ],
+        "volume": 190.4849379035676,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "RailMount_Lower_M3x10_1",
+        "label": "CameraPlateMount_Lower_M3x10_1",
+        "type": "Part::Feature",
+        "bbox": [
+          21.2,
+          -30.4,
+          -3.1754264805429417,
+          26.8,
+          -17.4,
+          3.1754264805429417
+        ],
+        "volume": 190.48493790356764,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "PCB_Spacer_Lower_Left",
+        "label": "Camera lower-left spacer",
+        "type": "Part::Feature",
+        "bbox": [
+          -13.0,
+          -30.4,
+          66.5,
+          -8.0,
+          -27.4,
+          71.5
+        ],
+        "volume": 45.333181991300705,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Camera_M2x12_Lower_Left",
+        "label": "Camera M2x12 provisional screw/nut",
+        "type": "Part::Feature",
+        "bbox": [
+          -2.0000000000000004,
+          -2.3094010767585034,
+          -2.0,
+          2.0000000000000004,
+          2.3094010767585034,
+          12.0
+        ],
+        "volume": 79.97555516293382,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "PCB_Spacer_Lower_Right",
+        "label": "Camera lower-right spacer",
+        "type": "Part::Feature",
+        "bbox": [
+          8.0,
+          -30.4,
+          66.5,
+          13.0,
+          -27.4,
+          71.5
+        ],
+        "volume": 45.333181991300705,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Camera_M2x12_Lower_Right",
+        "label": "Camera M2x12 provisional screw/nut001",
+        "type": "Part::Feature",
+        "bbox": [
+          -2.0000000000000004,
+          -2.3094010767585034,
+          -2.0,
+          2.0000000000000004,
+          2.3094010767585034,
+          12.0
+        ],
+        "volume": 79.97555516293382,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "RailMount_Upper_M3x10_0",
+        "label": "CameraPlateMount_Upper_M3x10_0",
+        "type": "Part::Feature",
+        "bbox": [
+          -26.8,
+          -30.4,
+          -3.1754264805429417,
+          -21.2,
+          -17.4,
+          3.1754264805429417
+        ],
+        "volume": 190.4849379035676,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "RailMount_Upper_M3x10_1",
+        "label": "CameraPlateMount_Upper_M3x10_1",
+        "type": "Part::Feature",
+        "bbox": [
+          21.2,
+          -30.4,
+          -3.1754264805429417,
+          26.8,
+          -17.4,
+          3.1754264805429417
+        ],
+        "volume": 190.48493790356764,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "PCB_Spacer_Upper_Left",
+        "label": "Camera upper-left spacer",
+        "type": "Part::Feature",
+        "bbox": [
+          -13.0,
+          -30.4,
+          80.5,
+          -8.0,
+          -27.4,
+          85.5
+        ],
+        "volume": 45.333181991300705,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Camera_M2x12_Upper_Left",
+        "label": "Camera M2x12 provisional screw/nut002",
+        "type": "Part::Feature",
+        "bbox": [
+          -2.0000000000000004,
+          -2.3094010767585034,
+          -2.0,
+          2.0000000000000004,
+          2.3094010767585034,
+          12.0
+        ],
+        "volume": 79.97555516293382,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "PCB_Spacer_Upper_Right",
+        "label": "Camera upper-right spacer",
+        "type": "Part::Feature",
+        "bbox": [
+          8.0,
+          -30.4,
+          80.5,
+          13.0,
+          -27.4,
+          85.5
+        ],
+        "volume": 45.333181991300705,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Camera_M2x12_Upper_Right",
+        "label": "Camera M2x12 provisional screw/nut003",
+        "type": "Part::Feature",
+        "bbox": [
+          -2.0000000000000004,
+          -2.3094010767585034,
+          -2.0,
+          2.0000000000000004,
+          2.3094010767585034,
+          12.0
+        ],
+        "volume": 79.97555516293382,
+        "valid": true,
+        "solids": 2
+      },
+      {
+        "name": "PanServo_WireExit_KEEP_OUT",
+        "label": "PanServo_WireExit_KEEP_OUT",
+        "type": "Part::Feature",
+        "bbox": [
+          -36.0,
+          -1.7,
+          10.55,
+          -5.850000000000001,
+          1.7,
+          11.65
+        ],
+        "volume": 112.76099999999997,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "TiltServo_WireExit_KEEP_OUT",
+        "label": "TiltServo_WireExit_KEEP_OUT",
+        "type": "Part::Feature",
+        "bbox": [
+          -65.45,
+          -1.7,
+          83.85,
+          -64.35000000000001,
+          1.7,
+          102.0
+        ],
+        "volume": 67.88099999999966,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "CameraPlate_Cut007",
+        "label": "Camera mounting plate ? 21 x 14 mm hole centers",
+        "type": "Part::Feature",
+        "bbox": [
+          -28.0,
+          -27.400000000000002,
+          60.0,
+          28.0,
+          -24.399999999999995,
+          92.0
+        ],
+        "volume": 4449.355830897155,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Camera_Lens_PROVISIONAL",
+        "label": "Lens envelope ? provisional dimensions",
+        "type": "Part::Feature",
+        "bbox": [
+          -7.0,
+          -7.0,
+          0.0,
+          7.0,
+          7.0,
+          10.0
+        ],
+        "volume": 1539.3804002589989,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Camera_WireExit_KEEP_OUT",
+        "label": "Ribbon/cable routing envelope ? not physical cable",
+        "type": "Part::Feature",
+        "bbox": [
+          0.0,
+          0.0,
+          0.0,
+          20.0,
+          18.0,
+          1.0
+        ],
+        "volume": 360.0,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "Camera_RearComponents_KEEP_OUT",
+        "label": "Rear camera uncertainty envelope ? not hardware",
+        "type": "Part::Feature",
+        "bbox": [
+          0.0,
+          0.0,
+          0.0,
+          20.0,
+          24.4,
+          20.0
+        ],
+        "volume": 9759.999999999998,
+        "valid": true,
+        "solids": 1
+      }
+    ]
+  },
+  "master": {
+    "file": "EyeTrace_Final_Engineering\\CrossHorn_ABS_Revision_01\\PROTOTYPE_04_REVISION_15\\CrossHorn_UltraMinimal_FitTest_04R15.FCStd",
+    "objects": [
+      {
+        "name": "BaseCoupon",
+        "label": "Outer cross coupon body",
+        "type": "Part::Feature",
+        "bbox": [
+          -21.0,
+          -11.5,
+          0.0,
+          21.0,
+          11.5,
+          3.8
+        ],
+        "volume": 1619.4176098890955,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "ArmPocketTool",
+        "label": "Fixed X/Y arm pocket cutter",
+        "type": "Part::Feature",
+        "bbox": [
+          -19.6,
+          -10.1,
+          2.0999999999999996,
+          19.6,
+          10.099999999999998,
+          3.8
+        ],
+        "volume": 461.6567346548272,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "ArmPocketCut",
+        "label": "Arm-pocketed coupon blank",
+        "type": "Part::Cut",
+        "bbox": [
+          -21.0,
+          -11.5,
+          0.0,
+          21.0,
+          11.5,
+          3.8
+        ],
+        "volume": 1157.760875234268,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "ThroughBoreTool",
+        "label": "Single continuous 8.00 mm center bore",
+        "type": "Part::Cylinder",
+        "bbox": [
+          -4.0,
+          -4.0,
+          0.0,
+          4.0,
+          4.0,
+          4.8
+        ],
+        "volume": 241.27431579569608,
+        "valid": true,
+        "solids": 1
+      },
+      {
+        "name": "FinalCoupon",
+        "label": "Cross-horn ultra-minimal fit-test coupon",
+        "type": "Part::Cut",
+        "bbox": [
+          -21.0,
+          -11.5,
+          0.0,
+          21.0,
+          11.5,
+          3.8
+        ],
+        "volume": 1052.1252003539548,
+        "valid": true,
+        "solids": 1
+      }
+    ]
+  }
+}

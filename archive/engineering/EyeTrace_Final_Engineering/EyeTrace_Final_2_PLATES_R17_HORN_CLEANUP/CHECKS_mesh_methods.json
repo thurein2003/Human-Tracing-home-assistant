@@ -1,0 +1,36 @@
+[
+  {
+    "stage": "initial",
+    "solid": false,
+    "vol": 20917.80859375,
+    "facets": 8095
+  },
+  {
+    "stage": "harmonizeNormals",
+    "solid": false,
+    "vol": 20917.80859375,
+    "facets": 8095
+  },
+  {
+    "stage": "removeDuplicatedPoints",
+    "solid": false,
+    "vol": 20917.80859375,
+    "facets": 8095
+  },
+  {
+    "stage": "removeDuplicatedFacets",
+    "solid": false,
+    "vol": 20917.80859375,
+    "facets": 8095
+  },
+  {
+    "stage": "fixDeformations",
+    "error": "function takes at least 1 argument (0 given)"
+  },
+  {
+    "stage": "removeNonManifolds",
+    "solid": false,
+    "vol": 20917.80859375,
+    "facets": 8095
+  }
+]

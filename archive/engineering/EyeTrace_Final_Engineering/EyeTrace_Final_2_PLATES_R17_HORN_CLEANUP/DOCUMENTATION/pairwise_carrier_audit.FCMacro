@@ -1,0 +1,14 @@
+﻿import FreeCAD as A, os, json
+r=r'EyeTrace_Final_Engineering'
+new=A.openDocument(os.path.join(r,'EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP','CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'))
+old=A.openDocument(os.path.join(r,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'))
+pairs=[('PanYoke_EarBracket_KeyedDrive',['Pan_OriginalStar_PROVISIONAL','Pan_KeyedHorn_Cover','PanDrive_M3x10_0','PanDrive_M3x10_1','PanDrive_M3x10_2','PanDrive_M3x10_3','PanServo_SG90_Reference']),('TiltCradle_KeyedHorn_CameraFrame',['Tilt_OriginalStar_PROVISIONAL','Tilt_KeyedHorn_CaptiveCover','TiltDrive_M3x10_0','TiltDrive_M3x10_1','TiltDrive_M3x10_2','TiltDrive_M3x10_3','TiltServo_SG90_Reference'])]
+out=[]
+for carrier,names in pairs:
+ row={'carrier':carrier,'pairs':[]}
+ for name in names:
+  no=new.getObject(carrier).Shape.common(new.getObject(name).Shape).Volume
+  oo=old.getObject(carrier).Shape.common(old.getObject(name).Shape).Volume
+  row['pairs'].append({'other':name,'R16_common_mm3':float(oo),'R17_common_mm3':float(no)})
+ out.append(row)
+with open(os.path.join(r,'EyeTrace_R17_FINAL_PRINT_VALIDATION','REPORTS','ASSEMBLY_PAIR_INTERFERENCE.json'),'w') as f:json.dump(out,f,indent=2)

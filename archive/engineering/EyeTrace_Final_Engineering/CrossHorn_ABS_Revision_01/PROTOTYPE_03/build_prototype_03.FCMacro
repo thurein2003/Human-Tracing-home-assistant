@@ -1,0 +1,49 @@
+import json
+from pathlib import Path
+import FreeCAD as App, Part, MeshPart
+from FreeCAD import Vector as V
+OUT=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_03")
+p=json.loads((OUT/'parameters.json').read_text(encoding='utf-8')); h=p['horn_reference']; q=p['pocket_parameters_provisional_mm']; b=p['coupon_parameters_mm']; m=b['outer_material_margin_around_pocket']; clear=h['base_total_lateral_clearance']
+def rounded_taper_pair(span,root_w,tip_w,end_r,height,axis='x'):
+    half=span/2.0; cap_x=half-end_r
+    if min(root_w,tip_w,end_r,height)<=0 or cap_x<=0: raise ValueError('Invalid rounded tapered arm dimensions')
+    arms=[]
+    for sign in (-1.0,1.0):
+        pts=[V(0,-root_w/2,0),V(sign*cap_x,-tip_w/2,0),V(sign*cap_x,tip_w/2,0),V(0,root_w/2,0),V(0,-root_w/2,0)]
+        web=Part.Face(Part.Wire(Part.makePolygon(pts))).extrude(V(0,0,height))
+        cap=Part.makeCylinder(end_r,height,V(sign*cap_x,0,0))
+        arms.append(web.fuse(cap))
+    s=arms[0].fuse(arms[1]).removeSplitter()
+    if axis=='y': s.rotate(V(0,0,0),V(0,0,1),90)
+    return s
+long_span=h['long_span_confirmed']+clear
+short_span=h['short_span_confirmed_baseline']+2*q['short_extension_each_end_from_prototype_01']+clear
+long_root=q['long_root_width']+clear; long_tip=q['long_tip_width']+clear; long_r=q['long_end_radius']+clear/2
+short_root=q['short_root_width']; short_tip=q['short_tip_width']; short_r=q['short_end_radius']
+outer_long=rounded_taper_pair(long_span+2*m,long_root+2*m,long_tip+2*m,long_r+m,b['base_thickness'],'x')
+outer_short=rounded_taper_pair(short_span+2*m,short_root+2*m,short_tip+2*m,short_r+m,b['base_thickness'],'y')
+outer=outer_long.fuse(outer_short).removeSplitter()
+if not outer.isValid() or len(outer.Solids)!=1: raise RuntimeError('Cross-shaped outer body is not one valid solid')
+long_recess=rounded_taper_pair(long_span,long_root,long_tip,long_r,q['arm_recess_depth'],'x')
+short_recess=rounded_taper_pair(short_span,short_root,short_tip,short_r,q['arm_recess_depth'],'y')
+cut=long_recess.fuse(short_recess).removeSplitter(); cut.translate(V(0,0,b['base_thickness']-q['arm_recess_depth']))
+shape=outer.cut(cut)
+# Separate hub counterbore and retaining-screw / driver access; preserve 1.5 mm floor under the hub.
+hub_z=b['base_thickness']-q['hub_recess_depth']
+shape=shape.cut(Part.makeCylinder(q['hub_recess_diameter']/2,q['hub_recess_depth'],V(0,0,hub_z)))
+shape=shape.cut(Part.makeCylinder(q['retaining_screw_driver_access_diameter']/2,b['base_thickness']+1,V(0,0,-0.5)))
+shape=shape.removeSplitter()
+if not shape.isValid() or len(shape.Solids)!=1: raise RuntimeError('Finished coupon must be one valid solid')
+floor_hub=b['base_thickness']-q['hub_recess_depth']; floor_arms=b['base_thickness']-q['arm_recess_depth']
+if floor_hub < b['minimum_floor_under_hub']-1e-6 or floor_arms < b['minimum_floor_under_arms']-1e-6: raise RuntimeError('Insufficient floor below recess')
+doc=App.newDocument('CrossHorn_Minimal_FitTest_03')
+obj=doc.addObject('PartDesign::Feature','MinimalCrossHornCoupon'); obj.Label='One-piece compact rounded-cross horn fit coupon'; obj.Shape=shape
+props={'HornLongSpan':h['long_span_confirmed'],'HornShortSpanBaseline':h['short_span_confirmed_baseline'],'ShortPocketSpan':short_span,'HubNominalDiameter':h['hub_diameter_confirmed'],'HubRecessDiameter':q['hub_recess_diameter'],'HubRecessDepth':q['hub_recess_depth'],'ScrewDriverAccessDiameter':q['retaining_screw_driver_access_diameter'],'LongPocketRootWidth':long_root,'LongPocketTipWidth':long_tip,'LongEndRadius':long_r,'ShortPocketRootWidth':short_root,'ShortPocketTipWidth':short_tip,'ShortEndRadius':short_r,'ShortExtensionEachEnd':q['short_extension_each_end_from_prototype_01'],'OuterMargin':m,'BaseThickness':b['base_thickness'],'ArmRecessDepth':q['arm_recess_depth'],'FloorUnderHub':floor_hub,'FloorUnderArms':floor_arms}
+for n,v in props.items(): obj.addProperty('App::PropertyLength',n,'Parameters'); setattr(obj,n,v)
+obj.addProperty('App::PropertyString','FitStatus','Engineering'); obj.FitStatus='PROVISIONAL - print and test with actual white horn'
+obj.addProperty('App::PropertyString','ParametricSource','Engineering'); obj.ParametricSource='Edit parameters.json and rerun build_prototype_03.FCMacro to regenerate geometry'
+doc.recompute(); doc.saveAs(str(OUT/'CrossHorn_Minimal_FitTest_03.FCStd'))
+mesh=MeshPart.meshFromShape(Shape=shape,LinearDeflection=0.04,AngularDeflection=0.08,Relative=False); mesh.write(str(OUT/'CrossHorn_Minimal_FitTest_03.stl'))
+area_outer=outer.Volume/b['base_thickness']
+result={'solid_valid':shape.isValid(),'solid_count':len(shape.Solids),'mesh_facets':len(mesh.Facets),'mesh_solid':mesh.isSolid(),'bbox_mm':[shape.BoundBox.XLength,shape.BoundBox.YLength,shape.BoundBox.ZLength],'solid_volume_mm3':shape.Volume,'outer_plan_area_mm2':area_outer,'outer_margin_nominal_mm':m,'base_thickness_mm':b['base_thickness'],'hub_floor_mm':floor_hub,'arm_floor_mm':floor_arms,'long_span_pocket_mm':long_span,'long_root_width_mm':long_root,'long_tip_width_mm':long_tip,'long_end_radius_mm':long_r,'short_span_pocket_mm':short_span,'short_root_width_mm':short_root,'short_tip_width_mm':short_tip,'short_end_radius_mm':short_r,'hub_recess_diameter_mm':q['hub_recess_diameter'],'hub_recess_depth_mm':q['hub_recess_depth'],'screw_access_diameter_mm':q['retaining_screw_driver_access_diameter'],'parameters':props}
+(OUT/'geometry_validation.json').write_text(json.dumps(result,indent=2),encoding='utf-8'); print(json.dumps(result,indent=2))

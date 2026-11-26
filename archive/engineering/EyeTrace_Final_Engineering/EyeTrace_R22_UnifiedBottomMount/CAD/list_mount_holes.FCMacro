@@ -1,0 +1,8 @@
+﻿import FreeCAD as App,json
+d=App.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount\CAD\EyeTrace_R22_UnifiedBottomMount.FCStd');s=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape;a=[]
+for i,f in enumerate(s.Faces):
+ su=f.Surface
+ if 'Cylinder' in type(su).__name__ and abs(su.Axis.z)>.9 and su.Radius<4.2:
+  c=su.Center
+  if c.z<45:a.append({'face':i+1,'r':su.Radius,'center':[round(c.x,2),round(c.y,2),round(c.z,2)],'bbox':[round(f.BoundBox.ZMin,2),round(f.BoundBox.ZMax,2)]})
+print(json.dumps(a,indent=2));App.closeDocument(d.Name)

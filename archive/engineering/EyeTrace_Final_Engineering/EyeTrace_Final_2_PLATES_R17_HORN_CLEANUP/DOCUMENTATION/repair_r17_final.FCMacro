@@ -1,0 +1,96 @@
+﻿import FreeCAD as A,Part,Mesh,json,os,math,shutil,zipfile,xml.etree.ElementTree as ET,struct
+from FreeCAD import Vector as V
+ROOT=r'EyeTrace_Final_Engineering'
+OUT=os.path.join(ROOT,'EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP')
+SRC=os.path.join(ROOT,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO')
+MASTER=os.path.join(ROOT,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd')
+d=A.openDocument(os.path.join(SRC,'CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'))
+m=A.openDocument(MASTER)
+base=m.getObject('BaseCoupon').Shape.copy(); final=m.getObject('FinalCoupon').Shape
+expLocal=base.cut(final)
+disk=Part.makeCylinder(20.5,3.8,V(0,0,0),V(0,0,1))
+baseSmall=disk
+patchLocal=disk.cut(expLocal)
+rotPan=A.Rotation(V(1,0,0),180);rotTilt=A.Rotation(V(0,1,0),-90)
+def tr(shape,rot,top):
+ q=shape.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/math.pi);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+def rebuild(name,rot,top,holes,axis,a,b,center):
+ o=d.getObject(name);old=o.Shape.copy();env=tr(baseSmall,rot,top);patch=tr(patchLocal,rot,top);exp=tr(expLocal,rot,top)
+ sh=old.cut(env).fuse(patch)
+ tools=[]
+ for rad,pos in holes:tools.append(Part.makeCylinder(rad,b-a,V(*pos),V(*axis)))
+ tools.append(Part.makeCylinder(4.0,b-a,V(*center),V(*axis)))
+ for cut in tools:sh=sh.cut(cut)
+ if not sh.isValid() or len(sh.Solids)!=1:raise Exception(name+' invalid: '+str(sh.isValid())+' / '+str(len(sh.Solids)))
+ actual=env.cut(sh);allowed=exp.copy()
+ for cut in tools:allowed=allowed.fuse(env.common(cut))
+ da=actual.cut(allowed);de=allowed.cut(actual)
+ o.Shape=sh
+ o.Label=('Pan yoke — R15 horn pocket; legacy slots removed' if 'PanYoke' in name else 'Tilt cradle — R15 horn pocket; legacy slots removed')
+ return {'valid':sh.isValid(),'solids':len(sh.Solids),'volume_before':old.Volume,'volume_after':sh.Volume,'volume_change':sh.Volume-old.Volume,'faces':len(sh.Faces),'R15_pocket_envelope':[39.2,20.2],'R15_recess_depth':1.7,'R15_center_bore':8.0,'extra_void_mm3':da.Volume,'missing_void_mm3':de.Volume,'bbox':[sh.BoundBox.XMin,sh.BoundBox.YMin,sh.BoundBox.ZMin,sh.BoundBox.XMax,sh.BoundBox.YMax,sh.BoundBox.ZMax]}
+pan=rebuild('PanYoke_EarBracket_KeyedDrive',rotPan,V(0,0,33),[(1.65,(18,0,30)),(1.65,(-18,0,30)),(1.65,(0,18,30)),(1.65,(0,-18,30))],[0,0,1],30,42,(0,0,30))
+tilt=rebuild('TiltCradle_KeyedHorn_CameraFrame',rotTilt,V(-41,0,78),[(1.65,(-46,0,93)),(1.65,(-46,0,63)),(1.65,(-46,15,78)),(1.65,(-46,-15,78))],[1,0,0],-46,-32,(-46,0,78))
+A.closeDocument(m.Name)
+d.recompute()
+fc=os.path.join(OUT,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd')
+d.saveAs(fc)
+printed=[d.getObject(n) for n in ['Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanYoke_EarBracket_KeyedDrive','Tilt_Removable_IdlerPillar','Pan_KeyedHorn_Cover','TiltCradle_KeyedHorn_CameraFrame','Tilt_KeyedHorn_CaptiveCover','Tilt_Journal_FlangedSleeve','PCB_Spacer_Lower_Left','PCB_Spacer_Lower_Right','PCB_Spacer_Upper_Left','PCB_Spacer_Upper_Right','CameraPlate_21x14']]
+Part.export(printed,os.path.join(OUT,'CAD','EyeTrace_R17_HornCleanup_Assembly.step'))
+def tf(q,kind):
+ if kind=='pan':return V(q.x+71.2,q.y+48.3,q.z-33)
+ return V(-q.z+288,q.y+127,q.x+41)
+def write_stl(mesh,path,kind):
+ verts,faces=mesh.Topology; tv=[tf(v,kind) for v in verts]
+ with open(path,'wb') as f:
+  f.write(('R17 exact R15 pocket '+kind).encode('ascii')[:80].ljust(80,b' '));f.write(struct.pack('<I',len(faces)))
+  for face in faces:
+   a,b,c=[tv[int(i)] for i in face];n=(b-a).cross(c-a)
+   if n.Length:n.normalize()
+   f.write(struct.pack('<12fH',n.x,n.y,n.z,a.x,a.y,a.z,b.x,b.y,b.z,c.x,c.y,c.z,0))
+ return tv,faces
+meshdata={};meshchecks={}
+for name,kind in [('PanYoke_EarBracket_KeyedDrive','pan'),('TiltCradle_KeyedHorn_CameraFrame','tilt')]:
+ native=os.path.join(OUT,'STL','_'+name+'_native.stl')
+ Part.export([d.getObject(name)],native);mesh=Mesh.Mesh(native)
+ outstl=os.path.join(OUT,'STL',name+'_R17.stl');verts,faces=write_stl(mesh,outstl,kind)
+ finalmesh=Mesh.Mesh(outstl)
+ meshchecks[name]={'BREP_valid':d.getObject(name).Shape.isValid(),'BREP_solids':len(d.getObject(name).Shape.Solids),'BREP_volume':d.getObject(name).Shape.Volume,'native_mesh_solid':mesh.isSolid(),'native_mesh_volume':mesh.Volume,'print_mesh_solid':finalmesh.isSolid(),'print_mesh_volume':finalmesh.Volume,'facet_count':len(finalmesh.Facets),'bbox':[finalmesh.BoundBox.XMin,finalmesh.BoundBox.YMin,finalmesh.BoundBox.ZMin,finalmesh.BoundBox.XMax,finalmesh.BoundBox.YMax,finalmesh.BoundBox.ZMax]}
+ meshdata[name]=(verts,faces)
+# carry the remaining 11 unchanged source STLs
+srcstl=os.path.join(SRC,'STL')
+for fn in os.listdir(srcstl):
+ if fn.lower().endswith('.stl') and 'PanYoke' not in fn and 'TiltCradle' not in fn:
+  shutil.copy2(os.path.join(srcstl,fn),os.path.join(OUT,'STL',fn))
+ns='http://schemas.microsoft.com/3dmanufacturing/core/2015/02';ET.register_namespace('',ns);tag=lambda x:'{%s}%s'%(ns,x)
+def patch3mf(i):
+ src=os.path.join(SRC,'PRINT','EyeTrace_R16_Plate_%02d_ABS_HOLD.3mf'%i);dst=os.path.join(OUT,'PRINT','EyeTrace_R17_Plate_%02d_ABS_HORN_CLEANUP_HOLD.3mf'%i)
+ with zipfile.ZipFile(src,'r') as zin:
+  model=ET.fromstring(zin.read('3D/3dmodel.model'));cnt=0
+  for ob in model.findall('.//'+tag('object')):
+   nm=ob.get('name')
+   if nm not in meshdata:continue
+   vs,fs=meshdata[nm];old=ob.find(tag('mesh'))
+   if old is None:continue
+   ob.remove(old);me=ET.SubElement(ob,tag('mesh'));vv=ET.SubElement(me,tag('vertices'))
+   for q in vs:ET.SubElement(vv,tag('vertex'),{'x':format(q.x,'.9g'),'y':format(q.y,'.9g'),'z':format(q.z,'.9g')})
+   tt=ET.SubElement(me,tag('triangles'))
+   for face in fs:ET.SubElement(tt,tag('triangle'),{'v1':str(int(face[0])),'v2':str(int(face[1])),'v3':str(int(face[2]))})
+   cnt+=1
+  for md in model.findall(tag('metadata')):
+   if md.get('name')=='Title':md.text='EyeTrace R17 R15 horn cleanup — reslice required'
+   if md.get('name')=='Description':md.text='Both local drive interfaces rebuilt from exact R15 master BREP. Creality reslicing and support verification required.'
+  tmp=dst+'.tmp'
+  with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as zout:
+   for info in zin.infolist():zout.writestr(info,ET.tostring(model,encoding='utf-8',xml_declaration=True) if info.filename=='3D/3dmodel.model' else zin.read(info.filename))
+ shutil.move(tmp,dst);return cnt
+mf=[patch3mf(1),patch3mf(2)]
+report={'freecad':'1.1.4','source':os.path.join(SRC,'CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'),'master':MASTER,'components':{'pan':pan,'tilt':tilt},'mesh_validation':meshchecks,'printable_parts':13,'camera_hole_pattern_mm':[21,14],'3mf_objects_replaced_per_project':mf,'release':'HOLD — inspect/reslice both 3MF projects in Creality Print; no slicer verification performed'}
+with open(os.path.join(OUT,'CHECKS.json'),'w') as f:json.dump(report,f,indent=2)
+with open(os.path.join(OUT,'STL_NATIVE_MESH_VALIDATION.json'),'w') as f:json.dump(meshchecks,f,indent=2)
+print('R17_REBUILT',json.dumps(report))
+A.closeDocument(d.Name)
+
+
+
+
+

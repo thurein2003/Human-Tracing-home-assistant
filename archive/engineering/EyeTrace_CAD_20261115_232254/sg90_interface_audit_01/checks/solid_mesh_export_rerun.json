@@ -1,0 +1,80 @@
+{
+  "Base": {
+    "solid_valid": true,
+    "solids": 1,
+    "stl_closed": true,
+    "stl_components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "bad_normals": false,
+    "step_valid": true,
+    "step_difference_volume_mm3": 0.0
+  },
+  "PanServoRetainer": {
+    "solid_valid": true,
+    "solids": 1,
+    "stl_closed": true,
+    "stl_components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "bad_normals": false,
+    "step_valid": true,
+    "step_difference_volume_mm3": 0.0
+  },
+  "TiltServoRetainer": {
+    "solid_valid": true,
+    "solids": 1,
+    "stl_closed": true,
+    "stl_components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "bad_normals": false,
+    "step_valid": true,
+    "step_difference_volume_mm3": 0.0
+  },
+  "PanYoke": {
+    "solid_valid": true,
+    "solids": 1,
+    "stl_closed": true,
+    "stl_components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "bad_normals": false,
+    "step_valid": true,
+    "step_difference_volume_mm3": 0.0
+  },
+  "TiltCameraCradle": {
+    "solid_valid": true,
+    "solids": 1,
+    "stl_closed": true,
+    "stl_components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "bad_normals": false,
+    "step_valid": true,
+    "step_difference_volume_mm3": 0.0
+  },
+  "PanHornClamp": {
+    "solid_valid": true,
+    "solids": 1,
+    "stl_closed": true,
+    "stl_components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "bad_normals": false,
+    "step_valid": true,
+    "step_difference_volume_mm3": 0.0
+  },
+  "TiltHornClamp": {
+    "solid_valid": true,
+    "solids": 1,
+    "stl_closed": true,
+    "stl_components": 1,
+    "self_intersections": false,
+    "nonmanifold": false,
+    "bad_normals": false,
+    "step_valid": true,
+    "step_difference_volume_mm3": 0.0
+  },
+  "full_hardware_collision_status": "FAIL: positive-volume shaft/horn reference intersections, excluded by inherited motion test; see geometry_extraction.json"
+}

@@ -1,0 +1,9 @@
+﻿import FreeCAD as A,json
+root=r'EyeTrace_Final_Engineering'
+d=A.openDocument(root+r'\Camera_21x14_Correction_01\CAD\K2_PrintLayout_21x14.FCStd')
+r=[]
+for o in d.Objects:
+ if hasattr(o,'Shape') and not o.Shape.isNull():
+  b=o.Shape.BoundBox;r.append({'name':o.Name,'label':o.Label,'bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax],'volume':o.Shape.Volume,'solids':len(o.Shape.Solids),'valid':o.Shape.isValid()})
+open(root+r'\FINAL_ALL_IN_ONE_R15\print_layout_component_audit.json','w').write(json.dumps(r,indent=2))
+A.closeDocument(d.Name)

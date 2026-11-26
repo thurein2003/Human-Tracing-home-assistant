@@ -1,0 +1,1113 @@
+﻿{
+    "source_3mf":  "FINAL_ALL_IN_ONE_R15/EyeTrace_K2_ABS_All_In_One_R15.3mf",
+    "exact_exported_3mf":  "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED\\EyeTrace_K2_ABS_All_In_One_R15_Fixed.3mf",
+    "exact_archive_reopened_and_parsed":  true,
+    "mesh_objects":  13,
+    "build_items":  13,
+    "mesh_geometry_source":  "Original verified individual STL facets copied with same triangle order; each mesh has rigid translation only; individual STLs copied byte-for-byte.",
+    "geometry_comparison":  [
+                                {
+                                    "name":  "Base_EarMount_ThrustSupport",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  5.0078818591099695E-08,
+                                    "translation_mm":  [
+                                                           174.2,
+                                                           48.0,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "Pan_Replaceable_ThrustRing",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  5.49098453060036E-08,
+                                    "translation_mm":  [
+                                                           44.98567771911621,
+                                                           134.5964199066162,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "PanYoke_EarBracket_KeyedDrive",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  5.2553243657059672E-08,
+                                    "translation_mm":  [
+                                                           64.0999984741211,
+                                                           48.296051025390625,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "Tilt_Removable_IdlerPillar",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  5.3455756430982143E-08,
+                                    "translation_mm":  [
+                                                           101.0,
+                                                           131.1,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "Pan_KeyedHorn_Cover",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  6.8997561042859631E-08,
+                                    "translation_mm":  [
+                                                           148.9892578125,
+                                                           126.597314453125,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "TiltCradle_KeyedHorn_CameraFrame",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  6.9305063058349361E-08,
+                                    "translation_mm":  [
+                                                           211.5,
+                                                           125.30000076293945,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "Tilt_KeyedHorn_CaptiveCover",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  5.0122837501515631E-08,
+                                    "translation_mm":  [
+                                                           33.9906005859375,
+                                                           206.59765014648437,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "Tilt_Journal_FlangedSleeve",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  6.9395392974563988E-08,
+                                    "translation_mm":  [
+                                                           146.5,
+                                                           189.09960827827453,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "PCB_Spacer_Lower_Left",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  7.024732283863276E-08,
+                                    "translation_mm":  [
+                                                           168.4997203350067,
+                                                           188.1,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "PCB_Spacer_Lower_Right",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  7.024732283863276E-08,
+                                    "translation_mm":  [
+                                                           189.4997203350067,
+                                                           188.1,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "PCB_Spacer_Upper_Left",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  7.024732283863276E-08,
+                                    "translation_mm":  [
+                                                           210.4997203350067,
+                                                           188.1,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "PCB_Spacer_Upper_Right",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  7.024732283863276E-08,
+                                    "translation_mm":  [
+                                                           231.4997203350067,
+                                                           188.1,
+                                                           0.0
+                                                       ]
+                                },
+                                {
+                                    "name":  "CameraPlate_21x14",
+                                    "triangles_equal":  true,
+                                    "max_vertex_deviation_after_inverse_translation_mm":  6.4307228087687883E-08,
+                                    "translation_mm":  [
+                                                           99.0,
+                                                           201.6,
+                                                           0.0
+                                                       ]
+                                }
+                            ],
+    "all_13_geometry_matches_original_stl_facets":  true,
+    "pair_count":  78,
+    "3d_bbox_overlap_candidates":  [
+
+                                   ],
+    "actual_pair_mesh_intersection_check":  "FreeCAD Mesh.intersect is being run separately against exact exported 3MF for all 78 pairs.",
+    "minimum_xy_clearance_mm":  16.0,
+    "minimum_clearance_remaining_after_configured_brims_mm":  5.0,
+    "min_bed_edge_margin_after_brims_mm":  5.0,
+    "all_objects_inside_260x260_bed":  true,
+    "overall_bounds_mm":  [
+                              13.0,
+                              13.0,
+                              0.0,
+                              234.0,
+                              227.5953003,
+                              77.0
+                          ],
+    "all_z_min_exactly_zero":  true,
+    "all_meshes_watertight_positive_volume":  "Source STL closure and positive signed volume verified; facets carried unchanged into output 3MF.",
+    "components":  [
+                       {
+                           "id":  1,
+                           "name":  "Base_EarMount_ThrustSupport",
+                           "facets":  5460,
+                           "vertices":  2710,
+                           "bbox_mm":  [
+                                           134.2,
+                                           13.0,
+                                           0.0,
+                                           214.2,
+                                           83.0,
+                                           36.5
+                                       ],
+                           "brim_mm":  6.0,
+                           "support":  true,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  2,
+                           "name":  "Pan_Replaceable_ThrustRing",
+                           "facets":  2112,
+                           "vertices":  1050,
+                           "bbox_mm":  [
+                                           13.0,
+                                           102.6,
+                                           0.0,
+                                           76.98567772,
+                                           166.5928398,
+                                           1.0
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  3,
+                           "name":  "PanYoke_EarBracket_KeyedDrive",
+                           "facets":  9942,
+                           "vertices":  4945,
+                           "bbox_mm":  [
+                                           13.0,
+                                           13.0,
+                                           0.0,
+                                           115.1999969,
+                                           83.59210205,
+                                           70.0
+                                       ],
+                           "brim_mm":  8.0,
+                           "support":  true,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  4,
+                           "name":  "Tilt_Removable_IdlerPillar",
+                           "facets":  1300,
+                           "vertices":  646,
+                           "bbox_mm":  [
+                                           93.0,
+                                           102.6,
+                                           0.0,
+                                           109.0,
+                                           159.6,
+                                           57.0
+                                       ],
+                           "brim_mm":  6.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  5,
+                           "name":  "Pan_KeyedHorn_Cover",
+                           "facets":  4312,
+                           "vertices":  2148,
+                           "bbox_mm":  [
+                                           125.0,
+                                           102.6,
+                                           0.0,
+                                           172.9892578,
+                                           150.5946289,
+                                           4.199999809
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  6,
+                           "name":  "TiltCradle_KeyedHorn_CameraFrame",
+                           "facets":  9108,
+                           "vertices":  4524,
+                           "bbox_mm":  [
+                                           189.0,
+                                           102.6,
+                                           0.0,
+                                           234.0,
+                                           147.9976517,
+                                           77.0
+                                       ],
+                           "brim_mm":  6.0,
+                           "support":  true,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  7,
+                           "name":  "Tilt_KeyedHorn_CaptiveCover",
+                           "facets":  4312,
+                           "vertices":  2148,
+                           "bbox_mm":  [
+                                           13.0,
+                                           185.6,
+                                           0.0,
+                                           54.99060059,
+                                           227.5953003,
+                                           4.199999809
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  8,
+                           "name":  "Tilt_Journal_FlangedSleeve",
+                           "facets":  1260,
+                           "vertices":  630,
+                           "bbox_mm":  [
+                                           143.0,
+                                           185.6,
+                                           0.0,
+                                           149.9984336,
+                                           192.5992166,
+                                           4.099999905
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  9,
+                           "name":  "PCB_Spacer_Lower_Left",
+                           "facets":  840,
+                           "vertices":  420,
+                           "bbox_mm":  [
+                                           166.0,
+                                           185.6,
+                                           0.0,
+                                           170.9994407,
+                                           190.5988811,
+                                           3.0
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  10,
+                           "name":  "PCB_Spacer_Lower_Right",
+                           "facets":  840,
+                           "vertices":  420,
+                           "bbox_mm":  [
+                                           187.0,
+                                           185.6,
+                                           0.0,
+                                           191.9994407,
+                                           190.5988811,
+                                           3.0
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  11,
+                           "name":  "PCB_Spacer_Upper_Left",
+                           "facets":  840,
+                           "vertices":  420,
+                           "bbox_mm":  [
+                                           208.0,
+                                           185.6,
+                                           0.0,
+                                           212.9994407,
+                                           190.5988811,
+                                           3.0
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  12,
+                           "name":  "PCB_Spacer_Upper_Right",
+                           "facets":  840,
+                           "vertices":  420,
+                           "bbox_mm":  [
+                                           229.0,
+                                           185.6,
+                                           0.0,
+                                           233.9994407,
+                                           190.5988811,
+                                           3.0
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       },
+                       {
+                           "id":  13,
+                           "name":  "CameraPlate_21x14",
+                           "facets":  3828,
+                           "vertices":  1898,
+                           "bbox_mm":  [
+                                           71.0,
+                                           185.6,
+                                           0.0,
+                                           127.0,
+                                           217.6,
+                                           3.0
+                                       ],
+                           "brim_mm":  5.0,
+                           "support":  false,
+                           "support_style":  "tree_slim"
+                       }
+                   ],
+    "pair_clearance_details":  [
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "Pan_Replaceable_ThrustRing",
+                                       "xy_clearance_mm":  60.47841494252064,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  49.47841494252064,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "PanYoke_EarBracket_KeyedDrive",
+                                       "xy_clearance_mm":  19.000003099999986,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  8.0,
+                                       "additional_reserve_after_brims_mm":  5.0000030999999865,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "Tilt_Removable_IdlerPillar",
+                                       "xy_clearance_mm":  31.92491190277585,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  6.0,
+                                       "additional_reserve_after_brims_mm":  19.92491190277585,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "Pan_KeyedHorn_Cover",
+                                       "xy_clearance_mm":  19.599999999999994,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  8.599999999999994,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "xy_clearance_mm":  19.599999999999994,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  6.0,
+                                       "additional_reserve_after_brims_mm":  7.599999999999994,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "xy_clearance_mm":  129.61824314074352,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  118.61824314074352,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "Tilt_Journal_FlangedSleeve",
+                                       "xy_clearance_mm":  102.6,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  91.6,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "PCB_Spacer_Lower_Left",
+                                       "xy_clearance_mm":  102.6,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  91.6,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  102.6,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  91.6,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  102.6,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  91.6,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  103.66195058940382,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  92.66195058940382,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Base_EarMount_ThrustSupport",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  102.8523213155639,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  91.8523213155639,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "PanYoke_EarBracket_KeyedDrive",
+                                       "xy_clearance_mm":  19.00789795,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  8.0,
+                                       "additional_reserve_after_brims_mm":  6.00789795,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "Tilt_Removable_IdlerPillar",
+                                       "xy_clearance_mm":  16.014322280000002,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  6.0,
+                                       "additional_reserve_after_brims_mm":  5.014322280000002,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "Pan_KeyedHorn_Cover",
+                                       "xy_clearance_mm":  48.01432228,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  38.01432228,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "xy_clearance_mm":  112.01432228,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  6.0,
+                                       "additional_reserve_after_brims_mm":  101.01432228,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "xy_clearance_mm":  19.007160199999987,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  9.007160199999987,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "Tilt_Journal_FlangedSleeve",
+                                       "xy_clearance_mm":  68.69616353884814,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  58.69616353884814,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "PCB_Spacer_Lower_Left",
+                                       "xy_clearance_mm":  91.0209959835431,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  81.0209959835431,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  111.64418142293027,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  101.64418142293027,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  132.38589343791946,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  122.38589343791946,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  153.1979971054327,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  143.1979971054327,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_Replaceable_ThrustRing",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  19.007160199999987,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  9.007160199999987,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "Tilt_Removable_IdlerPillar",
+                                       "xy_clearance_mm":  19.00789795,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  6.0,
+                                       "additional_reserve_after_brims_mm":  5.00789795,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "Pan_KeyedHorn_Cover",
+                                       "xy_clearance_mm":  21.385514846213635,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  8.385514846213635,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "xy_clearance_mm":  76.20853391869984,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  6.0,
+                                       "additional_reserve_after_brims_mm":  62.20853391869984,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "xy_clearance_mm":  102.00789795,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  89.00789795,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "Tilt_Journal_FlangedSleeve",
+                                       "xy_clearance_mm":  105.72819593910427,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  92.72819593910427,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "PCB_Spacer_Lower_Left",
+                                       "xy_clearance_mm":  113.95723565942455,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  100.95723565942455,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  124.7431428549787,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  111.7431428549787,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  137.90377739401347,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  124.90377739401347,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  152.8268692008628,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  139.8268692008628,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PanYoke_EarBracket_KeyedDrive",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  102.00789795,
+                                       "brim_a_mm":  8.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  89.00789795,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "Pan_KeyedHorn_Cover",
+                                       "xy_clearance_mm":  16.0,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  5.0,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "xy_clearance_mm":  80.0,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  6.0,
+                                       "additional_reserve_after_brims_mm":  68.0,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "xy_clearance_mm":  46.05121544008267,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  35.05121544008267,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "Tilt_Journal_FlangedSleeve",
+                                       "xy_clearance_mm":  42.80186911806539,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  31.80186911806539,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "PCB_Spacer_Lower_Left",
+                                       "xy_clearance_mm":  62.64982043070834,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  51.64982043070834,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  82.21921916437786,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  71.21921916437786,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  102.35721762533407,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  91.35721762533407,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  122.78436382536663,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  111.78436382536663,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Removable_IdlerPillar",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  26.0,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  15.0,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_KeyedHorn_Cover",
+                                       "b":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "xy_clearance_mm":  16.01074220000001,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  6.0,
+                                       "additional_reserve_after_brims_mm":  5.01074220000001,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_KeyedHorn_Cover",
+                                       "b":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "xy_clearance_mm":  78.27318833162236,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  68.27318833162236,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_KeyedHorn_Cover",
+                                       "b":  "Tilt_Journal_FlangedSleeve",
+                                       "xy_clearance_mm":  35.00537109999999,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  25.00537109999999,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_KeyedHorn_Cover",
+                                       "b":  "PCB_Spacer_Lower_Left",
+                                       "xy_clearance_mm":  35.00537109999999,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  25.00537109999999,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_KeyedHorn_Cover",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  37.70513098828296,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  27.70513098828296,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_KeyedHorn_Cover",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  49.5088686524301,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  39.5088686524301,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_KeyedHorn_Cover",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  66.04982397889927,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  56.04982397889927,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Pan_KeyedHorn_Cover",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  35.00537109999999,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  25.00537109999999,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "b":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "xy_clearance_mm":  139.18496947552714,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  128.18496947552714,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "b":  "Tilt_Journal_FlangedSleeve",
+                                       "xy_clearance_mm":  54.17618276815118,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  43.17618276815118,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "b":  "PCB_Spacer_Lower_Left",
+                                       "xy_clearance_mm":  41.688808243788024,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  30.688808243788024,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  37.60234829999999,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  26.60234829999999,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  37.60234829999999,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  26.60234829999999,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  37.60234829999999,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  26.60234829999999,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  72.51163077516952,
+                                       "brim_a_mm":  6.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  61.51163077516952,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "b":  "Tilt_Journal_FlangedSleeve",
+                                       "xy_clearance_mm":  88.00939941,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  78.00939941,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "b":  "PCB_Spacer_Lower_Left",
+                                       "xy_clearance_mm":  111.00939941,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  101.00939941,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  132.00939941000001,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  122.00939941000001,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  153.00939941000001,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  143.00939941000001,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  174.00939941000001,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  164.00939941000001,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_KeyedHorn_CaptiveCover",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  16.00939941,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  6.00939941,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Journal_FlangedSleeve",
+                                       "b":  "PCB_Spacer_Lower_Left",
+                                       "xy_clearance_mm":  16.0015664,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  6.0015664000000015,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Journal_FlangedSleeve",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  37.0015664,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  27.0015664,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Journal_FlangedSleeve",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  58.0015664,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  48.0015664,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Journal_FlangedSleeve",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  79.0015664,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  69.0015664,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "Tilt_Journal_FlangedSleeve",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  16.0,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  6.0,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Lower_Left",
+                                       "b":  "PCB_Spacer_Lower_Right",
+                                       "xy_clearance_mm":  16.000559299999992,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  6.000559299999992,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Lower_Left",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  37.00055929999999,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  27.000559299999992,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Lower_Left",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  58.00055929999999,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  48.00055929999999,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Lower_Left",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  39.0,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  29.0,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Lower_Right",
+                                       "b":  "PCB_Spacer_Upper_Left",
+                                       "xy_clearance_mm":  16.000559299999992,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  6.000559299999992,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Lower_Right",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  37.00055929999999,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  27.000559299999992,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Lower_Right",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  60.0,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  50.0,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Upper_Left",
+                                       "b":  "PCB_Spacer_Upper_Right",
+                                       "xy_clearance_mm":  16.000559299999992,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  6.000559299999992,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Upper_Left",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  81.0,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  71.0,
+                                       "3d_bbox_overlap_candidate":  false
+                                   },
+                                   {
+                                       "a":  "PCB_Spacer_Upper_Right",
+                                       "b":  "CameraPlate_21x14",
+                                       "xy_clearance_mm":  102.0,
+                                       "brim_a_mm":  5.0,
+                                       "brim_b_mm":  5.0,
+                                       "additional_reserve_after_brims_mm":  92.0,
+                                       "3d_bbox_overlap_candidate":  false
+                                   }
+                               ],
+    "supports_and_brims":  "Source Creality settings preserved. Tree/slim supports enabled for base, pan yoke, tilt cradle; each pair has \u003e=5 mm projected clearance remaining beyond configured brim widths. Exact support growth requires sliced preview.",
+    "slicer_status":  "Not yet sliced.",
+    "r15_dimensions_mm":  {
+                              "nominal_x_span":  39.0,
+                              "pocket_x_span":  39.2,
+                              "x_reaches":  [
+                                                19.6,
+                                                19.6
+                                            ],
+                              "short_axis_span":  20.2,
+                              "arm_recess_depth":  1.7,
+                              "center_opening_diameter":  8.0,
+                              "camera_hole_pitch":  [
+                                                        21.0,
+                                                        14.0
+                                                    ]
+                          },
+    "creality_print_slice":  {
+                                 "project_opened_in_creality_print_7_2":  true,
+                                 "slicing_completed":  false,
+                                 "toolpath_preview_inspected":  false,
+                                 "filament_mass_g":  null,
+                                 "estimated_time":  null,
+                                 "status":  "UNVERIFIED: project loaded, but slice completion and preview could not be reliably captured.",
+                                 "configured_supports":  "Tree slim enabled on base, pan yoke, tilt cradle; actual generated support footprints not verified."
+                             }
+}

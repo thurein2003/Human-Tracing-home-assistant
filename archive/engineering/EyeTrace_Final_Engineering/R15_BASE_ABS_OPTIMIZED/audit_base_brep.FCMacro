@@ -1,0 +1,23 @@
+import FreeCAD as App, Part
+src = r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY\CAD\EyeTrace_R15_Full_Assembly.FCStd'
+out = r'EyeTrace_Final_Engineering\R15_BASE_ABS_OPTIMIZED\base_brep_audit.txt'
+doc=App.openDocument(src)
+obj=doc.getObject('Base_EarMount_ThrustSupport')
+s=obj.Shape
+f=open(out,'w')
+f.write('DocumentObject: '+obj.Name+' / '+obj.Label+'\n')
+f.write('Shape valid: %s\nSolids: %d\nVolume mm3: %.6f\nArea mm2: %.6f\n'%(s.isValid(),len(s.Solids),s.Volume,s.Area))
+bb=s.BoundBox
+f.write('BBox: %.6f %.6f %.6f / %.6f %.6f %.6f\n'%(bb.XMin,bb.YMin,bb.ZMin,bb.XMax,bb.YMax,bb.ZMax))
+f.write('Faces: %d Edges: %d Vertices: %d\n'%(len(s.Faces),len(s.Edges),len(s.Vertexes)))
+for i,face in enumerate(s.Faces,1):
+ surf=face.Surface; typ=type(surf).__name__; b=face.BoundBox; c=face.CenterOfMass
+ norm=''
+ try:
+  n=face.normalAt((face.ParameterRange[0]+face.ParameterRange[1])/2, (face.ParameterRange[2]+face.ParameterRange[3])/2)
+  norm=' n=(%.3f,%.3f,%.3f)'%(n.x,n.y,n.z)
+ except: pass
+ if typ=='Plane' or b.ZLength < 0.001 or b.ZLength > 2:
+  f.write('Face %03d %-18s area=%10.3f bbox=(%.3f %.3f %.3f)-(%.3f %.3f %.3f) center=(%.3f %.3f %.3f)%s\n'%(i,typ,face.Area,b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax,c.x,c.y,c.z,norm))
+f.close()
+App.closeDocument(doc.Name)

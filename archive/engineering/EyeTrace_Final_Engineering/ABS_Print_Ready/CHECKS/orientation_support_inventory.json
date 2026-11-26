@@ -1,0 +1,744 @@
+{
+  "parts": [
+    {
+      "name": "Base_EarMount_ThrustSupport",
+      "source": "Base_EarMount_ThrustSupport",
+      "rotation_quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "translation": [
+        52.0,
+        47.0,
+        -0.0
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -52.0,
+        0.0,
+        1.0,
+        0.0,
+        -47.0,
+        0.0,
+        0.0,
+        1.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        12.0,
+        12.0,
+        0.0,
+        92.0,
+        82.0,
+        36.5
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 286,
+        "blocker": 4122
+      },
+      "enforced_area_mm2": 299.1442618111637,
+      "settings": {
+        "enable_support": "1",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1"
+      },
+      "facets": 4408
+    },
+    {
+      "name": "Pan_Replaceable_ThrustRing",
+      "source": "Pan_Replaceable_ThrustRing",
+      "rotation_quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "translation": [
+        44.0,
+        130.6,
+        -36.0
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -44.0,
+        0.0,
+        1.0,
+        0.0,
+        -130.6,
+        0.0,
+        0.0,
+        1.0,
+        36.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        12.0,
+        98.6,
+        0.0,
+        76.0,
+        162.6,
+        1.0
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 1692
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 1692
+    },
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "source": "PanYoke_EarBracket_KeyedDrive",
+      "rotation_quaternion": [
+        0.0,
+        0.9238795325112867,
+        0.0,
+        0.38268343236508984
+      ],
+      "translation": [
+        116.94974746830582,
+        47.3,
+        60.10407640085655
+      ],
+      "inverse_matrix": [
+        -0.7071067811865475,
+        0.0,
+        -0.7071067811865477,
+        118.36753236814712,
+        0.0,
+        1.0,
+        0.0,
+        -47.3,
+        0.7071067811865477,
+        0.0,
+        -0.7071067811865475,
+        -37.36753236814714,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        112.0,
+        12.0,
+        1.7763568394002505e-15,
+        229.09688296449227,
+        82.6,
+        67.17514421272203
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 10,
+        "blocker": 7536
+      },
+      "enforced_area_mm2": 71.74879731651168,
+      "settings": {
+        "enable_support": "1",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "brim_width": "8",
+        "brim_object_gap": "0",
+        "support_on_build_plate_only": "1"
+      },
+      "facets": 7546,
+      "bed_layout_extra_translation_mm": [
+        4,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar",
+      "source": "Tilt_Removable_IdlerPillar",
+      "rotation_quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "translation": [
+        62.0,
+        127.1,
+        -41.0
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -62.0,
+        0.0,
+        1.0,
+        0.0,
+        -127.1,
+        0.0,
+        0.0,
+        1.0,
+        41.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        90.0,
+        98.6,
+        0.0,
+        106.0,
+        155.6,
+        57.0
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 1048
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1"
+      },
+      "facets": 1048
+    },
+    {
+      "name": "Pan_KeyedHorn_Cover",
+      "source": "Pan_KeyedHorn_Cover",
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        6.123233995736766e-17
+      ],
+      "translation": [
+        144.0,
+        122.6,
+        35.0
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -144.0,
+        0.0,
+        -1.0,
+        1.2246467991473532e-16,
+        122.6,
+        0.0,
+        -1.2246467991473532e-16,
+        -1.0,
+        35.000000000000014,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        120.0,
+        98.6,
+        -3.754780400659814e-15,
+        168.0,
+        146.6,
+        4.200000000000004
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 3472
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 3472
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "source": "TiltCradle_KeyedHorn_CameraFrame",
+      "rotation_quaternion": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "translation": [
+        53.0,
+        201.0,
+        -54.0
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -53.0,
+        0.0,
+        1.0,
+        0.0,
+        -201.0,
+        0.0,
+        0.0,
+        1.0,
+        54.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        12.0,
+        176.6,
+        0.0,
+        89.0,
+        222.0,
+        45.0
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 2,
+        "blocker": 6184
+      },
+      "enforced_area_mm2": 126.0,
+      "settings": {
+        "enable_support": "1",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1"
+      },
+      "facets": 6186
+    },
+    {
+      "name": "Tilt_KeyedHorn_CaptiveCover",
+      "source": "Tilt_KeyedHorn_CaptiveCover",
+      "rotation_quaternion": [
+        0.0,
+        0.7071067811865476,
+        0.0,
+        0.7071067811865476
+      ],
+      "translation": [
+        124.99999999999997,
+        119.6,
+        -40.999999999999986
+      ],
+      "inverse_matrix": [
+        -2.220446049250313e-16,
+        0.0,
+        -1.0000000000000002,
+        -40.99999999999999,
+        0.0,
+        1.0,
+        0.0,
+        -119.60000000000002,
+        1.0000000000000002,
+        0.0,
+        -2.220446049250313e-16,
+        -125.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        182.0,
+        98.6,
+        -3.6637359812630164e-16,
+        224.0,
+        140.6,
+        4.200000000000011
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 3472
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 3472
+    },
+    {
+      "name": "Tilt_Journal_FlangedSleeve",
+      "source": "Tilt_Journal_FlangedSleeve",
+      "rotation_quaternion": [
+        0.0,
+        0.7071067811865476,
+        0.0,
+        -0.7071067811865475
+      ],
+      "translation": [
+        259.5,
+        181.5,
+        -35.19999999999999
+      ],
+      "inverse_matrix": [
+        -2.220446049250313e-16,
+        0.0,
+        1.0,
+        35.200000000000045,
+        0.0,
+        1.0,
+        0.0,
+        -181.5,
+        -1.0,
+        0.0,
+        -2.220446049250313e-16,
+        259.5,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        178.0,
+        178.0,
+        -7.771561172376096e-16,
+        185.0,
+        185.0,
+        4.099999999999995
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 1008
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 1008
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left",
+      "source": "PCB_Spacer_Lower_Left",
+      "rotation_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "translation": [
+        190.0,
+        272.5,
+        30.400000000000006
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -190.00000000000003,
+        0.0,
+        -2.220446049250313e-16,
+        1.0000000000000002,
+        -30.400000000000013,
+        0.0,
+        -1.0000000000000002,
+        -2.220446049250313e-16,
+        272.50000000000006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        177.0,
+        202.0,
+        -5.551115123125783e-16,
+        182.0,
+        207.0,
+        3.0000000000000004
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 672
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 672
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right",
+      "source": "PCB_Spacer_Lower_Right",
+      "rotation_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "translation": [
+        169.0,
+        295.5,
+        30.400000000000006
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -169.00000000000003,
+        0.0,
+        -2.220446049250313e-16,
+        1.0000000000000002,
+        -30.400000000000013,
+        0.0,
+        -1.0000000000000002,
+        -2.220446049250313e-16,
+        295.50000000000006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        177.0,
+        225.0,
+        -5.551115123125783e-16,
+        182.0,
+        230.0,
+        3.0000000000000004
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 672
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 672
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left",
+      "source": "PCB_Spacer_Upper_Left",
+      "rotation_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "translation": [
+        214.0,
+        264.5,
+        30.400000000000006
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -214.00000000000006,
+        0.0,
+        -2.220446049250313e-16,
+        1.0000000000000002,
+        -30.400000000000013,
+        0.0,
+        -1.0000000000000002,
+        -2.220446049250313e-16,
+        264.50000000000006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        201.0,
+        178.0,
+        -5.551115123125783e-16,
+        206.0,
+        183.0,
+        3.0000000000000004
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 672
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 672
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right",
+      "source": "PCB_Spacer_Upper_Right",
+      "rotation_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "translation": [
+        193.0,
+        288.5,
+        30.400000000000006
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -193.00000000000006,
+        0.0,
+        -2.220446049250313e-16,
+        1.0000000000000002,
+        -30.400000000000013,
+        0.0,
+        -1.0000000000000002,
+        -2.220446049250313e-16,
+        288.50000000000006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        201.0,
+        202.0,
+        -5.551115123125783e-16,
+        206.0,
+        207.0,
+        3.0000000000000004
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 672
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 672
+    },
+    {
+      "name": "CameraPlate_21x16",
+      "source": "CameraPlate_Cut007",
+      "rotation_quaternion": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "translation": [
+        133.0,
+        268.6,
+        27.400000000000027
+      ],
+      "inverse_matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -133.00000000000003,
+        0.0,
+        -2.220446049250313e-16,
+        1.0000000000000002,
+        -27.400000000000034,
+        0.0,
+        -1.0000000000000002,
+        -2.220446049250313e-16,
+        268.6000000000001,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox": [
+        105.0,
+        176.60000000000002,
+        0.0,
+        161.0,
+        208.60000000000002,
+        3.000000000000008
+      ],
+      "orientation_symmetric_difference_mm3": 0.0,
+      "support_paint": {
+        "enforcer": 0,
+        "blocker": 3072
+      },
+      "enforced_area_mm2": 0,
+      "settings": {
+        "enable_support": "0",
+        "support_type": "tree(manual)",
+        "support_style": "organic",
+        "extruder": "1",
+        "sparse_infill_density": "100%"
+      },
+      "facets": 3072,
+      "bed_layout_extra_translation_mm": [
+        2,
+        0,
+        0
+      ]
+    }
+  ],
+  "dimensions_mm": [
+    217.097,
+    218.0,
+    67.175
+  ],
+  "source_geometry_unchanged": true,
+  "paint_encoding_source": "Official EnforcerBlockerType1/2 encoded unsplit nibble4/8",
+  "physical_fit": "UNVERIFIED",
+  "bed_layout_ABS_brims_mm": {
+    "default": 5,
+    "base": 6,
+    "pan_yoke": 8,
+    "tilt_cradle": 6,
+    "idler_pillar": 6
+  },
+  "material": "ABS candidate; support intent is unchanged from source"
+}

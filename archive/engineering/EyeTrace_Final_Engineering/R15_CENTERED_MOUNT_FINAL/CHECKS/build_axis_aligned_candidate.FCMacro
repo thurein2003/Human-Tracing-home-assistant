@@ -1,0 +1,66 @@
+﻿import FreeCAD as A, Part, MeshPart, json, os, math
+from FreeCAD import Vector as V, Placement, Rotation
+root=r'EyeTrace_Final_Engineering'
+out=root+r'\R15_CENTERED_MOUNT_FINAL'
+src=root+r'\FINAL_ALL_IN_ONE_R15_ASSEMBLY\CAD\EyeTrace_R15_Full_Assembly.FCStd'
+d=A.openDocument(src)
+# Restore only components whose local geometry and mating datums establish these placements.
+placements={
+ 'Pan_OriginalStar_PROVISIONAL':Placement(V(0,0,35),Rotation()),
+ 'Tilt_OriginalStar_PROVISIONAL':Placement(V(-41,0,78),Rotation(V(0,1,0),90)),
+ 'PCB_Spacer_Lower_Left':Placement(V(-10.5,0,69),Rotation()),
+ 'PCB_Spacer_Lower_Right':Placement(V(10.5,0,69),Rotation()),
+ 'PCB_Spacer_Upper_Left':Placement(V(-10.5,0,83),Rotation()),
+ 'PCB_Spacer_Upper_Right':Placement(V(10.5,0,83),Rotation())}
+for n,p in placements.items():
+ o=d.getObject(n)
+ if o: o.Placement=p
+# Make the parametric document explicitly identify held center dimension and source lineage.
+d.recompute()
+try:
+ d.addObject('App::FeaturePython','R15EngineeringAudit')
+except: pass
+# geometry helpers
+def world(o):
+ s=o.Shape.copy();s.transformShape(o.Placement.Matrix,True);return s
+def bb(s):
+ b=s.BoundBox;return [b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]
+# inspect overall components and printable collision pairs
+printables=[o for o in d.Objects if hasattr(o,'Shape') and not o.Shape.isNull() and hasattr(o,'Printable') and bool(o.Printable)]
+objs=[]
+for o in printables:
+ s=world(o);objs.append({'name':o.Name,'label':o.Label,'valid':s.isValid(),'solids':len(s.Solids),'volume_mm3':s.Volume,'bbox_world_mm':bb(s)})
+pairs=[]
+for i in range(len(printables)):
+ a=printables[i];sa=world(a)
+ for j in range(i+1,len(printables)):
+  b=printables[j];sb=world(b)
+  common=sa.common(sb).Volume
+  dist=sa.distToShape(sb)[0]
+  if common>1e-5 or dist<1e-6:
+   pairs.append({'a':a.Name,'b':b.Name,'intersection_mm3':common,'distance_mm':dist})
+# exact horn-pocket measured source/master comparison is cross-referenced to independently validated CAD report
+# key coordinates from native BREP
+base=d.getObject('Base_EarMount_ThrustSupport').Shape
+bbx=base.BoundBox
+center={'base_center_xy_mm':[(bbx.XMin+bbx.XMax)/2,(bbx.YMin+bbx.YMax)/2], 'base_bbox_xy_mm':[bbx.XMin,bbx.YMin,bbx.XMax,bbx.YMax], 'mount_structure_bounds_xy_mm':[-13,-9,24,9], 'mount_structure_center_xy_mm':[5.5,0], 'pan_servo_tab_hole_centers_x_mm':[-8.15,19.05], 'pan_servo_tab_hole_midpoint_x_mm':5.45, 'pan_axis_xy_mm':[0,0], 'output_axis_xy_mm':[0,0], 'center_shift_if_moved_mm':[-5.5,0], 'tab_misalignment_after_center_mm':5.5}
+report={'source':src,'freecad_version':A.Version()[:4], 'center_decision':'HOLD: base motor mount geometry was not moved. It is aligned to SG90 tab holes; centering its rectangle would shift both hole centers 5.5 mm off the servo tabs and is inconsistent with pan output axis datum.', 'base_mount':center,'restored_placements':{n:[p.Base.x,p.Base.y,p.Base.z,p.Rotation.Axis.x,p.Rotation.Axis.y,p.Rotation.Axis.z,p.Rotation.Angle*180/math.pi] for n,p in placements.items()},'printable_count':len(printables),'parts':objs,'contact_or_intersection_pairs':pairs,'horn_clearance_checks':[]}
+for hn,cn in [('Pan_OriginalStar_PROVISIONAL','PanYoke_EarBracket_KeyedDrive'),('Tilt_OriginalStar_PROVISIONAL','TiltCradle_KeyedHorn_CameraFrame')]:
+ a=world(d.getObject(hn));b=world(d.getObject(cn));report['horn_clearance_checks'].append({'horn':hn,'carrier':cn,'clearance_mm':a.distToShape(b)[0],'intersection_mm3':a.common(b).Volume,'status':'CLEARANCE / NO INTERSECTION' if a.common(b).Volume<1e-5 else 'FAIL'})
+# write outputs into new folder only
+cad=out+r'\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd';d.Label='Eye Trace R15 axis-aligned assembly (mount centering HOLD)';d.recompute();d.saveAs(cad)
+baseDoc=A.newDocument('R15_Base_AxisAligned')
+bo=baseDoc.addObject('PartDesign::Feature','Base_EarMount_ThrustSupport');bo.Label='R15 circular base — original geometry, mount not shifted';bo.Shape=base.copy();baseDoc.recompute();baseDoc.saveAs(out+r'\CAD\R15_Base_OriginalMountGeometry.FCStd')
+Part.export([bo],out+r'\CAD\R15_Base_OriginalMountGeometry.step')
+mesh=MeshPart.meshFromShape(Shape=bo.Shape,LinearDeflection=0.08,AngularDeflection=0.15,Relative=False);mesh.write(out+r'\STL\Base_EarMount_ThrustSupport_R15.stl')
+worldfeatures=[];expdoc=A.newDocument('R15_StepExport')
+for o in printables:
+ w=world(o);e=expdoc.addObject('PartDesign::Feature',o.Name);e.Label=o.Label;e.Shape=w;worldfeatures.append(e)
+expdoc.recompute();Part.export(worldfeatures,cad.replace('.FCStd','.step'));A.closeDocument(expdoc.Name)
+report['base_stl']={'valid_mesh':len(mesh.Facets)>0,'facets':len(mesh.Facets),'bbox_mm':bb(bo.Shape),'volume_mm3':bo.Shape.Volume}
+for o in printables:
+ w=world(o);m=MeshPart.meshFromShape(Shape=w,LinearDeflection=0.08,AngularDeflection=0.15,Relative=False);m.write(os.path.join(out,'STL',o.Name+'.stl'))
+report['individual_stl_count']=len(printables)
+with open(out+r'\CHECKS\R15_geometry_alignment_audit.json','w') as f:json.dump(report,f,indent=2)
+A.closeDocument(baseDoc.Name);A.closeDocument(d.Name)
+

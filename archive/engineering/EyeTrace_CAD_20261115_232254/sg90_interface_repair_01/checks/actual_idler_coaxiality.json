@@ -1,0 +1,47 @@
+{
+  "Tilt_Removable_IdlerPillar": [
+    {
+      "radius": 2.6,
+      "point": [
+        35.5,
+        0.0,
+        78.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "TiltCradle_KeyedHorn_CameraFrame": [
+    {
+      "radius": 2.6,
+      "point": [
+        32.0,
+        0.0,
+        78.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "Tilt_Journal_FlangedSleeve": [
+    {
+      "radius": 2.5,
+      "point": [
+        36.3,
+        0.0,
+        78.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

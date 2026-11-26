@@ -1,0 +1,295 @@
+{
+  "moved_object_placement_to_identity_without_altering_BREP": [
+    {
+      "name": "Pan_OriginalStar_PROVISIONAL",
+      "old_base": [
+        0.0,
+        0.0,
+        35.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        -19.5,
+        -10.0,
+        32.5,
+        19.5,
+        10.0,
+        36.5
+      ]
+    },
+    {
+      "name": "Tilt_OriginalStar_PROVISIONAL",
+      "old_base": [
+        -41.0,
+        0.0,
+        78.0
+      ],
+      "old_angle_deg": 90.0,
+      "shape_bbox": [
+        -43.5,
+        -10.0,
+        58.5,
+        -39.5,
+        10.0,
+        97.5
+      ]
+    },
+    {
+      "name": "RailMount_Lower_M3x10_0",
+      "old_base": [
+        0.0,
+        0.0,
+        69.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        -26.8,
+        -30.4,
+        65.82457351945706,
+        -21.2,
+        -17.4,
+        72.17542648054294
+      ]
+    },
+    {
+      "name": "RailMount_Lower_M3x10_1",
+      "old_base": [
+        0.0,
+        0.0,
+        69.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        21.2,
+        -30.4,
+        65.82457351945706,
+        26.8,
+        -17.4,
+        72.17542648054294
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left",
+      "old_base": [
+        -10.5,
+        0.0,
+        69.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        -13.0,
+        -30.4,
+        66.5,
+        -8.0,
+        -27.4,
+        71.5
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right",
+      "old_base": [
+        10.5,
+        0.0,
+        69.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        8.0,
+        -30.4,
+        66.5,
+        13.0,
+        -27.4,
+        71.5
+      ]
+    },
+    {
+      "name": "Camera_M2x12_Lower_Left",
+      "old_base": [
+        -10.5,
+        -32.0,
+        69.0
+      ],
+      "old_angle_deg": 90.0,
+      "shape_bbox": [
+        -12.5,
+        -34.0,
+        66.6905989232415,
+        -8.5,
+        -20.0,
+        71.3094010767585
+      ]
+    },
+    {
+      "name": "Camera_M2x12_Lower_Right",
+      "old_base": [
+        10.5,
+        -32.0,
+        69.0
+      ],
+      "old_angle_deg": 90.0,
+      "shape_bbox": [
+        8.5,
+        -34.0,
+        66.6905989232415,
+        12.5,
+        -20.0,
+        71.3094010767585
+      ]
+    },
+    {
+      "name": "RailMount_Upper_M3x10_0",
+      "old_base": [
+        0.0,
+        0.0,
+        83.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        -26.8,
+        -30.4,
+        79.82457351945706,
+        -21.2,
+        -17.4,
+        86.17542648054294
+      ]
+    },
+    {
+      "name": "RailMount_Upper_M3x10_1",
+      "old_base": [
+        0.0,
+        0.0,
+        83.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        21.2,
+        -30.4,
+        79.82457351945706,
+        26.8,
+        -17.4,
+        86.17542648054294
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left",
+      "old_base": [
+        -10.5,
+        0.0,
+        83.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        -13.0,
+        -30.4,
+        80.5,
+        -8.0,
+        -27.4,
+        85.5
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right",
+      "old_base": [
+        10.5,
+        0.0,
+        83.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        8.0,
+        -30.4,
+        80.5,
+        13.0,
+        -27.4,
+        85.5
+      ]
+    },
+    {
+      "name": "Camera_M2x12_Upper_Left",
+      "old_base": [
+        -10.5,
+        -32.0,
+        83.0
+      ],
+      "old_angle_deg": 90.0,
+      "shape_bbox": [
+        -12.5,
+        -34.0,
+        80.6905989232415,
+        -8.5,
+        -20.0,
+        85.3094010767585
+      ]
+    },
+    {
+      "name": "Camera_M2x12_Upper_Right",
+      "old_base": [
+        10.5,
+        -32.0,
+        83.0
+      ],
+      "old_angle_deg": 90.0,
+      "shape_bbox": [
+        8.5,
+        -34.0,
+        80.6905989232415,
+        12.5,
+        -20.0,
+        85.3094010767585
+      ]
+    },
+    {
+      "name": "Camera_Lens_PROVISIONAL",
+      "old_base": [
+        0.0,
+        -42.0,
+        76.0
+      ],
+      "old_angle_deg": 90.0,
+      "shape_bbox": [
+        -7.0,
+        -42.0,
+        69.0,
+        7.0,
+        -32.0,
+        83.0
+      ]
+    },
+    {
+      "name": "Camera_WireExit_KEEP_OUT",
+      "old_base": [
+        -10.0,
+        -6.0,
+        83.5
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        -10.0,
+        -6.0,
+        83.5,
+        10.0,
+        12.0,
+        84.5
+      ]
+    },
+    {
+      "name": "Camera_RearComponents_KEEP_OUT",
+      "old_base": [
+        -10.0,
+        -30.4,
+        66.0
+      ],
+      "old_angle_deg": 0.0,
+      "shape_bbox": [
+        -10.0,
+        -30.4,
+        66.0,
+        10.0,
+        -6.0,
+        86.0
+      ]
+    }
+  ],
+  "R15_printable_BREP_geometry_modified": false,
+  "result": "Output assembly copy only; originals preserved."
+}

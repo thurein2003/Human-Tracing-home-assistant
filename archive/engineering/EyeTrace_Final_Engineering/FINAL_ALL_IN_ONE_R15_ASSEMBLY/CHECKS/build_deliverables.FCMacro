@@ -1,0 +1,76 @@
+import FreeCAD as A, Part, Mesh, json, os, zipfile, xml.etree.ElementTree as ET
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering'
+out=root+r'\FINAL_ALL_IN_ONE_R15_ASSEMBLY'; src=root+r'\FINAL_ALL_IN_ONE_R15\CAD\EyeTrace_Final_Assembly_R15.FCStd'
+# Copy and label the actual R15 FreeCAD model; preserve every source shape and placement.
+d=A.openDocument(src)
+for n,l in [('PrintedComponents','01 ? Printable mechanical parts (13)'),('HardwareReferences','02 ? Servo, horn, camera, fastener and keep-out references'),('Verification_HOLD','03 ? Release status / physical fit hold')]:
+ o=d.getObject(n)
+ if o:o.Label=l
+labels={
+'Base_EarMount_ThrustSupport':'Base ? stationary pan support',
+'Pan_Replaceable_ThrustRing':'Pan thrust ring',
+'PanServo_SG90_Reference':'Pan SG90 reference ? provisional dimensions',
+'TiltServo_SG90_Reference':'Tilt SG90 reference ? provisional dimensions',
+'Pan_OriginalStar_PROVISIONAL':'Pan cross horn ? provisional reference',
+'Tilt_OriginalStar_PROVISIONAL':'Tilt cross horn ? provisional reference',
+'PanYoke_EarBracket_KeyedDrive':'Pan yoke ? R15 horn pocket',
+'Tilt_Removable_IdlerPillar':'Tilt opposite pivot support',
+'Pan_KeyedHorn_Cover':'Pan horn retainer cover',
+'TiltCradle_KeyedHorn_CameraFrame':'Tilt cradle and camera frame ? R15 pocket',
+'Tilt_KeyedHorn_CaptiveCover':'Tilt horn retainer cover',
+'Tilt_Journal_FlangedSleeve':'Tilt pivot journal sleeve',
+'CameraPlate_Cut007':'Camera plate ? 21 ? 14 mm hole centers',
+'Camera_Lens_PROVISIONAL':'Camera lens envelope ? provisional',
+'Camera_RearComponents_KEEP_OUT':'Camera rear component envelope ? unverified',
+'Camera_WireExit_KEEP_OUT':'Camera ribbon/wire envelope ? route unverified'}
+for n,l in labels.items():
+ o=d.getObject(n)
+ if o:o.Label=l
+# validate source solids and inspect pairwise printed-part interference at neutral assembly position
+printed=[o for o in d.Objects if bool(getattr(o,'Printable',False)) and hasattr(o,'Shape') and not o.Shape.isNull()]
+if len(printed)!=13: raise RuntimeError('Expected 13 printable features; found '+str(len(printed)))
+valid=[]
+for o in printed:
+ if not o.Shape.isValid() or len(o.Shape.Solids)!=1: valid.append({'name':o.Name,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids)})
+rows=[]
+for i,a in enumerate(printed):
+ for b in printed[i+1:]:
+  if not a.Shape.BoundBox.intersect(b.Shape.BoundBox): continue
+  try:
+   common=a.Shape.common(b.Shape); vol=common.Volume
+   if vol>1e-5: rows.append({'a':a.Name,'b':b.Name,'intersection_volume_mm3':vol})
+  except Exception as e: rows.append({'a':a.Name,'b':b.Name,'check_error':str(e)})
+assembly_check={'source':src,'FreeCAD_version':A.Version()[:4],'printable_count':len(printed),'invalid_printables':valid,'neutral_printable_solid_intersections':rows,'printable_names':[o.Name for o in printed]}
+# camera coordinate centers from reference construction (source properties and hole feature placements)
+pp=d.getObject('RepairParameters')
+assembly_check['camera_pattern_nominal_mm']={'horizontal':float(pp.CameraPitchX.Value),'vertical':float(pp.CameraPitchZ.Value)} if pp else None
+assembly_check['servo_reference_objects']=[{'name':n,'bbox':list([d.getObject(n).Shape.BoundBox.XMin,d.getObject(n).Shape.BoundBox.YMin,d.getObject(n).Shape.BoundBox.ZMin,d.getObject(n).Shape.BoundBox.XMax,d.getObject(n).Shape.BoundBox.YMax,d.getObject(n).Shape.BoundBox.ZMax]),'label':d.getObject(n).Label} for n in ['PanServo_SG90_Reference','TiltServo_SG90_Reference'] if d.getObject(n)]
+assembly_check['note']='Neutral contact/intersection checks are geometric only. Intended mating and fastener engagement require joint-specific interpretation; physical fit remains unverified.'
+open(out+r'\CHECKS\assembly_geometry_audit.json','w').write(json.dumps(assembly_check,indent=2))
+d.recompute(); d.saveAs(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd')
+A.closeDocument(d.Name)
+# Build exact mesh-layout document from exported 3MF mesh coordinates, preserving all triangle vertices/faces.
+three=root+r'\FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED\EyeTrace_K2_ABS_All_In_One_R15_Fixed.3mf'
+ns='{http://schemas.microsoft.com/3dmanufacturing/core/2015/02}'
+with zipfile.ZipFile(three,'r') as z:
+ if z.testzip() is not None: raise RuntimeError('Input 3MF archive corruption')
+ model=ET.fromstring(z.read('3D/3dmodel.model'))
+ resources=model.find(ns+'resources'); objs={o.get('id'):o for o in resources.findall(ns+'object')}
+ build=model.find(ns+'build').findall(ns+'item')
+ ldoc=A.newDocument('EyeTrace_R15_Print_Layout')
+ grp=ldoc.addObject('App::DocumentObjectGroup','Fixed3MFLayout'); grp.Label='Exact fixed R15 3MF layout ? 13 parts, bed coordinates'
+ layout=[]
+ for item in build:
+  wrapper=objs[item.get('objectid')]; name=wrapper.get('name')
+  comp=wrapper.find(ns+'components').find(ns+'component'); base=objs[comp.get('objectid')]; meshnode=base.find(ns+'mesh')
+  vertices=[(float(v.get('x')),float(v.get('y')),float(v.get('z'))) for v in meshnode.find(ns+'vertices').findall(ns+'vertex')]
+  faces=[(int(t.get('v1')),int(t.get('v2')),int(t.get('v3'))) for t in meshnode.find(ns+'triangles').findall(ns+'triangle')]
+  m=Mesh.Mesh((vertices,faces)); obj=ldoc.addObject('Mesh::Feature','Part_'+str(len(layout)+1).zfill(2)); obj.Label=name; obj.Mesh=m; grp.addObject(obj)
+  bb=m.BoundBox; layout.append({'name':name,'vertices':len(vertices),'facets':len(faces),'components':m.countComponents(),'solid':m.isSolid(),'bounds_mm':[bb.XMin,bb.YMin,bb.ZMin,bb.XMax,bb.YMax,bb.ZMax]})
+if len(layout)!=13: raise RuntimeError('Expected 13 build items, got '+str(len(layout)))
+ldoc.recompute(); ldoc.saveAs(out+r'\CAD\EyeTrace_R15_Print_Layout.FCStd')
+allbounds=[min(x['bounds_mm'][i] for x in layout) for i in range(3)]+[max(x['bounds_mm'][i] for x in layout) for i in range(3)]
+layout_check={'source_3mf':three,'archive_integrity':'PASS','part_count':len(layout),'parts':layout,'overall_bounds_mm':allbounds,'bed_xy_mm':[260.0,260.0],'all_xy_inside_bed':allbounds[0]>=0 and allbounds[1]>=0 and allbounds[3]<=260 and allbounds[4]<=260,'all_bottoms_z0':all(abs(x['bounds_mm'][2])<1e-6 for x in layout),'note':'Meshes were decoded from the fixed 3MF. Each build wrapper references its mesh with identity transform; coordinates in source mesh are the exact bed placement.'}
+open(out+r'\CHECKS\print_layout_geometry_audit.json','w').write(json.dumps(layout_check,indent=2))
+A.closeDocument(ldoc.Name)

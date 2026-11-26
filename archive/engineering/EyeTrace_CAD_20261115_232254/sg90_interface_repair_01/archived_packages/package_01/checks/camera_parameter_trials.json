@@ -1,0 +1,80 @@
+[
+  {
+    "pitch": [
+      20,
+      20
+    ],
+    "live_expression_errors": [],
+    "provisional_rear_keepout_conflicts": [
+      {
+        "component": "PCB_Spacer_Lower_Left",
+        "volume": 11.333295497825176
+      },
+      {
+        "component": "Camera_M2x12_Lower_Left",
+        "volume": 12.454066422117966
+      },
+      {
+        "component": "PCB_Spacer_Lower_Right",
+        "volume": 11.333295497825173
+      },
+      {
+        "component": "Camera_M2x12_Lower_Right",
+        "volume": 12.454066422117958
+      },
+      {
+        "component": "PCB_Spacer_Upper_Left",
+        "volume": 11.333295497825175
+      },
+      {
+        "component": "Camera_M2x12_Upper_Left",
+        "volume": 8.16814089933346
+      },
+      {
+        "component": "PCB_Spacer_Upper_Right",
+        "volume": 11.333295497825178
+      },
+      {
+        "component": "Camera_M2x12_Upper_Right",
+        "volume": 12.454066422117949
+      }
+    ],
+    "note": "Range is mechanical adjustability, not proof of a real camera board/components."
+  },
+  {
+    "pitch": [
+      20,
+      32
+    ],
+    "live_expression_errors": [],
+    "provisional_rear_keepout_conflicts": [],
+    "note": "Range is mechanical adjustability, not proof of a real camera board/components."
+  },
+  {
+    "pitch": [
+      32,
+      20
+    ],
+    "live_expression_errors": [],
+    "provisional_rear_keepout_conflicts": [],
+    "note": "Range is mechanical adjustability, not proof of a real camera board/components."
+  },
+  {
+    "pitch": [
+      32,
+      32
+    ],
+    "live_expression_errors": [],
+    "provisional_rear_keepout_conflicts": [],
+    "note": "Range is mechanical adjustability, not proof of a real camera board/components."
+  },
+  {
+    "pitch": [
+      28,
+      28
+    ],
+    "live_expression_errors": [],
+    "provisional_rear_keepout_conflicts": [],
+    "note": "Range is mechanical adjustability, not proof of a real camera board/components."
+  }
+]

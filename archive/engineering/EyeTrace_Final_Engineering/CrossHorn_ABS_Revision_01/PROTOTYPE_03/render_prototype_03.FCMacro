@@ -1,0 +1,10 @@
+import FreeCAD as App
+from pathlib import Path
+out=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_03")
+d=App.openDocument(str(out/'CrossHorn_Minimal_FitTest_03.FCStd'))
+for o in d.Objects:
+    if getattr(o,'ViewObject',None): o.ViewObject.Visibility=True; o.ViewObject.ShapeColor=(0.78,0.80,0.84); o.ViewObject.LineColor=(0.12,0.14,0.18)
+Gui.activeDocument().activeView().viewTop(); Gui.activeDocument().activeView().fitAll()
+Gui.activeDocument().activeView().saveImage(str(out/'CrossHorn_Minimal_FitTest_03_Top.png'),1600,1000,'Current')
+Gui.activeDocument().activeView().viewAxonometric(); Gui.activeDocument().activeView().fitAll()
+Gui.activeDocument().activeView().saveImage(str(out/'CrossHorn_Minimal_FitTest_03_Isometric.png'),1600,1000,'Current')

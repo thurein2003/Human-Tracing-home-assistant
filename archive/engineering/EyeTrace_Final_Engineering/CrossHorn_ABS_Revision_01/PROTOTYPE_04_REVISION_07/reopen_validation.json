@@ -1,0 +1,31 @@
+{
+  "opened": true,
+  "solid_valid": true,
+  "solid_count": 1,
+  "volume_mm3": 1018.9641659865702,
+  "bbox_mm": [
+    38.0,
+    23.0,
+    4.8
+  ],
+  "front_diameter_mm": 7.4,
+  "front_depth_mm": 3.2,
+  "rear_diameter_mm": 5.5,
+  "rear_depth_mm": 0.8,
+  "center_web_mm": 0.7999999999999996,
+  "local_pad_increase_mm": 1.0,
+  "local_pad_diameter_mm": 10.2,
+  "screw_access_diameter_mm": 4.5,
+  "x_pocket_reaches_mm": [
+    17.6,
+    17.6
+  ],
+  "y_pocket_reaches_mm": [
+    10.1,
+    10.1
+  ],
+  "x_tip_widths_mm": [
+    5.0047495234791395,
+    5.0047495234791395
+  ]
+}

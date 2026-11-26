@@ -1,0 +1,10 @@
+﻿import FreeCAD as A,json
+r=r'EyeTrace_Final_Engineering'
+d=A.openDocument(r+r'\Camera_21x14_Correction_01\CAD\EyeTrace_Final_Assembly_21x14.FCStd')
+checks=[('Pan_OriginalStar_PROVISIONAL','PanYoke_EarBracket_KeyedDrive'),('Tilt_OriginalStar_PROVISIONAL','TiltCradle_KeyedHorn_CameraFrame')]
+out={}
+for hn,cn in checks:
+ h=d.getObject(hn).Shape;c=d.getObject(cn).Shape
+ dist,pairs,info=h.distToShape(c)
+ out[hn]={'carrier':cn,'distance':dist,'nearest_pairs':[[[p.x,p.y,p.z],[q.x,q.y,q.z]] for p,q in pairs[:4]],'horn_bbox':[h.BoundBox.XMin,h.BoundBox.YMin,h.BoundBox.ZMin,h.BoundBox.XMax,h.BoundBox.YMax,h.BoundBox.ZMax],'carrier_bbox':[c.BoundBox.XMin,c.BoundBox.YMin,c.BoundBox.ZMin,c.BoundBox.XMax,c.BoundBox.YMax,c.BoundBox.ZMax]}
+open(r+r'\FINAL_ALL_IN_ONE_R15\drive_contact_probe.json','w').write(json.dumps(out,indent=2));A.closeDocument(d.Name)

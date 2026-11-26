@@ -1,0 +1,20 @@
+﻿import FreeCAD as A,Part,json,traceback
+from FreeCAD import Vector as V
+r=r'EyeTrace_Final_Engineering'
+asm=A.openDocument(r+r'\Camera_21x14_Correction_01\CAD\EyeTrace_Final_Assembly_21x14.FCStd')
+r15=A.openDocument(r+r'\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd')
+arm=r15.getObject('ArmPocketTool').Shape.copy()
+report={'arm_tool':{'valid':arm.isValid(),'solids':len(arm.Solids),'bbox':[arm.BoundBox.XMin,arm.BoundBox.YMin,arm.BoundBox.ZMin,arm.BoundBox.XMax,arm.BoundBox.YMax,arm.BoundBox.ZMax]}}
+# pan pocket opens on the carrier face at z=35 and cuts upward 1.7 mm
+pan_tool=arm.copy();pan_tool.rotate(V(0,0,0),V(0,1,0),180);pan_tool.translate(V(0,0,38.8))
+pan_bore=Part.makeCylinder(4.0,4.0,V(0,0,34.0),V(0,0,1))
+# tilt pocket opens on x=-41 and cuts inward to x=-39.3
+# RY(-90): local z maps to -x, local x maps +z
+tilt_tool=arm.copy();tilt_tool.rotate(V(0,0,0),V(0,1,0),-90);tilt_tool.translate(V(-37.2,0,78))
+tilt_bore=Part.makeCylinder(4.0,4.0,V(-42,0,78),V(1,0,0))
+for name,obj,tool,bore in [('pan',asm.getObject('PanYoke_EarBracket_KeyedDrive'),pan_tool,pan_bore),('tilt',asm.getObject('TiltCradle_KeyedHorn_CameraFrame'),tilt_tool,tilt_bore)]:
+ original=obj.Shape
+ after=original.cut(tool).cut(bore).removeSplitter()
+ report[name]={'before_valid':original.isValid(),'before_solids':len(original.Solids),'before_volume':original.Volume,'tool_valid':tool.isValid(),'tool_solids':len(tool.Solids),'tool_common_volume':original.common(tool).Volume,'bore_common_volume':original.common(bore).Volume,'after_valid':after.isValid(),'after_solids':len(after.Solids),'after_volume':after.Volume,'removed_volume':original.Volume-after.Volume,'after_bbox':[after.BoundBox.XMin,after.BoundBox.YMin,after.BoundBox.ZMin,after.BoundBox.XMax,after.BoundBox.YMax,after.BoundBox.ZMax]}
+open(r+r'\FINAL_ALL_IN_ONE_R15\drive_cut_preflight.json','w').write(json.dumps(report,indent=2))
+A.closeDocument(asm.Name);A.closeDocument(r15.Name)

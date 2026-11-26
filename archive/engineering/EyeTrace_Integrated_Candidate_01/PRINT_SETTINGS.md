@@ -1,0 +1,10 @@
+# PETG printing ? untested starting settings
+Printer: Creality K2, nominal 260 x 260 x 260 mm. Use the actual installed nozzle/profile; proposed starting nozzle is 0.4 mm, layer height 0.20 mm, four walls, five top and bottom layers. Start large brackets/base at 40% gyroid; small covers, sleeve, spacers and coupons at 100% infill. These settings have not been printed or strength-tested.
+
+Use the filament manufacturer's temperature, drying, bed adhesion and cooling guidance with the correct K2 PETG profile. Brand-specific temperatures and a validated speed are not known. Calibrate PETG flow, first layer and hole sizes using coupons. Keep all models at 100% scale, units mm; do not scale the whole design to fix a hole.
+
+parts/*.stl are already oriented and seated at Z=0 for printing. EyeTrace_K2_SingleBed.stl contains only the 13 required printed components, not purchased motors/horns/hardware or coupons. The geometry occupies 197 x 192.6 x 77 mm with 8 mm minimum part gaps. Nominal 10 mm bed margins were checked. Confirm your slicer recognizes all 13 disconnected volumes. Do not auto-delete small spacers.
+
+Review supports on the yoke and cradle, bridges, bearing surfaces, hex pockets and horn pocket roofs. Keep bearing bores, thrust faces, positive pocket walls and nut seats free from support scars. Use local supports if needed; PETG support removal can damage functional fits. Optional small-part brims must be reviewed in slicer: two 3 mm brims consume 6 mm of an 8 mm gap. Purge lines, supports, brim and any tower were not included in geometric packing. Repack if the selected profile requires it. No G-code, support feasibility, estimated print time or successful build is asserted.
+
+Print the fit-test pieces first. Deburr minimally and record any finishing; do not force horns or ream servo factory holes. Check layer adhesion, journal friction, backlash, fastener retention, creep and payload handling before considering the full bed. Re-run native and export checks after dimensional edits.

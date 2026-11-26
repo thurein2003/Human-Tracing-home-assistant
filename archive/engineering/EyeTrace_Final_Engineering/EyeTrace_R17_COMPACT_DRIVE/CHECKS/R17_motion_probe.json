@@ -1,0 +1,869 @@
+{
+  "source": "EyeTrace_Final_Engineering\\EyeTrace_R17_COMPACT_DRIVE\\CAD\\EyeTrace_R17_DriveSupport_Audit_HOLD.FCStd",
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)"
+  ],
+  "pan_axis_transverse_misalignment_mm": 0.0,
+  "tilt_axis_transverse_misalignment_mm": 0.0,
+  "pan_sampled_angles_deg": [
+    -15,
+    -10,
+    -5,
+    0,
+    5,
+    10,
+    15
+  ],
+  "tilt_sampled_angles_deg": [
+    -15,
+    -10,
+    -5,
+    0,
+    5,
+    10,
+    15
+  ],
+  "pan_moving_objects": [
+    "TiltServo_SG90_Reference",
+    "Pan_OriginalStar_PROVISIONAL",
+    "Tilt_OriginalStar_PROVISIONAL",
+    "PanOriginalScrew_PROVISIONAL",
+    "TiltOriginalScrew_PROVISIONAL",
+    "PanYoke_EarBracket_KeyedDrive",
+    "Tilt_Removable_IdlerPillar",
+    "IdlerPillar_M3x10_0",
+    "IdlerPillar_M3x10_1",
+    "Pan_KeyedHorn_Cover",
+    "PanDrive_M3x10_0",
+    "PanDrive_M3x10_1",
+    "PanDrive_M3x10_2",
+    "PanDrive_M3x10_3",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "TiltDrive_M3x10_0",
+    "TiltDrive_M3x10_1",
+    "TiltDrive_M3x10_2",
+    "TiltDrive_M3x10_3",
+    "Tilt_Journal_FlangedSleeve",
+    "TiltIdler_M3x12",
+    "TiltIdler_M3_Washer",
+    "PanEar_M1p6x8_0",
+    "PanEar_M1p6x8_1",
+    "TiltEar_M1p6x8_0",
+    "TiltEar_M1p6x8_1",
+    "RailMount_Lower_M3x10_0",
+    "RailMount_Lower_M3x10_1",
+    "PCB_Spacer_Lower_Left",
+    "Camera_M2x12_Lower_Left",
+    "PCB_Spacer_Lower_Right",
+    "Camera_M2x12_Lower_Right",
+    "RailMount_Upper_M3x10_0",
+    "RailMount_Upper_M3x10_1",
+    "PCB_Spacer_Upper_Left",
+    "Camera_M2x12_Upper_Left",
+    "PCB_Spacer_Upper_Right",
+    "Camera_M2x12_Upper_Right",
+    "TiltServo_WireExit_KEEP_OUT",
+    "CameraPlate_Cut007",
+    "Camera_Lens_PROVISIONAL"
+  ],
+  "pan_fixed_objects": [
+    "Base_EarMount_ThrustSupport",
+    "Pan_Replaceable_ThrustRing",
+    "PanServo_SG90_Reference"
+  ],
+  "tilt_moving_objects": [
+    "Tilt_OriginalStar_PROVISIONAL",
+    "TiltOriginalScrew_PROVISIONAL",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "TiltDrive_M3x10_0",
+    "TiltDrive_M3x10_1",
+    "TiltDrive_M3x10_2",
+    "TiltDrive_M3x10_3",
+    "Tilt_Journal_FlangedSleeve",
+    "RailMount_Lower_M3x10_0",
+    "RailMount_Lower_M3x10_1",
+    "PCB_Spacer_Lower_Left",
+    "Camera_M2x12_Lower_Left",
+    "PCB_Spacer_Lower_Right",
+    "Camera_M2x12_Lower_Right",
+    "RailMount_Upper_M3x10_0",
+    "RailMount_Upper_M3x10_1",
+    "PCB_Spacer_Upper_Left",
+    "Camera_M2x12_Upper_Left",
+    "PCB_Spacer_Upper_Right",
+    "Camera_M2x12_Upper_Right",
+    "CameraPlate_Cut007",
+    "Camera_Lens_PROVISIONAL"
+  ],
+  "tilt_fixed_objects": [
+    "TiltServo_SG90_Reference",
+    "PanYoke_EarBracket_KeyedDrive",
+    "Tilt_Removable_IdlerPillar",
+    "IdlerPillar_M3x10_0",
+    "IdlerPillar_M3x10_1",
+    "Pan_KeyedHorn_Cover",
+    "PanDrive_M3x10_0",
+    "PanDrive_M3x10_1",
+    "PanDrive_M3x10_2",
+    "PanDrive_M3x10_3",
+    "TiltIdler_M3x12",
+    "TiltIdler_M3_Washer",
+    "PanEar_M1p6x8_0",
+    "PanEar_M1p6x8_1",
+    "TiltEar_M1p6x8_0",
+    "TiltEar_M1p6x8_1",
+    "TiltServo_WireExit_KEEP_OUT"
+  ],
+  "checks": [
+    {
+      "axis": "pan",
+      "angle_deg": -15,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Pan_OriginalStar_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 9.9975
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 5.0327
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 5.0265
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 5.4561
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 87.8598
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 87.8598
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 615.7522
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 559.8685
+        }
+      ]
+    },
+    {
+      "axis": "pan",
+      "angle_deg": -10,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Pan_OriginalStar_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 9.2024
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 4.3173
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 7.7465
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 5.0369
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 615.7522
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 559.8685
+        }
+      ]
+    },
+    {
+      "axis": "pan",
+      "angle_deg": -5,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Pan_OriginalStar_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 4.4189
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 1.8377
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 9.8188
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 4.8672
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 615.7522
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 559.8685
+        }
+      ]
+    },
+    {
+      "axis": "pan",
+      "angle_deg": 0,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Pan_OriginalStar_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 615.7522
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 559.8685
+        }
+      ]
+    },
+    {
+      "axis": "pan",
+      "angle_deg": 5,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Pan_OriginalStar_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 4.4189
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 1.8377
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 9.8188
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 4.8672
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 615.7522
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 559.8685
+        }
+      ]
+    },
+    {
+      "axis": "pan",
+      "angle_deg": 10,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Pan_OriginalStar_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 9.2024
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 4.3173
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 7.7465
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 5.0369
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 615.7522
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 559.8685
+        }
+      ]
+    },
+    {
+      "axis": "pan",
+      "angle_deg": 15,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Pan_OriginalStar_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 9.9975
+        },
+        {
+          "moving": "PanEar_M1p6x8_0",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 5.0327
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 5.0265
+        },
+        {
+          "moving": "PanEar_M1p6x8_1",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 5.4561
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 87.8598
+        },
+        {
+          "moving": "RailMount_Lower_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Lower_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_0",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 87.8598
+        },
+        {
+          "moving": "RailMount_Upper_M3x10_1",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 95.2425
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Left",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 12.5664
+        },
+        {
+          "moving": "Camera_M2x12_Upper_Right",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 35.9933
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "Base_EarMount_ThrustSupport",
+          "intersection_mm3": 615.7522
+        },
+        {
+          "moving": "Camera_Lens_PROVISIONAL",
+          "fixed": "PanServo_SG90_Reference",
+          "intersection_mm3": 559.8685
+        }
+      ]
+    },
+    {
+      "axis": "tilt",
+      "angle_deg": -15,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Tilt_OriginalStar_PROVISIONAL",
+          "fixed": "TiltServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        }
+      ]
+    },
+    {
+      "axis": "tilt",
+      "angle_deg": -10,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Tilt_OriginalStar_PROVISIONAL",
+          "fixed": "TiltServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        }
+      ]
+    },
+    {
+      "axis": "tilt",
+      "angle_deg": -5,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Tilt_OriginalStar_PROVISIONAL",
+          "fixed": "TiltServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        }
+      ]
+    },
+    {
+      "axis": "tilt",
+      "angle_deg": 0,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Tilt_OriginalStar_PROVISIONAL",
+          "fixed": "TiltServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        }
+      ]
+    },
+    {
+      "axis": "tilt",
+      "angle_deg": 5,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Tilt_OriginalStar_PROVISIONAL",
+          "fixed": "TiltServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        }
+      ]
+    },
+    {
+      "axis": "tilt",
+      "angle_deg": 10,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Tilt_OriginalStar_PROVISIONAL",
+          "fixed": "TiltServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        }
+      ]
+    },
+    {
+      "axis": "tilt",
+      "angle_deg": 15,
+      "fixed_vs_moving_positive_intersections": [
+        {
+          "moving": "Tilt_OriginalStar_PROVISIONAL",
+          "fixed": "TiltServo_SG90_Reference",
+          "intersection_mm3": 73.2635
+        }
+      ]
+    }
+  ],
+  "note": "Exploratory transform screening only; small sample angles are not declared hardware travel limits. Positive intersections include intended joint/fastener engagements and require classification."
+}

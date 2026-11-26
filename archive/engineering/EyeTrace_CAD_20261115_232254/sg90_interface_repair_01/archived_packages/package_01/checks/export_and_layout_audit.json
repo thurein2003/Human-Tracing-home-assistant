@@ -1,0 +1,245 @@
+{
+  "assembly_step": {
+    "valid": true,
+    "solids": 72,
+    "volume_difference_mm3": 1.6589183360338211e-09
+  },
+  "parts": {
+    "Base_EarMount_ThrustSupport": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 4408,
+      "volume_relative_error": 0.0005097800024004733,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 3.2619520545402103e-06
+    },
+    "Pan_Replaceable_ThrustRing": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 1692,
+      "volume_relative_error": 0.0009359134051781794,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 2.014239234085918e-06
+    },
+    "PanYoke_EarBracket_KeyedDrive": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 6478,
+      "volume_relative_error": 0.00010128447139578204,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 3.897568948831232e-06
+    },
+    "Pan_KeyedHorn_Cover": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 3472,
+      "volume_relative_error": 0.0010294831467221655,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 1.799715525093529e-06
+    },
+    "TiltCradle_KeyedHorn_CameraFrame": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 6186,
+      "volume_relative_error": 0.00013073864013261758,
+      "min_z": -7.105427357601002e-15,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 3.178076404485863e-06
+    },
+    "Tilt_KeyedHorn_CaptiveCover": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 3472,
+      "volume_relative_error": 0.0010547512333660336,
+      "min_z": -7.105427357601002e-15,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 1.799715525093529e-06
+    },
+    "Tilt_Journal_FlangedSleeve": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 1008,
+      "volume_relative_error": 0.0009303573530469022,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 2.5099184266425765e-07
+    },
+    "Camera_SlidingRail_Lower": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 1388,
+      "volume_relative_error": 9.209012678882902e-05,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 1.1760542476834364e-06
+    },
+    "PCB_Spacer_Lower_Left": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 672,
+      "volume_relative_error": 0.0009365387874393435,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 2.0289334803645054e-07
+    },
+    "PCB_Spacer_Lower_Right": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 672,
+      "volume_relative_error": 0.0009365387874393435,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 2.0289334803645054e-07
+    },
+    "Camera_SlidingRail_Upper": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 1388,
+      "volume_relative_error": 9.209012678882902e-05,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 1.1760542476834364e-06
+    },
+    "PCB_Spacer_Upper_Left": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 672,
+      "volume_relative_error": 0.0009365387874393435,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 2.0289334803645054e-07
+    },
+    "PCB_Spacer_Upper_Right": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 672,
+      "volume_relative_error": 0.0009365387874393435,
+      "min_z": 0.0,
+      "step_difference_mm3": 0.0,
+      "max_STL_vertex_to_BRep_mm": 2.0289334803645054e-07
+    }
+  },
+  "bed": {
+    "closed": true,
+    "components": 13,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "facets": 32180,
+    "volume_relative_error": 0.00028368455556560635,
+    "min_z": -7.105427357601002e-15,
+    "dimensions_mm": [
+      238.0,
+      156.6,
+      77.0
+    ],
+    "min_gap_mm": 8,
+    "within_260x260": true,
+    "scope": "Geometry packing only; slice/support/brim review still required; prototype layout, not production release"
+  },
+  "coupons": {
+    "SG90_EarMount_Coupon": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 712,
+      "volume_relative_error": 2.334254035739201e-05,
+      "min_z": 0.0
+    },
+    "StarHorn_PositivePocket_Coupon": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 2172,
+      "volume_relative_error": 0.001021097835981689,
+      "min_z": 0.0
+    },
+    "StarHorn_CaptiveCover_Coupon": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 3472,
+      "volume_relative_error": 0.0010547512333658432,
+      "min_z": 0.0
+    },
+    "Camera_4Hole_Gauge_PROVISIONAL": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 1392,
+      "volume_relative_error": 1.6770123620591256e-05,
+      "min_z": 0.0
+    },
+    "PETG_Hole_Journal_Gauge": {
+      "closed": true,
+      "components": 1,
+      "nonmanifold": false,
+      "self_intersections": false,
+      "bad_normals": false,
+      "facets": 2052,
+      "volume_relative_error": 0.00013309112490181063,
+      "min_z": 0.0
+    }
+  },
+  "coupon_layout": {
+    "closed": true,
+    "components": 5,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "facets": 9800,
+    "volume_relative_error": 0.0006571200086777258,
+    "min_z": 0.0
+  }
+}

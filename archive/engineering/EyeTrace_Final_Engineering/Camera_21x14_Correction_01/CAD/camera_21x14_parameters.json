@@ -1,0 +1,53 @@
+{
+  "hole_spacing_center_to_center_mm": {
+    "horizontal": 21,
+    "vertical": 14
+  },
+  "center_xz_mm": [
+    0,
+    76
+  ],
+  "hole_centers_xz_mm": [
+    [
+      -10.5,
+      69.0
+    ],
+    [
+      -10.5,
+      83.0
+    ],
+    [
+      10.5,
+      69.0
+    ],
+    [
+      10.5,
+      83.0
+    ]
+  ],
+  "pcb_envelope_mm": {
+    "width": 38,
+    "height": 38,
+    "thickness": 1.6,
+    "status": "provisional envelope kept separate from hole pitch"
+  },
+  "pcb_hole_diameter_mm": 2.2,
+  "plate_hole_diameter_mm": 2.4,
+  "lens": {
+    "envelope_diameter_mm": 14,
+    "clearance_diameter_mm": 18,
+    "projection_mm": 10,
+    "status": "provisional"
+  },
+  "rear_component_envelope_mm": [
+    20,
+    24.4,
+    20
+  ],
+  "ribbon_reservation_mm": [
+    20,
+    1,
+    18
+  ],
+  "physical_fit": "unverified"
+}

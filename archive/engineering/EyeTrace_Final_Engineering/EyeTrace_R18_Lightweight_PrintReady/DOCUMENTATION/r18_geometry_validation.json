@@ -1,0 +1,115 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)"
+  ],
+  "source": "EyeTrace_Final_Engineering\\EyeTrace_Plate02_Compact_Carrier_Test\\CAD\\EyeTrace_CompactCarrier_Candidate.FCStd",
+  "output": "EyeTrace_Final_Engineering\\EyeTrace_R18_Lightweight_PrintReady\\CAD\\EyeTrace_R18.FCStd",
+  "target": "PanYoke_EarBracket_KeyedDrive",
+  "valid": true,
+  "solids": 1,
+  "original_volume_mm3": 41666.33966724709,
+  "new_volume_mm3": 36613.82621051891,
+  "removed_volume_mm3": 5052.513456728178,
+  "removed_percent_of_pan_yoke": 12.126127461827028,
+  "bbox": [
+    -58.2,
+    -35.3,
+    35.199999999999996,
+    44.0,
+    35.3,
+    103.0
+  ],
+  "web_original_x_thickness_mm": 8.0,
+  "web_remaining_x_thickness_mm": 2.5,
+  "cut_window_yz_mm": [
+    -18.0,
+    18.0,
+    45.0,
+    99.0
+  ],
+  "corner_radius_mm": 3.0,
+  "component_rows": [
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "valid": true,
+      "solids": 1,
+      "bbox": [
+        -58.2,
+        -35.3,
+        35.199999999999996,
+        44.0,
+        35.3,
+        103.0
+      ],
+      "volume": 36613.82621051891
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "valid": true,
+      "solids": 1,
+      "bbox": [
+        -41.00000000000001,
+        -24.4,
+        54.0,
+        36.0,
+        21.0,
+        99.0
+      ],
+      "volume": 24742.034516702675
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar",
+      "valid": true,
+      "solids": 1,
+      "bbox": [
+        28.0,
+        -28.5,
+        41.0,
+        44.0,
+        28.5,
+        98.0
+      ],
+      "volume": 7511.695140156739
+    },
+    {
+      "name": "PanServo_SG90_Reference",
+      "valid": true,
+      "solids": 1,
+      "bbox": [
+        -10.7,
+        -6.1,
+        6.0,
+        21.599999999999998,
+        6.1,
+        36.3
+      ],
+      "volume": 7152.840844796366
+    },
+    {
+      "name": "TiltServo_SG90_Reference",
+      "valid": true,
+      "solids": 1,
+      "bbox": [
+        -70.0,
+        -6.1,
+        56.400000000000006,
+        -39.7,
+        6.1,
+        88.7
+      ],
+      "volume": 7152.840844796365
+    }
+  ],
+  "stl_facets": 35546,
+  "stl_bbox": [
+    13.0,
+    13.003950119018555,
+    0.0,
+    115.19999694824219,
+    83.5960464477539,
+    67.80000305175781
+  ]
+}

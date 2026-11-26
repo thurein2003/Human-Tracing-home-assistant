@@ -1,0 +1,21 @@
+﻿{
+    "source":  "R19 FCStd actual BREP sections",
+    "plate01_modified":  false,
+    "geometry_modified":  false,
+    "target_total_height_mm":  2.8,
+    "release":  "HOLD",
+    "target_surface_pair_identified":  false,
+    "sections":  {
+                     "R15_pocket_depth_mm":  1.7,
+                     "plain_web_mm":  2.5,
+                     "R15_floor_backing_mm":  2.5,
+                     "pocket_mouth_to_opposite_roof_mm":  4.2,
+                     "outer_support_land_mm":  5.8,
+                     "mount_pad_mm":  4
+                 },
+    "component":  "PanYoke_EarBracket_KeyedDrive",
+    "calculated_backing_if_total_2p8_mm":  1.1,
+    "reason":  "Exact screenshot endpoints unavailable; 2.8 mm conflicts with preserved 1.7 mm pocket plus 2.5 mm backing and local fastener/support geometry",
+    "reported_value_reproduced_from_CAD":  false,
+    "measured_screenshot_value_mm":  8.049
+}

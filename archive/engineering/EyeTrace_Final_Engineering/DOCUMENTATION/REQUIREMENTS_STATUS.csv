@@ -1,0 +1,35 @@
+﻿Requirement,Status,Evidence,Limit / remaining
+Existing revisions inspected,PASS,Seven actual FCStd opened; revision_native_audit.json,No filename-only selection
+Source traceability and preservation,PASS,feature_traceability.csv and source checksum inventory,Final preservation QA checks743 files
+Stationary base and pan ear bracket,PASS,Valid base BRep and original ear seat/tool tests,Base-to-host attachment is staged before yoke
+Rotating pan carrier and torque path,PROVISIONAL,Positive pocket probe and four captive M3 joints,Actual original horn outline needed
+Tilt bracket and drive connection,PROVISIONAL,Corrected ear bracket; positive tilt pocket and four M3 joints,Actual horn seating/lash and clone ear checks
+Two consistent SG90-sized references,PASS,Canonical BRep match and measured12.2x22.7 body section,Hardware clone equivalence remains provisional
+SG90 mounting ear and boss fit on real motors,PROVISIONAL,Nominal case/tab geometry and alignment pass,Ear/body coupon on BOTH actual servos
+Spline and original retaining screw fit,BLOCKED,Smooth envelope only; no exact spline invented,Use original horns/screws; actual seating/access confirmation
+Horn retaining-screw access,PROVISIONAL,Staged diameter5 tool routes pass,Actual head/driver and hand access test
+Camera cradle and opposite pivot,PASS,"Valid cradle, removable pillar and coaxial sleeve",Physical sliding fit separately required
+Four-hole camera21x16 center pattern,PASS,Actual cylinder centers and independent dimension trials,User nominal with physical coupon confirmation
+Camera plate-to-cradle attachment,PASS,Four separate M3 joints and zero-distance seat contacts,Real PETG/nut seating remains provisional
+Actual PCB hole diameter and outline,BLOCKED,Independent38x38x1.6/diameter2.2 placeholders,Measure actual outer edges/thickness/hole diameters
+Actual lens/IR/components clearance,BLOCKED,Nominal18 opening /14 barrel; rear envelope retained,Measure barrel/IR/window and rear component footprints/heights
+Rear-camera nominal clearance classification,PASS,Nine uncertainty overlaps explicitly recorded,Does not declare actual component clearance
+Ribbon connector and full cable sweep,BLOCKED,Solid flat exit reservation participates in all poses,Real connector/bend radius/slack route unavailable
+Fastener nominal stack compatibility,PASS,M3x10 structural grips and idler sleeve separation,Purchased dimensions still provisional
+Servo/camera small fasteners,PROVISIONAL,M1.6 ear /M2 camera conditional design,Measure original holes before purchase/use
+Complete assembly/disassembly sequence,PROVISIONAL,Motor/cradle/pillar/module staged paths plus16 added tool checks,"Verify physical tools, original screws and lead threading"
+Solid validity and duplicate inventory,PASS,49 active components;13 printed;76 STEP solid leaves,Hidden Boolean history excluded from manufacture
+All-pair motion including horn/output,PASS,1266 poses;1488816 pair tests;0 unintended nominal penetrations,"Discrete2.5deg grid, not continuous or physical cable proof"
+Conservative command range,PROVISIONAL,Initial pan+/-55/tilt+/-25 inside tested+/-60/+/-30,"Physical neutral, cable and original limits must be checked"
+Mechanical stops,PROVISIONAL,No certified external stop or full180 claim,Do not force original internal stops; controller limits required
+Pan/tilt strength screening,PROVISIONAL,Sourced torque; actual solid masses;10/25/50g sensitivity,25g assumption within analyst budget;50g exceeds tilt budget
+FDM walls and orientation,PROVISIONAL,Actual wall probes and exported-orientation overhang screen,"Inspect local thin-wall paths, layer quantization and support removal"
+Mesh and STEP reopening,PASS,All13 individual meshes/STEP and full76-solid STEP reopened,Native/mesh comparisons and final delivery QA
+K2 complete print bed,PASS,"13 printable components,197x192.6x77,8mm gap",Geometric packing; support/brim toolpaths separately required
+Minimal interface tests,PASS,Seven-piece separate fit bed; actual sleeve reusable,No redundant spacer or hole-gauge print
+Physical PETG journal/horn/ear tests,BLOCKED,No measured print results supplied,Record in physical_results.csv
+Repeatable QA scripts,PASS,TESTS scripts and run_all.ps1,Use new timestamp output for each dense motion rerun
+Actual CAD views and animation,PASS,14 static views plus17 motion frames and GIF,No decorative generated render assets
+Local slicer/toolpath validation,BLOCKED,"Installed Creality Print attempts recorded, no sliced output",Support/brim/filament profile preview not completed
+Manufacturing/assembly documentation,PASS,"Guide, BOM, print guide, audits, load report, release checks",Read hardware assumptions before full printing
+Physical functional verification,BLOCKED,No hardware bench test available,"Free movement, safe powered travel, load, creep, vibration and repeat motion"

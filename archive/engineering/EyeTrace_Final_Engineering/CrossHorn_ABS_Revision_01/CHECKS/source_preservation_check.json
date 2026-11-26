@@ -1,0 +1,8 @@
+{
+  "source_revision": "Camera_21x14_Correction_01",
+  "source_hashes_match_existing_manifest": true,
+  "native_assembly_sha256": "ca7ce8ffb221dc7504ceaec22444464311406ffe928af6d3b708fd226f4f778a",
+  "full_abs_print_project_sha256": "87c343b3c0781d34ec7e88a28e82564a1675bcbae9a6a26d97b5c2919c0b3648",
+  "changed_source_files": [],
+  "note": "Hashes were rechecked against the revision manifest after inspection and native-motion revalidation. The source document was not saved."
+}

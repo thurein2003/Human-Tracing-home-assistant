@@ -1,0 +1,84 @@
+﻿import FreeCAD as A, Part, MeshPart, json, os, shutil, zipfile, xml.etree.ElementTree as ET, math
+from FreeCAD import Vector as V
+ROOT=r'EyeTrace_Final_Engineering'
+OUT=os.path.join(ROOT,'EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP')
+FC=os.path.join(OUT,'CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd')
+SRC=os.path.join(ROOT,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO')
+d=A.openDocument(FC)
+master=A.openDocument(os.path.join(ROOT,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'))
+base=master.getObject('BaseCoupon').Shape; final=master.getObject('FinalCoupon').Shape
+exp0=base.cut(final)
+rotpan=A.Rotation(V(1,0,0),180); toptilt=V(-41,0,78); rottilt=A.Rotation(V(0,1,0),-90)
+def tr(shape,rot,top):
+ s=shape.copy();s.rotate(V(0,0,0),rot.Axis,rot.Angle*180/math.pi);s.translate(top-rot.multVec(V(0,0,3.8)));return s
+cases=[
+ ('PAN','PanYoke_EarBracket_KeyedDrive',rotpan,V(0,0,33),[(1.65,(18,0,30)),(1.65,(-18,0,30)),(1.65,(0,18,30)),(1.65,(0,-18,30))],[0,0,1],30,42,(0,0,30)),
+ ('TILT','TiltCradle_KeyedHorn_CameraFrame',rottilt,V(-41,0,78),[(1.65,(-46,0,93)),(1.65,(-46,0,63)),(1.65,(-46,15,78)),(1.65,(-46,-15,78))],[1,0,0],-46,-32,(-46,0,78))]
+results={}
+for key,n,rot,top,holes,axis,a,b,center in cases:
+ o=d.getObject(n);sh=o.Shape; env=tr(base,rot,top); exp=tr(exp0,rot,top)
+ # The region has been rebuilt from the R15 coupon; the four retainer bores and Ø8 through bore remain separate operations.
+ allowed=exp.copy()
+ for rad,pos in holes:
+  tool=Part.makeCylinder(rad,b-a,V(*pos),V(*axis)); allowed=allowed.fuse(env.common(tool))
+ bore=Part.makeCylinder(4.0,b-a,V(*center),V(*axis));allowed=allowed.fuse(env.common(bore))
+ local=env.cut(sh)
+ da=local.cut(allowed); de=allowed.cut(local)
+ results[key]={'component':n,'valid':sh.isValid(),'solids':len(sh.Solids),'volume_mm3':sh.Volume,'bbox_mm':[sh.BoundBox.XMin,sh.BoundBox.YMin,sh.BoundBox.ZMin,sh.BoundBox.XMax,sh.BoundBox.YMax,sh.BoundBox.ZMax],'R15_envelope_mm':[39.2,20.2],'R15_recess_depth_mm':1.7,'R15_bore_diameter_mm':8.0,'expected_void_including_preserved_fasteners_mm3':allowed.Volume,'actual_void_in_recess_envelope_mm3':local.Volume,'actual_extra_void_mm3':da.Volume,'missing_expected_void_mm3':de.Volume}
+# Create print-space transformed shapes; this reproduces exact bed orientation/placement of the R16 project.
+pan=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape.copy();pan.translate(V(71.2,48.3,-33.0))
+tilt=d.getObject('TiltCradle_KeyedHorn_CameraFrame').Shape.copy();tilt.rotate(V(0,0,0),V(0,1,0),-90);tilt.translate(V(288,127,41))
+def getmesh(shape):
+ verts,facets=shape.tessellate(0.08)
+ return verts,facets
+meshdata={'PanYoke_EarBracket_KeyedDrive':getmesh(pan),'TiltCradle_KeyedHorn_CameraFrame':getmesh(tilt)}
+ns='http://schemas.microsoft.com/3dmanufacturing/core/2015/02'
+ET.register_namespace('',ns)
+def tag(t): return '{%s}%s'%(ns,t)
+def patch3mf(src,dst):
+ with zipfile.ZipFile(src,'r') as zin:
+  model=ET.fromstring(zin.read('3D/3dmodel.model'))
+  for obj in model.findall('.//'+tag('object')):
+   nm=obj.get('name')
+   if nm not in meshdata: continue
+   vs,fs=meshdata[nm]
+   old=obj.find(tag('mesh'))
+   if old is not None: obj.remove(old)
+   mesh=ET.SubElement(obj,tag('mesh')); vertices=ET.SubElement(mesh,tag('vertices'))
+   for p in vs: ET.SubElement(vertices,tag('vertex'),{'x':format(p.x,'.9g'),'y':format(p.y,'.9g'),'z':format(p.z,'.9g')})
+   tris=ET.SubElement(mesh,tag('triangles'))
+   for f in fs: ET.SubElement(tris,tag('triangle'),{'v1':str(int(f[0])),'v2':str(int(f[1])),'v3':str(int(f[2]))})
+  for md in model.findall(tag('metadata')):
+   if md.get('name')=='Title': md.text='EyeTrace R17 R15 horn cleanup — reslice required'
+   if md.get('name')=='Description': md.text='Two local drive interfaces rebuilt from physically tested R15 master BREP. Reslicing/support checks required; not print approved.'
+  tmp=dst+'.tmp'
+  with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as zout:
+   for info in zin.infolist():
+    data=ET.tostring(model,encoding='utf-8',xml_declaration=True) if info.filename=='3D/3dmodel.model' else zin.read(info.filename)
+    zout.writestr(info,data)
+ shutil.move(tmp,dst)
+# Carry both independent Creality projects forward and replace only object mesh geometry 3 and 6.
+os.makedirs(os.path.join(OUT,'PRINT'),exist_ok=True)
+for i in (1,2):
+ src=os.path.join(SRC,'PRINT','EyeTrace_R16_Plate_%02d_ABS_HOLD.3mf'%i)
+ dst=os.path.join(OUT,'PRINT','EyeTrace_R17_Plate_%02d_ABS_HORN_CLEANUP_HOLD.3mf'%i)
+ patch3mf(src,dst)
+# Copy unchanged STLs except replaced carriers; updated print-coordinate STLs exported from actual BREP.
+stldir=os.path.join(SRC,'STL')
+for fn in os.listdir(stldir):
+ if not fn.lower().endswith('.stl') or 'PanYoke' in fn or 'TiltCradle' in fn: continue
+ target=os.path.join(OUT,'STL',fn)
+ if not os.path.exists(target): shutil.copy2(os.path.join(stldir,fn),target)
+# Report geometry and package integrity; print projects intentionally HOLD pending actual reslice.
+report={'freecad_version':'1.1.4','source_assembly':os.path.join(SRC,'CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'),'new_assembly':FC,'master_r15':os.path.join(ROOT,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'),'interfaces':results,'printable_parts':13,'camera_hole_spacing_mm':[21,14],'print_projects':[],'release':'HOLD — projects contain updated geometry but require slicing and support/brim verification in Creality Print'}
+for i in (1,2):
+ p=os.path.join(OUT,'PRINT','EyeTrace_R17_Plate_%02d_ABS_HORN_CLEANUP_HOLD.3mf'%i)
+ with zipfile.ZipFile(p) as z:
+  bad=z.testzip()
+  root=ET.fromstring(z.read('3D/3dmodel.model'))
+  modelparts=[x for x in root.findall('.//'+tag('object')) if x.get('name') in meshdata and x.find(tag('mesh')) is not None]
+ report['print_projects'].append({'path':p,'zip_test':bad or 'PASS','revised_mesh_objects_present':len(modelparts),'mesh_triangle_counts':{x.get('name'):len(x.find(tag('mesh')+'/ '+tag('triangles')) or []) for x in []}})
+with open(os.path.join(OUT,'CHECKS.json'),'w') as f:json.dump(report,f,indent=2)
+print('PACKAGED',json.dumps(report))
+A.closeDocument(master.Name);A.closeDocument(d.Name)
+

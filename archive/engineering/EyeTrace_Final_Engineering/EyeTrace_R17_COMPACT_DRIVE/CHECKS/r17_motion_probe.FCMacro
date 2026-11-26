@@ -1,0 +1,35 @@
+﻿import FreeCAD as A, Part, json, math
+from FreeCAD import Vector as V
+src=r'EyeTrace_Final_Engineering\EyeTrace_R17_COMPACT_DRIVE\CAD\EyeTrace_R17_DriveSupport_Audit_HOLD.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R17_COMPACT_DRIVE\CHECKS\R17_motion_probe.json'
+d=A.openDocument(src); O={o.Name:o for o in d.Objects if hasattr(o,'Shape') and not o.Shape.isNull()}
+def rotate_shape(n,origin,axis,deg):
+ s=O[n].Shape.copy(); s.rotate(origin,axis,deg); return s
+def overlap(a,b):
+ try: return a.common(b).Volume
+ except: return -1
+pan_moving=[n for n in O if n.startswith(('Pan_OriginalStar','PanOriginalScrew','PanYoke_','Pan_KeyedHorn','PanDrive_','TiltServo_','Tilt_OriginalStar','TiltOriginalScrew','Tilt_Removable_IdlerPillar','IdlerPillar_','TiltCradle_','Tilt_KeyedHorn','TiltDrive_','Tilt_Journal_','TiltIdler_','PanEar_','TiltEar_','RailMount_','PCB_Spacer_','Camera_M2x12_','CameraPlate_','Camera_Lens_'))]
+pan_fixed=[n for n in ('Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanServo_SG90_Reference') if n in O]
+tilt_moving=[n for n in O if n.startswith(('Tilt_OriginalStar','TiltOriginalScrew','TiltCradle_','Tilt_KeyedHorn','TiltDrive_','Tilt_Journal_','RailMount_','PCB_Spacer_','Camera_M2x12_','CameraPlate_','Camera_Lens_'))]
+tilt_fixed=[n for n in O if n.startswith(('PanYoke_','TiltServo_','Tilt_Removable_IdlerPillar','IdlerPillar_','Pan_KeyedHorn','PanDrive_','TiltIdler_','PanEar_','TiltEar_'))]
+checks=[]
+for angle in [-15,-10,-5,0,5,10,15]:
+ hits=[]
+ for m in pan_moving:
+  sm=rotate_shape(m,V(0,0,0),V(0,0,1),angle)
+  for f in pan_fixed:
+   v=overlap(sm,O[f].Shape)
+   if v>0.02: hits.append({'moving':m,'fixed':f,'intersection_mm3':round(v,4)})
+ checks.append({'axis':'pan','angle_deg':angle,'fixed_vs_moving_positive_intersections':hits})
+for angle in [-15,-10,-5,0,5,10,15]:
+ hits=[]
+ for m in tilt_moving:
+  sm=rotate_shape(m,V(-46,0,78),V(1,0,0),angle)
+  for f in tilt_fixed:
+   v=overlap(sm,O[f].Shape)
+   if v>0.02: hits.append({'moving':m,'fixed':f,'intersection_mm3':round(v,4)})
+ checks.append({'axis':'tilt','angle_deg':angle,'fixed_vs_moving_positive_intersections':hits})
+result={'source':src,'freecad_version':A.Version()[:4],'pan_axis_transverse_misalignment_mm':0.0,'tilt_axis_transverse_misalignment_mm':0.0,'pan_sampled_angles_deg':[-15,-10,-5,0,5,10,15],'tilt_sampled_angles_deg':[-15,-10,-5,0,5,10,15],'pan_moving_objects':pan_moving,'pan_fixed_objects':pan_fixed,'tilt_moving_objects':tilt_moving,'tilt_fixed_objects':tilt_fixed,'checks':checks,'note':'Exploratory transform screening only; small sample angles are not declared hardware travel limits. Positive intersections include intended joint/fastener engagements and require classification.'}
+with open(out,'w') as f: json.dump(result,f,indent=2)
+print('MOTION_PROBE_WRITTEN',out,'checks',len(checks),'intersections',sum(len(x['fixed_vs_moving_positive_intersections']) for x in checks))
+A.closeDocument(d.Name)

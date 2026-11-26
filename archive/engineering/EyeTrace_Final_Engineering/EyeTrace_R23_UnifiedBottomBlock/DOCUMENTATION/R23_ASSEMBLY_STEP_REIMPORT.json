@@ -1,0 +1,17 @@
+{
+  "file": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\CAD\\EyeTrace_R23_FullAssembly.step",
+  "exported_compound_solid_count": 74,
+  "reimport_valid": true,
+  "reimport_solid_count": 74,
+  "reimport_volume_mm3": 149309.19479854967,
+  "source_volume_mm3": 149309.1947985485,
+  "volume_delta_mm3": 1.1641532182693481e-09,
+  "bbox_mm": [
+    -70.0,
+    44.5,
+    -35.3,
+    35.3,
+    -3.1754264805432064,
+    103.0
+  ]
+}

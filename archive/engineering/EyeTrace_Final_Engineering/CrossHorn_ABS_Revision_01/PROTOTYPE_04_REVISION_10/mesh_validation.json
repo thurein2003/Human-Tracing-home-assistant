@@ -1,0 +1,53 @@
+{
+  "stl_triangle_count": 6800,
+  "3mf_object_count": 1,
+  "3mf_triangle_count": 6800,
+  "3mf_zip_valid": true,
+  "stl_front_circular_wall_z_span_mm": [
+    -1.100000023841858,
+    2.0999999046325684
+  ],
+  "3mf_front_circular_wall_z_span_mm": [
+    -1.1,
+    2.1000000000000005
+  ],
+  "arm_pocket_widths": {
+    "upper_plus_y": {
+      "wall_candidates_mm": [
+        -1.7,
+        1.7
+      ],
+      "inner_wall_pair_mm": [
+        -1.7,
+        1.7
+      ],
+      "width_mm": 3.4,
+      "3mf_wall_pair_mm": [
+        -1.7,
+        1.7
+      ],
+      "3mf_width_mm": 3.4
+    },
+    "bottom_minus_y": {
+      "wall_candidates_mm": [
+        -2.2,
+        2.2
+      ],
+      "inner_wall_pair_mm": [
+        -2.2,
+        2.2
+      ],
+      "width_mm": 4.4,
+      "3mf_wall_pair_mm": [
+        -2.2,
+        2.2
+      ],
+      "3mf_width_mm": 4.4
+    }
+  },
+  "3mf_geometry_matches_stl_triangle_count": true,
+  "3mf_bed_z_bounds_mm": [
+    0.0,
+    6.0
+  ]
+}

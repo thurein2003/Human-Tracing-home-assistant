@@ -1,0 +1,4195 @@
+[
+  {
+    "Z": 0.2,
+    "model_segments": 9937,
+    "support_segments": 1692,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 0.4,
+    "model_segments": 10052,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 0.516,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 0.519,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 0.6,
+    "model_segments": 10023,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 0.8,
+    "model_segments": 10061,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 0.831,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 0.838,
+    "model_segments": 0,
+    "support_segments": 107,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.0,
+    "model_segments": 9596,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.147,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.157,
+    "model_segments": 0,
+    "support_segments": 106,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.2,
+    "model_segments": 20415,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.4,
+    "model_segments": 20128,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.463,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.476,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.6,
+    "model_segments": 19201,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.778,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.795,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 1.8,
+    "model_segments": 18407,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.0,
+    "model_segments": 17934,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.094,
+    "model_segments": 0,
+    "support_segments": 110,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.114,
+    "model_segments": 0,
+    "support_segments": 108,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.2,
+    "model_segments": 14649,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 2.052
+  },
+  {
+    "Z": 2.4,
+    "model_segments": 14985,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.409,
+    "model_segments": 0,
+    "support_segments": 110,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.433,
+    "model_segments": 0,
+    "support_segments": 107,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.6,
+    "model_segments": 14998,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.725,
+    "model_segments": 0,
+    "support_segments": 110,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.752,
+    "model_segments": 0,
+    "support_segments": 106,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 2.8,
+    "model_segments": 15004,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.0,
+    "model_segments": 10295,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.041,
+    "model_segments": 0,
+    "support_segments": 110,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.071,
+    "model_segments": 0,
+    "support_segments": 105,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.2,
+    "model_segments": 2732,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 2.057
+  },
+  {
+    "Z": 3.356,
+    "model_segments": 0,
+    "support_segments": 110,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.39,
+    "model_segments": 0,
+    "support_segments": 103,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.4,
+    "model_segments": 4409,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.6,
+    "model_segments": 4367,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.672,
+    "model_segments": 0,
+    "support_segments": 110,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.709,
+    "model_segments": 0,
+    "support_segments": 103,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.8,
+    "model_segments": 4358,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 3.988,
+    "model_segments": 0,
+    "support_segments": 110,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.0,
+    "model_segments": 3941,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.028,
+    "model_segments": 0,
+    "support_segments": 103,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.2,
+    "model_segments": 2695,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.303,
+    "model_segments": 0,
+    "support_segments": 110,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.347,
+    "model_segments": 0,
+    "support_segments": 109,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.4,
+    "model_segments": 1687,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.6,
+    "model_segments": 1776,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.619,
+    "model_segments": 0,
+    "support_segments": 397,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.666,
+    "model_segments": 0,
+    "support_segments": 136,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.8,
+    "model_segments": 1826,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.935,
+    "model_segments": 0,
+    "support_segments": 405,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 4.985,
+    "model_segments": 0,
+    "support_segments": 140,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.0,
+    "model_segments": 1835,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.2,
+    "model_segments": 1722,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.207
+  },
+  {
+    "Z": 5.25,
+    "model_segments": 0,
+    "support_segments": 418,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.305,
+    "model_segments": 0,
+    "support_segments": 140,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.4,
+    "model_segments": 1813,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.566,
+    "model_segments": 0,
+    "support_segments": 434,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.6,
+    "model_segments": 1834,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.624,
+    "model_segments": 0,
+    "support_segments": 140,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.8,
+    "model_segments": 1794,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.881,
+    "model_segments": 0,
+    "support_segments": 465,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 5.943,
+    "model_segments": 0,
+    "support_segments": 142,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.0,
+    "model_segments": 1661,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.197,
+    "model_segments": 0,
+    "support_segments": 504,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.2,
+    "model_segments": 1856,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.262,
+    "model_segments": 0,
+    "support_segments": 144,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.4,
+    "model_segments": 1875,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.513,
+    "model_segments": 0,
+    "support_segments": 492,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.581,
+    "model_segments": 0,
+    "support_segments": 146,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.6,
+    "model_segments": 1855,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.8,
+    "model_segments": 1803,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.828,
+    "model_segments": 0,
+    "support_segments": 510,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 6.9,
+    "model_segments": 0,
+    "support_segments": 148,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.0,
+    "model_segments": 1844,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.144,
+    "model_segments": 0,
+    "support_segments": 489,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.2,
+    "model_segments": 1963,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.219,
+    "model_segments": 0,
+    "support_segments": 148,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.4,
+    "model_segments": 1949,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.46,
+    "model_segments": 0,
+    "support_segments": 561,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.538,
+    "model_segments": 0,
+    "support_segments": 154,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.6,
+    "model_segments": 2002,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.775,
+    "model_segments": 0,
+    "support_segments": 570,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.8,
+    "model_segments": 2152,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 7.857,
+    "model_segments": 0,
+    "support_segments": 160,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.0,
+    "model_segments": 2133,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.091,
+    "model_segments": 0,
+    "support_segments": 620,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.176,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.2,
+    "model_segments": 2110,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.4,
+    "model_segments": 2247,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.407,
+    "model_segments": 0,
+    "support_segments": 634,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.495,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.6,
+    "model_segments": 2319,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.722,
+    "model_segments": 0,
+    "support_segments": 656,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.8,
+    "model_segments": 2275,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 8.814,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.0,
+    "model_segments": 2171,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.038,
+    "model_segments": 0,
+    "support_segments": 687,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.133,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.2,
+    "model_segments": 2351,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.353,
+    "model_segments": 0,
+    "support_segments": 714,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.4,
+    "model_segments": 2386,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.452,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.6,
+    "model_segments": 2418,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.669,
+    "model_segments": 0,
+    "support_segments": 738,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.771,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.8,
+    "model_segments": 2334,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 9.985,
+    "model_segments": 0,
+    "support_segments": 775,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.0,
+    "model_segments": 2430,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.09,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.2,
+    "model_segments": 2433,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.3,
+    "model_segments": 0,
+    "support_segments": 811,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.4,
+    "model_segments": 2423,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.409,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.6,
+    "model_segments": 2467,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.208
+  },
+  {
+    "Z": 10.616,
+    "model_segments": 0,
+    "support_segments": 857,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.728,
+    "model_segments": 0,
+    "support_segments": 165,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 10.8,
+    "model_segments": 2585,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.02
+  },
+  {
+    "Z": 10.932,
+    "model_segments": 0,
+    "support_segments": 882,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.0,
+    "model_segments": 2497,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.047,
+    "model_segments": 0,
+    "support_segments": 164,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.2,
+    "model_segments": 2347,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.247,
+    "model_segments": 0,
+    "support_segments": 914,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.366,
+    "model_segments": 0,
+    "support_segments": 164,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.4,
+    "model_segments": 2515,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.563,
+    "model_segments": 0,
+    "support_segments": 954,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.6,
+    "model_segments": 2530,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.685,
+    "model_segments": 0,
+    "support_segments": 164,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.8,
+    "model_segments": 2474,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 11.879,
+    "model_segments": 0,
+    "support_segments": 1023,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.0,
+    "model_segments": 2277,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.004,
+    "model_segments": 0,
+    "support_segments": 169,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.194,
+    "model_segments": 0,
+    "support_segments": 1070,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.2,
+    "model_segments": 2438,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.323,
+    "model_segments": 0,
+    "support_segments": 169,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.4,
+    "model_segments": 2434,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.51,
+    "model_segments": 0,
+    "support_segments": 1130,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.6,
+    "model_segments": 2378,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.642,
+    "model_segments": 0,
+    "support_segments": 174,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.8,
+    "model_segments": 2396,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.825,
+    "model_segments": 0,
+    "support_segments": 1209,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 12.961,
+    "model_segments": 0,
+    "support_segments": 176,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.0,
+    "model_segments": 2403,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.141,
+    "model_segments": 0,
+    "support_segments": 1276,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.2,
+    "model_segments": 2450,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.28,
+    "model_segments": 0,
+    "support_segments": 180,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.4,
+    "model_segments": 2457,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.457,
+    "model_segments": 0,
+    "support_segments": 1332,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.599,
+    "model_segments": 0,
+    "support_segments": 184,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.6,
+    "model_segments": 2491,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.772,
+    "model_segments": 0,
+    "support_segments": 1388,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.8,
+    "model_segments": 2504,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 13.918,
+    "model_segments": 0,
+    "support_segments": 183,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.0,
+    "model_segments": 2442,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.088,
+    "model_segments": 0,
+    "support_segments": 1448,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.2,
+    "model_segments": 2339,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 5.715
+  },
+  {
+    "Z": 14.237,
+    "model_segments": 0,
+    "support_segments": 187,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.4,
+    "model_segments": 2479,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.404,
+    "model_segments": 0,
+    "support_segments": 1496,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.556,
+    "model_segments": 0,
+    "support_segments": 190,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.6,
+    "model_segments": 2312,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.719,
+    "model_segments": 0,
+    "support_segments": 1600,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.8,
+    "model_segments": 2338,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 14.875,
+    "model_segments": 0,
+    "support_segments": 192,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.0,
+    "model_segments": 2192,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.035,
+    "model_segments": 0,
+    "support_segments": 1738,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.195,
+    "model_segments": 0,
+    "support_segments": 197,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.2,
+    "model_segments": 2414,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.351,
+    "model_segments": 0,
+    "support_segments": 1822,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.4,
+    "model_segments": 2394,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.514,
+    "model_segments": 0,
+    "support_segments": 200,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.6,
+    "model_segments": 2372,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.666,
+    "model_segments": 0,
+    "support_segments": 2010,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.8,
+    "model_segments": 2362,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.833,
+    "model_segments": 0,
+    "support_segments": 204,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 15.982,
+    "model_segments": 0,
+    "support_segments": 2141,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.0,
+    "model_segments": 2269,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.152,
+    "model_segments": 0,
+    "support_segments": 214,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.2,
+    "model_segments": 2315,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.297,
+    "model_segments": 0,
+    "support_segments": 2217,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.4,
+    "model_segments": 2275,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.471,
+    "model_segments": 0,
+    "support_segments": 222,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.6,
+    "model_segments": 2347,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.613,
+    "model_segments": 0,
+    "support_segments": 1994,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.79,
+    "model_segments": 0,
+    "support_segments": 223,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.8,
+    "model_segments": 2440,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 16.929,
+    "model_segments": 0,
+    "support_segments": 2035,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.0,
+    "model_segments": 2392,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.109,
+    "model_segments": 0,
+    "support_segments": 222,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.2,
+    "model_segments": 2239,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.244,
+    "model_segments": 0,
+    "support_segments": 2131,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.4,
+    "model_segments": 2368,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.428,
+    "model_segments": 0,
+    "support_segments": 227,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.56,
+    "model_segments": 0,
+    "support_segments": 2078,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.6,
+    "model_segments": 2317,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 2.499
+  },
+  {
+    "Z": 17.747,
+    "model_segments": 0,
+    "support_segments": 233,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.76,
+    "model_segments": 0,
+    "support_segments": 386,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.8,
+    "model_segments": 2292,
+    "support_segments": 1441,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 17.96,
+    "model_segments": 0,
+    "support_segments": 325,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.0,
+    "model_segments": 2315,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.066,
+    "model_segments": 0,
+    "support_segments": 235,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.072,
+    "model_segments": 0,
+    "support_segments": 1635,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.16,
+    "model_segments": 0,
+    "support_segments": 351,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.2,
+    "model_segments": 2507,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.344,
+    "model_segments": 0,
+    "support_segments": 818,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.36,
+    "model_segments": 0,
+    "support_segments": 356,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.385,
+    "model_segments": 0,
+    "support_segments": 237,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.4,
+    "model_segments": 2598,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.56,
+    "model_segments": 0,
+    "support_segments": 357,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.6,
+    "model_segments": 2544,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.616,
+    "model_segments": 0,
+    "support_segments": 688,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.704,
+    "model_segments": 0,
+    "support_segments": 239,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.76,
+    "model_segments": 0,
+    "support_segments": 351,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.8,
+    "model_segments": 2575,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.888,
+    "model_segments": 0,
+    "support_segments": 980,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 18.96,
+    "model_segments": 0,
+    "support_segments": 395,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.0,
+    "model_segments": 2581,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.023,
+    "model_segments": 0,
+    "support_segments": 243,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.16,
+    "model_segments": 0,
+    "support_segments": 1442,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.2,
+    "model_segments": 2549,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0.809
+  },
+  {
+    "Z": 19.342,
+    "model_segments": 0,
+    "support_segments": 245,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.36,
+    "model_segments": 0,
+    "support_segments": 369,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.4,
+    "model_segments": 2422,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.56,
+    "model_segments": 0,
+    "support_segments": 417,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.6,
+    "model_segments": 2861,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.039
+  },
+  {
+    "Z": 19.661,
+    "model_segments": 0,
+    "support_segments": 249,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.76,
+    "model_segments": 0,
+    "support_segments": 419,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.8,
+    "model_segments": 2760,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.648
+  },
+  {
+    "Z": 19.96,
+    "model_segments": 0,
+    "support_segments": 391,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 19.98,
+    "model_segments": 0,
+    "support_segments": 254,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.0,
+    "model_segments": 2718,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.16,
+    "model_segments": 0,
+    "support_segments": 415,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.2,
+    "model_segments": 2591,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.299,
+    "model_segments": 0,
+    "support_segments": 259,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.36,
+    "model_segments": 0,
+    "support_segments": 421,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.4,
+    "model_segments": 2691,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.56,
+    "model_segments": 0,
+    "support_segments": 424,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.6,
+    "model_segments": 2858,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.618,
+    "model_segments": 0,
+    "support_segments": 269,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.76,
+    "model_segments": 0,
+    "support_segments": 421,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.8,
+    "model_segments": 2732,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.937,
+    "model_segments": 0,
+    "support_segments": 285,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 20.96,
+    "model_segments": 0,
+    "support_segments": 432,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.0,
+    "model_segments": 2584,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.16,
+    "model_segments": 0,
+    "support_segments": 433,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.2,
+    "model_segments": 2783,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.008
+  },
+  {
+    "Z": 21.256,
+    "model_segments": 0,
+    "support_segments": 286,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.36,
+    "model_segments": 0,
+    "support_segments": 463,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.4,
+    "model_segments": 2990,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.56,
+    "model_segments": 0,
+    "support_segments": 459,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.575,
+    "model_segments": 0,
+    "support_segments": 291,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.6,
+    "model_segments": 2939,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.76,
+    "model_segments": 0,
+    "support_segments": 425,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.8,
+    "model_segments": 2976,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.016
+  },
+  {
+    "Z": 21.894,
+    "model_segments": 0,
+    "support_segments": 291,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 21.96,
+    "model_segments": 0,
+    "support_segments": 446,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.0,
+    "model_segments": 2799,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.16,
+    "model_segments": 0,
+    "support_segments": 462,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.2,
+    "model_segments": 2540,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.213,
+    "model_segments": 0,
+    "support_segments": 291,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.36,
+    "model_segments": 0,
+    "support_segments": 426,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.4,
+    "model_segments": 2475,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0.215
+  },
+  {
+    "Z": 22.532,
+    "model_segments": 0,
+    "support_segments": 294,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.56,
+    "model_segments": 0,
+    "support_segments": 424,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.6,
+    "model_segments": 2525,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.76,
+    "model_segments": 0,
+    "support_segments": 405,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.8,
+    "model_segments": 2694,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.851,
+    "model_segments": 0,
+    "support_segments": 295,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 22.96,
+    "model_segments": 0,
+    "support_segments": 391,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.0,
+    "model_segments": 2720,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.16,
+    "model_segments": 0,
+    "support_segments": 371,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.17,
+    "model_segments": 0,
+    "support_segments": 294,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.2,
+    "model_segments": 2510,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.36,
+    "model_segments": 0,
+    "support_segments": 388,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.4,
+    "model_segments": 2727,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.489,
+    "model_segments": 0,
+    "support_segments": 297,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.56,
+    "model_segments": 0,
+    "support_segments": 410,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.6,
+    "model_segments": 2782,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.76,
+    "model_segments": 0,
+    "support_segments": 393,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.8,
+    "model_segments": 2640,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.808,
+    "model_segments": 0,
+    "support_segments": 301,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 23.96,
+    "model_segments": 0,
+    "support_segments": 378,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.0,
+    "model_segments": 2605,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.127,
+    "model_segments": 0,
+    "support_segments": 301,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.16,
+    "model_segments": 0,
+    "support_segments": 402,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.2,
+    "model_segments": 2818,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.36,
+    "model_segments": 0,
+    "support_segments": 402,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.4,
+    "model_segments": 2904,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.446,
+    "model_segments": 0,
+    "support_segments": 304,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.56,
+    "model_segments": 0,
+    "support_segments": 420,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.6,
+    "model_segments": 2703,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.608
+  },
+  {
+    "Z": 24.76,
+    "model_segments": 0,
+    "support_segments": 430,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.765,
+    "model_segments": 0,
+    "support_segments": 308,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.8,
+    "model_segments": 2760,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 24.96,
+    "model_segments": 0,
+    "support_segments": 452,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.0,
+    "model_segments": 2697,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.085,
+    "model_segments": 0,
+    "support_segments": 307,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.16,
+    "model_segments": 0,
+    "support_segments": 418,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.2,
+    "model_segments": 2633,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.36,
+    "model_segments": 0,
+    "support_segments": 391,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.4,
+    "model_segments": 2558,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.404,
+    "model_segments": 0,
+    "support_segments": 307,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.56,
+    "model_segments": 0,
+    "support_segments": 361,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.6,
+    "model_segments": 2755,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0.411
+  },
+  {
+    "Z": 25.723,
+    "model_segments": 0,
+    "support_segments": 310,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.76,
+    "model_segments": 0,
+    "support_segments": 415,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 25.8,
+    "model_segments": 2853,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.033
+  },
+  {
+    "Z": 25.96,
+    "model_segments": 0,
+    "support_segments": 399,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.0,
+    "model_segments": 2691,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.042,
+    "model_segments": 0,
+    "support_segments": 320,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.16,
+    "model_segments": 0,
+    "support_segments": 386,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.2,
+    "model_segments": 2540,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.36,
+    "model_segments": 0,
+    "support_segments": 389,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.361,
+    "model_segments": 0,
+    "support_segments": 323,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.4,
+    "model_segments": 2670,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.56,
+    "model_segments": 0,
+    "support_segments": 438,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.6,
+    "model_segments": 2776,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.68,
+    "model_segments": 0,
+    "support_segments": 331,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.76,
+    "model_segments": 0,
+    "support_segments": 387,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.8,
+    "model_segments": 2630,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.96,
+    "model_segments": 0,
+    "support_segments": 425,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 26.999,
+    "model_segments": 0,
+    "support_segments": 339,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.0,
+    "model_segments": 2591,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.16,
+    "model_segments": 0,
+    "support_segments": 403,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.2,
+    "model_segments": 2773,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.318,
+    "model_segments": 0,
+    "support_segments": 345,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.36,
+    "model_segments": 0,
+    "support_segments": 366,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.4,
+    "model_segments": 2796,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.56,
+    "model_segments": 0,
+    "support_segments": 367,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.6,
+    "model_segments": 2675,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 2.21
+  },
+  {
+    "Z": 27.637,
+    "model_segments": 0,
+    "support_segments": 353,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.76,
+    "model_segments": 0,
+    "support_segments": 364,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.8,
+    "model_segments": 2617,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.956,
+    "model_segments": 0,
+    "support_segments": 368,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 27.96,
+    "model_segments": 0,
+    "support_segments": 377,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.0,
+    "model_segments": 2572,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.16,
+    "model_segments": 0,
+    "support_segments": 368,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.2,
+    "model_segments": 2502,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.275,
+    "model_segments": 0,
+    "support_segments": 384,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.36,
+    "model_segments": 0,
+    "support_segments": 361,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.4,
+    "model_segments": 2512,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.56,
+    "model_segments": 0,
+    "support_segments": 328,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.594,
+    "model_segments": 0,
+    "support_segments": 400,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.6,
+    "model_segments": 2623,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.76,
+    "model_segments": 0,
+    "support_segments": 327,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.8,
+    "model_segments": 2791,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.913,
+    "model_segments": 0,
+    "support_segments": 412,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 28.96,
+    "model_segments": 0,
+    "support_segments": 357,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.0,
+    "model_segments": 2826,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.16,
+    "model_segments": 0,
+    "support_segments": 348,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.2,
+    "model_segments": 2617,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 3.015
+  },
+  {
+    "Z": 29.232,
+    "model_segments": 0,
+    "support_segments": 428,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.36,
+    "model_segments": 0,
+    "support_segments": 327,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.4,
+    "model_segments": 2828,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.551,
+    "model_segments": 0,
+    "support_segments": 455,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.56,
+    "model_segments": 0,
+    "support_segments": 294,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.6,
+    "model_segments": 2825,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.76,
+    "model_segments": 0,
+    "support_segments": 280,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.8,
+    "model_segments": 2721,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.407
+  },
+  {
+    "Z": 29.87,
+    "model_segments": 0,
+    "support_segments": 475,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 29.96,
+    "model_segments": 0,
+    "support_segments": 262,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.0,
+    "model_segments": 2778,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.16,
+    "model_segments": 0,
+    "support_segments": 275,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.189,
+    "model_segments": 0,
+    "support_segments": 498,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.2,
+    "model_segments": 2793,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.36,
+    "model_segments": 0,
+    "support_segments": 272,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.4,
+    "model_segments": 2704,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.508,
+    "model_segments": 0,
+    "support_segments": 518,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.56,
+    "model_segments": 0,
+    "support_segments": 263,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.6,
+    "model_segments": 2601,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.76,
+    "model_segments": 0,
+    "support_segments": 261,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.8,
+    "model_segments": 2577,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.827,
+    "model_segments": 0,
+    "support_segments": 527,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 30.96,
+    "model_segments": 0,
+    "support_segments": 242,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.0,
+    "model_segments": 2545,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.146,
+    "model_segments": 0,
+    "support_segments": 528,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.16,
+    "model_segments": 0,
+    "support_segments": 228,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.2,
+    "model_segments": 2535,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.36,
+    "model_segments": 0,
+    "support_segments": 222,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.4,
+    "model_segments": 2437,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.465,
+    "model_segments": 0,
+    "support_segments": 535,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.56,
+    "model_segments": 0,
+    "support_segments": 260,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.6,
+    "model_segments": 2504,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.76,
+    "model_segments": 0,
+    "support_segments": 229,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.784,
+    "model_segments": 0,
+    "support_segments": 548,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.8,
+    "model_segments": 2544,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 31.96,
+    "model_segments": 0,
+    "support_segments": 182,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.0,
+    "model_segments": 2541,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.103,
+    "model_segments": 0,
+    "support_segments": 569,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.16,
+    "model_segments": 0,
+    "support_segments": 183,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.2,
+    "model_segments": 2384,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.36,
+    "model_segments": 0,
+    "support_segments": 191,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.4,
+    "model_segments": 2473,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.422,
+    "model_segments": 0,
+    "support_segments": 603,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.56,
+    "model_segments": 0,
+    "support_segments": 191,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.6,
+    "model_segments": 2567,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.741,
+    "model_segments": 0,
+    "support_segments": 618,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.76,
+    "model_segments": 0,
+    "support_segments": 159,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.8,
+    "model_segments": 2507,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 32.96,
+    "model_segments": 0,
+    "support_segments": 162,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.0,
+    "model_segments": 2518,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.06,
+    "model_segments": 0,
+    "support_segments": 647,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.16,
+    "model_segments": 0,
+    "support_segments": 139,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.2,
+    "model_segments": 2610,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.36,
+    "model_segments": 0,
+    "support_segments": 134,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.379,
+    "model_segments": 0,
+    "support_segments": 658,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.4,
+    "model_segments": 2621,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.56,
+    "model_segments": 0,
+    "support_segments": 118,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.6,
+    "model_segments": 2587,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.698,
+    "model_segments": 0,
+    "support_segments": 669,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.76,
+    "model_segments": 0,
+    "support_segments": 118,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 33.8,
+    "model_segments": 2560,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.0,
+    "model_segments": 2686,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.017,
+    "model_segments": 0,
+    "support_segments": 686,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.2,
+    "model_segments": 2800,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.336,
+    "model_segments": 0,
+    "support_segments": 697,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.4,
+    "model_segments": 2774,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.6,
+    "model_segments": 2840,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.655,
+    "model_segments": 0,
+    "support_segments": 713,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.8,
+    "model_segments": 2930,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 34.975,
+    "model_segments": 0,
+    "support_segments": 760,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 35.0,
+    "model_segments": 2812,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 35.2,
+    "model_segments": 2240,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0.409
+  },
+  {
+    "Z": 35.294,
+    "model_segments": 0,
+    "support_segments": 796,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 35.4,
+    "model_segments": 2163,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 35.6,
+    "model_segments": 2187,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 35.613,
+    "model_segments": 0,
+    "support_segments": 828,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 35.8,
+    "model_segments": 2154,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 35.932,
+    "model_segments": 0,
+    "support_segments": 858,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 36.0,
+    "model_segments": 1631,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 36.2,
+    "model_segments": 1188,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 36.251,
+    "model_segments": 0,
+    "support_segments": 898,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 36.4,
+    "model_segments": 1212,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 36.57,
+    "model_segments": 0,
+    "support_segments": 966,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 36.6,
+    "model_segments": 1106,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 36.8,
+    "model_segments": 1027,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 36.889,
+    "model_segments": 0,
+    "support_segments": 1058,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 37.0,
+    "model_segments": 1084,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 37.2,
+    "model_segments": 1027,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 37.208,
+    "model_segments": 0,
+    "support_segments": 1058,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 37.4,
+    "model_segments": 1028,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 37.527,
+    "model_segments": 0,
+    "support_segments": 1083,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 37.6,
+    "model_segments": 1078,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 37.8,
+    "model_segments": 1129,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 37.846,
+    "model_segments": 0,
+    "support_segments": 1116,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 38.0,
+    "model_segments": 1116,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 38.165,
+    "model_segments": 0,
+    "support_segments": 1109,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 38.2,
+    "model_segments": 1059,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 38.4,
+    "model_segments": 1123,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 38.484,
+    "model_segments": 0,
+    "support_segments": 1151,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 38.6,
+    "model_segments": 1093,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 38.8,
+    "model_segments": 1008,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 38.803,
+    "model_segments": 0,
+    "support_segments": 447,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 39.0,
+    "model_segments": 1006,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 39.122,
+    "model_segments": 0,
+    "support_segments": 496,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 39.2,
+    "model_segments": 1081,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.413
+  },
+  {
+    "Z": 39.4,
+    "model_segments": 1162,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 39.441,
+    "model_segments": 0,
+    "support_segments": 603,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 39.6,
+    "model_segments": 1123,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 39.76,
+    "model_segments": 0,
+    "support_segments": 649,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 39.8,
+    "model_segments": 1168,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 40.0,
+    "model_segments": 969,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 40.2,
+    "model_segments": 851,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 40.4,
+    "model_segments": 716,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 40.6,
+    "model_segments": 793,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 40.8,
+    "model_segments": 810,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.013
+  },
+  {
+    "Z": 41.0,
+    "model_segments": 816,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 41.2,
+    "model_segments": 752,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 41.4,
+    "model_segments": 745,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 41.6,
+    "model_segments": 796,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 41.8,
+    "model_segments": 634,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 42.0,
+    "model_segments": 726,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 42.2,
+    "model_segments": 820,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 42.4,
+    "model_segments": 902,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 42.6,
+    "model_segments": 802,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 42.8,
+    "model_segments": 825,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 43.0,
+    "model_segments": 758,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 43.2,
+    "model_segments": 736,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 43.4,
+    "model_segments": 578,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 43.6,
+    "model_segments": 621,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 43.8,
+    "model_segments": 578,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 44.0,
+    "model_segments": 734,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 44.2,
+    "model_segments": 641,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 44.4,
+    "model_segments": 670,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 44.6,
+    "model_segments": 686,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 44.8,
+    "model_segments": 592,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 45.0,
+    "model_segments": 632,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 45.2,
+    "model_segments": 657,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 45.4,
+    "model_segments": 649,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 45.6,
+    "model_segments": 620,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 45.8,
+    "model_segments": 644,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 46.0,
+    "model_segments": 618,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 46.2,
+    "model_segments": 587,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 46.4,
+    "model_segments": 504,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 46.6,
+    "model_segments": 596,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 46.8,
+    "model_segments": 649,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 47.0,
+    "model_segments": 625,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 47.2,
+    "model_segments": 652,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 47.4,
+    "model_segments": 676,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 47.6,
+    "model_segments": 710,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 47.8,
+    "model_segments": 558,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0.414
+  },
+  {
+    "Z": 48.0,
+    "model_segments": 556,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 48.2,
+    "model_segments": 628,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 48.4,
+    "model_segments": 684,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 48.6,
+    "model_segments": 628,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 48.8,
+    "model_segments": 640,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 49.0,
+    "model_segments": 642,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 49.2,
+    "model_segments": 641,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 49.4,
+    "model_segments": 526,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 49.6,
+    "model_segments": 644,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 49.8,
+    "model_segments": 718,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 50.0,
+    "model_segments": 684,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 50.2,
+    "model_segments": 668,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 50.4,
+    "model_segments": 732,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 50.6,
+    "model_segments": 787,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 50.8,
+    "model_segments": 667,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 51.0,
+    "model_segments": 759,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 51.2,
+    "model_segments": 783,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 51.4,
+    "model_segments": 841,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 51.6,
+    "model_segments": 815,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 51.8,
+    "model_segments": 779,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 52.0,
+    "model_segments": 759,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 52.2,
+    "model_segments": 686,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 52.4,
+    "model_segments": 560,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 52.6,
+    "model_segments": 674,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 52.8,
+    "model_segments": 780,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 53.0,
+    "model_segments": 727,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 53.2,
+    "model_segments": 749,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 53.4,
+    "model_segments": 755,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 53.6,
+    "model_segments": 781,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 53.8,
+    "model_segments": 660,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 54.0,
+    "model_segments": 682,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 54.2,
+    "model_segments": 799,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 54.4,
+    "model_segments": 858,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 54.6,
+    "model_segments": 820,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 54.8,
+    "model_segments": 868,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 55.0,
+    "model_segments": 895,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 55.2,
+    "model_segments": 831,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 55.4,
+    "model_segments": 698,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 55.6,
+    "model_segments": 881,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 55.8,
+    "model_segments": 978,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 56.0,
+    "model_segments": 1025,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 56.2,
+    "model_segments": 1061,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 56.4,
+    "model_segments": 1074,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 56.6,
+    "model_segments": 1122,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 56.8,
+    "model_segments": 1009,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 57.0,
+    "model_segments": 1129,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 57.2,
+    "model_segments": 1162,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 57.4,
+    "model_segments": 1203,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 57.6,
+    "model_segments": 1135,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 57.8,
+    "model_segments": 1151,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 58.0,
+    "model_segments": 1196,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 58.2,
+    "model_segments": 1050,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.22
+  },
+  {
+    "Z": 58.4,
+    "model_segments": 807,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 58.6,
+    "model_segments": 1010,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 58.8,
+    "model_segments": 1093,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 59.0,
+    "model_segments": 1014,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 59.2,
+    "model_segments": 980,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 59.4,
+    "model_segments": 921,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 59.6,
+    "model_segments": 943,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 59.8,
+    "model_segments": 748,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 60.0,
+    "model_segments": 790,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 60.2,
+    "model_segments": 857,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 60.4,
+    "model_segments": 875,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 60.6,
+    "model_segments": 810,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 60.8,
+    "model_segments": 792,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 61.0,
+    "model_segments": 789,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 61.2,
+    "model_segments": 647,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 61.4,
+    "model_segments": 449,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 61.6,
+    "model_segments": 868,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 61.8,
+    "model_segments": 888,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 62.0,
+    "model_segments": 829,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 62.2,
+    "model_segments": 843,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 62.4,
+    "model_segments": 843,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 62.6,
+    "model_segments": 867,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 62.8,
+    "model_segments": 727,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 63.0,
+    "model_segments": 724,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 63.2,
+    "model_segments": 721,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 63.4,
+    "model_segments": 708,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 63.6,
+    "model_segments": 680,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 63.8,
+    "model_segments": 623,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 64.0,
+    "model_segments": 635,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 64.2,
+    "model_segments": 523,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 64.4,
+    "model_segments": 369,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 1.252
+  },
+  {
+    "Z": 64.6,
+    "model_segments": 342,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 64.8,
+    "model_segments": 360,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 65.0,
+    "model_segments": 327,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 65.2,
+    "model_segments": 132,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 65.4,
+    "model_segments": 70,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 65.6,
+    "model_segments": 67,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 65.8,
+    "model_segments": 117,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 66.0,
+    "model_segments": 34,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 66.2,
+    "model_segments": 22,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 66.4,
+    "model_segments": 18,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 66.6,
+    "model_segments": 10,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 66.8,
+    "model_segments": 10,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  },
+  {
+    "Z": 67.0,
+    "model_segments": 8,
+    "support_segments": 0,
+    "unanchored_components": 0,
+    "longest_sampled_bridge_gap_mm": 0
+  }
+]

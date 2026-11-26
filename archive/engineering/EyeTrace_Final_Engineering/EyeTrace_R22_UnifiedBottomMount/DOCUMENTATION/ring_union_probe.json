@@ -1,0 +1,62 @@
+[
+  {
+    "name": "PanYoke_EarBracket_KeyedDrive",
+    "placement": "Placement [Pos=(0,0,0), Yaw-Pitch-Roll=(0,0,0)]",
+    "bbox": [
+      -58.2,
+      44.0,
+      -35.3,
+      35.3,
+      35.199999999999996,
+      103.0
+    ],
+    "volume": 27162.310325591618,
+    "solids": 1,
+    "valid": true
+  },
+  {
+    "name": "Pan_Replaceable_ThrustRing",
+    "placement": "Placement [Pos=(0,0,0), Yaw-Pitch-Roll=(0,0,0)]",
+    "bbox": [
+      -32.0,
+      32.0,
+      -32.0,
+      32.0,
+      36.0,
+      37.0
+    ],
+    "volume": 833.5273628504433,
+    "solids": 1,
+    "valid": true
+  },
+  {
+    "name": "Pan_KeyedHorn_Cover",
+    "placement": "Placement [Pos=(0,0,0), Yaw-Pitch-Roll=(0,0,0)]",
+    "bbox": [
+      -23.8,
+      23.8,
+      -23.8,
+      23.8,
+      30.8,
+      35.0
+    ],
+    "volume": 1271.1108327978764,
+    "solids": 1,
+    "valid": true
+  },
+  {
+    "union_valid": true,
+    "union_solids": 1,
+    "union_volume": 27995.837688442032,
+    "separate_sum": 27995.83768844206,
+    "intersection": 0.0,
+    "bbox": [
+      -58.2,
+      44.0,
+      -35.3,
+      35.3,
+      35.199999999999996,
+      103.0
+    ]
+  }
+]

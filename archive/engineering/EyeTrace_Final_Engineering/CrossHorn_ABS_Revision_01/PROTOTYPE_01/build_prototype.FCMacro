@@ -1,0 +1,76 @@
+import os, json, math
+from pathlib import Path
+import FreeCAD as App, Part, MeshPart
+from FreeCAD import Vector as V
+
+OUT=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_01")
+OUT.mkdir(parents=True,exist_ok=True)
+PARAM={
+ "units":"mm", "status":"PROVISIONAL_TEST_GEOMETRY_ONLY",
+ "confirmed_user_measurements":{"long_span":35.0,"short_span":18.0,"hub_diameter":7.0,"camera_hole_pitch_x":21.0,"camera_hole_pitch_y":14.0},
+ "provisional_drawing_reference":{"source":"https://www.auselectronicsdirect.com.au/assets/brochures/TA0132.pdf, SG90 Horn #3","overall_length_drawing_mm":34.5,"main_thickness_mm":1.5,"hub_diameter_mm":6.9,"hub_height_mm":2.5,"small_holes_diameter_mm":1.0,"confidence":"Published dimensions for similar horn; clone compatibility unverified"},
+ "prototype_assumptions":{"long_arm_width_mm":3.2,"short_arm_width_mm":3.0,"end_radius_long_mm":1.6,"end_radius_short_mm":1.5,"hub_offset_x_mm":0.0,"hub_offset_y_mm":0.0,"center_screw_opening_mm":3.0,"driver_access_mm":4.5,"axial_hub_clearance_mm":0.20,"plate_thickness_mm":1.5,"radial_clearance_variants_total_mm":[0.10,0.20,0.30],"secondary_holes":"omitted: positions unmeasured"},
+ "assumption_note":"Arm widths, radii, centered hub, screw openings and driver access are provisional modeling assumptions, not extracted from user photos. Measure actual horn before production interface use."}
+(OUT/'prototype_parameters.json').write_text(json.dumps(PARAM,indent=2),encoding='utf-8')
+ass=PARAM['prototype_assumptions']
+def rounded_bar(length,width,height,axis='x',cx=0,cy=0):
+    r=width/2
+    core=length-2*r
+    s=Part.makeBox(core,width,height,V(cx-core/2,cy-r,0))
+    for x in (cx-core/2,cx+core/2): s=s.fuse(Part.makeCylinder(r,height,V(x,cy,0)))
+    if axis=='y': s.rotate(V(cx,cy,0),V(0,0,1),90)
+    return s.removeSplitter()
+def cross_shape(zheight,clear_total=0):
+    # Total lateral clearance means the full pocket width grows by that amount.
+    d=clear_total/2
+    lw=ass['long_arm_width_mm']+2*d; sw=ass['short_arm_width_mm']+2*d
+    s=rounded_bar(35+clear_total,lw,zheight,'x').fuse(rounded_bar(18+clear_total,sw,zheight,'y')).removeSplitter()
+    return s
+def horn_shape():
+    t=ass['plate_thickness_mm']; s=cross_shape(t)
+    s=s.fuse(Part.makeCylinder(3.5,2.5,V(0,0,t)))
+    s=s.cut(Part.makeCylinder(1.5,t+2.5+2,V(0,0,-1))).removeSplitter()
+    return s
+doc=App.newDocument('CrossHorn_ABS_Prototype_01')
+horn=doc.addObject('PartDesign::Feature','ParametricCrossHorn'); horn.Label='Reference horn envelope - provisional, not for printing'; horn.Shape=horn_shape()
+for n,val in [('LongSpan',35.0),('ShortSpan',18.0),('HubDiameter',7.0),('BodyThickness',1.5),('HubHeight',2.5),('LongArmWidthProvisional',3.2),('ShortArmWidthProvisional',3.0)]:
+    horn.addProperty('App::PropertyLength',n,'Parameters'); setattr(horn,n,val)
+horn.addProperty('App::PropertyString','FitStatus','Engineering'); horn.FitStatus='PROVISIONAL - use actual white horn for coupon test; no secondary holes modeled'
+doc.recompute()
+import Import
+Import.export([horn],str(OUT/'CrossHorn_Reference_Envelope.step'))
+MeshPart.meshFromShape(Shape=horn.Shape,LinearDeflection=0.05,AngularDeflection=0.10,Relative=False).write(str(OUT/'CrossHorn_Reference_Envelope.stl'))
+
+# Three separate coupons. Top recess includes arm cavity and central hub counterbore; center opening passes through for retaining screw/driver. The printed coupon is only a pocket gauge.
+coupons=[]; clearance_values=[0.10,0.20,0.30]
+pitch=47.0
+for i,c in enumerate(clearance_values):
+    x=(i-1)*pitch
+    plate=Part.makeBox(43,27,4,V(x-21.5,-13.5,0))
+    pocket=cross_shape(ass['plate_thickness_mm']+0.20,c)
+    pocket.translate(V(x,0,4-(ass['plate_thickness_mm']+0.20)))
+    plate=plate.cut(pocket)
+    # Counterbore for raised hub and a through access aperture; hub seat center is separate from the arm recess.
+    plate=plate.cut(Part.makeCylinder(3.5+c/2,2.7,V(x,0,1.3)))
+    plate=plate.cut(Part.makeCylinder(2.25,5,V(x,0,-0.5)))
+    # Numeric identification dots outside the pocket: 1, 2 or 3 shallow bosses.
+    for j in range(i+1): plate=plate.fuse(Part.makeCylinder(0.65,0.35,V(x-17+j*2.0,-9.5,4)))
+    plate=plate.removeSplitter()
+    obj=doc.addObject('PartDesign::Feature','ClearanceCoupon_%d'%(i+1)); obj.Label='Coupon %d - %.2f mm TOTAL lateral clearance'%(i+1,c); obj.Shape=plate
+    obj.addProperty('App::PropertyLength','TotalLateralClearance','FitTest'); obj.TotalLateralClearance=c
+    obj.addProperty('App::PropertyString','FitStatus','FitTest'); obj.FitStatus='PROVISIONAL - ABS print and physical horn test required'
+    coupons.append(plate)
+doc.recompute()
+compound=Part.makeCompound(coupons)
+if getattr(horn,'ViewObject',None): horn.ViewObject.Visibility=False
+doc.saveAs(str(OUT/'CrossHorn_ABS_FitTest_Prototype_01.FCStd'))
+MeshPart.meshFromShape(Shape=compound,LinearDeflection=0.05,AngularDeflection=0.10,Relative=False).write(str(OUT/'CrossHorn_ABS_Clearance_Coupons_01.stl'))
+MeshPart.meshFromShape(Shape=horn.Shape,LinearDeflection=0.05,AngularDeflection=0.10,Relative=False).write(str(OUT/'CrossHorn_Reference_Envelope.stl'))
+
+# Independent watertight mesh checks and CAD rendering from actual FreeCAD solids.
+report={'status':'PROVISIONAL_TEST_GEOMETRY_ONLY','camera_pitch_mm':[21,14], 'variants':[], 'horn_reference':{'valid':horn.Shape.isValid(),'solids':len(horn.Shape.Solids),'bbox':[horn.Shape.BoundBox.XLength,horn.Shape.BoundBox.YLength,horn.Shape.BoundBox.ZLength]}}
+for i,(c,s) in enumerate(zip(clearance_values,coupons),1):
+    m=MeshPart.meshFromShape(Shape=s,LinearDeflection=0.05,AngularDeflection=0.10,Relative=False)
+    report['variants'].append({'id':i,'total_lateral_clearance_mm':c,'solid_valid':s.isValid(),'solid_count':len(s.Solids),'mesh_facets':len(m.Facets),'mesh_watertight':m.isSolid(),'bbox_mm':[s.BoundBox.XLength,s.BoundBox.YLength,s.BoundBox.ZLength]})
+(OUT/'prototype_validation.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+print('PROTOTYPE_01_GENERATION_COMPLETE')

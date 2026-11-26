@@ -1,0 +1,42 @@
+{
+  "camera_pitch_x": 28.0,
+  "camera_pitch_z": 28.0,
+  "camera_width": 38.0,
+  "camera_height": 38.0,
+  "camera_pcb_thickness": 1.6,
+  "camera_hole_diameter": 2.2,
+  "camera_standoff": 3.0,
+  "camera_center_z": 76.0,
+  "horn_angles": [
+    0,
+    72,
+    144,
+    216,
+    288
+  ],
+  "horn_lengths": [
+    12,
+    12,
+    12,
+    12,
+    12
+  ],
+  "horn_widths": [
+    3.6,
+    3.6,
+    3.6,
+    3.6,
+    3.6
+  ],
+  "horn_hub_radius": 4.0,
+  "horn_thickness": 2.0,
+  "horn_pocket_clearance": 0.25,
+  "pan_range": [
+    -60,
+    60
+  ],
+  "tilt_range": [
+    -30,
+    30
+  ]
+}

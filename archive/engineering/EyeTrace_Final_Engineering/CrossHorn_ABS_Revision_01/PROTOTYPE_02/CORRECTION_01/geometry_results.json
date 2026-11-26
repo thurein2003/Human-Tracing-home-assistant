@@ -1,0 +1,30 @@
+{
+  "solid_valid": true,
+  "solid_count": 1,
+  "mesh_facets": 3080,
+  "mesh_solid": true,
+  "bbox_mm": [
+    43.0,
+    27.0,
+    4.35
+  ],
+  "horn_baselines_mm": [
+    35.0,
+    18.0
+  ],
+  "long_pocket_span_mm": 35.2,
+  "long_root_width_mm": 7.7,
+  "long_tip_width_mm": 5.2,
+  "long_end_radius_mm": 2.6,
+  "short_pocket_span_mm": 20.2,
+  "short_root_width_mm": 7.2,
+  "short_tip_width_mm": 6.2,
+  "short_end_radius_mm": 3.1,
+  "hub_nominal_diameter_mm": 7.0,
+  "hub_recess_diameter_mm": 7.4,
+  "hub_recess_depth_mm": 2.7,
+  "screw_access_diameter_mm": 4.5,
+  "short_width_increment_per_side_beyond_previous_failed_coupon_mm": 0.5,
+  "secondary_holes": "omitted",
+  "all_unmeasured_profile_values": "PROVISIONAL"
+}

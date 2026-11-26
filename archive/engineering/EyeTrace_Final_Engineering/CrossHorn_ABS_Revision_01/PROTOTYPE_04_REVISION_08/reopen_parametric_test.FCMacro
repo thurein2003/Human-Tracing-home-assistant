@@ -1,0 +1,16 @@
+﻿import json,FreeCAD as App
+from pathlib import Path
+p=Path(r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_08')
+d=App.openDocument(str(p/'CrossHorn_UltraMinimal_FitTest_04R08.FCStd')); params=d.getObject('Parameters'); final=d.getObject('FinalCoupon'); ft=d.getObject('FrontRecessTool'); bt=d.getObject('BackRecessTool')
+d.recompute(); v0=final.Shape.Volume
+params.FrontDepth=3.1; d.recompute(); vf=final.Shape.Volume; fh=ft.Shape.BoundBox.ZLength
+params.FrontDepth=3.2; d.recompute(); vrestore=final.Shape.Volume
+params.BackDepth=0.5; d.recompute(); vb=final.Shape.Volume; bh=bt.Shape.BoundBox.ZLength
+params.BackDepth=0.3; d.recompute(); vlast=final.Shape.Volume
+web=params.CalculatedCenterWeb.Value
+r={'reopened':True,'baseline_volume_mm3':v0,'front_edit_depth_mm':3.1,'front_tool_actual_height_mm':fh,'front_edit_volume_mm3':vf,'front_volume_delta_mm3':vf-v0,'back_edit_depth_mm':0.5,'back_tool_actual_height_mm':bh,'back_edit_volume_mm3':vb,'back_volume_delta_mm3':vb-vrestore,'restored_front_depth_mm':params.FrontDepth.Value,'restored_back_depth_mm':params.BackDepth.Value,'restored_web_mm':web,'restored_volume_mm3':vlast,'final_valid':final.Shape.isValid(),'final_solids':len(final.Shape.Solids)}
+assert abs(r['front_volume_delta_mm3'])>.1 and abs(r['back_volume_delta_mm3'])>.1 and abs(fh-3.1)<1e-8 and abs(bh-.5)<1e-8
+assert abs(params.FrontDepth.Value-3.2)<1e-8 and abs(params.BackDepth.Value-.3)<1e-8 and abs(web-.8)<1e-8
+assert r['final_valid'] and r['final_solids']==1
+(p/'reopen_parametric_validation.json').write_text(json.dumps(r,indent=2),encoding='utf-8'); print('REOPEN_PARAMETRIC_TEST='+json.dumps(r)); App.closeDocument(d.Name)
+

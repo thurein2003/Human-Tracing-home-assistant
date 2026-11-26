@@ -1,0 +1,120 @@
+{
+  "Base_EarMount_ThrustSupport": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "Pan_Replaceable_ThrustRing": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "PanYoke_EarBracket_KeyedDrive": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "Tilt_Removable_IdlerPillar": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "Pan_KeyedHorn_Cover": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "TiltCradle_KeyedHorn_CameraFrame": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "Tilt_KeyedHorn_CaptiveCover": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "Tilt_Journal_FlangedSleeve": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "PCB_Spacer_Lower_Left": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "PCB_Spacer_Lower_Right": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "PCB_Spacer_Upper_Left": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "PCB_Spacer_Upper_Right": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "CameraPlate_Cut007": {
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bad_normals": false,
+    "brep_valid": true
+  },
+  "camera_gauge": {
+    "closed": true,
+    "components": 1,
+    "self_intersections": false,
+    "outside_size_mm": [
+      30,
+      25
+    ],
+    "hole_center_spacing_mm": [
+      21,
+      16
+    ],
+    "hole_diameter_mm": 2.4
+  }
+}

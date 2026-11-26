@@ -1,0 +1,118 @@
+{
+  "source": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15_ASSEMBLY\\CAD\\EyeTrace_R15_Full_Assembly.FCStd",
+  "pairs": [
+    {
+      "a": "PanServo_SG90_Reference",
+      "b": "Base_EarMount_ThrustSupport",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 0.0,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "PanServo_SG90_Reference",
+      "b": "PanYoke_EarBracket_KeyedDrive",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 1.5,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "TiltServo_SG90_Reference",
+      "b": "PanYoke_EarBracket_KeyedDrive",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 0.0,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "TiltServo_SG90_Reference",
+      "b": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 1.4999999999999982,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "Pan_OriginalStar_PROVISIONAL",
+      "b": "PanYoke_EarBracket_KeyedDrive",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 33.500148504507315,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "Tilt_OriginalStar_PROVISIONAL",
+      "b": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 52.5,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "Pan_OriginalStar_PROVISIONAL",
+      "b": "Pan_KeyedHorn_Cover",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 29.3,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "Tilt_OriginalStar_PROVISIONAL",
+      "b": "Tilt_KeyedHorn_CaptiveCover",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 59.51890455981192,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "Tilt_Removable_IdlerPillar",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 0.5,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "Tilt_Journal_FlangedSleeve",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 0.0,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "CameraPlate_Cut007",
+      "b": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 0.0,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "Camera_Lens_PROVISIONAL",
+      "b": "CameraPlate_Cut007",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 52.94109934634905,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "Pan_KeyedHorn_Cover",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 0.0,
+      "status": "NO_SOLID_INTERSECTION"
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "Tilt_KeyedHorn_CaptiveCover",
+      "intersection_volume_mm3": 0.0,
+      "minimum_distance_mm": 0.0,
+      "status": "NO_SOLID_INTERSECTION"
+    }
+  ],
+  "camera_mount_pattern_mm": [
+    21,
+    14
+  ],
+  "axis_datum_mm": {
+    "pan_axis_z_center": [
+      0,
+      0
+    ],
+    "tilt_axis_x_line_y_z": [
+      0,
+      78
+    ]
+  },
+  "physical_interfaces": "unverified; horn and servo models are labeled provisional"
+}

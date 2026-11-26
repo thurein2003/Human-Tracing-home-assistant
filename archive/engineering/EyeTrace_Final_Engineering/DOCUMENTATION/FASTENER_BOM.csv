@@ -1,0 +1,13 @@
+﻿Hardware,Quantity,Use,Verification
+M3 x 10 structural screw,14,Pan cover 4; tilt cover 4; camera plate/frame 4; idler pillar foot 2,User hardware; confirm head/tool dimensions
+M3 plain nut,14,Matching structural joints,Nominal AF5.5 height2.4; verify
+M3 x 12 idler screw,1,Tilt idler sleeve stack,Additional required
+M3 locknut,1,Tilt idler,Additional; nominal AF5.5 height4
+M3 washer,1,Tilt idler,Additional; OD7 ID3.3 thickness0.5
+M1.6 x 8 screw,4,Two screws per original servo ear mount,Conditional on actual holes; additional
+M1.6 nut,4,Servo captive seats,Nominal AF3.2 height1.3; additional
+M1.6 washer,4,Servo ears,Nominal OD4 ID1.8 thickness0.5; additional
+M2 x 12 screw,4,Camera PCB and spacers,Conditional on actual PCB holes and rear components; additional
+M2 nut,4,Camera PCB,Nominal AF4 height1.6; additional
+Original factory horn retaining screw,2,One per original servo/horn,Actual originals only; size/head/length unverified; do not substitute M3
+Base-to-host fastener,TBD,Four nominal diameter3.4 base holes,Host stack and access unknown; not included in bench assembly

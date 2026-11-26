@@ -1,0 +1,41 @@
+{
+  "gcode_bytes": 988354,
+  "layers": 36,
+  "feature_roles": {
+    "Custom": 2,
+    "Support": 11,
+    "Brim": 1,
+    "Outer wall": 44,
+    "Inner wall": 48,
+    "Bottom surface": 1,
+    "Gap infill": 11,
+    "Overhang wall": 6,
+    "Internal solid infill": 12,
+    "Support transition": 9,
+    "Top surface": 3,
+    "Support interface": 2,
+    "Bridge": 1,
+    "Floating vertical shell": 3,
+    "Internal Bridge": 2
+  },
+  "support_type_sections": 11,
+  "support_bed_xy_bounds_mm": [
+    108.293,
+    151.877,
+    115.602,
+    144.281
+  ],
+  "brim_sections": 1,
+  "filament_g": 1.52,
+  "estimated_time": "14m 44s",
+  "temps": "START_PRINT EXTRUDER_TEMP=255 BED_TEMP=100",
+  "supports_global": "1",
+  "supports_build_plate_only": "1",
+  "support_style": "tree_slim",
+  "3mf_model_objects": 1,
+  "3mf_triangles": 6800,
+  "3mf_z_bounds_bed_mm": [
+    0.0,
+    6.0
+  ]
+}

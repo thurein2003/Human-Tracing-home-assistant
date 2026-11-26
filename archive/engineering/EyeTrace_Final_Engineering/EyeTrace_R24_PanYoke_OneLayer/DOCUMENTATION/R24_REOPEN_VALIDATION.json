@@ -1,0 +1,19 @@
+{
+  "fcstd_reopened": true,
+  "yoke_valid": true,
+  "yoke_solids": 1,
+  "yoke_volume_mm3": 27840.3252958017,
+  "base_valid": true,
+  "tilt_valid": true,
+  "stl_reopened": true,
+  "stl_facets": 126522,
+  "stl_is_solid": true,
+  "stl_bbox_mm": [
+    13.0,
+    115.19999694824219,
+    13.001367568969727,
+    83.5986328125,
+    0.0,
+    67.80000305175781
+  ]
+}

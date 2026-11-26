@@ -1,0 +1,161 @@
+{
+  "source_arm_cutter": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 461.6567346548272,
+    "bbox_mm": [
+      -19.6,
+      -10.1,
+      2.0999999999999996,
+      19.6,
+      10.099999999999998,
+      3.8
+    ]
+  },
+  "source_coupon": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1052.1252003539548,
+    "bbox_mm": [
+      -21.0,
+      -11.5,
+      0.0,
+      21.0,
+      11.5,
+      3.8
+    ]
+  },
+  "source_parameters": {
+    "BaseThickness": 3.8,
+    "ArmRecessDepth": 1.7,
+    "ThroughDiameter": 8.0,
+    "UpperShortPocketWidth": 3.4000000000000004,
+    "BottomShortPocketWidth": 4.4,
+    "XNominalReach": 19.5
+  },
+  "measured_profile": {
+    "x_span_mm": 39.2,
+    "x_minus_reach_mm": 19.6,
+    "x_plus_reach_mm": 19.6,
+    "y_span_mm": 20.199999999999996,
+    "y_minus_reach_mm": 10.1,
+    "y_plus_reach_mm": 10.099999999999998,
+    "pocket_depth_mm": 1.7000000000000002
+  },
+  "pan_object": {
+    "shape": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 42345.82609243497,
+      "bbox_mm": [
+        -58.2,
+        -35.3,
+        33.0,
+        44.0,
+        35.3,
+        103.0
+      ]
+    },
+    "placement_base_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "placement_rot_deg": 0.0
+  },
+  "tilt_object": {
+    "shape": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 24528.289698365388,
+      "bbox_mm": [
+        -41.00000000000001,
+        -24.4,
+        54.0,
+        36.0,
+        21.0,
+        99.0
+      ]
+    },
+    "placement_base_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "placement_rot_deg": 0.0
+  },
+  "pan_cavity_probe": {
+    "direct_residual_intersection_mm3": 0.0,
+    "with_object_placement_residual_mm3": 0.0,
+    "tool_volume_mm3": 461.65673465482695,
+    "tool_valid": true
+  },
+  "tilt_cavity_probe": {
+    "direct_residual_intersection_mm3": 0.0,
+    "with_object_placement_residual_mm3": 0.0,
+    "tool_volume_mm3": 461.65673465482695,
+    "tool_valid": true
+  },
+  "through_bore_probes": [
+    {
+      "interface": "pan",
+      "bore_probe_volume_mm3": 452.38934211693015,
+      "solid_intrusion_mm3": 0.0
+    },
+    {
+      "interface": "tilt",
+      "bore_probe_volume_mm3": 301.5928947446202,
+      "solid_intrusion_mm3": 0.0
+    }
+  ],
+  "camera_hole_centers_xz_mm": [
+    [
+      -10.5,
+      69.0
+    ],
+    [
+      -10.5,
+      83.0
+    ],
+    [
+      10.5,
+      69.0
+    ],
+    [
+      10.5,
+      83.0
+    ]
+  ],
+  "camera_pitch_properties_mm": [
+    21.0,
+    14.0
+  ],
+  "bed_component_shapes": {
+    "PanYoke_EarBracket_KeyedDrive": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 42345.826092434945,
+      "bbox_mm": [
+        10.0,
+        10.0,
+        0.0,
+        112.2,
+        80.6,
+        70.0
+      ]
+    },
+    "TiltCradle_KeyedHorn_CameraFrame": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 24528.289698365388,
+      "bbox_mm": [
+        162.0,
+        88.6,
+        -7.105427357601002e-15,
+        207.0,
+        134.0,
+        77.0
+      ]
+    }
+  }
+}

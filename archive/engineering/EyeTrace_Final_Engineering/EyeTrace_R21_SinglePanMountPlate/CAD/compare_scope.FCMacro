@@ -1,0 +1,22 @@
+﻿import FreeCAD as App,json,math
+s=App.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_R20_UltraLowProfile\CAD\EyeTrace_R20_UltraLowProfile.FCStd')
+r=App.openDocument(r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\CAD\EyeTrace_R21_SinglePanMountPlate.FCStd')
+items=[]; changed=[]
+for a in s.Objects:
+ b=r.getObject(a.Name)
+ if b is None:continue
+ try:
+  x=a.Shape;y=b.Shape
+  if x.isNull() or y.isNull():continue
+  dv=abs(x.Volume-y.Volume)
+  db=max(abs(getattr(x.BoundBox,k)-getattr(y.BoundBox,k)) for k in ['XMin','XMax','YMin','YMax','ZMin','ZMax'])
+  sym=x.cut(y).Volume+y.cut(x).Volume
+  q={'name':a.Name,'volume_abs_delta_mm3':dv,'bbox_max_delta_mm':db,'symmetric_difference_mm3':sym}
+  if a.Name=='Pan_KeyedHorn_Cover':q['expected_modified']=True
+  elif dv>1e-7 or db>1e-7 or sym>1e-6:changed.append(q)
+  items.append(q)
+ except Exception: pass
+report={'common_shape_objects_checked':len(items),'unexpectedly_changed_objects':changed,'retainer_comparison':[q for q in items if q['name']=='Pan_KeyedHorn_Cover'],'all_other_shapes_same':len(changed)==0}
+path=r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\DOCUMENTATION\ASSEMBLY_CHANGE_SCOPE_CHECK.json'
+open(path,'w').write(json.dumps(report,indent=2));print(json.dumps(report,indent=2))
+App.closeDocument(r.Name);App.closeDocument(s.Name)

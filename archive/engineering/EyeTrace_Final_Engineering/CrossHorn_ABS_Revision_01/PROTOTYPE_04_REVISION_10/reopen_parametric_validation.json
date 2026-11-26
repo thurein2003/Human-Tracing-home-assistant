@@ -1,0 +1,53 @@
+{
+  "reopened": true,
+  "valid": true,
+  "solid_count": 1,
+  "x_nominal_span_mm": 37.0,
+  "x_nominal_reaches_mm": [
+    18.5,
+    18.5
+  ],
+  "x_pocket_reaches_mm": [
+    18.6,
+    18.6
+  ],
+  "x_pocket_envelope_mm": 37.2,
+  "y_short_pocket_widths": {
+    "upper_plus_y": {
+      "section_y_mm": 6.0,
+      "wall_x_positions_mm": [
+        -1.7,
+        1.7
+      ],
+      "measured_width_mm": 3.4,
+      "expected_mm": 3.4
+    },
+    "bottom_minus_y": {
+      "section_y_mm": -6.0,
+      "wall_x_positions_mm": [
+        -2.2,
+        2.2
+      ],
+      "measured_width_mm": 4.4,
+      "expected_mm": 4.4
+    }
+  },
+  "front_cavity_wall_z_mm": [
+    -1.100000000000001,
+    2.099999999999999
+  ],
+  "front_cavity_actual_depth_mm": 3.2,
+  "front_cavity_diameter_mm": 7.4,
+  "rear_recess_diameter_mm": 5.5,
+  "rear_recess_depth_mm": 0.30000000000000004,
+  "center_web_mm": 0.7999999999999996,
+  "front_edit_cutter_height_mm": 3.1,
+  "front_edit_volume_delta_mm3": 2.71040906188432,
+  "back_edit_cutter_height_mm": 0.5,
+  "back_edit_volume_delta_mm3": -1.5707963267952891,
+  "restored_parameters_mm": {
+    "front_depth": 3.2,
+    "back_depth": 0.3
+  },
+  "restored_volume_mm3": 1139.1629725440787
+}

@@ -1,0 +1,15 @@
+﻿import FreeCAD as App, FreeCADGui as Gui
+p=r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\CAD\EyeTrace_R21_SinglePanMountPlate.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\SCREENSHOTS\R21_ThrustRing_Yoke_Stack.png'
+d=App.openDocument(p)
+for o in d.Objects:
+ if hasattr(o,'ViewObject'):o.ViewObject.Visibility=False
+for n in ['PanYoke_EarBracket_KeyedDrive','Pan_Replaceable_ThrustRing','Pan_KeyedHorn_Cover']:
+ o=d.getObject(n)
+ if o:
+  o.ViewObject.Visibility=True
+  o.ViewObject.DisplayMode='Flat Lines'
+  o.ViewObject.ShapeColor={'PanYoke_EarBracket_KeyedDrive':(0.72,0.79,0.86),'Pan_Replaceable_ThrustRing':(0.92,0.42,0.12),'Pan_KeyedHorn_Cover':(0.35,0.55,0.32)}[n]
+Gui.activeDocument().activeView().viewAxonometric()
+Gui.activeDocument().activeView().fitAll()
+Gui.activeDocument().activeView().saveImage(out,1400,1000,'Current')

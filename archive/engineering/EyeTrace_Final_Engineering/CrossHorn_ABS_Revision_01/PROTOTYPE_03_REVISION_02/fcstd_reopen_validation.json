@@ -1,0 +1,22 @@
+{
+  "opened": true,
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "shape_name": "Horn3CrossFitCoupon",
+  "valid": true,
+  "solid_count": 1,
+  "volume_mm3": 1750.891169350904,
+  "bbox_mm": [
+    40.6,
+    25.6,
+    4.2
+  ]
+}

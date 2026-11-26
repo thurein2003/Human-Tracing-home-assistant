@@ -1,0 +1,28 @@
+﻿import FreeCAD as A,Part,MeshPart,json,os
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering';out=root+r'\R15_CENTERED_MOUNT_FINAL';fn=out+r'\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd';d=A.openDocument(fn)
+def bb(s):b=s.BoundBox;return [b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]
+printables=[o for o in d.Objects if hasattr(o,'Shape') and not o.Shape.isNull() and hasattr(o,'Printable') and bool(o.Printable)]
+rows=[];pairs=[]
+for o in printables:
+ s=o.Shape
+ rows.append({'name':o.Name,'label':o.Label,'valid':s.isValid(),'solids':len(s.Solids),'volume_mm3':s.Volume,'bbox_mm':bb(s)})
+for i,a in enumerate(printables):
+ for b in printables[i+1:]:
+  sa=a.Shape;sb=b.Shape;vol=sa.common(sb).Volume;dist=sa.distToShape(sb)[0]
+  if vol>1e-5 or dist<1e-6:pairs.append({'a':a.Name,'b':b.Name,'intersection_mm3':vol,'distance_mm':dist})
+horns=[]
+for hn,cn in [('Pan_OriginalStar_PROVISIONAL','PanYoke_EarBracket_KeyedDrive'),('Tilt_OriginalStar_PROVISIONAL','TiltCradle_KeyedHorn_CameraFrame')]:
+ a=d.getObject(hn).Shape;b=d.getObject(cn).Shape;horns.append({'horn':hn,'carrier':cn,'clearance_mm':a.distToShape(b)[0],'intersection_mm3':a.common(b).Volume,'horn_bbox':bb(a)})
+# export actual transformed shapes, with identity in export doc to prevent applying object Placement twice
+ex=A.newDocument('R15DirectShapeExport');exobjs=[]
+for o in printables:
+ e=ex.addObject('PartDesign::Feature',o.Name);e.Label=o.Label;e.Shape=o.Shape.copy();exobjs.append(e)
+ex.recompute();Part.export(exobjs,out+r'\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.step')
+for o in printables:
+ m=MeshPart.meshFromShape(Shape=o.Shape,LinearDeflection=0.08,AngularDeflection=0.15,Relative=False);m.write(os.path.join(out,'STL',o.Name+'.stl'))
+base=d.getObject('Base_EarMount_ThrustSupport').Shape; b=base.BoundBox
+mount={'base_center_xy_mm':[(b.XMin+b.XMax)/2,(b.YMin+b.YMax)/2],'mount_rectangle_xy_mm':[-13,-9,24,9],'mount_rectangle_center_xy_mm':[5.5,0],'tab_hole_x_mm':[-8.15,19.05],'tab_midpoint_x_mm':5.45,'pan_axis_and_output_axis_xy_mm':[0,0],'offset_to_center_mm':5.5,'center_shift_would_misalign_tab_holes_mm':5.5,'base_bbox_mm':bb(base),'base_volume_mm3':base.Volume}
+report={'freecad_version':A.Version()[:4],'source_revision':fn,'center_mount':'NOT MOVED: geometric centering conflicts with servo tab and pan-axis alignment','mount':mount,'printable_count':len(printables),'parts':rows,'unintended_intersections':pairs,'horn_pairs':horns,'R15_master_comparison':'See prior independent BREP comparison: both integrated R15 cutters match exactly; no pocket geometry altered in this revision. Nominal pocket envelope 39.2x20.2 mm, depth 1.7 mm, center through-bore 8 mm.','camera_pattern_mm':[21,14]}
+with open(out+r'\CHECKS\R15_geometry_alignment_audit.json','w') as f:json.dump(report,f,indent=2)
+A.closeDocument(ex.Name);A.closeDocument(d.Name)

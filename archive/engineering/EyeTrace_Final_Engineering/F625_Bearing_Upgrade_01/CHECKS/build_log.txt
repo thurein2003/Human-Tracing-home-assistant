@@ -1,0 +1,28 @@
+SUCCESS
+{
+  "step": "exported",
+  "solver": 0,
+  "tilt_collisions": 0,
+  "pan_collisions": 0,
+  "combined_collisions": 0,
+  "sims": [
+    {
+      "name": "Pan only - native motion",
+      "frames": 52,
+      "pan_link_angle_deg": 59.8816,
+      "tilt_relative_angle_deg": 0.0
+    },
+    {
+      "name": "Tilt only - native motion",
+      "frames": 52,
+      "pan_link_angle_deg": 0.0,
+      "tilt_relative_angle_deg": 24.9507
+    },
+    {
+      "name": "Combined pan and tilt - native motion",
+      "frames": 52,
+      "pan_link_angle_deg": 44.9112,
+      "tilt_relative_angle_deg": 19.9605
+    }
+  ]
+}

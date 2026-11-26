@@ -1,0 +1,63 @@
+{
+  "component": "PanYoke_EarBracket_KeyedDrive",
+  "valid": true,
+  "solids": 1,
+  "source_volume_mm3": 38324.18031262933,
+  "new_volume_mm3": 30038.90627376939,
+  "removed_mm3": 8285.274038859941,
+  "removed_percent": 21.618920408141427,
+  "source_top_z_mm": 41.0,
+  "source_low_face_z_mm": 35.2,
+  "source_plain_plate_thickness_mm": 5.8,
+  "new_plain_web_measured_mm": 2.5,
+  "R15_pocket_depth_preserved_mm": 1.7,
+  "new_material_above_R15_floor_measured_mm": 2.5,
+  "probes_z_intervals_mm": {
+    "plain_plate_xy10_10": [
+      [
+        35.2,
+        37.7
+      ]
+    ],
+    "R15_long_arm_floor_xy10_0": [
+      [
+        36.9,
+        39.4
+      ]
+    ],
+    "mount_boss_wall_xy23p5_0": [
+      [
+        37.0,
+        41.0
+      ]
+    ],
+    "center_boss_wall_xy6_0": [
+      [
+        36.9,
+        41.0
+      ]
+    ],
+    "outer_land_xy34_0": [
+      [
+        35.2,
+        41.0
+      ]
+    ]
+  },
+  "preserved_features": [
+    "exact R15 cross pocket",
+    "\u00d88 shaft opening",
+    "four existing hole centers at (\u00b118,0),(0,\u00b118)",
+    "full-height local screw pads",
+    "full-height circular land",
+    "three narrow frame tie rails"
+  ],
+  "bbox_mm": [
+    -58.2,
+    44.0,
+    -35.29537210066535,
+    35.29537210066535,
+    35.2,
+    103.0
+  ]
+}

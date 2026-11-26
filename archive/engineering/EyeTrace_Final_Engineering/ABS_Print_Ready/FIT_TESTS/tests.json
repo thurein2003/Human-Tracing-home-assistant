@@ -1,0 +1,90 @@
+{
+  "physical_tests": "NOT PERFORMED",
+  "limits": "Proposed engineering fit-screen criteria, not manufacturer tolerances or release approval",
+  "parts": [
+    {
+      "n": 1,
+      "name": "SG90 body and mounting ears",
+      "hardware": "ServoA thenB; two M1.6x8 screws, two M1.6 nuts, two small washers. Never M3 in original ears.",
+      "method": "Unplug power, detach horn, insert case through window until both original ears seat naturally. Fit both small screws without pulling ears into alignment. Finger seat only; repeat on BOTH servos.",
+      "criteria": [
+        "Printed window23.30x12.80mm and hole pitch27.20mm, each within +/-0.15mm (proposed print-screen limits, NOT SG90 tolerances).",
+        "Case enters without spreading/scraping/forcing; both flat ear seating faces rest on ledge with no gap >0.15mm. Do not count molded relief as a seating face.",
+        "Both M1.6 screws enter simultaneously by hand; washers seat and nuts fully engage, with no ear bending/whitening/cracking.",
+        "This thin gauge does NOT test whole-case height, boss height, bracket captive M1.6 nut pockets, full installation or wire threading. Those stay NOT TESTED."
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Original star-horn positive pocket",
+      "hardware": "Original hornA thenB, DETACHED from servo; paper pointer/ruler/protractor.",
+      "method": "Keep cover OFF initially so friction cannot hide a failed profile. Seat detached horn in open pocket. Gently rock between first arm-wall contacts, without flexing arms. Use a paper pointer at20mm radius to measure total free play.",
+      "criteria": [
+        "Horn seats flat by finger pressure, with no wedged hub, bent arm or raised-hub rocking. Nominal pocket2.20mm deep and2mm horn web are provisional.",
+        "Positive arm-wall stops in BOTH directions BEFORE clamping. Total free play <=4deg, equivalent to <=1.40mm total arc at20mm radius. Proposed screen criterion, not strength/backlash certification.",
+        "Check both real horns separately. A five-arm CAD profile is not evidence your original horn matches it.",
+        "Never force a gearbox or test with a printed spline; no exact spline teeth have been invented."
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Captive cover and retained horn",
+      "hardware": "Coupon02, hornA/B, four M3x10 screws/four standard M3 nuts. Original factory horn screws and correct driver for access comparison only.",
+      "method": "Finger-fit nuts in upward-open hex pockets. Put horn in02 and cover FLAT face against open cup, nut bosses OUTWARD. Fit four M3x10 from the opposite face. Seat rims gently and evenly; repeat for other horn.",
+      "criteria": [
+        "All four nuts fully seat and resist rotation with finger fitting; screws start by hand for >=3 full turns. Do not heat-press nuts or enlarge pockets to call an initial PASS.",
+        "Rim gap <=0.10mm around perimeter, horn axial lift <=0.20mm, no bowing/crushing; criterion02 still applies independently.",
+        "Each screw projects >=1.0mm beyond seated nut; nominal2.1mm in this fixture. No head/nut interference.",
+        "Factory retaining screw HEAD and intended driver clear central8mm fixture access. NEVER substitute M3. Detached clearance is NOT proof of real factory screw thread/length or fully assembled access; record original screw availability separately."
+      ]
+    },
+    {
+      "n": 4,
+      "name": "Camera21x16 center gauge",
+      "hardware": "UNPOWERED camera; four smooth nylon pins, or actual M2x12 only after real PCB holes freely accept the actual shank. Four M2 nuts are for later mount checks, not pulling PCB to gauge.",
+      "method": "Measure printed centers first. Hold gauge parallel to camera with VISIBLE clearance from all components/lens. Align four loose nylon pins without clamping. Its central8mm access hole is NOT lens clearance: never lay it over the lens or onto components.",
+      "criteria": [
+        "Printed horizontal21.00 +/-0.15mm and vertical16.00 +/-0.15mm in a rectangle. Use equal smooth gauge pins: outside span minus mean pin diameter gives centers. User nominal21x16 is authoritative, NOT PCB outline.",
+        "All four axes align simultaneously without lateral forcing, bending or optical-module contact. Gauge holes2.4mm do not establish actual PCB hole diameter.",
+        "Actual camera screw shank must pass original hole freely. If M2 does not, mark M2 compatibility FAIL/UNVERIFIED even when pattern aligns. Never drill camera.",
+        "PCB outline, lens/IR field, rear electronics, standoffs and connector access are NOT passed by this gauge."
+      ]
+    },
+    {
+      "n": 5,
+      "name": "Male pan journal ring",
+      "hardware": "Female ring06, calipers; no servo.",
+      "method": "Measure OD at0/45/90deg above first-layer ridge. Mate with LARGE opening of06; slide and turn two full revolutions in EACH direction using light fingers.",
+      "criteria": [
+        "Male OD64.00 +/-0.15mm; OD ovality max-minus-min <=0.20mm.",
+        "Minimum female ID minus maximum male OD >=0.30mm; maximum ID minus minimum OD <=0.90mm. Nominal diametral gap0.60mm, radial0.30mm.",
+        "No press fit, springing, jamming or sticking in two360deg turns each way. Do not selectively sand before recording initial result.",
+        "2mm-thin rings test diameter/ovality/sliding, NOT full-height alignment, load, thrust wear or PETG creep."
+      ]
+    },
+    {
+      "n": 6,
+      "name": "Female pan ring plus tilt-bore tab",
+      "hardware": "Male05, actual sleeve07; M3x10/nut may be reused after horn test.",
+      "method": "Measure large ID at0/45/90deg and pair with05. The NEW tab contains5.2mm bore through2.5mm thickness, matching nominal stationary tilt wall. Insert07 from UNDER the tab, flange below; neck projects above. See mating-detail CAD image.",
+      "criteria": [
+        "Pan ID64.60 +/-0.15mm, ID ovality <=0.20mm; meet paired criteria05. Original entire ring material and ID are preserved.",
+        "Actual small-bore ID minus sleeve neck OD0.10..0.35mm diametral (target0.20mm). Smooth full-length insertion/turning, no forcing.",
+        "Neck projects >=0.20mm beyond tab face; nominal0.50mm before layer rounding.",
+        "Only this new coupon copy has the tab. It completes the missing tilt-bore test WITHOUT an eighth piece or assembly change."
+      ]
+    },
+    {
+      "n": 7,
+      "name": "Actual reusable tilt sleeve",
+      "hardware": "Tab06; one M3x10 and standard M3 nut, optional washer. Production idler STILL needs separate M3x12/washer/locknut.",
+      "method": "Check actual M3 shank through sleeve. Insert neck through06 from below, flange against underside. With light finger seating, nut/bolt must clamp sleeve end/flange ONLY, never tab. Turn sleeve gently, release nut.",
+      "criteria": [
+        "Intended neckOD5.00mm, inner bore3.20mm; actual M3 shank passes completely by hand without splitting/crushing.",
+        "Meet06 diametral gap0.10..0.35mm and end projection >=0.20mm; two full turns EACH direction without binding.",
+        "Tab remains free when nut bears on sleeve; stop if tightening removes clearance. No tightening-torque or load test.",
+        "Reuse sleeve only if undamaged. This does NOT pass final idler nut locking, complete stack or bracket alignment."
+      ]
+    }
+  ]
+}

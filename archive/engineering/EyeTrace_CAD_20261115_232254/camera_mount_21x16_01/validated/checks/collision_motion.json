@@ -1,0 +1,109 @@
+{
+  "poses": 169,
+  "component_pair_tests": 198744,
+  "modeled_components": 49,
+  "unintended_nominal_hardware_penetrations": [],
+  "unverified_rear_envelope_conflicts": [
+    {
+      "pair": [
+        "PCB_Spacer_Lower_Left",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 17.901856966647617,
+      "pose": [
+        60,
+        30
+      ]
+    },
+    {
+      "pair": [
+        "Camera_M2x12_Lower_Left",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 13.025255004902892,
+      "pose": [
+        60,
+        30
+      ]
+    },
+    {
+      "pair": [
+        "PCB_Spacer_Lower_Right",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 17.901856966647404,
+      "pose": [
+        60,
+        30
+      ]
+    },
+    {
+      "pair": [
+        "Camera_M2x12_Lower_Right",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 13.025255004902835,
+      "pose": [
+        60,
+        30
+      ]
+    },
+    {
+      "pair": [
+        "PCB_Spacer_Upper_Left",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 17.901856966647408,
+      "pose": [
+        60,
+        30
+      ]
+    },
+    {
+      "pair": [
+        "Camera_M2x12_Upper_Left",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 13.025255004903238,
+      "pose": [
+        60,
+        30
+      ]
+    },
+    {
+      "pair": [
+        "PCB_Spacer_Upper_Right",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 17.901856966647472,
+      "pose": [
+        60,
+        30
+      ]
+    },
+    {
+      "pair": [
+        "Camera_M2x12_Upper_Right",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 13.025255004904848,
+      "pose": [
+        60,
+        30
+      ]
+    },
+    {
+      "pair": [
+        "Camera_RearComponents_KEEP_OUT",
+        "CameraPlate_Cut007"
+      ],
+      "volume_mm3": 423.4213713723874,
+      "pose": [
+        60,
+        30
+      ]
+    }
+  ],
+  "rear_envelope_classification": "Existing unmeasured placeholder retained as UNCERTAINTY, not asserted solid camera material. These conflicts REQUIRE physical rear-clearance verification, not an automatic PASS.",
+  "physical_fit": "UNVERIFIED"
+}

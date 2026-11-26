@@ -1,0 +1,85 @@
+﻿import json, math
+from pathlib import Path
+import FreeCAD as App, Part, MeshPart
+from FreeCAD import Vector as V
+OUT=Path(r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_06')
+# Horn #3 PDF dimensions are provisional reference data. Confirmed user dimensions override its total spans/hub.
+P={
+ 'units':'mm',
+ 'confirmed_user_dimensions':{'long_span':35.0,'short_span_baseline':18.0,'hub_diameter':7.0},
+ 'published_horn3_reference':{'source':'https://www.auselectronicsdirect.com.au/assets/brochures/TA0132.pdf, page 5','drawing_span':34.5,'hub_to_long_end_a':16.0,'hub_to_long_end_b':18.5,'short_span_drawing':16.3,'raised_hub_diameter_drawing':6.9,'raised_hub_height_drawing':2.5,'main_plate_thickness_drawing':1.5,'long_arm_side_angle_a_deg':6.3,'long_arm_side_angle_b_deg':8.0,'confidence':'Published dimensions/profile for a similar Horn #3; actual clone compatibility unverified'},
+ 'pocket_parameters_provisional_mm':{'total_lateral_clearance':0.20,'long_root_width_reference_estimate':7.0,'short_arm_width_reference_estimate':3.2,'short_extension_each_end_from_prototype_01':1.0,'hub_recess_diameter':7.4,'hub_recess_depth':2.7,'back_hub_recess_diameter':5.5,'back_hub_recess_depth':0.8,'minimum_center_web':0.8,'local_center_thickness_increase':0.5,'local_center_pad_diameter':10.2,'screw_access_diameter':4.5,'arm_recess_depth':1.7,'outer_margin':1.4,'base_thickness':3.8},
+ 'design_interpretations':{'hub_offset_from_geometric_span_center_x':0.0,'long_taper_angles_treated_as_total_width_convergence_angles':True,'revision_06_x_arms_equal_user_override':True,'revision_06_taper_angle_deg':7.15,'unmeasured_arm_widths_are_raster/profile_estimates_only':True,'screw_access_not_horn_spline_geometry':True},
+ 'printing':{'material':'ABS','layer_height_mm':0.20,'walls':2,'infill_percent':0,'supports':False,'brim_mm':4,'orientation':'flat base on bed, pocket upward','nozzle_C':255,'bed_C':100}
+}
+# Preserve actual measured overall span, while using Horn #3 end-length asymmetry and taper-angle guidance.
+clear=P['pocket_parameters_provisional_mm']['total_lateral_clearance']; m=P['pocket_parameters_provisional_mm']['outer_margin']
+ref=P['published_horn3_reference']; q=P['pocket_parameters_provisional_mm']; b=q['base_thickness']
+nominal_span=P['confirmed_user_dimensions']['long_span']; huboff=P['design_interpretations']['hub_offset_from_geometric_span_center_x']
+# User override for Revision 06: equal X arms; Horn #3 unequal reaches are not used.
+left_nom=nominal_span/2.0
+right_nom=nominal_span/2.0
+huboff=0.0
+short_tip_nom=P['confirmed_user_dimensions']['short_span_baseline']/2.0+q['short_extension_each_end_from_prototype_01']
+left_L=left_nom+clear/2.0; right_L=right_nom+clear/2.0
+root_nom=q['long_root_width_reference_estimate']
+# Mirror profile completely: same averaged provisional taper angle and widths on both arms.
+sym_taper_deg=(ref['long_arm_side_angle_a_deg']+ref['long_arm_side_angle_b_deg'])/2.0
+left_tip_nom=root_nom-left_nom*math.tan(math.radians(sym_taper_deg))
+right_tip_nom=left_tip_nom
+short_nom=2*short_tip_nom
+short_pocket_span=short_nom+clear
+short_half=short_pocket_span/2.0
+root_pocket=root_nom+clear
+left_tip=left_tip_nom+clear; right_tip=right_tip_nom+clear
+short_width_nom=q['short_arm_width_reference_estimate']; short_width=short_width_nom+clear
+if min(left_tip_nom,right_tip_nom,short_width_nom)<=0: raise ValueError('non-positive provisional profile dimension')
+
+def make_arm(length, rootw, tipw, z, height, sign=1, axis='x'):
+    rad=tipw/2.0; c=length-rad
+    poly=[V(0,-rootw/2,z),V(sign*c,-tipw/2,z),V(sign*c,tipw/2,z),V(0,rootw/2,z),V(0,-rootw/2,z)]
+    web=Part.Face(Part.Wire(Part.makePolygon(poly))).extrude(V(0,0,height))
+    cap=Part.makeCylinder(rad,height,V(sign*c,0,z))
+    s=web.fuse(cap).removeSplitter()
+    if axis=='y': s.rotate(V(0,0,z),V(0,0,1),90)
+    return s
+
+def cross_profile(xleft,xright,yhalf,rootw,lefttip,righttip,shortw,z,h):
+    bits=[make_arm(xleft,rootw,lefttip,z,h,-1,'x'),make_arm(xright,rootw,righttip,z,h,1,'x'),make_arm(yhalf,shortw,shortw,z,h,-1,'y'),make_arm(yhalf,shortw,shortw,z,h,1,'y')]
+    return bits[0].fuse(bits[1]).fuse(bits[2]).fuse(bits[3]).removeSplitter()
+# Outer cross follows recess envelope with 2.7 mm nominal edge margin; dimension expansion applied per side.
+outer=cross_profile(left_L+m,right_L+m,short_half+m,root_pocket+2*m,left_tip+2*m,right_tip+2*m,short_width+2*m,0,b)
+outer=outer.fuse(Part.makeCylinder(q['local_center_pad_diameter']/2,q['local_center_thickness_increase'],V(0,0,b))).removeSplitter()
+# One compact solid, no backing plate. Pocket is blind; center screw/driver access is a distinct through bore.
+shape=outer
+top_z=b+q['local_center_thickness_increase']; z_arm=b-q['arm_recess_depth']; arm_cut_depth=top_z-z_arm
+pockets=[make_arm(left_L,root_pocket,left_tip,z_arm,arm_cut_depth,-1,'x'),make_arm(right_L,root_pocket,right_tip,z_arm,arm_cut_depth,1,'x'),make_arm(short_half,short_width,short_width,z_arm,arm_cut_depth,-1,'y'),make_arm(short_half,short_width,short_width,z_arm,arm_cut_depth,1,'y')]
+cut=pockets[0].fuse(pockets[1]).fuse(pockets[2]).fuse(pockets[3]).removeSplitter()
+shape=shape.cut(cut)
+shape=shape.cut(Part.makeCylinder(q['hub_recess_diameter']/2,q['hub_recess_depth'],V(0,0,top_z-q['hub_recess_depth'])))
+shape=shape.cut(Part.makeCylinder(q['back_hub_recess_diameter']/2,q['back_hub_recess_depth'],V(0,0,0)))
+shape=shape.cut(Part.makeCylinder(q['screw_access_diameter']/2,top_z+1,V(0,0,-0.5))).removeSplitter()
+if not shape.isValid() or len(shape.Solids)!=1: raise RuntimeError('Coupon is not exactly one valid connected solid')
+floor_hub=top_z-q['hub_recess_depth']; floor_arms=b-q['arm_recess_depth']; center_web=top_z-q['hub_recess_depth']-q['back_hub_recess_depth']
+if floor_hub < 0.8-1e-6 or floor_arms < 0.8-1e-6 or center_web < q['minimum_center_web']-1e-6: raise RuntimeError('Insufficient floor under blind pockets')
+# Save editable native geometry with provenance properties.
+doc=App.newDocument('CrossHorn_UltraMinimal_FitTest_04R06')
+obj=doc.addObject('PartDesign::Feature','Horn3CrossFitCoupon'); obj.Label='Symmetric X-arm cross-horn fit gauge - provisional'; obj.Shape=shape
+props={'LongLeftNominalCenterToTip':left_nom,'LongRightNominalCenterToTip':right_nom,'LongLeftPocketCenterToTip':left_L,'LongRightPocketCenterToTip':right_L,'ShortUpperNominalCenterToTip':short_tip_nom,'ShortLowerNominalCenterToTip':short_tip_nom,'ShortUpperPocketCenterToTip':short_half,'ShortLowerPocketCenterToTip':short_half,'SymmetricXArmNominalReach':left_nom,'SymmetricXArmPocketReach':left_L,'SymmetricLongTaperAngle':sym_taper_deg,'LongSpanConfirmed':35.0,'ShortSpanBaselineConfirmed':18.0,'ShortPocketSpan':short_pocket_span,'HubDiameterConfirmed':7.0,'FrontHubRecessDiameter':q['hub_recess_diameter'],'FrontHubRecessDepth':q['hub_recess_depth'],'BackHubRecessDiameter':q['back_hub_recess_diameter'],'BackHubRecessDepth':q['back_hub_recess_depth'],'RemainingCenterWeb':center_web,'LocalCenterThicknessIncrease':q['local_center_thickness_increase'],'LocalCenterPadDiameter':q['local_center_pad_diameter'],'MaximumLocalThickness':top_z,'ScrewAccessDiameter':q['screw_access_diameter'],'TotalLateralClearance':clear,'HubOffsetXProvisional':huboff,'LeftRootWidthPocket':root_pocket,'LeftTipWidthPocket':left_tip,'RightTipWidthPocket':right_tip,'ShortArmWidthPocket':short_width,'ShortExtensionPerEnd':1.0,'OuterMargin':m,'BaseThickness':b,'ArmRecessDepth':q['arm_recess_depth'],'HubFloor':floor_hub,'ArmFloor':floor_arms,'LeftEndTaperAngleRef':sym_taper_deg,'RightEndTaperAngleRef':sym_taper_deg}
+for n,v in props.items(): obj.addProperty('App::PropertyLength' if n not in ('LeftEndTaperAngleRef','RightEndTaperAngleRef') else 'App::PropertyAngle',n,'Parameters'); setattr(obj,n,v)
+obj.addProperty('App::PropertyString','PhysicalFitStatus','Verification'); obj.PhysicalFitStatus='UNVERIFIED - provisional drawing-derived profile; test with actual horn'
+obj.addProperty('App::PropertyString','RebuildInstructions','Verification'); obj.RebuildInstructions='Source parameter data is parameters.json. Re-run build_prototype_04_revision_06.FCMacro to regenerate.'
+doc.recompute(); doc.saveAs(str(OUT/'CrossHorn_UltraMinimal_FitTest_04R06.FCStd'))
+mesh=MeshPart.meshFromShape(Shape=shape,LinearDeflection=0.025,AngularDeflection=0.06,Relative=False)
+mesh.write(str(OUT/'CrossHorn_UltraMinimal_FitTest_04R06.stl'))
+bbox=shape.BoundBox
+res={'solid_valid':shape.isValid(),'solid_count':len(shape.Solids),'mesh_facets':len(mesh.Facets),'mesh_is_solid':mesh.isSolid(),'bbox_mm':[bbox.XLength,bbox.YLength,bbox.ZLength],'solid_volume_mm3':shape.Volume,'long_nominal_span_mm':35.0,'long_pocket_span_mm':left_L+right_L,'arm_center_to_tip_mm':{'long_left_nominal':left_nom,'long_right_nominal':right_nom,'long_left_pocket':left_L,'long_right_pocket':right_L,'short_upper_nominal':short_tip_nom,'short_lower_nominal':short_tip_nom,'short_upper_pocket':short_half,'short_lower_pocket':short_half},'long_arm_span_reconciliation_mm':{'user_override':'equal X reaches; asymmetric Horn #3 reach references ignored','nominal_reach_each_mm':left_nom,'pocket_reach_each_mm':left_L,'pocket_span_mm':left_L+right_L,'asymmetry_mm':0.0,'symmetric_taper_angle_deg':sym_taper_deg},'left_pocket_reach_from_hub_mm':left_L,'right_pocket_reach_from_hub_mm':right_L,'hub_offset_from_span_midpoint_mm':huboff,'short_baseline_mm':18.0,'short_end_extension_each_end_mm':1.0,'short_pocket_span_including_extension_and_clearance_mm':short_pocket_span,'long_root_width_pocket_mm':root_pocket,'left_tip_width_pocket_mm':left_tip,'right_tip_width_pocket_mm':right_tip,'short_arm_width_pocket_mm':short_width,'front_hub_recess_diameter_mm':q['hub_recess_diameter'],'front_hub_recess_depth_mm':q['hub_recess_depth'],'back_hub_recess_diameter_mm':q['back_hub_recess_diameter'],'back_hub_recess_depth_mm':q['back_hub_recess_depth'],'remaining_center_web_mm':center_web,'local_center_thickness_increase_mm':q['local_center_thickness_increase'],'local_center_pad_diameter_mm':q['local_center_pad_diameter'],'maximum_local_thickness_mm':top_z,'screw_access_diameter_mm':q['screw_access_diameter'],'hub_floor_mm':floor_hub,'arm_floor_mm':floor_arms,'remaining_center_web_mm':center_web,'outer_margin_mm':m,'parameters':P,'freecad_properties':props}
+(OUT/'geometry_validation.json').write_text(json.dumps(res,indent=2),encoding='utf-8'); (OUT/'parameters.json').write_text(json.dumps(P,indent=2),encoding='utf-8')
+# Export horizontal top-view edge samples directly from the resulting FreeCAD BRep for dimensioned drawing.
+paths=[]
+for edge in shape.Edges:
+    pts=edge.discretize(Deflection=0.06)
+    if len(pts)>1 and max(v.z for v in pts)-min(v.z for v in pts)<1e-6:
+        paths.append([[v.x,v.y] for v in pts])
+(OUT/'top_edges.json').write_text(json.dumps(paths),encoding='utf-8')
+App.closeDocument(doc.Name)

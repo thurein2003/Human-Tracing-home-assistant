@@ -1,0 +1,1356 @@
+{
+  "objects_with_solids_in_source": 52,
+  "imported_step_shape_objects": 225,
+  "step_shapes": [
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 50586.79985770301
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD001",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 833.5273628504435
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD002",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 42345.82609243587
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD003",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7511.695140156739
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD004",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 3022.4785340715057
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD005",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 24528.289698364002
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD006",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 2386.3060217195703
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD007",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 68.26366676985252
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD008",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD009",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD010",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD011",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD012",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 4449.355830897155
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD013",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7152.840844796364
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD014",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7152.840844796363
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD015",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 476.1957176171038
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD016",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 476.19571761713206
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD017",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 19.674223993106082
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD018",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 19.674223993106068
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD019",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD020",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544658
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD021",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD022",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536079
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD023",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD024",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536079
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD025",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.5760939182023
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD026",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD027",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD028",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.908843985360804
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD029",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD030",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544659
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD031",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD032",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.908843985360846
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD033",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD034",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544662
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD035",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD036",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536084
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD037",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.5760939182022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD038",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536082
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD039",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 158.7132608593563
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD040",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 76.51473997560146
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD041",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 14.965762003538371
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD042",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939303022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD043",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390737
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD044",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475719
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD045",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939303022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD046",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390734
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD047",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475721
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD048",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.39468793930296
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD049",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390725
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD050",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.01084028247572
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD051",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939302976
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD052",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390746
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD053",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475718
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD054",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD055",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD056",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD057",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD058",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD059",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD060",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD061",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD062",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD063",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD064",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD065",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD066",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD067",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD068",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD069",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD070",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 1539.3804002589989
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD071",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 112.76099999999997
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD072",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 67.88100000000054
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD073",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 360.0
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD074",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 9759.999999999998
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD075",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 50586.79985770301
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD076",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 833.5273628504435
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD077",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 42345.82609243587
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD078",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7511.695140156739
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD079",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 3022.4785340715057
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD080",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 24528.289698364002
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD081",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 2386.3060217195703
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD082",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 68.26366676985252
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD083",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD084",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD085",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD086",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD087",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 4449.355830897155
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD088",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7152.840844796364
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD089",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7152.840844796363
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD090",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 476.1957176171038
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD091",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 476.19571761713206
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD092",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 19.674223993106082
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD093",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 19.674223993106068
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD094",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD095",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544658
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD096",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD097",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536079
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD098",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD099",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536079
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD100",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.5760939182023
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD101",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD102",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD103",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.908843985360804
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD104",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD105",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544659
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD106",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD107",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.908843985360846
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD108",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD109",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544662
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD110",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD111",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536084
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD112",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.5760939182022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD113",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536082
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD114",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 158.7132608593563
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD115",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 76.51473997560146
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD116",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 14.965762003538371
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD117",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939303022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD118",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390737
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD119",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475719
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD120",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939303022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD121",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390734
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD122",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475721
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD123",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.39468793930296
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD124",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390725
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD125",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.01084028247572
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD126",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939302976
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD127",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390746
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD128",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475718
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD129",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD130",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD131",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD132",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD133",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD134",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD135",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD136",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD137",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD138",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD139",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD140",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD141",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD142",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD143",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD144",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD145",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 1539.3804002589989
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD146",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 112.76099999999997
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD147",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 67.88100000000054
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD148",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 360.0
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD149",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 9759.999999999998
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD150",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 50586.79985770301
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD151",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 833.5273628504435
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD152",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7152.840844796364
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD153",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7152.840844796363
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD154",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 476.1957176171038
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD155",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 476.19571761713206
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD156",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 19.674223993106082
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD157",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 19.674223993106068
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD158",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 42345.82609243587
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD159",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 7511.695140156739
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD160",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD161",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544658
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD162",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD163",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536079
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD164",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 3022.4785340715057
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD165",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD166",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536079
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD167",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.5760939182023
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD168",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD169",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD170",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.908843985360804
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD171",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD172",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544659
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD173",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 24528.289698364002
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD174",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 2386.3060217195703
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD175",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD176",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.908843985360846
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD177",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD178",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398544662
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD179",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820222
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD180",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536084
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD181",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.5760939182022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD182",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.90884398536082
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD183",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 68.26366676985252
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD184",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 158.7132608593563
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD185",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 76.51473997560146
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD186",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 14.965762003538371
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD187",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939303022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD188",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390737
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD189",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475719
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD190",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939303022
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD191",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390734
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD192",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475721
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD193",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.39468793930296
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD194",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390725
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD195",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.01084028247572
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD196",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 27.394687939302976
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD197",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 8.914725087390746
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD198",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5.010840282475718
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD199",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD200",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD201",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD202",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD203",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD204",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD205",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD206",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD207",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD208",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD209",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD210",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD211",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 144.57609391820228
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD212",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.9088439853608
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD213",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD214",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD215",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD216",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 45.33318199130069
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD217",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 62.83185307179585
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD218",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 17.143702091139268
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD219",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 112.76099999999997
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD220",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 67.88100000000054
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD221",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 4449.355830897155
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD222",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 1539.3804002589989
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD223",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 360.0
+    },
+    {
+      "name": "EyeTrace_R15_AxisAligned_Assembly_HOLD224",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 9759.999999999998
+    }
+  ]
+}

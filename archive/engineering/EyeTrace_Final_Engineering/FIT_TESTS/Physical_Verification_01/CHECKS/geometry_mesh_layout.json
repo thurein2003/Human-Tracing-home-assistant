@@ -1,0 +1,333 @@
+{
+  "assembly_modified": false,
+  "release_status_modified": false,
+  "coupon_count": 7,
+  "reason_keep_all": "No purpose redundant. Two horn pieces test positive drive and retention; two pan rings test actual full-diameter sliding fit; body, camera and actual tilt sleeve each distinct.",
+  "improvement": "Female pan ring gets standalone5.2mm through-bore in2.5mm-thick tab; original ring material/ID untouched. Horn coupons nest in separate ring openings.",
+  "parts": [
+    {
+      "number": 1,
+      "name": "01_SG90_Body_Ears",
+      "source": "SG90_EarMount_Coupon",
+      "dims_mm": [
+        15.999999999999993,
+        34.3,
+        2.5
+      ],
+      "volume_mm3": 612.2235631506758,
+      "watertight": true,
+      "printed_face": "Z0 flat face on bed; holes/pockets open upwards",
+      "source_material_removed_mm3": 0.0,
+      "added_tab_mm3": 0,
+      "position_mm": [
+        20,
+        96,
+        0
+      ]
+    },
+    {
+      "number": 2,
+      "name": "02_StarHorn_Positive_Pocket",
+      "source": "StarHorn_PositivePocket_Coupon",
+      "dims_mm": [
+        42.0,
+        41.986945644034286,
+        4.0
+      ],
+      "volume_mm3": 4821.088330204801,
+      "watertight": true,
+      "printed_face": "Z0 flat face on bed; holes/pockets open upwards",
+      "source_material_removed_mm3": 0.0,
+      "added_tab_mm3": 0,
+      "position_mm": [
+        29,
+        29,
+        0
+      ]
+    },
+    {
+      "number": 3,
+      "name": "03_StarHorn_Captive_Cover",
+      "source": "StarHorn_CaptiveCover_Coupon",
+      "dims_mm": [
+        42.0,
+        41.986945644034286,
+        4.200000000000017
+      ],
+      "volume_mm3": 2386.3060217195975,
+      "watertight": true,
+      "printed_face": "Z0 flat face on bed; holes/pockets open upwards",
+      "source_material_removed_mm3": 0.0,
+      "added_tab_mm3": 0,
+      "position_mm": [
+        121,
+        29,
+        0
+      ]
+    },
+    {
+      "number": 4,
+      "name": "04_Camera_21x16",
+      "source": "Camera_21x16_HoleCenter_Gauge",
+      "dims_mm": [
+        30.0,
+        25.0,
+        1.5
+      ],
+      "volume_mm3": 1022.4584157868292,
+      "watertight": true,
+      "printed_face": "Z0 flat face on bed; holes/pockets open upwards",
+      "source_material_removed_mm3": 0.0,
+      "added_tab_mm3": 0,
+      "position_mm": [
+        120,
+        96,
+        0
+      ]
+    },
+    {
+      "number": 5,
+      "name": "05_Pan_Male_OD64",
+      "source": "PanJournal_Male_SizeTest",
+      "dims_mm": [
+        64.0,
+        63.98010764805225,
+        2.0
+      ],
+      "volume_mm3": 779.1149780902674,
+      "watertight": true,
+      "printed_face": "Z0 flat face on bed; holes/pockets open upwards",
+      "source_material_removed_mm3": 0.0,
+      "added_tab_mm3": 0,
+      "position_mm": [
+        110,
+        18,
+        0
+      ]
+    },
+    {
+      "number": 6,
+      "name": "06_Pan_Female_Tilt_Bore",
+      "source": "PanJournal_Female_ClearanceTest",
+      "dims_mm": [
+        80.98900050759379,
+        70.59986220110957,
+        2.5
+      ],
+      "volume_mm3": 1546.8342475290215,
+      "watertight": true,
+      "printed_face": "Z0 flat face on bed; holes/pockets open upwards",
+      "source_material_removed_mm3": 0.0,
+      "added_tab_mm3": 272.60426723299963,
+      "position_mm": [
+        14.7,
+        14.7,
+        0
+      ]
+    },
+    {
+      "number": 7,
+      "name": "07_Tilt_Sleeve",
+      "source": "Tilt_Journal_FlangedSleeve",
+      "dims_mm": [
+        7.0,
+        6.997824274005715,
+        4.100000000000001
+      ],
+      "volume_mm3": 68.26366676985265,
+      "watertight": true,
+      "printed_face": "Z0 flat face on bed; holes/pockets open upwards",
+      "source_material_removed_mm3": 0.0,
+      "added_tab_mm3": 0,
+      "position_mm": [
+        90,
+        96,
+        0
+      ]
+    }
+  ],
+  "pair_separations": [
+    {
+      "pair": [
+        "01_SG90_Body_Ears",
+        "02_StarHorn_Positive_Pocket"
+      ],
+      "gap_mm": 27.08326112068524
+    },
+    {
+      "pair": [
+        "01_SG90_Body_Ears",
+        "03_StarHorn_Captive_Cover"
+      ],
+      "gap_mm": 94.5508546052343
+    },
+    {
+      "pair": [
+        "01_SG90_Body_Ears",
+        "04_Camera_21x16"
+      ],
+      "gap_mm": 84.0
+    },
+    {
+      "pair": [
+        "01_SG90_Body_Ears",
+        "05_Pan_Male_OD64"
+      ],
+      "gap_mm": 83.5508546052343
+    },
+    {
+      "pair": [
+        "01_SG90_Body_Ears",
+        "06_Pan_Female_Tilt_Bore"
+      ],
+      "gap_mm": 12.783261120685236
+    },
+    {
+      "pair": [
+        "01_SG90_Body_Ears",
+        "07_Tilt_Sleeve"
+      ],
+      "gap_mm": 54.0
+    },
+    {
+      "pair": [
+        "02_StarHorn_Positive_Pocket",
+        "03_StarHorn_Captive_Cover"
+      ],
+      "gap_mm": 50.0
+    },
+    {
+      "pair": [
+        "02_StarHorn_Positive_Pocket",
+        "04_Camera_21x16"
+      ],
+      "gap_mm": 62.76156636548769
+    },
+    {
+      "pair": [
+        "02_StarHorn_Positive_Pocket",
+        "05_Pan_Male_OD64"
+      ],
+      "gap_mm": 39.0
+    },
+    {
+      "pair": [
+        "02_StarHorn_Positive_Pocket",
+        "06_Pan_Female_Tilt_Bore"
+      ],
+      "gap_mm": 11.299999999999995
+    },
+    {
+      "pair": [
+        "02_StarHorn_Positive_Pocket",
+        "07_Tilt_Sleeve"
+      ],
+      "gap_mm": 41.39764790946639
+    },
+    {
+      "pair": [
+        "03_StarHorn_Captive_Cover",
+        "04_Camera_21x16"
+      ],
+      "gap_mm": 25.0
+    },
+    {
+      "pair": [
+        "03_StarHorn_Captive_Cover",
+        "05_Pan_Male_OD64"
+      ],
+      "gap_mm": 8.999999999999991
+    },
+    {
+      "pair": [
+        "03_StarHorn_Captive_Cover",
+        "06_Pan_Female_Tilt_Bore"
+      ],
+      "gap_mm": 25.299999999999997
+    },
+    {
+      "pair": [
+        "03_StarHorn_Captive_Cover",
+        "07_Tilt_Sleeve"
+      ],
+      "gap_mm": 44.80007215003459
+    },
+    {
+      "pair": [
+        "04_Camera_21x16",
+        "05_Pan_Male_OD64"
+      ],
+      "gap_mm": 14.0
+    },
+    {
+      "pair": [
+        "04_Camera_21x16",
+        "06_Pan_Female_Tilt_Bore"
+      ],
+      "gap_mm": 46.80267086395818
+    },
+    {
+      "pair": [
+        "04_Camera_21x16",
+        "07_Tilt_Sleeve"
+      ],
+      "gap_mm": 23.0
+    },
+    {
+      "pair": [
+        "05_Pan_Male_OD64",
+        "06_Pan_Female_Tilt_Bore"
+      ],
+      "gap_mm": 14.299999999999997
+    },
+    {
+      "pair": [
+        "05_Pan_Male_OD64",
+        "07_Tilt_Sleeve"
+      ],
+      "gap_mm": 33.80007215003459
+    },
+    {
+      "pair": [
+        "06_Pan_Female_Tilt_Bore",
+        "07_Tilt_Sleeve"
+      ],
+      "gap_mm": 27.097647909466396
+    }
+  ],
+  "minimum_surface_gap_mm": 8.999999999999991,
+  "support_required_by_geometry": false,
+  "downward_overhang_area_mm2": {
+    "01_SG90_Body_Ears": 0,
+    "02_StarHorn_Positive_Pocket": 0,
+    "03_StarHorn_Captive_Cover": 0,
+    "04_Camera_21x16": 0,
+    "05_Pan_Male_OD64": 0,
+    "06_Pan_Female_Tilt_Bore": 0,
+    "07_Tilt_Sleeve": 0
+  },
+  "bed_occupied_bounds_mm": [
+    14.710999488830566,
+    14.700068473815918,
+    0.0,
+    174.0,
+    130.3000030517578,
+    4.199999809265137
+  ],
+  "bed_dimensions_mm": [
+    159.28900051116943,
+    115.5999345779419,
+    4.199999809265137
+  ],
+  "print_bed_nominal_mm": [
+    260,
+    260,
+    260
+  ],
+  "three_mm_brims_minimum_remaining_clearance_mm": 2.999999999999991,
+  "old_bed_area_mm2": 23227.559999999998,
+  "new_bounding_area_mm2": 18413.79803807694,
+  "solid_material_volume_cm3": 11.236289223251045,
+  "toolpaths_verified": false,
+  "physical_tests": "NOT PERFORMED"
+}

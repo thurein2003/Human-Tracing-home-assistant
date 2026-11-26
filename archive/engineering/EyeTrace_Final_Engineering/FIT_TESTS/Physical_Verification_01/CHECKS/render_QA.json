@@ -1,0 +1,47 @@
+{
+  "renderer": "FreeCAD1.1.4 actual saved BRep geometry",
+  "images": {
+    "01": {
+      "real_CAD": true,
+      "nonwhite_samples": 1061
+    },
+    "02": {
+      "real_CAD": true,
+      "nonwhite_samples": 1470
+    },
+    "03": {
+      "real_CAD": true,
+      "nonwhite_samples": 1342
+    },
+    "04": {
+      "real_CAD": true,
+      "nonwhite_samples": 1716
+    },
+    "05": {
+      "real_CAD": true,
+      "nonwhite_samples": 304
+    },
+    "06": {
+      "real_CAD": true,
+      "nonwhite_samples": 346
+    },
+    "07": {
+      "real_CAD": true,
+      "nonwhite_samples": 1840
+    },
+    "layout": {
+      "real_CAD": true,
+      "nonwhite_samples": 727
+    },
+    "tilt_bore_detail": {
+      "real_CAD": true,
+      "nonwhite_samples": 1322
+    },
+    "camera_rear_uncertainty": {
+      "real_CAD": true,
+      "nonwhite_samples": 1641
+    }
+  },
+  "physical_results": "NOT PERFORMED",
+  "camera_red_box": "Unmeasured uncertainty, not actual camera material"
+}

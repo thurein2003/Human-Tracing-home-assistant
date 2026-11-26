@@ -1,0 +1,32 @@
+import zipfile,json,os,hashlib
+from xml.etree import ElementTree as ET
+src=r'EyeTrace_Final_Engineering\R15_BASE_TEST_PRINT\R15_Circular_Base_ABS_Support_UNVERIFIED.3mf'
+out=r'EyeTrace_Final_Engineering\R15_BASE_ABS_OPTIMIZED'
+variants=[
+ ('V0_Baseline_4W_35pct_ABS.3mf',4,35,'tree(manual)',0),
+ ('V1_3W_10pct_Gyroid_ABS.3mf',3,10,'tree(manual)',0),
+ ('V2_3W_15pct_Gyroid_ABS.3mf',3,15,'tree(manual)',0),
+ ('V3_3W_20pct_Gyroid_ABS.3mf',3,20,'tree(manual)',0),
+ ('V4_AutoTreeSupport_ABS.3mf',4,35,'tree(auto)',0),
+]
+with zipfile.ZipFile(src) as z: entries={n:z.read(n) for n in z.namelist()}
+rows=[]
+for name,walls,inf,support,buildonly in variants:
+ data=dict(entries)
+ for cfg in ('Metadata/project_settings.config','Metadata/process_settings_1.config'):
+  d=json.loads(data[cfg]);d['wall_loops']=str(walls);d['sparse_infill_density']=str(inf)+'%';d['sparse_infill_pattern']='gyroid';d['support_type']=support;d['support_on_build_plate_only']=str(buildonly);d['support_top_z_distance']='0.24';d['support_bottom_z_distance']='0.24';d['textured_plate_temp']='100';d['textured_plate_temp_initial_layer']='100';d['cool_plate_temp']='100';d['cool_plate_temp_initial_layer']='100';d['hot_plate_temp']='100';d['hot_plate_temp_initial_layer']='100';d['curr_bed_type']='Textured PEI Plate';data[cfg]=json.dumps(d,indent=2).encode('utf-8')
+ ms=ET.fromstring(data['Metadata/model_settings.config'])
+ for o in ms.findall('object'):
+  for m in o.findall('metadata'):
+   if m.get('key')=='support_type':m.set('value',support)
+   if m.get('key')=='support_style':m.set('value','tree_slim')
+   if m.get('key')=='enable_support':m.set('value','1')
+ data['Metadata/model_settings.config']=ET.tostring(ms,encoding='utf-8',xml_declaration=True)
+ dst=os.path.join(out,name)
+ with zipfile.ZipFile(dst,'w',zipfile.ZIP_DEFLATED) as z:
+  for n,b in data.items():z.writestr(n,b)
+ with zipfile.ZipFile(dst) as z:
+  assert z.testzip() is None
+  h=hashlib.sha256(z.read('3D/Objects/object_1.model')).hexdigest()
+ rows.append('%s | walls=%d | gyroid=%d%% | support=%s | mesh-sha256=%s'%(name,walls,inf,support,h))
+open(os.path.join(out,'variant_manifest.txt'),'w').write('\n'.join(rows)+'\n')

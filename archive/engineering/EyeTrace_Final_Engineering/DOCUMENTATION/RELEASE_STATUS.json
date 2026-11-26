@@ -1,0 +1,39 @@
+{
+  "release": "FIT-TEST READY; full production HOLD",
+  "stages": {
+    "CAD VERIFIED": {
+      "complete": true,
+      "status": "PASS",
+      "scope": "Nominal component BReps, interfaces, sampled rigid motion and exports; measured-hardware equivalence excluded"
+    },
+    "FIT-TEST READY": {
+      "complete": true,
+      "status": "PASS",
+      "scope": "Small coupon files valid and packed, with instructions; actual print results and slicing not claimed"
+    },
+    "FULL-PRINT READY": {
+      "complete": false,
+      "status": "BLOCKED",
+      "scope": "Horn/clone/camera/rear/ribbon fit, correct small hardware and toolpath/support review required"
+    },
+    "PHYSICALLY VERIFIED": {
+      "complete": false,
+      "status": "BLOCKED",
+      "scope": "No measured fit-test or working-hardware results"
+    }
+  },
+  "requirement_counts": {
+    "PASS": 17,
+    "PROVISIONAL": 10,
+    "FAIL": 0,
+    "BLOCKED": 7
+  },
+  "known_unintended_nominal_geometry_defects": 0,
+  "rear_uncertainty_pairs": 9,
+  "physical_fit": "UNVERIFIED",
+  "printable_parts": 13,
+  "components": 49,
+  "motion_poses": 1266,
+  "pair_tests": 1488816,
+  "fit_test_pieces": 7
+}

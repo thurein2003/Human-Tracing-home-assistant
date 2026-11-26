@@ -1,0 +1,19 @@
+{
+  "overall_status": "HOLD: physical verification required",
+  "software_nominal_configuration": "PASS tested geometry, motions and assembly paths",
+  "printed_parts": 14,
+  "tagged_components": 50,
+  "step_solids": 77,
+  "operating_poses": 172,
+  "operating_pair_tests": 210700,
+  "guard_poses": 8,
+  "uncached_guard_pairs": 9800,
+  "internal_compound_pairs": 31,
+  "physical_fit": "UNVERIFIED",
+  "camera_pitch_default_mm": [
+    28,
+    28
+  ],
+  "required_extra_hardware": true,
+  "audit_authority": "../sg90_interface_audit_01"
+}

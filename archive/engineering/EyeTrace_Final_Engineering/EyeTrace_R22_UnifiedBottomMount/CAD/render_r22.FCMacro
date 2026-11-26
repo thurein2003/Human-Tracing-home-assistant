@@ -1,0 +1,20 @@
+import FreeCAD as App, FreeCADGui as Gui
+p=r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount\CAD\EyeTrace_R22_UnifiedBottomMount.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R22_UnifiedBottomMount\SCREENSHOTS\R22_UnifiedBottomMount_Isometric.png'
+d=App.openDocument(p)
+for o in d.Objects:
+ if hasattr(o,'ViewObject'): o.ViewObject.Visibility=False
+names=['PanYoke_EarBracket_KeyedDrive','Pan_Replaceable_ThrustRing','Pan_KeyedHorn_Cover','PanServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL','PanOriginalScrew_PROVISIONAL','PanDrive_M3x10_0','PanDrive_M3x10_1','PanDrive_M3x10_2','PanDrive_M3x10_3']
+for n in names:
+ o=d.getObject(n)
+ if o and hasattr(o,'ViewObject'):
+  o.ViewObject.Visibility=True
+  if n=='PanYoke_EarBracket_KeyedDrive':o.ViewObject.ShapeColor=(0.48,0.67,0.83)
+  elif n=='Pan_Replaceable_ThrustRing':o.ViewObject.ShapeColor=(0.83,0.79,0.41)
+  elif n=='Pan_KeyedHorn_Cover':o.ViewObject.ShapeColor=(0.91,0.45,0.17)
+  elif n=='Pan_OriginalStar_PROVISIONAL':o.ViewObject.ShapeColor=(0.94,0.94,0.97)
+  else:o.ViewObject.ShapeColor=(0.28,0.30,0.34)
+  o.ViewObject.DisplayMode='Flat Lines'
+Gui.activeDocument().activeView().viewAxonometric()
+Gui.activeDocument().activeView().fitAll()
+Gui.activeDocument().activeView().saveImage(out,1600,1100,'Current')

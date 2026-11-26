@@ -1,0 +1,20 @@
+﻿import FreeCAD as A,json,os,zipfile,xml.etree.ElementTree as ET
+out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY'; result={}
+d=A.openDocument(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd'); ps=[o for o in d.Objects if bool(getattr(o,'Printable',False)) and hasattr(o,'Shape') and not o.Shape.isNull()]; bad=[]
+for o in ps:
+ if not o.Shape.isValid() or len(o.Shape.Solids)!=1: bad.append({'name':o.Name,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids)})
+hits=[]
+for i,a in enumerate(ps):
+ for b in ps[i+1:]:
+  if a.Shape.BoundBox.intersect(b.Shape.BoundBox):
+   v=a.Shape.common(b.Shape).Volume
+   if v>1e-5:hits.append({'a':a.Name,'b':b.Name,'volume_mm3':v})
+result['assembly']={'opened':True,'version':A.Version()[:4],'printable_count':len(ps),'invalid_or_disconnected':bad,'neutral_intersection_pairs':hits,'components':[o.Name for o in ps]}; A.closeDocument(d.Name)
+l=A.openDocument(out+r'\CAD\EyeTrace_R15_Print_Layout.FCStd'); ms=[o for o in l.Objects if o.TypeId=='Mesh::Feature']; rows=[]
+for o in ms:
+ b=o.Mesh.BoundBox; rows.append({'name':o.Label,'facets':o.Mesh.CountFacets,'solid':o.Mesh.isSolid(),'bounds':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]})
+result['layout']={'opened':True,'mesh_count':len(ms),'all_closed':all(x['solid'] for x in rows),'parts':rows}; A.closeDocument(l.Name)
+for fn in [r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED\EyeTrace_K2_ABS_All_In_One_R15_Fixed.3mf',out+r'\EyeTrace_R15_ABS_AutoTree_SupportTrial.3mf']:
+ with zipfile.ZipFile(fn) as z:
+  err=z.testzip(); model=z.read('3D/3dmodel.model'); result.setdefault('3mf',[]).append({'path':fn,'zip_integrity':err is None,'model_sha256':__import__('hashlib').sha256(model).hexdigest(),'entry_count':len(z.namelist())})
+open(out+r'\CHECKS\reopen_output_audit.json','w').write(json.dumps(result,indent=2));

@@ -1,0 +1,24 @@
+﻿import FreeCAD as App, FreeCADGui as Gui, os, traceback
+ROOT=r'EyeTrace_Final_Engineering\F625_Bearing_Upgrade_01'
+FILE=os.path.join(ROOT,'CAD','EyeTrace_F625_Alternative_r02.FCStd')
+try:
+ d=App.openDocument(FILE); v=Gui.activeDocument().activeView()
+ for o in d.Objects:
+  if hasattr(o,'ViewObject'): o.ViewObject.Visibility=False
+ names=['Tilt_IdlerPillar_F625','F625_ZZ_Envelope','F625_OuterRace_Retainer','F625_Stepped_Adapter_Sleeve','Tilt_Axle_M3x16','Tilt_Axle_InnerRace_Washer','Tilt_Axle_M3_Nut']
+ for n in names:
+  o=d.getObject(n)
+  if o: o.ViewObject.Visibility=True
+ d.getObject('Tilt_IdlerPillar_F625').ViewObject.Transparency=35
+ d.getObject('F625_ZZ_Envelope').ViewObject.Transparency=10
+ d.getObject('F625_OuterRace_Retainer').ViewObject.Transparency=50
+ v.viewAxonometric(); v.fitAll(); Gui.updateGui()
+ v.saveImage(os.path.join(ROOT,'RENDERS','F625_pivot_components_actual_CAD.png'),1200,900,'Current')
+ for o in d.Objects:
+  if hasattr(o,'ViewObject'): o.ViewObject.Visibility=False
+ d.getObject('F625_ABS_Fit_Coupon').ViewObject.Visibility=True
+ v.viewTop(); v.fitAll(); Gui.updateGui()
+ v.saveImage(os.path.join(ROOT,'RENDERS','F625_ABS_coupon_actual_CAD.png'),1200,900,'Current')
+ with open(os.path.join(ROOT,'RENDERS','render_log.txt'),'w') as f: f.write('Actual FreeCAD 1.1.4 object renders saved.')
+except Exception:
+ with open(os.path.join(ROOT,'RENDERS','render_log.txt'),'w') as f: f.write(traceback.format_exc())

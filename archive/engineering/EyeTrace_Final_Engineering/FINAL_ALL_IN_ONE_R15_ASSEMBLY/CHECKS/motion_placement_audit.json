@@ -1,0 +1,396 @@
+{
+  "source": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15_ASSEMBLY\\CAD\\EyeTrace_R15_Full_Assembly.FCStd",
+  "poses": [
+    {
+      "pan_deg": 0,
+      "tilt_deg": 0,
+      "printable_intersections": [
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Lower_Left",
+          "intersection_mm3": 22.66659099565036
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 22.66659099565036
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 22.66659099565036
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 22.66659099565036
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        }
+      ]
+    },
+    {
+      "pan_deg": -30,
+      "tilt_deg": 0,
+      "printable_intersections": [
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Lower_Left",
+          "intersection_mm3": 22.666590995650374
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 22.666590995650374
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 22.666590995650374
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 22.666590995650374
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130072
+        }
+      ]
+    },
+    {
+      "pan_deg": 30,
+      "tilt_deg": 0,
+      "printable_intersections": [
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Lower_Left",
+          "intersection_mm3": 22.666590995650374
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 22.666590995650374
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 22.666590995650374
+        },
+        {
+          "a": "Base_EarMount_ThrustSupport",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 22.666590995650374
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        }
+      ]
+    },
+    {
+      "pan_deg": 0,
+      "tilt_deg": -15,
+      "printable_intersections": [
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130072
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130072
+        }
+      ]
+    },
+    {
+      "pan_deg": 0,
+      "tilt_deg": 15,
+      "printable_intersections": [
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        }
+      ]
+    },
+    {
+      "pan_deg": -30,
+      "tilt_deg": -15,
+      "printable_intersections": [
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        }
+      ]
+    },
+    {
+      "pan_deg": -30,
+      "tilt_deg": 15,
+      "printable_intersections": [
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        }
+      ]
+    },
+    {
+      "pan_deg": 30,
+      "tilt_deg": -15,
+      "printable_intersections": [
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130071
+        }
+      ]
+    },
+    {
+      "pan_deg": 30,
+      "tilt_deg": 15,
+      "printable_intersections": [
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Lower_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Left",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Lower_Right",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        },
+        {
+          "a": "PCB_Spacer_Upper_Left",
+          "b": "PCB_Spacer_Upper_Right",
+          "intersection_mm3": 45.33318199130073
+        }
+      ]
+    }
+  ],
+  "all_sampled_printable_pairs_clear": false,
+  "axes": {
+    "pan": "Z through (0,0); carrier and pan horn nominal center at (0,0,35)",
+    "tilt": "X through y=0,z=78; servo-side output and opposite journal nominally coaxial"
+  },
+  "sample_angles_are_limits": false,
+  "physical_motion": "not verified; geometry transform only"
+}

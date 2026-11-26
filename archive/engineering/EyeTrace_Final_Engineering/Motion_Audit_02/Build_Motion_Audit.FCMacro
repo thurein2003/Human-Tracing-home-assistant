@@ -1,0 +1,180 @@
+﻿import FreeCAD as App
+import FreeCADGui as Gui
+import Part, math, os, sys, json, traceback
+
+SRC = r"EyeTrace_Final_Engineering\CAD\EyeTrace_Final_Assembly.FCStd"
+OUT = r"EyeTrace_Final_Engineering\Motion_Audit_02"
+FCSTD = os.path.join(OUT, "EyeTrace_Motion_Audit_Assembly_r03.FCStd")
+LOG = os.path.join(OUT, "CHECKS", "assembly_build_log.txt")
+os.makedirs(os.path.join(OUT, "CHECKS"), exist_ok=True)
+os.makedirs(os.path.join(OUT, "RENDERS"), exist_ok=True)
+def log(s):
+    with open(LOG, "a", encoding="utf-8") as f: f.write(str(s)+"\n")
+try:
+    if os.path.exists(LOG): os.remove(LOG)
+    sys.path.append(r"D:\App files\Mod\Assembly")
+    import JointObject
+    doc = App.openDocument(SRC)
+    doc.Label = "Eye Trace - Motion Audit 02"
+    def get_shape(names):
+        return Part.makeCompound([doc.getObject(n).Shape.copy() for n in names])
+    groups = {
+      "KinematicBase": ["Base_EarMount_ThrustSupport","Pan_Replaceable_ThrustRing","PanServo_SG90_Reference","PanOriginalScrew_PROVISIONAL","PanEar_M1p6x8_0","PanEar_M1p6x8_1","PanServo_WireExit_KEEP_OUT"],
+      "KinematicPanRotor": ["PanYoke_EarBracket_KeyedDrive","Pan_OriginalStar_PROVISIONAL","Pan_KeyedHorn_Cover","PanDrive_M3x10_0","PanDrive_M3x10_1","PanDrive_M3x10_2","PanDrive_M3x10_3","TiltServo_SG90_Reference","TiltEar_M1p6x8_0","TiltEar_M1p6x8_1","TiltServo_WireExit_KEEP_OUT","Tilt_Removable_IdlerPillar","IdlerPillar_M3x10_0","IdlerPillar_M3x10_1"],
+      "KinematicTiltCradle": ["TiltCradle_KeyedHorn_CameraFrame","Tilt_OriginalStar_PROVISIONAL","TiltOriginalScrew_PROVISIONAL","Tilt_KeyedHorn_CaptiveCover","TiltDrive_M3x10_0","TiltDrive_M3x10_1","TiltDrive_M3x10_2","TiltDrive_M3x10_3","Tilt_Journal_FlangedSleeve","TiltIdler_M3x12","TiltIdler_M3_Washer","RailMount_Lower_M3x10_0","RailMount_Lower_M3x10_1","RailMount_Upper_M3x10_0","RailMount_Upper_M3x10_1","PCB_Spacer_Lower_Left","PCB_Spacer_Lower_Right","PCB_Spacer_Upper_Left","PCB_Spacer_Upper_Right","Camera_M2x12_Lower_Left","Camera_M2x12_Lower_Right","Camera_M2x12_Upper_Left","Camera_M2x12_Upper_Right","CameraPlate_Cut007","PCB_Cut003","Camera_Lens_PROVISIONAL","Camera_WireExit_KEEP_OUT","Camera_RearComponents_KEEP_OUT"]
+    }
+    bodycolors = {"KinematicBase":(0.72,0.75,0.78), "KinematicPanRotor":(0.86,0.53,0.20), "KinematicTiltCradle":(0.18,0.58,0.82)}
+    bodyobjs = {}
+    for name, members in groups.items():
+        body = doc.addObject("Part::Feature", name)
+        body.Label = {"KinematicBase":"Rigid body 0 - fixed base + pan stator","KinematicPanRotor":"Rigid body 1 - pan output + carrier + tilt stator","KinematicTiltCradle":"Rigid body 2 - tilt output + camera cradle"}[name]
+        body.Shape = get_shape(members)
+        body.addProperty("App::PropertyStringList", "RigidMembers", "Motion audit", "Member geometry represented by this rigid kinematic body")
+        body.RigidMembers = members
+        body.addProperty("App::PropertyString", "Interpretation", "Motion audit")
+        body.Interpretation = "Rigid aggregation of original CAD solids; no source geometry dimensions changed. Horn spline and camera dimensions remain provisional."
+        body.ViewObject.ShapeColor = bodycolors[name]
+        # Per-face colors preserve the component distinction inside each rigid compound.
+        diffs=[]
+        for member in members:
+            obj=doc.getObject(member)
+            color=bodycolors[name]
+            if "Servo" in member: color=(0.20,0.34,0.68)
+            elif "OriginalStar" in member or "Cover" in member: color=(0.92,0.67,0.18)
+            elif "Camera" in member or "PCB" in member: color=(0.18,0.62,0.45)
+            elif "M3" in member or "M1p6" in member or "M2x" in member or "Screw" in member or "Washer" in member: color=(0.55,0.57,0.60)
+            diffs.extend([color]*len(obj.Shape.Faces))
+        if diffs: body.ViewObject.DiffuseColor=diffs
+        bodyobjs[name]=body
+    asm=doc.addObject("Assembly::AssemblyObject", "MotionAuditAssembly")
+    asm.Label="Two-axis kinematic audit assembly"
+    asm.Type="Assembly"
+    jg=asm.newObject("Assembly::JointGroup", "MotionAuditJoints")
+    links=[]
+    for name in groups:
+        link=asm.newObject("App::Link", name+"Link")
+        link.setLink(bodyobjs[name])
+        link.Label=bodyobjs[name].Label
+        links.append(link)
+    ground=jg.newObject("App::FeaturePython", "GroundedBase")
+    ground.Label="Ground - stationary base and pan SG90 case"
+    JointObject.GroundedJoint(ground, links[0])
+    JointObject.ViewProviderGroundedJoint(ground.ViewObject)
+    def new_revolute(label, link1, link2, pos, axis, amin, amax):
+        j=jg.newObject("App::FeaturePython", label)
+        JointObject.Joint(j, 1)
+        JointObject.ViewProviderJoint(j.ViewObject)
+        j.Label=label
+        j.Detach1=True; j.Detach2=True
+        j.Reference1=(link1,["",""])
+        j.Reference2=(link2,["",""])
+        R=App.Rotation(App.Vector(0,0,1),App.Vector(*axis))
+        P=App.Vector(*pos)
+        J=App.Placement(P,R)
+        j.Placement1=link1.Placement.inverse().multiply(J)
+        j.Placement2=link2.Placement.inverse().multiply(J)
+        j.EnableAngleMin=True; j.AngleMin=App.Units.Quantity(str(amin)+" deg")
+        j.EnableAngleMax=True; j.AngleMax=App.Units.Quantity(str(amax)+" deg")
+        j.ViewObject.Visibility=False
+        return j
+    panj=new_revolute("PanRevolute",links[0],links[1],(0,0,35),(0,0,1),-90,90)
+    tiltj=new_revolute("TiltRevolute",links[1],links[2],(-41,0,78),(1,0,0),-30,30)
+    asm.addProperty("App::PropertyString", "KinematicInterpretation", "Motion audit")
+    asm.KinematicInterpretation="Two rigid revolute coordinates only. Opposite tilt support is a passive coaxial bearing; a second solver revolute there would duplicate the servo-side axis and overconstrain this rigid-body model. Pan star positive pocket and tilt star pocket are fixed to their respective driven rigid bodies in the loaded direction; physical backlash/spline fit remains provisional."
+    doc.recompute()
+    solver=asm.solve()
+    log("solver_result="+str(solver))
+    log("joint_count="+str(len([j for j in jg.Group if hasattr(j,"JointType")]))+" revolute_count=2 grounded_count=1")
+    if solver != 0: raise RuntimeError("Native assembly solver did not return 0")
+    # Show only the three native assembly links; preserve source geometry in document, hidden.
+    for obj in doc.Objects:
+        if hasattr(obj,"ViewObject"):
+            obj.ViewObject.Visibility=False
+    for l in links: l.ViewObject.Visibility=True
+    asm.ViewObject.Visibility=True
+    doc.recompute()
+    doc.saveAs(FCSTD)
+    log("saved="+FCSTD)
+    # Manual joint-coordinate transforms applied to the actual FreeCAD assembly links.
+    origin=App.Vector(0,0,0); zaxis=App.Vector(0,0,1); pvt=App.Vector(-41,0,78); xaxis=App.Vector(1,0,0)
+    def rotplace(center,axis,degrees):
+        r=App.Rotation(axis,degrees); return App.Placement(center-r.multVec(center),r)
+    def state(pan,tilt):
+        P=rotplace(origin,zaxis,pan)
+        T=rotplace(pvt,xaxis,tilt)
+        links[0].Placement=App.Placement()
+        links[1].Placement=P
+        links[2].Placement=P.multiply(T)
+        doc.recompute()
+        # Joint connector centers must coincide; directions differ only by commanded rotation.
+        jpan1=links[0].Placement.multiply(panj.Placement1); jpan2=links[1].Placement.multiply(panj.Placement2)
+        jtilt1=links[1].Placement.multiply(tiltj.Placement1); jtilt2=links[2].Placement.multiply(tiltj.Placement2)
+        poserr=max((jpan1.Base-jpan2.Base).Length,(jtilt1.Base-jtilt2.Base).Length)
+        if poserr>1e-6: raise RuntimeError("Joint connector separation at state: "+str(poserr))
+        return poserr
+    view=Gui.activeDocument().activeView()
+    view.viewAxonometric(); view.fitAll()
+    view.saveImage(os.path.join(OUT,"RENDERS","assembled_neutral_isometric.png"),1600,1200)
+    states=[]
+    for axisname,vals in [("pan",[-90,0,90]),("tilt",[-30,0,30])]:
+        for v in vals:
+            p,t=(v,0) if axisname=="pan" else (0,v)
+            err=state(p,t)
+            fn=f"{axisname}_{v:+04d}_deg.png".replace("+","p").replace("-","m")
+            view.viewAxonometric(); view.fitAll(); view.saveImage(os.path.join(OUT,"RENDERS",fn),1600,1200)
+            states.append({"mode":axisname+"_only","pan_joint_deg":p,"tilt_joint_deg":t,"connector_center_error_mm":err,"image":fn})
+    for p,t in [(-90,-30),(90,30)]:
+        err=state(p,t)
+        fn=f"simultaneous_pan_{p:+d}_tilt_{t:+d}.png".replace("+","p").replace("-","m")
+        view.viewAxonometric(); view.fitAll(); view.saveImage(os.path.join(OUT,"RENDERS",fn),1600,1200)
+        states.append({"mode":"simultaneous","pan_joint_deg":p,"tilt_joint_deg":t,"connector_center_error_mm":err,"image":fn})
+    # Actual source-part closeups, with the respective stator cases visible.
+    for obj in doc.Objects:
+        if hasattr(obj,"ViewObject"): obj.ViewObject.Visibility=False
+    pan_close=["Base_EarMount_ThrustSupport","Pan_Replaceable_ThrustRing","PanServo_SG90_Reference","PanOriginalScrew_PROVISIONAL","Pan_OriginalStar_PROVISIONAL","PanYoke_EarBracket_KeyedDrive","Pan_KeyedHorn_Cover","PanDrive_M3x10_0","PanDrive_M3x10_1","PanDrive_M3x10_2","PanDrive_M3x10_3","PanEar_M1p6x8_0","PanEar_M1p6x8_1"]
+    for n in pan_close: doc.getObject(n).ViewObject.Visibility=True
+    view.viewAxonometric(); view.fitAll(); view.saveImage(os.path.join(OUT,"RENDERS","pan_servo_horn_closeup.png"),1600,1200)
+    for obj in doc.Objects:
+        if hasattr(obj,"ViewObject"): obj.ViewObject.Visibility=False
+    tilt_close=["PanYoke_EarBracket_KeyedDrive","TiltServo_SG90_Reference","Tilt_OriginalStar_PROVISIONAL","TiltOriginalScrew_PROVISIONAL","TiltCradle_KeyedHorn_CameraFrame","Tilt_KeyedHorn_CaptiveCover","Tilt_Removable_IdlerPillar","Tilt_Journal_FlangedSleeve","TiltIdler_M3x12","TiltIdler_M3_Washer","TiltEar_M1p6x8_0","TiltEar_M1p6x8_1"]
+    for n in tilt_close: doc.getObject(n).ViewObject.Visibility=True
+    view.viewAxonometric(); view.fitAll(); view.saveImage(os.path.join(OUT,"RENDERS","tilt_servo_horn_closeup.png"),1600,1200)
+    for obj in doc.Objects:
+        if hasattr(obj,"ViewObject"): obj.ViewObject.Visibility=False
+    for l in links: l.ViewObject.Visibility=True
+    # Actual FreeCAD viewport frames for independent and simultaneous motion.
+    frames=os.path.join(OUT,"RENDERS","animation_frames"); os.makedirs(frames,exist_ok=True)
+    frame_records=[]; frame_no=0
+    sequences=[]
+    sequences.extend([("pan_only",p,0) for p in range(-90,91,10)])
+    sequences.extend([("tilt_only",0,t) for t in range(-30,31,5)])
+    sequences.extend([("simultaneous",p,int(round(-30.0+p*30.0/90.0))) for p in range(-90,91,10)])
+    view.viewAxonometric(); view.fitAll()
+    for mode,p,t in sequences:
+        err=state(p,t)
+        fn="frame_%03d.png"%frame_no
+        view.saveImage(os.path.join(frames,fn),1200,900)
+        frame_records.append({"frame":frame_no,"mode":mode,"pan_joint_deg":p,"tilt_joint_deg":t,"connector_center_error_mm":err,"image":"animation_frames/"+fn})
+        frame_no+=1
+    for l in links: l.ViewObject.Visibility=True
+    state(0,0)
+    doc.recompute(); doc.save()
+    with open(os.path.join(OUT,"CHECKS","transform_states.json"),"w",encoding="utf-8") as f:
+        json.dump({"states":states,"animation_frames":frame_records,"pan_joint_axis":[0,0,1],"pan_axis_center_mm":[0,0,35],"tilt_joint_axis":[1,0,0],"tilt_axis_center_mm":[-41,0,78],"limits":{"pan_deg":[-90,90],"tilt_deg":[-30,30]},"limits_are":"CAD collision-screen/soft limits, not physical hard stops or measured servo command endpoints"},f,indent=2)
+    log("rendered_states="+str(len(states)))
+    log("completed=1")
+except Exception:
+    log(traceback.format_exc())
+finally:
+    try:
+        App.closeDocument(App.ActiveDocument.Name)
+    except Exception: pass
+    try:
+        Gui.getMainWindow().close()
+    except Exception: pass
+
+
+
+
+
+

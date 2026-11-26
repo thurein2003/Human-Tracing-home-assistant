@@ -1,0 +1,18 @@
+{
+  "reopened": true,
+  "baseline_volume_mm3": 1005.8352997826917,
+  "front_edit_depth_mm": 3.1,
+  "front_tool_actual_height_mm": 3.1,
+  "front_edit_volume_mm3": 1008.5457088445759,
+  "front_volume_delta_mm3": 2.7104090618842065,
+  "back_edit_depth_mm": 0.5,
+  "back_tool_actual_height_mm": 0.5,
+  "back_edit_volume_mm3": 1004.2645034558965,
+  "back_volume_delta_mm3": -1.5707963267951754,
+  "restored_front_depth_mm": 3.2,
+  "restored_back_depth_mm": 0.3,
+  "restored_web_mm": 0.7999999999999996,
+  "restored_volume_mm3": 1005.8352997826917,
+  "final_valid": true,
+  "final_solids": 1
+}

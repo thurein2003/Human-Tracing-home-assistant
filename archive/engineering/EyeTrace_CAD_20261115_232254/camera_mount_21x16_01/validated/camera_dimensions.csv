@@ -1,0 +1,11 @@
+Dimension,Value,Unit,Source/status,Independent native parameter
+Horizontal mounting-hole center spacing,21,mm,USER SUPPLIED NOMINAL,CameraPitchX
+Vertical mounting-hole center spacing,16,mm,USER SUPPLIED NOMINAL,CameraPitchZ
+PCB outside width,38,mm,"UNVERIFIED prior assumption, independent of pitch",CameraPCBWidth
+PCB outside height,38,mm,"UNVERIFIED prior assumption, independent of pitch",CameraPCBHeight
+PCB thickness,1.6,mm,UNVERIFIED,CameraPCBThickness
+Actual PCB hole diameter,2.2,mm,UNVERIFIED,CameraPCBMountHoleDiameter
+Printed plate clearance-hole diameter,2.4,mm,"DESIGN CHOICE, physical fit unverified",CameraPlateHoleDiameter
+Lens reference envelope diameter,14,mm,UNVERIFIED,CameraLensEnvelopeDiameter
+Lens projection,10,mm,UNVERIFIED,CameraLensProjection
+Printed plate lens clearance diameter,18,mm,"DESIGN CHOICE, actual optical/mechanical fit unverified",CameraLensClearanceDiameter

@@ -1,0 +1,54 @@
+import json
+from pathlib import Path
+import FreeCAD as App, Part, MeshPart, Import
+from FreeCAD import Vector as V
+OUT=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_02")
+p=json.loads((OUT/'prototype_02_parameters.json').read_text(encoding='utf-8'))
+adj=p['short_arm_adjustment']
+if adj['interpretation']!='1 mm per side':
+    raise RuntimeError('Short-arm adjustment must remain the user-confirmed 1 mm per side for this revision.')
+q=p['photo_guided_provisional_profile_mm']; total=p['confirmed_user_dimensions']['pocket_total_lateral_clearance']
+short_extra=2.0 # +1 mm pocket width on each side, in addition to base total clearance
+short_extension_each_end=1.0
+def rounded_taper_pair(span,root_w,tip_w,height,axis='x',profile_extra=0.0):
+    # Two tapered arms run from the center crossing to rounded distal ends.
+    root_w+=profile_extra; tip_w+=profile_extra
+    tip_r=tip_w/2.0; cap_center=span/2.0-tip_r; x0=0.0
+    shapes=[]
+    for sign in (-1.0,1.0):
+        pts=[V(sign*x0,-root_w/2,0),V(sign*cap_center,-tip_w/2,0),V(sign*cap_center,tip_w/2,0),V(sign*x0,root_w/2,0),V(sign*x0,-root_w/2,0)]
+        face=Part.Face(Part.Wire(Part.makePolygon(pts)))
+        bar=face.extrude(V(0,0,height))
+        cap=Part.makeCylinder(tip_r,height,V(sign*cap_center,0,0))
+        shapes.append(bar.fuse(cap))
+    s=shapes[0].fuse(shapes[1]).removeSplitter()
+    if axis=='y': s.rotate(V(0,0,0),V(0,0,1),90)
+    return s
+def cross_pocket(height):
+    # Total radial size increase equals 0.20 mm across width: 0.10 mm per side.
+    x=rounded_taper_pair(35+total,q['long_arm_width_at_root'],q['long_arm_width_at_tip'],height,'x',total)
+    y=rounded_taper_pair(18+2*short_extension_each_end+total,q['short_arm_width_at_root_before_user_adjustment'],q['short_arm_width_at_tip_before_user_adjustment'],height,'y',short_extra+total)
+    return x.fuse(y).removeSplitter()
+plate=Part.makeBox(43,27,4,V(-21.5,-13.5,0))
+cut=cross_pocket(1.7); cut.translate(V(0,0,2.3)); plate=plate.cut(cut)
+# Confirmed 7 mm hub with 0.20 mm diametral clearance; published hub height remains provisional.
+plate=plate.cut(Part.makeCylinder(3.6,2.7,V(0,0,1.3)))
+plate=plate.cut(Part.makeCylinder(q['retaining_screw_access_diameter']/2,5,V(0,0,-0.5)))
+for x in (-17,-15): plate=plate.fuse(Part.makeCylinder(0.65,0.35,V(x,-9.5,4)))
+plate=plate.removeSplitter()
+if not plate.isValid() or len(plate.Solids)!=1: raise RuntimeError('Generated coupon is not one valid solid')
+doc=App.newDocument('CrossHorn_Single_FitTest_02')
+o=doc.addObject('PartDesign::Feature','CrossHornCouponTapered020'); o.Label='Single tapered cross-horn coupon - 0.20 mm base clearance'
+o.Shape=plate
+for n,v in [('LongSpan',35.0),('ShortSpanBaseline',18.0),('ShortPocketSpanAfterEndExtensions',18+2*short_extension_each_end+total),('HubDiameter',7.0),('BaseTotalLateralClearance',total),('ShortArmAddedWidth',short_extra),('ShortArmExtensionPerEnd',short_extension_each_end)]:
+    o.addProperty('App::PropertyLength',n,'Parameters'); setattr(o,n,v)
+o.addProperty('App::PropertyString','FitStatus','Engineering'); o.FitStatus='PROVISIONAL - photo-guided profile; physical horn fit required'
+o.addProperty('App::PropertyString','ShortAdjustmentInterpretation','Engineering'); o.ShortAdjustmentInterpretation=adj['interpretation']
+o.addProperty('App::PropertyString','UnverifiedDimensions','Engineering'); o.UnverifiedDimensions='Long and short arm widths/radii, hub offset, horn plate and hub heights, center screw tool clearance'
+doc.recompute(); doc.saveAs(str(OUT/'CrossHorn_Single_FitTest_02.FCStd'))
+mesh=MeshPart.meshFromShape(Shape=plate,LinearDeflection=0.05,AngularDeflection=0.10,Relative=False)
+mesh.write(str(OUT/'CrossHorn_Single_FitTest_02.stl'))
+Import.export([o],str(OUT/'CrossHorn_Single_FitTest_02.step'))
+report={'cad_valid':plate.isValid(),'solid_count':len(plate.Solids),'mesh_facets':len(mesh.Facets),'mesh_solid':mesh.isSolid(),'bbox_mm':[plate.BoundBox.XLength,plate.BoundBox.YLength,plate.BoundBox.ZLength],'confirmed_baseline_span_mm':[35,18],'short_pocket_span_mm':18+2*short_extension_each_end+total,'short_extension_each_end_mm':short_extension_each_end,'short_pocket_added_width_each_side_mm':1.0,'base_total_lateral_clearance_mm':total,'short_extra_total_width_mm':short_extra,'hub_diameter_mm':7.0,'hub_recess_diameter_mm':7.2,'hub_recess_depth_mm':2.7,'retaining_access_diameter_mm':q['retaining_screw_access_diameter'],'short_adjustment':adj['interpretation'],'profile_parameters':q,'secondary_holes':'omitted'}
+(OUT/'prototype_02_validation.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+print(json.dumps(report,indent=2))

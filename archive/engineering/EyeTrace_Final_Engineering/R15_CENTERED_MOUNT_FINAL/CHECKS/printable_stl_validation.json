@@ -1,0 +1,187 @@
+{
+  "printable_stl_count": 13,
+  "parts": [
+    {
+      "file": "Base_EarMount_ThrustSupport.stl",
+      "facets": 5460,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -40.0,
+        -35.0,
+        0.0,
+        40.0,
+        35.0,
+        36.5
+      ]
+    },
+    {
+      "file": "CameraPlate_21x14.stl",
+      "facets": 3828,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -28.0,
+        -16.0,
+        0.0,
+        28.0,
+        16.0,
+        3.0
+      ]
+    },
+    {
+      "file": "PCB_Spacer_Lower_Left.stl",
+      "facets": 840,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -2.499720335006714,
+        -2.5,
+        0.0,
+        2.499720335006714,
+        2.4988811016082764,
+        3.0
+      ]
+    },
+    {
+      "file": "PCB_Spacer_Lower_Right.stl",
+      "facets": 840,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -2.499720335006714,
+        -2.5,
+        0.0,
+        2.499720335006714,
+        2.4988811016082764,
+        3.0
+      ]
+    },
+    {
+      "file": "PCB_Spacer_Upper_Left.stl",
+      "facets": 840,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -2.499720335006714,
+        -2.5,
+        0.0,
+        2.499720335006714,
+        2.4988811016082764,
+        3.0
+      ]
+    },
+    {
+      "file": "PCB_Spacer_Upper_Right.stl",
+      "facets": 840,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -2.499720335006714,
+        -2.5,
+        0.0,
+        2.499720335006714,
+        2.4988811016082764,
+        3.0
+      ]
+    },
+    {
+      "file": "PanYoke_EarBracket_KeyedDrive.stl",
+      "facets": 9942,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -51.099998474121094,
+        -35.296051025390625,
+        0.0,
+        51.099998474121094,
+        35.296051025390625,
+        70.0
+      ]
+    },
+    {
+      "file": "Pan_KeyedHorn_Cover.stl",
+      "facets": 4312,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -23.9892578125,
+        -23.997314453125,
+        0.0,
+        24.0,
+        23.997314453125,
+        4.199999809265137
+      ]
+    },
+    {
+      "file": "Pan_Replaceable_ThrustRing.stl",
+      "facets": 2112,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -31.98567771911621,
+        -31.99641990661621,
+        0.0,
+        32.0,
+        31.99641990661621,
+        1.0
+      ]
+    },
+    {
+      "file": "TiltCradle_KeyedHorn_CameraFrame.stl",
+      "facets": 9108,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -22.5,
+        -22.700000762939453,
+        -7.105427357601002e-15,
+        22.5,
+        22.697650909423828,
+        77.0
+      ]
+    },
+    {
+      "file": "Tilt_Journal_FlangedSleeve.stl",
+      "facets": 1260,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -3.5,
+        -3.499608278274536,
+        0.0,
+        3.4984335899353027,
+        3.499608278274536,
+        4.099999904632568
+      ]
+    },
+    {
+      "file": "Tilt_KeyedHorn_CaptiveCover.stl",
+      "facets": 4312,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -20.9906005859375,
+        -20.997650146484375,
+        0.0,
+        21.0,
+        20.997650146484375,
+        4.199999809265137
+      ]
+    },
+    {
+      "file": "Tilt_Removable_IdlerPillar.stl",
+      "facets": 1300,
+      "watertight_solid": true,
+      "connected_components": 1,
+      "bbox_mm": [
+        -8.0,
+        -28.5,
+        0.0,
+        8.0,
+        28.5,
+        57.0
+      ]
+    }
+  ]
+}

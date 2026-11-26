@@ -1,0 +1,9671 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "parameters": {
+    "servo_body": [
+      23,
+      12,
+      23
+    ],
+    "servo_clearance": 0.6,
+    "camera_envelope": [
+      38,
+      38,
+      30
+    ],
+    "pan_limit_deg": 60,
+    "tilt_limit_deg": 30,
+    "units": "mm",
+    "status": "PROTOTYPE: physical fit unverified"
+  },
+  "solids": {
+    "Base": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29477.554152872006
+    },
+    "PanServoRetainer": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4791.571363859417
+    },
+    "TiltServoRetainer": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1907.235070003009
+    },
+    "PanYoke": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 35184.90036814296
+    },
+    "TiltCameraCradle": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18964.359917838614
+    },
+    "PanHornClamp": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2154.0801268236464
+    },
+    "TiltHornClamp": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1235.164275648631
+    }
+  },
+  "meshes": {
+    "Base": {
+      "facets": 2716,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        80.0,
+        70.0,
+        29.0
+      ]
+    },
+    "PanServoRetainer": {
+      "facets": 1032,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        31.0,
+        64.0,
+        2.5
+      ]
+    },
+    "TiltServoRetainer": {
+      "facets": 692,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        26.0,
+        30.0,
+        2.5
+      ]
+    },
+    "PanYoke": {
+      "facets": 6420,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        114.5,
+        50.0,
+        60.0
+      ]
+    },
+    "TiltCameraCradle": {
+      "facets": 3442,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        41.000000000000014,
+        40.0,
+        75.0
+      ]
+    },
+    "PanHornClamp": {
+      "facets": 2032,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        44.0,
+        44.0,
+        1.5
+      ]
+    },
+    "TiltHornClamp": {
+      "facets": 2032,
+      "closed": true,
+      "components": 1,
+      "bounds_mm": [
+        34.00000000000001,
+        34.0,
+        1.500000000000007
+      ]
+    }
+  },
+  "motion": {
+    "sampled_poses": 169,
+    "pair_checks": 37856,
+    "cache": "common pan rotation invariance reused for internal pairs",
+    "pan_range": [
+      -60,
+      60
+    ],
+    "tilt_range": [
+      -30,
+      30
+    ],
+    "pan_step": 10,
+    "tilt_step": 5,
+    "collision_count": 1053,
+    "collisions": [
+      {
+        "pan": -60,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": -60,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": -60,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": -60,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": -60,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -60,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -60,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": -60,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": -60,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": -60,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": -60,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": -60,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": -60,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": -60,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": -60,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": -60,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": -60,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": -60,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": -60,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": -60,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": -60,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": -60,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": -60,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": -60,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": -60,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": -60,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": -60,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": -60,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": -60,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -60,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -60,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": -60,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": -60,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": -60,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": -60,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -60,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": -60,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": -60,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": -60,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112872
+      },
+      {
+        "pan": -60,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -60,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": -60,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -60,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": -60,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": -50,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": -50,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": -50,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": -50,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": -50,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -50,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -50,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": -50,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": -50,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": -50,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": -50,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": -50,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": -50,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": -50,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": -50,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": -50,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": -50,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": -50,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": -50,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": -50,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": -50,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": -50,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": -50,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": -50,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": -50,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": -50,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": -50,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": -50,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": -50,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -50,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -50,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": -50,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": -50,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": -50,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": -50,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -50,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": -50,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": -50,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": -50,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -50,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -50,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": -50,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -50,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": -50,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": -40,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": -40,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": -40,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": -40,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": -40,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -40,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -40,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": -40,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": -40,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": -40,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": -40,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": -40,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": -40,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": -40,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": -40,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": -40,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": -40,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": -40,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": -40,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": -40,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": -40,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": -40,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": -40,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": -40,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": -40,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": -40,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": -40,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": -40,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": -40,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -40,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -40,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": -40,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": -40,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": -40,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": -40,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -40,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": -40,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": -40,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": -40,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -40,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 4.007547593323299
+      },
+      {
+        "pan": -40,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": -40,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -40,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": -40,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": -30,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": -30,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": -30,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": -30,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": -30,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -30,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -30,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": -30,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": -30,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": -30,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": -30,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": -30,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": -30,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": -30,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": -30,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": -30,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": -30,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": -30,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": -30,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": -30,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": -30,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": -30,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": -30,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": -30,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": -30,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": -30,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": -30,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": -30,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": -30,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -30,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -30,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": -30,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": -30,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": -30,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": -30,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -30,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": -30,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": -30,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": -30,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -30,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -30,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 17.79360718311287
+      },
+      {
+        "pan": -30,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": -30,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -30,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": -30,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": -20,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": -20,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": -20,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": -20,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": -20,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -20,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -20,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": -20,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": -20,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": -20,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": -20,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": -20,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": -20,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": -20,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": -20,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": -20,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": -20,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": -20,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": -20,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": -20,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": -20,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": -20,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": -20,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": -20,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": -20,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": -20,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": -20,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": -20,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": -20,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -20,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -20,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": -20,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": -20,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": -20,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": -20,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -20,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": -20,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": -20,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": -20,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": -20,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": -20,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -20,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": -20,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": -10,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": -10,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": -10,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": -10,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": -10,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -10,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -10,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": -10,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": -10,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": -10,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": -10,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": -10,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": -10,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": -10,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": -10,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": -10,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": -10,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": -10,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": -10,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": -10,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": -10,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": -10,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": -10,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": -10,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": -10,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": -10,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": -10,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": -10,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": -10,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -10,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": -10,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": -10,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": -10,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": -10,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": -10,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": -10,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": -10,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": -10,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": -10,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": -10,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": -10,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": -10,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": -10,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": 0,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": 0,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": 0,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": 0,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": 0,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 0,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 0,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": 0,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": 0,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": 0,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": 0,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": 0,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": 0,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": 0,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": 0,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": 0,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": 0,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": 0,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": 0,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": 0,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": 0,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": 0,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": 0,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": 0,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": 0,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": 0,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": 0,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": 0,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": 0,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 0,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 0,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": 0,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": 0,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": 0,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": 0,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 0,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": 0,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": 0,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": 0,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 0,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 0,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": 0,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 0,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": 0,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": 10,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": 10,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": 10,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": 10,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": 10,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 10,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 10,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": 10,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": 10,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": 10,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": 10,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": 10,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": 10,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": 10,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": 10,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": 10,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": 10,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": 10,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": 10,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": 10,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": 10,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": 10,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": 10,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": 10,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": 10,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": 10,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": 10,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": 10,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": 10,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 10,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 10,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": 10,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": 10,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": 10,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": 10,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 10,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": 10,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": 10,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": 10,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 10,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": 10,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 10,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": 10,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": 20,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": 20,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": 20,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": 20,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": 20,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 20,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 20,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": 20,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": 20,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": 20,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": 20,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": 20,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": 20,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": 20,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": 20,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": 20,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": 20,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": 20,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": 20,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": 20,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": 20,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": 20,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": 20,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": 20,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": 20,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": 20,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": 20,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": 20,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": 20,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 20,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 20,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": 20,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": 20,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": 20,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": 20,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 20,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": 20,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": 20,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": 20,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 20,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.63008640414398
+      },
+      {
+        "pan": 20,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": 20,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 20,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": 20,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": 30,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": 30,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": 30,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": 30,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": 30,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 30,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 30,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": 30,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": 30,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": 30,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": 30,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": 30,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": 30,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": 30,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": 30,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": 30,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": 30,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": 30,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": 30,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": 30,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": 30,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": 30,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": 30,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": 30,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": 30,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": 30,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": 30,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": 30,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": 30,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 30,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 30,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": 30,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": 30,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": 30,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": 30,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 30,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": 30,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": 30,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": 30,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 30,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 17.7936071831129
+      },
+      {
+        "pan": 30,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 30,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": 30,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 30,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": 30,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": 40,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": 40,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": 40,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": 40,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": 40,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 40,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 40,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": 40,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": 40,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": 40,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": 40,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": 40,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": 40,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": 40,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": 40,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": 40,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": 40,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": 40,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": 40,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": 40,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": 40,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": 40,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": 40,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": 40,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": 40,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": 40,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": 40,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": 40,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": 40,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 40,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 40,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": 40,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": 40,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": 40,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": 40,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 40,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": 40,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": 40,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": 40,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_2"
+        ],
+        "volume_mm3": 4.007547593323294
+      },
+      {
+        "pan": 40,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 40,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": 40,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 40,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": 40,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": 50,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": 50,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": 50,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": 50,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": 50,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 50,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 50,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": 50,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": 50,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": 50,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": 50,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": 50,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": 50,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": 50,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": 50,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": 50,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": 50,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": 50,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": 50,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": 50,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": 50,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": 50,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": 50,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": 50,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": 50,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": 50,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": 50,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": 50,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": 50,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 50,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 50,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": 50,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": 50,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": 50,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": 50,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 50,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": 50,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": 50,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": 50,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 50,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 4.007547593323293
+      },
+      {
+        "pan": 50,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 50,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": 50,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 50,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": 50,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      },
+      {
+        "pan": 60,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": -30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.575216010360045
+      },
+      {
+        "pan": 60,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601035995
+      },
+      {
+        "pan": 60,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036018
+      },
+      {
+        "pan": 60,
+        "tilt": -30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.36850164783545
+      },
+      {
+        "pan": 60,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": -25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 60,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 60,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036006
+      },
+      {
+        "pan": 60,
+        "tilt": -25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.31662284782783
+      },
+      {
+        "pan": 60,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": -20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.69382550160878
+      },
+      {
+        "pan": 60,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.69382550160826
+      },
+      {
+        "pan": 60,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.6938255016093
+      },
+      {
+        "pan": 60,
+        "tilt": -20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985071
+      },
+      {
+        "pan": 60,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": -15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411756
+      },
+      {
+        "pan": 60,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641106
+      },
+      {
+        "pan": 60,
+        "tilt": -15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.494647466410456
+      },
+      {
+        "pan": 60,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": -10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.28595806042466
+      },
+      {
+        "pan": 60,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060424264
+      },
+      {
+        "pan": 60,
+        "tilt": -10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.28595806042459
+      },
+      {
+        "pan": 60,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": -5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068607
+      },
+      {
+        "pan": 60,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691068338
+      },
+      {
+        "pan": 60,
+        "tilt": -5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.4922846910675
+      },
+      {
+        "pan": 60,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": 0,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": 5,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 11.492284691068352
+      },
+      {
+        "pan": 60,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 11.492284691067937
+      },
+      {
+        "pan": 60,
+        "tilt": 5,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 11.492284691067514
+      },
+      {
+        "pan": 60,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": 10,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 28.285958060423432
+      },
+      {
+        "pan": 60,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 28.285958060423624
+      },
+      {
+        "pan": 60,
+        "tilt": 10,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 28.285958060422978
+      },
+      {
+        "pan": 60,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": 15,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 43.494647466411095
+      },
+      {
+        "pan": 60,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 60,
+        "tilt": 15,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 43.49464746641063
+      },
+      {
+        "pan": 60,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": 20,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 55.6938255016089
+      },
+      {
+        "pan": 60,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 55.693825501608146
+      },
+      {
+        "pan": 60,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 55.69382550160955
+      },
+      {
+        "pan": 60,
+        "tilt": 20,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 7.325650448985121
+      },
+      {
+        "pan": 60,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": 25,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.57521601036002
+      },
+      {
+        "pan": 60,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.575216010359966
+      },
+      {
+        "pan": 60,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.575216010360016
+      },
+      {
+        "pan": 60,
+        "tilt": 25,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 21.316622847827865
+      },
+      {
+        "pan": 60,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_0"
+        ],
+        "volume_mm3": 24.630086404143977
+      },
+      {
+        "pan": 60,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_1"
+        ],
+        "volume_mm3": 17.793607183112847
+      },
+      {
+        "pan": 60,
+        "tilt": 30,
+        "pair": [
+          "pan_retainer",
+          "PanHorn_M3_3"
+        ],
+        "volume_mm3": 24.630086404143974
+      },
+      {
+        "pan": 60,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_0"
+        ],
+        "volume_mm3": 61.5752160103602
+      },
+      {
+        "pan": 60,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_1"
+        ],
+        "volume_mm3": 61.57521601036008
+      },
+      {
+        "pan": 60,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_2"
+        ],
+        "volume_mm3": 61.57521601036003
+      },
+      {
+        "pan": 60,
+        "tilt": 30,
+        "pair": [
+          "yoke",
+          "TiltHorn_M3_3"
+        ],
+        "volume_mm3": 36.368501647835394
+      }
+    ],
+    "minimum_separation_mm": 0.0,
+    "limitation": "sampled rigid envelopes only; includes nominal M3 head/nut envelopes; excludes wires, actual threads, horn deformation, servo torque and continuous sweep; no installed motion stops"
+  },
+  "hardware_fit": "NOT VALIDATED",
+  "joint_stacks": {
+    "pan_horn": {
+      "grip_mm": 5.5,
+      "nut_mm": 2.4,
+      "thread_projection_mm": 2.1
+    },
+    "tilt_horn": {
+      "grip_mm": 5.5,
+      "nut_mm": 2.4,
+      "thread_projection_mm": 2.1
+    },
+    "idler": {
+      "grip_mm": 6,
+      "nut_mm": 2.4,
+      "thread_projection_mm": 1.6
+    },
+    "servo_retainers": {
+      "grip_mm": 5,
+      "nut_mm": 2.4,
+      "thread_projection_mm": 2.6
+    },
+    "assumptions": "10 mm under-head screws, 2.4 mm nuts, 2 mm horn web; no washers; no clamping torque validated"
+  },
+  "release_status": "NOT PRINT-RELEASED: measurement and attachment blockers",
+  "bed": {
+    "bounds_mm": [
+      215.5,
+      170.0,
+      75.0
+    ],
+    "minimum_gap_mm": 8,
+    "fits_assumed_260_square": true,
+    "printer_bed_dimension": "assumed 260 mm; verify exact K2 variant",
+    "orientation": "base and yoke upright; camera cradle on side; supports required for yoke and cradle"
+  }
+}

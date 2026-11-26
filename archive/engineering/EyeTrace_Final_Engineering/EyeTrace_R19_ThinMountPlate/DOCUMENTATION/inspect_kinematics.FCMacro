@@ -1,0 +1,6 @@
+﻿import FreeCAD as App,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R19_ThinMountPlate\CAD\EyeTrace_R19_ThinMountPlate.FCStd'; d=App.openDocument(p); rows=[]
+for n in ['PrintedParts','Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing','PanServo_SG90_Reference','PanYoke_EarBracket_KeyedDrive','Pan_OriginalStar_PROVISIONAL','Pan_KeyedHorn_Cover','TiltServo_SG90_Reference','Tilt_OriginalStar_PROVISIONAL','TiltCradle_KeyedHorn_CameraFrame','Tilt_Removable_IdlerPillar','Tilt_KeyedHorn_CaptiveCover','CameraPlate_Cut007','Camera_WireExit_KEEP_OUT']:
+ o=d.getObject(n); rows.append({'name':n,'group':[x.Name for x in o.Group] if n=='PrintedParts' else None,'props':[(p,str(getattr(o,p))) for p in o.PropertiesList if 'kinem' in p.lower() or 'motion' in p.lower() or p in ('Printable','KinematicGroup')]})
+print(json.dumps(rows,indent=2))
+

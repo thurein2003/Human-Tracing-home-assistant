@@ -1,0 +1,106 @@
+{
+  "freecad_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)",
+    "Unknown",
+    "2026/09/28 13:46:34",
+    "(HEAD detached at 4fd3bf320)",
+    "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+  ],
+  "assembly_file": "EyeTrace_Final_Engineering\\EyeTrace_R19_ThinMountPlate\\CAD\\EyeTrace_R19_ThinMountPlate.FCStd",
+  "component": "PanYoke_EarBracket_KeyedDrive",
+  "solid_valid": true,
+  "solid_count": 1,
+  "source_volume_mm3": 38324.18031262933,
+  "new_volume_mm3": 30038.90627376939,
+  "removed_volume_mm3": 8285.274038859929,
+  "removed_fraction_of_yoke": 0.21618920408141393,
+  "added_volume_mm3": 0.0,
+  "lower_horn_geometry_symdiff_mm3": 0.0,
+  "section_intervals_z_mm": {
+    "thin_plate": [
+      [
+        35.2,
+        37.7
+      ]
+    ],
+    "R15_floor_backing": [
+      [
+        36.9,
+        39.4
+      ]
+    ],
+    "mount_pad": [
+      [
+        37.0,
+        41.0
+      ]
+    ],
+    "center_boss_wall": [
+      [
+        36.9,
+        41.0
+      ]
+    ],
+    "outer_land": [
+      [
+        35.2,
+        41.0
+      ]
+    ]
+  },
+  "mount_holes_centers_and_radius": [
+    [
+      -18.0,
+      0.0,
+      3.5
+    ],
+    [
+      0.0,
+      -18.0,
+      3.5
+    ],
+    [
+      0.0,
+      18.0,
+      3.5
+    ],
+    [
+      18.0,
+      0.0,
+      3.5
+    ]
+  ],
+  "center_hole_diameter_mm": 8.0,
+  "outer_land_radius_mm": 35.3,
+  "static_overlap_pairs_nonzero": [
+    {
+      "other": "Pan_OriginalStar_PROVISIONAL",
+      "R18_overlap_mm3": 5.655341824014158,
+      "R19_overlap_mm3": 5.655341824014158,
+      "delta": 0.0
+    }
+  ],
+  "static_pair_overlap_increased": false,
+  "printable_components": 13,
+  "step_reimport_solids": 1,
+  "stl": {
+    "facets": 51972,
+    "closed": true,
+    "components": 1,
+    "nonmanifold": false,
+    "self_intersections": false,
+    "bbox": [
+      12.999996185302734,
+      115.19999694824219,
+      13.004627227783203,
+      83.59536743164062,
+      0.0,
+      67.80000305175781
+    ]
+  },
+  "motion_basis": "R18_C1 motion screen pan \u221290\u2026+90\u00b0/5\u00b0 and tilt \u221245\u2026+45\u00b0/5\u00b0 plus combined poses; the R19 yoke is a strict subset of R18 C1 at identical placement, so positive-volume collisions cannot increase. Same intended travel assumptions; physical travel limits not certified.",
+  "release": "HOLD pending physical load/fit and exact Creality Print slice/toolpath check"
+}

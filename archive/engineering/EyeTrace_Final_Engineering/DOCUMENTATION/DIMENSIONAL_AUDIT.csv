@@ -1,0 +1,39 @@
+﻿Interface,Nominal CAD mm or definition,Source,Confidence / interpretation,Physical status,Hardware tolerance
+Both SG90: Case length,22.7,TowerPro table B + label image,High for published nominal; clone unverified,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Case width,12.2,TowerPro D + headline,High for published nominal; clone unverified,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Case main height,22.7,Juan Fenoy native Box.Height,Medium community reference; clone unverified,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Shoulder height above base,27,TowerPro C label image,Medium datum reading; clone unverified,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Output top above base,30.3 both,TowerPro A label image,High nominal drawing; headline29 conflicts,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Ear total span,32.3,TowerPro E label image,High nominal drawing; clone unverified,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Ear bottom / thickness,15.9 /2.5,Juan Fenoy Box001 placement/height,Medium community reference; F17 datum unresolved,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Hole pitch / diameter / open slot,27.2 /2.0 /1.3,Native hole centers/radii and slot Box geometry,Medium community reference; no M3 fit claim,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Output center from case end,5.9,Native cylinder center and case end,Medium; clone unverified,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Boss diameter / height,12.2 /4.3,D width + C27 minus community case22.7,"Medium mixed-source envelope, unverified",UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Secondary gear boss diameter / offset,5 / -6.3 from output,Native cylinder geometry,Medium community reference,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Cable notch width / height / height from base,3.6 /1.2 /4.5,Native sketch bounds,Medium community reference; wire keep-out absent,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Output envelope diameter / length,5x3.3 both,Conservative rounded community shaft bounds; A-C height,Low as actual spline fit; smooth keep-out ONLY,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Axial bore diameter,1.7,Community shaft inner cylinder diameter,Low; NOT thread spec,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Spline teeth/profile,NOT MODELED,No authoritative spline drawing found,UNKNOWN; no fabricated teeth,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Star exterior arms / width / length / thickness,"unchanged, PROVISIONAL","Inherited EyeTrace placeholder, NOT measured",LOW; original star profile needed,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Star socket stepped bore,5.2x1.4 deep +1.9 through,PROVISIONAL clearance layout only,LOW; not a spline or physical mating claim,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Both SG90: Retaining screw shank/head/length,1.6 /3.5x1 /5,PROVISIONAL visualization only,LOW; thread/head/length must be measured,UNVERIFIED,NOT PUBLISHED / UNVERIFIED; community differences are not a tolerance band
+Star hub outside diameter,8,Inherited provisional horn,Low; both originals need fit results,UNVERIFIED,Not published / not measured
+Positive pocket side allowance / depth,0.25 per side /2.2,Repair design allowance,Proxy geometry checked; PETG unknown,UNVERIFIED,Not published / not measured
+Camera hole centers horizontal / vertical,21 /16,User supplied nominal,High nominal; physical coupon required,UNVERIFIED,Not published / not measured
+PCB outside dimensions / thickness,38 x38 /1.6,Inherited placeholder,Low; independent of center pattern,UNVERIFIED,Not published / not measured
+PCB mounting-hole diameter,2.2,Inherited placeholder,Low; not established by hole spacing,UNVERIFIED,Not published / not measured
+Plate hole diameter / plate thickness,2.4 /3,Camera revision design,Nominal geometry checked,UNVERIFIED,Not published / not measured
+Plate outside dimensions,56 x32,Camera revision design,Not PCB size,UNVERIFIED,Not published / not measured
+Frame attachment centers,X +/-24; Z68 and84,Camera revision M3 joint design,Distinct from PCB holes,UNVERIFIED,Not published / not measured
+Lens diameter / projection,14 /10,Inherited placeholder,Low; optical field unverified,UNVERIFIED,Not published / not measured
+Lens opening diameter,18,Camera plate design,2 radial clearance only against placeholder,UNVERIFIED,Not published / not measured
+PCB standoff OD / bore / length,5 /2.4 /3,Design,Actual component footprints unknown,UNVERIFIED,Not published / not measured
+Rear component uncertainty envelope,20 x24.4 x20,Inherited unmeasured keepout,Nine conflicts; actual footprint needed,UNVERIFIED,Not published / not measured
+Ribbon reserved width / thickness / length,20 /1 /18,Integration reservation,Not actual cable dimensions,UNVERIFIED,Not published / not measured
+Pan thrust ring thickness / radii,1 /27.5..32,Repair design,No bearing rating,UNVERIFIED,Not published / not measured
+Pan radial journal clearance,0.3 radial,Repair design,PETG fit unverified,UNVERIFIED,Not published / not measured
+Tilt sleeve OD / bore diameter,5 /5.2,Repair design,0.1 radial; physical fit unverified,UNVERIFIED,Not published / not measured
+Tilt sleeve projection / flange clearance,0.3 /0.2,Repair design,Nominal clamp separation checked,UNVERIFIED,Not published / not measured
+Servo screw nominal size / length,M1.6 /8,Conditional design choice,Not factory retaining screw specification,UNVERIFIED,Not published / not measured
+Camera screw nominal size / length,M2 /12,Conditional design choice,Actual PCB hole compatibility unknown,UNVERIFIED,Not published / not measured
+Structural screw / idler screw,M3 x10 / M3 x12,User stock / additional design requirement,Nominal grips checked; purchased dimensions unknown,UNVERIFIED,Not published / not measured

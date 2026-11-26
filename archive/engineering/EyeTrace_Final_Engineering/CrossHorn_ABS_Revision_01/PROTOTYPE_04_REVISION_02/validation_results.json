@@ -1,0 +1,69 @@
+{
+  "saved_fcstd_reopen": {
+    "opened": true,
+    "freecad_version": [
+      "1",
+      "1",
+      "4",
+      "20260928 (Git shallow)",
+      "Unknown",
+      "2026/09/28 13:46:34",
+      "(HEAD detached at 4fd3bf320)",
+      "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+    ],
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 992.5753448958644,
+    "bbox_mm": [
+      38.0,
+      23.0,
+      3.8
+    ]
+  },
+  "one_valid_solid": true,
+  "freecad_mesh_solid": true,
+  "stl_triangle_count": 5960,
+  "3mf_crc_ok": true,
+  "3mf_printable_objects": 1,
+  "3mf_triangles_match_stl": true,
+  "front_hub_diameter_depth_mm": [
+    7.4,
+    2.7
+  ],
+  "back_hub_diameter_depth_mm": [
+    8.0,
+    0.3
+  ],
+  "screw_access_diameter_mm": 4.5,
+  "front_floor_mm": 1.0999999999999996,
+  "arm_floor_mm": 2.0999999999999996,
+  "rear_front_web_mm": 0.7999999999999996,
+  "outer_wall_mm": 1.4,
+  "bbox_mm": [
+    37.99954088266202,
+    22.99965311561185,
+    3.8
+  ],
+  "bbox_with_4mm_brim_mm": [
+    45.99954088266202,
+    30.99965311561185,
+    3.8
+  ],
+  "k2_fit": true,
+  "settings": {
+    "layer_height": "0.2",
+    "wall_loops": "2",
+    "sparse_infill_density": "0%",
+    "enable_support": "0",
+    "brim_width": [
+      "4"
+    ],
+    "nozzle_temperature": [
+      "255"
+    ],
+    "hot_plate_temp": [
+      "100"
+    ]
+  },
+  "physical_fit": "UNVERIFIED"
+}

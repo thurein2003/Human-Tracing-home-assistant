@@ -1,0 +1,13 @@
+{
+  "source_3mf": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\PRINT\\Plate02_R23_UnifiedBottomBlock_IMPORTFIX_UNSLICED.3mf",
+  "output_3mf": "EyeTrace_Final_Engineering\\EyeTrace_R24_PanYoke_OneLayer\\PRINT\\Plate02_R24_PanYoke_OneLayer_UNSLICED.3mf",
+  "component_instances": 11,
+  "build_items": 11,
+  "replacement_mesh_vertices": 63221,
+  "replacement_mesh_triangles": 126522,
+  "nonmanifold_edges": 0,
+  "connected_mesh_components": 1,
+  "output_crc": "PASS",
+  "all_other_resources_and_placements_preserved": true,
+  "print_state": "UNSLICED; no Creality Print slicing result is claimed"
+}

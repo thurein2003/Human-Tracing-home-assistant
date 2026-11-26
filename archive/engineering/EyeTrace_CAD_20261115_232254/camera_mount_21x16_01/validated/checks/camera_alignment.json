@@ -1,0 +1,76 @@
+{
+  "user_nominal_hole_center_spacing_mm": [
+    21,
+    16
+  ],
+  "expected_offsets_from_pattern_center_XZ_mm": [
+    [
+      -10.5,
+      -8
+    ],
+    [
+      -10.5,
+      8
+    ],
+    [
+      10.5,
+      -8
+    ],
+    [
+      10.5,
+      8
+    ]
+  ],
+  "plate_measured_hole_centers_XZ_mm": [
+    [
+      -10.5,
+      -8.0
+    ],
+    [
+      -10.5,
+      8.0
+    ],
+    [
+      10.5,
+      -8.0
+    ],
+    [
+      10.5,
+      8.0
+    ]
+  ],
+  "pcb_measured_hole_centers_XZ_mm": [
+    [
+      -10.5,
+      -8.0
+    ],
+    [
+      -10.5,
+      8.0
+    ],
+    [
+      10.5,
+      -8.0
+    ],
+    [
+      10.5,
+      8.0
+    ]
+  ],
+  "pcb_outside_dimensions_mm": [
+    38.0,
+    38.0,
+    1.6
+  ],
+  "pcb_outside_status": "UNVERIFIED independent assumptions, NOT21x16",
+  "pcb_hole_diameter_mm": 2.2,
+  "plate_clearance_hole_diameter_mm": 2.4,
+  "lens_envelope_diameter_mm": 14,
+  "lens_clearance_diameter_mm": 18,
+  "lens_projection_mm": 10,
+  "non_pitch_hardware_dimensions_status": "UNVERIFIED",
+  "frame_slot_vertical_pitch_range_mm": [
+    16,
+    32
+  ]
+}

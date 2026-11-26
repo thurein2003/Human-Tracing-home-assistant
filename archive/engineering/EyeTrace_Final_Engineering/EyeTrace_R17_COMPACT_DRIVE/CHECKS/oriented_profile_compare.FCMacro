@@ -1,0 +1,25 @@
+﻿import FreeCAD as A, Part, json, math
+from FreeCAD import Vector as V, Rotation
+assy=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO\CAD\EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'
+master=r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'
+out=r'EyeTrace_Final_Engineering\EyeTrace_R17_COMPACT_DRIVE\CHECKS\oriented_profile_comparison.json'
+d=A.openDocument(assy); m=A.openDocument(master)
+base=m.getObject('BaseCoupon').Shape; final=m.getObject('FinalCoupon').Shape
+expected=base.cut(final)
+rows={}
+for name,objname,rot,top in [
+ ('PAN','PanYoke_EarBracket_KeyedDrive',Rotation(V(1,0,0),180),V(0,0,33)),
+ ('TILT','TiltCradle_KeyedHorn_CameraFrame',Rotation(V(0,1,0),-90),V(-41,0,78))]:
+ obj=d.getObject(objname)
+ def tr(sh):
+  q=sh.copy(); q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/math.pi); q.translate(top-rot.multVec(V(0,0,3.8))); return q
+ env=tr(base); exp=tr(expected)
+ actual=env.cut(obj.Shape)
+ common=actual.common(exp)
+ only_actual=actual.cut(exp)
+ only_expected=exp.cut(actual)
+ rows[name]={'component':objname,'envVol':env.Volume,'expectedVoidVol':exp.Volume,'actualVoidWithinHornEnvelope':actual.Volume,'commonVol':common.Volume,'actualOnlyVol':only_actual.Volume,'expectedOnlyVol':only_expected.Volume,'envBBox':[env.BoundBox.XMin,env.BoundBox.YMin,env.BoundBox.ZMin,env.BoundBox.XMax,env.BoundBox.YMax,env.BoundBox.ZMax],'expectedBB':[exp.BoundBox.XMin,exp.BoundBox.YMin,exp.BoundBox.ZMin,exp.BoundBox.XMax,exp.BoundBox.YMax,exp.BoundBox.ZMax],'actualValid':actual.isValid(),'actualSolids':len(actual.Solids)}
+with open(out,'w') as f: json.dump(rows,f,indent=2)
+print('WROTE',out)
+A.closeDocument(m.Name); A.closeDocument(d.Name)
+

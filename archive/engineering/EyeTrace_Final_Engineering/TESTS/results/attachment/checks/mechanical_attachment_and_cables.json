@@ -1,0 +1,325 @@
+{
+  "camera_module_installation": {
+    "sample_shifts_mm": [
+      -25,
+      -15,
+      -10,
+      -5,
+      -1,
+      0
+    ],
+    "unintended_penetrations": [],
+    "unverified_envelope_conflicts": [],
+    "procedure": "Remove four M3 camera-frame screws, then slide complete PCB/spacer/plate module forward. Real cables disconnected; keep-out uncertainties are not fit approvals."
+  },
+  "actual_contact_distances": [
+    {
+      "interface": "Pan ear seat",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "Tilt ear seat",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "Pan captive drive nut",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "Tilt captive drive nut",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "Idler nut-to-stationary-wall GAP",
+      "distance_mm": 0.29999999999999716
+    },
+    {
+      "interface": "Idler nut-to-sleeve CONTACT",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "Camera plate/frame CONTACT",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "Camera frame fastener/plate CONTACT",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "Camera frame fastener/cradle CONTACT",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "PCB spacer/plate CONTACT",
+      "distance_mm": 0.0
+    },
+    {
+      "interface": "PCB spacer/PCB CONTACT",
+      "distance_mm": 0.0
+    }
+  ],
+  "compound_internal_pairs": [
+    {
+      "component": "IdlerPillar_M3x10_0",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "IdlerPillar_M3x10_1",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanDrive_M3x10_0",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanDrive_M3x10_1",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanDrive_M3x10_2",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanDrive_M3x10_3",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltDrive_M3x10_0",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltDrive_M3x10_1",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltDrive_M3x10_2",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltDrive_M3x10_3",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltIdler_M3x12",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_0",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_0",
+      "solids": [
+        0,
+        2
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_0",
+      "solids": [
+        1,
+        2
+      ],
+      "volume": 0
+    },
+    {
+      "component": "PanEar_M1p6x8_1",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_1",
+      "solids": [
+        0,
+        2
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "PanEar_M1p6x8_1",
+      "solids": [
+        1,
+        2
+      ],
+      "volume": 0
+    },
+    {
+      "component": "TiltEar_M1p6x8_0",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_0",
+      "solids": [
+        0,
+        2
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_0",
+      "solids": [
+        1,
+        2
+      ],
+      "volume": 0
+    },
+    {
+      "component": "TiltEar_M1p6x8_1",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_1",
+      "solids": [
+        0,
+        2
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "TiltEar_M1p6x8_1",
+      "solids": [
+        1,
+        2
+      ],
+      "volume": 0
+    },
+    {
+      "component": "RailMount_Lower_M3x10_0",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "RailMount_Lower_M3x10_1",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "Camera_M2x12_Lower_Left",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "Camera_M2x12_Lower_Right",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "RailMount_Upper_M3x10_0",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "RailMount_Upper_M3x10_1",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "Camera_M2x12_Upper_Left",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    },
+    {
+      "component": "Camera_M2x12_Upper_Right",
+      "solids": [
+        0,
+        1
+      ],
+      "volume": 0.0
+    }
+  ],
+  "ribbon": {
+    "reserved_width_mm": 20.0,
+    "reserved_thickness_mm": 1.0,
+    "reserved_exit_length_mm": 18.0,
+    "actual_width_exit_bend_connector": "UNKNOWN",
+    "scope": "Flat outlet reservation checked in all motion poses; full flexible ribbon route not established"
+  },
+  "lens": {
+    "nominal_envelope_diameter_mm": 14.0,
+    "plate_clearance_diameter_mm": 18.0,
+    "nominal_radial_margin_mm": 2.0,
+    "actual_barrel_IR_FOV": "UNVERIFIED"
+  },
+  "release_status": "HOLD for hardware fit and unmeasured rear/cable/load evidence"
+}

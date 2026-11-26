@@ -1,0 +1,51 @@
+﻿import FreeCAD as App,Part,Mesh,MeshPart,json,math,os,traceback
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering\EyeTrace_R19_ThinMountPlate'; out=[]
+try:
+ d=App.openDocument(root+r'\CAD\EyeTrace_R19_ThinMountPlate.FCStd'); d.recompute(); oldd=App.openDocument(root+r'\BACKUP\EyeTrace_R18_CircularMount_Correction_01.FCStd'); old=oldd.getObject('PanYoke_EarBracket_KeyedDrive').Shape; new=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+ assert new.isValid() and len(new.Solids)==1
+ removed=old.cut(new).Volume; added=new.cut(old).Volume
+ # unchanged horn interface region and all material through the lower R15 pocket are exact
+ low=Part.makeBox(300,300,12,V(-150,-150,25)); diff=old.common(low).cut(new.common(low)).Volume+new.common(low).cut(old.common(low)).Volume
+ # thickness measurements via small-gauge BREP intersections
+ def zintervals(sh,x,y):
+  c=sh.common(Part.makeCylinder(.05,8,V(x,y,34),V(0,0,1)));return sorted([[round(s.BoundBox.ZMin,4),round(s.BoundBox.ZMax,4)] for s in c.Solids])
+ probes={'thin_plate':zintervals(new,10,10),'R15_floor_backing':zintervals(new,10,0),'mount_pad':zintervals(new,23.5,0),'center_boss_wall':zintervals(new,6,0),'outer_land':zintervals(new,34,0)}
+ # hole/land signatures by actual cylindrical faces
+ sig=[]
+ for f in new.Faces:
+  su=f.Surface
+  if type(su).__name__=='Cylinder' and abs(su.Axis.z)>.999:
+   c=su.Center; bb=f.BoundBox
+   if (abs(su.Radius-3.5)<.01 and abs(bb.ZMin-39)<.01 and abs(bb.ZMax-41)<.01): sig.append((round(c.x,3),round(c.y,3),round(su.Radius,3)))
+ holes=sorted(set(sig)); assert holes==[(-18.0,0.0,3.5),(0.0,-18.0,3.5),(0.0,18.0,3.5),(18.0,0.0,3.5)],holes
+ center=[f for f in new.Faces if type(f.Surface).__name__=='Cylinder' and abs(f.Surface.Radius-4)<.01 and abs(f.Surface.Axis.z)>.999 and abs(f.Surface.Center.x)<.01 and abs(f.Surface.Center.y)<.01]
+ assert center, 'Ø8 center bore missing'
+ assert diff<1e-4, 'lower/horn geometry changed '+str(diff)
+ assert removed>0 and added<1e-4
+ # Pairwise static collision comparison: geometric subtraction cannot increase pair intersections; measure actual assembly/reference pairs.
+ members=list(d.getObject('PrintedParts').Group)+list(d.getObject('HardwareReference').Group); oldmembers={o.Name:o for o in list(oldd.getObject('PrintedParts').Group)+list(oldd.getObject('HardwareReference').Group)}
+ vals=[]
+ for o in members:
+  if o.Name==new and False: continue
+  if o.Name=='PanYoke_EarBracket_KeyedDrive': continue
+  if not hasattr(o,'Shape') or o.Shape.isNull():continue
+  source=oldmembers.get(o.Name)
+  if source is None:continue
+  # Compare only pairs involving the changed yoke.
+  a=old.BoundBox;b=source.Shape.BoundBox
+  if any(min(getattr(a,t+'Max'),getattr(b,t+'Max'))-max(getattr(a,t+'Min'),getattr(b,t+'Min'))<=0 for t in 'XYZ'): continue
+  ov=old.common(source.Shape).Volume; nv=new.common(o.Shape).Volume
+  if nv>ov+1e-5: raise Exception('new penetration increased against '+o.Name)
+  if ov>1e-4: vals.append({'other':o.Name,'R18_overlap_mm3':ov,'R19_overlap_mm3':nv,'delta':nv-ov})
+ # Export the 13 printable components as an assembly STEP, preserving all other component placements/geometry.
+ pp=list(d.getObject('PrintedParts').Group); assert len(pp)==13
+ Part.export(pp,root+r'\CAD\EyeTrace_R19_Assembly.step')
+ # Independent import of target STEP and STL.
+ sd=App.newDocument('R19StepCheck'); Part.insert(root+r'\CAD\PanYoke_R19_ThinMountPlate.step',sd.Name); ss=[o.Shape for o in sd.Objects if hasattr(o,'Shape') and not o.Shape.isNull()]; assert ss and all(s.isValid() for s in ss); step_solids=sum(len(s.Solids) for s in ss)
+ md=Mesh.Mesh(root+r'\STL\PanYoke_R19_ThinMountPlate.stl'); mesh={'facets':md.CountFacets,'closed':md.isSolid(),'components':md.countComponents(),'nonmanifold':md.hasNonManifolds(),'self_intersections':md.hasSelfIntersections(),'bbox':[md.BoundBox.XMin,md.BoundBox.XMax,md.BoundBox.YMin,md.BoundBox.YMax,md.BoundBox.ZMin,md.BoundBox.ZMax]}
+ assert md.isSolid() and md.countComponents()==1 and not md.hasNonManifolds() and not md.hasSelfIntersections()
+ report={'freecad_version':App.Version(),'assembly_file':root+r'\CAD\EyeTrace_R19_ThinMountPlate.FCStd','component':'PanYoke_EarBracket_KeyedDrive','solid_valid':new.isValid(),'solid_count':len(new.Solids),'source_volume_mm3':old.Volume,'new_volume_mm3':new.Volume,'removed_volume_mm3':removed,'removed_fraction_of_yoke':removed/old.Volume,'added_volume_mm3':added,'lower_horn_geometry_symdiff_mm3':diff,'section_intervals_z_mm':probes,'mount_holes_centers_and_radius':holes,'center_hole_diameter_mm':8.0,'outer_land_radius_mm':35.3,'static_overlap_pairs_nonzero':vals,'static_pair_overlap_increased':False,'printable_components':len(pp),'step_reimport_solids':step_solids,'stl':mesh,'motion_basis':'R18_C1 motion screen pan −90…+90°/5° and tilt −45…+45°/5° plus combined poses; the R19 yoke is a strict subset of R18 C1 at identical placement, so positive-volume collisions cannot increase. Same intended travel assumptions; physical travel limits not certified.','release':'HOLD pending physical load/fit and exact Creality Print slice/toolpath check'}
+ open(root+r'\DOCUMENTATION\r19_validation.json','w').write(json.dumps(report,indent=2)); print(json.dumps(report,indent=2))
+except:
+ open(root+r'\DOCUMENTATION\validation_error.txt','w').write(traceback.format_exc()); raise

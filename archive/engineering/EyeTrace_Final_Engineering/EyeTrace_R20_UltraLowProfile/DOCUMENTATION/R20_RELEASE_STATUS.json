@@ -1,0 +1,14 @@
+﻿{
+    "land_mm":  {
+                    "before":  5.8,
+                    "after":  2.8
+                },
+    "screenshot_8p049_endpoint_pair":  "UNVERIFIED",
+    "release":  "HOLD",
+    "local_land_section_pass":  true,
+    "time":  "9h39m",
+    "structural_physical":  "UNVERIFIED",
+    "slicer":  "Creality Print 7.3.2.6412",
+    "filament_g":  85.65,
+    "slice":  "PASS"
+}

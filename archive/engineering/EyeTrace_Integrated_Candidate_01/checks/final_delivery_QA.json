@@ -1,0 +1,23 @@
+{
+  "primary_vs_validated_snapshot": {
+    "tagged_components": 49,
+    "shape_changes": [],
+    "printed_parts": 13
+  },
+  "exploded": {
+    "leaf_features": 76,
+    "solids": 76
+  },
+  "prior_artifact_preservation": {
+    "files_checked": 628,
+    "changed_or_missing": []
+  },
+  "report_links": {
+    "missing": []
+  },
+  "exports": {
+    "STL_parts": 13,
+    "STEP_parts": 13,
+    "PNG_views": 11
+  }
+}

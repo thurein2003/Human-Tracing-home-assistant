@@ -1,0 +1,25 @@
+SUCCESS
+[
+  {
+    "simulation": "Pan only - native motion",
+    "motion_count": 1,
+    "frames": 52,
+    "quarter_frame_pan_rotated": true,
+    "quarter_frame_tilt_rotated": false
+  },
+  {
+    "simulation": "Tilt only - native motion",
+    "motion_count": 1,
+    "frames": 52,
+    "quarter_frame_pan_rotated": false,
+    "quarter_frame_tilt_rotated": true
+  },
+  {
+    "simulation": "Combined pan and tilt - native motion",
+    "motion_count": 2,
+    "frames": 52,
+    "quarter_frame_pan_rotated": true,
+    "quarter_frame_tilt_rotated": true
+  }
+]
+Saved: EyeTrace_Final_Engineering\Motion_Audit_02\Native_Simulations\EyeTrace_Final_Assembly_Native_Simulation_r02.FCStd

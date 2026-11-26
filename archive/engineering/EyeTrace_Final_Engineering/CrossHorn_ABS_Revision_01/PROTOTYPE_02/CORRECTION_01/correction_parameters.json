@@ -1,0 +1,35 @@
+{
+  "units": "mm",
+  "confirmed": {
+    "horn_long_span": 35.0,
+    "horn_short_span_baseline": 18.0,
+    "horn_hub_diameter": 7.0,
+    "base_lateral_clearance_total": 0.20,
+    "short_arm_end_extension_each_end_from_prototype_01": 1.0,
+    "hub_recess_diameter": 7.4
+  },
+  "provisional_adjustments": {
+    "short_width_additional_per_side_beyond_failed_prototype_02": 0.5,
+    "long_arm_root_width": 7.5,
+    "long_arm_tip_width": 5.0,
+    "long_arm_end_radius": 2.5,
+    "short_arm_root_width_before_clearance_and_extensions": 4.0,
+    "short_arm_tip_width_before_clearance_and_extensions": 3.0,
+    "short_arm_end_radius": 1.5,
+    "hub_recess_depth": 2.7,
+    "servo_retaining_screw_and_driver_access_diameter": 4.5,
+    "horn_plate_thickness_reference": 1.5,
+    "raised_hub_height_reference": 2.5
+  },
+  "derived_pocket_dimensions": {
+    "long_pocket_span": 35.2,
+    "long_root_width": 7.7,
+    "long_tip_width": 5.2,
+    "short_pocket_span": 20.2,
+    "short_root_width": 7.2,
+    "short_tip_width": 6.2,
+    "short_end_radius": 3.1
+  },
+  "profile_source": "The two newest locally available test photos in REFERENCES are shape-only references; no exact dimensions inferred. Arm widths, end radii and centering remain provisional.",
+  "fastener_holes": "Omitted; actual white-horn hole centers and diameters are unmeasured."
+}

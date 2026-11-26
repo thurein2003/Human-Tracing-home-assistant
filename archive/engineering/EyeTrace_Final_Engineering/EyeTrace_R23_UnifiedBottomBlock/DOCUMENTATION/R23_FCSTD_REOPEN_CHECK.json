@@ -1,0 +1,25 @@
+{
+  "file": "EyeTrace_Final_Engineering\\EyeTrace_R23_UnifiedBottomBlock\\CAD\\EyeTrace_R23_UnifiedBottomBlock.FCStd",
+  "opened": true,
+  "yoke_valid": true,
+  "yoke_solids": 1,
+  "yoke_volume_mm3": 27995.837688442032,
+  "ring_object_absent": true,
+  "printed_part_group_members": 12,
+  "printed_part_names": [
+    "Base_EarMount_ThrustSupport",
+    "PanYoke_EarBracket_KeyedDrive",
+    "Tilt_Removable_IdlerPillar",
+    "Pan_KeyedHorn_Cover",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "Tilt_Journal_FlangedSleeve",
+    "PCB_Spacer_Lower_Left",
+    "PCB_Spacer_Lower_Right",
+    "PCB_Spacer_Upper_Left",
+    "PCB_Spacer_Upper_Right",
+    "CameraPlate_Cut007"
+  ],
+  "assembly_compound_solids": 74,
+  "group_label": "01 - Printed components (12; pan thrust land integrated into yoke)"
+}

@@ -1,0 +1,42 @@
+{
+  "3mf": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15\\EyeTrace_K2_ABS_All_In_One_R15.3mf",
+  "zip_valid": true,
+  "mesh_objects": 13,
+  "build_items": 13,
+  "component_names": [
+    "PanYoke_EarBracket_KeyedDrive",
+    "Base_EarMount_ThrustSupport",
+    "Pan_Replaceable_ThrustRing",
+    "Tilt_Removable_IdlerPillar",
+    "Pan_KeyedHorn_Cover",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "CameraPlate_21x14",
+    "Tilt_Journal_FlangedSleeve",
+    "PCB_Spacer_Lower_Left",
+    "PCB_Spacer_Lower_Right",
+    "PCB_Spacer_Upper_Left",
+    "PCB_Spacer_Upper_Right"
+  ],
+  "modified_object_ids": [
+    "3",
+    "6"
+  ],
+  "bounds_bed_mm": [
+    [
+      10.0,
+      10.0,
+      -7.105427357601002e-15
+    ],
+    [
+      207.0,
+      202.6,
+      77.00000000000001
+    ]
+  ],
+  "all_parts_inside_260mm_bed": true,
+  "overlap_pairs": [],
+  "sum_solid_volume_mm3": 135913.8749329338,
+  "approx_net_abs_mass_g_at_density_1.04": 141.35,
+  "slicer_toolpath": "not yet sliced"
+}

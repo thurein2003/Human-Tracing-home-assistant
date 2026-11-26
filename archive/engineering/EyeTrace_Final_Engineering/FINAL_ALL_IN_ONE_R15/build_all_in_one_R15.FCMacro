@@ -1,0 +1,94 @@
+﻿import FreeCAD as A,Part,MeshPart,Mesh,json,os,traceback
+from FreeCAD import Vector as V,Rotation
+root=r'EyeTrace_Final_Engineering'; out=root+r'\FINAL_ALL_IN_ONE_R15'; os.makedirs(out+r'\CAD',exist_ok=True);os.makedirs(out+r'\STL\individual',exist_ok=True);os.makedirs(out+r'\STL\bed_components',exist_ok=True);os.makedirs(out+r'\RENDERS',exist_ok=True);os.makedirs(out+r'\CHECKS',exist_ok=True)
+assembly_path=root+r'\Camera_21x14_Correction_01\CAD\EyeTrace_Final_Assembly_21x14.FCStd'
+layout_path=root+r'\Camera_21x14_Correction_01\CAD\K2_PrintLayout_21x14.FCStd'
+r15_path=root+r'\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'
+d=A.openDocument(assembly_path); test=A.openDocument(r15_path); armtool=test.getObject('ArmPocketTool').Shape.copy()
+# Rebuild the nominal cross-horn reference from the R15 profile parameters. Width/profile values remain provisional.
+nominal_x=19.5; nominal_y=10.0; rootw=7.0; taper=7.15
+longtip=rootw-nominal_x*__import__('math').tan(__import__('math').radians(taper)); posw=3.2; negw=4.2
+def arm(L,rw,tw,z,h,sgn=1,axis='x'):
+ rad=tw/2.0;c=L-rad
+ pts=[V(0,-rw/2,z),V(sgn*c,-tw/2,z),V(sgn*c,tw/2,z),V(0,rw/2,z),V(0,-rw/2,z)]
+ w=Part.Face(Part.Wire(Part.makePolygon(pts))).extrude(V(0,0,h)); cap=Part.makeCylinder(rad,h,V(sgn*c,0,z)); s=w.fuse(cap).removeSplitter()
+ if axis=='y':s.rotate(V(),V(0,0,1),90)
+ return s
+hornbits=[arm(nominal_x,rootw,longtip,0,1.5,-1),arm(nominal_x,rootw,longtip,0,1.5,1),arm(nominal_y,posw,posw,0,1.5,1,'y'),arm(nominal_y,negw,negw,0,1.5,-1,'y')]
+hplate=hornbits[0].fuse(hornbits[1]).fuse(hornbits[2]).fuse(hornbits[3]).removeSplitter(); hub=Part.makeCylinder(3.5,2.5,V(0,0,-2.5)); hornlocal=hplate.fuse(hub).cut(Part.makeCylinder(0.95,4.2,V(0,0,-2.6))).removeSplitter()
+if not hornlocal.isValid() or len(hornlocal.Solids)!=1: raise RuntimeError('Provisional cross-horn reference failed solid check')
+# Existing carriers have shallow Ø8.5 center counterbore lands. Refill them flush, then cut R15's Ø8.0 bore and cross pocket.
+pan=d.getObject('PanYoke_EarBracket_KeyedDrive');pan_before=pan.Shape.copy(); pan_ring=Part.makeCylinder(4.6,2.3,V(0,0,35)).cut(Part.makeCylinder(4.0,2.3,V(0,0,35)))
+pan_recess=armtool.copy();pan_recess.rotate(V(),V(0,1,0),180);pan_recess.translate(V(0,0,38.8))
+pan_bore=Part.makeCylinder(4.0,9.0,V(0,0,33),V(0,0,1))
+pan_new=pan_before.fuse(pan_ring).removeSplitter().cut(pan_recess).cut(pan_bore).removeSplitter()
+# Tilt carrier transverse bore/land centered on the existing horizontal pivot (x axis).
+tilt=d.getObject('TiltCradle_KeyedHorn_CameraFrame');tilt_before=tilt.Shape.copy(); tilt_ring=Part.makeCylinder(4.6,2.2,V(-41,0,78),V(1,0,0)).cut(Part.makeCylinder(4.0,2.2,V(-41,0,78),V(1,0,0)))
+tilt_recess=armtool.copy();tilt_recess.rotate(V(),V(0,1,0),-90);tilt_recess.translate(V(-37.2,0,78))
+tilt_bore=Part.makeCylinder(4.0,6.0,V(-42,0,78),V(1,0,0))
+tilt_new=tilt_before.fuse(tilt_ring).removeSplitter().cut(tilt_recess).cut(tilt_bore).removeSplitter()
+for nm,sh in [('PanYoke',pan_new),('TiltCradle',tilt_new)]:
+ if not sh.isValid() or len(sh.Solids)!=1:raise RuntimeError(nm+' modified interface is invalid or disconnected')
+pan.Shape=pan_new; pan.Label='Pan yoke with provisional R15 four-arm horn pocket and Ø8 through interface';tilt.Shape=tilt_new;tilt.Label='Tilt cradle with provisional R15 four-arm horn pocket and Ø8 through interface'
+# Replace the old five-arm hardware placeholders with a provisional four-arm nominal reference at unchanged servo axes.
+panh=d.getObject('Pan_OriginalStar_PROVISIONAL'); panhorn=hornlocal.copy();panhorn.translate(V(0,0,35));panh.Shape=panhorn;panh.Label='Pan SG90 white four-arm horn reference - provisional geometry'
+tilth=d.getObject('Tilt_OriginalStar_PROVISIONAL'); tilthorn=hornlocal.copy();tilthorn.rotate(V(),V(0,1,0),90);tilthorn.translate(V(-41,0,78));tilth.Shape=tilthorn;tilth.Label='Tilt SG90 white four-arm horn reference - provisional geometry'
+d.recompute()
+# Ensure camera coordinates and 13 printable objects unchanged.
+pp=d.getObject('RepairParameters'); plate=d.getObject('CameraPlate_Cut007'); holecoords=sorted([(round(d.getObject(n).Placement.Base.x,4),round(d.getObject(n).Placement.Base.z,4)) for n in [o.Name for o in d.Objects if o.Name.startswith('PlatePCB_Hole')]])
+expected=[(-10.5,69.0),(-10.5,83.0),(10.5,69.0),(10.5,83.0)]
+if holecoords!=expected: raise RuntimeError('Camera hole pattern changed '+str(holecoords))
+printables=[o for o in d.Objects if bool(getattr(o,'Printable',False)) and hasattr(o,'Shape') and not o.Shape.isNull()]
+if len(printables)!=13: raise RuntimeError('Expected 13 printable assembly parts; got '+str(len(printables)))
+# Rebuild bed layout retaining the established placements of all thirteen pieces.
+bed=A.openDocument(layout_path)
+updates={
+ 'PanYoke_EarBracket_KeyedDrive':(pan_new,Rotation(),V(68.2,45.3,-33.0)),
+ 'TiltCradle_KeyedHorn_CameraFrame':(tilt_new,Rotation(V(0,1,0),90),V(108,113,36))}
+for name,(shape,rot,trans) in updates.items():
+ o=bed.getObject(name)
+ if o is None:raise RuntimeError('Missing bed layout item '+name)
+ sh=shape.copy();sh.rotate(V(),rot.Axis,rot.Angle*180/3.141592653589793);sh.translate(trans)
+ # fit exact known layout placement; verify the recomputed box matches source layout tolerances
+ o.Shape=sh
+# check shape validity and one solid for each printed component
+bedobjs=[o for o in bed.Objects if hasattr(o,'Shape') and not o.Shape.isNull()]
+if len(bedobjs)!=13:raise RuntimeError('Bed does not contain exactly 13 solids')
+for o in bedobjs:
+ if not o.Shape.isValid() or len(o.Shape.Solids)!=1:raise RuntimeError('Invalid/disconnected bed part '+o.Name)
+# Translate/readback coverage and spacing.
+boxes={o.Name:[o.Shape.BoundBox.XMin,o.Shape.BoundBox.YMin,o.Shape.BoundBox.ZMin,o.Shape.BoundBox.XMax,o.Shape.BoundBox.YMax,o.Shape.BoundBox.ZMax] for o in bedobjs}
+overlaps=[]
+for i,a in enumerate(bedobjs):
+ A1=a.Shape.BoundBox
+ for bobj in bedobjs[i+1:]:
+  B=bobj.Shape.BoundBox
+  if A1.XMin<B.XMax and A1.XMax>B.XMin and A1.YMin<B.YMax and A1.YMax>B.YMin and A1.ZMin<B.ZMax and A1.ZMax>B.ZMin:
+   vol=a.Shape.common(bobj.Shape).Volume
+   if vol>1e-5:overlaps.append([a.Name,bobj.Name,vol])
+if overlaps:raise RuntimeError('Print parts overlap '+str(overlaps))
+lo=[min(v[i] for v in boxes.values()) for i in range(3)];hi=[max(v[i+3] for v in boxes.values()) for i in range(3)]
+inside=lo[0]>=0 and lo[1]>=0 and hi[0]<=260 and hi[1]<=260
+if not inside:raise RuntimeError('Print layout outside K2 bed '+str((lo,hi)))
+# save editable docs and engineering exports
+outcad=out+r'\CAD';outstl=out+r'\STL'
+d.recompute();d.saveAs(outcad+r'\EyeTrace_Final_Assembly_R15.FCStd')
+Part.export([o for o in d.Objects if hasattr(o,'KinematicGroup') and hasattr(o,'Shape') and not o.Shape.isNull()],outcad+r'\EyeTrace_Final_Assembly_R15.step')
+bed.getObject('CameraPlate_21x16').Label='CameraPlate_21x14';bed.recompute();bed.saveAs(outcad+r'\EyeTrace_K2_All_In_One_R15.FCStd');Part.export(bedobjs,outcad+r'\EyeTrace_K2_All_In_One_R15.step')
+compound=Part.makeCompound([o.Shape.copy() for o in bedobjs]);mesh=MeshPart.meshFromShape(Shape=compound,LinearDeflection=0.08,AngularDeflection=0.12,Relative=False);mesh.write(outstl+r'\EyeTrace_K2_ABS_All_In_One_R15.stl')
+# Per-part print-oriented STL centered on bed origin for single-part use.
+part_checks=[]
+for o in bedobjs:
+ partname='CameraPlate_21x14' if o.Name=='CameraPlate_21x16' else o.Name
+ bedmesh=MeshPart.meshFromShape(Shape=o.Shape,LinearDeflection=0.08,AngularDeflection=0.12,Relative=False); bedmesh.write(os.path.join(outstl,'bed_components',partname+'.stl'))
+ sh=o.Shape.copy();bb=sh.BoundBox;sh.translate(V(-(bb.XMin+bb.XMax)/2,-(bb.YMin+bb.YMax)/2,-bb.ZMin));m=MeshPart.meshFromShape(Shape=sh,LinearDeflection=0.08,AngularDeflection=0.12,Relative=False); fn=os.path.join(outstl,'individual',partname+'.stl');m.write(fn)
+ part_checks.append({'name':partname,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids),'volume_mm3':o.Shape.Volume,'facets':len(m.Facets),'mesh_solid':m.isSolid(),'bed_bbox':boxes[o.Name],'individual_stl':fn})
+# Updated assembly interface QA; intended torque engagement is via cross-pocket sidewalls; actual horn fit remains provisional.
+pan_contact=panhorn.distToShape(pan_new)[0];tilt_contact=tilthorn.distToShape(tilt_new)[0]
+report={'source_assembly':assembly_path,'source_r15_coupon':r15_path,'cad_version':A.Version()[:4],'preserved_printable_part_count':len(printables),'printable_components':part_checks,'bed_bounds_mm':[lo,hi],'bed_xy_mm':[260,260],'within_bed':inside,'part_bounding_box_overlap_candidates':overlaps,'component_count_mesh':mesh.countComponents(),'combined_mesh_facets':mesh.CountFacets,'combined_mesh_closed':mesh.isSolid(),'camera_pattern_mm':{'horizontal':pp.CameraPitchX.Value,'vertical':pp.CameraPitchZ.Value,'centers_xz':holecoords},'horn_interface':{'R15_profile_integrated_in':['PanYoke_EarBracket_KeyedDrive','TiltCradle_KeyedHorn_CameraFrame'],'interface_geometry':'Ø8.00 flush center bore; four-arm R15 negative pockets; 39.00 nominal X span, 39.20 pocket envelope; short-arm dimensions carried forward','pan_cut':{'before_volume_mm3':pan_before.Volume,'after_volume_mm3':pan_new.Volume,'removed_volume_mm3':pan_before.Volume-pan_new.Volume,'valid':pan_new.isValid(),'solids':len(pan_new.Solids),'nominal_cross_horn_to_carrier_min_gap_mm':pan_contact},'tilt_cut':{'before_volume_mm3':tilt_before.Volume,'after_volume_mm3':tilt_new.Volume,'removed_volume_mm3':tilt_before.Volume-tilt_new.Volume,'valid':tilt_new.isValid(),'solids':len(tilt_new.Solids),'nominal_cross_horn_to_carrier_min_gap_mm':tilt_contact},'center_land_refill_outer_radius_mm':4.6,'through_hole_radius_mm':4.0,'torque_transfer':'modeled at four cross-pocket walls; no secondary horn fasteners because physical hole positions are unknown','status':'PROVISIONAL; R15 coupon untested; horn widths/taper partly provisional; original servo spline and screw fit unverified'},'physical_fit':'UNVERIFIED','pairwise_print_intersections':overlaps,'slicer_toolpaths':'not yet verified'}
+open(out+r'\CHECKS\geometry_packaging_validation.json','w').write(json.dumps(report,indent=2))
+A.closeDocument(d.Name);A.closeDocument(test.Name);A.closeDocument(bed.Name)
+
+
+
+

@@ -1,0 +1,55 @@
+import FreeCAD as A,json,re,os
+srcpath=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15\CAD\EyeTrace_Final_Assembly_R15.FCStd';out=r'EyeTrace_Final_Engineering\FINAL_ALL_IN_ONE_R15_ASSEMBLY';src=A.openDocument(srcpath);d=A.newDocument('EyeTrace_R15_Full_Assembly');root=d.addObject('App::DocumentObjectGroup','AssemblyRoot');root.Label='Eye Trace R15 ? operational-coordinate assembly'
+printed=d.addObject('App::DocumentObjectGroup','PrintedParts');printed.Label='01 ? Printed components (13)';root.addObject(printed)
+hardware=d.addObject('App::DocumentObjectGroup','HardwareReference');hardware.Label='02 ? Installed hardware references (provisional where marked)';root.addObject(hardware)
+keepouts=d.addObject('App::DocumentObjectGroup','Keepouts');keepouts.Label='03 ? Camera / ribbon uncertainty envelopes (not physical parts)';root.addObject(keepouts)
+params=d.addObject('App::DocumentObjectGroup','ReferenceDimensions');params.Label='04 ? R15 reference dimensions (read-only notes)';root.addObject(params)
+for nm,val in [('HornPocketLongAxisSpan',39.2),('HornPocketLongReach',19.6),('HornPocketShortAxisSpan',20.2),('HornRecessDepth',1.7),('CenterThroughHoleDiameter',8.0),('CameraHoleHorizontalPitch',21.0),('CameraHoleVerticalPitch',14.0)]:
+ params.addProperty('App::PropertyLength',nm,'R15 dimensions');setattr(params,nm,val);params.setEditorMode(nm,1)
+params.addProperty('App::PropertyString','PanAxis','Axis datums');params.PanAxis='Z through (0, 0)';params.setEditorMode('PanAxis',1)
+params.addProperty('App::PropertyString','TiltAxis','Axis datums');params.TiltAxis='X through y=0, z=78 mm';params.setEditorMode('TiltAxis',1)
+params.addProperty('App::PropertyString','GeometrySource','Traceability');params.GeometrySource=srcpath;params.setEditorMode('GeometrySource',1)
+role={
+'Base_EarMount_ThrustSupport':'Stationary base / pan-servo support',
+'Pan_Replaceable_ThrustRing':'Stationary pan thrust surface',
+'PanYoke_EarBracket_KeyedDrive':'Rotating pan yoke and pan horn pocket',
+'Tilt_Removable_IdlerPillar':'Opposite-side tilt pivot support',
+'Pan_KeyedHorn_Cover':'Pan horn retainer cover',
+'TiltCradle_KeyedHorn_CameraFrame':'Moving tilt cradle and camera frame',
+'Tilt_KeyedHorn_CaptiveCover':'Tilt horn retainer cover',
+'Tilt_Journal_FlangedSleeve':'Opposite-side tilt journal sleeve',
+'PCB_Spacer_Lower_Left':'Camera lower-left spacer',
+'PCB_Spacer_Lower_Right':'Camera lower-right spacer',
+'PCB_Spacer_Upper_Left':'Camera upper-left spacer',
+'PCB_Spacer_Upper_Right':'Camera upper-right spacer',
+'CameraPlate_Cut007':'Camera mounting plate ? 21 x 14 mm hole centers',
+'PanServo_SG90_Reference':'Pan SG90 reference ? dimensions provisional',
+'TiltServo_SG90_Reference':'Tilt SG90 reference ? dimensions provisional',
+'Pan_OriginalStar_PROVISIONAL':'Pan white four-arm horn reference ? profile provisional',
+'Tilt_OriginalStar_PROVISIONAL':'Tilt white four-arm horn reference ? profile provisional',
+'Camera_Lens_PROVISIONAL':'Lens envelope ? provisional dimensions',
+'Camera_RearComponents_KEEP_OUT':'Rear camera uncertainty envelope ? not hardware',
+'Camera_WireExit_KEEP_OUT':'Ribbon/cable routing envelope ? not physical cable'}
+rows=[]
+for s in src.Objects:
+ if not hasattr(s,'KinematicGroup') or not hasattr(s,'Shape') or s.Shape.isNull():continue
+ name=s.Name
+ if name in ['PCB_Cut003']:continue # stale camera-board envelope explicitly labeled with previous 21x16 pattern
+ o=d.addObject('Part::Feature',name);o.Label=role.get(name,s.Label);o.Shape=s.Shape.copy();o.Placement=A.Placement() # source BREP is already in assembly/world coordinates; avoid double-applying stored object placements
+ o.addProperty('App::PropertyString','KinematicGroup','Assembly');o.KinematicGroup=str(s.KinematicGroup)
+ printable=bool(getattr(s,'Printable',False));o.addProperty('App::PropertyBool','Printable','Manufacturing');o.Printable=printable
+ if hasattr(s,'PrintFileName'):
+  o.addProperty('App::PropertyString','PrintFileName','Manufacturing');o.PrintFileName=str(s.PrintFileName)
+ if name.endswith('_KEEP_OUT'):keepouts.addObject(o)
+ elif printable:printed.addObject(o)
+ else:hardware.addObject(o)
+ if hasattr(o,'ViewObject') and o.ViewObject is not None:
+  if hasattr(s,'ViewObject') and s.ViewObject is not None:o.ViewObject.ShapeColor=tuple(s.ViewObject.ShapeColor)
+  else:o.ViewObject.ShapeColor=(0.82,0.48,0.20)
+  o.ViewObject.LineColor=(0.12,0.14,0.16)
+  o.ViewObject.Visibility=not name.endswith('_KEEP_OUT')
+ rows.append({'name':name,'label':o.Label,'printable':printable,'kinematic_group':str(s.KinematicGroup),'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids),'source_shape_placement_reset_to_identity':True})
+if sum(1 for x in rows if x['printable'])!=13:raise RuntimeError('Expected exactly 13 printable parts')
+d.recompute();d.saveAs(out+r'\CAD\EyeTrace_R15_Full_Assembly.FCStd')
+open(out+r'\CHECKS\clean_assembly_components.json','w').write(json.dumps({'source_FCStd':srcpath,'component_count':len(rows),'printable_count':sum(1 for x in rows if x['printable']),'components':rows,'geometry_modified':False,'placements':'All source BREP shapes retained as-is; duplicate non-identity source object placements are not reapplied.'},indent=2));A.closeDocument(src.Name);A.closeDocument(d.Name)
+

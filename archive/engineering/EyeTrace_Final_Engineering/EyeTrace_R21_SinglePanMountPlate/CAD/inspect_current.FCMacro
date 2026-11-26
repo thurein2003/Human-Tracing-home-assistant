@@ -1,0 +1,10 @@
+﻿import FreeCAD as App,json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R21_SinglePanMountPlate\CAD\EyeTrace_R21_SinglePanMountPlate.FCStd'
+d=App.openDocument(p); a=[]
+for o in d.Objects:
+ try:
+  s=o.Shape;b=s.BoundBox
+  if o.Name in ['PanYoke_EarBracket_KeyedDrive','Pan_KeyedHorn_Cover','Pan_Replaceable_ThrustRing','PanServo_SG90_Reference','Pan_OriginalStar_PROVISIONAL']:
+   a.append({'name':o.Name,'label':o.Label,'volume':s.Volume,'valid':s.isValid(),'solids':len(s.Solids),'bbox':[b.XMin,b.XMax,b.YMin,b.YMax,b.ZMin,b.ZMax],'placement':[o.Placement.Base.x,o.Placement.Base.y,o.Placement.Base.z]})
+ except:pass
+print(json.dumps(a,indent=2));App.closeDocument(d.Name)

@@ -1,0 +1,41 @@
+{
+  "valid": true,
+  "solids": 9,
+  "volume": 44182.7378728017,
+  "source_vol": 42345.82609243497,
+  "added_vol": 1836.9117803667323,
+  "bbox": [
+    -58.2,
+    -35.3,
+    32.99999999999999,
+    44.0,
+    35.3,
+    103.0
+  ],
+  "patch_material_added": 2684.1029963784954,
+  "clearances": {
+    "Pan_KeyedHorn_Cover": 0.0,
+    "PanDrive_M3x10_0": 0.0,
+    "PanDrive_M3x10_1": 0.0,
+    "PanDrive_M3x10_2": 0.0,
+    "PanDrive_M3x10_3": 0.0,
+    "PanServo_SG90_Reference": 0.0
+  },
+  "pocket_occupancy_overlap": 0.0,
+  "cover_vs_r15_occupancy": 254.29714153834135,
+  "screws_vs_r15_occupancy": [
+    17.081692498119555,
+    17.08169249811956,
+    0.0,
+    0.0
+  ],
+  "old_horn_bbox": [
+    -19.5,
+    -10.0,
+    32.5,
+    19.5,
+    10.0,
+    36.5
+  ],
+  "old_horn_vs_cand": 294.9981667332622
+}

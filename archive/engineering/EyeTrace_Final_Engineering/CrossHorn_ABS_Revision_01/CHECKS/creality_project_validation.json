@@ -1,0 +1,29 @@
+{
+  "zip_integrity": "PASS",
+  "mesh_objects": 1,
+  "build_items": 1,
+  "vertices": 9074,
+  "triangles": 18148,
+  "bounds_mm": [
+    0.116,
+    0.106,
+    0.0,
+    241.4,
+    206.4,
+    6.0
+  ],
+  "fits_260mm_bed": true,
+  "layer_height_mm": "0.2",
+  "nozzle_C": [
+    "255"
+  ],
+  "bed_C": [
+    "100"
+  ],
+  "wall_loops": "4",
+  "infill": "100%",
+  "supports": "0",
+  "brim_type": "outer_only",
+  "brim_mm": "4",
+  "toolpath_sliced": false
+}

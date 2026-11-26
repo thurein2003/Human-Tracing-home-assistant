@@ -1,0 +1,22 @@
+{
+  "motion": {
+    "sampled_poses": 169,
+    "pair_checks": 37856,
+    "cache": "common pan rotation invariance reused for internal pairs",
+    "pan_range": [
+      -60,
+      60
+    ],
+    "tilt_range": [
+      -30,
+      30
+    ],
+    "pan_step": 10,
+    "tilt_step": 5,
+    "collision_count": 0,
+    "collisions": [],
+    "minimum_separation_mm": null,
+    "distance_note": "global minimum not computed; intended face contacts permitted; nominal idler axial gap 0.5 mm",
+    "limitation": "sampled rigid envelopes only; includes nominal M3 head/nut envelopes; excludes wires, actual threads, horn deformation, servo torque and continuous sweep; no installed motion stops"
+  }
+}

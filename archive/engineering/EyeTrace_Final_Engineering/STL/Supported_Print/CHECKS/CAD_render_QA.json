@@ -1,0 +1,19 @@
+{
+  "layout_iso": {
+    "nonwhite_samples": 1518,
+    "type": "actual CAD"
+  },
+  "layout_top": {
+    "nonwhite_samples": 2021,
+    "type": "actual CAD"
+  },
+  "contacts_Base_EarMount_ThrustSupport": {
+    "type": "Actual3MF support-enforcer faces GREEN; part transparent, NOT generated support mesh"
+  },
+  "contacts_PanYoke_EarBracket_KeyedDrive": {
+    "type": "Actual3MF support-enforcer faces GREEN; part transparent, NOT generated support mesh"
+  },
+  "contacts_TiltCradle_KeyedHorn_CameraFrame": {
+    "type": "Actual3MF support-enforcer faces GREEN; part transparent, NOT generated support mesh"
+  }
+}

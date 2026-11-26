@@ -1,0 +1,289 @@
+{
+  "3mf_crc": "PASS",
+  "build_items": 12,
+  "unique_objects": 12,
+  "parts": [
+    {
+      "name": "Pan_Replaceable_ThrustRing",
+      "bbox": [
+        [
+          13.0,
+          76.98567772
+        ],
+        [
+          102.6,
+          166.5928398
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "bbox": [
+        [
+          12.999996,
+          115.2
+        ],
+        [
+          13.004627,
+          83.595367
+        ],
+        [
+          0.0,
+          67.800003
+        ]
+      ]
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar",
+      "bbox": [
+        [
+          93.0,
+          109.0
+        ],
+        [
+          102.6,
+          159.6
+        ],
+        [
+          0.0,
+          57.0
+        ]
+      ]
+    },
+    {
+      "name": "Pan_KeyedHorn_Cover",
+      "bbox": [
+        [
+          125.0,
+          172.9892578
+        ],
+        [
+          102.6,
+          150.5946289
+        ],
+        [
+          0.0,
+          4.199999809
+        ]
+      ]
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "bbox": [
+        [
+          189.0,
+          234.0
+        ],
+        [
+          102.6,
+          147.99951
+        ],
+        [
+          0.0,
+          77.0
+        ]
+      ]
+    },
+    {
+      "name": "Tilt_KeyedHorn_CaptiveCover",
+      "bbox": [
+        [
+          13.0,
+          54.99060059
+        ],
+        [
+          185.6,
+          227.5953003
+        ],
+        [
+          0.0,
+          4.199999809
+        ]
+      ]
+    },
+    {
+      "name": "Tilt_Journal_FlangedSleeve",
+      "bbox": [
+        [
+          143.0,
+          149.9984336
+        ],
+        [
+          185.6,
+          192.5992166
+        ],
+        [
+          0.0,
+          4.099999905
+        ]
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left",
+      "bbox": [
+        [
+          166.0,
+          170.9994407
+        ],
+        [
+          185.6,
+          190.5988811
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right",
+      "bbox": [
+        [
+          187.0,
+          191.9994407
+        ],
+        [
+          185.6,
+          190.5988811
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left",
+      "bbox": [
+        [
+          208.0,
+          212.9994407
+        ],
+        [
+          185.6,
+          190.5988811
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right",
+      "bbox": [
+        [
+          229.0,
+          233.9994407
+        ],
+        [
+          185.6,
+          190.5988811
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    },
+    {
+      "name": "CameraPlate_21x14",
+      "bbox": [
+        [
+          71.0,
+          127.0
+        ],
+        [
+          185.6,
+          217.6
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    }
+  ],
+  "all_within_K2_XY_bed": true,
+  "AABB_xy_intersections": [],
+  "minimum_AABB_clearance_mm": 16.0,
+  "STL_checks": [
+    {
+      "file": "CameraPlate_21x14.stl",
+      "triangles": 3828,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "Pan_KeyedHorn_Cover.stl",
+      "triangles": 4312,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "Pan_Replaceable_ThrustRing.stl",
+      "triangles": 2112,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "PanYoke_R19_ThinMountPlate.stl",
+      "triangles": 51972,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": null
+    },
+    {
+      "file": "PCB_Spacer_Lower_Left.stl",
+      "triangles": 840,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "PCB_Spacer_Lower_Right.stl",
+      "triangles": 840,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "PCB_Spacer_Upper_Left.stl",
+      "triangles": 840,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "PCB_Spacer_Upper_Right.stl",
+      "triangles": 840,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "Tilt_Journal_FlangedSleeve.stl",
+      "triangles": 1260,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "Tilt_KeyedHorn_CaptiveCover.stl",
+      "triangles": 4312,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "Tilt_Removable_IdlerPillar.stl",
+      "triangles": 1300,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    },
+    {
+      "file": "TiltCradle_KeyedHorn_CameraFrame_R17.stl",
+      "triangles": 20976,
+      "nonmanifold_edges": 0,
+      "unchanged_from_R18": true
+    }
+  ],
+  "only_yoke_changed": "other available R18 component STL hashes compared"
+}

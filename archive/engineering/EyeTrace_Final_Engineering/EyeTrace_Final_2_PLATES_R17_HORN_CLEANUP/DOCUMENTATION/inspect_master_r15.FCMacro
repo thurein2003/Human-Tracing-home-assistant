@@ -1,0 +1,7 @@
+﻿import FreeCAD as A,json
+f=r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'
+d=A.openDocument(f); rows=[]
+for o in d.Objects:
+ if hasattr(o,'Shape') and not o.Shape.isNull():
+  b=o.Shape.BoundBox; rows.append({'name':o.Name,'label':o.Label,'type':o.TypeId,'volume':float(o.Shape.Volume),'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids),'bbox':[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax]})
+with open(r'EyeTrace_Final_Engineering\EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR\REPORTS\MASTER_OBJECTS.json','w') as f:json.dump(rows,f,indent=2)

@@ -1,0 +1,607 @@
+{
+  "source_file": "EyeTrace_Final_Engineering\\Camera_21x14_Correction_01\\CAD\\EyeTrace_Final_Assembly_Native_21x14.FCStd",
+  "source_sha256": "ca7ce8ffb221dc7504ceaec22444464311406ffe928af6d3b708fd226f4f778a",
+  "freecad_version": [
+    "1",
+    "1",
+    "4"
+  ],
+  "solver_return": 0,
+  "native_joint_counts": {
+    "ground": 1,
+    "fixed": 4,
+    "revolute": 2,
+    "intended_dof": 2
+  },
+  "joints": [
+    {
+      "name": "GroundedBase",
+      "type": "Ground",
+      "label": "Ground - stationary base",
+      "reference1": null,
+      "reference2": null
+    },
+    {
+      "name": "Fix_PanServo_To_Base",
+      "type": "Fixed",
+      "label": "Fix_PanServo_To_Base",
+      "reference1": "BaseBodyLink",
+      "reference2": "PanServoBodyLink"
+    },
+    {
+      "name": "PanRevolute",
+      "type": "Revolute",
+      "label": "PanRevolute002",
+      "reference1": "PanServoBodyLink",
+      "reference2": "PanRotorBodyLink"
+    },
+    {
+      "name": "Fix_PanHorn_To_Rotor",
+      "type": "Fixed",
+      "label": "Fix_PanHorn_To_Rotor",
+      "reference1": "PanRotorBodyLink",
+      "reference2": "PanHornBodyLink"
+    },
+    {
+      "name": "Fix_TiltServo_To_PanRotor",
+      "type": "Fixed",
+      "label": "Fix_TiltServo_To_PanRotor",
+      "reference1": "PanRotorBodyLink",
+      "reference2": "TiltServoBodyLink"
+    },
+    {
+      "name": "TiltRevolute",
+      "type": "Revolute",
+      "label": "TiltRevolute002",
+      "reference1": "TiltServoBodyLink",
+      "reference2": "TiltCradleBodyLink"
+    },
+    {
+      "name": "Fix_TiltHorn_To_Cradle",
+      "type": "Fixed",
+      "label": "Fix_TiltHorn_To_Cradle",
+      "reference1": "TiltCradleBodyLink",
+      "reference2": "TiltHornBodyLink"
+    }
+  ],
+  "all_rigid_bodies_connected": true,
+  "connected_bodies": {
+    "BaseBodyLink": true,
+    "PanServoBodyLink": true,
+    "PanRotorBodyLink": true,
+    "PanHornBodyLink": true,
+    "TiltServoBodyLink": true,
+    "TiltCradleBodyLink": true,
+    "TiltHornBodyLink": true
+  },
+  "solid_object_count": 90,
+  "invalid_solids": [],
+  "camera_pattern": {
+    "horizontal_pitch_mm": 21.0,
+    "vertical_pitch_mm": 14.0,
+    "hole_center_x_mm": [
+      -10.5,
+      10.5
+    ],
+    "hole_center_z_mm": [
+      69.0,
+      83.0
+    ],
+    "pitch_from_centers_mm": [
+      21.0,
+      14.0
+    ]
+  },
+  "drive_interfaces": [
+    {
+      "horn_proxy": "Pan_OriginalStar_PROVISIONAL",
+      "carrier": "PanYoke_EarBracket_KeyedDrive",
+      "cover": "Pan_KeyedHorn_Cover",
+      "horn_bbox_mm": [
+        -10.76621738662582,
+        -11.968908785416751,
+        35.0,
+        12.0,
+        11.968908785416753,
+        37.0
+      ],
+      "horn_to_carrier_gap_mm": 0.24999999999992045,
+      "horn_to_cover_gap_mm": 0.0,
+      "profile_parameters": {
+        "horn_arm_angles_deg": [
+          0,
+          72,
+          144,
+          216,
+          288
+        ],
+        "horn_arm_lengths_mm": [
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "horn_arm_widths_mm": [
+          3.6,
+          3.6,
+          3.6,
+          3.6,
+          3.6
+        ],
+        "horn_hub_radius_mm": 4,
+        "horn_web_thickness_mm": 2,
+        "horn_pocket_clearance_mm": 0.25,
+        "horn_pocket_depth_mm": 2.2,
+        "horn_socket_envelope_diameter_mm": 5.2,
+        "horn_socket_envelope_depth_mm": 1.4,
+        "horn_clearance_bore_mm": 1.9
+      },
+      "status": "OLD FIVE-ARM PROVISIONAL PROFILE; replace after real cross-horn measurements"
+    },
+    {
+      "horn_proxy": "Tilt_OriginalStar_PROVISIONAL",
+      "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+      "cover": "Tilt_KeyedHorn_CaptiveCover",
+      "horn_bbox_mm": [
+        -41.0,
+        -11.968908785416751,
+        66.0,
+        -39.0,
+        11.968908785416753,
+        88.76621738662583
+      ],
+      "horn_to_carrier_gap_mm": 0.20000000000000284,
+      "horn_to_cover_gap_mm": 0.0,
+      "profile_parameters": {
+        "horn_arm_angles_deg": [
+          0,
+          72,
+          144,
+          216,
+          288
+        ],
+        "horn_arm_lengths_mm": [
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "horn_arm_widths_mm": [
+          3.6,
+          3.6,
+          3.6,
+          3.6,
+          3.6
+        ],
+        "horn_hub_radius_mm": 4,
+        "horn_web_thickness_mm": 2,
+        "horn_pocket_clearance_mm": 0.25,
+        "horn_pocket_depth_mm": 2.2,
+        "horn_socket_envelope_diameter_mm": 5.2,
+        "horn_socket_envelope_depth_mm": 1.4,
+        "horn_clearance_bore_mm": 1.9
+      },
+      "status": "OLD FIVE-ARM PROVISIONAL PROFILE; replace after real cross-horn measurements"
+    }
+  ],
+  "native_simulations": [
+    {
+      "name": "Simulation",
+      "label": "Pan only - native motion",
+      "motion_count": 1,
+      "frame_count": 52,
+      "time_step_s": 0.02,
+      "formulas": [
+        "1.0471975512*sin(6.28318530718*time)"
+      ],
+      "samples": [
+        {
+          "frame": 0,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 0.0,
+            "TiltHornBodyLink": 0.0
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "frame": 13,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 59.8816,
+            "PanHornBodyLink": 59.8816,
+            "TiltServoBodyLink": 59.8816,
+            "TiltCradleBodyLink": 59.8816,
+            "TiltHornBodyLink": 59.8816
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "frame": 25,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 7.52,
+            "PanHornBodyLink": 7.52,
+            "TiltServoBodyLink": 7.52,
+            "TiltCradleBodyLink": 7.52,
+            "TiltHornBodyLink": 7.52
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "frame": 38,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 59.8816,
+            "PanHornBodyLink": 59.8816,
+            "TiltServoBodyLink": 59.8816,
+            "TiltCradleBodyLink": 59.8816,
+            "TiltHornBodyLink": 59.8816
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              -1.0
+            ]
+          }
+        },
+        {
+          "frame": 51,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 0.0,
+            "TiltHornBodyLink": 0.0
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "motion_check": "PASS: rotor, pan horn, tilt stator and cradle follow pan; pan stator remains fixed"
+    },
+    {
+      "name": "Simulation001",
+      "label": "Tilt only - native motion",
+      "motion_count": 1,
+      "frame_count": 52,
+      "time_step_s": 0.02,
+      "formulas": [
+        "0.4363323130*sin(6.28318530718*time)"
+      ],
+      "samples": [
+        {
+          "frame": 0,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 0.0,
+            "TiltHornBodyLink": 0.0
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "frame": 13,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 24.9507,
+            "TiltHornBodyLink": 24.9507
+          },
+          "relative_tilt_deg": 24.9507,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "frame": 25,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 3.1333,
+            "TiltHornBodyLink": 3.1333
+          },
+          "relative_tilt_deg": 3.1333,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              1.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "frame": 38,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 24.9507,
+            "TiltHornBodyLink": 24.9507
+          },
+          "relative_tilt_deg": 24.9507,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              -1.0,
+              -0.0,
+              0.0
+            ]
+          }
+        },
+        {
+          "frame": 51,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 0.0,
+            "TiltHornBodyLink": 0.0
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "motion_check": "PASS: tilt cradle and horn move; pan carrier and tilt stator remain fixed"
+    },
+    {
+      "name": "Simulation002",
+      "label": "Combined pan and tilt - native motion",
+      "motion_count": 2,
+      "frame_count": 52,
+      "time_step_s": 0.02,
+      "formulas": [
+        "0.7853981634*sin(6.28318530718*time)",
+        "0.3490658504*sin(6.28318530718*time)"
+      ],
+      "samples": [
+        {
+          "frame": 0,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 0.0,
+            "TiltHornBodyLink": 0.0
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "frame": 13,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 44.9112,
+            "PanHornBodyLink": 44.9112,
+            "TiltServoBodyLink": 44.9112,
+            "TiltCradleBodyLink": 48.9366,
+            "TiltHornBodyLink": 48.9366
+          },
+          "relative_tilt_deg": 19.9605,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.3867,
+              0.1598,
+              0.9082
+            ]
+          }
+        },
+        {
+          "frame": 25,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 5.64,
+            "PanHornBodyLink": 5.64,
+            "TiltServoBodyLink": 5.64,
+            "TiltCradleBodyLink": 6.1715,
+            "TiltHornBodyLink": 6.1715
+          },
+          "relative_tilt_deg": 2.5067,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.4058,
+              0.02,
+              0.9137
+            ]
+          }
+        },
+        {
+          "frame": 38,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 44.9112,
+            "PanHornBodyLink": 44.9112,
+            "TiltServoBodyLink": 44.9112,
+            "TiltCradleBodyLink": 48.9366,
+            "TiltHornBodyLink": 48.9366
+          },
+          "relative_tilt_deg": 19.9605,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "TiltCradleBodyLink": [
+              -0.3867,
+              0.1598,
+              -0.9082
+            ]
+          }
+        },
+        {
+          "frame": 51,
+          "rotations_deg": {
+            "BaseBodyLink": 0.0,
+            "PanServoBodyLink": 0.0,
+            "PanRotorBodyLink": 0.0,
+            "PanHornBodyLink": 0.0,
+            "TiltServoBodyLink": 0.0,
+            "TiltCradleBodyLink": 0.0,
+            "TiltHornBodyLink": 0.0
+          },
+          "relative_tilt_deg": 0.0,
+          "axes": {
+            "PanRotorBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "TiltCradleBodyLink": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "motion_check": "PASS: combined pan and relative tilt motions generated"
+    }
+  ],
+  "scope_note": "This revalidates the unmodified 21x14 native assembly and its stored star-proxy simulations. It does not validate a cross-horn interface, physical fit, or motion collisions for a corrected cross-horn design."
+}

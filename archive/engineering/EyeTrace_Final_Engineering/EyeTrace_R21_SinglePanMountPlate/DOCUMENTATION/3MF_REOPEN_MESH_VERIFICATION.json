@@ -1,0 +1,53 @@
+{
+  "unsliced": {
+    "file": "EyeTrace_Final_Engineering\\EyeTrace_R21_SinglePanMountPlate\\PRINT\\Plate02_R21_SingleMountPlate_UNSLICED.3mf",
+    "crc": "PASS",
+    "mesh_path": "3D/Objects/object_4.model",
+    "vertices": 4173,
+    "triangles": 8362,
+    "bbox_local": [
+      [
+        -23.798845,
+        23.799999
+      ],
+      [
+        -23.799225,
+        23.799225
+      ],
+      [
+        -2.1,
+        2.1
+      ]
+    ],
+    "nonmanifold_edges": 0,
+    "connected_components": 1,
+    "instances": 12,
+    "mesh_sha256": "d33f1e4f77c636c640848353fd2a39b4591a55b507d587d3c7fff6001ae01994"
+  },
+  "sliced": {
+    "file": "EyeTrace_Final_Engineering\\EyeTrace_R21_SinglePanMountPlate\\PRINT\\Plate02_R21_SingleMountPlate_SLICED_HOLD.3mf",
+    "crc": "PASS",
+    "mesh_path": "3D/Objects/object_4.model",
+    "vertices": 4173,
+    "triangles": 8362,
+    "bbox_local": [
+      [
+        -23.7994232,
+        23.7994232
+      ],
+      [
+        -23.7992249,
+        23.7992249
+      ],
+      [
+        -2.0999999,
+        2.0999999
+      ]
+    ],
+    "nonmanifold_edges": 0,
+    "connected_components": 1,
+    "instances": 12,
+    "mesh_sha256": "09f6b8db5e8b8c69a03d62fa3ffe2ce9a7ee480fc9d23d9593203f01a26c2bc8"
+  },
+  "replacement_mesh_identical_after_slicing": false
+}

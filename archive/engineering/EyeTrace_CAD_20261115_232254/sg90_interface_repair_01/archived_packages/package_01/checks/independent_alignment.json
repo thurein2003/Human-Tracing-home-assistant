@@ -1,0 +1,33 @@
+{
+  "motor_canonical_symmetric_difference_mm3": 0.0,
+  "pan_axis": [
+    0,
+    0,
+    1
+  ],
+  "pan_axis_point": [
+    0,
+    0,
+    0
+  ],
+  "tilt_axis": [
+    1,
+    0,
+    0
+  ],
+  "tilt_axis_point": [
+    0,
+    0,
+    78
+  ],
+  "references_identical": true,
+  "idler_wall_diameter": 5.2,
+  "idler_sleeve_diameter": 5.0,
+  "radial_clearance": 0.1,
+  "sleeve_end_x": 39.3,
+  "wall_end_x": 39.0,
+  "nut_to_wall_axial_clearance": 0.3,
+  "flange_rear_x": 36.3,
+  "wall_front_x": 36.5,
+  "flange_wall_clearance": 0.2
+}

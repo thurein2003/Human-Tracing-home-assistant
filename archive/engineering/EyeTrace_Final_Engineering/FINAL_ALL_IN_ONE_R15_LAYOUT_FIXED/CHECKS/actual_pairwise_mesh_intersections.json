@@ -1,0 +1,414 @@
+{
+  "source": "Exact exported R15 Fixed 3MF mesh vertices and triangles",
+  "mesh_count": 13,
+  "mesh_components": {
+    "Base_EarMount_ThrustSupport": 1,
+    "Pan_Replaceable_ThrustRing": 1,
+    "PanYoke_EarBracket_KeyedDrive": 1,
+    "Tilt_Removable_IdlerPillar": 1,
+    "Pan_KeyedHorn_Cover": 1,
+    "TiltCradle_KeyedHorn_CameraFrame": 1,
+    "Tilt_KeyedHorn_CaptiveCover": 1,
+    "Tilt_Journal_FlangedSleeve": 1,
+    "PCB_Spacer_Lower_Left": 1,
+    "PCB_Spacer_Lower_Right": 1,
+    "PCB_Spacer_Upper_Left": 1,
+    "PCB_Spacer_Upper_Right": 1,
+    "CameraPlate_21x14": 1
+  },
+  "pairs_checked": 78,
+  "collision_pairs": [],
+  "all_pairs_intersection_free": true,
+  "pair_results": [
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "Pan_Replaceable_ThrustRing",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "PanYoke_EarBracket_KeyedDrive",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "Tilt_Removable_IdlerPillar",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "Pan_KeyedHorn_Cover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "Tilt_KeyedHorn_CaptiveCover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "Tilt_Journal_FlangedSleeve",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "PCB_Spacer_Lower_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Base_EarMount_ThrustSupport",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "PanYoke_EarBracket_KeyedDrive",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "Tilt_Removable_IdlerPillar",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "Pan_KeyedHorn_Cover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "Tilt_KeyedHorn_CaptiveCover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "Tilt_Journal_FlangedSleeve",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "PCB_Spacer_Lower_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_Replaceable_ThrustRing",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "Tilt_Removable_IdlerPillar",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "Pan_KeyedHorn_Cover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "Tilt_KeyedHorn_CaptiveCover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "Tilt_Journal_FlangedSleeve",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "PCB_Spacer_Lower_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PanYoke_EarBracket_KeyedDrive",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "Pan_KeyedHorn_Cover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "Tilt_KeyedHorn_CaptiveCover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "Tilt_Journal_FlangedSleeve",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "PCB_Spacer_Lower_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Removable_IdlerPillar",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_KeyedHorn_Cover",
+      "b": "TiltCradle_KeyedHorn_CameraFrame",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_KeyedHorn_Cover",
+      "b": "Tilt_KeyedHorn_CaptiveCover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_KeyedHorn_Cover",
+      "b": "Tilt_Journal_FlangedSleeve",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_KeyedHorn_Cover",
+      "b": "PCB_Spacer_Lower_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_KeyedHorn_Cover",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_KeyedHorn_Cover",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_KeyedHorn_Cover",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Pan_KeyedHorn_Cover",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "Tilt_KeyedHorn_CaptiveCover",
+      "intersection_facets": 0
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "Tilt_Journal_FlangedSleeve",
+      "intersection_facets": 0
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "PCB_Spacer_Lower_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "TiltCradle_KeyedHorn_CameraFrame",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_KeyedHorn_CaptiveCover",
+      "b": "Tilt_Journal_FlangedSleeve",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_KeyedHorn_CaptiveCover",
+      "b": "PCB_Spacer_Lower_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_KeyedHorn_CaptiveCover",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_KeyedHorn_CaptiveCover",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_KeyedHorn_CaptiveCover",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_KeyedHorn_CaptiveCover",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Journal_FlangedSleeve",
+      "b": "PCB_Spacer_Lower_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Journal_FlangedSleeve",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Journal_FlangedSleeve",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Journal_FlangedSleeve",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "Tilt_Journal_FlangedSleeve",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Lower_Left",
+      "b": "PCB_Spacer_Lower_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Lower_Left",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Lower_Left",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Lower_Left",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Lower_Right",
+      "b": "PCB_Spacer_Upper_Left",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Lower_Right",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Lower_Right",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Upper_Left",
+      "b": "PCB_Spacer_Upper_Right",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Upper_Left",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    },
+    {
+      "a": "PCB_Spacer_Upper_Right",
+      "b": "CameraPlate_21x14",
+      "intersection_facets": 0
+    }
+  ]
+}

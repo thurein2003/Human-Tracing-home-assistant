@@ -1,0 +1,270 @@
+{
+  "assembly": {
+    "opened": true,
+    "version": [
+      "1",
+      "1",
+      "4",
+      "20260928 (Git shallow)"
+    ],
+    "printable_count": 13,
+    "invalid_or_disconnected": [],
+    "neutral_intersection_pairs": [
+      {
+        "a": "Base_EarMount_ThrustSupport",
+        "b": "PCB_Spacer_Lower_Left",
+        "volume_mm3": 22.66659099565036
+      },
+      {
+        "a": "Base_EarMount_ThrustSupport",
+        "b": "PCB_Spacer_Lower_Right",
+        "volume_mm3": 22.66659099565036
+      },
+      {
+        "a": "Base_EarMount_ThrustSupport",
+        "b": "PCB_Spacer_Upper_Left",
+        "volume_mm3": 22.66659099565036
+      },
+      {
+        "a": "Base_EarMount_ThrustSupport",
+        "b": "PCB_Spacer_Upper_Right",
+        "volume_mm3": 22.66659099565036
+      },
+      {
+        "a": "PCB_Spacer_Lower_Left",
+        "b": "PCB_Spacer_Lower_Right",
+        "volume_mm3": 45.33318199130071
+      },
+      {
+        "a": "PCB_Spacer_Lower_Left",
+        "b": "PCB_Spacer_Upper_Left",
+        "volume_mm3": 45.33318199130071
+      },
+      {
+        "a": "PCB_Spacer_Lower_Left",
+        "b": "PCB_Spacer_Upper_Right",
+        "volume_mm3": 45.33318199130071
+      },
+      {
+        "a": "PCB_Spacer_Lower_Right",
+        "b": "PCB_Spacer_Upper_Left",
+        "volume_mm3": 45.33318199130071
+      },
+      {
+        "a": "PCB_Spacer_Lower_Right",
+        "b": "PCB_Spacer_Upper_Right",
+        "volume_mm3": 45.33318199130071
+      },
+      {
+        "a": "PCB_Spacer_Upper_Left",
+        "b": "PCB_Spacer_Upper_Right",
+        "volume_mm3": 45.33318199130071
+      }
+    ],
+    "components": [
+      "Base_EarMount_ThrustSupport",
+      "Pan_Replaceable_ThrustRing",
+      "PanYoke_EarBracket_KeyedDrive",
+      "Tilt_Removable_IdlerPillar",
+      "Pan_KeyedHorn_Cover",
+      "TiltCradle_KeyedHorn_CameraFrame",
+      "Tilt_KeyedHorn_CaptiveCover",
+      "Tilt_Journal_FlangedSleeve",
+      "PCB_Spacer_Lower_Left",
+      "PCB_Spacer_Lower_Right",
+      "PCB_Spacer_Upper_Left",
+      "PCB_Spacer_Upper_Right",
+      "CameraPlate_Cut007"
+    ]
+  },
+  "layout": {
+    "opened": true,
+    "mesh_count": 13,
+    "all_closed": true,
+    "parts": [
+      {
+        "name": "Base_EarMount_ThrustSupport",
+        "facets": 5460,
+        "solid": true,
+        "bounds": [
+          134.2,
+          13.0,
+          0.0,
+          214.2,
+          83.0,
+          36.5
+        ]
+      },
+      {
+        "name": "Pan_Replaceable_ThrustRing",
+        "facets": 2112,
+        "solid": true,
+        "bounds": [
+          13.0,
+          102.6,
+          0.0,
+          76.98567771911621,
+          166.59283981323242,
+          1.0
+        ]
+      },
+      {
+        "name": "PanYoke_EarBracket_KeyedDrive",
+        "facets": 9942,
+        "solid": true,
+        "bounds": [
+          13.0,
+          13.0,
+          0.0,
+          115.19999694824219,
+          83.59210205078125,
+          70.0
+        ]
+      },
+      {
+        "name": "Tilt_Removable_IdlerPillar",
+        "facets": 1300,
+        "solid": true,
+        "bounds": [
+          93.0,
+          102.6,
+          0.0,
+          109.0,
+          159.6,
+          57.0
+        ]
+      },
+      {
+        "name": "Pan_KeyedHorn_Cover",
+        "facets": 4312,
+        "solid": true,
+        "bounds": [
+          125.0,
+          102.6,
+          0.0,
+          172.9892578125,
+          150.59462890625,
+          4.199999809265137
+        ]
+      },
+      {
+        "name": "TiltCradle_KeyedHorn_CameraFrame",
+        "facets": 9108,
+        "solid": true,
+        "bounds": [
+          189.0,
+          102.6,
+          -7.105427357601002e-15,
+          234.0,
+          147.99765167236328,
+          77.0
+        ]
+      },
+      {
+        "name": "Tilt_KeyedHorn_CaptiveCover",
+        "facets": 4312,
+        "solid": true,
+        "bounds": [
+          13.0,
+          185.6,
+          0.0,
+          54.9906005859375,
+          227.59530029296874,
+          4.199999809265137
+        ]
+      },
+      {
+        "name": "Tilt_Journal_FlangedSleeve",
+        "facets": 1260,
+        "solid": true,
+        "bounds": [
+          143.0,
+          185.6,
+          0.0,
+          149.9984335899353,
+          192.59921655654907,
+          4.099999904632568
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Lower_Left",
+        "facets": 840,
+        "solid": true,
+        "bounds": [
+          166.0,
+          185.6,
+          0.0,
+          170.99944067001343,
+          190.59888110160827,
+          3.0
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Lower_Right",
+        "facets": 840,
+        "solid": true,
+        "bounds": [
+          187.0,
+          185.6,
+          0.0,
+          191.99944067001343,
+          190.59888110160827,
+          3.0
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Upper_Left",
+        "facets": 840,
+        "solid": true,
+        "bounds": [
+          208.0,
+          185.6,
+          0.0,
+          212.99944067001343,
+          190.59888110160827,
+          3.0
+        ]
+      },
+      {
+        "name": "PCB_Spacer_Upper_Right",
+        "facets": 840,
+        "solid": true,
+        "bounds": [
+          229.0,
+          185.6,
+          0.0,
+          233.99944067001343,
+          190.59888110160827,
+          3.0
+        ]
+      },
+      {
+        "name": "CameraPlate_21x14",
+        "facets": 3828,
+        "solid": true,
+        "bounds": [
+          71.0,
+          185.6,
+          0.0,
+          127.0,
+          217.6,
+          3.0
+        ]
+      }
+    ]
+  },
+  "3mf": [
+    {
+      "path": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15_LAYOUT_FIXED\\EyeTrace_K2_ABS_All_In_One_R15_Fixed.3mf",
+      "zip_integrity": true,
+      "model_sha256": "88c1300b285fa9f46ca87449c7491e9236042ce6d8fb37a3e7a970e17199efdc",
+      "entry_count": 6
+    },
+    {
+      "path": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15_ASSEMBLY\\EyeTrace_R15_ABS_AutoTree_SupportTrial.3mf",
+      "zip_integrity": true,
+      "model_sha256": "88c1300b285fa9f46ca87449c7491e9236042ce6d8fb37a3e7a970e17199efdc",
+      "entry_count": 6
+    }
+  ]
+}

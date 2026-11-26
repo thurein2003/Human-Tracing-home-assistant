@@ -1,0 +1,58 @@
+{
+  "source": "EyeTrace_Final_Engineering\\FINAL_ALL_IN_ONE_R15\\CAD\\EyeTrace_Final_Assembly_R15.FCStd",
+  "FreeCAD_version": [
+    "1",
+    "1",
+    "4",
+    "20260928 (Git shallow)"
+  ],
+  "printable_count": 13,
+  "invalid_printables": [],
+  "neutral_printable_solid_intersections": [],
+  "printable_names": [
+    "Base_EarMount_ThrustSupport",
+    "Pan_Replaceable_ThrustRing",
+    "PanYoke_EarBracket_KeyedDrive",
+    "Tilt_Removable_IdlerPillar",
+    "Pan_KeyedHorn_Cover",
+    "TiltCradle_KeyedHorn_CameraFrame",
+    "Tilt_KeyedHorn_CaptiveCover",
+    "Tilt_Journal_FlangedSleeve",
+    "PCB_Spacer_Lower_Left",
+    "PCB_Spacer_Lower_Right",
+    "PCB_Spacer_Upper_Left",
+    "PCB_Spacer_Upper_Right",
+    "CameraPlate_Cut007"
+  ],
+  "camera_pattern_nominal_mm": {
+    "horizontal": 21.0,
+    "vertical": 14.0
+  },
+  "servo_reference_objects": [
+    {
+      "name": "PanServo_SG90_Reference",
+      "bbox": [
+        -10.7,
+        -6.1,
+        6.0,
+        21.599999999999998,
+        6.1,
+        36.3
+      ],
+      "label": "Pan SG90 reference ? provisional dimensions"
+    },
+    {
+      "name": "TiltServo_SG90_Reference",
+      "bbox": [
+        -70.0,
+        -6.1,
+        56.400000000000006,
+        -39.7,
+        6.1,
+        88.7
+      ],
+      "label": "Tilt SG90 reference ? provisional dimensions"
+    }
+  ],
+  "note": "Neutral contact/intersection checks are geometric only. Intended mating and fastener engagement require joint-specific interpretation; physical fit remains unverified."
+}

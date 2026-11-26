@@ -1,0 +1,30 @@
+{
+  "source_3mf": "EyeTrace_Final_Engineering/EyeTrace_R19_ThinMountPlate/PRINT/Plate02_R19_ThinMountPlate.3mf",
+  "output_3mf": "EyeTrace_Final_Engineering/EyeTrace_R20_UltraLowProfile/PRINT/Plate02_R20_LowProfile_Candidate_HOLD.3mf",
+  "zip_crc": "PASS",
+  "build_items": 12,
+  "resource_objects": 26,
+  "updated_object_id": 3,
+  "vertices": 26065,
+  "triangles": 52210,
+  "source_object3_bbox": [
+    12.999996,
+    13.004627,
+    0.0,
+    115.2,
+    83.595367,
+    67.800003
+  ],
+  "updated_object3_bbox": [
+    12.99999619,
+    13.00462723,
+    0.0,
+    115.19999695,
+    83.59536743,
+    67.80000305
+  ],
+  "all_non_yoke_3mf_geometry_retained": true,
+  "slicer_settings_and_placements_retained": true,
+  "sliced": false,
+  "release": "HOLD"
+}

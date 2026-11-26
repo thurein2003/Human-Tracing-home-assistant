@@ -1,0 +1,9 @@
+﻿import FreeCAD as A,Part,json,os,math
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering'
+d=A.openDocument(root+r'\R15_CENTERED_MOUNT_FINAL\CAD\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd'); md=A.openDocument(root+r'\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd'); t=md.getObject('ArmPocketTool').Shape
+rows=[]
+for n,rot,trans in [('PanYoke_EarBracket_KeyedDrive',A.Rotation(V(0,1,0),180),V(0,0,38.8)),('TiltCradle_KeyedHorn_CameraFrame',A.Rotation(V(0,1,0),-90),V(-37.2,0,78))]:
+ s=d.getObject(n).Shape; q=t.copy(); q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/math.pi); q.translate(trans); c=s.common(q); rows.append({'part':n,'cutter_bounds_mm':[q.BoundBox.XMin,q.BoundBox.YMin,q.BoundBox.ZMin,q.BoundBox.XMax,q.BoundBox.YMax,q.BoundBox.ZMax],'cutter_remaining_material_common_mm3':c.Volume,'common_bbox_mm':[c.BoundBox.XMin,c.BoundBox.YMin,c.BoundBox.ZMin,c.BoundBox.XMax,c.BoundBox.YMax,c.BoundBox.ZMax] if not c.isNull() else None,'common_solids':len(c.Solids),'brep_valid':s.isValid(),'brep_solids':len(s.Solids)})
+print(json.dumps(rows,indent=2));
+with open(root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CHECKS\cutter_transform_probe.json','w') as f:json.dump(rows,f,indent=2)

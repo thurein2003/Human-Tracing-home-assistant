@@ -1,0 +1,10 @@
+﻿import FreeCAD as A,json,os
+p=r'EyeTrace_Final_Engineering\EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP'
+m=A.openDocument(r'EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_15\CrossHorn_UltraMinimal_FitTest_04R15.FCStd')
+s=m.getObject('BaseCoupon').Shape.copy();s.scale(0.97)
+mat=A.Matrix();mat.A33=1.0/0.97
+r=s.transformGeometry(mat)
+out={'uniform':[s.BoundBox.XMin,s.BoundBox.ZMin,s.BoundBox.ZMax],'result':r if isinstance(r,list) else [r.BoundBox.XMin,r.BoundBox.YMin,r.BoundBox.ZMin,r.BoundBox.XMax,r.BoundBox.YMax,r.BoundBox.ZMax],'valid':r.isValid(),'volume':r.Volume}
+with open(os.path.join(p,'CHECKS_matrix_trial.json'),'w') as f:json.dump(out,f,indent=2)
+print(out)
+

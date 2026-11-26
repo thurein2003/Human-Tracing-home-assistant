@@ -1,0 +1,17 @@
+import zipfile,json,os
+from xml.etree import ElementTree as ET
+root=r'EyeTrace_Final_Engineering\R15_BASE_ABS_OPTIMIZED'
+src=os.path.join(root,'V3_3W_20pct_Gyroid_ABS.3mf'); dst=os.path.join(root,'V7_TreeAuto_3W20_TexturedPEI_ABS.3mf')
+with zipfile.ZipFile(src) as z:data={n:z.read(n) for n in z.namelist()}
+for cfg in ('Metadata/project_settings.config','Metadata/process_settings_1.config'):
+ d=json.loads(data[cfg]);d.update({'wall_loops':'3','sparse_infill_density':'20%','sparse_infill_pattern':'gyroid','support_type':'tree(auto)','support_style':'tree_slim','support_on_build_plate_only':'0','support_top_z_distance':'0.24','support_bottom_z_distance':'0.24','curr_bed_type':'Textured PEI Plate','textured_plate_temp':'100','textured_plate_temp_initial_layer':'100'});data[cfg]=json.dumps(d,indent=2).encode()
+ms=ET.fromstring(data['Metadata/model_settings.config'])
+for o in ms.findall('object'):
+ for m in o.findall('metadata'):
+  if m.get('key')=='support_type':m.set('value','tree(auto)')
+  elif m.get('key')=='support_style':m.set('value','tree_slim')
+  elif m.get('key')=='enable_support':m.set('value','1')
+data['Metadata/model_settings.config']=ET.tostring(ms,encoding='utf-8',xml_declaration=True)
+with zipfile.ZipFile(dst,'w',zipfile.ZIP_DEFLATED) as z:
+ for n,b in data.items():z.writestr(n,b)
+with zipfile.ZipFile(dst) as z:assert z.testzip() is None

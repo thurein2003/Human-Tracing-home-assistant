@@ -1,0 +1,12 @@
+﻿import FreeCAD as App, json
+p=r'EyeTrace_Final_Engineering\EyeTrace_R18_CircularMount_Correction_01\CAD\EyeTrace_R18_CircularMount_Correction_01.FCStd'; out=r'EyeTrace_Final_Engineering\EyeTrace_R18_CircularMount_Correction_01\DOCUMENTATION\pan_faces.json'
+d=App.openDocument(p); s=d.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+faces=[]
+for i,f in enumerate(s.Faces):
+ b=f.BoundBox; surf=f.Surface; typ=type(surf).__name__; rec={'i':i+1,'type':typ,'area':f.Area,'bb':[b.XMin,b.XMax,b.YMin,b.YMax,b.ZMin,b.ZMax]}
+ if typ=='Cylinder':
+  rec.update({'radius':surf.Radius,'center':[surf.Center.x,surf.Center.y,surf.Center.z],'axis':[surf.Axis.x,surf.Axis.y,surf.Axis.z]})
+ if typ=='Plane':
+  rec.update({'normal':[surf.Axis.x,surf.Axis.y,surf.Axis.z]})
+ faces.append(rec)
+open(out,'w').write(json.dumps(faces,indent=2))

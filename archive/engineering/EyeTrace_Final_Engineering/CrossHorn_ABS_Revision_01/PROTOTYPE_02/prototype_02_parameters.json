@@ -1,0 +1,33 @@
+{
+  "units": "mm",
+  "confirmed_user_dimensions": {
+    "long_span": 35.0,
+    "short_span": 18.0,
+    "center_hub_diameter": 7.0,
+    "pocket_total_lateral_clearance": 0.20
+  },
+  "short_arm_adjustment": {
+    "requested_addition": 1.0,
+    "interpretation": "1 mm per side",
+    "extension_per_end_mm": 1.0,
+    "added_arm_width_per_side_mm": 1.0,
+    "status": "USER_CONFIRMED_PROTOTYPE_ADJUSTMENT"
+  },
+  "photo_guided_provisional_profile_mm": {
+    "long_arm_width_at_root": 6.0,
+    "long_arm_width_at_tip": 4.0,
+    "short_arm_width_at_root_before_user_adjustment": 4.0,
+    "short_arm_width_at_tip_before_user_adjustment": 3.0,
+    "long_tip_radius": 2.0,
+    "short_tip_radius_before_user_adjustment": 1.5,
+    "hub_offset_x": 0.0,
+    "hub_offset_y": 0.0,
+    "horn_plate_thickness": 1.5,
+    "raised_hub_height": 2.5,
+    "hub_recess_axial_clearance": 0.20,
+    "retaining_screw_access_diameter": 4.5
+  },
+  "profile_status": "Provisional only. Widths, radii, centering, thickness, boss height and center access are not confirmed on the user's horn. Rounded tapered arms reflect photo shape only; photo has insufficient scale/perspective for dimension extraction.",
+  "secondary_attachment_holes": "Omitted: hole locations not measured",
+  "camera_pattern_mm": {"horizontal_center_to_center": 21.0, "vertical_center_to_center": 14.0}
+}

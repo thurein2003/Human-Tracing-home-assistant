@@ -1,0 +1,27 @@
+﻿import FreeCAD as A,Part,os,json
+from FreeCAD import Vector as V
+E=r'EyeTrace_Final_Engineering';o=A.openDocument(os.path.join(E,'EyeTrace_Final_2_PLATES_R16_COMPACT_SERVO','CAD','EyeTrace_R16_CompactServo_Assembly_HOLD.FCStd'));r=A.openDocument(os.path.join(E,'EyeTrace_Final_2_PLATES_R17_HORN_CLEANUP','CAD','EyeTrace_R17_HornCleanup_Assembly.FCStd'));m=A.openDocument(os.path.join(E,'CrossHorn_ABS_Revision_01','PROTOTYPE_04_REVISION_15','CrossHorn_UltraMinimal_FitTest_04R15.FCStd'))
+base=m.getObject('BaseCoupon').Shape;final=m.getObject('FinalCoupon').Shape;exp=base.cut(final);dsk=Part.makeCylinder(20.5,3.8,V(0,0,0),V(0,0,1));rot=A.Rotation(V(1,0,0),180);top=V(0,0,33)
+def tr(sh):
+ q=sh.copy();q.rotate(V(0,0,0),rot.Axis,rot.Angle*180/3.141592653589793);q.translate(top-rot.multVec(V(0,0,3.8)));return q
+expG=tr(exp);patch=tr(dsk.cut(exp));old=o.getObject('PanYoke_EarBracket_KeyedDrive').Shape
+keep=[o.getObject('Pan_KeyedHorn_Cover').Shape.makeOffsetShape(.2,.05,True)]
+for i in range(4):
+ for so in o.getObject('PanDrive_M3x10_'+str(i)).Shape.Solids:keep.append(so.makeOffsetShape(.2,.05,True))
+sh=old.fuse(patch)
+for q in keep:sh=sh.cut(q)
+sh=sh.cut(expG);main=sorted(sh.Solids,key=lambda s:s.Volume,reverse=True)[0];hfit=o.getObject('Pan_OriginalStar_PROVISIONAL').Shape.common(expG)
+panpairs=[]
+for nm in ['Pan_KeyedHorn_Cover']+['PanDrive_M3x10_'+str(i) for i in range(4)]+['PanServo_SG90_Reference','Base_EarMount_ThrustSupport','Pan_Replaceable_ThrustRing']:
+ panpairs.append({'part':nm,'main_brep':float(main.common(o.getObject(nm).Shape).Volume),'fit_envelope':float(hfit.common(o.getObject(nm).Shape).Volume)})
+tilt=r.getObject('TiltCradle_KeyedHorn_CameraFrame').Shape; tiltname=['Tilt_KeyedHorn_CaptiveCover']+['TiltDrive_M3x10_'+str(i) for i in range(4)]+['TiltServo_SG90_Reference','Tilt_Removable_IdlerPillar','Tilt_Journal_FlangedSleeve','TiltIdler_M3x12','TiltIdler_M3_Washer'];tiltpairs=[]
+for nm in tiltname:
+ q=r.getObject(nm)
+ if q: tiltpairs.append({'part':nm,'carrier':float(tilt.common(q.Shape).Volume)})
+# horn and screws near tilt interface
+th=r.getObject('Tilt_OriginalStar_PROVISIONAL').Shape;thpairs=[]
+for nm in ['Tilt_KeyedHorn_CaptiveCover']+['TiltDrive_M3x10_'+str(i) for i in range(4)]+['TiltServo_SG90_Reference']:
+ q=r.getObject(nm)
+ if q: thpairs.append({'part':nm,'horn_common':float(th.common(q.Shape).Volume)})
+res={'pan_main_valid':bool(main.isValid()),'pan_main_solids':len(main.Solids),'pan_main_volume':float(main.Volume),'pan_pocket_intersection':float(main.common(expG).Volume),'pan_pairs':panpairs,'tilt_pairs':tiltpairs,'tilt_horn_pairs':thpairs}
+with open(os.path.join(E,'EyeTrace_R17_PLATE_02_ASSEMBLY_REPAIR','REPORTS','LOCAL_ASSEMBLY_CLEARANCE_PROBE.json'),'w') as f:json.dump(res,f,indent=2)

@@ -1,0 +1,121 @@
+{
+  "poses": 1266,
+  "pair_tests": 1488816,
+  "unique_relative_tests": 230646,
+  "all_component_pairs_included": true,
+  "positive_overlap_whitelist": [],
+  "unintended_instances": 0,
+  "events": [],
+  "unverified_rear_envelope_conflicts": [
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "PCB_Spacer_Lower_Left",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 17.901856966647426,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    },
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "Camera_M2x12_Lower_Left",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 13.025255004902858,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    },
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "PCB_Spacer_Lower_Right",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 17.901856966647312,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    },
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "Camera_M2x12_Lower_Right",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 13.025255004902741,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    },
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "PCB_Spacer_Upper_Left",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 17.90185696664751,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    },
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "Camera_M2x12_Upper_Left",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 13.025255004901682,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    },
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "PCB_Spacer_Upper_Right",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 17.9018569666474,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    },
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "Camera_M2x12_Upper_Right",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 13.025255004902597,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    },
+    {
+      "pose": [
+        62,
+        32
+      ],
+      "pair": [
+        "CameraPlate_Cut007",
+        "Camera_RearComponents_KEEP_OUT"
+      ],
+      "volume_mm3": 423.42137137238774,
+      "classification": "UNVERIFIED rear-envelope conflict"
+    }
+  ],
+  "unknown_envelope_scope": "Retained unmeasured camera rear volume; these conflicts are not clearance passes",
+  "limits": "Discrete operating poses and nominal exit keep-outs; not continuous motion, spline, flexible cable-loop, stress or physical-fit proof."
+}

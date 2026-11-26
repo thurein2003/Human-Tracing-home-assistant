@@ -1,0 +1,616 @@
+{
+  "source_stall_torque_kgfcm_at4p8V": 1.8,
+  "source": "https://towerpro.com.tw/product/sg90-analog/",
+  "PETG_density_source": "https://prusament.com/wp-content/uploads/2022/10/PETG_Prusament_TDS_2021_10_EN.pdf",
+  "assumptions": {
+    "PETG_density_g_cm3": 1.27,
+    "solid_fill_bound": true,
+    "angular_acceleration_rad_s2": 1,
+    "pan_friction_coefficient": 0.3,
+    "pan_friction_radius_m": 0.03,
+    "cable_torque_Nm": 0.005,
+    "working_budget_stall_fraction": 0.25,
+    "tilt_gravity_dynamic_factor": 2
+  },
+  "mass_components": [
+    {
+      "name": "Base_EarMount_ThrustSupport",
+      "frame": "fixed",
+      "mass_g": 64.2452358192827,
+      "center_mm": [
+        0.3424509035047397,
+        7.208957460329682e-17,
+        12.030181782781526
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "Pan_Replaceable_ThrustRing",
+      "frame": "fixed",
+      "mass_g": 1.058579750820063,
+      "center_mm": [
+        -2.2419508684856004e-15,
+        5.801982733903053e-16,
+        36.49999999999999
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "PanServo_SG90_Reference",
+      "frame": "fixed",
+      "mass_g": 9,
+      "center_mm": [
+        5.045797618796182,
+        -5.42147950283886e-16,
+        18.73748184044496
+      ],
+      "basis": "manufacturer nominal SG90 mass"
+    },
+    {
+      "name": "TiltServo_SG90_Reference",
+      "frame": "pan",
+      "mass_g": 9,
+      "center_mm": [
+        -57.26251815955504,
+        -5.879206407527567e-16,
+        72.95420238120381
+      ],
+      "basis": "manufacturer nominal SG90 mass"
+    },
+    {
+      "name": "Pan_OriginalStar_PROVISIONAL",
+      "frame": "pan",
+      "mass_g": 0.41643483682568927,
+      "center_mm": [
+        -2.146907628603276e-14,
+        -7.773507666409804e-16,
+        36.02134333335196
+      ],
+      "basis": "assumed nylon density 1.15g/cm3"
+    },
+    {
+      "name": "Tilt_OriginalStar_PROVISIONAL",
+      "frame": "tilt",
+      "mass_g": 0.41643483682568916,
+      "center_mm": [
+        -39.97865666664804,
+        -1.3777198709081018e-15,
+        78.00000000000003
+      ],
+      "basis": "assumed nylon density 1.15g/cm3"
+    },
+    {
+      "name": "PanOriginalScrew_PROVISIONAL",
+      "frame": "pan",
+      "mass_g": 0.15444265834588272,
+      "center_mm": [
+        -2.257213346791584e-17,
+        2.5276409929402626e-18,
+        35.967065868263475
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "TiltOriginalScrew_PROVISIONAL",
+      "frame": "tilt",
+      "mass_g": 0.15444265834588278,
+      "center_mm": [
+        -40.032934131736525,
+        -9.677748733243854e-18,
+        78.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PanYoke_EarBracket_KeyedDrive",
+      "frame": "pan",
+      "mass_g": 54.020283325059395,
+      "center_mm": [
+        -20.524135349702274,
+        -1.0326890698315567e-14,
+        52.572802950635285
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "Tilt_Removable_IdlerPillar",
+      "frame": "pan",
+      "mass_g": 9.53985282799906,
+      "center_mm": [
+        37.348973701966585,
+        -2.3458699425443926e-16,
+        63.65638407766394
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "IdlerPillar_M3x10_0",
+      "frame": "pan",
+      "mass_g": 1.4953067625430054,
+      "center_mm": [
+        32.5,
+        -23.5,
+        39.991166505275174
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "IdlerPillar_M3x10_1",
+      "frame": "pan",
+      "mass_g": 1.4953067625430054,
+      "center_mm": [
+        32.5,
+        23.5,
+        39.991166505275174
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "Pan_KeyedHorn_Cover",
+      "frame": "pan",
+      "mass_g": 3.8385477382708455,
+      "center_mm": [
+        -1.0872732811318253e-15,
+        -8.463100134215288e-16,
+        33.947862832137254
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "PanDrive_M3x10_0",
+      "frame": "pan",
+      "mass_g": 1.4953067625430057,
+      "center_mm": [
+        18.000000000000004,
+        -1.2079921180695757e-16,
+        36.111671686657566
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PanDrive_M3x10_1",
+      "frame": "pan",
+      "mass_g": 1.4953067625430057,
+      "center_mm": [
+        -18.000000000000004,
+        -1.3727863365918252e-16,
+        36.111671686657566
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PanDrive_M3x10_2",
+      "frame": "pan",
+      "mass_g": 1.4953067625430057,
+      "center_mm": [
+        2.4158731329198104e-16,
+        18.000000000000004,
+        36.111671686657566
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PanDrive_M3x10_3",
+      "frame": "pan",
+      "mass_g": 1.4953067625430052,
+      "center_mm": [
+        2.3401038911153294e-16,
+        -18.000000000000007,
+        36.11167168665757
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "TiltCradle_KeyedHorn_CameraFrame",
+      "frame": "tilt",
+      "mass_g": 31.463991143278257,
+      "center_mm": [
+        -8.891870080069697,
+        -2.426720876025466,
+        69.45433400938953
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "Tilt_KeyedHorn_CaptiveCover",
+      "frame": "tilt",
+      "mass_g": 3.0306086475838856,
+      "center_mm": [
+        -42.13268482579284,
+        8.099029310057926e-16,
+        78.00000000000006
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "TiltDrive_M3x10_0",
+      "frame": "tilt",
+      "mass_g": 1.4953067625430059,
+      "center_mm": [
+        -39.888328313342434,
+        14.999999999999996,
+        77.99999999999999
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "TiltDrive_M3x10_1",
+      "frame": "tilt",
+      "mass_g": 1.4953067625430059,
+      "center_mm": [
+        -39.888328313342434,
+        -14.999999999999996,
+        77.99999999999999
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "TiltDrive_M3x10_2",
+      "frame": "tilt",
+      "mass_g": 1.4953067625430059,
+      "center_mm": [
+        -39.888328313342434,
+        -2.4720807263915604e-17,
+        92.99999999999999
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "TiltDrive_M3x10_3",
+      "frame": "tilt",
+      "mass_g": 1.4953067625430054,
+      "center_mm": [
+        -39.88832831334244,
+        -1.2628235824288715e-16,
+        63.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "Tilt_Journal_FlangedSleeve",
+      "frame": "tilt",
+      "mass_g": 0.08669485679771285,
+      "center_mm": [
+        36.794387684661054,
+        -8.432633338300564e-17,
+        78.00000000000001
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "TiltIdler_M3x12",
+      "frame": "tilt",
+      "mass_g": 1.8465398065544774,
+      "center_mm": [
+        37.05486731615752,
+        2.149439677361071e-17,
+        78.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "TiltIdler_M3_Washer",
+      "frame": "tilt",
+      "mass_g": 0.11748123172777629,
+      "center_mm": [
+        32.75,
+        1.2101003251160107e-16,
+        78.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PanEar_M1p6x8_0",
+      "frame": "fixed",
+      "mass_g": 0.3243639884769881,
+      "center_mm": [
+        -8.15,
+        1.0763388575926487e-17,
+        22.204704324343016
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PanEar_M1p6x8_1",
+      "frame": "fixed",
+      "mass_g": 0.32436398847698816,
+      "center_mm": [
+        19.050000000000004,
+        -2.222381493801289e-18,
+        22.204704324343016
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "TiltEar_M1p6x8_0",
+      "frame": "pan",
+      "mass_g": 0.32436398847698794,
+      "center_mm": [
+        -53.795295675657,
+        8.661712580084739e-19,
+        58.95000000000002
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "TiltEar_M1p6x8_1",
+      "frame": "pan",
+      "mass_g": 0.3243639884769879,
+      "center_mm": [
+        -53.795295675657016,
+        2.1077919175304047e-17,
+        86.15000000000005
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "RailMount_Lower_M3x10_0",
+      "frame": "tilt",
+      "mass_g": 1.4953067625430059,
+      "center_mm": [
+        -24.000000000000007,
+        -24.391166505275173,
+        68.00000000000001
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "RailMount_Lower_M3x10_1",
+      "frame": "tilt",
+      "mass_g": 1.4953067625430063,
+      "center_mm": [
+        23.999999999999996,
+        -24.391166505275162,
+        67.99999999999999
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PCB_Spacer_Lower_Left",
+      "frame": "tilt",
+      "mass_g": 0.0575731411289519,
+      "center_mm": [
+        -10.5,
+        -28.89999999999999,
+        68.0
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "Camera_M2x12_Lower_Left",
+      "frame": "tilt",
+      "mass_g": 0.6278081080290303,
+      "center_mm": [
+        -10.5,
+        -27.685318761560346,
+        68.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PCB_Spacer_Lower_Right",
+      "frame": "tilt",
+      "mass_g": 0.0575731411289519,
+      "center_mm": [
+        10.5,
+        -28.89999999999999,
+        68.0
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "Camera_M2x12_Lower_Right",
+      "frame": "tilt",
+      "mass_g": 0.6278081080290303,
+      "center_mm": [
+        10.5,
+        -27.685318761560346,
+        68.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "RailMount_Upper_M3x10_0",
+      "frame": "tilt",
+      "mass_g": 1.4953067625430059,
+      "center_mm": [
+        -24.000000000000007,
+        -24.39116650527517,
+        84.00000000000003
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "RailMount_Upper_M3x10_1",
+      "frame": "tilt",
+      "mass_g": 1.495306762543006,
+      "center_mm": [
+        24.0,
+        -24.391166505275166,
+        84.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PCB_Spacer_Upper_Left",
+      "frame": "tilt",
+      "mass_g": 0.0575731411289519,
+      "center_mm": [
+        -10.5,
+        -28.89999999999999,
+        84.0
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "Camera_M2x12_Upper_Left",
+      "frame": "tilt",
+      "mass_g": 0.6278081080290303,
+      "center_mm": [
+        -10.5,
+        -27.685318761560346,
+        84.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "PCB_Spacer_Upper_Right",
+      "frame": "tilt",
+      "mass_g": 0.0575731411289519,
+      "center_mm": [
+        10.5,
+        -28.89999999999999,
+        84.0
+      ],
+      "basis": "100% solid PETG bound"
+    },
+    {
+      "name": "Camera_M2x12_Upper_Right",
+      "frame": "tilt",
+      "mass_g": 0.6278081080290303,
+      "center_mm": [
+        10.5,
+        -27.685318761560346,
+        84.0
+      ],
+      "basis": "assumed steel density 7.85g/cm3"
+    },
+    {
+      "name": "CameraPlate_Cut007",
+      "frame": "tilt",
+      "mass_g": 5.650681905239387,
+      "center_mm": [
+        2.1335337766952273e-15,
+        -25.899999999999995,
+        76.0
+      ],
+      "basis": "100% solid PETG bound"
+    }
+  ],
+  "camera_sensitivity": [
+    {
+      "camera_mass_assumption_g": 10,
+      "camera_com_assumption_mm": [
+        0,
+        -33,
+        76
+      ],
+      "tilt_total_mass_solid_bound_g": 67.47085418332907,
+      "tilt_com_mm": [
+        -8.795103782218435,
+        -11.483118529366712,
+        73.29237282096611
+      ],
+      "tilt_max_static_gravity_Nm": 0.008211601800569127,
+      "tilt_worst_angle_deg": -22.5,
+      "tilt_conservative_inertia_kgm2": 8.2467140056489e-05,
+      "pan_conservative_inertia_kgm2": 0.000505137881560989,
+      "pan_moving_mass_solid_bound_g": 154.060984122042,
+      "pan_thrust_load_N": 1.510822149940423,
+      "pan_neutral_com_mm": [
+        -11.67651437819913,
+        -5.029020295307438,
+        62.1992547361437
+      ],
+      "pan_gravity_eccentricity_mm": 12.713458740834657,
+      "pan_overturning_moment_Nm": 0.01920777506800668,
+      "thrust_annulus_mean_pressure_MPa": 0.0017961143850288926,
+      "tilt_right_support_static_load_N": 0.2681445048613263,
+      "tilt_right_journal_projected_pressure_MPa": 0.021451560388906103,
+      "pan_friction_assumption_Nm": 0.013597399349463806,
+      "tilt_demand_2xgravity_plus_accel_cable_Nm": 0.021505670741194746,
+      "pan_demand_friction_accel_cable_Nm": 0.019102537231024796,
+      "assumed_working_budget_Nm": 0.044129925,
+      "tilt_within_assumed_budget": true,
+      "pan_within_assumed_budget": true,
+      "scope": "SCREENING ONLY. Load budget is analyst 25% of sourced stall torque; not a manufacturer continuous rating. Actual cable/friction/clone torque unknown."
+    },
+    {
+      "camera_mass_assumption_g": 25,
+      "camera_com_assumption_mm": [
+        0,
+        -33,
+        76
+      ],
+      "tilt_total_mass_solid_bound_g": 82.47085418332907,
+      "tilt_com_mm": [
+        -7.195428866277712,
+        -15.396661383452267,
+        73.7848426527351
+      ],
+      "tilt_max_static_gravity_Nm": 0.012910396742398692,
+      "tilt_worst_angle_deg": -15.5,
+      "tilt_conservative_inertia_kgm2": 0.00011996714005648899,
+      "pan_conservative_inertia_kgm2": 0.000542637881560989,
+      "pan_moving_mass_solid_bound_g": 169.060984122042,
+      "pan_thrust_load_N": 1.6579218999404228,
+      "pan_neutral_com_mm": [
+        -10.640511207020669,
+        -7.510756088750545,
+        63.423731099113446
+      ],
+      "pan_gravity_eccentricity_mm": 13.024282543443068,
+      "pan_overturning_moment_Nm": 0.021593243259786014,
+      "thrust_annulus_mean_pressure_MPa": 0.00197099133995014,
+      "tilt_right_support_static_load_N": 0.34455995940678086,
+      "tilt_right_journal_projected_pressure_MPa": 0.02756479675254247,
+      "pan_friction_assumption_Nm": 0.014921297099463804,
+      "tilt_demand_2xgravity_plus_accel_cable_Nm": 0.030940760624853875,
+      "pan_demand_friction_accel_cable_Nm": 0.020463934981024792,
+      "assumed_working_budget_Nm": 0.044129925,
+      "tilt_within_assumed_budget": true,
+      "pan_within_assumed_budget": true,
+      "scope": "SCREENING ONLY. Load budget is analyst 25% of sourced stall torque; not a manufacturer continuous rating. Actual cable/friction/clone torque unknown."
+    },
+    {
+      "camera_mass_assumption_g": 50,
+      "camera_com_assumption_mm": [
+        0,
+        -33,
+        76
+      ],
+      "tilt_total_mass_solid_bound_g": 107.47085418332907,
+      "tilt_com_mm": [
+        -5.521619506299193,
+        -19.491571289564835,
+        74.30013523231351
+      ],
+      "tilt_max_static_gravity_Nm": 0.020909351578469022,
+      "tilt_worst_angle_deg": -10.5,
+      "tilt_conservative_inertia_kgm2": 0.000182467140056489,
+      "pan_conservative_inertia_kgm2": 0.0006051378815609891,
+      "pan_moving_mass_solid_bound_g": 194.060984122042,
+      "pan_thrust_load_N": 1.9030881499404229,
+      "pan_neutral_com_mm": [
+        -9.269742212011217,
+        -10.794420245480223,
+        65.04387501389664
+      ],
+      "pan_gravity_eccentricity_mm": 14.228409226374392,
+      "pan_overturning_moment_Nm": 0.027077916991216085,
+      "thrust_annulus_mean_pressure_MPa": 0.0022624529314855526,
+      "tilt_right_support_static_load_N": 0.4719190503158717,
+      "tilt_right_journal_projected_pressure_MPa": 0.03775352402526974,
+      "pan_friction_assumption_Nm": 0.017127793349463804,
+      "tilt_demand_2xgravity_plus_accel_cable_Nm": 0.04700117029699453,
+      "pan_demand_friction_accel_cable_Nm": 0.022732931231024794,
+      "assumed_working_budget_Nm": 0.044129925,
+      "tilt_within_assumed_budget": false,
+      "pan_within_assumed_budget": true,
+      "scope": "SCREENING ONLY. Load budget is analyst 25% of sourced stall torque; not a manufacturer continuous rating. Actual cable/friction/clone torque unknown."
+    }
+  ],
+  "simple_bending_sensitivity": {
+    "assumed_force_N": 2,
+    "assumed_lever_mm": 20,
+    "assumed_effective_width_mm": 20,
+    "assumed_wall_thickness_mm": 2.5,
+    "stress_MPa": 1.92,
+    "assumed_effective_modulus_MPa": 1000,
+    "tip_deflection_mm": 0.2048,
+    "scope": "Representative plate strip, not measured peak bracket stress. FDM anisotropy, notches, layer bond, preload and creep excluded."
+  },
+  "printed_solid_volume_cm3": 136.35021147940716,
+  "printed_solid_mass_bound_g": 173.1647685788471,
+  "certified_strength": false
+}

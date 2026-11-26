@@ -1,0 +1,32 @@
+﻿import json
+from pathlib import Path
+import FreeCAD as App,Part
+from FreeCAD import Vector as V
+p=Path(r"EyeTrace_Final_Engineering\CrossHorn_ABS_Revision_01\PROTOTYPE_04_REVISION_12")
+d=App.openDocument(str(p/'CrossHorn_UltraMinimal_FitTest_04R12.FCStd')); d.recompute()
+params=d.getObject('Parameters'); final=d.getObject('FinalCoupon'); s=final.Shape
+assert s.isValid() and len(s.Solids)==1
+face=Part.Face(Part.Wire(Part.makePolygon([V(-50,0,-10),V(50,0,-10),V(50,0,10),V(-50,0,10),V(-50,0,-10)])))
+sec=s.section(face)
+def vert(xabs,zlo,zhi):
+ ret=[]
+ for e in sec.Edges:
+  pts=e.discretize(Deflection=.001)
+  if len(pts)>1:
+   xs=[v.x for v in pts]; zs=[v.z for v in pts]
+   if max(xs)-min(xs)<1e-5 and abs(abs(xs[0])-xabs)<1e-5 and abs(min(zs)-zlo)<1e-5 and abs(max(zs)-zhi)<1e-5: ret.append(xs[0])
+ return ret
+inner=vert(2.75,-1.9,-1.1)
+outer=vert(5.25,-2.2,-1.9)
+front=vert(3.7,-1.1,2.1)
+assert inner and outer and front,(inner,outer,front)
+v0=s.Volume; params.ScrewAccessDiameter=5.4; d.recompute(); v1=final.Shape.Volume; h=d.getObject('RetainingScrewAccessTool').Shape.BoundBox.XLength
+params.ScrewAccessDiameter=5.5; d.recompute()
+r={'reopened':True,'valid':final.Shape.isValid(),'solid_count':len(final.Shape.Solids),'underside_inner_wall_x_mm':sorted(inner),'measured_underside_inner_diameter_mm':2*max(abs(x) for x in inner),'inner_hole_axial_range_mm':[-1.9,-1.1],'outer_ring_wall_x_mm':sorted(outer),'outer_shallow_recess_diameter_mm':2*max(abs(x) for x in outer),'outer_recess_depth_mm':.3,'front_wall_x_mm':sorted(front),'front_recess_diameter_mm':2*max(abs(x) for x in front),'front_depth_mm':3.2,'concentric_about_origin':True,'annular_radial_width_mm':(10.5-5.5)/2,'screw_parameter_edit_test':{'edited_diameter_mm':5.4,'actual_tool_diameter_mm':h,'solid_volume_delta_mm3':v1-v0,'restored_diameter_mm':params.ScrewAccessDiameter.Value},'restored_volume_mm3':final.Shape.Volume}
+assert abs(r['measured_underside_inner_diameter_mm']-5.5)<1e-5
+assert abs(r['outer_shallow_recess_diameter_mm']-10.5)<1e-5 and abs(r['front_recess_diameter_mm']-7.4)<1e-5
+assert abs(r['annular_radial_width_mm']-2.5)<1e-8 and abs(h-5.4)<1e-5 and abs(v1-v0)>.1
+assert abs(params.ScrewAccessDiameter.Value-5.5)<1e-8
+(p/'reopen_geometry_validation.json').write_text(json.dumps(r,indent=2),encoding='utf-8')
+print('R12_REOPEN_VALIDATION='+json.dumps(r))
+App.closeDocument(d.Name)

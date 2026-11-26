@@ -1,0 +1,59 @@
+import FreeCAD as App, Part, MeshPart, json
+from FreeCAD import Vector as V
+from pathlib import Path
+ROOT=Path(r'EyeTrace_Final_Engineering\EyeTrace_R24_PanYoke_OneLayer')
+SRC=Path(r'EyeTrace_Final_Engineering\EyeTrace_R23_UnifiedBottomBlock\CAD\EyeTrace_R23_UnifiedBottomBlock.FCStd')
+d=App.openDocument(str(SRC)); y=d.getObject('PanYoke_EarBracket_KeyedDrive'); base=d.getObject('Base_EarMount_ThrustSupport'); tilt=d.getObject('TiltCradle_KeyedHorn_CameraFrame')
+if not all([y,base,tilt]): raise RuntimeError('Required named component missing')
+old=y.Shape.copy(); baseShape=base.Shape.copy(); tiltShape=tilt.Shape.copy()
+# Trace the actual upper plate footprint just above the circular-land top, then remove only the lower land directly beneath it.
+secZ=37.71; sec=y.Shape.section(Part.makePlane(120,120,V(-60,-60,secZ),V(0,0,1)))
+wires=[Part.Wire(g) for g in Part.sortEdges(sec.Edges)]
+face=Part.makeFace(wires,'Part::FaceMakerBullseye')
+if not face.isValid(): raise RuntimeError('Upper-plate footprint section did not form a valid face')
+mask=face.extrude(V(0,0,-2.51))
+slab=Part.makeBox(16.4,57.0,1.8,V(27.6,-28.5,35.2))
+keep=Part.makeCylinder(22.0,2.0,V(0,0,35.1)); contactPads=[(32.0,0.0),(27.5,0.0),(30.9,0.0)]
+for x,yy in contactPads: keep=keep.fuse(Part.makeCylinder(3.2,2.0,V(x,yy,35.1)))
+cutter=mask.common(slab).cut(keep); raw=old.cut(cutter).removeSplitter()
+if not raw.isValid(): raise RuntimeError('Localized overlap trim produced invalid BREP')
+solids=sorted(raw.Solids,key=lambda s:s.Volume,reverse=True)
+if len(solids)>1 and any(s.Volume>2.0 for s in solids[1:]): raise RuntimeError('Trim split structural yoke into substantial solids')
+new=solids[0]
+if not new.isValid() or len(new.Solids)!=1: raise RuntimeError('Final yoke is not one valid solid')
+def symdiff(a,b): return a.cut(b).Volume+b.cut(a).Volume
+def col(shape,x,yy):
+ q=shape.common(Part.makeBox(.1,.1,20,V(x-.05,yy-.05,30)))
+ return None if q.Volume<1e-8 else [q.BoundBox.ZMin,q.BoundBox.ZMax,q.BoundBox.ZLength]
+upper=Part.makeBox(120,120,80,V(-60,-60,37.0)); upperDiff=symdiff(old.common(upper),new.common(upper))
+core=Part.makeCylinder(22.0,120.0,V(0,0,0)); coreDiff=symdiff(old.common(core),new.common(core))
+if upperDiff>1e-6: raise RuntimeError('Geometry at/above plate bottom changed')
+if coreDiff>1e-6: raise RuntimeError('R15 shaft/horn core changed')
+if new.common(baseShape).Volume>1e-7: raise RuntimeError('Yoke intersects unchanged Plate01')
+contacts=[(32.0,0.0),(27.5,0.0),(30.9,0.0),(-14.1,-25.9807621135),(-14.1,25.9807621135)]; contactResults=[]
+for x,yy in contacts:
+ before=col(old,x,yy); after=col(new,x,yy)
+ if before!=after: raise RuntimeError('Base contact changed at '+str((x,yy)))
+ contactResults.append({'xy_mm':[x,yy],'z_span_mm':after})
+probes={str((x,yy)):{'before':col(old,x,yy),'after':col(new,x,yy)} for x,yy in [(31,15),(31,-15),(33,15),(33,-15),(30,20),(32,20),(34,20),(40,20),(30,-20),(34,-20),(40,-20)]}
+# The 2.5 mm plate at these locations must remain; bosses stay as original, wherever present.
+for xy in [(33,15),(33,-15),(40,20),(40,-20)]:
+ val=col(new,*xy)
+ if not val or abs(val[2]-2.5)>.02: raise RuntimeError('Plate web is not 2.5 mm at '+str(xy))
+holes=[]
+for yy in [-23.5,23.5]:
+ h=Part.makeCylinder(1.65,16,V(28,yy,39.5),V(1,0,0)); before=old.common(h).Volume; after=new.common(h).Volume
+ holes.append({'axis':'X','center_yz_mm':[yy,39.5],'baseline_solid_in_test_cylinder_mm3':before,'revised_mm3':after,'change_mm3':after-before})
+ if abs(after-before)>1e-8: raise RuntimeError('Existing flange bore geometry changed')
+y.Shape=new; y.Label='PanYoke_EarBracket_KeyedDrive_R24_OneLayer'; d.recompute()
+if symdiff(base.Shape,baseShape)>1e-8 or symdiff(tilt.Shape,tiltShape)>1e-8: raise RuntimeError('Prohibited component changed')
+CAD=ROOT/'CAD'; STL=ROOT/'STL'; DOC=ROOT/'DOCUMENTATION'; fc=CAD/'EyeTrace_R24_PanYoke_OneLayer.FCStd'; d.saveAs(str(fc))
+Part.export([y],str(CAD/'PanYoke_R24_OneLayer.step'))
+root=d.getObject('AssemblyRoot')
+if root and hasattr(root,'Shape') and len(root.Shape.Solids)>0:
+ tmp=App.newDocument('R24AssemblyStep'); f=tmp.addObject('Part::Feature','AssemblyCompound'); f.Shape=Part.makeCompound(root.Shape.Solids); tmp.recompute(); Part.export([f],str(CAD/'EyeTrace_R24_Assembly.step'))
+pr=new.copy(); pr.translate(V(71.2,48.3,-35.2)); mesh=MeshPart.meshFromShape(Shape=pr,LinearDeflection=.02,AngularDeflection=.06,Relative=False)
+if not mesh.isSolid(): raise RuntimeError('Yoke STL mesh is not watertight')
+mesh.write(str(STL/'PanYoke_R24_OneLayer.stl'))
+report={'revision':'EyeTrace_R24_PanYoke_OneLayer','source':'EyeTrace_R23_UnifiedBottomBlock.FCStd','modified_component':'PanYoke_EarBracket_KeyedDrive','unchanged':['Base_EarMount_ThrustSupport (Plate01)','TiltCradle_KeyedHorn_CameraFrame','all other component shapes and placements'],'operation':'Removed yoke material only in the lower circular-land layer where it lies directly beneath the measured upper rectangular plate footprint. The circular land remains outside that footprint.','original_yoke_volume_mm3':old.Volume,'revised_yoke_volume_mm3':new.Volume,'removed_volume_mm3':old.Volume-new.Volume,'valid_one_solid':new.isValid() and len(new.Solids)==1,'section_projection_z_mm':secZ,'upper_geometry_symmetric_difference_mm3':upperDiff,'R15_core_symmetric_difference_mm3':coreDiff,'unchanged_base_intersection_mm3':new.common(baseShape).Volume,'base_contact_columns':contactResults,'plate_and_land_thickness_probes':probes,'plate_web_thickness_mm':2.5,'existing_flange_bore_checks':holes,'mesh_watertight':mesh.isSolid(),'mesh_facets':len(mesh.Facets),'physical_fit':'Not physically verified.'}
+(DOC/'R24_GEOMETRY_VALIDATION.json').write_text(json.dumps(report,indent=2),encoding='utf-8'); print(json.dumps(report,indent=2))

@@ -1,0 +1,36 @@
+{
+  "units": "mm",
+  "base_thickness_mm": 3.8,
+  "bottom_center_support_depth_mm": 0.0,
+  "through_opening_diameter_mm": 8.0,
+  "through_opening_height_mm": 4.8,
+  "x_nominal_reach_mm": [
+    19.5,
+    19.5
+  ],
+  "x_nominal_span_mm": 39.0,
+  "x_pocket_reach_mm": [
+    19.6,
+    19.6
+  ],
+  "x_pocket_envelope_mm": 39.2,
+  "y_pocket_reach_mm": [
+    10.1,
+    10.1
+  ],
+  "upper_positive_y_pocket_width_mm": 3.4000000000000004,
+  "bottom_negative_y_pocket_width_mm": 4.4,
+  "underside_boss_present": false,
+  "parametric_edit_test_results": [
+    {
+      "property": "ThroughDiameter",
+      "test_value_mm": 7.3,
+      "actual_tool_diameter_mm": 7.3,
+      "volume_before_mm3": 1052.1252003539548,
+      "volume_edited_mm3": 1069.8677521666232,
+      "volume_delta_mm3": 17.742551812668353,
+      "restored_value_mm": 8.0
+    }
+  ],
+  "design_note": "A single native Part::Cylinder creates the continuous through opening; edit Parameters.ThroughDiameter and press F5."
+}

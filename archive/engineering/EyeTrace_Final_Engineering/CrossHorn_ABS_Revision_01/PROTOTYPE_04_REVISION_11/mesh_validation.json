@@ -1,0 +1,48 @@
+{
+  "stl_facets": 6806,
+  "stl_watertight": {
+    "edges": 10209,
+    "bad_edge_incidence": 0,
+    "watertight": true
+  },
+  "stl_front_wall_samples": {
+    "sample_count": 2322,
+    "radius_min": 3.699999903223079,
+    "radius_max": 3.700000129831672,
+    "z_min": -1.100000023841858,
+    "z_max": 2.0999999046325684
+  },
+  "stl_back_opening_wall_samples": {
+    "sample_count": 2520,
+    "radius_min": 5.249999774107329,
+    "radius_max": 5.250000204105722,
+    "z_min": -2.200000047683716,
+    "z_max": -1.899999976158142
+  },
+  "3mf_object_count": 1,
+  "3mf_facets": 6806,
+  "3mf_watertight": {
+    "edges": 10209,
+    "bad_edge_incidence": 0,
+    "watertight": true
+  },
+  "3mf_front_wall_samples": {
+    "sample_count": 420,
+    "radius_min": 3.6999993721795423,
+    "radius_max": 3.7000004443529466,
+    "z_min": -1.1,
+    "z_max": 2.1000000000000005
+  },
+  "3mf_back_opening_wall_samples": {
+    "sample_count": 420,
+    "radius_min": 5.249999250805463,
+    "radius_max": 5.250000512710459,
+    "z_min": -2.2,
+    "z_max": -1.9
+  },
+  "3mf_bed_z_bounds_mm": [
+    0.0,
+    6.0
+  ],
+  "archive_valid": true
+}

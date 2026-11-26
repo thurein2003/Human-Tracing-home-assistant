@@ -1,0 +1,39 @@
+{
+  "units": "mm",
+  "status": "PROVISIONAL_TEST_GEOMETRY_ONLY",
+  "confirmed_user_measurements": {
+    "long_span": 35.0,
+    "short_span": 18.0,
+    "hub_diameter": 7.0,
+    "camera_hole_pitch_x": 21.0,
+    "camera_hole_pitch_y": 14.0
+  },
+  "provisional_drawing_reference": {
+    "source": "https://www.auselectronicsdirect.com.au/assets/brochures/TA0132.pdf, SG90 Horn #3",
+    "overall_length_drawing_mm": 34.5,
+    "main_thickness_mm": 1.5,
+    "hub_diameter_mm": 6.9,
+    "hub_height_mm": 2.5,
+    "small_holes_diameter_mm": 1.0,
+    "confidence": "Published dimensions for similar horn; clone compatibility unverified"
+  },
+  "prototype_assumptions": {
+    "long_arm_width_mm": 3.2,
+    "short_arm_width_mm": 3.0,
+    "end_radius_long_mm": 1.6,
+    "end_radius_short_mm": 1.5,
+    "hub_offset_x_mm": 0.0,
+    "hub_offset_y_mm": 0.0,
+    "center_screw_opening_mm": 3.0,
+    "driver_access_mm": 4.5,
+    "axial_hub_clearance_mm": 0.2,
+    "plate_thickness_mm": 1.5,
+    "radial_clearance_variants_total_mm": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "secondary_holes": "omitted: positions unmeasured"
+  },
+  "assumption_note": "Arm widths, radii, centered hub, screw openings and driver access are provisional modeling assumptions, not extracted from user photos. Measure actual horn before production interface use."
+}

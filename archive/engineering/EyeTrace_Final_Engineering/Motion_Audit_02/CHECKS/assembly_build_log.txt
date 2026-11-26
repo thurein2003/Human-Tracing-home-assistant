@@ -1,0 +1,5 @@
+solver_result=0
+joint_count=2 revolute_count=2 grounded_count=1
+saved=EyeTrace_Final_Engineering\Motion_Audit_02\EyeTrace_Motion_Audit_Assembly_r03.FCStd
+rendered_states=8
+completed=1

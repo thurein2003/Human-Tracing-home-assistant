@@ -1,0 +1,107 @@
+cli mode, Current CrealityPrint Version 7.3.1.6378
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=ARCHIVE_PREAMBLE END elapsed_ms=0.1804 entries=6
+[UUID-Debug] ModelObject created: id=4, uuid=
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=MODEL_XML_PARSE END elapsed_ms=1.5557 parsed_objects=1
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=ARCHIVE_METADATA END elapsed_ms=22.8097 entries=6
+[UUID-Debug] ModelVolume created: object_uuid=, volume_uuid=, from_loaded_id=4
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=MODEL_ASSEMBLY END elapsed_ms=0.8208 objects=1
+MF_DEBUG: read - extruder_id=1, max_filament_id=1
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=MODEL_POSTPROCESS END elapsed_ms=0.024
+[MODEL_IMPORT_TIMING] level=3 parent=BBS_3MF_IMPORT_TOTAL stage=PLATE_DATA END elapsed_ms=0.0235 plates=1
+[MODEL_IMPORT_TIMING] level=2 parent=FORMAT_LOAD stage=BBS_3MF_IMPORT_TOTAL END elapsed_ms=25.463 objects=1 plates=1
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+Slic3r::PresetBundle::load_vendor_configs_from_json::<lambda_6fd30a224d33e347c7ed0d6e70632157>::operator (): The config D:\Creality Print 7.2\resources\profiles/Creality/machine/Creality K3.json contains incorrect keys: wait_for_temperature_after_toolchange, which were removed
+PresetConfigCache: vendor=Creality, hits=1989, misses=0
+[PresetBundle] Mixed filament logic: to_delete_filament_id=1, num_filaments=1, old_num_filaments_override=0, is_deletion=false
+MF_REMAP details: Remap[]
+MF_REMAP preset_bundle old_physical=0 new_physical=1 deleting=0 deleted_id=0 old_mixed_enabled=0 new_mixed_enabled=0 stable_id_hits=0 fallback_pair_hits=0 missing_hits=0 remap_size=0
+no filament colors found in projects
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 0 objects
+[SLICE_PREFLIGHT_TIMING] stage=USED_EXTRUDERS_COLOR_SETUP elapsed_ms=0.2296
+[SLICE_PREFLIGHT_TIMING] stage=USED_EXTRUDERS_NORMALIZE elapsed_ms=0.1725
+Model::clear_objects() - Clearing 0 objects
+ModelObject::clear_volumes called: object_name=Camera hole-pattern coupon 21x14, volumes_to_delete=0, object_id=5
+ModelObject::clear_instances called: object_name=Camera hole-pattern coupon 21x14, instances_to_delete=0, object_id=5
+[SLICE_PREFLIGHT_TIMING] stage=USED_EXTRUDERS_FINAL_NORMALIZE elapsed_ms=0.1934
+[PARALLEL] Print::process enter use_cache=false objects=1
+Slic3r::Print::process start memory info 
+Slic3r::Print::process memory total_bytes 34008997888 memory available_bytes 14448132096
+Slic3r::Print::process: this=0000019A56669100, enter, use_cache=0, object size=1
+[PARALLEL] need_slicing=1 re_slicing=0
+[PARALLEL] fallback to serial: object support disabled
+[PARALLEL] can_parallel=false
+[PARALLEL] Layer1 start: make_perimeters + estimate_curled
+Slic3r::PrintObject::make_perimeters start memory info 
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14447468544
+Generating walls...
+Generating perimeters in parallel - start
+Generating perimeters in parallel - end  memory info ;
+Slic3r::PrintObject::make_perimeters memory total_bytes 34008997888 memory available_bytes 14433767424
+[PERF][PARALLEL] make_perimeters cost 36.3523 ms
+[PERF][PARALLEL] estimate_curled_extrusions cost 0.008 ms
+[PARALLEL][VERIFY] after Layer1(A): total_layers=10 total_lslices=10
+[PARALLEL] using serial fallback path
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14433751040
+[INFILL_PROGRESS] Generating infill regions: 1 / 8
+[INFILL_PROGRESS] Generating infill regions: 2 / 8
+[INFILL_PROGRESS] Generating infill regions: 3 / 8
+[INFILL_PROGRESS] Generating infill regions: 4 / 8
+[INFILL_PROGRESS] Generating infill regions: 5 / 8
+[INFILL_PROGRESS] Generating infill regions: 6 / 8
+[INFILL_PROGRESS] Generating infill regions: 7 / 8
+[INFILL_PROGRESS] Generating infill regions: 8 / 8
+Filling layers in parallel - start
+Filling layers in parallel - end
+Slic3r::PrintObject::infill memory total_bytes 34008997888 memory available_bytes 14429929472
+[PERF][PARALLEL] infill cost 21.926 ms
+[PERF][PARALLEL] ironing cost 0.0182 ms
+generate_support_material start memory info 
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14429892608
+Slic3r::PrintObject::generate_support_material memory total_bytes 34008997888 memory available_bytes 14429634560
+[PERF][PARALLEL] generate_support_material cost 3.2941 ms
+generate_support_material end memory info 
+[PERF][PARALLEL] detect_overhangs_for_lift cost 0.7269 ms
+[PERF][PARALLEL] wipe_tower cost 0.2393 ms
+[PERF][PARALLEL] skirt_brim cost 4.4765 ms
+[PERF][PARALLEL] simplify_extrusion_path cost 2.8935 ms
+[PERF][PARALLEL] zaa_path_plan cost 0.0039 ms
+[PERF][PARALLEL] conflict_check cost 0 ms
+[PERF][PARALLEL] toolpath_outside_check cost 0.4845 ms
+[PERF][PARALLEL] process total wall cost 72.8051 ms
+Slic3r::Print::process memory total_bytes 34008997888 memory available_bytes 14428921856
+Slic3r::Print::process end memory info 
+[PARALLEL] Print::process exit
+Slic3r::Print::export_gcode start 
+Slic3r::GCode::do_export start  export path CHECKS\SLICE_CAMERA\plate_1.gcode
+Will export G-code to CHECKS\SLICE_CAMERA\plate_1.gcode soon
+Exporting G-code...
+[PERF_TIMING] GCODE_GENERATE START
+Slic3r::GCode::_do_export start
+[NO_WIPE_TRACE] export mode no_wipe=false skeleton_packing=false solid_skeleton=false
+Slic3r::GCode::_do_export end
+Start processing gcode, 
+[PERF_TIMING] GCODE_GENERATE END elapsed=59ms
+[PERF_TIMING] GCODE_PROCESSING START
+Finished processing gcode to CHECKS\SLICE_CAMERA\plate_1.gcode.tmp 
+rename_file from CHECKS\SLICE_CAMERA\plate_1.gcode.tmp to CHECKS\SLICE_CAMERA\plate_1.gcode successfully
+[PERF_TIMING] GCODE_PROCESSING END elapsed=143ms
+Exporting G-code finished
+Slic3r::GCode::do_export end
+Slic3r::Print::export_gcode end
+Model::clear_objects() - Clearing 1 objects
+Model::clear_objects() - Deleting object name: 'Camera hole-pattern coupon 21x14', ID: 5, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Camera hole-pattern coupon 21x14, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=5
+ModelObject::clear_volumes called: object_name=Camera hole-pattern coupon 21x14, volumes_to_delete=1, object_id=5
+ModelObject::clear_instances called: object_name=Camera hole-pattern coupon 21x14, instances_to_delete=1, object_id=5
+Model::clear_objects() - Clearing 0 objects
+Model::clear_objects() - Clearing 1 objects
+Model::clear_objects() - Deleting object name: 'Camera hole-pattern coupon 21x14', ID: 5, volumes: 1, instances: 1, layer_config_ranges: 0
+ModelObject destructor called: name=Camera hole-pattern coupon 21x14, volumes_count=1, instances_count=1, layer_config_ranges_count=0, object_id=5
+ModelObject::clear_volumes called: object_name=Camera hole-pattern coupon 21x14, volumes_to_delete=1, object_id=5
+ModelObject::clear_instances called: object_name=Camera hole-pattern coupon 21x14, instances_to_delete=1, object_id=5

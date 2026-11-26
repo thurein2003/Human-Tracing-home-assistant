@@ -1,0 +1,388 @@
+﻿{
+    "freecad_version":  [
+                            "1",
+                            "1",
+                            "4",
+                            "20260928 (Git shallow)"
+                        ],
+    "source_revision":  "EyeTrace_Final_Engineering\\R15_CENTERED_MOUNT_FINAL\\CAD\\EyeTrace_R15_AxisAligned_Assembly_HOLD.FCStd",
+    "center_mount":  "NOT MOVED: geometric centering conflicts with servo tab and pan-axis alignment",
+    "mount":  {
+                  "base_center_xy_mm":  [
+                                            0.0,
+                                            0.0
+                                        ],
+                  "mount_rectangle_xy_mm":  [
+                                                -13,
+                                                -9,
+                                                24,
+                                                9
+                                            ],
+                  "mount_rectangle_center_xy_mm":  [
+                                                       5.5,
+                                                       0
+                                                   ],
+                  "tab_hole_x_mm":  [
+                                        -8.15,
+                                        19.05
+                                    ],
+                  "tab_midpoint_x_mm":  5.45,
+                  "pan_axis_and_output_axis_xy_mm":  [
+                                                         0,
+                                                         0
+                                                     ],
+                  "offset_to_center_mm":  5.5,
+                  "center_shift_would_misalign_tab_holes_mm":  5.5,
+                  "base_bbox_mm":  [
+                                       -40.0,
+                                       -35.0,
+                                       0.0,
+                                       40.0,
+                                       35.0,
+                                       36.5
+                                   ],
+                  "base_volume_mm3":  50586.79985770291
+              },
+    "printable_count":  13,
+    "parts":  [
+                  {
+                      "name":  "Base_EarMount_ThrustSupport",
+                      "label":  "Stationary base / pan-servo support",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  50586.79985770291,
+                      "bbox_mm":  [
+                                      -40.0,
+                                      -35.0,
+                                      0.0,
+                                      40.0,
+                                      35.0,
+                                      36.5
+                                  ]
+                  },
+                  {
+                      "name":  "Pan_Replaceable_ThrustRing",
+                      "label":  "Stationary pan thrust surface",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  833.5273628504433,
+                      "bbox_mm":  [
+                                      -32.0,
+                                      -32.0,
+                                      36.0,
+                                      32.0,
+                                      32.0,
+                                      37.0
+                                  ]
+                  },
+                  {
+                      "name":  "PanYoke_EarBracket_KeyedDrive",
+                      "label":  "Rotating pan yoke and pan horn pocket",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  42345.82609243497,
+                      "bbox_mm":  [
+                                      -58.2,
+                                      -35.3,
+                                      33.0,
+                                      44.0,
+                                      35.3,
+                                      103.0
+                                  ]
+                  },
+                  {
+                      "name":  "Tilt_Removable_IdlerPillar",
+                      "label":  "Opposite-side tilt pivot support",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  7511.695140156739,
+                      "bbox_mm":  [
+                                      28.0,
+                                      -28.5,
+                                      41.0,
+                                      44.0,
+                                      28.5,
+                                      98.0
+                                  ]
+                  },
+                  {
+                      "name":  "Pan_KeyedHorn_Cover",
+                      "label":  "Pan horn retainer cover",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  3022.4785340715316,
+                      "bbox_mm":  [
+                                      -24.0,
+                                      -24.0,
+                                      30.8,
+                                      24.0,
+                                      24.0,
+                                      35.0
+                                  ]
+                  },
+                  {
+                      "name":  "TiltCradle_KeyedHorn_CameraFrame",
+                      "label":  "Moving tilt cradle and camera frame",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  24528.289698365388,
+                      "bbox_mm":  [
+                                      -41.00000000000001,
+                                      -24.4,
+                                      54.0,
+                                      36.0,
+                                      21.0,
+                                      99.0
+                                  ]
+                  },
+                  {
+                      "name":  "Tilt_KeyedHorn_CaptiveCover",
+                      "label":  "Tilt horn retainer cover",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  2386.306021719595,
+                      "bbox_mm":  [
+                                      -45.2,
+                                      -21.0,
+                                      57.0,
+                                      -41.0,
+                                      21.0,
+                                      99.0
+                                  ]
+                  },
+                  {
+                      "name":  "Tilt_Journal_FlangedSleeve",
+                      "label":  "Opposite-side tilt journal sleeve",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  68.26366676985263,
+                      "bbox_mm":  [
+                                      35.2,
+                                      -3.5,
+                                      74.5,
+                                      39.3,
+                                      3.5,
+                                      81.5
+                                  ]
+                  },
+                  {
+                      "name":  "PCB_Spacer_Lower_Left",
+                      "label":  "Camera lower-left spacer",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  45.333181991300705,
+                      "bbox_mm":  [
+                                      -13.0,
+                                      -30.4,
+                                      66.5,
+                                      -8.0,
+                                      -27.4,
+                                      71.5
+                                  ]
+                  },
+                  {
+                      "name":  "PCB_Spacer_Lower_Right",
+                      "label":  "Camera lower-right spacer",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  45.333181991300705,
+                      "bbox_mm":  [
+                                      8.0,
+                                      -30.4,
+                                      66.5,
+                                      13.0,
+                                      -27.4,
+                                      71.5
+                                  ]
+                  },
+                  {
+                      "name":  "PCB_Spacer_Upper_Left",
+                      "label":  "Camera upper-left spacer",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  45.333181991300705,
+                      "bbox_mm":  [
+                                      -13.0,
+                                      -30.4,
+                                      80.5,
+                                      -8.0,
+                                      -27.4,
+                                      85.5
+                                  ]
+                  },
+                  {
+                      "name":  "PCB_Spacer_Upper_Right",
+                      "label":  "Camera upper-right spacer",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  45.333181991300705,
+                      "bbox_mm":  [
+                                      8.0,
+                                      -30.4,
+                                      80.5,
+                                      13.0,
+                                      -27.4,
+                                      85.5
+                                  ]
+                  },
+                  {
+                      "name":  "CameraPlate_Cut007",
+                      "label":  "Camera mounting plate ? 21 x 14 mm hole centers",
+                      "valid":  true,
+                      "solids":  1,
+                      "volume_mm3":  4449.355830897155,
+                      "bbox_mm":  [
+                                      -28.0,
+                                      -27.400000000000002,
+                                      60.0,
+                                      28.0,
+                                      -24.399999999999995,
+                                      92.0
+                                  ]
+                  }
+              ],
+    "unintended_intersections":  [
+                                     {
+                                         "a":  "Base_EarMount_ThrustSupport",
+                                         "b":  "Pan_Replaceable_ThrustRing",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "Pan_Replaceable_ThrustRing",
+                                         "b":  "PanYoke_EarBracket_KeyedDrive",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "PanYoke_EarBracket_KeyedDrive",
+                                         "b":  "Tilt_Removable_IdlerPillar",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "PanYoke_EarBracket_KeyedDrive",
+                                         "b":  "Pan_KeyedHorn_Cover",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                         "b":  "Tilt_KeyedHorn_CaptiveCover",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                         "b":  "Tilt_Journal_FlangedSleeve",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "TiltCradle_KeyedHorn_CameraFrame",
+                                         "b":  "CameraPlate_Cut007",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "PCB_Spacer_Lower_Left",
+                                         "b":  "CameraPlate_Cut007",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "PCB_Spacer_Lower_Right",
+                                         "b":  "CameraPlate_Cut007",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "PCB_Spacer_Upper_Left",
+                                         "b":  "CameraPlate_Cut007",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     },
+                                     {
+                                         "a":  "PCB_Spacer_Upper_Right",
+                                         "b":  "CameraPlate_Cut007",
+                                         "intersection_mm3":  0.0,
+                                         "distance_mm":  0.0
+                                     }
+                                 ],
+    "horn_pairs":  [
+                       {
+                           "horn":  "Pan_OriginalStar_PROVISIONAL",
+                           "carrier":  "PanYoke_EarBracket_KeyedDrive",
+                           "clearance_mm":  0.09974880472445259,
+                           "intersection_mm3":  0.0,
+                           "horn_bbox":  [
+                                             -19.5,
+                                             -10.0,
+                                             32.5,
+                                             19.5,
+                                             10.0,
+                                             36.5
+                                         ]
+                       },
+                       {
+                           "horn":  "Tilt_OriginalStar_PROVISIONAL",
+                           "carrier":  "TiltCradle_KeyedHorn_CameraFrame",
+                           "clearance_mm":  0.09974880472445202,
+                           "intersection_mm3":  0.0,
+                           "horn_bbox":  [
+                                             -43.5,
+                                             -10.0,
+                                             58.5,
+                                             -39.5,
+                                             10.0,
+                                             97.5
+                                         ]
+                       }
+                   ],
+    "R15_master_comparison":  "See prior independent BREP comparison: both integrated R15 cutters match exactly; no pocket geometry altered in this revision. Nominal pocket envelope 39.2x20.2 mm, depth 1.7 mm, center through-bore 8 mm.",
+    "camera_pattern_mm":  [
+                              21,
+                              14
+                          ],
+    "servo_reference_pairs":  {
+                                  "value":  [
+                                                {
+                                                    "a":  "PanServo_SG90_Reference",
+                                                    "b":  "Base_EarMount_ThrustSupport",
+                                                    "distance_mm":  0.0,
+                                                    "intersection_mm3":  0.0
+                                                },
+                                                {
+                                                    "a":  "PanServo_SG90_Reference",
+                                                    "b":  "Pan_OriginalStar_PROVISIONAL",
+                                                    "distance_mm":  0.0,
+                                                    "intersection_mm3":  73.26351147804075
+                                                },
+                                                {
+                                                    "a":  "PanServo_SG90_Reference",
+                                                    "b":  "PanYoke_EarBracket_KeyedDrive",
+                                                    "distance_mm":  1.5,
+                                                    "intersection_mm3":  0.0
+                                                },
+                                                {
+                                                    "a":  "TiltServo_SG90_Reference",
+                                                    "b":  "PanYoke_EarBracket_KeyedDrive",
+                                                    "distance_mm":  0.0,
+                                                    "intersection_mm3":  0.0
+                                                },
+                                                {
+                                                    "a":  "TiltServo_SG90_Reference",
+                                                    "b":  "Tilt_OriginalStar_PROVISIONAL",
+                                                    "distance_mm":  0.0,
+                                                    "intersection_mm3":  73.26351147804074
+                                                },
+                                                {
+                                                    "a":  "TiltServo_SG90_Reference",
+                                                    "b":  "TiltCradle_KeyedHorn_CameraFrame",
+                                                    "distance_mm":  1.4999999999999982,
+                                                    "intersection_mm3":  0.0
+                                                }
+                                            ],
+                                  "Count":  6
+                              }
+}

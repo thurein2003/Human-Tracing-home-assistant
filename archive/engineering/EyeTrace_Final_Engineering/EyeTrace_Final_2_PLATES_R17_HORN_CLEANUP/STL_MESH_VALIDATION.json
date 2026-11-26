@@ -1,0 +1,171 @@
+{
+  "Base_EarMount_ThrustSupport.stl": {
+    "facets": 5460,
+    "is_solid": true,
+    "volume_mm3": 50567.20703125,
+    "bbox_mm": [
+      -40.0,
+      -35.0,
+      0.0,
+      40.0,
+      35.0,
+      36.5
+    ]
+  },
+  "CameraPlate_21x14.stl": {
+    "facets": 3828,
+    "is_solid": true,
+    "volume_mm3": 4449.88037109375,
+    "bbox_mm": [
+      -28.0,
+      -16.0,
+      0.0,
+      28.0,
+      16.0,
+      3.0
+    ]
+  },
+  "PCB_Spacer_Lower_Left.stl": {
+    "facets": 840,
+    "is_solid": true,
+    "volume_mm3": 45.30576705932617,
+    "bbox_mm": [
+      -2.499720335006714,
+      -2.5,
+      0.0,
+      2.499720335006714,
+      2.4988811016082764,
+      3.0
+    ]
+  },
+  "PCB_Spacer_Lower_Right.stl": {
+    "facets": 840,
+    "is_solid": true,
+    "volume_mm3": 45.30576705932617,
+    "bbox_mm": [
+      -2.499720335006714,
+      -2.5,
+      0.0,
+      2.499720335006714,
+      2.4988811016082764,
+      3.0
+    ]
+  },
+  "PCB_Spacer_Upper_Left.stl": {
+    "facets": 840,
+    "is_solid": true,
+    "volume_mm3": 45.30576705932617,
+    "bbox_mm": [
+      -2.499720335006714,
+      -2.5,
+      0.0,
+      2.499720335006714,
+      2.4988811016082764,
+      3.0
+    ]
+  },
+  "PCB_Spacer_Upper_Right.stl": {
+    "facets": 840,
+    "is_solid": true,
+    "volume_mm3": 45.30576705932617,
+    "bbox_mm": [
+      -2.499720335006714,
+      -2.5,
+      0.0,
+      2.499720335006714,
+      2.4988811016082764,
+      3.0
+    ]
+  },
+  "PanYoke_EarBracket_KeyedDrive_R17.stl": {
+    "facets": 27036,
+    "is_solid": true,
+    "volume_mm3": 45845.015625,
+    "bbox_mm": [
+      12.999999046325684,
+      13.000828742980957,
+      0.0,
+      115.19999694824219,
+      83.59917449951172,
+      70.0
+    ]
+  },
+  "Pan_KeyedHorn_Cover.stl": {
+    "facets": 4312,
+    "is_solid": true,
+    "volume_mm3": 3020.482177734375,
+    "bbox_mm": [
+      -23.9892578125,
+      -23.997314453125,
+      0.0,
+      24.0,
+      23.997314453125,
+      4.199999809265137
+    ]
+  },
+  "Pan_Replaceable_ThrustRing.stl": {
+    "facets": 2112,
+    "is_solid": true,
+    "volume_mm3": 833.0187377929688,
+    "bbox_mm": [
+      -31.98567771911621,
+      -31.99641990661621,
+      0.0,
+      32.0,
+      31.99641990661621,
+      1.0
+    ]
+  },
+  "TiltCradle_KeyedHorn_CameraFrame_R17.stl": {
+    "facets": 20976,
+    "is_solid": true,
+    "volume_mm3": 24743.134765625,
+    "bbox_mm": [
+      189.0,
+      102.5999984741211,
+      0.0,
+      234.0,
+      147.99951171875,
+      77.0
+    ]
+  },
+  "Tilt_Journal_FlangedSleeve.stl": {
+    "facets": 1260,
+    "is_solid": true,
+    "volume_mm3": 68.22235870361328,
+    "bbox_mm": [
+      -3.5,
+      -3.499608278274536,
+      0.0,
+      3.4984335899353027,
+      3.499608278274536,
+      4.099999904632568
+    ]
+  },
+  "Tilt_KeyedHorn_CaptiveCover.stl": {
+    "facets": 4312,
+    "is_solid": true,
+    "volume_mm3": 2384.6865234375,
+    "bbox_mm": [
+      -20.9906005859375,
+      -20.997650146484375,
+      0.0,
+      21.0,
+      20.997650146484375,
+      4.199999809265137
+    ]
+  },
+  "Tilt_Removable_IdlerPillar.stl": {
+    "facets": 1300,
+    "is_solid": true,
+    "volume_mm3": 7511.74560546875,
+    "bbox_mm": [
+      -8.0,
+      -28.5,
+      0.0,
+      8.0,
+      28.5,
+      57.0
+    ]
+  }
+}

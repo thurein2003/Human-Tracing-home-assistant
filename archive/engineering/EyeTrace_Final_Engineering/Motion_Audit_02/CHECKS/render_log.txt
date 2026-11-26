@@ -1,0 +1,2 @@
+closeups=2; frames=51; max_joint_center_error_mm=4.2780337774645346e-14
+completed=1

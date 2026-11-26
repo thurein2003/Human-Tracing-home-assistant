@@ -1,0 +1,7 @@
+﻿import FreeCAD as A,json,os
+from FreeCAD import Vector as V
+root=r'EyeTrace_Final_Engineering';d=A.openDocument(root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CAD\EyeTrace_R15_Final_Assembly.FCStd'); rows=[]
+for name,coords in [('PanYoke_EarBracket_KeyedDrive',[(0,0,35.85),(10,0,35.85),(-10,0,35.85),(0,5,35.85),(0,-5,35.85),(15,0,35.85),(-15,0,35.85),(0,8,35.85),(0,-8,35.85)]),('TiltCradle_KeyedHorn_CameraFrame',[(-40.15,0,78),(-40.15,10,78),(-40.15,-10,78),(-40.15,0,83),(-40.15,0,73),(-40.15,0,93),(-40.15,0,63),(-40.15,8,83),(-40.15,-8,73)])]:
+ sh=d.getObject(name).Shape
+ rows.append({'part':name,'samples':[{'xyz':p,'inside_material':sh.isInside(V(*p),1e-5,True)} for p in coords]})
+print(json.dumps(rows,indent=2));open(root+r'\EyeTrace_Final_2_PLATES_R15_GEOMETRY_REPAIR\CHECKS\cavity_probe.json','w').write(json.dumps(rows,indent=2))

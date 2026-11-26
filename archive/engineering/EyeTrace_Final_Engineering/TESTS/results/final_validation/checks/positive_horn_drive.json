@@ -1,0 +1,90 @@
+[
+  {
+    "horn": "Pan_OriginalStar_PROVISIONAL",
+    "carrier": "PanYoke_EarBracket_KeyedDrive",
+    "positive_wall_drive_both_directions": true,
+    "classification": "DESIGNED ENGAGEMENT probe only, not an operating assembly pose or stress proof",
+    "samples": [
+      {
+        "relative_angle_deg": -5,
+        "engagement_probe_volume_mm3": 35.47971511067825
+      },
+      {
+        "relative_angle_deg": -3,
+        "engagement_probe_volume_mm3": 13.493817139498084
+      },
+      {
+        "relative_angle_deg": -2,
+        "engagement_probe_volume_mm3": 4.0315160605534555
+      },
+      {
+        "relative_angle_deg": -1,
+        "engagement_probe_volume_mm3": 0.0
+      },
+      {
+        "relative_angle_deg": 0,
+        "engagement_probe_volume_mm3": 0.0
+      },
+      {
+        "relative_angle_deg": 1,
+        "engagement_probe_volume_mm3": 0.0
+      },
+      {
+        "relative_angle_deg": 2,
+        "engagement_probe_volume_mm3": 4.031516060553395
+      },
+      {
+        "relative_angle_deg": 3,
+        "engagement_probe_volume_mm3": 13.493817139498043
+      },
+      {
+        "relative_angle_deg": 5,
+        "engagement_probe_volume_mm3": 35.47971511067862
+      }
+    ]
+  },
+  {
+    "horn": "Tilt_OriginalStar_PROVISIONAL",
+    "carrier": "TiltCradle_KeyedHorn_CameraFrame",
+    "positive_wall_drive_both_directions": true,
+    "classification": "DESIGNED ENGAGEMENT probe only, not an operating assembly pose or stress proof",
+    "samples": [
+      {
+        "relative_angle_deg": -5,
+        "engagement_probe_volume_mm3": 35.47971511067911
+      },
+      {
+        "relative_angle_deg": -3,
+        "engagement_probe_volume_mm3": 13.493817139497985
+      },
+      {
+        "relative_angle_deg": -2,
+        "engagement_probe_volume_mm3": 4.031516060553309
+      },
+      {
+        "relative_angle_deg": -1,
+        "engagement_probe_volume_mm3": 0.0
+      },
+      {
+        "relative_angle_deg": 0,
+        "engagement_probe_volume_mm3": 0.0
+      },
+      {
+        "relative_angle_deg": 1,
+        "engagement_probe_volume_mm3": 0.0
+      },
+      {
+        "relative_angle_deg": 2,
+        "engagement_probe_volume_mm3": 4.031516060553582
+      },
+      {
+        "relative_angle_deg": 3,
+        "engagement_probe_volume_mm3": 13.49381713949803
+      },
+      {
+        "relative_angle_deg": 5,
+        "engagement_probe_volume_mm3": 35.479715110679436
+      }
+    ]
+  }
+]
